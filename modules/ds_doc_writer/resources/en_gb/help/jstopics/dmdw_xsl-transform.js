@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"XSLT Stylesheets",
 hmDescription:"DMDW contains the following xsl version 2.0 stylesheets to to transform the dmdw xml into html.",
-hmPrevLink:"dmdw_specials.html",
+hmPrevLink:"dmdw_processor.html",
 hmNextLink:"dmdw_fileset2_xsl.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",

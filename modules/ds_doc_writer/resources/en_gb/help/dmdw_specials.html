@@ -37,11 +37,18 @@ var pageName="mainPage";var hmDevice={mobileSleepReload:true,compilehash:(functi
           var RWSP_Mainpage="index.html";
           var RWSP_DefaultTopic="dmdw_Data-Model-Document-Writer";
           var RWSP_Extension=RWSP_Mainpage.substr(RWSP_Mainpage.lastIndexOf('.'),RWSP_Mainpage.length);
-          var RWSP_HandleCSHID = false;
+          var RWSP_HandleCSHID = true;
         </script>
         <script type="text/javascript" src="./js/hmcontextids.js"></script>
  	<script id="jqscript" type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/HandleCSHID.js"></script>
         
+        <script type="text/javascript">
+                if (RWSP_HandleCSHID && "dmdw_specials.html"==RWSP_Mainpage){
+                RWSP_DoHandleHash();
+                RWSP_DoHandleParam();
+                }
+        </script>
         
 	<style type="text/css">.svgsprite{display:none;} 
 	div#fouc{background:#ffffff;position:absolute;top:0;right:0;bottom:0;left:0;z-index:10000;}
@@ -239,7 +246,7 @@ function GetSearchPage() {
 		<a id="topicnavlinkhome" class="topicnavlink nav" href="index.html" title="Go to top topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-up"></use></svg>
 		<span>Top</span></a>
-		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_xsl-transform.html" title="Go to next topic">
+		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_processor.html" title="Go to next topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-right"></use></svg>
 		<span>Next</span></a>
 		 <a id="hamburgerlink" class="topicnavlink" title="Additional Functions Menu">

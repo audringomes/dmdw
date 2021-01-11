@@ -37,11 +37,18 @@ var pageName="mainPage";var hmDevice={mobileSleepReload:true,compilehash:(functi
           var RWSP_Mainpage="index.html";
           var RWSP_DefaultTopic="dmdw_Data-Model-Document-Writer";
           var RWSP_Extension=RWSP_Mainpage.substr(RWSP_Mainpage.lastIndexOf('.'),RWSP_Mainpage.length);
-          var RWSP_HandleCSHID = false;
+          var RWSP_HandleCSHID = true;
         </script>
         <script type="text/javascript" src="./js/hmcontextids.js"></script>
  	<script id="jqscript" type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/HandleCSHID.js"></script>
         
+        <script type="text/javascript">
+                if (RWSP_HandleCSHID && "dmdw_datamodel_info.html"==RWSP_Mainpage){
+                RWSP_DoHandleHash();
+                RWSP_DoHandleParam();
+                }
+        </script>
         
 	<style type="text/css">.svgsprite{display:none;} 
 	div#fouc{background:#ffffff;position:absolute;top:0;right:0;bottom:0;left:0;z-index:10000;}
