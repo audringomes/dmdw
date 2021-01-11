@@ -1,0 +1,4 @@
+camdb_doc_writer	1
+requires
+	ds_doc_writer
+end

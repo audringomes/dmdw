@@ -1,0 +1,59 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={wd_doc_writer})
+##
+## Creates a datamodel xml document for datasets gis and electrictity
+## in the cambdridge database. 
+##
+_global dump_camdb <<
+_proc @dump_camdb()
+
+	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
+	_local l_dir << l_mod.resource_list_for(:xml).an_element()
+
+	_for i_dsname _over {:gis,:electricity}.fast_elements()
+	_loop
+		_local l_file << system.pathname_from_components(write_string(i_dsname,".xml"),l_dir)
+		_local ds << gis_program_manager.cached_dataset(i_dsname)
+		_local props << property_list.new_with(
+
+					:ace_name,"electricity",
+					:dataset_specials,_unset,
+					:output_file,l_file
+					      )
+	
+		_local du << dm_xml_writer.new(ds,props)
+
+		du.process()
+		
+	_endloop
+	
+_endproc
+$
+
+_pragma(classify_level=basic, topic={wd_doc_writer})
+##
+## Do a XLST transform of all xml files from the xml resources
+## directory of the module :camdb_doc_writer.
+## The output dir will be the base/html_output resource folder.
+## Copy the html resources into the output dir.
+##
+_global transform_camdb_xml <<
+_proc @transform_camdb_xml()
+		
+	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
+#	_local l_out << l_mod.resource_list_for(:html_output).an_element()
+	_for i_file _over l_mod.resource_files("xml").fast_elements()
+	_loop
+		transform_to_html(:camdb_doc_writer,i_file,_unset,"FileSet2.xsl",_true,_false)	
+	_endloop
+	
+_endproc
+$

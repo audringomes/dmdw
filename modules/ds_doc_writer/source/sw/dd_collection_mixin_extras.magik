@@ -1,0 +1,17 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2019 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer})
+_method dd_collection_mixin.skip_dm_export?
+	## 
+	## Defaults _true to descriptor.internal_table?
+	##
+	>> _self.descriptor.internal_table?
+_endmethod
+$

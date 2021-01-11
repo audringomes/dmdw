@@ -1,0 +1,392 @@
+/* SVN $Rev: 787 $ */
+
+/* Datamodel Styles */
+/* SOME COMMON STYLES */
+
+body {
+	margin-left: 10px;
+	/*! text-align: center; */
+}
+h1 {
+	/* Title of document */	
+	border-bottom: none;
+}
+h2 {
+	/* Top elements	e.g. 'Collections' */
+	margin-bottom: 10px;
+}
+h3 {
+	/* Major elements, e.g. 'a collection' */
+}
+ul {
+	padding-left: 0px;
+}
+li {
+	list-style-position: inside;
+	list-style-type: disclosure-closed;
+}
+
+/* COMMON SUBCLASSES */
+
+h3.InTable {
+	/* Major elements, e.g. 'a collection' */
+	margin-left: 0px;
+}
+a.CollectionLink {
+	
+}
+a.EnumeratorLink {
+
+}
+a.SoftJoin {
+	font-weight:normal;
+}
+/* TABLE STYLES */
+
+table.dmTable
+{
+    margin-bottom:10px;
+    min-width: 250px;
+}
+table.dmTable.DefaultTopRules
+{
+	width: 350px;
+}
+table.dmTable.Footer
+{
+	margin-top:10px;
+	font-size: 0.65em;
+}
+table.dmTopTable
+{
+	margin-top: 30px;
+	font-size: 1.0em;
+}
+table.dmDataModelHistory
+{
+  font-size: smaller;
+  width: 600px;
+}
+table.dmCollection
+{
+	/* The table with fields of a collection */
+}
+table.dmEnumerator
+{
+    /*! display: block; */
+    min-width: 450px;
+}
+table#audit_history_event_types{
+  display:-moz-popup;
+}
+table.dmTopology
+{
+	min-width: 500px;
+}
+table.softjoins {
+	min-width: 500px;
+	margin-bottom: 0px;
+}
+table.InLineBox {
+	/* table displayed in a field description */
+	position: relative;
+	display: none;
+	padding-top: 1%;
+	left: 2%;
+	padding-bottom: 1%;
+	margin-bottom: 0px;
+	border-bottom-width: 0px;
+}
+.dmTable.IntTopol {
+    float: right;
+}
+
+/* ROW STYLES */
+
+tr.HeadStyle
+{
+	/*! border-top-width: 5px; */
+	/*! border-bottom-width: 5px; */
+}
+tr.overview {
+	/* Collection List row */
+}
+tr.TableCategory {
+	/* just below table name */
+}
+tr.TableName {
+	font-size: 1.125em;
+	color: #005cb9;
+	font-weight: bolder;
+	margin-bottom: 6px;
+}
+tr.Field {
+
+}
+tr.VisFalse {
+	background-color: #1e1e1e00;
+	display: none;
+}
+tr.Mapped {
+	/* A geometry that has a mapping */
+	color: #4d0a66;
+}	
+tr.MappedTo {
+	/* A geometry that is mapped to another */
+	color: #283535;
+}	
+tr.TopologyInteractionByField {
+	vertical-align: top;
+}
+tr.oddRow {
+	/* Transparent grey */
+	background-color: #c9d3dc78;
+}	
+tr.KeyTrue {
+		color: darkcyan;
+}
+tr.KeyFalse {
+	
+}
+tr.SoftJoin {
+	color: grey;
+}
+
+/* TD Styles */
+
+td.name {
+	vertical-align: top;
+	width: 200px;
+}
+td.InternalName {
+	width: 200px;
+}
+td.technical {
+	vertical-align: top;
+}
+td.overview_name {
+	/* Collection List Table Name */
+	font-weight: bolder;
+	width: 200px;
+}
+td.overview_description {
+	/* Collection List Description  */
+}
+td.description {
+	/* Above table */
+	font-style: italic;
+	padding-bottom: 4px;
+	padding-top: 4px;
+}
+td.TopologicalField {
+	vertical-align: top;
+	font-weight: bold;
+}
+
+th.softjoin {
+	background-color: gray;
+}
+
+/* LIST SUBCLASSES */
+
+ul.EnumeratorValues {
+	margin-top: 4pt;
+}
+li.EnumeratorValue {
+	margin-bottom: 0px;
+}
+ul.TopologyList {
+	margin-bottom: 0pt;
+	font-weight: bolder;
+	list-style-type: none;
+}
+li.TopologyFieldItem {
+	margin-bottom: 0px;
+	list-style-type: none;
+}
+li.Join {
+	margin-bottom: 0px;
+}
+
+/* Special classes */
+.TopLink {
+	/* Table of Contents start page */
+}
+.ChapterInfo {
+	margin-bottom: 20px;
+	max-width: 600px;
+}
+.software_version {
+	font-size: 0.55em;
+	color: gray;
+}
+.dmHistory {
+	/* Style used to make all datamodel history records invisible */
+	/* line-height: 0%; */
+	display: none;
+}
+.overview {
+	/* Style for section */
+}
+.collections {
+	/* Style for section */
+}
+.enumerators {
+	/* Style for section */
+}
+.topology {
+	/* Style for section */
+}
+.name {
+	/* External Names of Collections, Fields etc. */
+	font-weight: bolder;
+}
+.technical {
+	/* Technical details, used by the button Toggle Overview/Details */
+}
+.Info {
+	background-color: transparent;
+}
+.manifold {
+	/* Top level a manifold */
+}
+.join {
+	color: #07055b; /* kind of blue */
+}
+.geometry {
+	color: #660a1b; /* kind of red */
+}
+.logical {
+	
+}
+.physical {
+	
+}
+.TopologyRules {
+	font-weight: bolder;
+	color: green;
+}
+.GlobalDescription {
+	color: #040484;
+}
+.Used {
+	/* Is an enumerator used by a table? */
+}
+.buttonbar {
+	margin-bottom: 2px;
+	margin-top: 20px;
+	color: #2196F3;
+	font-size: 1.0em;
+}
+.CheckButton {
+	margin-right: 10px;
+}
+.filterbutton {
+	border: none;
+	width: 90%;
+	background-color: #fff;
+	font-size: 0.91em;
+}
+.listlink {
+	font-size: 0.9em;
+}
+input.ClearFilter {
+	vertical-align: top;
+}
+.highlight {
+	background-color: yellow;
+}
+.expandlink 
+{
+	cursor: pointer;
+}
+/* TOPOLOGY */
+.col1s {
+	display: none;
+}
+.fld1s {
+	display: none;
+}
+.col2s {
+	font-size: 0.8em;
+}
+table.col2s {
+    display: inline-table;
+    min-width: 400px;
+    width: 400px;
+    background-color: #d5d5d5;
+    margin-bottom: 0px;
+}
+.Fld2GeometryName {
+    min-width: 200px;
+}
+tr.TopologyHeadStyle th.TopologyHeadStyle {
+    color: #084285;
+    background-color: #d5d5d5;
+}
+
+.fld2s {
+    background-color: #d5d5d5;
+}
+.rule1 {
+	color: green;
+}
+td.rule1 {
+	min-width: 50px;
+	display: inline-block;
+}
+.rule2 {
+	color: green;
+}
+td.rule2 {
+	min-width: 50px;
+	display: inline-block;
+}
+
+/* .connect { */
+/*     color: #00800000; */
+/*     background-image: url("connect.png"); */
+/*     background-repeat: no-repeat; */
+/* } */
+/* .connect_ends { */
+/*     color: #00800000; */
+/*     background-image: url("connect_ends.png"); */
+/*     background-repeat: no-repeat; */
+/* } */
+/* .split_link { */
+/*     color: #00800000; */
+/*     background-image: url("split_link.png"); */
+/*     background-repeat: no-repeat; */
+/* } */
+/* .split_chain { */
+/*     color: #00800000; */
+/*     background-image: url("split_chain.png"); */
+/*     background-repeat: no-repeat; */
+/* } */
+
+.ruleslegend {
+    font-size: 15px;
+    margin-block: inherit;
+    font-style: italic;
+    color: slategrey;
+}
+.ruleslegend img {
+    vertical-align: text-bottom;
+    padding-right: 7px;
+}
+.fld2sStatic {
+    font-size: smaller;
+    padding-left: 9pt;
+}
+.rule1Static {
+    text-align: right;
+}
+.rule2Static {
+}
+.warning {
+    color: #b05426
+}
+.error {
+    color: red;
+    font-weight: bold;
+}

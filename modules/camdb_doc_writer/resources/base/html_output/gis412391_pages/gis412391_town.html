@@ -1,0 +1,388 @@
+<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Collection Town</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
+      <div class="PageTitle float">Town</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="town">
+            <tr class="TableName">
+               <td colspan="7">
+                  <h3 class="InTable">Town</h3>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="7">Category: Cadastral Coverages</td>
+            </tr>
+            <tr>
+               <td colspan="7" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Type</th>
+               <th class="technical">Sub type</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">town_id</div>
+               </td>
+               				
+               <td class="technical">town_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Name</div>
+               </td>
+               				
+               <td class="technical">name</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Class</div>
+               </td>
+               				
+               <td class="technical">class</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					town_class
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>The values of Class are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('town_class');" title="Click to Show/Hide details">town_class</a></span><table id="town_class" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">town_class</th>
+                     </tr>
+                     <tr class="HeadStyle">
+                        <th class="technical">Type</th>
+                     </tr>
+                     <tr class="McTableRowStyle">
+                        <td class="technical">mapped_class</td>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">City</li>
+                              			
+                              <li class="EnumeratorValue">Town</li>
+                              			
+                              <li class="EnumeratorValue">Village</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Population</div>
+               </td>
+               				
+               <td class="technical">pop</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">rwo_id</div>
+               </td>
+               				
+               <td class="technical">rwo_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_vstamp
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!info_flags</div>
+               </td>
+               				
+               <td class="technical">int!info_flags</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_swif!info_flag.html">Information Flag</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
+                  </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Annotation</div>
+               </td>
+               				
+               <td class="technical">annotation</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					text
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td></td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Coverage</div>
+               </td>
+               				
+               <td class="technical">coverage</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					area
+                  					(cadastral)
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Manifold: <span class="name">cadastral</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#town.coverage">(Topology)</a></span></td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Location</div>
+               </td>
+               				
+               <td class="technical">location</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					point
+                  					(cadastral)
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Manifold: <span class="name">cadastral</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#town.location">(Topology)</a></span></td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">meatball</div>
+               </td>
+               				
+               <td class="technical">meatball</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					simple_point
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td></td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Rail Station Car Park</div>
+               </td>
+               				
+               <td class="technical">rail_carpark</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					point
+                  					(road)
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Manifold: <span class="name">road</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#town.rail_carpark">(Topology)</a></span></td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Rail Station</div>
+               </td>
+               				
+               <td class="technical">rail_station</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					point
+                  					(railway)
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Manifold: <span class="name">railway</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#town.rail_station">(Topology)</a></span></td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

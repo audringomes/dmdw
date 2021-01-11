@@ -1,0 +1,878 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2019 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+remex(:dm_xml_writer)
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+##
+## Dumps the datamodel for a dataset in xml
+## Must be instantiated by new()
+## The export is started with process()
+## 
+def_slotted_exemplar(:dm_xml_writer,
+	{
+		{:ds,_unset},
+		{:properties,_unset},
+		{:out_file,_unset},
+		{:visible_fields,_unset},
+		{:enumerators,_unset},
+		{:collection_xml,_unset},
+		{:ace_list,_unset},
+		{:categories,_unset},
+		{:xml_collections,_unset},
+		{:manifolds,_unset},
+		{:fields_by_manifold,_unset},
+		{:fields_with_manifold_interaction,_unset},
+		{:topology_interactions,_unset},
+		{:dataset_specials,_unset},
+		{:updates,_unset}
+	}
+)
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.new(ds, properties)
+	##
+	## DS - The databse view to be reported
+	## PROPERTIES - A property_list with the following keys
+	##     :ace_name    - name of ACE to be used for categories and order of
+	##                    collections
+	##     :output_file - full path for the output xml file 
+	##
+	##     The following properties are optional:
+	##     :update_file - file pathname of xml with updates
+	##     :dm_product_name  - name of sw_product for datamodel version
+	##     :dm_module_name - name of sw_module for datamodel version
+	##     :dm_predicate - a predicate 
+	##     :dataset_specials (a class as dm_dataset_specials)
+	##     :products_for_version - collection of product names for which
+	##                             a version should be written.
+	##
+	## On instantiation it will gather data.
+	##
+	>> _clone.init(ds, properties )
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.init(ds, properties)
+	## 
+	##
+
+	.ds << ds
+	.properties << properties
+	
+	.out_file << _if (file << properties[:output_file]) _is _unset 
+		     _then condition.raise(:error,:string,":output_file should be specified")
+		     _elif _not system.file_creatable?(file)
+		     _then condition.raise(:error,:string,write_string("Output file ",file," could not be created"))
+		     _else >> file
+		     _endif
+	
+	write("Output file: ",.out_file)
+
+	_if (l_ace << _self.ace( properties[:ace_name])) _is _unset 
+	_then
+		condition.raise(:error,:string,write_string("No such ace: '",properties[:ace_name],%'))
+	_else 
+		write("Ace to use: ",l_ace)
+	_endif
+	
+	.categories << rope.new()
+	.enumerators << equality_property_list.new()
+	.xml_collections << property_list.new()
+	.collection_xml << _unset
+	
+	_self.init_manifolds()
+	
+	_self.read_updates()
+
+	_self.init_dataset_specials()
+		
+	>> _self
+
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.ofile_name
+	## 
+	## 
+	>> .ds.dm_xml_filename
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.default_output_file()
+	## 
+	## 
+
+	l_mod << sw_module_manager.module(_self.module_name.default(:dm_doc_writer))
+	l_dir << l_mod.resource_list_for(:data).an_element()
+	l_name << system.pathname_from_components(_self.ofile_name,l_dir)
+	
+	>> l_name
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+#_private _method dm_xml_writer.init_dataset_specials()
+_method dm_xml_writer.init_dataset_specials()
+	## 
+	## .properties[:dataset_specials]
+	##
+	## If <value> is _unset : dm_dataset_specials.new()
+	## If <value> is a symbol: !current_package![<value>].new()
+	## If <value> is_kind_of?(dm_dataset_specials) use it
+	##
+
+	write("Initialising dataset specials...")
+
+	_try _with p_cond
+		
+		_if (sp << .properties[:dataset_specials]) _isnt _unset _andif
+		    (sp.is_kind_of?(:symbol)) _andif
+		    (ob << !current_package![sp]) _isnt _unset
+		_then .dataset_specials << ob.new(.ds)
+		      write("Created ",.dataset_specials)
+		_elif sp.is_kind_of?(dm_dataset_specials)
+		_then .dataset_specials << sp.verify(.ds)
+		_endif
+
+		_if .dataset_specials _is _unset 
+		_then .dataset_specials << dm_dataset_specials.new(.ds)
+		_endif
+		
+	_when error
+		write("Creation of dataset specials failed ",p_cond.report_contents_string)
+		.dataset_specials << dm_dataset_specials.new(.ds)
+	_endtry
+
+	write("Dataset specials ",.dataset_specials)
+	>> .dataset_specials
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.init_manifolds()
+	## 
+	## Populates .manifolds, .fields_by_manifold and
+	## .fields_with_manifold_interaction
+	##
+
+	write("Init manifolds...")
+	
+	.manifolds << property_list.new()
+	.fields_by_manifold << property_list.new()
+	
+	_for code,name _over .ds.manifolds()
+	_loop .manifolds[name] << manifold.new(.ds,code)
+	      .fields_by_manifold[name] << .ds.all_fields_using_manifold(name)
+	_endloop
+
+	.fields_with_manifold_interaction << _self.full_topology_table()
+
+	>> _true
+	
+_endmethod
+$
+
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.process()
+	## 
+	## Writes all xml elements to .out_file in the following order:
+	##
+	## 0. Datamodel and software details
+	## 1. Categories & collections
+	## 2. Enumerators
+	## 3. Topology
+	## 
+
+	write("Exporting...")
+	
+	.xml_collections.empty()
+
+	_self.process_categories_and_collections()
+
+	_self.process_enumerators()
+
+	_self.process_topology()
+
+	_self.write_to( .out_file )
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.software_version()
+	## 
+	## #1 Core
+	## #2 This Module
+	
+	_local l_list << property_list.new()
+	
+	_for i _over {:sw_core,:datamodel_doc_writer}.fast_elements()
+	_loop
+		#DEBUG write(i)
+		l_list[i] << smallworld_product.product(i).version.write_string
+	_endloop
+
+	_local l_in << .dataset_specials.products_for_version
+	_for i _over l_in.fast_elements()
+	_loop
+		_try _with p_cond
+			l_list[i] << smallworld_product.product(i).version.write_string
+
+		_when error 
+			write(p_cond.report_contents_string)
+		_endtry
+	_endloop
+
+	>> dm_xml_handler.xml_from_list(:software_version,l_list)
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_xml_writer.ace( _optional ace_name )
+	## 
+	## returns the ase record with name ACE_NAME. When ACE_NAME
+	## isnt given, it uses the value of .properties[:ace_name]
+	##
+
+	ace_name << ace_name.default(.properties[:ace_name])
+	acv << gis_program_manager.ace_view
+	col << acv.collection(:sw_gis!ace)
+	pred << predicate.eq(:name,ace_name)
+	ace << col.select(pred).an_element()
+	
+	>> ace
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_xml_writer.categories_from_ace( ace_name )
+	## 
+	##
+	
+	_local ace << _self.ace( ace_name )
+	ds_name << .ds.name
+		
+	list << equality_property_list.new()
+	_for i_elem _over ace.dataset_rwo_entries_for(ds_name)
+	_loop _if i_elem.type _is 1
+	      _then cat << list[i_elem.name.write_string] << rope.new()
+	      _else cat.add(i_elem.name.as_symbol())
+	      _endif
+	_endloop
+	
+	>> list
+_endmethod
+$
+
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.read_updates()
+	## 
+	## reads updates and stores them in .updates
+	##
+
+	.updates << property_list.new()
+	
+	_if (l_str << .properties[:update_file]) _isnt _unset
+	_then
+		_if _not system.file_exists?(l_str)
+		_then write(" Configured file with updates not found ",l_str)
+		      _return 
+		_endif
+	_else
+		write("No updates are configured ")
+		_return 
+	_endif
+	
+	list << property_list.new()
+	
+	l_file << l_str
+	l_xml << simple_xml.read_element_file(l_file)
+	
+	_if l_xml.type = :datamodel _andif
+	    (l_c << l_xml.xml_elements.first).type = :collections
+	_then
+		
+		l_col_updates << list[:collection_updates] << property_list.new()
+		
+		_for i _over l_c.xml_elements.fast_elements()
+		_loop
+			atts << i.attributes
+			col_name << atts["name"].as_symbol()
+			
+			_if .ds.collections[col_name] _is _unset 
+			_then write("Warning - No collection with name ",col_name)
+			      _continue 
+			_endif
+			
+			#DEBUG write("Processing update name ",name)
+			l_col_update << rope.new()
+			
+			_try _with p_cond
+				
+				_for i2 _over i.elements.fast_elements()
+				_loop
+					l_col_update.add(i2)
+				_endloop
+
+				write(" Reading update for: ",col_name," (",l_col_update.size,%))
+				l_col_updates[col_name] << l_col_update
+				
+			_when error
+				write("Element ",col_name," could not be processed ",p_cond.report_contents_string)
+			_endtry
+			
+		_endloop
+	_endif
+
+	.updates << list
+	>> list
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.datamodel_xml()
+	## 
+	## Create the top element
+	##
+	
+	>> dm_xml_handler.datamodel_xml( .ds, .properties)
+
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.write_to( file )
+	## 
+	##
+
+	l_datamodel << _self.datamodel_xml()
+	
+	l_objects << l_datamodel.elements
+
+	l_objects.add( dm_xml_handler.datamodel_history_xml( .ds , .properties) )
+
+	l_objects.add( _self.software_version() )
+	l_objects.add( _self.global_properties_xml())
+
+	l_objects.add_all_last(.categories)
+
+	l_objects.add(.enumerators)
+	
+	l_objects.add(.topology_interactions)
+
+	l_objects.add_all_last( _self.dataset_special_includes)
+	
+	simple_xml.write_element_file( file, l_datamodel )
+
+	write("Dataset ",.ds," written to ", .out_file)
+
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.process_categories_and_collections()
+	## 
+	##
+
+	_local l_ace_name << .properties[:ace_name]
+	.ace_list << _self.categories_from_ace(l_ace_name)
+
+	_local l_cats << rope.new()
+	
+	_for i_key,i_cols _over .ace_list.fast_keys_and_elements()
+	_loop
+		
+		l_cols << rope.new()
+
+		_for i_colname _over i_cols.fast_elements()
+		_loop
+			i_col << .ds.collections[i_colname]
+			_if i_col.skip_dm_export? _is _true 
+			_then
+				write(i_col," skipped ")
+				_continue 
+			_endif
+			l_xml << _self.process_collection( i_col, i_key )
+			l_cols.add(l_xml)		
+		_endloop
+
+		l_cats.add(dm_xml_handler.category_xml(l_cols, i_key))
+		
+	_endloop
+
+	# Now check if we are complete
+	_local l_misses << rope.new()
+	_for i_col _over .ds.collections.fast_elements()
+	_loop
+		_if i_col.skip_dm_export? _is _false _andif
+		    _not _self.ace_contains_col?( i_col )
+		_then
+			#DEBUG write(i_col,"  missed")
+			l_xml << _self.process_collection( i_col, :not_in_ace)
+			l_misses.add(l_xml)
+		_endif
+	_endloop
+
+	_if l_misses.size > 0
+	_then
+		l_catname << write_string("Not in ACE '",l_ace_name,%')
+		l_cat_prop << property_list.new_with(:name,l_catname)
+		l_cat << sw:simple_xml_thing.new(:category,l_misses,l_cat_prop)
+		l_cats.add(l_cat)
+	_endif
+
+	.categories << l_cats
+	
+	>> l_cats
+
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.process_collection( col, category )
+	## 
+	##
+
+#	write("Processing ",col, " category: ",category)
+
+	l_properties << property_list.new_with(:category,category)
+
+	updates << _self.updates_for(col)
+	_if updates _isnt _unset 
+	_then l_properties.add_all(updates)
+	_endif
+	
+	.visible_fields << col.visible_fields
+	.collection_xml << dm_xml_handler.collection_xml( col, l_properties )
+	
+	l_flds << _self.process_fields( col )
+
+#	.xml_collections[col.name] << .collection_xml
+
+	>> .collection_xml
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.process_fields( col )
+	## 
+	## 
+
+	_for i_fld _over col.all_fields_ordered.fast_elements()
+	_loop
+		_self.process_field( i_fld )
+	_endloop
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.process_field( fld )
+	## 
+	## 
+
+	properties << property_list.new()
+	properties[:visible] << .visible_fields.includes?( fld )
+
+	updates << _self.updates_for( fld )
+	_if updates _isnt _unset 
+	_then properties.add_all(updates)
+	_endif
+	
+	(l_xml,l_main_type) << dm_xml_handler.field_xml(fld, properties)
+	.collection_xml.elements.add(l_xml)
+		
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.process_enumerators()
+	## 
+	##
+
+	_local l_tag << :enumerators
+	_local l_rope << rope.new()
+
+	_for a_enu _over .ds.dd_enumerators(_true).fast_elements()
+	_loop l_rope.add(dm_xml_handler.enumerator_xml(a_enu))
+	_endloop
+
+	.enumerators << sw:simple_xml_thing.new(l_tag,l_rope)
+
+	>> .enumerators
+_endmethod
+$
+
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.process_topology()
+	## 
+	## populates .topology_interactions
+	##
+
+	
+	_local l_elements << rope.new()
+	.topology_interactions << dm_xml_handler.explicit_topology_rules_xml(l_elements)
+
+	_for i_mf_name,i_manifold _over .manifolds.fast_keys_and_elements()
+	_loop
+
+		l_tables << dm_xml_handler.topology_tables_and_interactions(
+				    .fields_with_manifold_interaction[i_mf_name])
+		
+		l_mf_xml << dm_xml_handler.manifold_xml(i_mf_name,l_tables)
+		l_elements.add(l_mf_xml)
+
+	_endloop
+
+	
+	>> .topology_interactions
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.ace_contains_col?( p_col )
+	## 
+	##
+	
+	_local l_name << p_col.name
+	_for i,list _over .ace_list.fast_keys_and_elements()
+	_loop _if list.includes?(l_name)
+	      _then _return _true 
+	      _endif
+	_endloop
+
+	>> _false 
+
+_endmethod
+$
+
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.updates_for( obj )
+	## 
+	##
+
+#	#DEBUG write(" Update for ",obj)
+	_if .updates _is _unset _orif
+	    (l_colupdates << .updates[:collection_updates]) _is _unset
+	_then _return 
+	_endif
+
+	_if obj.class_name _is :ds_collection 
+	_then
+		
+		col_name << obj.name
+		
+		_if (updates << l_colupdates[col_name]) _is _unset 
+		_then _return 
+		_endif
+
+		results << _self.updates_for_collection(obj,updates)
+		
+	_elif obj.inherits_from?(dd_basic_field) _andif 
+	      (l_colupdates << .updates[:collection_updates]) _isnt _unset
+	_then
+
+		col_name << obj.owner.name
+		
+		_if (updates << l_colupdates[col_name]) _is _unset 
+		_then _return
+		_endif
+
+		results << _self.updates_for_collection_field( obj, updates)
+		
+	_else
+		write(" Warning - Updates for ",obj," not (yet) supported")
+	_endif
+
+	_if results _isnt _unset
+	_then list << dm_xml_handler.list_from_xml(results)
+	_endif
+	
+	>> list
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_xml_writer.updates_for_collection( col , updates )
+	## 
+	## 
+
+	results << rope.new()
+
+	_for i_elem _over updates.elements()
+	_loop _if i_elem.type _isnt :field
+	      _then results.add(i_elem)
+	      _endif
+	_endloop
+	write(" Update(s) found for ",col, " ",results)
+
+	>> results
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_xml_writer.updates_for_collection_field( fld, updates)
+	## 
+	## 
+
+	results << rope.new()
+	fld_name << fld.name
+
+	_for i_elem _over updates.fast_elements()
+	_loop
+		_if i_elem.type _isnt :field
+		_then _continue
+		_endif
+		
+		u_fldname << i_elem.attribute("name").as_symbol()
+		_if u_fldname _is fld_name
+		_then
+			result << i_elem.elements.first
+			results.add(result)
+			write("Update found for ",fld, " ",result)
+		_endif
+	_endloop
+
+	>> results 
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.full_topology_table()
+	## 
+	## Returns a list keyed on geometry field containing a hash_table
+	## with geometry fields and interactions
+	##
+	
+	_local l_list_by_man << property_list.new()
+	
+	_for i_name,i_manifold _over .manifolds.fast_keys_and_elements()
+	_loop
+
+		l_list_by_man[i_name] << hash_table.new()
+		l_list << l_list_by_man[i_name]
+		
+		_local gfields << .fields_by_manifold[i_name]
+
+		_for i_field _over gfields.fast_elements()
+		_loop
+			l_rules << _self.manifold_rules_for(i_field,i_name)
+			_if _not l_rules.empty?
+			_then l_list[i_field] << l_rules
+			_endif
+		_endloop
+
+	_endloop
+
+	>> l_list_by_man
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.manifold_rules_for(a_fld, manifold_name)
+	## 
+	## Returns a list keyed on geometry_field containig the rules
+	## set. Do nothing is ignored.
+	##
+	
+	_local mf << .manifolds[manifold_name]
+	_local gfields << .fields_by_manifold[manifold_name]
+	_local list << hash_table.new()
+	_for i_gfield _over gfields.fast_elements()
+	_loop
+		
+#		write(_self,".manifold_rules_for(",a_fld,%,,i_gfield)
+		
+		_try _with cond
+			(a,b) << mf.get_rules_for_geom_pair(a_fld,i_gfield)
+			_if a _is :do_nothing _and b _is :do_nothing
+			_then _continue 
+			_endif
+			list[i_gfield]<<{a,b}
+		_when error
+			#write(i_gfield," - manifold_rules_for Error ",cond.report_contents_string)
+		_endtry
+		
+	_endloop
+
+	>> list
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.default_manifold_rules(manifold_name)
+	## 
+	## Returns a vector with the :system rules for manifold
+	## MANIFOLD_NAME
+	##
+	
+	_local l_result << rope.new()
+	_for i_vec _over .ds.manifold_rules_for(manifold_name,_true)
+	_loop _if i_vec[1] _is :system
+	      _then l_result.add(i_vec)
+	      _endif
+	_endloop
+
+	>> l_result 
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,xml,xml})
+_method dm_xml_writer.global_properties_xml()
+	## 
+	## converts _self.global_field_descriptions,
+	## default_manifold_rules etc. to a xml
+	##
+
+	a_rope << rope.new()
+
+	a_rope.add(_self.default_topology_rules_xml())
+
+	a_rope.add(_self.global_field_descriptions())
+
+	a_rope.add(_self.geometry_mappings())
+	
+	a_result << sw:simple_xml_thing.new(:global_properties,a_rope)
+
+	>> a_result
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_method dm_xml_writer.default_topology_rules_xml()
+	## 
+	## Returns the xml element for the default topology rules
+	##
+	>> dm_xml_handler.default_topology_rules_xml( _self.default_topology_rules)
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_private _method dm_xml_writer.default_topology_rules
+	## 
+	## returns a proplist with the default rules for every manifold
+	## in .manifolds
+	##
+
+	l_list << property_list.new()
+	_for i_name _over .manifolds.keys.fast_elements()
+	_loop  l_list[i_name] << _self.default_manifold_rules(i_name)
+	_endloop
+
+	>> l_list
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_method dm_xml_writer.global_field_descriptions()
+	## 
+	## get data from .dataset_specials and return a :commonfields
+	## xml
+	## 
+
+	a_rope << rope.new()
+	props << .dataset_specials.global_field_descriptions
+
+	_for i_cat,i_values _over props.fast_keys_and_elements()
+	_loop
+
+		l_rope << rope.new()
+
+		_for i_key,i_value _over i_values.fast_keys_and_elements()
+		_loop
+#			write(i_cat,i_key,i_value)
+			external_name << _self.an_external_field_name(i_key)
+			a_atts << property_list.new_with(:name,i_key,
+							 :external_name,external_name,
+							 :description,i_value)
+			# Get an external name
+			a_xml << sw:simple_xml_thing.new(:field,{},a_atts)
+			l_rope.add(a_xml)
+			
+		_endloop
+
+		l_atts << property_list.new_with(:name,i_cat.write_string.make_non_escape_string_pretty())
+		l_xml << sw:simple_xml_thing.new(:category,l_rope,l_atts)
+		
+		a_rope.add(l_xml)
+	_endloop
+
+	l_xml << sw:simple_xml_thing.new(:commonfields,a_rope)
+
+	>> l_xml
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_method dm_xml_writer.geometry_mappings()
+	## 
+	## Get from .dataset_specials and return :geometry_mappings xml
+	## or when not defined an empty rope
+	## 
+
+	>> _if (l_maps << .dataset_specials.geometry_mappings).is_kind_of?(property_list)
+	   _then >> dm_xml_handler.geometry_mappings_xml(l_maps)
+	   _else >> rope.new()
+	   _endif
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_method dm_xml_writer.an_external_field_name(f_name)
+	## 
+	## Used to get an external name for a dataset_specials f_name
+	## This is not the best way.
+	##
+	
+	_for i_col _over .ds.collections.fast_elements()
+	_loop _if i_col.has_field?(f_name)
+	      _then
+#DEBUG		      write(" Return external name for ",f_name," from collection ",i_col)
+		      _return i_col.field(f_name).external_name.write_string
+	      _endif
+	_endloop
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_method dm_xml_writer.dataset_special_includes
+	## 
+	##
+	_if (in << .dataset_specials.includes).size = 0
+	_then
+		write("Nothing is included from ",.dataset_specials)
+	_else
+		write("Included from ",.dataset_specials," :")
+		_for i_elem _over in.fast_elements()
+		_loop write(i_elem)
+		_endloop
+	_endif
+	>> in
+_endmethod
+$

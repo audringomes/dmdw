@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="windows-1252" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+  <xs:element name="datamodel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="datamodel_info">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dm_datamodel_version">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:byte">
+                      <xs:attribute type="xs:string" name="dm_product_name"/>
+                      <xs:attribute type="xs:string" name="dm_module_name"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="dm_datamodel_version"/>
+              <xs:element type="xs:string" name="dm_current_dd_version"/>
+              <xs:element type="xs:string" name="dm_dataset"/>
+              <xs:element type="xs:string" name="dm_ace_name"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="datamodel_history">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="datamodel_history_meta"/>
+              <xs:element name="datamodel_history_record">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="product_name">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="mod_name">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="datamodel_name">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="version">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="sub_datamodel_name">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="checkpoint_name">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="min_read_version">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="min_write_version">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="time_applied">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="product_version">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="dd_version">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="parameter_string_id">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:byte">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="implementer_name">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="implementer_comment">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="user_name">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="user_comment">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="key"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="software_version">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="sw_core"/>
+              <xs:element type="xs:string" name="dm_doc_writer"/>
+              <xs:element type="xs:string" name="water_supply_core"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="global_properties">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="default_topology_rules">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="manifold">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="interaction" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="rule" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="rule" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="geomtype1" use="optional"/>
+                              <xs:attribute type="xs:string" name="geomtype2" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="commonfields">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="category" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="field" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="name" use="optional"/>
+                                  <xs:attribute type="xs:string" name="external_name" use="optional"/>
+                                  <xs:attribute type="xs:string" name="description" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="geometry_mappings">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="method" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="name" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="category">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="collection">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="field" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="external_name"/>
+                          <xs:element type="xs:string" name="name"/>
+                          <xs:element name="field_type">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="type" use="optional"/>
+                                  <xs:attribute type="xs:string" name="mapped" use="optional"/>
+                                  <xs:attribute type="xs:string" name="mapped_to" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="field_sub_type">
+                            <xs:complexType mixed="true">
+                              <xs:sequence>
+                                <xs:element name="phys_type" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="type" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="enumerated" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="enumerator_name" use="optional"/>
+                                        <xs:attribute type="xs:string" name="class" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="join_type" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="target_table">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="optional"/>
+                                              <xs:attribute type="xs:string" name="external_name" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="join_type" use="optional"/>
+                                    <xs:attribute type="xs:string" name="heterogeneous" use="optional"/>
+                                    <xs:attribute type="xs:string" name="simple_result" use="optional"/>
+                                    <xs:attribute type="xs:string" name="result" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="geom_type" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="type" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="inmanifold" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="name"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="mapped" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="map_discriminator_method" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="mapped_to" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                                        <xs:attribute type="xs:string" name="external_name" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="mapped" use="optional"/>
+                              <xs:attribute type="xs:string" name="mapped_to" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="key"/>
+                          <xs:element type="xs:string" name="mandatory"/>
+                          <xs:element type="xs:string" name="help_text"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="visible" use="optional"/>
+                        <xs:attribute type="xs:string" name="type" use="optional"/>
+                        <xs:attribute type="xs:string" name="mapped" use="optional"/>
+                        <xs:attribute type="xs:string" name="mapped_to" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="name"/>
+                  <xs:attribute type="xs:string" name="external_name"/>
+                  <xs:attribute type="xs:string" name="category"/>
+                  <xs:attribute type="xs:string" name="description"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="enumerators">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="enumerator">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="value" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="name"/>
+                  <xs:attribute type="xs:string" name="type"/>
+                  <xs:attribute type="xs:string" name="domain_class"/>
+                  <xs:attribute type="xs:byte" name="storage_class"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="topology_by_manifold">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="topology">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="topology_table">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="topology_interaction">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="interacts_with" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="rule" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="rule" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="field_name" use="optional"/>
+                                    <xs:attribute type="xs:string" name="field_external_name" use="optional"/>
+                                    <xs:attribute type="xs:string" name="table_external_name" use="optional"/>
+                                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="field_name"/>
+                              <xs:attribute type="xs:string" name="field_external_name"/>
+                              <xs:attribute type="xs:string" name="table_external_name"/>
+                              <xs:attribute type="xs:string" name="name"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name"/>
+                        <xs:attribute type="xs:string" name="table_external_name"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="manifold_name"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="soft_joins">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="soft_join_collection">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="soft_join" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:choice maxOccurs="unbounded" minOccurs="0">
+                          <xs:element type="xs:string" name="join_name"/>
+                          <xs:element type="xs:string" name="join_method_name"/>
+                          <xs:element type="xs:string" name="join_table"/>
+                          <xs:element type="xs:string" name="join_table_dataset"/>
+                          <xs:element type="xs:string" name="join_attach_method_name"/>
+                          <xs:element type="xs:string" name="join_detach_method_name"/>
+                          <xs:element name="join_table_field_info">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="join_table_field_info">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="object_id" minOccurs="0"/>
+                                      <xs:element type="xs:string" name="object_name" minOccurs="0"/>
+                                      <xs:element type="xs:string" name="source_id" minOccurs="0"/>
+                                      <xs:element type="xs:string" name="collection_name" minOccurs="0"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="join_gui_type"/>
+                          <xs:element type="xs:string" name="visible_field_names"/>
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="name"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="name"/>
+      <xs:attribute type="xs:dateTime" name="date"/>
+      <xs:attribute type="xs:string" name="external_name"/>
+	  <xs:attribute type="xs:string" name="version"/>
+	  <xs:attribute type="xs:string" name="alternative_path_name"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

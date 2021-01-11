@@ -1,0 +1,526 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Collection Drawing Function</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+				function ToggleTechtop()
+				{ToggleSub('techtop');}
+
+				function ToggleDMHistory()
+				{$(".dmHistory").toggle();}
+				
+				function ToggleDetail()
+				{$(".technical").toggle();}
+
+				function ToggleInVisField()
+				{$(".VisFalse").toggle();}
+				
+				function ToggleMapped()
+				{$(".MappedTo").toggle();}
+				
+				function ToggleTopology()
+				{$(".TopologyList").toggle();}
+													
+			</script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="#"><img class="logo float" src="../dmdw-logo.png"></a><h1><a href="../gis412391.html">Datamodel information Gis</a></h1>
+      </header>
+      <div class="PageTitle Float">Drawing Function</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleTopology();" onclick="ToggleTopology();" checked="True"><label for="ToggleTopology();"><span>Topology</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="drawing_function">
+            <tr class="TableName">
+               <td colspan="7">
+                  <h3 class="InTable">Drawing Function</h3>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="7">Category: Not in ACE 'electricity'</td>
+            </tr>
+            <tr>
+               <td colspan="7" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Type</th>
+               <th class="technical">Sub type</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">func_id</div>
+               </td>
+               				
+               <td class="technical">func_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				
+               </td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>func_id is of type integer
+                  no constraints
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">universe_id</div>
+               </td>
+               				
+               <td class="technical">universe_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>universe_id is of type integer
+                  no constraints
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">world_id</div>
+               </td>
+               				
+               <td class="technical">world_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>world_id is of type integer
+                  no constraints
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">evaluation</div>
+               </td>
+               				
+               <td class="technical">evaluation</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					char16_vector
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>The values of evaluation are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('drawing_function_evaluation');" title="Click to Show/Hide details">drawing_function_evaluation</a></span><table id="drawing_function_evaluation" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">drawing_function_evaluation</th>
+                     </tr>
+                     <tr class="HeadStyle">
+                        <th class="technical">Type</th>
+                     </tr>
+                     <tr class="McTableRowStyle">
+                        <td class="technical">mapped</td>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">On Insert</li>
+                              			
+                              <li class="EnumeratorValue">Post-Redraw</li>
+                              			
+                              <li class="EnumeratorValue">Pre-Redraw</li>
+                              		
+                           </ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">function_name</div>
+               </td>
+               				
+               <td class="technical">function_name</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>function_name is a vector size 32 of character
+                  no constraints
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">param_1</div>
+               </td>
+               				
+               <td class="technical">param_1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>param_1 is a vector size 32 of character
+                  no constraints
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">param_2</div>
+               </td>
+               				
+               <td class="technical">param_2</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>param_2 is a vector size 32 of character
+                  no constraints
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">param_3</div>
+               </td>
+               				
+               <td class="technical">param_3</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>param_3 is a vector size 32 of character
+                  no constraints
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">param_4</div>
+               </td>
+               				
+               <td class="technical">param_4</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>param_4 is a vector size 32 of character
+                  no constraints
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">owner_id</div>
+               </td>
+               				
+               <td class="technical">owner_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>owner_id is a field of class integer, such as 0 </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">draw_order</div>
+               </td>
+               				
+               <td class="technical">draw_order</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>draw_order is a field of class integer, such as 0 </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">flags</div>
+               </td>
+               				
+               <td class="technical">flags</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>flags is a field of class integer, such as 0 </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">children</div>
+               </td>
+               				
+               <td class="technical">children</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_drawing_function.html">Drawing Function</a></li>
+                  </ul>
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>children is a join field returning a collection of records from 'drawing_function'
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">extra_params</div>
+               </td>
+               				
+               <td class="technical">extra_params</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_sw_gis!drawing_function_param.html">sw_gis!drawing_function_param</a></li>
+                  </ul>
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>extra_params is a join field returning a collection of records from 'sw_gis!drawing_function_param'
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">function_geometries</div>
+               </td>
+               				
+               <td class="technical">function_geometries</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_function_geometry.html">Function Geometry</a></li>
+                  </ul>
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>function_geometries is a join field returning a collection of records from 'function_geometry'
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!info_flags</div>
+               </td>
+               				
+               <td class="technical">int!info_flags</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_swif!info_flag.html">Information Flag</a></li>
+                  </ul>
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>int!info_flags is a join field returning a set of records from 'swif!info_flag' </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">owner</div>
+               </td>
+               				
+               <td class="technical">owner</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_drawing_function.html">Drawing Function</a></li>
+                  </ul>
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>owner is a join field returning a record from 'drawing_function' </td>
+               			
+            </tr>
+            		
+         </table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2019</li>
+            <li><a href="../../../en_gb/help/index.html">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

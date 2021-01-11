@@ -1,0 +1,516 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Collection Place of Interest</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+				function ToggleTechtop()
+				{ToggleSub('techtop');}
+
+				function ToggleDMHistory()
+				{$(".dmHistory").toggle();}
+				
+				function ToggleDetail()
+				{$(".technical").toggle();}
+
+				function ToggleInVisField()
+				{$(".VisFalse").toggle();}
+				
+				function ToggleMapped()
+				{$(".MappedTo").toggle();}
+				
+				function ToggleTopology()
+				{$(".TopologyList").toggle();}
+													
+			</script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="#"><img class="logo float" src="../dmdw-logo.png"></a><h1><a href="../gis412391.html">Datamodel information Gis</a></h1>
+      </header>
+      <div class="PageTitle Float">Place of Interest</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleTopology();" onclick="ToggleTopology();" checked="True"><label for="ToggleTopology();"><span>Topology</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="pl_of_interest">
+            <tr class="TableName">
+               <td colspan="7">
+                  <h3 class="InTable">Place of Interest</h3>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="7">Category: Cadastral Coverages</td>
+            </tr>
+            <tr>
+               <td colspan="7" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Type</th>
+               <th class="technical">Sub type</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">pl_of_interest_id</div>
+               </td>
+               				
+               <td class="technical">pl_of_interest_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				
+               </td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>Help text here ....</td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Name</div>
+               </td>
+               				
+               <td class="technical">name</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>Help text here ....</td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Address 1</div>
+               </td>
+               				
+               <td class="technical">address1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>Help text here ....</td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Address 2</div>
+               </td>
+               				
+               <td class="technical">address2</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>Help text here ....</td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Type of Place</div>
+               </td>
+               				
+               <td class="technical">type_of_place</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>Help text here ....</td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Nearest Town</div>
+               </td>
+               				
+               <td class="technical">nearest_town</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>Help text here ....</td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">rwo_id</div>
+               </td>
+               				
+               <td class="technical">rwo_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>rwo_id is a vector field with elements of class integer of size 3 </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_vstamp
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">dd!join326453</div>
+               </td>
+               				
+               <td class="technical">dd!join326453</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_int!drawing_pl_of_interes.html">int!drawing_pl_of_interes</a></li>
+                  </ul>
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>dd!join326453 is a join field returning a record from 'int!drawing_pl_of_interes'
+                  
+               </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Drawing</div>
+               </td>
+               				
+               <td class="technical">drawing</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_drawing.html">Drawing</a></li>
+                  </ul>
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>Drawing is a join field returning a record from 'drawing' </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!info_flags</div>
+               </td>
+               				
+               <td class="technical">int!info_flags</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_swif!info_flag.html">Information Flag</a></li>
+                  </ul>
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>int!info_flags is a join field returning a set of records from 'swif!info_flag' </td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Annotation</div>
+               </td>
+               				
+               <td class="technical">annotation</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					text
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td></td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Coverage</div>
+               </td>
+               				
+               <td class="technical">coverage</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					area
+                  					(cadastral)
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>Manifold: <span class="name">cadastral</span> <span class="technical">
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Pub/Restaurant.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Park.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Cadastral Boundary.<span class="geometry">Boundary Line</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                     </ul>
+                     				</span></td>
+               			
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Location</div>
+               </td>
+               				
+               <td class="technical">location</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					point
+                  					(road)
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td>Manifold: <span class="name">road</span> <span class="technical">
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                     </ul>
+                     					
+                     <ul class="TopologyList">
+                        <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                     </ul>
+                     				</span></td>
+               			
+            </tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">meatball</div>
+               </td>
+               				
+               <td class="technical">meatball</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					simple_point
+                  				
+               </td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td></td>
+               			
+            </tr>
+            		
+         </table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2019</li>
+            <li><a href="../../../en_gb/help/index.html">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,15 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2019 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+_block
+	
+	_local (l_name,l_root) << system.pathname_components(!source_file!)
+	sw:smallworld_product.add_product(l_root)
+	sw_module_manager.load_module(:ds_doc_writer)
+_endblock
+$

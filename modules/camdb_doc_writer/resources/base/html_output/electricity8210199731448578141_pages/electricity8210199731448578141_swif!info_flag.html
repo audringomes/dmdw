@@ -1,0 +1,918 @@
+<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Electricity - Collection Information Flag</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Electricity</a></header>
+      <div class="PageTitle float">Information Flag</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="swif!info_flag">
+            <tr class="TableName">
+               <td colspan="7">
+                  <h3 class="InTable">Information Flag</h3>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="7">Category: Not in ACE 'electricity'</td>
+            </tr>
+            <tr>
+               <td colspan="7" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Type</th>
+               <th class="technical">Sub type</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Id</div>
+               </td>
+               				
+               <td class="technical">id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint64
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Id ist ein Feld der Klasse integer, z. B. 0 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">Routine Name</div>
+               </td>
+               				
+               <td class="technical">routine_name</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Routine Name ist eine Zeichenfolge-Feldgröße 64 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Error Code</div>
+               </td>
+               				
+               <td class="technical">error_code</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Error Code ist eine Zeichenfolge-Feldgröße 64 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Origin</div>
+               </td>
+               				
+               <td class="technical">origin</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					char16_vector
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>The values of Origin are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('swif!origin');" title="Click to Show/Hide details">swif!origin</a></span><table id="swif!origin" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">swif!origin</th>
+                     </tr>
+                     <tr class="HeadStyle">
+                        <th class="technical">Type</th>
+                     </tr>
+                     <tr class="McTableRowStyle">
+                        <td class="technical">mapped</td>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">Quality Checks</li>
+                              			
+                              <li class="EnumeratorValue">Merge</li>
+                              			
+                              <li class="EnumeratorValue">Relational Integrity Check</li>
+                              			
+                              <li class="EnumeratorValue">User</li>
+                              			
+                              <li class="EnumeratorValue">Other</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Severity</div>
+               </td>
+               				
+               <td class="technical">severity</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					char16_vector
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>The values of Severity are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('swif!severity');" title="Click to Show/Hide details">swif!severity</a></span><table id="swif!severity" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">swif!severity</th>
+                     </tr>
+                     <tr class="HeadStyle">
+                        <th class="technical">Type</th>
+                     </tr>
+                     <tr class="McTableRowStyle">
+                        <td class="technical">mapped</td>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">Error</li>
+                              			
+                              <li class="EnumeratorValue">Warning</li>
+                              			
+                              <li class="EnumeratorValue">Information</li>
+                              			
+                              <li class="EnumeratorValue">Unknown</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Status</div>
+               </td>
+               				
+               <td class="technical">status</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					char16_vector
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>The values of Status are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('swif!status');" title="Click to Show/Hide details">swif!status</a></span><table id="swif!status" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">swif!status</th>
+                     </tr>
+                     <tr class="HeadStyle">
+                        <th class="technical">Type</th>
+                     </tr>
+                     <tr class="McTableRowStyle">
+                        <td class="technical">mapped</td>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">Pending</li>
+                              			
+                              <li class="EnumeratorValue">In Progress</li>
+                              			
+                              <li class="EnumeratorValue">Fixed</li>
+                              			
+                              <li class="EnumeratorValue">Auto-Fixed</li>
+                              			
+                              <li class="EnumeratorValue">Deferred</li>
+                              			
+                              <li class="EnumeratorValue">Auto-Failed</li>
+                              			
+                              <li class="EnumeratorValue">Ignore</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Date Created</div>
+               </td>
+               				
+               <td class="technical">date_created</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_time
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Date Created ist ein Feld der Klasse ds_time, z. B. 01.01.1970 01:00:00 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Date Updated</div>
+               </td>
+               				
+               <td class="technical">date_updated</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_time
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Date Updated ist ein Feld der Klasse ds_time, z. B. 01.01.1970 01:00:00
+                  	Standardwert: 01.01.1970 01:00:00 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Created By</div>
+               </td>
+               				
+               <td class="technical">created_by</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Created By ist eine Zeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Updated By</div>
+               </td>
+               				
+               <td class="technical">updated_by</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Updated By ist eine Zeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">Alternative</div>
+               </td>
+               				
+               <td class="technical">alternative</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Alternative ist eine Zeichenfolge-Feldgröße 128 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Design Info</div>
+               </td>
+               				
+               <td class="technical">design_info</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Design Info ist eine Zeichenfolge-Feldgröße 64 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">Transient?</div>
+               </td>
+               				
+               <td class="technical">transient?</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_bool
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Transient? ist ein Feld der Klasse false, z. B. True
+                  	Standardwert: False </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">Description Id</div>
+               </td>
+               				
+               <td class="technical">description_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint64
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Description Id ist ein Feld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">Remarks Id</div>
+               </td>
+               				
+               <td class="technical">remarks_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint64
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Remarks Id ist ein Feld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">Related Object Id</div>
+               </td>
+               				
+               <td class="technical">related_object_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint64
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Related Object Id ist ein Feld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">Related Object Tid</div>
+               </td>
+               				
+               <td class="technical">related_object_tid</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Related Object Tid ist ein Feld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">rwo_id</div>
+               </td>
+               				
+               <td class="technical">rwo_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_gis_element
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
+                  	Standardwert: sw:simple_vector:[1-3] </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_vstamp
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Description</div>
+               </td>
+               				
+               <td class="technical">description</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">text</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Description ist ein join Feld Text wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!objects</div>
+               </td>
+               				
+               <td class="technical">int!objects</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="electricity8210199731448578141_drawing_function.html">Drawing Function</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_viewport_mapping.html">Viewport Mapping</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_function_geometry.html">Function Geometry</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_switch.html">Switch</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_busbar.html">Busbar</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_transformer.html">Transformer</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_cable.html">Cable</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_joint.html">Joint</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_substation_internals_link.html">Substation Internals Link</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_substation.html">Substation</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_customer.html">Customer</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_substation_internals.html">Substation Internals</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_internal_cable.html">Internal Cable</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>int!objects ist ein join Feld Satz von Datensätzen aus 'drawing_function,viewport_mapping,function_geometry,switch,busbar,...'
+                  wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!related_object</div>
+               </td>
+               				
+               <td class="technical">int!related_object</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="electricity8210199731448578141_drawing_function.html">Drawing Function</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_viewport_mapping.html">Viewport Mapping</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_function_geometry.html">Function Geometry</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_switch.html">Switch</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_busbar.html">Busbar</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_transformer.html">Transformer</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_cable.html">Cable</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_joint.html">Joint</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_substation_internals_link.html">Substation Internals Link</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_substation.html">Substation</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_customer.html">Customer</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_substation_internals.html">Substation Internals</a></li>
+                     <li class="Join"><a href="electricity8210199731448578141_internal_cable.html">Internal Cable</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>int!related_object ist ein join Feld Datensatz aus 'drawing_function,viewport_mapping,function_geometry,switch,busbar,...'
+                  wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!related_urn</div>
+               </td>
+               				
+               <td class="technical">int!related_urn</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="electricity8210199731448578141_swif!info_flag_to_object3.html">swif!info_flag_to_object3</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>int!related_urn ist ein join Feld Datensatz aus 'swif!info_flag_to_object3' wird ausgegeben
+                  </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!urns</div>
+               </td>
+               				
+               <td class="technical">int!urns</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="electricity8210199731448578141_swif!info_flag_to_object2.html">swif!info_flag_to_object2</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>int!urns ist ein join Feld Objekttabelle mit Datensätzen aus 'swif!info_flag_to_object2'
+                  wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Remarks</div>
+               </td>
+               				
+               <td class="technical">remarks</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">text</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Remarks ist ein join Feld Text wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Location</div>
+               </td>
+               				
+               <td class="technical">location</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					simple_point
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td></td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">meatball</div>
+               </td>
+               				
+               <td class="technical">meatball</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					simple_point
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td></td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Region</div>
+               </td>
+               				
+               <td class="technical">region</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					simple_area
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td></td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="logical">Origin Type</div>
+               </td>
+               				
+               <td class="technical">origin_type</td>
+               				
+               <td class="technical">logical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Origin Type ist eine derived Zeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="logical">Routine String</div>
+               </td>
+               				
+               <td class="technical">routine_string</td>
+               				
+               <td class="technical">logical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Routine String ist eine derived Zeichenfolge-Feldgröße 64 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="logical">Severity Type</div>
+               </td>
+               				
+               <td class="technical">severity_type</td>
+               				
+               <td class="technical">logical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Severity Type ist eine derived Zeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="logical">Status Type</div>
+               </td>
+               				
+               <td class="technical">status_type</td>
+               				
+               <td class="technical">logical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Status Type ist eine derived Zeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 8210199731448578141</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

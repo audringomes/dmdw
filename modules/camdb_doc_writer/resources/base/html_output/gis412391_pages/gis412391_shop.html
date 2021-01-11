@@ -1,0 +1,570 @@
+<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Collection Geschäft</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
+      <div class="PageTitle float">Geschäft</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="shop">
+            <tr class="TableName">
+               <td colspan="7">
+                  <h3 class="InTable">Geschäft</h3>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="7">Category: Road Network</td>
+            </tr>
+            <tr>
+               <td colspan="7" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Type</th>
+               <th class="technical">Sub type</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Name</div>
+               </td>
+               				
+               <td class="technical">name</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Straße</div>
+               </td>
+               				
+               <td class="technical">street</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">Kommentar ID</div>
+               </td>
+               				
+               <td class="technical">comments_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Kommentar ID ist ein Feld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Status</div>
+               </td>
+               				
+               <td class="technical">status</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					char16_vector
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>The values of Status are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('status');" title="Click to Show/Hide details">status</a></span><table id="status" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">status</th>
+                     </tr>
+                     <tr class="HeadStyle">
+                        <th class="technical">Type</th>
+                     </tr>
+                     <tr class="McTableRowStyle">
+                        <td class="technical">mapped</td>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">In Betrieb</li>
+                              			
+                              <li class="EnumeratorValue">außer Betrieb</li>
+                              			
+                              <li class="EnumeratorValue">Vorgeschlagen</li>
+                              			
+                              <li class="EnumeratorValue">akzeptiert</li>
+                              			
+                              <li class="EnumeratorValue">Aufgegeben</li>
+                              			
+                              <li class="EnumeratorValue">Entfernt</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Größe</div>
+               </td>
+               				
+               <td class="technical">shop_size</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					char16_vector
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>The values of Größe are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('shop_size');" title="Click to Show/Hide details">shop_size</a></span><table id="shop_size" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">shop_size</th>
+                     </tr>
+                     <tr class="HeadStyle">
+                        <th class="technical">Type</th>
+                     </tr>
+                     <tr class="McTableRowStyle">
+                        <td class="technical">mapped</td>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">klein</li>
+                              			
+                              <li class="EnumeratorValue">Mittel</li>
+                              			
+                              <li class="EnumeratorValue">groß</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Postleitzahl</div>
+               </td>
+               				
+               <td class="technical">postcode</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>Postleitzahl ist eine Zeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">rwo_id</div>
+               </td>
+               				
+               <td class="technical">rwo_id</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
+                  	Standardwert: sw:simple_vector:[1-3] </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_vstamp
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Ausstattung</div>
+               </td>
+               				
+               <td class="technical">amenities</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_park.html">Park</a></li>
+                     <li class="Join"><a href="gis412391_play_area.html">Freizeitbereich</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Ausstattung ist ein join Feld Datensatz aus 'park,play_area' wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">amenities!int</div>
+               </td>
+               				
+               <td class="technical">amenities!int</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_int!hetero244956.html">int!hetero244956</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>amenities!int ist ein join Feld Datensatz aus 'int!hetero244956' wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Kommentar</div>
+               </td>
+               				
+               <td class="technical">comments</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">text</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Kommentar ist ein join Feld Text wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Gesponserte Objekte</div>
+               </td>
+               				
+               <td class="technical">objects_sponsored</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_roundabout.html">Kreisverkehr</a></li>
+                     <li class="Join"><a href="gis412391_play_area.html">Freizeitbereich</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Gesponserte Objekte ist ein join Feld Satz von Datensätzen aus 'roundabout,play_area'
+                  wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">objects_sponsored!int</div>
+               </td>
+               				
+               <td class="technical">objects_sponsored!int</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_int!hetero244932.html">int!hetero244932</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>objects_sponsored!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244932'
+                  wird ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">sector</div>
+               </td>
+               				
+               <td class="technical">sector</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_sector.html">Sector</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>sector ist ein super_dd join Feld Datensatz aus '[demographics]sector' wird ausgegeben
+                  </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Freizeitbereich mit Dienstangeboten</div>
+               </td>
+               				
+               <td class="technical">serviced_play_area</td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">
+                  					
+                  <ul>
+                     <li class="Join"><a href="gis412391_play_area.html">Freizeitbereich</a></li>
+                  </ul>
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Freizeitbereich mit Dienstangeboten ist ein join Feld Datensatz aus 'play_area' wird
+                  ausgegeben </td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Standort</div>
+               </td>
+               				
+               <td class="technical">location</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					point
+                  					(road)
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>Manifold: <span class="name">road</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#shop.location">(Topology)</a></span></td>
+               			</tr>
+            			
+            <tr class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">meatball</div>
+               </td>
+               				
+               <td class="technical">meatball</td>
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical">
+                  					simple_point
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td></td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="logical">Rechtswert</div>
+               </td>
+               				
+               <td class="technical">cartesian_x</td>
+               				
+               <td class="technical">logical</td>
+               				
+               <td class="technical">
+                  					ds_float
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Rechtswert ist ein derived Feld der Klasse float, z. B. 0.000 , stored in Meter</td>
+               			</tr>
+            			
+            <tr class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="logical">Hochwert</div>
+               </td>
+               				
+               <td class="technical">cartesian_y</td>
+               				
+               <td class="technical">logical</td>
+               				
+               <td class="technical">
+                  					ds_float
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td>Hochwert ist ein derived Feld der Klasse float, z. B. 0.000 , stored in Meter</td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

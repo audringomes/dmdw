@@ -1,0 +1,998 @@
+<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Electricity - Explicit Topology Rules</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Electricity</a></header>
+      <div class="PageTitle float">Explicit Topology Rules (static)</div>
+      <div class="ChapterInfo float">
+         <p></p>
+      </div>
+      <div class="container">
+         		
+         <table class="dmTable dmTopology float">
+            <tr class="HeadStyle">
+               <th class="name" colspan="4">Manifold electricity</th>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="4">Busbar</td>
+               <td>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="busbar.location_dv">Location Dv</td>
+                     <td>
+                        					
+                        <table class="col2s name busbar location_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Dv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">endsplit_link</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name busbar location_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Transformer</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Dv Connection</td>
+                              							
+                              <td class="rule1Static">split_link</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="busbar.location_hv">Location Hv</td>
+                     <td>
+                        					
+                        <table class="col2s name busbar location_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Hv</td>
+                              							
+                              <td class="rule1Static">endsplit_link</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name busbar location_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Transformer</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Hv Connection</td>
+                              							
+                              <td class="rule1Static">split_link</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="busbar.location_lv">Location Lv</td>
+                     <td>
+                        					
+                        <table class="col2s name busbar location_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Lv</td>
+                              							
+                              <td class="rule1Static">endsplit_link</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name busbar location_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Transformer</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Lv Connection</td>
+                              							
+                              <td class="rule1Static">split_link</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  			</td>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="4">Cable</td>
+               <td>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="cable.centreline_dv">Centreline Dv</td>
+                     <td>
+                        					
+                        <table class="col2s name cable centreline_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Joint</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location DV</td>
+                              							
+                              <td class="rule1Static">split_link</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name cable centreline_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Substation Internals Link</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">External Pin Dv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="cable.centreline_hv">Centreline Hv</td>
+                     <td>
+                        					
+                        <table class="col2s name cable centreline_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Joint</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location HV</td>
+                              							
+                              <td class="rule1Static">split_link</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name cable centreline_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Substation Internals Link</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">External Pin Hv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="cable.centreline_lv">Centreline Lv</td>
+                     <td>
+                        					
+                        <table class="col2s name cable centreline_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Joint</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location LV</td>
+                              							
+                              <td class="rule1Static">split_link</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name cable centreline_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Substation Internals Link</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">External Pin Lv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name cable centreline_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Supply Point</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location</td>
+                              							
+                              <td class="rule1Static">split_link</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  			</td>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="4">Internal Cable</td>
+               <td>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="internal_cable.centreline_dv">Centreline Dv</td>
+                     <td>
+                        					
+                        <table class="col2s name internal_cable centreline_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Busbar</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location Dv</td>
+                              							
+                              <td class="rule1Static">endsplit_link</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name internal_cable centreline_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Substation Internals Link</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Internal Pin Dv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name internal_cable centreline_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Switch</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Primary Connection Dv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Secondary Connection Dv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name internal_cable centreline_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Transformer</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Dv Connection</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="internal_cable.centreline_hv">Centreline Hv</td>
+                     <td>
+                        					
+                        <table class="col2s name internal_cable centreline_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Busbar</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location Hv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">endsplit_link</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name internal_cable centreline_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Substation Internals Link</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Internal Pin Hv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name internal_cable centreline_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Switch</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Primary Connection Hv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Secondary Connection Hv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name internal_cable centreline_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Transformer</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Hv Connection</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="internal_cable.centreline_lv">Centreline Lv</td>
+                     <td>
+                        					
+                        <table class="col2s name internal_cable centreline_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Busbar</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location Lv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">endsplit_link</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name internal_cable centreline_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Substation Internals Link</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Internal Pin Lv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name internal_cable centreline_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Switch</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Primary Connection Lv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Secondary Connection Lv</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name internal_cable centreline_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Transformer</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Lv Connection</td>
+                              							
+                              <td class="rule1Static">connect_ends</td>
+                              							
+                              <td class="rule2Static">connect</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  			</td>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="4">Joint</td>
+               <td>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="joint.location_dv">Location DV</td>
+                     <td>
+                        					
+                        <table class="col2s name joint location_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Dv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">split_link</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="joint.location_hv">Location HV</td>
+                     <td>
+                        					
+                        <table class="col2s name joint location_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Hv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">split_link</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="joint.location_lv">Location LV</td>
+                     <td>
+                        					
+                        <table class="col2s name joint location_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Lv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">split_link</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  			</td>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="4">Substation Internals Link</td>
+               <td>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="substation_internals_link.external_pin_dv">External Pin Dv</td>
+                     <td>
+                        					
+                        <table class="col2s name substation_internals_link external_pin_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Dv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="substation_internals_link.external_pin_hv">External Pin Hv</td>
+                     <td>
+                        					
+                        <table class="col2s name substation_internals_link external_pin_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Hv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="substation_internals_link.external_pin_lv">External Pin Lv</td>
+                     <td>
+                        					
+                        <table class="col2s name substation_internals_link external_pin_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Lv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="substation_internals_link.internal_pin_dv">Internal Pin Dv</td>
+                     <td>
+                        					
+                        <table class="col2s name substation_internals_link internal_pin_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Dv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="substation_internals_link.internal_pin_hv">Internal Pin Hv</td>
+                     <td>
+                        					
+                        <table class="col2s name substation_internals_link internal_pin_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Hv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="substation_internals_link.internal_pin_lv">Internal Pin Lv</td>
+                     <td>
+                        					
+                        <table class="col2s name substation_internals_link internal_pin_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Lv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  			</td>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="4">Supply Point</td>
+               <td>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="supply_point.location">Location</td>
+                     <td>
+                        					
+                        <table class="col2s name supply_point location">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Lv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">split_link</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  			</td>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="4">Switch</td>
+               <td>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="switch.primary_connection_dv">Primary Connection Dv</td>
+                     <td>
+                        					
+                        <table class="col2s name switch primary_connection_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Dv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="switch.primary_connection_hv">Primary Connection Hv</td>
+                     <td>
+                        					
+                        <table class="col2s name switch primary_connection_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Hv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="switch.primary_connection_lv">Primary Connection Lv</td>
+                     <td>
+                        					
+                        <table class="col2s name switch primary_connection_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Lv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="switch.secondary_connection_dv">Secondary Connection Dv</td>
+                     <td>
+                        					
+                        <table class="col2s name switch secondary_connection_dv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Dv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="switch.secondary_connection_hv">Secondary Connection Hv</td>
+                     <td>
+                        					
+                        <table class="col2s name switch secondary_connection_hv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Hv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="switch.secondary_connection_lv">Secondary Connection Lv</td>
+                     <td>
+                        					
+                        <table class="col2s name switch secondary_connection_lv">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Lv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  			</td>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="4">Transformer</td>
+               <td>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="transformer.dv_connection">Dv Connection</td>
+                     <td>
+                        					
+                        <table class="col2s name transformer dv_connection">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Busbar</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location Dv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">split_link</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name transformer dv_connection">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Dv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="transformer.hv_connection">Hv Connection</td>
+                     <td>
+                        					
+                        <table class="col2s name transformer hv_connection">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Busbar</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location Hv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">split_link</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name transformer hv_connection">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Hv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  				
+                  <tr>
+                     <td colspan="4" class="geometry" id="transformer.lv_connection">Lv Connection</td>
+                     <td>
+                        					
+                        <table class="col2s name transformer lv_connection">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Busbar</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Location Lv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">split_link</td>
+                              						</tr>
+                           					</table>
+                        					
+                        <table class="col2s name transformer lv_connection">
+                           <tr class="TopologyHeadStyle">
+                              <th class="TopologyHeadStyle name" colspan="4">Internal Cable</th>
+                           </tr>
+                           						
+                           <tr>
+                              <td></td>
+                              <td class="fld2sStatic geometry">Centreline Lv</td>
+                              							
+                              <td class="rule1Static">connect</td>
+                              							
+                              <td class="rule2Static">connect_ends</td>
+                              						</tr>
+                           					</table>
+                        				</td>
+                  </tr>
+                  			</td>
+            </tr>
+            		</table>
+         	</div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 8210199731448578141</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../en_gb/help/index.html?dmdw_TopologyS.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,205 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2020 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={ds_doc_writer})
+##
+## This class offers a way to perform the translation from XML
+## to HTML using XSLT. Run by transform_to_html()
+##
+## The class acts as singleton. No instantiation necessary.
+##
+## If path_to_exe is unset, it will use the java saxon 
+## processor in the bin directory. 
+##
+def_slotted_exemplar(:dm_xml_transformer,{})
+$
+
+_pragma(classify_level=basic, topic={ds_doc_writer})
+##
+## If set, this saxon processor will be used rather than the
+## java version in the module bin folder.
+## Eg "C:\Program Files\Saxonica\SaxonHE10.2N\bin\Transform.exe"
+##
+dm_xml_transformer.define_shared_constant(:path_to_saxon_exe,
+	_unset,
+	:public)
+$
+
+_pragma(classify_level=basic, topic={ds_doc_writer})
+_method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optional 
+					     p_output_dir,
+					     p_stylesheet,
+					     p_copy_html_resources?,
+					     p_copy_help?)
+	## 
+	## Do a XSLT transform on xml file P_INPUT_FILE in module
+	## P_MODULE_NAME using the XLST file P_STYLESHEET.
+	##
+	## P_INPUT_FILE should be in base/xml resource of P_MODULE_NAME.
+	## P_OUTPUT_DIR defaults to the base/html_output resource
+	## folder of module P_MODULE_NAME or, when this 
+	## does not exist, the directory of P_INPUT_FILE.
+	##
+	## P_STYLESHEET is the name of the xsl stylesheet to use. This
+	## defaults to FileSet2.xsl in the data/xsl of the module
+	## :ds_doc_writer.
+	## If P_STYLESHEET is an absolute path, that file will be used.
+	##
+	## P_COPY_HTML_RESOURCES? If true (default is _true) it will
+	## copy the resources in the data/html folder of
+	## ds_doc_writer into P_OUTPUT_DIR
+	##
+	## P_COPY_HELP? If true (default is _true) it copies the help
+	## resources of the module into P_OUTPUT_DIR
+	##
+	## The method returns the full outputpath of the html.
+	##
+
+	_if (l_module << sw_module_manager.module(p_module_name)) _is _unset 
+	_then condition.raise(:error,:string,write_string("Module ",p_module_name," does not exist!"))
+	_else write("Processing from resources in module ",l_module)
+	_endif
+
+	
+	_local l_input_path << l_module.get_resource_file(p_input_file,:xml)
+	_local (l_input_filename,l_input_dir) << system.pathname_components(l_input_path)
+	
+	write("Transforming ",l_input_path,"...")
+
+	_local l_main_module << sw_module_manager.module(:ds_doc_writer)
+	_local l_xslname << p_stylesheet.default("FileSet2.xsl")
+	_local l_dir << l_main_module.resource_list_for(:xsl).an_element()
+	_if l_dir _is _unset 
+	_then condition.raise(:error,:string,write_string("No xsl resources in module ",l_main_module))
+	_endif
+	
+	_local l_xsl_path << system.pathname_from_components(l_xslname,l_dir)
+	_if _not system.file_exists?(l_xsl_path)
+	_then condition.raise(:error,:string,write_string("Stylesheet ",l_xsl_path," does not exist!"))
+	_endif
+	write("Using xsl stylesheet ",l_xsl_path)
+
+
+	_local l_output_path << _unset
+	_if p_output_dir _is _unset 
+	_then
+		_if (l_list << l_module.resource_list_for(:html_output,_false)).size > 0
+		_then
+			l_output_dir << l_list.an_element()
+			l_output << system.pathname_from_components(l_input_filename,l_output_dir)
+			( base, ext ) << system.split_filename(l_output)
+			l_output_path << system.check_filename_extension(base,".html")
+		_else
+			( base, ext ) << system.split_filename(l_input_filename)
+			l_output_path << system.check_filename_extension(base,".html")
+		_endif
+		
+	_else
+		l_output << system.pathname_from_components(l_input_filename,p_output_dir)
+		( base, ext ) << system.split_filename(l_output)
+		l_output_path << system.check_filename_extension(base,".html")
+	_endif
+	write("To file ",l_output_path)
+
+	_if (l_exe_path << _self.path_to_saxon_exe) _is _unset 
+	_then l_exe_path << _self.java_command_string
+	_endif
+
+	l_command << write_string(l_exe_path," -s:",l_input_path," -xsl:",l_xsl_path," -o:",l_output_path)
+	write("Command ",l_command)
+
+	(status,error_code) << system.do_command(l_command,l_dir)
+	_if error_code _isnt 0
+	_then condition.raise(:error,:string,write_string("Process failed and returned error ",error_code))
+	_else write("Saxon process finished")
+	_endif
+	
+	_if p_copy_html_resources?.default(_true) _is _true 
+	_then
+		_try _with cond
+			_self.copy_resources( l_module, system.pathname_up(l_output_path) ,:html)		
+		_when error
+			write("Copy failed ",cond.report_contents_string)
+		_endtry
+
+	_endif
+
+	_if p_copy_help?.default(_true) _is _true 
+	_then
+		_try _with cond
+			_local l_hpath << system.canonicalise("en_gb/help",system.pathname_up(l_output_path))
+			
+			system.mkdir_tree(l_hpath)
+			_self.copy_resources( l_module, l_hpath ,:help)
+			
+		_when error
+			write("Copy failed ",cond.report_contents_string)
+		_endtry
+	_endif
+
+	write("Created ",l_output_path)
+	>> l_output_path
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={ds_doc_writer})
+_private _method dm_xml_transformer.copy_resources( p_module, p_output_dir, p_type )
+	##
+	## Copies webresources or help files to P_OUTPUT_DIR
+	## P_TYPE is :html or :help
+	##
+
+	write("Copying resources ",p_module, p_output_dir, p_type )
+	_for i_module _over {sw_module_manager.module(:ds_doc_writer),p_module}.fast_elements()
+	_loop 
+
+		_if (l_dir << i_module.resource_list_for(p_type).an_element()) _isnt _unset 
+		_then 
+			write("Copy ",p_type," resources from ",i_module)
+			_local l_chan << directory_channel.new(l_dir)
+			_loop
+				_if (l_file << l_chan.get()) _is _unset 
+				_then
+					_leave 
+				_else
+					l_old << system.pathname_from_components(l_file,l_dir)
+					l_new << system.pathname_from_components(l_file,p_output_dir)
+					# write("Copying ",l_old," to ",l_new)
+					system.file_copy(l_old,l_new)
+				_endif
+			_endloop
+		_endif
+		
+	_endloop
+
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={ds_doc_writer})
+_method dm_xml_transformer.java_command_string
+	## 
+	## Return a string to be used by system.do_command to run the saxon java processor.
+	## Parameters need to be added.
+	##
+	
+	l_cmd << system.canonicalise("/bin/java.exe",system.getenv("JAVA_HOME"))
+	l_mod << sw_module_manager.module(_self.module_name.default(:ds_doc_writer))
+	l_bin << l_mod.resource_list_for(:bin).an_element()
+	l_can << directory_channel.new(l_bin,"saxon-he-*.jar")
+	_if (l_name << l_can.get()) _isnt _unset 
+	_then 
+		l_cmd << write_string(l_cmd," -cp ",
+				      system.canonicalise(l_name,l_bin),
+				      " net.sf.saxon.Transform ")
+	_endif
+	>> l_cmd
+	
+_endmethod
+$

@@ -1,0 +1,229 @@
+<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Global properties</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
+      <div class="PageTitle float">Global Properties</div>
+      <div class="ChapterInfo float">
+         <p>These properties are global to the datamodel. It includes the default topology interaction,
+            commonly used field(types) that have a global description. Except for the default
+            topology, this information is not dervied from the datamodel itself, but supplied
+            seperately.</p>
+      </div>
+      		
+      <h3 class="float">Default Topology Rules</h3>
+      <table class="dmTable float DefaultTopRules">
+         <tr>
+            <th colspan="4">Manifold: road</th>
+         </tr>
+         <tr>
+            <td>area</td>
+            <td>area</td>
+            <td>split_link</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>area</td>
+            <td>line</td>
+            <td>split_link</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>area</td>
+            <td>point</td>
+            <td>split_link</td>
+            <td>connect</td>
+         </tr>
+         <tr>
+            <td>line</td>
+            <td>area</td>
+            <td>split_link</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>line</td>
+            <td>line</td>
+            <td>split_link</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>line</td>
+            <td>point</td>
+            <td>split_link</td>
+            <td>connect</td>
+         </tr>
+         <tr>
+            <td>point</td>
+            <td>area</td>
+            <td>connect</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>point</td>
+            <td>line</td>
+            <td>connect</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>point</td>
+            <td>point</td>
+            <td>connect</td>
+            <td>connect</td>
+         </tr>
+      </table>
+      <table class="dmTable float DefaultTopRules">
+         <tr>
+            <th colspan="4">Manifold: railway</th>
+         </tr>
+         <tr>
+            <td>area</td>
+            <td>area</td>
+            <td>do_nothing</td>
+            <td>do_nothing</td>
+         </tr>
+         <tr>
+            <td>area</td>
+            <td>line</td>
+            <td>do_nothing</td>
+            <td>do_nothing</td>
+         </tr>
+         <tr>
+            <td>area</td>
+            <td>point</td>
+            <td>do_nothing</td>
+            <td>do_nothing</td>
+         </tr>
+         <tr>
+            <td>line</td>
+            <td>area</td>
+            <td>do_nothing</td>
+            <td>do_nothing</td>
+         </tr>
+         <tr>
+            <td>line</td>
+            <td>line</td>
+            <td>split_link</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>line</td>
+            <td>point</td>
+            <td>split_link</td>
+            <td>connect</td>
+         </tr>
+         <tr>
+            <td>point</td>
+            <td>area</td>
+            <td>do_nothing</td>
+            <td>do_nothing</td>
+         </tr>
+         <tr>
+            <td>point</td>
+            <td>line</td>
+            <td>connect</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>point</td>
+            <td>point</td>
+            <td>connect</td>
+            <td>connect</td>
+         </tr>
+      </table>
+      <table class="dmTable float DefaultTopRules">
+         <tr>
+            <th colspan="4">Manifold: cadastral</th>
+         </tr>
+         <tr>
+            <td>area</td>
+            <td>area</td>
+            <td>split_link</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>area</td>
+            <td>line</td>
+            <td>split_link</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>area</td>
+            <td>point</td>
+            <td>split_link</td>
+            <td>connect</td>
+         </tr>
+         <tr>
+            <td>line</td>
+            <td>area</td>
+            <td>split_link</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>line</td>
+            <td>line</td>
+            <td>split_link</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>line</td>
+            <td>point</td>
+            <td>split_link</td>
+            <td>connect</td>
+         </tr>
+         <tr>
+            <td>point</td>
+            <td>area</td>
+            <td>connect</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>point</td>
+            <td>line</td>
+            <td>connect</td>
+            <td>split_link</td>
+         </tr>
+         <tr>
+            <td>point</td>
+            <td>point</td>
+            <td>connect</td>
+            <td>connect</td>
+         </tr>
+      </table>
+      		
+      <h3 class="float">Commonly used fields</h3>
+      		
+      <h3 class="float">Commonly used Geometry Mappings</h3>
+      	
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../en_gb/help/index.html?dmdw_Global-Properties.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

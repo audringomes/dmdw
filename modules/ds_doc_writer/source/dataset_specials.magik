@@ -1,0 +1,138 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2019 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+remex(:dm_dataset_specials)
+$
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer})
+##
+## Use or subclass and pass the name of the class or an
+## instantiated object by the property :dataset_specials to the
+## writer
+##
+## :get_geometry_mappings() should return a property_list keyed on
+## map_discriminator names with a description
+##
+## :get_global_field_descriptions() should return a property_list keyed on
+## internal field names with a description
+##
+## :get_soft_joins() should return a property_list keyed on
+## collection_name
+##
+def_slotted_exemplar(:dm_dataset_specials,
+	{
+		{:ds,_unset},
+		{:geometry_mappings,_unset},
+		{:soft_joins,_unset},
+		{:global_field_descriptions,_unset}
+	})
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+dm_dataset_specials.define_slot_access(:ds,:read,:public)
+$
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+dm_dataset_specials.define_slot_access(:geometry_mappings,:read,:public)
+$
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+dm_dataset_specials.define_slot_access(:global_field_descriptions,:read,:public)
+$
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+dm_dataset_specials.define_slot_access(:soft_joins,:read,:public)
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer})
+_method dm_dataset_specials.new(ds)
+	## 
+	## See class comment
+	>> _clone.init(ds)
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+_method dm_dataset_specials.init(ds)
+	## 
+	##
+
+	.ds << ds
+	.geometry_mappings << _self.get_geometry_mappings()
+	.global_field_descriptions << _self.get_global_field_descriptions()
+	.soft_joins << _self.get_soft_joins()
+	
+	>> _self
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+_method dm_dataset_specials.verify(a_ds)
+	## 
+	##
+	_if .ds _isnt a_ds
+	_then condition.raise(:error,:string,write_string(
+		"DS Specials error: Dataset ",.ds," does not match ",a_ds))
+		
+	_endif
+	>> _self
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer}, usage={redefinable, subclassable})
+_method dm_dataset_specials.includes
+	## 
+	## This method should return one or more top xml collections to be
+	## included in the output
+	##
+
+	>> {}
+
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={dm_doc_writer}, usage={redefinable, subclassable})
+_method dm_dataset_specials.get_geometry_mappings()
+	##
+	## A property_list with names of mdm's as keys and a
+	## descriptive text as value.
+	## This implementation returns an empty property list.
+	##
+	>> property_list.new()
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={dm_doc_writer}, usage={redefinable, subclassable})
+_method dm_dataset_specials.get_global_field_descriptions()
+	## 
+	## A property_list with names of commonly used fields as keys
+	## and a descriptive text as value.
+	## This implementation returns an empty property list.
+	##
+	>> property_list.new()
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={dm_doc_writer}, usage={redefinable, subclassable})
+_method dm_dataset_specials.get_soft_joins()
+	##
+	## Returns a property_list, keyed on collection name with
+	## properties and values for the soft joins, as is returned by
+	## the ds_collection.record_exemplar.cs_soft_joins
+	## This implementation returns an empty property list.
+	##
+	>> property_list.new()
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={dm_doc_writer}, usage={redefinable, subclassable})
+_method dm_dataset_specials.products_for_version
+	## 
+	## Should return a list of the names of sw_products to include
+	## their version into the document. This implementation returns
+	## an empty vector.
+	>> {}
+_endmethod
+$

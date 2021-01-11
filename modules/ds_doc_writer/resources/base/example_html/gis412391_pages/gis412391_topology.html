@@ -1,0 +1,1539 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Topological Interactions</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+				function ToggleTechtop()
+				{ToggleSub('techtop');}
+
+				function ToggleDMHistory()
+				{$(".dmHistory").toggle();}
+				
+				function ToggleDetail()
+				{$(".technical").toggle();}
+
+				function ToggleInVisField()
+				{$(".VisFalse").toggle();}
+				
+				function ToggleMapped()
+				{$(".MappedTo").toggle();}
+				
+				function ToggleTopology()
+				{$(".TopologyList").toggle();}
+													
+			</script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="#"><img class="logo float" src="../dmdw-logo.png"></a><h1><a href="../gis412391.html">Datamodel information Gis</a></h1>
+      </header>
+      <div class="PageTitle Float">Topology Interactions</div>
+      <div class="ChapterInfo float">
+         <p></p>
+      </div>
+      <div>
+         <div style="overflow-x:auto">
+            <table class="dmtable float">
+               <tr>
+                  <th colspan="2">Tables with toplogical interaction</th>
+               </tr>
+               <tr>
+                  <th>Manifold</th>
+                  <th>Table</th>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#car_park" onclick="HighLightInPage('car_park')">Car Park</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#footpath" onclick="HighLightInPage('footpath')">Footpath</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#hotel" onclick="HighLightInPage('hotel')">Hotel</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#level_crossing" onclick="HighLightInPage('level_crossing')">Level Crossing</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#min_road" onclick="HighLightInPage('min_road')">Road</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#motorway" onclick="HighLightInPage('motorway')">Motorway</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#office" onclick="HighLightInPage('office')">Office</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#pl_of_interest" onclick="HighLightInPage('pl_of_interest')">Place of Interest</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#road_works" onclick="HighLightInPage('road_works')">Road Works</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#roundabout" onclick="HighLightInPage('roundabout')">Roundabout</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#shop" onclick="HighLightInPage('shop')">Shop</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#slip_road" onclick="HighLightInPage('slip_road')">Slip Road</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#town" onclick="HighLightInPage('town')">Town</a></td>
+               </tr>
+               <tr>
+                  <td>road</td>
+                  <td><a href="#trunk_road" onclick="HighLightInPage('trunk_road')">Trunk Road</a></td>
+               </tr>
+               <tr>
+                  <td>railway</td>
+                  <td><a href="#rail_line" onclick="HighLightInPage('rail_line')">Railway Line</a></td>
+               </tr>
+               <tr>
+                  <td>railway</td>
+                  <td><a href="#town" onclick="HighLightInPage('town')">Town</a></td>
+               </tr>
+               <tr>
+                  <td>cadastral</td>
+                  <td><a href="#brewery" onclick="HighLightInPage('brewery')">Brewery</a></td>
+               </tr>
+               <tr>
+                  <td>cadastral</td>
+                  <td><a href="#cadastral_boundary" onclick="HighLightInPage('cadastral_boundary')">Cadastral Boundary</a></td>
+               </tr>
+               <tr>
+                  <td>cadastral</td>
+                  <td><a href="#park" onclick="HighLightInPage('park')">Park</a></td>
+               </tr>
+               <tr>
+                  <td>cadastral</td>
+                  <td><a href="#pl_of_interest" onclick="HighLightInPage('pl_of_interest')">Place of Interest</a></td>
+               </tr>
+               <tr>
+                  <td>cadastral</td>
+                  <td><a href="#pub_rest" onclick="HighLightInPage('pub_rest')">Pub/Restaurant</a></td>
+               </tr>
+               <tr>
+                  <td>cadastral</td>
+                  <td><a href="#town" onclick="HighLightInPage('town')">Town</a></td>
+               </tr>
+            </table>
+         </div>
+         		
+         <div class="manifold float" id="road">
+            <h3>Manifold 
+               				<span class="name">road</span></h3>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="car_park">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Car Park</th>
+                  </tr>
+                  <tr class="oddRow" id="car_park.location">
+                     <td class="TopologicalField">Location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="footpath">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Footpath</th>
+                  </tr>
+                  <tr class="oddRow" id="footpath.centre_line">
+                     <td class="TopologicalField">Centerline</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="hotel">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Hotel</th>
+                  </tr>
+                  <tr class="oddRow" id="hotel.location">
+                     <td class="TopologicalField">Location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="level_crossing">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Level Crossing</th>
+                  </tr>
+                  <tr class="oddRow" id="level_crossing.location">
+                     <td class="TopologicalField">Location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="min_road">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Road</th>
+                  </tr>
+                  <tr class="oddRow" id="min_road.centre_line">
+                     <td class="TopologicalField">Centerline</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="motorway">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Motorway</th>
+                  </tr>
+                  <tr class="oddRow" id="motorway.centre_line">
+                     <td class="TopologicalField">Centreline</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">endsplit_link connect_ends </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect_ends connect_ends </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect_ends connect_ends </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="office">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Office</th>
+                  </tr>
+                  <tr class="oddRow" id="office.location">
+                     <td class="TopologicalField">Location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="pl_of_interest">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Place of Interest</th>
+                  </tr>
+                  <tr class="oddRow" id="pl_of_interest.location">
+                     <td class="TopologicalField">Location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="road_works">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Road Works</th>
+                  </tr>
+                  <tr class="oddRow" id="road_works.location">
+                     <td class="TopologicalField">Location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="roundabout">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Roundabout</th>
+                  </tr>
+                  <tr class="oddRow" id="roundabout.location">
+                     <td class="TopologicalField">location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="shop">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Shop</th>
+                  </tr>
+                  <tr class="oddRow" id="shop.location">
+                     <td class="TopologicalField">location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="slip_road">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Slip Road</th>
+                  </tr>
+                  <tr class="oddRow" id="slip_road.centre_line">
+                     <td class="TopologicalField">Centreline</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect_ends endsplit_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="town">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Town</th>
+                  </tr>
+                  <tr class="oddRow" id="town.rail_carpark">
+                     <td class="TopologicalField">Rail Station Car Park</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="trunk_road">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Trunk Road</th>
+                  </tr>
+                  <tr class="oddRow" id="trunk_road.centre_line">
+                     <td class="TopologicalField">Centreline</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Slip Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Trunk Road.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect_ends connect_ends </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Office.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Roundabout.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Hotel.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Motorway.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect_ends connect_ends </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station Car Park</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Level Crossing.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Shop.<span class="geometry">location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Car Park.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Footpath.<span class="geometry">Centerline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Road Works.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            		
+         </div>
+         		
+         <div class="manifold float" id="railway">
+            <h3>Manifold 
+               				<span class="name">railway</span></h3>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="rail_line">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Railway Line</th>
+                  </tr>
+                  <tr class="oddRow" id="rail_line.centre_line">
+                     <td class="TopologicalField">Centreline</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Railway Line.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="town">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Town</th>
+                  </tr>
+                  <tr class="oddRow" id="town.rail_station">
+                     <td class="TopologicalField">Rail Station</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Rail Station</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Railway Line.<span class="geometry">Centreline</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            		
+         </div>
+         		
+         <div class="manifold float" id="cadastral">
+            <h3>Manifold 
+               				<span class="name">cadastral</span></h3>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="brewery">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Brewery</th>
+                  </tr>
+                  <tr class="oddRow" id="brewery.location">
+                     <td class="TopologicalField">Location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Pub/Restaurant.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Park.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Cadastral Boundary.<span class="geometry">Boundary Line</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+                  <tr class="evenRow" id="brewery.coverage">
+                     <td class="TopologicalField">Coverage</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Pub/Restaurant.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Park.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Cadastral Boundary.<span class="geometry">Boundary Line</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="cadastral_boundary">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Cadastral Boundary</th>
+                  </tr>
+                  <tr class="oddRow" id="cadastral_boundary.boundary_line">
+                     <td class="TopologicalField">Boundary Line</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Pub/Restaurant.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Park.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Cadastral Boundary.<span class="geometry">Boundary Line</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="park">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Park</th>
+                  </tr>
+                  <tr class="oddRow" id="park.coverage">
+                     <td class="TopologicalField">Coverage</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Pub/Restaurant.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Park.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Cadastral Boundary.<span class="geometry">Boundary Line</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="pl_of_interest">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Place of Interest</th>
+                  </tr>
+                  <tr class="oddRow" id="pl_of_interest.coverage">
+                     <td class="TopologicalField">Coverage</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Pub/Restaurant.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Park.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Cadastral Boundary.<span class="geometry">Boundary Line</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="pub_rest">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Pub/Restaurant</th>
+                  </tr>
+                  <tr class="oddRow" id="pub_rest.location">
+                     <td class="TopologicalField">Location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Pub/Restaurant.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Park.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Cadastral Boundary.<span class="geometry">Boundary Line</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            			
+            <div style="overflow-x:auto">
+               <table class="dmTopology float" id="town">
+                  <tr class="HeadStyle">
+                     <th colspan="2">Town</th>
+                  </tr>
+                  <tr class="oddRow" id="town.coverage">
+                     <td class="TopologicalField">Coverage</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Pub/Restaurant.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Park.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Location</span>: </span><span class="TopologyRules">split_link connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Cadastral Boundary.<span class="geometry">Boundary Line</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">split_link split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+                  <tr class="evenRow" id="town.location">
+                     <td class="TopologicalField">Location</td>
+                     <td>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Pub/Restaurant.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Park.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Place of Interest.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Town.<span class="geometry">Location</span>: </span><span class="TopologyRules">connect connect </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Cadastral Boundary.<span class="geometry">Boundary Line</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        					
+                        <ul class="TopologyList">
+                           <li class="TopologyFieldItem"><span class="name">Brewery.<span class="geometry">Coverage</span>: </span><span class="TopologyRules">connect split_link </span></li>
+                        </ul>
+                        				
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            		
+         </div>
+         	
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2019</li>
+            <li><a href="../../../en_gb/help/index.html">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

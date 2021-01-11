@@ -1,0 +1,82 @@
+/* Magik syntax colours derived from htmilize.el */
+/* This block is the same as p_CodeExample */
+div.magik {
+    padding: 14px;
+    font-size: 0.82rem;
+    line-height: 60%;
+    font-weight: bold;
+    background-color: #f4f5f8;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0.6rem;
+    margin-bottom: 0px;
+    padding-left: 1rem;
+    padding-top: .4rem;
+    padding-bottom: .6rem;
+    margin-bottom: 1rem;
+    background-color: #f4f5f8;
+    border: solid 1px #d7d8db;
+    max-height: 350px;
+    overflow: auto;
+    page-break-inside: avoid;
+}
+pre {
+    font-size: 0.82rem;
+    font-family: consolas;
+}
+.comment {
+/* font-lock-comment-face */
+color: #5f615c;
+font-style: italic;
+}
+.comment-delimiter {
+/* font-lock-comment-delimiter-face */
+color: #5f615c;
+font-style: italic;
+}
+.constant {
+/* font-lock-constant-face */
+color: #204a87;
+font-weight: bold;
+}
+.doc {
+/* font-lock-doc-face */
+color: #5c3566;
+}
+.function-name {
+/* font-lock-function-name-face */
+color: #a40000;
+}
+.magik-font-lock-boolean {
+/* magik-font-lock-boolean-face */
+color: #b8860b;
+}
+.magik-font-lock-keyword-arguments {
+/* magik-font-lock-keyword-arguments-face */
+color: #00ff00;
+}
+.magik-font-lock-keyword-operators {
+/* magik-font-lock-keyword-operators-face */
+color: #87ceeb;
+}
+.magik-font-lock-keyword-statements {
+/* magik-font-lock-keyword-statements-face */
+color: #4682b4;
+}
+.magik-font-lock-pragma {
+/* magik-font-lock-pragma-face */
+color: #da70d6;
+font-weight: bold;
+}
+.magik-font-lock-symbol {
+/* magik-font-lock-symbol-face */
+color: #5f9ea0;
+}
+.string {
+/* font-lock-string-face */
+color: #5c3566;
+}
+.type {
+/* font-lock-type-face */
+color: #204a87;
+}

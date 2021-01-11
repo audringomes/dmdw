@@ -1,0 +1,84 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2019 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={wd_doc_writer})
+##
+## Creates a default module structure and adds the following
+## structure to it:
+##
+##   base/data
+##   base/xml
+##   base/html
+##   base/html_output
+##   base/xsl
+##   en_gb/messages
+##   en_gb/help
+##
+_global create_dmdw_module <<
+_proc @create_module(p_parent_dir,p_module_name, _gather p_args)
+	
+	_local l_args << property_list.new_from_gathered(p_args)
+	l_args[:resources] << property_list.new_with(:base,{:data,:xml,:html,:html_output,:xsl},
+						     :en_gb,{:messages,:help})
+	_local l_mod << sw_module_manager.build_module(p_parent_dir,p_module_name,_scatter l_args)
+	_local l_mdir << system.pathname_down(p_parent_dir,p_module_name)
+	write("Module ",l_mdir," created. Don't forget to set requirement ds_doc_writer")
+	>> _true 
+_endproc
+$
+
+_pragma(classify_level=basic, topic={wd_doc_writer})
+##
+## Export dataset DS to xml in module MODULE_NAME
+##
+_global export_xml <<
+_proc @export_xml(ds,module_name)
+		
+	_local l_mod << sw_module_manager.module(module_name)
+	_local l_dir << l_mod.resource_list_for(:xml).an_element()
+	_local l_file << system.pathname_from_components(write_string(ds.name,".xml"),l_dir)
+	_local l_props << property_list.new_with(
+				  
+				  :ace_name,"default",
+				  :dataset_specials,_unset,
+				  :output_file,l_file
+					)
+	
+	_local du << dm_xml_writer.new(ds,l_props)
+	
+	du.process()
+
+	>> du
+	
+_endproc
+$
+
+_pragma(classify_level=basic, topic={wd_doc_writer})
+##
+## Do a xslt translation of the dmdw xml file P_INPUT_FILE
+## in the xml resource folder of P_MODULE_NAME
+##
+## See dm_xml_transformer.transform_to_html() for further
+## information on the arguments
+##
+_global transform_to_html <<
+_proc @transform_to_fileset_html(p_module_name, p_input_file, _optional
+				 p_outdir, p_stylesheet, p_copy_html_resources?, p_copy_help?)
+	
+	>> dm_xml_transformer.transform_to_html(
+		   p_module_name,
+		   p_input_file,
+		   p_outdir,
+		   p_stylesheet,
+		   p_copy_html_resources?,
+		   p_copy_help?
+			      )
+
+_endproc
+$

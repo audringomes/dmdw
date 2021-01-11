@@ -1,0 +1,17 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2020 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={dm_doc_writer})
+_method dd_enumerator.values_and_strings
+	## 
+	## Returns both the value and the string
+	##
+	>> .id2value
+_endmethod
+$

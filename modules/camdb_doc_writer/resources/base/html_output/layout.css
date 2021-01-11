@@ -1,0 +1,60 @@
+/* Layout for Datamodel HTML */
+/* SVN $Rev: 784 $ */
+
+header{
+	/* text-align: center; */
+}
+nav {
+	/* text-align: center; */
+	padding: 30px;
+	font-size: 35px;
+	color: white;
+}
+nav ul li {
+	list-style-type: none;
+}
+footer {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 0.65em;
+}
+footer ul li {
+	list-style-type: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.PageTitle {
+	margin-top: 20pt;
+	font-size: 2em;
+	background-color: #d6d6d6;
+}
+.float {
+	/* Aligns all content */
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;	
+}
+div.container {
+	border-block-style: none;
+	margin-left: 20%;
+	margin-right: 20%;
+	float: inherit;
+	overflow-y: auto;
+}
+div.navbox {
+	width: 30%;
+	float: left;
+	background-color: #d5d5d5;
+	margin: 5px;
+	padding: 5px;
+}
+div.elementbox {
+	width: 65%;
+	float: right;
+	background-color: #d5d5d5;
+	padding: 5px;
+	margin: 5px;
+}
+div.navlink {
+   cursor: default;
+}
