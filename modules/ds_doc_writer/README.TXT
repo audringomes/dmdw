@@ -1,5 +1,5 @@
 TO DO
-1. Put in (temporarily) GisHub repository
+1. Put in (temporarily) GitHub repository
 1a. Change Copyright & Branding
 1b. Create a seperate branch help source with help
 2. XSL - Check manifold rules in html against xml
@@ -12,4 +12,3 @@ TO DO
 9. HTML - Replace jquery source from google to local
 10. Make version without saxon processor.
 11. Enable viewing internal names (class 'technical') in topology pages.
-
