@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	   xsi:schemaLocation="http://realworld-systems.com XMLDatamodel.xsd" 
-	   xmlns:dmdw="http://realworld-systems.com">
-  
+<datamodel  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dmdw="http://realworld-systems.com" 
+	xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.3.xsd"
+	creation_date="2021-01-07T07:26:39Z" 
+	schema_version="1.3">
   <category name="Common Tables">
     <collection name="cs_audit_history" external_name="Audit History">
       <description>This is a standard Smallworld Base Office class. Audit History objects are managed by the Office application itself and track changes made to assets during the standard creation and maintenance cycle. Business rules ensure that information about changes is automatically tracked and stored, such as type of change, change description, who made the change, and when the change was made. Audit History objects associated with an individual asset are available from the Object relationships tab of the object editor.
       </description>
-    </category>
+	  </collection>
+	</category>
 </datamodel>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel name="gis" external_name="Gis" date="2019-10-14T19:00:32Z" version="1.1">
+<datamodel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://cavdb186.home.xs4all.nl/dmdw/DMDW-Datamodel-1.0.xsd"
+		name="gis" external_name="Gis" date="2019-10-14T19:00:32Z" version="1.1"
+>
 	<datamodel_info>
-		<dm_version>?</dm_version>
+		<dm_datamodel_version>0</dm_datamodel_version>
 		<dm_current_dd_version>412391</dm_current_dd_version>
 		<dm_dataset>gis</dm_dataset>
 		<dm_ace_name>electricity</dm_ace_name>

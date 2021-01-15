@@ -18,7 +18,7 @@
 	<meta name="description" content="Take the following steps: &nbsp;Common Get the software from the repository; &nbsp;Exporting data model to XML: Start a smallworld session containing the basic datamodel code for the d" />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="11/01/2021" />
+        <meta name="revised" content="14/01/2021" />
         <meta name="id" content="dmdw_Getting-started" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -174,8 +174,7 @@ function GetSearchPage() {
 	<div id="headerbox">
 <div id="headerwrapper">
      <a id="headerlogo" href="http://boogert-lab.nl/" title="Datamodel Document Writer" target="_blank"></a>
-     <div class="helpversion">Version 5.2.0</div>
-     <h1 class="page_header" id="hm_pageheader">Data Model Document Writer</h1>
+     <h1 class="page_header" id="hm_pageheader">Data Model Document Writer<span class="helpversion">Version 5.2.0</span></h1>
      <div class="top_searchbox">
        <form method="GET" action="hmftsearch.html" target="hmsearch" onsubmit="SwitchTabToSearch(this);">
          <input id="searchform" class="searchinput" name="zoom_query" length="30" value="" autocorrect="off" autocapitalize="none" type="text" placeholder="Search">
@@ -246,7 +245,7 @@ function GetSearchPage() {
 		<a id="topicnavlinkhome" class="topicnavlink nav" href="index.html" title="Go to top topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-up"></use></svg>
 		<span>Top</span></a>
-		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_dd-version.html" title="Go to next topic">
+		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_customization.html" title="Go to next topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-right"></use></svg>
 		<span>Next</span></a>
 		 <a id="hamburgerlink" class="topicnavlink" title="Additional Functions Menu">
@@ -272,6 +271,9 @@ function GetSearchPage() {
 <p class="p_Normal">If you plan to use XSLT, you can use the java version of Saxon-HE which is installed in <span style="font-weight: bold;">ds_doc_writer/resources/bin</span>.</p>
 <p class="p_Normal">There are two ways to create html from the XML and XSL sheets:</p>
 <p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Using Command Line Interface (see exampe <span style="font-weight: bold;">ds_doc_writer/resources/bin/transform.bat</span>) </p><p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">2.</span>Use Smallworld Magik proc <span style="font-weight: bold;">transform_to_fileset_html(p_module_name, p_input_file, _optional ..)</span></p><p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">There are several levels of customization. See <a href="dmdw_customization.html" class="topiclink">Customization</a> for further details.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
 
         <div class="topicfooter">
 	<table style="width: 100%;margin-left: 0;margin-right: auto;/*! height: 10px; */">

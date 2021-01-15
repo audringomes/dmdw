@@ -52,7 +52,7 @@ div#pagewrapper {
 
 nav#navpane_tabs {
 	display: inline-block;
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 }
 
 ul.tabs {
@@ -132,7 +132,7 @@ div#headerbox_wrapper {
 	outline: none;
 	overflow: visible;
 	z-index: 1000;
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	background-position: left top;
 	background-color: transparent;
 }
@@ -157,13 +157,13 @@ a#headerlogo {
 	z-index: 1001;
 	top: 0; left: 0.5rem;
 	height: 100%; width: 5.8rem;
-	background-image: url('../images/logo-image-mobile.png');
+	background-image: url('../images/RW_Circles.png');
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	background-position: left top;
 }
 h1.page_header {
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	color: #444444;
 	background: linear-gradient(rgba(131,131,131,1), rgba(250,250,250,0.6));
 	font-size: 1.8rem;
@@ -181,7 +181,7 @@ div#header_menu {
 	overflow: auto;
 	background-color: #aeaeae;
 	overflow: visible;
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-size: 0.900rem;
 	z-index: 1001;
 	}
@@ -368,7 +368,7 @@ div#topicbox {
 div#hmpageheader {
 	position: absolute;
 	top: 0.3rem; left: 0.5rem; right: 0.5rem;
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	background-color: #aeaeae;
 	overflow: hidden;
 	}
@@ -459,7 +459,7 @@ p.topic_breadcrumbs {
 	}
 
 p.topictitle {
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-size: 1.2rem;
 	font-weight: bold;
 	color: #ffffff;
@@ -491,7 +491,7 @@ a.topicnavlink:active {
 a.topicnavlink span {
 	display: block;
 	color: #efefef;
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 0.9rem;
 	margin-top: 0.1rem;
@@ -541,7 +541,7 @@ ul#hamburgermenu li a {
 	padding: 0.125rem;
 	padding-left: 0;
 	font-size: 0.900rem;
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	opacity: 0.8;
 	color: #f4f4f4;
 	font-weight: 600;
@@ -580,7 +580,7 @@ img#leftright {
 
 div.hmpopup {
 	margin: 0; padding: 0;
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 }
 
 div#hmpopupbox {
@@ -849,7 +849,7 @@ div#atocIcon {
 }
 
 /*div#atocIcon, div#atocIcon span {
-font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	font-size: 9px;
 	font-weight: normal;
 	padding: 0; margin: 0;
@@ -895,7 +895,7 @@ div#imagecaptionbox {
 	}
 div#imagecaptionbox p.zoomedcaption {
 	display: block;
-	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+	font-family: Calibri, 'Trebuchet MS', Helvetica, Arial, sans-serif;
 	color: #888888;
 	font-weight: bold;
 	font-size: 1rem;

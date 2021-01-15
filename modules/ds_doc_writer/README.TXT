@@ -1,3 +1,5 @@
+0. Make sure the XSD match.
+
 TO DO
 1. Put in (temporarily) GitHub repository
 1a. Change Copyright & Branding
@@ -12,3 +14,5 @@ TO DO
 9. HTML - Replace jquery source from google to local
 10. Make version without saxon processor.
 11. Enable viewing internal names (class 'technical') in topology pages.
+
+
