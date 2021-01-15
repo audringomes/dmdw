@@ -3,7 +3,7 @@
 <html>
 	<head>
 	<!-- Help+Manual Premium Pack Version 3.45 (c) 2015-2018 by Tim Green all rights reserved -->
-	<title>5.1.1 field</title>
+	<title>Customization</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" id="pageviewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, minimal-ui" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,11 +15,11 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta name="generator" content="Help &amp; Manual" />
 	<meta name="keywords" content="" />
-	<meta name="description" content="The field element contains the basic information of a field." />
+	<meta name="description" content="Customizations can be done on several levels: &nbsp;Generating the XML Content 1. You can specify a product and module for the Datamodel Version. This should be supplied as argument" />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="09/01/2021" />
-        <meta name="id" content="dmdw_Field" />
+        <meta name="revised" content="17/01/2021" />
+        <meta name="id" content="dmdw_Customization" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
 	<link type="text/css" href="./css/hmprojectstyles.css" rel="stylesheet" />
@@ -44,7 +44,7 @@ var pageName="mainPage";var hmDevice={mobileSleepReload:true,compilehash:(functi
         <script type="text/javascript" src="./js/HandleCSHID.js"></script>
         
         <script type="text/javascript">
-                if (RWSP_HandleCSHID && "dmdw_field.html"==RWSP_Mainpage){
+                if (RWSP_HandleCSHID && "dmdw_customization.html"==RWSP_Mainpage){
                 RWSP_DoHandleHash();
                 RWSP_DoHandleParam();
                 }
@@ -74,7 +74,7 @@ var pageName="mainPage";var hmDevice={mobileSleepReload:true,compilehash:(functi
 	</style>
 	</noscript>
         <link type="text/css" href="./css/sw-styles.css" rel="stylesheet" />
-	<link rel="canonical" href="http://www.helpandmanual.com/help/dmdw_field.html" />
+	<link rel="canonical" href="http://www.helpandmanual.com/help/dmdw_customization.html" />
   <script type="text/javascript">
 function SwitchTabToSearch(d) {
     hmWebHelp.switchNavTab("search");
@@ -213,7 +213,7 @@ function GetSearchPage() {
 	</li>
 	<li id="hm_printable_version">
 		<svg class="hmbicon" viewBox="0 0 30 32"><use xlink:href="#print"></use></svg>
-		<a id="hm_printable_link" href="_hm_print_window.htm?dmdw_field.html" onclick="hmWebHelp.hamburgerMenu()" target="hm_print_window" title="Display a Printable Version of Current Topic"> 
+		<a id="hm_printable_link" href="_hm_print_window.htm?dmdw_customization.html" onclick="hmWebHelp.hamburgerMenu()" target="hm_print_window" title="Display a Printable Version of Current Topic"> 
 		<span>Printable Version</span></a>
 	</li>
 	<li class="desktop server">
@@ -231,21 +231,21 @@ function GetSearchPage() {
 	  <tr>
 		<td id="topicheadercell">
 		  <div id="topicheaderwrapper">
-		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <a href="dmdw_xml-content.html">XML Content</a> &gt; <a href="dmdw_categories--collections.html">Categories &amp; Collections</a> &gt; <a href="dmdw_category.html">5 category</a> &gt; <a href="dmdw_collection.html">5.1 collection</a></p> 
-		  <p class="topictitle">5.1.1 field</p>
+		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <span>&raquo;&nbsp;No topics above this level&nbsp;&laquo;</span></p> 
+		  <p class="topictitle">Customization</p>
 		  </div>
 		</td>
 		<td id="topicnavcell"><span>
 		<a id="atoclink" class="topicnavlink" title="Contents of this topic">
 		<svg class="navicon" viewBox="0 0 32 32"><use xlink:href="#list-bullet"></use></svg>
 		<span>Scroll</span></a> 
-		 <a id="topicnavlinkprevious" class="topicnavlink nav" href="dmdw_collection.html" title="Go to previous topic">
+		 <a id="topicnavlinkprevious" class="topicnavlink nav" href="dmdw_getting-started.html" title="Go to previous topic">
 		 <svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-left"></use></svg>
 		 <span>Prev</span></a>
 		<a id="topicnavlinkhome" class="topicnavlink nav" href="index.html" title="Go to top topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-up"></use></svg>
 		<span>Top</span></a>
-		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_enumerators.html" title="Go to next topic">
+		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_datamodel_version.html" title="Go to next topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-right"></use></svg>
 		<span>Next</span></a>
 		 <a id="hamburgerlink" class="topicnavlink" title="Additional Functions Menu">
@@ -261,37 +261,14 @@ function GetSearchPage() {
 	<div id="unclicker"></div>
 	<div id="hmpagebody_scroller">
 <!--ZOOMRESTART-->
-	<p class="p_Normal">The <span style="font-weight: bold;">field</span> element contains the basic information of a field.</p>
-<p class="p_Normal">The <span style="font-weight: bold;">field_sub_type</span> element contains all relevant data that is specific for the type of field. For example is it a simple or topological object, in which manifold and what are the explicit manifold rules for this field.</p>
+	<p class="p_Normal">Customizations can be done on several levels:</p>
 <p class="p_Normal">&nbsp;</p>
-<p class="p_Normal"><span style="font-weight: bold;">Example of &nbsp;a physical field</span></p>
+<p class="p_Normal">Generating the XML Content</p>
+<p class="p_Normal">1. You can specify a <span style="font-weight: bold;">product</span> and <span style="font-weight: bold;">module</span> for the <a href="dmdw_datamodel_version.html" class="topiclink">Datamodel Version</a>. This should be supplied as argument to the <span style="font-weight: bold;">dm_xml_writer.new()</span>. This datamodel property can be used to keep track of specific versions.</p>
+<p class="p_Normal">2. </p>
 <p class="p_Normal">&nbsp;</p>
-<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">visible</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">True</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">type</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">physical</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">external_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">Id</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">external_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">id</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field_type</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">type</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">physical</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field_sub_type</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">phys_type</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">type</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">ds_uint</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field_sub_type</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">key</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">True</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">key</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">mandatory</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">True</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">mandatory</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">help_text</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">Id is a field of class integer, such as 0 </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">help_text</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span></p>
+<p class="p_Normal">Presentation</p>
 <p class="p_Normal">&nbsp;</p>
-<p class="p_Normal"><span style="font-weight: bold;">Example of &nbsp;a geometry field</span></p>
-<p class="p_Normal">&nbsp;</p>
-<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">visible</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">True</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">type</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">geometry</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">external_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">End Location</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">external_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">end_location</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field_type</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">type</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">geometry</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field_sub_type</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">geom_type</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">type</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">point</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">inmanifold</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">water_supply</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field_sub_type</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">key</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">False</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">key</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">mandatory</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">False</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">mandatory</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">help_text</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">End Location is a geometry field of type point </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">help_text</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span></p>
 
         <div class="topicfooter">
   <table style="width: 100%;margin-left: 0;margin-right: auto;">
@@ -369,7 +346,7 @@ if (!hmFlags.isEWriter) fouc.parentNode.removeChild(fouc);
 /*! Help & Manual WebHelp 3 Script functions
 Copyright (c) 2015-2018 by Tim Green. All rights reserved. Contact tg@it-authoring.com
 */
-(function(){var b=sessionVariable.getPV("fontSize"),a=document.getElementsByTagName("html")[0];if(b!==null){a.style.fontSize=b+"%"}else{a.style.fontSize=hmDevice.baseFontSize+"%"}})();var moveCheck=null,hmTocLoaded=false,hmTocWidth=0,xMessage=new xMsg("LANDING TOPIC");function initScripts(){hmPopupsObject={};hmFlags.isHmTopic=true;hmFlags.idxLoaded=false;hmFlags.schLoaded=false;hmFlags.searchSession=false;hmFlags.tocClicked=false;hmFlags.layoutTable=false;hmFlags.searchHighlight="";hmFlags.tocInitWidth=0;hmFlags.jumpHighlight=false;hmFlags.hmMainPage="index.html";hmFlags.hmTrackHost="http://www.helpandmanual.com/help/";hmFlags.hmProject="Data Model Document Writer";hmFlags.hmDefaultPage="index.html";hmFlags.hmCurrentPage="dmdw_field.html";hmFlags.hmTOC="hmcontent.html";hmFlags.hmSearchPage="hmftsearch.html";hmFlags.hmIndexPage="hmkwindex.html";hmFlags.thisTopic="dmdw_field.html";hmFlags.lastTopic="index.html";hmFlags.isEWriter=false;hmFlags.topicExt=".html";hmFlags.defaultExt=".html";hmFlags.projName="dm_doc_writer";hmFlags.tDescription=document.querySelector("meta[name='description']").getAttribute("content");hmFlags.tKeywords="";hmFlags.hdFormat=false;hmFlags.contextID=(function(){var f;if(/^https??:\/\//im.test(document.location)){f=/contextid=\d*/.exec(window.location.search.substring(1))}else{f=/contextid=\d*/.exec(window.location.hash.substring(1))}return f!=null?f[0]:false})();function e(f){$.getScript(a[f],function(g,i,h){if(d<a.length-1){d++;e(d)}else{hmpage.defaulttopic="index.html";hmpage.breadcrumbs=false;hmWebHelp.hmMainPageInit();hmpage.hmDescription=document.querySelector("meta[name='description']").getAttribute("content");hmpage.hmPicture=""===""?"":"./images/";hmpage.topicfooter=$("div.topicfooter")[0].outerHTML;}})}if(document.location.protocol.substr(0,4)!=="http"){window.History={options:{html4Mode:true}}}var d=0;var a=["./js/helpman_settings.js","./js/jquery.scrollTomin.js","./js/jquery.history.js","./js/hm_webhelp.js"];if(hmFlags.contextID){a.unshift("./js/hmcontextids.js")}if(hmDevice.phone){a.push("./js/mobileNav.js")}var c=document.getElementById("jqscript");c.src="./js/jquery.js";var b=setInterval(function(){if(window.jQuery){clearInterval(b);$.ajaxPrefilter("json script",function(g){g.crossDomain=true});if(hmDevice.embedded&&hmDevice.desktop){$("li#toggle_fullscreen").show()}e(0);var f="5.1.1 field";switch("topic"){case"project":f="Data Model Document Writer";break;case"project_topic":f="Data Model Document Writer > 5.1.1 field";break}f=$("<textarea/>").html(f).text();$("title").text(f)}},100)}if(window.addEventListener){window.addEventListener("load",initScripts,false)}else{if(window.attachEvent){window.attachEvent("onload",initScripts)}else{window.onload=initScripts}};
+(function(){var b=sessionVariable.getPV("fontSize"),a=document.getElementsByTagName("html")[0];if(b!==null){a.style.fontSize=b+"%"}else{a.style.fontSize=hmDevice.baseFontSize+"%"}})();var moveCheck=null,hmTocLoaded=false,hmTocWidth=0,xMessage=new xMsg("LANDING TOPIC");function initScripts(){hmPopupsObject={};hmFlags.isHmTopic=true;hmFlags.idxLoaded=false;hmFlags.schLoaded=false;hmFlags.searchSession=false;hmFlags.tocClicked=false;hmFlags.layoutTable=false;hmFlags.searchHighlight="";hmFlags.tocInitWidth=0;hmFlags.jumpHighlight=false;hmFlags.hmMainPage="index.html";hmFlags.hmTrackHost="http://www.helpandmanual.com/help/";hmFlags.hmProject="Data Model Document Writer";hmFlags.hmDefaultPage="index.html";hmFlags.hmCurrentPage="dmdw_customization.html";hmFlags.hmTOC="hmcontent.html";hmFlags.hmSearchPage="hmftsearch.html";hmFlags.hmIndexPage="hmkwindex.html";hmFlags.thisTopic="dmdw_customization.html";hmFlags.lastTopic="index.html";hmFlags.isEWriter=false;hmFlags.topicExt=".html";hmFlags.defaultExt=".html";hmFlags.projName="dm_doc_writer";hmFlags.tDescription=document.querySelector("meta[name='description']").getAttribute("content");hmFlags.tKeywords="";hmFlags.hdFormat=false;hmFlags.contextID=(function(){var f;if(/^https??:\/\//im.test(document.location)){f=/contextid=\d*/.exec(window.location.search.substring(1))}else{f=/contextid=\d*/.exec(window.location.hash.substring(1))}return f!=null?f[0]:false})();function e(f){$.getScript(a[f],function(g,i,h){if(d<a.length-1){d++;e(d)}else{hmpage.defaulttopic="index.html";hmpage.breadcrumbs=false;hmWebHelp.hmMainPageInit();hmpage.hmDescription=document.querySelector("meta[name='description']").getAttribute("content");hmpage.hmPicture=""===""?"":"./images/";hmpage.topicfooter=$("div.topicfooter")[0].outerHTML;}})}if(document.location.protocol.substr(0,4)!=="http"){window.History={options:{html4Mode:true}}}var d=0;var a=["./js/helpman_settings.js","./js/jquery.scrollTomin.js","./js/jquery.history.js","./js/hm_webhelp.js"];if(hmFlags.contextID){a.unshift("./js/hmcontextids.js")}if(hmDevice.phone){a.push("./js/mobileNav.js")}var c=document.getElementById("jqscript");c.src="./js/jquery.js";var b=setInterval(function(){if(window.jQuery){clearInterval(b);$.ajaxPrefilter("json script",function(g){g.crossDomain=true});if(hmDevice.embedded&&hmDevice.desktop){$("li#toggle_fullscreen").show()}e(0);var f="Customization";switch("topic"){case"project":f="Data Model Document Writer";break;case"project_topic":f="Data Model Document Writer > Customization";break}f=$("<textarea/>").html(f).text();$("title").text(f)}},100)}if(window.addEventListener){window.addEventListener("load",initScripts,false)}else{if(window.attachEvent){window.attachEvent("onload",initScripts)}else{window.onload=initScripts}};
 helpman_mailrecipient = 'Support Staff <support@ec-software.com>';
 hmGetUrlParams = function() {/*! 
 * Enter code to save URL parameters to session variables inside the if clause below.

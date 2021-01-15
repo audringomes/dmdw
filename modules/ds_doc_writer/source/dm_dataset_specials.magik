@@ -85,11 +85,9 @@ _pragma(classify_level=advanced, topic={datamodel,dm_doc_writer}, usage={redefin
 _method dm_dataset_specials.includes
 	## 
 	## This method should return one or more top xml collections to be
-	## included in the output
+	## included in the XML output. This method returns an empty collection.
 	##
-
 	>> {}
-
 _endmethod
 $
 

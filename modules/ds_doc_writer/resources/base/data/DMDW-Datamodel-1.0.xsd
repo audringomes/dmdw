@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	elementFormDefault="qualified"
-	attributeFormDefault="unqualified">
+	attributeFormDefault="unqualified" 
+	xmlns:dmdw="https://realworld-systems.com" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://cavdb186.home.xs4all.nl/dmdw DMDW-Datamodel-1.0.xsd">
   <xs:element name="datamodel">
     <xs:complexType>
       <xs:sequence>
@@ -18,7 +21,6 @@
                   </xs:simpleContent>
                 </xs:complexType>
               </xs:element>
-              <xs:element type="xs:string" name="dm_datamodel_version"/>
               <xs:element type="xs:string" name="dm_current_dd_version"/>
               <xs:element type="xs:string" name="dm_dataset"/>
               <xs:element type="xs:string" name="dm_ace_name"/>
@@ -512,4 +514,3 @@
     </xs:complexType>
   </xs:element>
 </xs:schema>
-

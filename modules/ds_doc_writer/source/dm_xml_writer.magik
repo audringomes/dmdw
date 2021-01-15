@@ -36,6 +36,31 @@ def_slotted_exemplar(:dm_xml_writer,
 	}
 )
 $
+_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+##
+## When updates are processed, they are stored internally in
+## this slot.
+## It contains:
+##
+## a property_list with the following keys and values:
+##
+##   :commonfields        property_list(<:field_name1>,"description",
+##                                      ...)
+##   :geometry_mappings   property_list(<:method_name>,"description",
+##                                      ...)
+##   :collections         rope with property_lists with the
+##                        following keys and values:
+##
+##                        property_list(:collection,<:name>,
+##                                      :fields,<plist>
+##                                      :description,"description")
+##
+##                        <plist> is a property_list with:
+##                           property_list(<:field_name>,"description",
+##                                         ...)
+## 
+dm_xml_writer.define_slot_access(:updates,:read,:public)
+$
 
 _pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
 _method dm_xml_writer.new(ds, properties)
@@ -279,72 +304,71 @@ _private _method dm_xml_writer.categories_from_ace( ace_name )
 _endmethod
 $
 
-
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
-_method dm_xml_writer.read_updates()
-	## 
-	## reads updates and stores them in .updates
-	##
-
-	.updates << property_list.new()
-	
-	_if (l_str << .properties[:update_file]) _isnt _unset
-	_then
-		_if _not system.file_exists?(l_str)
-		_then write(" Configured file with updates not found ",l_str)
-		      _return 
-		_endif
-	_else
-		write("No updates are configured ")
-		_return 
-	_endif
-	
-	list << property_list.new()
-	
-	l_file << l_str
-	l_xml << simple_xml.read_element_file(l_file)
-	
-	_if l_xml.type = :datamodel _andif
-	    (l_c << l_xml.xml_elements.first).type = :collections
-	_then
-		
-		l_col_updates << list[:collection_updates] << property_list.new()
-		
-		_for i _over l_c.xml_elements.fast_elements()
-		_loop
-			atts << i.attributes
-			col_name << atts["name"].as_symbol()
-			
-			_if .ds.collections[col_name] _is _unset 
-			_then write("Warning - No collection with name ",col_name)
-			      _continue 
-			_endif
-			
-			#DEBUG write("Processing update name ",name)
-			l_col_update << rope.new()
-			
-			_try _with p_cond
-				
-				_for i2 _over i.elements.fast_elements()
-				_loop
-					l_col_update.add(i2)
-				_endloop
-
-				write(" Reading update for: ",col_name," (",l_col_update.size,%))
-				l_col_updates[col_name] << l_col_update
-				
-			_when error
-				write("Element ",col_name," could not be processed ",p_cond.report_contents_string)
-			_endtry
-			
-		_endloop
-	_endif
-
-	.updates << list
-	>> list
-	
-_endmethod
-$
+#_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+#_method dm_xml_writer.read_updates()
+#	## 
+#	## reads updates and stores them in .updates
+#	##
+#
+#	.updates << property_list.new()
+#	
+#	_if (l_str << .properties[:update_file]) _isnt _unset
+#	_then
+#		_if _not system.file_exists?(l_str)
+#		_then write(" Configured file with updates not found ",l_str)
+#		      _return 
+#		_endif
+#	_else
+#		write("No updates are configured ")
+#		_return 
+#	_endif
+#	
+#	list << property_list.new()
+#	
+#	l_file << l_str
+#	l_xml << simple_xml.read_element_file(l_file)
+#	
+#	_if l_xml.type = :datamodel _andif
+#	    (l_c << l_xml.xml_elements.first).type = :collections
+#	_then
+#		
+#		l_col_updates << list[:collection_updates] << property_list.new()
+#		
+#		_for i _over l_c.xml_elements.fast_elements()
+#		_loop
+#			atts << i.attributes
+#			col_name << atts["name"].as_symbol()
+#			
+#			_if .ds.collections[col_name] _is _unset 
+#			_then write("Warning - No collection with name ",col_name)
+#			      _continue 
+#			_endif
+#			
+#			#DEBUG write("Processing update name ",col_name)
+#			l_col_update << rope.new()
+#			
+#			_try _with p_cond
+#				
+#				_for i2 _over i.elements.fast_elements()
+#				_loop
+#					l_col_update.add(i2)
+#				_endloop
+#
+#				write(" Reading update for: ",col_name," (",l_col_update.size,%))
+#				l_col_updates[col_name] << l_col_update
+#				
+#			_when error
+#				write("Element ",col_name," could not be processed ",p_cond.report_contents_string)
+#			_endtry
+#			
+#		_endloop
+#	_endif
+#
+#	.updates << list
+#	>> list
+#	
+#_endmethod
+#$
 
 _pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
 _method dm_xml_writer.datamodel_xml()
@@ -874,5 +898,218 @@ _method dm_xml_writer.dataset_special_includes
 		_endloop
 	_endif
 	>> in
+_endmethod
+$
+
+###
+### UPDATES
+###
+
+
+_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_method dm_xml_writer.read_updates(_optional p_filename)
+	## 
+	## reads updates, store them in .updates and return it.
+	## If P_FILENAME is unset, use .properties[:update_file]
+	##
+
+	_local l_schema_version << "1.3"
+	
+	_local l_list << .updates << property_list.new()
+	
+	_if (l_file << p_filename) _isnt _unset _orif
+	    (l_file << .properties[:update_file]) _isnt _unset 
+	_then
+		_if _not system.file_exists?(l_file)
+		_then
+			condition.raise(:warning,:string,
+					write_string("Configured file with updates not found ",l_file))
+			_return .updates
+		_endif
+	_else
+		write("No updates are configured ")
+		_return .updates
+	_endif
+	
+
+	_local l_xml << simple_xml.read_element_file(l_file)
+
+	_if (l_sver << l_xml.attribute(:schema_version)) ~= l_schema_version
+	_then condition.raise(:warning,:string,write_string("Updates - Different schema version: supports: ",
+							    %',l_schema_version,%',", found ",
+							    %',l_sver,%'))
+	_endif
+
+	_if l_xml.type ~= :datamodel
+	_then
+		condition.raise(:warning,:string,
+				write_string("Updates - Expected first element :datamodel, found ",l_xml))
+		_return .updates
+	_endif
+
+	.updates << property_list.new_with(:commonfields,_unset,
+					   :geometry_mappings,_unset,
+					   :collections,rope.new())
+
+	_for i_elem _over l_xml.xml_elements()
+	_loop
+		_if {:global_properties,:category}.includes?(i_elem.type)
+		_then _self.handle_update_xml(i_elem)
+		_else condition.raise(:warning,:string,
+				      write_string("Updates - XML Type ",i_elem," cannot be processed as update"))
+		_endif
+	_endloop
+	
+	>> .updates
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_private _method dm_xml_writer.handle_update_xml(a_xml)
+	## 
+	## Handles the elements in datamodel (global_properties, category/collection)
+	##
+	
+	_if a_xml.type = :global_properties
+	_then
+		_for i_sub _over a_xml.xml_elements()
+		_loop
+			#DEBUG write("Processing ",i_sub)
+			_if i_sub.type = :commonfields
+			_then
+				.updates[:commonfields] << _self.handle_updates_for_commonfields(i_sub)
+				
+			_elif i_sub.type = :geometry_mappings
+			_then
+				.updates[:geometry_mappings] << _self.handle_updates_for_geometry_mappings(i_sub)
+			_else
+				condition.raise(:warning,:string,write_string("Unknown global_property ",i_sub))
+			_endif
+		_endloop
+	_endif
+
+	_if a_xml.type ~= :category
+	_then _return 
+	_endif
+
+	_for i_elem _over a_xml.xml_elements()
+	_loop
+		
+		_if i_elem.type ~= :collection
+		_then
+			condition.raise(:warning,:string,write_string("Unknown category sub ",i_elem))
+			_continue 
+		_endif
+		_local l_name << i_elem.xml_attributes[:name]
+
+		.updates[:collections].add(_self.handle_updates_for_col(l_name,i_elem))
+		
+	_endloop
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_private _method dm_xml_writer.handle_updates_for_col(p_name,a_xml)
+	##
+	## Process elements suitable for collections.
+	##
+	## p_name: a string with internal name of collection
+	## a_xml Should be of type :collection
+	##
+
+
+	_if (l_col << .ds.collections[p_name.as_symbol()]) _is _unset 
+	_then condition.raise(:warning,:string,write_string("Warning Update - No collection with name ",p_name))
+	      _return 
+	_endif
+
+	write("Processing collection updates for ",l_col)
+	_local l_list << property_list.new_with(:collection,p_name.as_symbol(),
+						:fields,property_list.new())
+	_for i_elem _over a_xml.xml_elements()
+	_loop
+		_if (type << i_elem.type) _is :description
+		_then
+			l_list[:description] << i_elem.get_element_contents()
+			
+		_elif type _is :field
+		_then
+			_local l_pairs << property_list.new()
+			_for j_elem _over i_elem.xml_elements()
+			_loop l_pairs[j_elem.type] << j_elem.get_element_contents()
+			_endloop
+			_if (l_name << l_pairs[:name]) _isnt _unset 
+			_then l_list[:fields][l_name.as_symbol()] << l_pairs[:description]
+			_endif
+		_endif
+		
+	_endloop
+
+#	print(l_list)
+#	print(l_list[:fields])
+	
+	>> l_list
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_private _method dm_xml_writer.handle_updates_for_commonfields(a_xml)
+	## 
+	##
+	
+	#DEBUG write("Processing updates for ",a_xml)
+	_local l_list << property_list.new()
+	_for i_elem _over a_xml.xml_elements()
+	_loop
+		_local l_pairs << property_list.new()
+		_if i_elem.type ~= :field
+		_then condition.raise(:warning,:string,write_string("Warning Update - Unknown element for commonfield ",i_elem))
+		      _continue
+		_endif
+		
+		_for j_elem _over i_elem.xml_elements()
+		_loop l_pairs[j_elem.type] << j_elem.get_element_contents()
+		_endloop
+		_if (l_name << l_pairs[:name]) _isnt _unset 
+		_then l_list[l_name.as_symbol()] << l_pairs[:description]
+		_endif
+		
+	_endloop
+
+	#DEBUG print(l_list)
+	>> l_list
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_private _method dm_xml_writer.handle_updates_for_geometry_mappings(a_xml)
+	## 
+	## a_xml can be of any type
+	##
+	
+	_local l_list << property_list.new()
+	_for i_elem _over a_xml.xml_elements()
+	_loop
+		_local l_pairs << property_list.new()
+		_if i_elem.type ~= :mapping
+		_then condition.raise(:warning,:string,write_string("Warning Update - Expected mapping element ",i_elem))
+		      _continue
+		_endif
+		
+		_for j_elem _over i_elem.xml_elements()
+		_loop
+			_local l_cont << j_elem.get_element_contents()
+			l_pairs[j_elem.type] << l_cont
+		_endloop
+		_if (l_name << l_pairs[:method]) _isnt _unset 
+		_then l_list[l_name.as_symbol()] << l_pairs[:description]
+		_endif
+		
+	_endloop
+
+	#DEBUG print(l_list)
+	>> l_list
 _endmethod
 $

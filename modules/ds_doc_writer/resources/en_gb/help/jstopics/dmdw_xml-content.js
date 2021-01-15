@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"XML Content",
 hmDescription:"The XML has the following sections, all contained in <datamodel>.",
-hmPrevLink:"dmdw_dd-version.html",
+hmPrevLink:"dmdw_datamodel_version.html",
 hmNextLink:"dmdw_meta-data.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",
