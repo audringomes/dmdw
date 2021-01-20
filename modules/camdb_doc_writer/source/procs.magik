@@ -15,6 +15,11 @@ _pragma(classify_level=basic, topic={wd_doc_writer})
 _global dump_camdb <<
 _proc @dump_camdb()
 
+	_dynamic !current_languages! << {:de_de,:en_gb}
+	_if (a_product << smallworld_product.product(:cambridge_db_lp)) _isnt _unset 
+	_then smallworld_product.reload_product(a_product.directory)
+	_endif
+	
 	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
 	_local l_dir << l_mod.resource_list_for(:xml).an_element()
 
@@ -47,7 +52,7 @@ _pragma(classify_level=basic, topic={wd_doc_writer})
 ##
 _global transform_camdb_xml <<
 _proc @transform_camdb_xml()
-		
+
 	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
 	_for i_file _over l_mod.resource_files("xml").fast_elements()
 	_loop
