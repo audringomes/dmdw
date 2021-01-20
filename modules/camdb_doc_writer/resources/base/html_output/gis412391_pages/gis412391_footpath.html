@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Fußweg</title>
+      <title>Gis - Collection Footpath</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -27,13 +27,13 @@
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Fußweg</div>
+      <div class="PageTitle float">Footpath</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="footpath">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Fußweg</h3>
+                  <h3 class="InTable">Footpath</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -55,7 +55,7 @@
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">ID</div>
+                  <div class="physical">id</div>
                </td>
                				
                <td class="technical">id</td>
@@ -101,7 +101,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Klasse</div>
+                  <div class="physical">Class</div>
                </td>
                				
                <td class="technical">class</td>
@@ -118,7 +118,7 @@
                				
                				
                				
-               <td>The values of Klasse are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('footpath_class');" title="Click to Show/Hide details">footpath_class</a></span><table id="footpath_class" class="InlineBox" style="display:none;">
+               <td>The values of Class are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('footpath_class');" title="Click to Show/Hide details">footpath_class</a></span><table id="footpath_class" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">footpath_class</th>
                      </tr>
@@ -132,15 +132,15 @@
                         <td colspan="3">
                            <ul class="EnumeratorValues">
                               			
-                              <li class="EnumeratorValue">"Fußweg, befestigt"</li>
+                              <li class="EnumeratorValue">Pedestrian Surfaced</li>
                               			
-                              <li class="EnumeratorValue">"Fußweg, unbefestigt"</li>
+                              <li class="EnumeratorValue">Pedestrian Unsurfaced</li>
                               			
-                              <li class="EnumeratorValue">Radweg</li>
+                              <li class="EnumeratorValue">Cycle Path</li>
                               			
-                              <li class="EnumeratorValue">Reitpfad</li>
+                              <li class="EnumeratorValue">Bridle Path</li>
                               			
-                              <li class="EnumeratorValue">Unbekannt</li>
+                              <li class="EnumeratorValue">Unknown</li>
                               		</ul>
                         </td>
                      </tr>
@@ -168,8 +168,8 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td>rwo_id is a vector field with elements of class integer of size 3
+                  	default value: sw:simple_vector:[1-3] </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -192,8 +192,8 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -218,14 +218,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                  </td>
+               <td>int!info_flags is a join field returning a set of records from 'swif!info_flag' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Sitzgelegenheiten</div>
+                  <div class="join">Seats</div>
                </td>
                				
                <td class="technical">seats</td>
@@ -235,7 +234,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_seat.html">Sitzgelegenheit</a></li>
+                     <li class="Join"><a href="gis412391_seat.html">Seat</a></li>
                   </ul>
                   				</td>
                				
@@ -244,14 +243,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Sitzgelegenheiten ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird
-                  ausgegeben </td>
+               <td>Seats is a join field returning a collection of records from 'seat' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Rundgänge</div>
+                  <div class="join">Walks</div>
                </td>
                				
                <td class="technical">walks</td>
@@ -261,7 +259,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_walk.html">Rundgang</a></li>
+                     <li class="Join"><a href="gis412391_walk.html">Walk</a></li>
                   </ul>
                   				</td>
                				
@@ -270,7 +268,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Rundgänge ist ein join Feld Satz von Datensätzen aus 'walk' wird ausgegeben </td>
+               <td>Walks is a join field returning a set of records from 'walk' </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -295,14 +293,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>walks!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244855' wird
-                  ausgegeben </td>
+               <td>walks!int is a join field returning a collection of records from 'int!hetero244855'
+                  </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">Annotation</div>
                </td>
                				
                <td class="technical">annotation</td>
@@ -324,7 +322,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Mittelachse</div>
+                  <div class="geometry">Centreline</div>
                </td>
                				
                <td class="technical">centre_line</td>
@@ -369,7 +367,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="logical">Länge</div>
+                  <div class="logical">Length</div>
                </td>
                				
                <td class="technical">length</td>
@@ -386,7 +384,7 @@
                				
                				
                				
-               <td>Help text here ...., stored in Meter</td>
+               <td>Help text here ...., stored in Metre</td>
                			</tr>
             		</table>
       </div>
@@ -394,7 +392,7 @@
          <ul>
             <li>DD Version 412391</li>
             <li>DMDW © Realworld Software Products 2021</li>
-            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
          </ul>
       </footer>
    </body>

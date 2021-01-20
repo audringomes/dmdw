@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Rundgang</title>
+      <title>Gis - Collection Walk</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -27,13 +27,13 @@
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Rundgang</div>
+      <div class="PageTitle float">Walk</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="walk">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Rundgang</h3>
+                  <h3 class="InTable">Walk</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -55,7 +55,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Rundgangs-ID</div>
+                  <div class="physical">Walk Id</div>
                </td>
                				
                <td class="technical">walk_id</td>
@@ -72,7 +72,7 @@
                				
                				
                				
-               <td>Rundgangs-ID ist ein Feld der Klasse integer, z. B. 0 </td>
+               <td>Walk Id is a field of class integer, such as 0 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
@@ -95,13 +95,13 @@
                				
                				
                				
-               <td>Name ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Name is a string field size 32 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Durchschnittsdauer</div>
+                  <div class="physical">Average Time</div>
                </td>
                				
                <td class="technical">average_time</td>
@@ -118,13 +118,13 @@
                				
                				
                				
-               <td>Durchschnittsdauer ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Average Time is a string field size 32 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Beschreibungs-ID</div>
+                  <div class="physical">Description Id</div>
                </td>
                				
                <td class="technical">description_id</td>
@@ -141,14 +141,14 @@
                				
                				
                				
-               <td>Beschreibungs-ID ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>Description Id is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Barrierefrei</div>
+                  <div class="physical">Wheelchair Friendly</div>
                </td>
                				
                <td class="technical">wheelchair_friendly</td>
@@ -165,7 +165,7 @@
                				
                				
                				
-               <td>Barrierefrei ist ein Feld der Klasse maybe, z. B. Maybe </td>
+               <td>Wheelchair Friendly is a field of class maybe, such as Maybe </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -188,8 +188,8 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td>rwo_id is a vector field with elements of class integer of size 3
+                  	default value: sw:simple_vector:[1-3] </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -212,14 +212,14 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Beschreibung</div>
+                  <div class="join">Description</div>
                </td>
                				
                <td class="technical">description</td>
@@ -233,7 +233,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Beschreibung ist ein join Feld Text wird ausgegeben </td>
+               <td>Description is a join field returning text </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -258,14 +258,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                  </td>
+               <td>int!info_flags is a join field returning a set of records from 'swif!info_flag' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Laufstrecke</div>
+                  <div class="join">Route Of Walk</div>
                </td>
                				
                <td class="technical">route_of_walk</td>
@@ -275,8 +274,8 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_min_road.html">Straße</a></li>
-                     <li class="Join"><a href="gis412391_footpath.html">Fußweg</a></li>
+                     <li class="Join"><a href="gis412391_min_road.html">Road</a></li>
+                     <li class="Join"><a href="gis412391_footpath.html">Footpath</a></li>
                   </ul>
                   				</td>
                				
@@ -285,7 +284,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Laufstrecke ist ein join Feld Liste mit Datensätzen aus 'min_road,footpath' wird ausgegeben
+               <td>Route Of Walk is a join field returning a list of records from 'min_road,footpath'
                   </td>
                			</tr>
             			
@@ -311,14 +310,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>route_of_walk!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244855'
-                  wird ausgegeben </td>
+               <td>route_of_walk!int is a join field returning a collection of records from 'int!hetero244855'
+                  </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Mittelachse</div>
+                  <div class="geometry">Centreline</div>
                </td>
                				
                <td class="technical">centre_line</td>
@@ -364,7 +363,7 @@
          <ul>
             <li>DD Version 412391</li>
             <li>DMDW © Realworld Software Products 2021</li>
-            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
          </ul>
       </footer>
    </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Büro</title>
+      <title>Gis - Collection Office</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -27,13 +27,13 @@
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Büro</div>
+      <div class="PageTitle float">Office</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="office">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Büro</h3>
+                  <h3 class="InTable">Office</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -55,7 +55,7 @@
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Büro ID</div>
+                  <div class="physical">office_id</div>
                </td>
                				
                <td class="technical">office_id</td>
@@ -101,7 +101,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Adresse 1</div>
+                  <div class="physical">Address 1</div>
                </td>
                				
                <td class="technical">address1</td>
@@ -124,7 +124,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Adresse 2</div>
+                  <div class="physical">Address 2</div>
                </td>
                				
                <td class="technical">address2</td>
@@ -147,7 +147,7 @@
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Firma ID</div>
+                  <div class="physical">company_id</div>
                </td>
                				
                <td class="technical">company_id</td>
@@ -201,11 +201,11 @@
                         <td colspan="3">
                            <ul class="EnumeratorValues">
                               			
-                              <li class="EnumeratorValue">Aktuell</li>
+                              <li class="EnumeratorValue">Current</li>
                               			
-                              <li class="EnumeratorValue">ersten</li>
+                              <li class="EnumeratorValue">Former</li>
                               			
-                              <li class="EnumeratorValue">Vorgeschlagen</li>
+                              <li class="EnumeratorValue">Proposed</li>
                               		</ul>
                         </td>
                      </tr>
@@ -233,7 +233,7 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               <td>rwo_id is a vector field with elements of class integer of size 3 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -256,14 +256,14 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Mutterkonzern</div>
+                  <div class="join">Parent Company</div>
                </td>
                				
                <td class="technical">company</td>
@@ -273,7 +273,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_company.html">Firma</a></li>
+                     <li class="Join"><a href="gis412391_company.html">Company</a></li>
                   </ul>
                   				</td>
                				
@@ -307,14 +307,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>dd!join356709 ist ein join Feld Objekttabelle mit Datensätzen aus 'int!office_drawing'
-                  wird ausgegeben </td>
+               <td>dd!join356709 is a join field returning a collection of records from 'int!office_drawing'
+                  </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Zeichnungen</div>
+                  <div class="join">Drawings</div>
                </td>
                				
                <td class="technical">drawings</td>
@@ -324,7 +324,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_drawing.html">Zeichnung</a></li>
+                     <li class="Join"><a href="gis412391_drawing.html">Drawing</a></li>
                   </ul>
                   				</td>
                				
@@ -333,7 +333,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Zeichnungen ist ein join Feld Satz von Datensätzen aus 'drawing' wird ausgegeben </td>
+               <td>Drawings is a join field returning a set of records from 'drawing' </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -358,14 +358,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                  </td>
+               <td>int!info_flags is a join field returning a set of records from 'swif!info_flag' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Sitzgelegenheiten</div>
+                  <div class="join">Seats</div>
                </td>
                				
                <td class="technical">seats</td>
@@ -375,7 +374,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_seat.html">Sitzgelegenheit</a></li>
+                     <li class="Join"><a href="gis412391_seat.html">Seat</a></li>
                   </ul>
                   				</td>
                				
@@ -384,14 +383,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Sitzgelegenheiten ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird
-                  ausgegeben </td>
+               <td>Seats is a join field returning a collection of records from 'seat' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">Annotation</div>
                </td>
                				
                <td class="technical">annotation</td>
@@ -413,7 +411,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">Location</div>
                </td>
                				
                <td class="technical">location</td>
@@ -475,7 +473,7 @@
                				
                				
                				
-               <td>Logo ist ein derived Feld der Klasse integer, z. B. 0 </td>
+               <td>Logo is a derived field of class integer, such as 0 </td>
                			</tr>
             		</table>
       </div>
@@ -483,7 +481,7 @@
          <ul>
             <li>DD Version 412391</li>
             <li>DMDW © Realworld Software Products 2021</li>
-            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
          </ul>
       </footer>
    </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Sehenswürdigkeit</title>
+      <title>Gis - Collection Place of Interest</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -27,13 +27,13 @@
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Sehenswürdigkeit</div>
+      <div class="PageTitle float">Place of Interest</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="pl_of_interest">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Sehenswürdigkeit</h3>
+                  <h3 class="InTable">Place of Interest</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -55,7 +55,7 @@
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Sehenswürdigkeit ID</div>
+                  <div class="physical">pl_of_interest_id</div>
                </td>
                				
                <td class="technical">pl_of_interest_id</td>
@@ -101,7 +101,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Adresse 1</div>
+                  <div class="physical">Address 1</div>
                </td>
                				
                <td class="technical">address1</td>
@@ -124,7 +124,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Adresse 2</div>
+                  <div class="physical">Address 2</div>
                </td>
                				
                <td class="technical">address2</td>
@@ -147,7 +147,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Ortstyp</div>
+                  <div class="physical">Type of Place</div>
                </td>
                				
                <td class="technical">type_of_place</td>
@@ -170,7 +170,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Nächste Stadt</div>
+                  <div class="physical">Nearest Town</div>
                </td>
                				
                <td class="technical">nearest_town</td>
@@ -210,7 +210,7 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               <td>rwo_id is a vector field with elements of class integer of size 3 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -233,8 +233,8 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -259,14 +259,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>dd!join326453 ist ein join Feld Datensatz aus 'int!drawing_pl_of_interes' wird ausgegeben
+               <td>dd!join326453 is a join field returning a record from 'int!drawing_pl_of_interes'
                   </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Zeichnung</div>
+                  <div class="join">Drawing</div>
                </td>
                				
                <td class="technical">drawing</td>
@@ -276,7 +276,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_drawing.html">Zeichnung</a></li>
+                     <li class="Join"><a href="gis412391_drawing.html">Drawing</a></li>
                   </ul>
                   				</td>
                				
@@ -285,7 +285,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Zeichnung ist ein join Feld Datensatz aus 'drawing' wird ausgegeben </td>
+               <td>Drawing is a join field returning a record from 'drawing' </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -310,14 +310,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                  </td>
+               <td>int!info_flags is a join field returning a set of records from 'swif!info_flag' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">Annotation</div>
                </td>
                				
                <td class="technical">annotation</td>
@@ -339,7 +338,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Deckung</div>
+                  <div class="geometry">Coverage</div>
                </td>
                				
                <td class="technical">coverage</td>
@@ -362,7 +361,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">Location</div>
                </td>
                				
                <td class="technical">location</td>
@@ -409,7 +408,7 @@
          <ul>
             <li>DD Version 412391</li>
             <li>DMDW © Realworld Software Products 2021</li>
-            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
          </ul>
       </footer>
    </body>

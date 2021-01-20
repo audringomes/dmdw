@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Geschäft</title>
+      <title>Gis - Collection Shop</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -27,13 +27,13 @@
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Geschäft</div>
+      <div class="PageTitle float">Shop</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="shop">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Geschäft</h3>
+                  <h3 class="InTable">Shop</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -78,7 +78,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Straße</div>
+                  <div class="physical">Street</div>
                </td>
                				
                <td class="technical">street</td>
@@ -101,7 +101,7 @@
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Kommentar ID</div>
+                  <div class="physical">comments_id</div>
                </td>
                				
                <td class="technical">comments_id</td>
@@ -118,8 +118,8 @@
                				
                				
                				
-               <td>Kommentar ID ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>comments_id is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
@@ -156,17 +156,17 @@
                         <td colspan="3">
                            <ul class="EnumeratorValues">
                               			
-                              <li class="EnumeratorValue">In Betrieb</li>
+                              <li class="EnumeratorValue">In service</li>
                               			
-                              <li class="EnumeratorValue">außer Betrieb</li>
+                              <li class="EnumeratorValue">Out of service</li>
                               			
-                              <li class="EnumeratorValue">Vorgeschlagen</li>
+                              <li class="EnumeratorValue">Proposed</li>
                               			
-                              <li class="EnumeratorValue">akzeptiert</li>
+                              <li class="EnumeratorValue">Accepted</li>
                               			
-                              <li class="EnumeratorValue">Aufgegeben</li>
+                              <li class="EnumeratorValue">Abandoned</li>
                               			
-                              <li class="EnumeratorValue">Entfernt</li>
+                              <li class="EnumeratorValue">Removed</li>
                               		</ul>
                         </td>
                      </tr>
@@ -177,7 +177,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Größe</div>
+                  <div class="physical">Size</div>
                </td>
                				
                <td class="technical">shop_size</td>
@@ -194,7 +194,7 @@
                				
                				
                				
-               <td>The values of Größe are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('shop_size');" title="Click to Show/Hide details">shop_size</a></span><table id="shop_size" class="InlineBox" style="display:none;">
+               <td>The values of Size are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('shop_size');" title="Click to Show/Hide details">shop_size</a></span><table id="shop_size" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">shop_size</th>
                      </tr>
@@ -208,11 +208,11 @@
                         <td colspan="3">
                            <ul class="EnumeratorValues">
                               			
-                              <li class="EnumeratorValue">klein</li>
+                              <li class="EnumeratorValue">Small</li>
                               			
-                              <li class="EnumeratorValue">Mittel</li>
+                              <li class="EnumeratorValue">Medium</li>
                               			
-                              <li class="EnumeratorValue">groß</li>
+                              <li class="EnumeratorValue">Large</li>
                               		</ul>
                         </td>
                      </tr>
@@ -223,7 +223,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Postleitzahl</div>
+                  <div class="physical">Postcode</div>
                </td>
                				
                <td class="technical">postcode</td>
@@ -240,7 +240,7 @@
                				
                				
                				
-               <td>Postleitzahl ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Postcode is a string field size 32 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -263,8 +263,8 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td>rwo_id is a vector field with elements of class integer of size 3
+                  	default value: sw:simple_vector:[1-3] </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -287,14 +287,14 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Ausstattung</div>
+                  <div class="join">Amenities</div>
                </td>
                				
                <td class="technical">amenities</td>
@@ -305,7 +305,7 @@
                   					
                   <ul>
                      <li class="Join"><a href="gis412391_park.html">Park</a></li>
-                     <li class="Join"><a href="gis412391_play_area.html">Freizeitbereich</a></li>
+                     <li class="Join"><a href="gis412391_play_area.html">Play Area</a></li>
                   </ul>
                   				</td>
                				
@@ -314,7 +314,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Ausstattung ist ein join Feld Datensatz aus 'park,play_area' wird ausgegeben </td>
+               <td>Amenities is a join field returning a record from 'park,play_area' </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -339,13 +339,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>amenities!int ist ein join Feld Datensatz aus 'int!hetero244956' wird ausgegeben </td>
+               <td>amenities!int is a join field returning a record from 'int!hetero244956' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Kommentar</div>
+                  <div class="join">Comments</div>
                </td>
                				
                <td class="technical">comments</td>
@@ -359,13 +359,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Kommentar ist ein join Feld Text wird ausgegeben </td>
+               <td>Comments is a join field returning text </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Gesponserte Objekte</div>
+                  <div class="join">Objects Sponsored</div>
                </td>
                				
                <td class="technical">objects_sponsored</td>
@@ -375,8 +375,8 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_roundabout.html">Kreisverkehr</a></li>
-                     <li class="Join"><a href="gis412391_play_area.html">Freizeitbereich</a></li>
+                     <li class="Join"><a href="gis412391_roundabout.html">Roundabout</a></li>
+                     <li class="Join"><a href="gis412391_play_area.html">Play Area</a></li>
                   </ul>
                   				</td>
                				
@@ -385,8 +385,8 @@
                <td class="technical">False</td>
                				
                				
-               <td>Gesponserte Objekte ist ein join Feld Satz von Datensätzen aus 'roundabout,play_area'
-                  wird ausgegeben </td>
+               <td>Objects Sponsored is a join field returning a set of records from 'roundabout,play_area'
+                  </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -411,8 +411,8 @@
                <td class="technical">False</td>
                				
                				
-               <td>objects_sponsored!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244932'
-                  wird ausgegeben </td>
+               <td>objects_sponsored!int is a join field returning a collection of records from 'int!hetero244932'
+                  </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -437,14 +437,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>sector ist ein super_dd join Feld Datensatz aus '[demographics]sector' wird ausgegeben
-                  </td>
+               <td>sector is a super_dd join field returning a record from '[demographics]sector' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Freizeitbereich mit Dienstangeboten</div>
+                  <div class="join">Serviced Play Area</div>
                </td>
                				
                <td class="technical">serviced_play_area</td>
@@ -454,7 +453,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_play_area.html">Freizeitbereich</a></li>
+                     <li class="Join"><a href="gis412391_play_area.html">Play Area</a></li>
                   </ul>
                   				</td>
                				
@@ -463,14 +462,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Freizeitbereich mit Dienstangeboten ist ein join Feld Datensatz aus 'play_area' wird
-                  ausgegeben </td>
+               <td>Serviced Play Area is a join field returning a record from 'play_area' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">location</div>
                </td>
                				
                <td class="technical">location</td>
@@ -515,7 +513,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="logical">Rechtswert</div>
+                  <div class="logical">Cartesian X</div>
                </td>
                				
                <td class="technical">cartesian_x</td>
@@ -532,13 +530,13 @@
                				
                				
                				
-               <td>Rechtswert ist ein derived Feld der Klasse float, z. B. 0.000 , stored in Meter</td>
+               <td>Cartesian X is a derived field of class float, such as 0.000 , stored in Metre</td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="logical">Hochwert</div>
+                  <div class="logical">Cartesian Y</div>
                </td>
                				
                <td class="technical">cartesian_y</td>
@@ -555,7 +553,7 @@
                				
                				
                				
-               <td>Hochwert ist ein derived Feld der Klasse float, z. B. 0.000 , stored in Meter</td>
+               <td>Cartesian Y is a derived field of class float, such as 0.000 , stored in Metre</td>
                			</tr>
             		</table>
       </div>
@@ -563,7 +561,7 @@
          <ul>
             <li>DD Version 412391</li>
             <li>DMDW © Realworld Software Products 2021</li>
-            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
          </ul>
       </footer>
    </body>

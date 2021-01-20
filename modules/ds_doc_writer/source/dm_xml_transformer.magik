@@ -105,6 +105,7 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 		( base, ext ) << system.split_filename(l_output)
 		l_output_path << system.check_filename_extension(base,".html")
 	_endif
+	
 	write("To file ",l_output_path)
 
 	_if (l_exe_path << _self.path_to_saxon_exe) _is _unset 
@@ -132,15 +133,7 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 
 	_if p_copy_help?.default(_true) _is _true 
 	_then
-		_try _with cond
-			_local l_hpath << system.canonicalise("en_gb/help",system.pathname_up(l_output_path))
-			
-			system.mkdir_tree(l_hpath)
-			_self.copy_resources( l_module, l_hpath ,:help)
-			
-		_when error
-			write("Copy failed ",cond.report_contents_string)
-		_endtry
+		_self.copy_help(l_module,l_output_path)
 	_endif
 
 	write("Created ",l_output_path)
@@ -149,11 +142,76 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 _endmethod
 $
 
+_pragma(classify_level=basic, topic={ds_doc_writer})
+_method dm_xml_transformer.copy_help(p_module,p_output_file)
+	##
+	## Copies the help from ds_doc_writer or in module P_MODULE to
+	## the html output, so help can be retrieved from the pages.
+	## 
+	## P_MODULE is the module that might contain help resources.
+	## P_OUTPUT_FILE is the path of the html file that is generated.
+	## The language setting !current_languages! and any
+	## customisation product is taken into account
+	##
+
+	_local l_return << _false
+	
+	# Get help if defined from module P_MODULE_NAME
+	_local indexfile
+	_try _with cond
+		indexfile << smallworld_product.get_resource_file("index.html","help",p_module.name)
+		write("HELP Resource found ",indexfile)
+	_when resource_not_found_in_module_error
+		write("No HELP resource found ",cond.report_contents_string)
+	_endtry
+
+	# Get the help from ds_doc_writer
+	_if indexfile _is _unset
+	_then 
+		_try _with cond
+			indexfile << smallworld_product.get_resource_file("index.html","help","ds_doc_writer")
+			write("Default HELP Resource found ",indexfile)
+		_when resource_not_found_in_module_error
+			write("ERROR - No HELP resource found ",cond.report_contents_string)
+		_endtry
+	_endif
+	
+	_if indexfile _is _unset
+	_then _return l_return
+	_endif
+
+	_local (l_name,l_dir) << system.pathname_components(indexfile)
+	_local (l_outname,l_outdir) << system.pathname_components(p_output_file)
+	_local l_helpdir << system.pathname_down(l_outdir,"help")
+	
+	_if _not system.file_exists?(l_helpdir)
+	_then
+		system.mkdir(l_helpdir)
+	_endif
+
+	_local l_cmd << write_string("ROBOCOPY ",
+				     system.canonicalise(l_dir)," ",
+				     system.canonicalise(l_helpdir)," ",
+				     "/E")
+	_try _with cond
+		system.do_command(l_cmd,l_dir)
+		l_return << _true 
+	_when error
+		write("Copy of help from ",l_dir," to ",l_helpdir," failed ",cond.report_contents_string)
+	_endtry
+
+	>> l_return
+_endmethod
+$
+
 _pragma(classify_level=restricted, topic={ds_doc_writer})
 _private _method dm_xml_transformer.copy_resources( p_module, p_output_dir, p_type )
 	##
 	## Copies webresources or help files to P_OUTPUT_DIR
-	## P_TYPE is :html or :help
+	## It will 1st copy from the module DS_DOC_WRITER and then from
+	## the module resources of P_MODULE
+	##
+	## P_TYPE is intended to be :html or :help
 	##
 
 	write("Copying resources ",p_module, p_output_dir, p_type )

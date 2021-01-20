@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Kreisverkehr</title>
+      <title>Gis - Collection Roundabout</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -27,13 +27,13 @@
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Kreisverkehr</div>
+      <div class="PageTitle float">Roundabout</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="roundabout">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Kreisverkehr</h3>
+                  <h3 class="InTable">Roundabout</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -55,7 +55,7 @@
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Kreisverkehr ID</div>
+                  <div class="physical">roundabout_id</div>
                </td>
                				
                <td class="technical">roundabout_id</td>
@@ -101,7 +101,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Geldbuße</div>
+                  <div class="physical">Cost penalty</div>
                </td>
                				
                <td class="technical">cost_penalty</td>
@@ -141,7 +141,7 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               <td>rwo_id is a vector field with elements of class integer of size 3 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -164,8 +164,8 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -190,14 +190,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                  </td>
+               <td>int!info_flags is a join field returning a set of records from 'swif!info_flag' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Gesponsert von</div>
+                  <div class="join">Sponsored By</div>
                </td>
                				
                <td class="technical">sponsored_by</td>
@@ -207,8 +206,8 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_rest.html">Gaststätte</a></li>
-                     <li class="Join"><a href="gis412391_shop.html">Geschäft</a></li>
+                     <li class="Join"><a href="gis412391_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis412391_shop.html">Shop</a></li>
                   </ul>
                   				</td>
                				
@@ -217,8 +216,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Gesponsert von ist ein join Feld Satz von Datensätzen aus 'pub_rest,shop' wird ausgegeben
-                  </td>
+               <td>Sponsored By is a join field returning a set of records from 'pub_rest,shop' </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -243,14 +241,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>sponsored_by!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244932'
-                  wird ausgegeben </td>
+               <td>sponsored_by!int is a join field returning a collection of records from 'int!hetero244932'
+                  </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">annotation</div>
                </td>
                				
                <td class="technical">annotation</td>
@@ -272,7 +270,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">location</div>
                </td>
                				
                <td class="technical">location</td>
@@ -319,7 +317,7 @@
          <ul>
             <li>DD Version 412391</li>
             <li>DMDW © Realworld Software Products 2021</li>
-            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
          </ul>
       </footer>
    </body>

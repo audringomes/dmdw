@@ -49,10 +49,9 @@ _global transform_camdb_xml <<
 _proc @transform_camdb_xml()
 		
 	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
-#	_local l_out << l_mod.resource_list_for(:html_output).an_element()
 	_for i_file _over l_mod.resource_files("xml").fast_elements()
 	_loop
-		transform_to_html(:camdb_doc_writer,i_file,_unset,"FileSet2.xsl",_true,_false)	
+		transform_to_html(:camdb_doc_writer,i_file,_unset,"FileSet2.xsl",_true,_true)
 	_endloop
 	
 _endproc

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Straßenkatalog</title>
+      <title>Gis - Collection Road Catalogue</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -27,13 +27,13 @@
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Straßenkatalog</div>
+      <div class="PageTitle float">Road Catalogue</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="road_catalogue">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Straßenkatalog</h3>
+                  <h3 class="InTable">Road Catalogue</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -55,7 +55,7 @@
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Bezeichner</div>
+                  <div class="physical">Identifier</div>
                </td>
                				
                <td class="technical">identifier</td>
@@ -72,13 +72,13 @@
                				
                				
                				
-               <td>Bezeichner ist ein Feld der Klasse integer, z. B. 0 </td>
+               <td>Identifier is a field of class integer, such as 0 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Straßentyp</div>
+                  <div class="physical">Road Type</div>
                </td>
                				
                <td class="technical">road_type</td>
@@ -95,7 +95,7 @@
                				
                				
                				
-               <td>The values of Straßentyp are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('road_type');" title="Click to Show/Hide details">road_type</a></span><table id="road_type" class="InlineBox" style="display:none;">
+               <td>The values of Road Type are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('road_type');" title="Click to Show/Hide details">road_type</a></span><table id="road_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">road_type</th>
                      </tr>
@@ -109,21 +109,21 @@
                         <td colspan="3">
                            <ul class="EnumeratorValues">
                               			
-                              <li class="EnumeratorValue">Autobahn</li>
+                              <li class="EnumeratorValue">Motorway</li>
                               			
-                              <li class="EnumeratorValue">Bundesstraße</li>
+                              <li class="EnumeratorValue">A-Road</li>
                               			
-                              <li class="EnumeratorValue">Hauptstraße</li>
+                              <li class="EnumeratorValue">B-Road</li>
                               			
-                              <li class="EnumeratorValue">nicht klassifiziert</li>
+                              <li class="EnumeratorValue">Unclassified</li>
                               			
-                              <li class="EnumeratorValue">Unbekannt</li>
+                              <li class="EnumeratorValue">Unknown</li>
                               			
-                              <li class="EnumeratorValue">Radweg</li>
+                              <li class="EnumeratorValue">Cycle Way</li>
                               			
-                              <li class="EnumeratorValue">"nur Bus, Taxi"</li>
+                              <li class="EnumeratorValue">Bus-Taxi only</li>
                               			
-                              <li class="EnumeratorValue">Fußgängerweg</li>
+                              <li class="EnumeratorValue">Pedestrian</li>
                               		</ul>
                         </td>
                      </tr>
@@ -134,7 +134,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Fahrbahntyp</div>
+                  <div class="physical">Carriage Type</div>
                </td>
                				
                <td class="technical">carriage_type</td>
@@ -151,7 +151,7 @@
                				
                				
                				
-               <td>The values of Fahrbahntyp are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('carriage_type');" title="Click to Show/Hide details">carriage_type</a></span><table id="carriage_type" class="InlineBox" style="display:none;">
+               <td>The values of Carriage Type are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('carriage_type');" title="Click to Show/Hide details">carriage_type</a></span><table id="carriage_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">carriage_type</th>
                      </tr>
@@ -165,17 +165,17 @@
                         <td colspan="3">
                            <ul class="EnumeratorValues">
                               			
-                              <li class="EnumeratorValue">Autobahn</li>
+                              <li class="EnumeratorValue">Motorway</li>
                               			
-                              <li class="EnumeratorValue">Autobahnzubringer</li>
+                              <li class="EnumeratorValue">Slip Road</li>
                               			
-                              <li class="EnumeratorValue">zweispurig</li>
+                              <li class="EnumeratorValue">Dual Carriage</li>
                               			
-                              <li class="EnumeratorValue">einspurig</li>
+                              <li class="EnumeratorValue">Single Carriage</li>
                               			
-                              <li class="EnumeratorValue">eingleisig</li>
+                              <li class="EnumeratorValue">Single Track</li>
                               			
-                              <li class="EnumeratorValue">Unbekannt</li>
+                              <li class="EnumeratorValue">Unknown</li>
                               		</ul>
                         </td>
                      </tr>
@@ -186,7 +186,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Kostenfaktor</div>
+                  <div class="physical">Cost Factor</div>
                </td>
                				
                <td class="technical">cost_factor</td>
@@ -203,7 +203,7 @@
                				
                				
                				
-               <td>Kostenfaktor ist ein Feld der Klasse float, z. B. 0.000 </td>
+               <td>Cost Factor is a field of class float, such as 0.000 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -226,8 +226,8 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -252,8 +252,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                  </td>
+               <td>int!info_flags is a join field returning a set of records from 'swif!info_flag' </td>
                			</tr>
             		</table>
       </div>
@@ -261,7 +260,7 @@
          <ul>
             <li>DD Version 412391</li>
             <li>DMDW © Realworld Software Products 2021</li>
-            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
          </ul>
       </footer>
    </body>

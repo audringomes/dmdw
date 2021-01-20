@@ -29,8 +29,11 @@
   <xsl:variable name="filename0" select="concat($dsname,$ddversion,'.html')"/>
   <xsl:variable name="master" select="concat('../',$filename0)"/>
   
-  <xsl:variable name="pathtohelp" select="'../en_gb/help/index.html'"/>
-  <xsl:variable name="pathtohelpMaster" select="'en_gb/help/index.html'"/>
+  <!-- Path to help in seperate html files in subdir-->  
+  <xsl:variable name="pathtohelp" select="'../help/index.html'"/>
+
+  <!-- Path to help in master (TOC) html file -->  
+  <xsl:variable name="pathtohelpMaster" select="'help/index.html'"/>
 
   <xsl:variable name="path_prefix" select="concat($subdir,$dsname,$ddversion,'_')"/>
   
@@ -163,6 +166,7 @@
 
 	  <xsl:call-template name="footer">
 	    <xsl:with-param name="helppath" select="$pathtohelp"/>
+	    <xsl:with-param name="topic" select="'CollectionList'"/>
 	  </xsl:call-template>
 
 	</body>
@@ -191,7 +195,7 @@
 
 	  <xsl:call-template name="footer">
 	    <xsl:with-param name="helppath" select="$pathtohelp"/>
-	    <xsl:with-param name="topic" select="'Global-Properties'"/>
+	    <xsl:with-param name="topic" select="'Global-Properties-Page'"/>
 	  </xsl:call-template>
 
 	</body>
@@ -277,7 +281,7 @@
 	  
 	  <xsl:call-template name="footer">
 	    <xsl:with-param name="helppath" select="$pathtohelp"/>
-	    <xsl:with-param name="topic" select="'TopologyI'"/>
+	    <xsl:with-param name="topic" select="'Int_Topology_Page'"/>
 	  </xsl:call-template>
 
 	</body>
@@ -309,7 +313,7 @@
 	  
 	  <xsl:call-template name="footer">
 	    <xsl:with-param name="helppath" select="$pathtohelp"/>
-	    <xsl:with-param name="topic" select="'TopologyS'"/>
+	    <xsl:with-param name="topic" select="'Static_Topology_Page'"/>
 	  </xsl:call-template>
 
 	</body>
@@ -342,7 +346,7 @@
 	    
 	    <xsl:call-template name="footer">
 	      <xsl:with-param name="helppath" select="$pathtohelp"/>
-	      <xsl:with-param name="topic" select="'SoftJoins'"/>
+	      <xsl:with-param name="topic" select="'SoftJoins_Page'"/>
 	    </xsl:call-template>
 
 	  </body>
@@ -398,7 +402,7 @@
     <tr>
       <td><xsl:text>Datamodel Version: </xsl:text></td>
       <xsl:choose>
-	<xsl:when test=".='Undetermined'">
+	<xsl:when test=".='0'">
 	  <td><b><xsl:value-of select="."/></b></td>
 	</xsl:when>
 	<xsl:otherwise>
@@ -1101,7 +1105,6 @@
 	    <xsl:call-template name="footer">
 	      <xsl:with-param name="helppath" select="$pathtohelp"/>
 	      <xsl:with-param name="topic" select="'Collection_Page'"/>
-
 	    </xsl:call-template>
 	  </body>
 	</html>

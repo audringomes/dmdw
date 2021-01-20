@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Brauerei</title>
+      <title>Gis - Collection Brewery</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -27,13 +27,13 @@
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Brauerei</div>
+      <div class="PageTitle float">Brewery</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="brewery">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Brauerei</h3>
+                  <h3 class="InTable">Brewery</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -72,13 +72,13 @@
                				
                				
                				
-               <td>Name ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Name is a string field size 32 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Kostenlose Lieferung</div>
+                  <div class="physical">Free Delivery</div>
                </td>
                				
                <td class="technical">free_delivery</td>
@@ -95,7 +95,7 @@
                				
                				
                				
-               <td>Kostenlose Lieferung ist ein Feld der Klasse maybe, z. B. Maybe </td>
+               <td>Free Delivery is a field of class maybe, such as Maybe </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -118,8 +118,8 @@
                				
                				
                				
-               <td>text_id ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>text_id is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -142,8 +142,8 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td>rwo_id is a vector field with elements of class integer of size 3
+                  	default value: sw:simple_vector:[1-3] </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -166,14 +166,14 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Biere</div>
+                  <div class="join">Beers</div>
                </td>
                				
                <td class="technical">beers</td>
@@ -183,7 +183,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_beer.html">Bier</a></li>
+                     <li class="Join"><a href="gis412391_beer.html">Beer</a></li>
                   </ul>
                   				</td>
                				
@@ -192,7 +192,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Biere ist ein join Feld Satz von Datensätzen aus 'beer' wird ausgegeben </td>
+               <td>Beers is a join field returning a set of records from 'beer' </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -217,14 +217,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>dd!join408119 ist ein join Feld Objekttabelle mit Datensätzen aus 'int!brewery_beer'
-                  wird ausgegeben </td>
+               <td>dd!join408119 is a join field returning a collection of records from 'int!brewery_beer'
+                  </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Lieferhinweise</div>
+                  <div class="join">Delivery Comments</div>
                </td>
                				
                <td class="technical">delivery_comments</td>
@@ -238,13 +238,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Lieferhinweise ist ein join Feld Text wird ausgegeben </td>
+               <td>Delivery Comments is a join field returning text </td>
                			</tr>
             			
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="join">Gasthausbrauereien</div>
+                  <div class="join">Pub Brewerys</div>
                </td>
                				
                <td class="technical">pub_brewerys</td>
@@ -254,7 +254,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_brewery.html">Gasthausbrauerei</a></li>
+                     <li class="Join"><a href="gis412391_pub_brewery.html">Pub Brewery</a></li>
                   </ul>
                   				</td>
                				
@@ -263,14 +263,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>Gasthausbrauereien ist ein join Feld Objekttabelle mit Datensätzen aus 'pub_brewery'
-                  wird ausgegeben </td>
+               <td>Pub Brewerys is a join field returning a collection of records from 'pub_brewery'
+                  </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Fachhändler</div>
+                  <div class="join">Stockists</div>
                </td>
                				
                <td class="technical">pub_rests</td>
@@ -280,7 +280,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_rest.html">Gaststätte</a></li>
+                     <li class="Join"><a href="gis412391_pub_rest.html">Pub/Restaurant</a></li>
                   </ul>
                   				</td>
                				
@@ -289,14 +289,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Fachhändler ist ein join Feld Satz von Datensätzen aus 'pub_rest' wird ausgegeben
-                  </td>
+               <td>Stockists is a join field returning a set of records from 'pub_rest' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Deckung</div>
+                  <div class="geometry">Coverage</div>
                </td>
                				
                <td class="technical">coverage</td>
@@ -319,7 +318,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">Location</div>
                </td>
                				
                <td class="technical">location</td>
@@ -366,7 +365,7 @@
          <ul>
             <li>DD Version 412391</li>
             <li>DMDW © Realworld Software Products 2021</li>
-            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
          </ul>
       </footer>
    </body>

@@ -55,7 +55,7 @@
             <tr class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Park ID</div>
+                  <div class="physical">park_id</div>
                </td>
                				
                <td class="technical">park_id</td>
@@ -101,7 +101,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Klasse</div>
+                  <div class="physical">Class</div>
                </td>
                				
                <td class="technical">class</td>
@@ -118,7 +118,7 @@
                				
                				
                				
-               <td>The values of Klasse are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('park_class');" title="Click to Show/Hide details">park_class</a></span><table id="park_class" class="InlineBox" style="display:none;">
+               <td>The values of Class are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('park_class');" title="Click to Show/Hide details">park_class</a></span><table id="park_class" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">park_class</th>
                      </tr>
@@ -132,9 +132,9 @@
                         <td colspan="3">
                            <ul class="EnumeratorValues">
                               			
-                              <li class="EnumeratorValue">Öffentlich</li>
+                              <li class="EnumeratorValue">Public</li>
                               			
-                              <li class="EnumeratorValue">Privat</li>
+                              <li class="EnumeratorValue">Private</li>
                               		</ul>
                         </td>
                      </tr>
@@ -162,7 +162,7 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               <td>rwo_id is a vector field with elements of class integer of size 3 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -185,8 +185,8 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>ds!version is a field of class integer, such as 0
+                  	default value: 0 </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -211,14 +211,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                  </td>
+               <td>int!info_flags is a join field returning a set of records from 'swif!info_flag' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Parkplatz</div>
+                  <div class="join">Parking</div>
                </td>
                				
                <td class="technical">parking</td>
@@ -228,8 +227,8 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_rest.html">Gaststätte</a></li>
-                     <li class="Join"><a href="gis412391_shop.html">Geschäft</a></li>
+                     <li class="Join"><a href="gis412391_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis412391_shop.html">Shop</a></li>
                   </ul>
                   				</td>
                				
@@ -238,7 +237,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Parkplatz ist ein join Feld Datensatz aus 'pub_rest,shop' wird ausgegeben </td>
+               <td>Parking is a join field returning a record from 'pub_rest,shop' </td>
                			</tr>
             			
             <tr class="Field VisFalse">
@@ -263,14 +262,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>parking!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244956'
-                  wird ausgegeben </td>
+               <td>parking!int is a join field returning a collection of records from 'int!hetero244956'
+                  </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Sitzgelegenheiten</div>
+                  <div class="join">Seats</div>
                </td>
                				
                <td class="technical">seats</td>
@@ -280,7 +279,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_seat.html">Sitzgelegenheit</a></li>
+                     <li class="Join"><a href="gis412391_seat.html">Seat</a></li>
                   </ul>
                   				</td>
                				
@@ -289,14 +288,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Sitzgelegenheiten ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird
-                  ausgegeben </td>
+               <td>Seats is a join field returning a collection of records from 'seat' </td>
                			</tr>
             			
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">Annotation</div>
                </td>
                				
                <td class="technical">annotation</td>
@@ -318,7 +316,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Deckung</div>
+                  <div class="geometry">Coverage</div>
                </td>
                				
                <td class="technical">coverage</td>
@@ -363,7 +361,7 @@
             <tr class="Field VisTrue">
                				
                <td class="name">
-                  <div class="logical">Fläche</div>
+                  <div class="logical">Area</div>
                </td>
                				
                <td class="technical">area</td>
@@ -380,7 +378,7 @@
                				
                				
                				
-               <td>Help text here ...., stored in Quadratmeter</td>
+               <td>Help text here ...., stored in Square Metres</td>
                			</tr>
             		</table>
       </div>
@@ -388,7 +386,7 @@
          <ul>
             <li>DD Version 412391</li>
             <li>DMDW © Realworld Software Products 2021</li>
-            <li><a href="../en_gb/help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
          </ul>
       </footer>
    </body>
