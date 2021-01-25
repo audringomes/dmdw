@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Brewery</title>
+      <title>Gis - Collection Brauerei</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Brewery</div>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Brauerei</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="brewery">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Brewery</h3>
+                  <h3 class="InTable">Brauerei</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,7 +52,7 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="name" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Name</div>
@@ -72,13 +72,13 @@
                				
                				
                				
-               <td>Name ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="free_delivery" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Free Delivery</div>
+                  <div class="physical">Kostenlose Lieferung</div>
                </td>
                				
                <td class="technical">free_delivery</td>
@@ -95,10 +95,11 @@
                				
                				
                				
-               <td>Free Delivery ist ein Feld der Klasse maybe, z. B. Maybe </td>
+               <td>Kostenlose Lieferung ist ein dd description!basic_fieldFeld der Klasse maybe, z. B.
+                  Maybe </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="text_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">text_id</div>
@@ -118,11 +119,11 @@
                				
                				
                				
-               <td>text_id ist ein Feld der Klasse integer, z. B. 0
+               <td>text_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
                   	Standardwert: 0 </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -142,11 +143,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -166,14 +166,13 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="beers" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Beers</div>
+                  <div class="join">Biere</div>
                </td>
                				
                <td class="technical">beers</td>
@@ -183,7 +182,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_beer.html">Beer</a></li>
+                     <li class="Join"><a href="gis412391_beer.html">Bier</a></li>
                   </ul>
                   				</td>
                				
@@ -192,10 +191,10 @@
                <td class="technical">False</td>
                				
                				
-               <td>Beers ist ein join Feld Satz von Datensätzen aus 'beer' wird ausgegeben </td>
+               <td>Biere ist ein join Feld Satz von Datensätzen aus 'beer' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join408119" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join408119</div>
@@ -221,10 +220,10 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="delivery_comments" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Delivery Comments</div>
+                  <div class="join">Lieferhinweise</div>
                </td>
                				
                <td class="technical">delivery_comments</td>
@@ -238,13 +237,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Delivery Comments ist ein join Feld Text wird ausgegeben </td>
+               <td>Lieferhinweise ist ein join Feld Text wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="pub_brewerys" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="join">Pub Brewerys</div>
+                  <div class="join">Gasthausbrauereien</div>
                </td>
                				
                <td class="technical">pub_brewerys</td>
@@ -254,7 +253,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_brewery.html">Pub Brewery</a></li>
+                     <li class="Join"><a href="gis412391_pub_brewery.html">Gasthausbrauerei</a></li>
                   </ul>
                   				</td>
                				
@@ -263,14 +262,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>Pub Brewerys ist ein join Feld Objekttabelle mit Datensätzen aus 'pub_brewery' wird
-                  ausgegeben </td>
+               <td>Gasthausbrauereien ist ein join Feld Objekttabelle mit Datensätzen aus 'pub_brewery'
+                  wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="pub_rests" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Stockists</div>
+                  <div class="join">Fachhändler</div>
                </td>
                				
                <td class="technical">pub_rests</td>
@@ -280,7 +279,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis412391_pub_rest.html">Gaststätte</a></li>
                   </ul>
                   				</td>
                				
@@ -289,13 +288,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>Stockists ist ein join Feld Satz von Datensätzen aus 'pub_rest' wird ausgegeben </td>
+               <td>Fachhändler ist ein join Feld Satz von Datensätzen aus 'pub_rest' wird ausgegeben
+                  </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="coverage" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Coverage</div>
+                  <div class="geometry">Deckung</div>
                </td>
                				
                <td class="technical">coverage</td>
@@ -315,10 +315,10 @@
                <td>Manifold: <span class="name">cadastral</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#brewery.coverage">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="location" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Location</div>
+                  <div class="geometry">Standort</div>
                </td>
                				
                <td class="technical">location</td>
@@ -338,7 +338,7 @@
                <td>Manifold: <span class="name">cadastral</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#brewery.location">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>

@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Interactive Topology Page",
 hmDescription:"Enter topic text here.",
-hmPrevLink:"dmdw_enumerator_page.html",
+hmPrevLink:"dmdw_interactive-enumerators-page.html",
 hmNextLink:"dmdw_static_topology_page.html",
 hmParentLink:"dmdw_your-pages.html",
 hmBreadCrumbs:"<a href=\"dmdw_your-pages.html\">Your pages<\/a>",

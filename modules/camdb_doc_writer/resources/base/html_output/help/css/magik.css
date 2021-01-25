@@ -3,8 +3,8 @@
 div.magik {
     padding: 14px;
     font-size: 0.82rem;
-    line-height: 60%;
     font-weight: bold;
+    line-height: 0.6rem;
     background-color: #f4f5f8;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -21,7 +21,6 @@ div.magik {
     page-break-inside: avoid;
 }
 pre {
-    font-size: 0.82rem;
     font-family: consolas;
 }
 .comment {

@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Office</title>
+      <title>Gis - Collection Büro</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Office</div>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Büro</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="office">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Office</h3>
+                  <h3 class="InTable">Büro</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,10 +52,10 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="office_id" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">office_id</div>
+                  <div class="physical">Büro ID</div>
                </td>
                				
                <td class="technical">office_id</td>
@@ -75,7 +75,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="name" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Name</div>
@@ -98,10 +98,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="address1" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Address 1</div>
+                  <div class="physical">Adresse 1</div>
                </td>
                				
                <td class="technical">address1</td>
@@ -121,10 +121,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="address2" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Address 2</div>
+                  <div class="physical">Adresse 2</div>
                </td>
                				
                <td class="technical">address2</td>
@@ -144,10 +144,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="company_id" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">company_id</div>
+                  <div class="physical">Firma ID</div>
                </td>
                				
                <td class="technical">company_id</td>
@@ -167,7 +167,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="status" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Status</div>
@@ -213,7 +213,7 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -233,10 +233,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -256,14 +256,13 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="company" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Parent Company</div>
+                  <div class="join">Mutterkonzern</div>
                </td>
                				
                <td class="technical">company</td>
@@ -273,7 +272,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_company.html">Company</a></li>
+                     <li class="Join"><a href="gis412391_company.html">Firma</a></li>
                   </ul>
                   				</td>
                				
@@ -285,7 +284,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join356709" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join356709</div>
@@ -311,10 +310,10 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="drawings" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Drawings</div>
+                  <div class="join">Zeichnungen</div>
                </td>
                				
                <td class="technical">drawings</td>
@@ -324,7 +323,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_drawing.html">Drawing</a></li>
+                     <li class="Join"><a href="gis412391_drawing.html">Zeichnung</a></li>
                   </ul>
                   				</td>
                				
@@ -333,10 +332,10 @@
                <td class="technical">False</td>
                				
                				
-               <td>Drawings ist ein join Feld Satz von Datensätzen aus 'drawing' wird ausgegeben </td>
+               <td>Zeichnungen ist ein join Feld Satz von Datensätzen aus 'drawing' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -362,10 +361,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="seats" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Seats</div>
+                  <div class="join">Sitzgelegenheiten</div>
                </td>
                				
                <td class="technical">seats</td>
@@ -375,7 +374,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_seat.html">Seat</a></li>
+                     <li class="Join"><a href="gis412391_seat.html">Sitzgelegenheit</a></li>
                   </ul>
                   				</td>
                				
@@ -384,13 +383,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>Seats ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird ausgegeben </td>
+               <td>Sitzgelegenheiten ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird
+                  ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="annotation" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Annotation</div>
+                  <div class="geometry">Beschriftung</div>
                </td>
                				
                <td class="technical">annotation</td>
@@ -409,10 +409,10 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="location" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Location</div>
+                  <div class="geometry">Standort</div>
                </td>
                				
                <td class="technical">location</td>
@@ -432,7 +432,7 @@
                <td>Manifold: <span class="name">road</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#office.location">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>
@@ -454,7 +454,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="logo" class="Field VisFalse">
                				
                <td class="name">
                   <div class="logical">Logo</div>

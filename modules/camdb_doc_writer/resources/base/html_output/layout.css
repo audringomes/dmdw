@@ -42,18 +42,18 @@ div.container {
 	overflow-y: auto;
 }
 div.navbox {
-	width: 30%;
-	float: left;
-	background-color: #d5d5d5;
-	margin: 5px;
-	padding: 5px;
+    overflow: auto;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    min-width: 250px;
+    width: 30%;
 }
 div.elementbox {
-	width: 65%;
-	float: right;
-	background-color: #d5d5d5;
-	padding: 5px;
-	margin: 5px;
+    overflow: auto;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
 }
 div.navlink {
    cursor: default;

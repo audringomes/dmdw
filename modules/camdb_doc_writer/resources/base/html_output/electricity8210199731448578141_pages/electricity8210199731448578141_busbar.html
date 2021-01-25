@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Electricity - Collection Busbar</title>
@@ -26,7 +26,7 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Electricity</a></header>
+      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
       <div class="PageTitle float">Busbar</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
@@ -52,7 +52,7 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">Id</div>
@@ -75,7 +75,7 @@
                <td>This is an unique system generated identified for the busbar</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="known_as" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Known As</div>
@@ -95,10 +95,10 @@
                				
                				
                				
-               <td>Known As ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Known As ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="voltage" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Voltage</div>
@@ -144,7 +144,7 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="substation_internals_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">Substation Internals Id</div>
@@ -164,10 +164,11 @@
                				
                				
                				
-               <td>Substation Internals Id ist ein Feld der Klasse integer, z. B. 0 </td>
+               <td>Substation Internals Id ist ein dd description!basic_fieldFeld der Klasse integer,
+                  z. B. 0 </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -187,11 +188,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -211,11 +211,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -241,7 +240,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="substation_internals" class="Field VisTrue">
                				
                <td class="name">
                   <div class="join">Substation Internals</div>
@@ -267,7 +266,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="annotation" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">Annotation</div>
@@ -289,7 +288,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue Mapped">
+            <tr id="location" class="Field VisTrue Mapped">
                				
                <td class="name">
                   <div class="geometry">Location</div>
@@ -312,7 +311,7 @@
                <td>Mapping method: voltage [missing description]</td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="location_dv" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">Location Dv</div>
@@ -336,7 +335,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#busbar.location_dv">(Topology)</a></span> Mapped from: <span class="geometry">Location</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="location_hv" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">Location Hv</div>
@@ -360,7 +359,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#busbar.location_hv">(Topology)</a></span> Mapped from: <span class="geometry">Location</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="location_lv" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">Location Lv</div>
@@ -384,7 +383,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#busbar.location_lv">(Topology)</a></span> Mapped from: <span class="geometry">Location</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>

@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Place of Interest</title>
+      <title>Gis - Collection Sehenswürdigkeit</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Place of Interest</div>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Sehenswürdigkeit</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="pl_of_interest">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Place of Interest</h3>
+                  <h3 class="InTable">Sehenswürdigkeit</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,10 +52,10 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="pl_of_interest_id" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">pl_of_interest_id</div>
+                  <div class="physical">Sehenswürdigkeit ID</div>
                </td>
                				
                <td class="technical">pl_of_interest_id</td>
@@ -75,7 +75,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="name" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Name</div>
@@ -98,10 +98,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="address1" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Address 1</div>
+                  <div class="physical">Adresse 1</div>
                </td>
                				
                <td class="technical">address1</td>
@@ -121,10 +121,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="address2" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Address 2</div>
+                  <div class="physical">Adresse 2</div>
                </td>
                				
                <td class="technical">address2</td>
@@ -144,10 +144,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="type_of_place" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Type of Place</div>
+                  <div class="physical">Ortstyp</div>
                </td>
                				
                <td class="technical">type_of_place</td>
@@ -167,10 +167,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="nearest_town" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Nearest Town</div>
+                  <div class="physical">Nächste Stadt</div>
                </td>
                				
                <td class="technical">nearest_town</td>
@@ -190,7 +190,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -210,10 +210,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -233,11 +233,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join326453" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join326453</div>
@@ -263,10 +262,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="drawing" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Drawing</div>
+                  <div class="join">Zeichnung</div>
                </td>
                				
                <td class="technical">drawing</td>
@@ -276,7 +275,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_drawing.html">Drawing</a></li>
+                     <li class="Join"><a href="gis412391_drawing.html">Zeichnung</a></li>
                   </ul>
                   				</td>
                				
@@ -285,10 +284,10 @@
                <td class="technical">False</td>
                				
                				
-               <td>Drawing ist ein join Feld Datensatz aus 'drawing' wird ausgegeben </td>
+               <td>Zeichnung ist ein join Feld Datensatz aus 'drawing' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -314,10 +313,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="annotation" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Annotation</div>
+                  <div class="geometry">Beschriftung</div>
                </td>
                				
                <td class="technical">annotation</td>
@@ -336,10 +335,10 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="coverage" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Coverage</div>
+                  <div class="geometry">Deckung</div>
                </td>
                				
                <td class="technical">coverage</td>
@@ -359,10 +358,10 @@
                <td>Manifold: <span class="name">cadastral</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#pl_of_interest.coverage">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="location" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Location</div>
+                  <div class="geometry">Standort</div>
                </td>
                				
                <td class="technical">location</td>
@@ -382,7 +381,7 @@
                <td>Manifold: <span class="name">road</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#pl_of_interest.location">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>

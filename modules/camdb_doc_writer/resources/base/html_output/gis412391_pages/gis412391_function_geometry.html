@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Gis - Collection Function Geometry</title>
@@ -26,7 +26,7 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
       <div class="PageTitle float">Function Geometry</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
@@ -52,7 +52,7 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="id" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">id</div>
@@ -77,7 +77,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="func_id" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">func_id</div>
@@ -102,7 +102,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="param_name" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">param_name</div>
@@ -127,7 +127,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="rwo_style_code" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">rwo_style_code</div>
@@ -152,7 +152,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="app_style_code" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">app_style_code</div>
@@ -177,7 +177,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="geom_code" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">geom_code</div>
@@ -202,7 +202,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -222,11 +222,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -246,11 +245,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="function" class="Field VisTrue">
                				
                <td class="name">
                   <div class="join">function</div>
@@ -275,7 +273,7 @@
                <td>function ist ein join Feld Datensatz aus 'drawing_function' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -301,7 +299,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="area" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">area</div>
@@ -323,7 +321,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="dimension" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">dimension</div>
@@ -345,7 +343,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="linear" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">linear</div>
@@ -367,7 +365,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>
@@ -389,7 +387,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="point" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">point</div>
@@ -411,7 +409,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="raster_24bit" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">raster_24bit</div>
@@ -433,7 +431,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="raster_8bit" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">raster_8bit</div>
@@ -455,7 +453,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="text" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">text</div>

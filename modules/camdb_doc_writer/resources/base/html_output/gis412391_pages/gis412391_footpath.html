@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Footpath</title>
+      <title>Gis - Collection Fußweg</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Footpath</div>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Fußweg</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="footpath">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Footpath</h3>
+                  <h3 class="InTable">Fußweg</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,10 +52,10 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="id" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">id</div>
+                  <div class="physical">ID</div>
                </td>
                				
                <td class="technical">id</td>
@@ -75,7 +75,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="name" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Name</div>
@@ -98,10 +98,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="class" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Class</div>
+                  <div class="physical">Klasse</div>
                </td>
                				
                <td class="technical">class</td>
@@ -118,7 +118,7 @@
                				
                				
                				
-               <td>The values of Class are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('footpath_class');" title="Click to Show/Hide details">footpath_class</a></span><table id="footpath_class" class="InlineBox" style="display:none;">
+               <td>The values of Klasse are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('footpath_class');" title="Click to Show/Hide details">footpath_class</a></span><table id="footpath_class" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">footpath_class</th>
                      </tr>
@@ -148,7 +148,7 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -168,11 +168,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -192,11 +191,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -222,10 +220,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="seats" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Seats</div>
+                  <div class="join">Sitzgelegenheiten</div>
                </td>
                				
                <td class="technical">seats</td>
@@ -235,7 +233,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_seat.html">Seat</a></li>
+                     <li class="Join"><a href="gis412391_seat.html">Sitzgelegenheit</a></li>
                   </ul>
                   				</td>
                				
@@ -244,13 +242,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>Seats ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird ausgegeben </td>
+               <td>Sitzgelegenheiten ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird
+                  ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="walks" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Walks</div>
+                  <div class="join">Rundgänge</div>
                </td>
                				
                <td class="technical">walks</td>
@@ -260,7 +259,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_walk.html">Walk</a></li>
+                     <li class="Join"><a href="gis412391_walk.html">Rundgang</a></li>
                   </ul>
                   				</td>
                				
@@ -269,10 +268,10 @@
                <td class="technical">False</td>
                				
                				
-               <td>Walks ist ein join Feld Satz von Datensätzen aus 'walk' wird ausgegeben </td>
+               <td>Rundgänge ist ein join Feld Satz von Datensätzen aus 'walk' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="walks!int" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">walks!int</div>
@@ -298,10 +297,10 @@
                   ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="annotation" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Annotation</div>
+                  <div class="geometry">Beschriftung</div>
                </td>
                				
                <td class="technical">annotation</td>
@@ -320,10 +319,10 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="centre_line" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Centreline</div>
+                  <div class="geometry">Mittelachse</div>
                </td>
                				
                <td class="technical">centre_line</td>
@@ -343,7 +342,7 @@
                <td>Manifold: <span class="name">road</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#footpath.centre_line">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>
@@ -365,10 +364,10 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="length" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="logical">Length</div>
+                  <div class="logical">Länge</div>
                </td>
                				
                <td class="technical">length</td>

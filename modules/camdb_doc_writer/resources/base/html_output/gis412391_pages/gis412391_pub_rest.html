@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Pub/Restaurant</title>
+      <title>Gis - Collection Gaststätte</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Pub/Restaurant</div>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Gaststätte</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="pub_rest">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Pub/Restaurant</h3>
+                  <h3 class="InTable">Gaststätte</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,7 +52,7 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="name" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Name</div>
@@ -75,10 +75,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="street" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Street</div>
+                  <div class="physical">Straße</div>
                </td>
                				
                <td class="technical">street</td>
@@ -98,10 +98,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="type" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Type</div>
+                  <div class="physical">Typ</div>
                </td>
                				
                <td class="technical">type</td>
@@ -118,7 +118,7 @@
                				
                				
                				
-               <td>The values of Type are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('pub_rest_type');" title="Click to Show/Hide details">pub_rest_type</a></span><table id="pub_rest_type" class="InlineBox" style="display:none;">
+               <td>The values of Typ are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('pub_rest_type');" title="Click to Show/Hide details">pub_rest_type</a></span><table id="pub_rest_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">pub_rest_type</th>
                      </tr>
@@ -142,10 +142,10 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="cuisine" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Cuisine</div>
+                  <div class="physical">Küche</div>
                </td>
                				
                <td class="technical">cuisine</td>
@@ -162,7 +162,7 @@
                				
                				
                				
-               <td>The values of Cuisine are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('cuisine');" title="Click to Show/Hide details">cuisine</a></span><table id="cuisine" class="InlineBox" style="display:none;">
+               <td>The values of Küche are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('cuisine');" title="Click to Show/Hide details">cuisine</a></span><table id="cuisine" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">cuisine</th>
                      </tr>
@@ -202,10 +202,10 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="parking" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Parking</div>
+                  <div class="physical">Parkplatz</div>
                </td>
                				
                <td class="technical">parking</td>
@@ -222,7 +222,7 @@
                				
                				
                				
-               <td>The values of Parking are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('pub_rest_parking');" title="Click to Show/Hide details">pub_rest_parking</a></span><table id="pub_rest_parking" class="InlineBox" style="display:none;">
+               <td>The values of Parkplatz are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('pub_rest_parking');" title="Click to Show/Hide details">pub_rest_parking</a></span><table id="pub_rest_parking" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">pub_rest_parking</th>
                      </tr>
@@ -250,7 +250,7 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="text_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">text_id</div>
@@ -273,7 +273,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -293,10 +293,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -316,14 +316,13 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="amenities" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Amenities</div>
+                  <div class="join">Ausstattung</div>
                </td>
                				
                <td class="technical">amenities</td>
@@ -334,7 +333,7 @@
                   					
                   <ul>
                      <li class="Join"><a href="gis412391_park.html">Park</a></li>
-                     <li class="Join"><a href="gis412391_play_area.html">Play Area</a></li>
+                     <li class="Join"><a href="gis412391_play_area.html">Freizeitbereich</a></li>
                   </ul>
                   				</td>
                				
@@ -343,10 +342,10 @@
                <td class="technical">False</td>
                				
                				
-               <td>Amenities ist ein join Feld Datensatz aus 'park,play_area' wird ausgegeben </td>
+               <td>Ausstattung ist ein join Feld Datensatz aus 'park,play_area' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="amenities!int" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">amenities!int</div>
@@ -371,10 +370,10 @@
                <td>amenities!int ist ein join Feld Datensatz aus 'int!hetero244956' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="beers" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Beers Served</div>
+                  <div class="join">Biersorten</div>
                </td>
                				
                <td class="technical">beers</td>
@@ -384,7 +383,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_beer.html">Beer</a></li>
+                     <li class="Join"><a href="gis412391_beer.html">Bier</a></li>
                   </ul>
                   				</td>
                				
@@ -393,13 +392,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Beers Served ist ein join Feld Liste mit Datensätzen aus 'beer' wird ausgegeben </td>
+               <td>Biersorten ist ein join Feld Liste mit Datensätzen aus 'beer' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="brewerys" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Brewers</div>
+                  <div class="join">Brauereien</div>
                </td>
                				
                <td class="technical">brewerys</td>
@@ -409,7 +408,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_brewery.html">Brewery</a></li>
+                     <li class="Join"><a href="gis412391_brewery.html">Brauerei</a></li>
                   </ul>
                   				</td>
                				
@@ -418,13 +417,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Brewers ist ein join Feld Satz von Datensätzen aus 'brewery' wird ausgegeben </td>
+               <td>Brauereien ist ein join Feld Satz von Datensätzen aus 'brewery' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="car_parks" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Car Parks</div>
+                  <div class="join">Parkplätze</div>
                </td>
                				
                <td class="technical">car_parks</td>
@@ -434,7 +433,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_car_park.html">Car Park</a></li>
+                     <li class="Join"><a href="gis412391_car_park.html">Parkplatz</a></li>
                   </ul>
                   				</td>
                				
@@ -443,13 +442,13 @@
                <td class="technical">False</td>
                				
                				
-               <td>Car Parks ist ein join Feld Satz von Datensätzen aus 'car_park' wird ausgegeben </td>
+               <td>Parkplätze ist ein join Feld Satz von Datensätzen aus 'car_park' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="comments" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Comments</div>
+                  <div class="join">Kommentar</div>
                </td>
                				
                <td class="technical">comments</td>
@@ -466,7 +465,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join407999" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join407999</div>
@@ -492,7 +491,7 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join408014" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join408014</div>
@@ -518,10 +517,10 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="min_roads" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Access Roads</div>
+                  <div class="join">Zugangsstraße</div>
                </td>
                				
                <td class="technical">min_roads</td>
@@ -531,7 +530,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_min_road.html">Road</a></li>
+                     <li class="Join"><a href="gis412391_min_road.html">Straße</a></li>
                   </ul>
                   				</td>
                				
@@ -543,10 +542,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="objects_sponsored" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Objects Sponsored</div>
+                  <div class="join">Gesponserte Objekte</div>
                </td>
                				
                <td class="technical">objects_sponsored</td>
@@ -556,8 +555,8 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_roundabout.html">Roundabout</a></li>
-                     <li class="Join"><a href="gis412391_play_area.html">Play Area</a></li>
+                     <li class="Join"><a href="gis412391_roundabout.html">Kreisverkehr</a></li>
+                     <li class="Join"><a href="gis412391_play_area.html">Freizeitbereich</a></li>
                   </ul>
                   				</td>
                				
@@ -566,11 +565,11 @@
                <td class="technical">False</td>
                				
                				
-               <td>Objects Sponsored ist ein join Feld Satz von Datensätzen aus 'roundabout,play_area'
+               <td>Gesponserte Objekte ist ein join Feld Satz von Datensätzen aus 'roundabout,play_area'
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="objects_sponsored!int" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">objects_sponsored!int</div>
@@ -596,10 +595,10 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="pub_brewerys" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="join">Pub Brewerys</div>
+                  <div class="join">Gasthausbrauereien</div>
                </td>
                				
                <td class="technical">pub_brewerys</td>
@@ -609,7 +608,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_brewery.html">Pub Brewery</a></li>
+                     <li class="Join"><a href="gis412391_pub_brewery.html">Gasthausbrauerei</a></li>
                   </ul>
                   				</td>
                				
@@ -618,14 +617,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>Pub Brewerys ist ein join Feld Objekttabelle mit Datensätzen aus 'pub_brewery' wird
-                  ausgegeben </td>
+               <td>Gasthausbrauereien ist ein join Feld Objekttabelle mit Datensätzen aus 'pub_brewery'
+                  wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="serviced_play_area" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Serviced Play Area</div>
+                  <div class="join">Freizeitbereich mit Dienstangeboten</div>
                </td>
                				
                <td class="technical">serviced_play_area</td>
@@ -635,7 +634,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_play_area.html">Play Area</a></li>
+                     <li class="Join"><a href="gis412391_play_area.html">Freizeitbereich</a></li>
                   </ul>
                   				</td>
                				
@@ -644,13 +643,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>Serviced Play Area ist ein join Feld Datensatz aus 'play_area' wird ausgegeben </td>
+               <td>Freizeitbereich mit Dienstangeboten ist ein join Feld Datensatz aus 'play_area' wird
+                  ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="travel_detailss" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Travel Details</div>
+                  <div class="join">Reiseinformationen</div>
                </td>
                				
                <td class="technical">travel_detailss</td>
@@ -660,7 +660,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_travel_details.html">Travel Details</a></li>
+                     <li class="Join"><a href="gis412391_travel_details.html">Reiseinformationen</a></li>
                   </ul>
                   				</td>
                				
@@ -669,14 +669,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>Travel Details ist ein join Feld Objekttabelle mit Datensätzen aus 'travel_details'
+               <td>Reiseinformationen ist ein join Feld Objekttabelle mit Datensätzen aus 'travel_details'
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="annotation" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Annotation</div>
+                  <div class="geometry">Beschriftung</div>
                </td>
                				
                <td class="technical">annotation</td>
@@ -695,10 +695,10 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="location" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Location</div>
+                  <div class="geometry">Standort</div>
                </td>
                				
                <td class="technical">location</td>
@@ -718,7 +718,7 @@
                <td>Manifold: <span class="name">cadastral</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#pub_rest.location">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>

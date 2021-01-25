@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Electricity - Global properties</title>
@@ -26,7 +26,7 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Electricity</a></header>
+      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
       <div class="PageTitle float">Global Properties</div>
       <div class="ChapterInfo float">
          <p>These properties are global to the datamodel. It includes the default topology interaction,
@@ -35,10 +35,11 @@
             seperately.</p>
       </div>
       		
+      		
       <h3 class="float">Default Topology Rules</h3>
       <table class="dmTable float DefaultTopRules">
          <tr>
-            <th colspan="4">Manifold: electricity</th>
+            <th colspan="4">Manifold: [Electricity] Elektrizitätsnetz<span class="technical InternalMfName"> (electricity)</span></th>
          </tr>
          <tr>
             <td>area</td>
@@ -97,8 +98,51 @@
       </table>
       		
       <h3 class="float">Commonly used fields</h3>
+      			
+      <table class="dmTable float">
+         <tr class="HeadStyle">
+            <th class="name" colspan="3">Internal fields</th>
+         </tr>
+         <tr class="HeadStyle">
+            <th>Property</th>
+            <th class="technical">Internal name</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+            <td class="name">RWO ID</td>
+            <td class="InternalName technical">rwo_id</td>
+            <td>A unique foreign key for joins to geometries</td>
+         </tr>
+         <tr>
+            <td class="name"></td>
+            <td class="InternalName technical">ds!version</td>
+            <td>ds!version is an internal value used in conflict resolution.</td>
+         </tr>
+      </table>
+      			
+      <table class="dmTable float">
+         <tr class="HeadStyle">
+            <th class="name" colspan="3">New Group</th>
+         </tr>
+         <tr class="HeadStyle">
+            <th>Property</th>
+            <th class="technical">Internal name</th>
+            <th>Description</th>
+         </tr>
+      </table>
+      		
       		
       <h3 class="float">Commonly used Geometry Mappings</h3>
+      <table class="dmTable float">
+         <tr class="HeadStyle">
+            <th>Name</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+            <td>image_type</td>
+            <td>Geometry mapped by Image Type</td>
+         </tr>
+      </table>
       	
       <footer class="float">
          <ul>

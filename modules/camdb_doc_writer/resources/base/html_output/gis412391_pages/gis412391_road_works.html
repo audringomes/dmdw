@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Gis - Collection Road Works</title>
@@ -26,7 +26,7 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
       <div class="PageTitle float">Road Works</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
@@ -52,7 +52,7 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="road_works_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">road_works_id</div>
@@ -75,7 +75,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="code_name" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Code Name</div>
@@ -98,7 +98,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="date_begun" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Date Begun</div>
@@ -121,7 +121,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="duration" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Duration</div>
@@ -141,11 +141,11 @@
                				
                				
                				
-               <td>Duration ist ein Feld der Klasse integer, z. B. 0
+               <td>Duration ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
                   	Standardwert: 30 d , stored in Day</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="delay" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Delay</div>
@@ -168,7 +168,7 @@
                <td>Help text here ...., stored in Second</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="status" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Status</div>
@@ -214,7 +214,7 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="cost_func" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Cost Function</div>
@@ -237,7 +237,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="description" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Description</div>
@@ -257,10 +257,10 @@
                				
                				
                				
-               <td>Description ist eine Zeichenfolge-Feldgröße 255 </td>
+               <td>Description ist eine dd description!basic_fieldZeichenfolge-Feldgröße 255 </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -280,10 +280,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -303,11 +303,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join352166" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join352166</div>
@@ -333,7 +332,7 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join352169" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join352169</div>
@@ -359,7 +358,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -385,7 +384,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="road_works" class="Field VisTrue">
                				
                <td class="name">
                   <div class="join">Parent Road Works</div>
@@ -410,7 +409,7 @@
                <td>Parent Road Works ist ein join Feld Datensatz aus 'road_works' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="road_workss" class="Field VisTrue">
                				
                <td class="name">
                   <div class="join">Subsidiary Road Works</div>
@@ -436,7 +435,7 @@
                   ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="annotation" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">Annotation</div>
@@ -458,7 +457,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="location" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">Location</div>
@@ -481,7 +480,7 @@
                <td>Manifold: <span class="name">road</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#road_works.location">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>
@@ -503,7 +502,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="date_finished" class="Field VisTrue">
                				
                <td class="name">
                   <div class="logical">Date Finished</div>

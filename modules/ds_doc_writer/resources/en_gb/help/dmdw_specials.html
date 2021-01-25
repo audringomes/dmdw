@@ -15,10 +15,10 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta name="generator" content="Help &amp; Manual" />
 	<meta name="keywords" content="" />
-	<meta name="description" content="There are some special sections that can be added to the XML file that is created by DMDW." />
+	<meta name="description" content="A specialised (sub)class (of) dm_dataset_specials can be used to add descriptions and other information to the XML." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="10/01/2021" />
+        <meta name="revised" content="18/01/2021" />
         <meta name="id" content="dmdw_Specials" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -261,17 +261,44 @@ function GetSearchPage() {
 	<div id="unclicker"></div>
 	<div id="hmpagebody_scroller">
 <!--ZOOMRESTART-->
-	<p class="p_Normal">There are some special sections that can be added to the XML file that is created by DMDW.</p>
-<p class="p_Heading2"><span class="f_Heading2">Descriptions&nbsp;for&nbsp;collections&nbsp;and&nbsp;fields&nbsp;(updates)</span></p>
-<p class="p_Normal">Descriptions for collections and fields van be supplied to the dm_xml_writer in an xml file. See <a href="dmdw_help_text.html" class="topiclink">Adding Descriptions</a> .</p>
-<p class="p_Heading2"><span class="f_Heading2">Common&nbsp;Field&nbsp;descriptions</span></p>
-<p class="p_Normal">Descriptions of commonly used fields can be provided into the XML. See <a href="dmdw_common_fields.html" class="topiclink">Common Fields</a>. </p>
-<p class="p_Heading2"><span class="f_Heading2">Descriptions&nbsp;for&nbsp;Geometry&nbsp;Mappings</span></p>
-<p class="p_Normal">The name of the <span style="font-weight: bold;">map_discriminator_method</span> of a mapped geometry field is exported. If a description of this method is provided in the xml, this will be shown.</p>
-<p class="p_Normal">See <a href="dmdw_geometry_mappings.html" class="topiclink">geometry_mappings</a>.</p>
+	<p class="p_Normal">A specialised (sub)class (of) <span style="font-weight: bold;">dm_dataset_specials</span> can be used to add descriptions and other information to the XML.</p>
+<p class="p_Normal">The class is specified as <span style="font-weight: bold;">properties[:dataset_specials]</span> in the <span style="font-weight: bold;">dm_xml_writer.new(ds, properties)</span> method.</p>
 <p class="p_Normal">&nbsp;</p>
-<p class="p_Normal">A specialised class <span style="font-weight: bold;">dataset_specials</span> can be used to add those descriptions. See the Class Browser on the object <span style="font-weight: bold;">dataset_specials</span> for more details.</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## </p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## If &lt;value&gt; is _unset : dm_dataset_specials.new()</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## If &lt;value&gt; is a symbol: !current_package![&lt;value&gt;].new()</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## If &lt;value&gt; is_kind_of?(dm_dataset_specials) use it</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>##</p>
 <p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The class handles the following descriptions:</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>##</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## :get_geometry_mappings() should return a property_list keyed on</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## map_discriminator names with a description</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>##</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## :get_global_field_descriptions() should return a property_list keyed on</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## internal field names with a description</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>##</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## :get_soft_joins() should return a property_list keyed on</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>## collection_name</p>
+<p class="p_Normal"><span style="width:3.0000rem;display:inline-block">&nbsp;</span>##</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">To add a whole new section to the xml, the method <span style="font-weight: bold;">dm_dataset_specials.includes</span> is provided. </p>
+<p class="p_Normal">This should return a collection with objects of class <span style="font-weight: bold;">sw:simple_xml_thing</span>.</p>
+<div class="magik">
+<pre>
+<span class="region">
+</span><span class="magik-font-lock-keyword-statements"><span class="region">_pragma</span></span><span class="magik-font-lock-pragma"><span class="region">(classify_level=advanced, topic={datamodel,dm_doc_writer}, usage={redefinable, subclassable})</span></span><span class="region">
+</span><span class="function-name"><span class="region">_method</span></span><span class="region"> </span><span class="type"><span class="region">dm_dataset_specials</span></span><span class="region">.</span><span class="function-name"><span class="region">includes</span></span><span class="region">
+</span><span class="doc"><span class="region">        ## </span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">        ## This method should return one or more top xml collections to be</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">        ## included in the XML output. This method returns an empty collection.</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">        ##</span></span><span class="comment"><span class="region">
+</span></span><span class="region">        &gt;&gt; {}
+</span><span class="function-name"><span class="region">_endmethod</span></span><span class="region">
+$
+</span></pre>
+</div><p class="p_Normal">&nbsp;</p>
 
         <div class="topicfooter">
   <table style="width: 100%;margin-left: 0;margin-right: auto;">

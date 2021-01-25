@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Road</title>
+      <title>Gis - Collection Straße</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Road</div>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Straße</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="min_road">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Road</h3>
+                  <h3 class="InTable">Straße</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,10 +52,10 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="min_road_id" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">min_road_id</div>
+                  <div class="physical">Nebenstraße ID</div>
                </td>
                				
                <td class="technical">min_road_id</td>
@@ -75,7 +75,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="name" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Name</div>
@@ -98,10 +98,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="carriage_type" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Carriage Type</div>
+                  <div class="physical">Fahrbahntyp</div>
                </td>
                				
                <td class="technical">carriage_type</td>
@@ -118,7 +118,7 @@
                				
                				
                				
-               <td>The values of Carriage Type are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('carriage_type');" title="Click to Show/Hide details">carriage_type</a></span><table id="carriage_type" class="InlineBox" style="display:none;">
+               <td>The values of Fahrbahntyp are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('carriage_type');" title="Click to Show/Hide details">carriage_type</a></span><table id="carriage_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">carriage_type</th>
                      </tr>
@@ -150,10 +150,10 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="road_type" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Road Type</div>
+                  <div class="physical">Straßentyp</div>
                </td>
                				
                <td class="technical">road_type</td>
@@ -170,7 +170,7 @@
                				
                				
                				
-               <td>The values of Road Type are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('road_type');" title="Click to Show/Hide details">road_type</a></span><table id="road_type" class="InlineBox" style="display:none;">
+               <td>The values of Straßentyp are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('road_type');" title="Click to Show/Hide details">road_type</a></span><table id="road_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">road_type</th>
                      </tr>
@@ -206,7 +206,7 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -226,10 +226,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3 </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -249,11 +249,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join408011" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join408011</div>
@@ -279,7 +278,7 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -305,7 +304,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="min_road_to_int!min_road_r" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">min_road_to_int!min_road_r</div>
@@ -331,10 +330,10 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="pub_rests" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Pub/Restaurants</div>
+                  <div class="join">Gaststätten</div>
                </td>
                				
                <td class="technical">pub_rests</td>
@@ -344,7 +343,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis412391_pub_rest.html">Gaststätte</a></li>
                   </ul>
                   				</td>
                				
@@ -356,10 +355,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="road_annotations" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Road Annotations</div>
+                  <div class="join">Straßenbeschriftung</div>
                </td>
                				
                <td class="technical">road_annotations</td>
@@ -369,7 +368,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_road_annotation.html">Road Annotation</a></li>
+                     <li class="Join"><a href="gis412391_road_annotation.html">Straßenbeschriftung</a></li>
                   </ul>
                   				</td>
                				
@@ -378,14 +377,14 @@
                <td class="technical">False</td>
                				
                				
-               <td>Road Annotations ist ein join Feld Satz von Datensätzen aus 'road_annotation' wird
+               <td>Straßenbeschriftung ist ein join Feld Satz von Datensätzen aus 'road_annotation' wird
                   ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="walks" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Walks</div>
+                  <div class="join">Rundgänge</div>
                </td>
                				
                <td class="technical">walks</td>
@@ -395,7 +394,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_walk.html">Walk</a></li>
+                     <li class="Join"><a href="gis412391_walk.html">Rundgang</a></li>
                   </ul>
                   				</td>
                				
@@ -404,10 +403,10 @@
                <td class="technical">False</td>
                				
                				
-               <td>Walks ist ein join Feld Satz von Datensätzen aus 'walk' wird ausgegeben </td>
+               <td>Rundgänge ist ein join Feld Satz von Datensätzen aus 'walk' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="walks!int" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">walks!int</div>
@@ -433,10 +432,10 @@
                   ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="centre_line" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="geometry">Centreline</div>
+                  <div class="geometry">Mittelachse</div>
                </td>
                				
                <td class="technical">centre_line</td>
@@ -456,7 +455,7 @@
                <td>Manifold: <span class="name">road</span> <span class="technical"><a href="../gis412391_pages/gis412391_topology_static.html#min_road.centre_line">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>
@@ -478,10 +477,10 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="length" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="logical">Length</div>
+                  <div class="logical">Länge</div>
                </td>
                				
                <td class="technical">length</td>

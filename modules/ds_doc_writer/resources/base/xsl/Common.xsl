@@ -3,7 +3,7 @@
     version="2.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:dmdw="http://realworld-systems.com">
+    xmlns:dmdw="https://boogert-lab.nl/dmdw">
   
   <xsl:output method="html" indent="yes" name="html"/>
 
@@ -68,7 +68,7 @@
     </head>
   </xsl:template>
 
-    <!-- These are the templates for the top and bottom section of every page -->
+  <!-- These are the templates for the top and bottom section of every page -->
   
   <!-- Title section -->
   <xsl:template name="Top">
@@ -77,6 +77,10 @@
       <a href="{concat($path,$filename0)}" class="logo">
 	<img src="{concat($path,'dmdw-logo.png')}"/>
 	<xsl:value-of select="$maintitle"/>
+	<span class="DsName">
+	  <xsl:text> </xsl:text>
+	  <xsl:value-of select="$dm_external_name"/>
+	</span>
       </a>
     </header>
   </xsl:template>

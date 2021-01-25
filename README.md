@@ -1,3 +1,4 @@
 # dmdw
 Smallworld Data Model Document Writer
-https://boogert-lab.nl/dmdw
+Source: https://github.com/boogert-lab/dmdw
+Doc: https://boogert-lab.nl/dmdw

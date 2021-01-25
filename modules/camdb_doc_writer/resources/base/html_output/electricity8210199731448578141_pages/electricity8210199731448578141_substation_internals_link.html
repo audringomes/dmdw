@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Electricity - Collection Substation Internals Link</title>
@@ -26,7 +26,7 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Electricity</a></header>
+      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
       <div class="PageTitle float">Substation Internals Link</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
@@ -52,7 +52,7 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="id" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Id</div>
@@ -72,10 +72,10 @@
                				
                				
                				
-               <td>Id ist ein Feld der Klasse integer, z. B. 0 </td>
+               <td>Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="internal_label" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Internal Label</div>
@@ -95,10 +95,10 @@
                				
                				
                				
-               <td>Internal Label ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Internal Label ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="voltage" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Voltage</div>
@@ -144,7 +144,7 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -164,11 +164,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -188,11 +187,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -218,7 +216,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="annotation" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">Annotation</div>
@@ -240,7 +238,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue Mapped">
+            <tr id="external_pin" class="Field VisTrue Mapped">
                				
                <td class="name">
                   <div class="geometry">External Pin</div>
@@ -263,7 +261,7 @@
                <td>Mapping method: voltage [missing description]</td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="external_pin_dv" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">External Pin Dv</div>
@@ -287,7 +285,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#substation_internals_link.external_pin_dv">(Topology)</a></span> Mapped from: <span class="geometry">External Pin</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="external_pin_hv" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">External Pin Hv</div>
@@ -311,7 +309,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#substation_internals_link.external_pin_hv">(Topology)</a></span> Mapped from: <span class="geometry">External Pin</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="external_pin_lv" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">External Pin Lv</div>
@@ -335,7 +333,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#substation_internals_link.external_pin_lv">(Topology)</a></span> Mapped from: <span class="geometry">External Pin</span> </td>
                			</tr>
             			
-            <tr class="Field VisTrue Mapped">
+            <tr id="internal_pin" class="Field VisTrue Mapped">
                				
                <td class="name">
                   <div class="geometry">Internal Pin</div>
@@ -358,7 +356,7 @@
                <td>Mapping method: voltage [missing description]</td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="internal_pin_dv" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">Internal Pin Dv</div>
@@ -382,7 +380,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#substation_internals_link.internal_pin_dv">(Topology)</a></span> Mapped from: <span class="geometry">Internal Pin</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="internal_pin_hv" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">Internal Pin Hv</div>
@@ -406,7 +404,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#substation_internals_link.internal_pin_hv">(Topology)</a></span> Mapped from: <span class="geometry">Internal Pin</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="internal_pin_lv" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">Internal Pin Lv</div>
@@ -430,7 +428,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#substation_internals_link.internal_pin_lv">(Topology)</a></span> Mapped from: <span class="geometry">Internal Pin</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>

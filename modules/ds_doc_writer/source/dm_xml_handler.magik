@@ -35,14 +35,16 @@ _pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
 ##
 ## The XML namespace and schema properties of <dmdw:datamodel>
 ##
-dm_xml_handler.define_shared_constant(:xml_header_info,
-	property_list.new_with(
-		:|xmlns:dmdw|,"https://boogert-lab.nl/dmdw",
-		:|xmlns:xsi|,"http://www.w3.org/2001/XMLSchema-instance",
-		:|xsi:noNamespaceSchemaLocation|,"https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.3.xsd",
-		:schema_version,"1.3"
-		      ),
-	:public)
+_method dm_xml_handler.xml_header_info
+	>> property_list.new_with(
+		   :|xmlns:dmdw|,"https://boogert-lab.nl/dmdw",
+		   :|xmlns:xsi|,"http://www.w3.org/2001/XMLSchema-instance",
+		   :|xsi:noNamespaceSchemaLocation|,write_string("https://github.com/boogert-lab/dmdw DMDW-Datamodel-",
+								 dm_xml_writer.schema_version_main,
+								 ".xsd"),
+		   :schema_version,dm_xml_writer.schema_version_main
+			 )
+_endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
@@ -487,15 +489,48 @@ _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.manifold_xml(p_mf_name, _optional p_elements)
+_method dm_xml_handler.manifolds_xml(p_manifolds)
 	## 
-	## Returns a <manifold> element. If P_ELEMENTS is given, it
-	## should contain a rope with <collection1> elements
+	## 
+
+	_local l_elements << rope.new()
+	_for i_mf_name,i_manifold _over p_manifolds.fast_keys_and_elements()
+	_loop
+
+		l_mf_xml << _self.manifold_xml(i_mf_name,i_manifold)
+		l_elements.add(l_mf_xml)
+
+	_endloop
+
+	>> sw:simple_xml_thing.new(:manifold_definitions,l_elements)
+
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.manifold_xml(p_mf_name,p_manifold _optional p_elements)
+	## 
+	## Returns a <manifold> element.
 	##
 
-	>> sw:simple_xml_thing.new(:manifold,p_elements.default(rope.new()),
-				   property_list.new_with(:name,p_mf_name))
+	_local l_elems << rope.new()
+	l_elems.add(sw:simple_xml_thing.new(:manifold_name,p_manifold.manifold_name.write_string))
+	l_elems.add(sw:simple_xml_thing.new(:manifold_code,p_manifold.manifold_code.write_string))
+	>> sw:simple_xml_thing.new(:manifold,l_elems,property_list.new_with(:name,p_mf_name))
 				   
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.explicit_rules_manifold_xml(p_mf_name,p_manifold,p_tables)
+	## 
+	## Returns top <manifold> element with explicit rules from P_TABLES
+	##
+	
+	_local l_atts << property_list.new_with(:name,p_mf_name,
+						:manifold_name,p_manifold.manifold_name.write_string)
+	>> sw:simple_xml_thing.new(:manifold,p_tables,l_atts)
+				  
 _endmethod
 $
 
@@ -777,6 +812,38 @@ _method dm_xml_handler.geometry_mappings_xml(list)
 	_endloop
 
 	l_xml << sw:simple_xml_thing.new(:geometry_mappings,l_rope)
+	>> l_xml
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.common_field_descriptions_xml(p_list)
+	##  
+	## P_LIST is .updates[:commonfields]
+	##
+	## TODO: when it comes from an update.xml, we should pass it
+	## without change!
+	##
+
+	_local l_grps_xml << rope.new()
+	_for i_grp,i_list _over p_list.fast_keys_and_elements()
+	_loop
+
+		_local l_flds_xml << rope.new()
+		_for i_name,i_props _over i_list.fast_keys_and_elements()
+		_loop 
+			a_xml << sw:simple_xml_thing.new(:field,{},i_props)
+			l_flds_xml.add(a_xml)
+		_endloop
+
+		_local l_atts << property_list.new_with(:name,i_grp)
+		_local l_grp_xml << sw:simple_xml_thing.new(:group,l_flds_xml,l_atts)
+		l_grps_xml.add(l_grp_xml)
+		
+	_endloop
+
+	_local l_xml << sw:simple_xml_thing.new(:commonfields,l_grps_xml)
+
 	>> l_xml
 _endmethod
 $

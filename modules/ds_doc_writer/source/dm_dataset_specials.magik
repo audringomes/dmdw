@@ -105,10 +105,14 @@ $
 _pragma(classify_level=basic, topic={dm_doc_writer}, usage={redefinable, subclassable})
 _method dm_dataset_specials.get_global_field_descriptions()
 	## 
-	## A property_list with names of commonly used fields as keys
-	## and a descriptive text as value.
-	## This implementation returns an empty property list.
+	## A property_list with commonly used field names and
+	## descriptions
 	##
+	## The format is described in the slot description of
+	## dm_xml_writer.updates 
+	## 
+	## This implementation returns an empty property list.
+	## 
 	>> property_list.new()
 _endmethod
 $

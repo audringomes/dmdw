@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Pub Brewery</title>
+      <title>Gis - Collection Gasthausbrauerei</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Pub Brewery</div>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Gasthausbrauerei</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="pub_brewery">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Pub Brewery</h3>
+                  <h3 class="InTable">Gasthausbrauerei</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,10 +52,10 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="pub_rest_name" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Pub Rest Name</div>
+                  <div class="physical">Gaststätte Name</div>
                </td>
                				
                <td class="technical">pub_rest_name</td>
@@ -75,10 +75,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="pub_rest_street" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Pub Rest Street</div>
+                  <div class="physical">Gaststätte Straße</div>
                </td>
                				
                <td class="technical">pub_rest_street</td>
@@ -98,10 +98,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="brewery_name" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Brewery Name</div>
+                  <div class="physical">Brauereiname</div>
                </td>
                				
                <td class="technical">brewery_name</td>
@@ -118,10 +118,10 @@
                				
                				
                				
-               <td>Brewery Name ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Brauereiname ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -141,14 +141,13 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="brewery" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Brewery</div>
+                  <div class="join">Brauerei</div>
                </td>
                				
                <td class="technical">brewery</td>
@@ -158,7 +157,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_brewery.html">Brewery</a></li>
+                     <li class="Join"><a href="gis412391_brewery.html">Brauerei</a></li>
                   </ul>
                   				</td>
                				
@@ -167,13 +166,13 @@
                <td class="technical">True</td>
                				
                				
-               <td>Brewery ist ein join Feld Datensatz aus 'brewery' wird ausgegeben </td>
+               <td>Brauerei ist ein join Feld Datensatz aus 'brewery' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="pub_rest" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Pub Rest</div>
+                  <div class="join">Gaststätte</div>
                </td>
                				
                <td class="technical">pub_rest</td>
@@ -183,7 +182,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis412391_pub_rest.html">Gaststätte</a></li>
                   </ul>
                   				</td>
                				
@@ -192,7 +191,7 @@
                <td class="technical">True</td>
                				
                				
-               <td>Pub Rest ist ein join Feld Datensatz aus 'pub_rest' wird ausgegeben </td>
+               <td>Gaststätte ist ein join Feld Datensatz aus 'pub_rest' wird ausgegeben </td>
                			</tr>
             		</table>
       </div>

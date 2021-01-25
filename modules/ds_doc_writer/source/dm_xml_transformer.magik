@@ -189,10 +189,13 @@ _method dm_xml_transformer.copy_help(p_module,p_output_file)
 		system.mkdir(l_helpdir)
 	_endif
 
+	_local l_log_file << system.pathname_from_components("DMDW_COPY.log",l_helpdir)
 	_local l_cmd << write_string("ROBOCOPY ",
 				     system.canonicalise(l_dir)," ",
 				     system.canonicalise(l_helpdir)," ",
-				     "/E")
+				     "/E /LOG:",l_log_file
+			)
+	
 	_try _with cond
 		system.do_command(l_cmd,l_dir)
 		l_return << _true 
@@ -258,6 +261,14 @@ _method dm_xml_transformer.java_command_string
 				      " net.sf.saxon.Transform ")
 	_endif
 	>> l_cmd
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={ds_doc_writer})
+_method dm_xml_transformer.create_index_page(p_module,p_files)
+	## 
+	## 
 	
 _endmethod
 $

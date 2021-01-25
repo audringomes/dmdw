@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Electricity - Collection Supply Point</title>
@@ -26,7 +26,7 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Electricity</a></header>
+      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
       <div class="PageTitle float">Supply Point</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
@@ -52,7 +52,7 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="id" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Id</div>
@@ -75,7 +75,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="customer_class" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Customer Class</div>
@@ -95,11 +95,11 @@
                				
                				
                				
-               <td>Customer Class ist eine Zeichenfolge-Feldgröße 16
+               <td>Customer Class ist eine dd description!basic_fieldZeichenfolge-Feldgröße 16
                   	Standardwert: Private </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -119,11 +119,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -143,11 +142,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="customer" class="Field VisTrue">
                				
                <td class="name">
                   <div class="join">Customer</div>
@@ -172,7 +170,7 @@
                <td>Customer ist ein join Feld Datensatz aus 'customer' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join268600933" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join268600933</div>
@@ -198,7 +196,7 @@
                   ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="label" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">Label</div>
@@ -220,7 +218,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="location" class="Field VisTrue">
                				
                <td class="name">
                   <div class="geometry">Location</div>
@@ -243,7 +241,7 @@
                <td>Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity8210199731448578141_pages/electricity8210199731448578141_topology_static.html#supply_point.location">(Topology)</a></span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>

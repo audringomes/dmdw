@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Company</title>
+      <title>Gis - Collection Firma</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Company</div>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Firma</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="company">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Company</h3>
+                  <h3 class="InTable">Firma</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,10 +52,10 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="id" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">id</div>
+                  <div class="physical">ID</div>
                </td>
                				
                <td class="technical">id</td>
@@ -75,10 +75,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="company_name" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Company Name</div>
+                  <div class="physical">Firmenname</div>
                </td>
                				
                <td class="technical">company_name</td>
@@ -98,7 +98,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="chairman" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">CEO</div>
@@ -121,10 +121,10 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="plc?" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Plc?</div>
+                  <div class="physical">GmbH?</div>
                </td>
                				
                <td class="technical">plc?</td>
@@ -141,7 +141,7 @@
                				
                				
                				
-               <td>The values of Plc? are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('office_plc?');" title="Click to Show/Hide details">office_plc?</a></span><table id="office_plc?" class="InlineBox" style="display:none;">
+               <td>The values of GmbH? are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('office_plc?');" title="Click to Show/Hide details">office_plc?</a></span><table id="office_plc?" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">office_plc?</th>
                      </tr>
@@ -165,10 +165,10 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="type_of_business" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Type of Business</div>
+                  <div class="physical">Geschäftsbereich</div>
                </td>
                				
                <td class="technical">type_of_business</td>
@@ -188,7 +188,7 @@
                <td>Help text here ....</td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -208,11 +208,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -238,10 +237,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="offices" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Offices</div>
+                  <div class="join">Büros</div>
                </td>
                				
                <td class="technical">offices</td>
@@ -251,7 +250,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_office.html">Office</a></li>
+                     <li class="Join"><a href="gis412391_office.html">Büro</a></li>
                   </ul>
                   				</td>
                				

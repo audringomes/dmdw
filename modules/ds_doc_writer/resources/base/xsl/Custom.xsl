@@ -4,13 +4,15 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
   
-  <!-- NOTE: This stylesheet is loaded before HtmlHeader.xsl and TopAndFooter.xsl
+  <!-- NOTE: This stylesheet is loaded after Common.xsl
 
-The next templates are used to provide text for every major chapter 
-They should not be removed, but left empty if wanted.
-As they are templates, xsl instructions can be used, 
-see e.g. the template 'collections_info'
-They are inserted within <div class="ChapterInfo"></div>
+       The next templates are used to provide text for every major chapter 
+       They should not be removed, but left empty if wanted.
+
+       As they are templates, xsl instructions can be used, 
+       see e.g. the content of the template 'collections_info'
+
+       They are inserted within <div class="ChapterInfo"></div>
   -->
   
   <xsl:template name="toc_info">
@@ -37,6 +39,11 @@ They are inserted within <div class="ChapterInfo"></div>
   </xsl:template>
 
   
+  <xsl:template name="enumerators_info_static">
+    <!-- Content below the 'List of Enumerators' title in the Enumerators list page -->
+    <p></p>
+  </xsl:template>
+
   <xsl:template name="enumerators_info">
     <!-- Content below the 'List of Enumerators' title in the Enumerators list page -->
     <p></p>

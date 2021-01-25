@@ -3,19 +3,19 @@
     version="2.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:dmdw="http://realworld-systems.com">
+    xmlns:dmdw="https://boogert-lab.nl/dmdw">
   
   <xsl:output method="html" indent="yes" name="html"/>
 
-  <xsl:variable name="MasterTemplateVersion" select="'2.0'"/>
-  <xsl:variable name="dmdw_scheme_version" select="1.2"/>
+  <xsl:variable name="MasterTemplateVersion" select="'2.1'"/>
+  <!-- The supported dmdw schema version -->
+  
+  <xsl:variable name="schema_version" select="'1.4'"/>
   
   <xsl:variable name="XSLTProcessor" select="'saxon-he-10.2 from Saxonica'"/>
-
+  
   <xsl:include href="Common.xsl"/>
   <xsl:include href="Custom.xsl"/>
-  <!-- <xsl:include href="HtmlHeader.xsl"/> -->
-  <!-- <xsl:include href="TopAndFooter.xsl"/> -->
   
   <xsl:include href="TopologyFunctions.xsl"/>
   
@@ -37,12 +37,13 @@
 
   <xsl:variable name="path_prefix" select="concat($subdir,$dsname,$ddversion,'_')"/>
   
-  <xsl:variable name="maintitle" select="concat('Datamodel information ',$dm_external_name)"/>
+  <xsl:variable name="maintitle" select="'Datamodel information'"/>
   
   <xsl:variable name="filename1" select="concat($path_prefix,'technical_details.html')"/>
   <xsl:variable name="filename2" select="concat($path_prefix,'collections.html')"/>
   <xsl:variable name="filename3" select="concat($path_prefix,'global_properties.html')"/>
   <xsl:variable name="filename4" select="concat($path_prefix,'enumerators.html')"/>
+  <xsl:variable name="filename4s" select="concat($path_prefix,'enumerators_static.html')"/>
   <xsl:variable name="filename5" select="concat($path_prefix,'topology.html')"/>
   <xsl:variable name="filename5s" select="concat($path_prefix,'topology_static.html')"/>
   <xsl:variable name="filename6" select="concat($path_prefix,'soft_joins.html')"/>
@@ -91,7 +92,8 @@
 	      <li><a href="{$filename1}">Technical Details</a></li>
 	      <li><a href="{$filename3}">Global Properties</a></li>
 	      <li><a href="{$filename2}">Collections</a></li>
-	      <li><a href="{$filename4}">Enumerators</a></li>
+	      <li><a href="{$filename4s}">Enumerators (static)</a></li>
+	      <li><a href="{$filename4}">Enumerators (interactive)</a></li>
 	      <li><a href="{$filename5s}">Topology (static)</a></li>
 	      <li><a href="{$filename5}">Topology (interactive)</a></li>
 	      <xsl:if test="/datamodel/soft_joins">
@@ -224,27 +226,54 @@
 	  <xsl:call-template name="Top">
 	    <xsl:with-param name="path" select="'../'"/>
 	  </xsl:call-template>
-	  <div class="PageTitle float">Enumerators</div>
+	  <div class="PageTitle float">Enumerators (interactive)</div>
 	  <div class="ChapterInfo float">
 	    <xsl:call-template name="enumerators_info"/>
 	  </div>
 	  
 	  <div>
-	    <xsl:choose>
-	      <xsl:when test="count(//enumerator) gt 100">
-		<xsl:call-template name="PageWithFilter">
-		  <xsl:with-param name="elemclass" select="'dmEnumerator'"/>
-		  <xsl:with-param name="selectList" select="datamodel/enumerators/enumerator"/>
-		  <xsl:with-param name="select" select="datamodel/enumerators/enumerator"/>
-		</xsl:call-template>
-	      </xsl:when>
-	      <xsl:otherwise>
-		<xsl:for-each select="datamodel/enumerators">
-		  <br></br>
-		  <xsl:apply-templates/>
-		</xsl:for-each>					
-	      </xsl:otherwise>
-	    </xsl:choose>
+	    <xsl:call-template name="PageWithFilter">
+	      <xsl:with-param name="elemclass" select="'dmEnumerator'"/>
+	      <xsl:with-param name="selectList" select="datamodel/enumerators/enumerator"/>
+	      <xsl:with-param name="select" select="datamodel/enumerators/enumerator"/>
+	    </xsl:call-template>
+	  </div>
+	  
+	  <xsl:call-template name="footer">
+	    <xsl:with-param name="helppath" select="$pathtohelp"/>
+	    <xsl:with-param name="topic" select="'Interactive-Enumerators-Page'"/>
+	  </xsl:call-template>
+	  
+	</body>
+      </html>
+      
+    </xsl:result-document>
+
+    
+    <!-- Enumerator listing Static -->
+    <xsl:result-document href="{$filename4s}" format="html">
+      
+      <html>
+	
+	<xsl:call-template name="HtmlHeader">
+	  <xsl:with-param name="path" select="'../'"/>
+	  <xsl:with-param name="title" select="concat($dm_external_name,' - List of Enumerators')"/>
+	</xsl:call-template>
+	
+	<body onload="HighlightHash()">
+
+	  <xsl:call-template name="Top">
+	    <xsl:with-param name="path" select="'../'"/>
+	  </xsl:call-template>
+	  <div class="PageTitle float">Enumerators (static)</div>
+	  <div class="ChapterInfo float">
+	    <xsl:call-template name="enumerators_info_static"/>
+	  </div>
+	  
+	  <div class="container">
+	    <xsl:for-each select="datamodel/enumerators">
+	      <xsl:apply-templates/>
+	    </xsl:for-each>
 	  </div>
 	  
 	  <xsl:call-template name="footer">
@@ -363,7 +392,7 @@
   
   <xsl:template match="software_version">
     <div style="overflow-x:auto">
-      <table class="dmtable float technical">
+      <table class="dmTableSoft float technical">
 	<tr>
 	  <th colspan="2"><xsl:text>Software</xsl:text></th>				
 	</tr>
@@ -389,7 +418,7 @@
   <!-- Details of the datamodel -->
   <xsl:template match="datamodel_info">
     <div style="overflow-x:auto">
-      <table class="dmTable float">
+      <table class="dmTableInfo float">
 	<tr>
 	  <th colspan="2">Meta Data Information</th>
 	</tr>
@@ -491,6 +520,10 @@
       <xsl:for-each select="datamodel_history_record">
 	<div style="overflow-x:auto">
 	  <table class="dmDataModelHistory float">
+	    <colgroup>
+	      <col width="30%"/>
+	      <col width="60%"/>
+	    </colgroup>
 	    <xsl:for-each select="*">
 	      <tr>
 		<xsl:attribute name="class">
@@ -515,6 +548,10 @@
 
   <xsl:template match="field">
     <xsl:element name="tr">
+      
+      <xsl:attribute name="id">
+	<xsl:value-of select="child::name"/>
+      </xsl:attribute>
 
       <xsl:attribute name="class">
 	<xsl:text>Field Vis</xsl:text>
@@ -567,7 +604,7 @@
     -->
     <td>
       <xsl:variable name="fldname" select="parent::field/name"/>
-      <xsl:variable name="globaldescription" select="/datamodel/global_properties/commonfields/category/field[@name=$fldname]/@description"/>
+      <xsl:variable name="globaldescription" select="/datamodel/global_properties/commonfields/group/field[@name=$fldname]/@description"/>
       
       <xsl:choose>
 	
@@ -597,7 +634,7 @@
 	<xsl:otherwise>
 	  <xsl:choose>
 	    <xsl:when test="$globaldescription != ''">
-	      <span class="globaldescription">
+	      <span class="GlobalDescription">
 		<xsl:value-of select="$globaldescription"/>
 	      </span>
 	    </xsl:when>
@@ -761,9 +798,17 @@
 	  </ul>
 	</td>
       </tr>
+      <tr class="HeadingFldsUsingEnum">
+	<td colspan="3">
+	  <xsl:text>Fields using this enumerator:</xsl:text>
+	</td>
+      </tr>
+      <xsl:call-template name="cols4enum">
+	<xsl:with-param name="enumname" select="@name"/>
+      </xsl:call-template>
     </table>
   </xsl:template>
-  
+
   <xsl:template match="enumerator/value">
     <li class="EnumeratorValue"><xsl:value-of select="."/></li>
   </xsl:template>
@@ -791,15 +836,25 @@
     </xsl:if>
   </xsl:template>
 
+  <xsl:template match="manifold_definitions">
+  </xsl:template>
   
   <xsl:template match="default_topology_rules">
     <h3 class="float">Default Topology Rules</h3>
     <xsl:for-each select="manifold">
+      <xsl:variable name="curman" select="@name"/>
       <table class="dmTable float DefaultTopRules">
 	<tr>
 	  <th colspan="4">
 	    <xsl:text>Manifold: </xsl:text>
-	    <xsl:value-of select="@name"/>
+	    <xsl:call-template name="ExternalManifoldName">
+	      <xsl:with-param name="intname" select="$curman"/>
+	    </xsl:call-template>
+	    <span class="technical InternalMfName">
+	      <xsl:text> (</xsl:text>
+	      <xsl:value-of select="@name"/>
+	      <xsl:text>)</xsl:text>
+	    </span>
 	  </th>
 	</tr>
 	<xsl:apply-templates select="interaction"/>				
@@ -815,10 +870,9 @@
       <td><xsl:value-of select="child::rule2"/></td>
     </tr>
   </xsl:template>
-
   
-  <xsl:template match="commonfields/category">
-    <table class="dmtable float">
+  <xsl:template match="commonfields/group">
+    <table class="dmTable float">
       <tr class="HeadStyle">
 	<th class="name" colspan="3">
 	  <xsl:value-of select="@name"/>
@@ -937,7 +991,7 @@
   <xsl:template name="document_info">
     <xsl:variable name="currentDate" as="xs:date" select="current-date()"/>
     <div style="overflow-x:auto">
-      <table class="dmtable float">
+      <table class="dmTableDoc float">
  	<tr class="Info">
 	  <th colspan="2">
 	    <xsl:text>Document Information</xsl:text>				
@@ -1111,7 +1165,42 @@
       </xsl:result-document>
     </xsl:for-each>
   </xsl:template>
+
   
+  <xsl:template name="cols4enum">
+    <xsl:param name="enumname"/>
+    <!-- Create a list all table.fields where enumerator "enumname" is
+         used -->
+    <xsl:for-each select="//enumerated">
+      <xsl:choose>
+	<xsl:when test="@enumerator_name=$enumname">
+
+	  <xsl:variable name="target_field" select="ancestor::field/name"/>
+	  <xsl:variable name="target_table" select="ancestor::collection/@name"/>
+	  <xsl:variable name="target_url" select="concat($fn_prefix,$target_table,'.html#',$target_field)"/>
+	  
+	  <tr class="FldsUsingEnum">
+	    
+	    <td colspan="2">
+	      <a href="{$target_url}">
+		<xsl:value-of select="ancestor::field/external_name"/>
+	      </a>
+	    </td>
+
+	    <td>
+	      <a href="{$target_url}">
+		<xsl:value-of select="ancestor::collection/@external_name"/>
+	      </a>
+	    </td>
+
+	  </tr>
+	  
+	</xsl:when>
+	<xsl:otherwise>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
+  </xsl:template>
 
   
   <xsl:template name="geomdetails">
@@ -1171,8 +1260,10 @@
       </div>
 
       <div class="navbox">
-	<input class="filterbutton" type="text" id="FilterItem" onkeyup="Filter()" title="Type string to filter" placeholder="Filter..."/>
-	<input class="ClearFilter" type="image" onclick="ClearFilter()" title="Click to clear filter" src="../clear.png"/>
+	<form method="GET">
+	  <input class="Filter" type="text" id="FilterItem" onkeyup="Filter()" title="Type string to filter" placeholder="Filter..."/>
+	  <input class="ClearFilter" type="image" onclick="ClearFilter()" title="Click to clear filter" src="../clear.png"/>
+	</form>
 	
 	<div id="ListLinks">
 	  <!-- list of elements -->

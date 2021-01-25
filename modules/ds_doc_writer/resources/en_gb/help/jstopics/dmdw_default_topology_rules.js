@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"4.1 default_topology_rules",
 hmDescription:"This section is part of the global_properties section and lists the default topology rules for every manifold in the dataset.",
-hmPrevLink:"dmdw_global_properties.html",
+hmPrevLink:"dmdw_4_0-manifold_definitions.html",
 hmNextLink:"dmdw_common_fields.html",
 hmParentLink:"dmdw_global_properties.html",
 hmBreadCrumbs:"<a href=\"dmdw_xml-content.html\">XML Content<\/a> &gt; <a href=\"dmdw_global_properties.html\">Global Properties<\/a>",

@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Beer</title>
+      <title>Gis - Collection Bier</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
-      <div class="PageTitle float">Beer</div>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Bier</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="beer">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Beer</h3>
+                  <h3 class="InTable">Bier</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,10 +52,10 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="id" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Id</div>
+                  <div class="physical">ID</div>
                </td>
                				
                <td class="technical">id</td>
@@ -72,13 +72,13 @@
                				
                				
                				
-               <td>Id ist ein Feld der Klasse integer, z. B. 0 </td>
+               <td>ID ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="beer" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Beer</div>
+                  <div class="physical">Bier</div>
                </td>
                				
                <td class="technical">beer</td>
@@ -95,13 +95,13 @@
                				
                				
                				
-               <td>Beer ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Bier ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="type" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Type</div>
+                  <div class="physical">Typ</div>
                </td>
                				
                <td class="technical">type</td>
@@ -118,7 +118,7 @@
                				
                				
                				
-               <td>The values of Type are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('beer_type');" title="Click to Show/Hide details">beer_type</a></span><table id="beer_type" class="InlineBox" style="display:none;">
+               <td>The values of Typ are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('beer_type');" title="Click to Show/Hide details">beer_type</a></span><table id="beer_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">beer_type</th>
                      </tr>
@@ -150,10 +150,10 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="bottled" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Bottled</div>
+                  <div class="physical">In Flaschen</div>
                </td>
                				
                <td class="technical">bottled</td>
@@ -170,10 +170,10 @@
                				
                				
                				
-               <td>Bottled ist ein Feld der Klasse false, z. B. True </td>
+               <td>In Flaschen ist ein dd description!basic_fieldFeld der Klasse false, z. B. True </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="text_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">text_id</div>
@@ -193,11 +193,11 @@
                				
                				
                				
-               <td>text_id ist ein Feld der Klasse integer, z. B. 0
+               <td>text_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
                   	Standardwert: 0 </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="percent_by_vol" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">percent_by_vol</div>
@@ -217,13 +217,14 @@
                				
                				
                				
-               <td>percent_by_vol ist ein Feld der Klasse float, z. B. 0.000 </td>
+               <td>percent_by_vol ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
+                  </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="keg" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Keg</div>
+                  <div class="physical">Fass</div>
                </td>
                				
                <td class="technical">keg</td>
@@ -240,13 +241,13 @@
                				
                				
                				
-               <td>Keg ist ein Feld der Klasse false, z. B. True </td>
+               <td>Fass ist ein dd description!basic_fieldFeld der Klasse false, z. B. True </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="owner_name" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="physical">Owner Name</div>
+                  <div class="physical">Eigentümername</div>
                </td>
                				
                <td class="technical">owner_name</td>
@@ -263,10 +264,10 @@
                				
                				
                				
-               <td>Owner Name ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Eigentümername ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -286,14 +287,13 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="brewery" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Brewery</div>
+                  <div class="join">Brauerei</div>
                </td>
                				
                <td class="technical">brewery</td>
@@ -303,7 +303,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_brewery.html">Brewery</a></li>
+                     <li class="Join"><a href="gis412391_brewery.html">Brauerei</a></li>
                   </ul>
                   				</td>
                				
@@ -312,10 +312,10 @@
                <td class="technical">False</td>
                				
                				
-               <td>Brewery ist ein join Feld Datensatz aus 'brewery' wird ausgegeben </td>
+               <td>Brauerei ist ein join Feld Datensatz aus 'brewery' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join408002" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join408002</div>
@@ -341,7 +341,7 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join408122" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join408122</div>
@@ -366,10 +366,10 @@
                <td>dd!join408122 ist ein join Feld Datensatz aus 'int!brewery_beer' wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="description" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Description</div>
+                  <div class="join">Beschreibung</div>
                </td>
                				
                <td class="technical">description</td>
@@ -383,10 +383,10 @@
                <td class="technical">False</td>
                				
                				
-               <td>Description ist ein join Feld Text wird ausgegeben </td>
+               <td>Beschreibung ist ein join Feld Text wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -412,10 +412,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="pub_rests" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="join">Pub/Restaurants</div>
+                  <div class="join">Gaststätten</div>
                </td>
                				
                <td class="technical">pub_rests</td>
@@ -425,7 +425,7 @@
                <td class="technical">
                   					
                   <ul>
-                     <li class="Join"><a href="gis412391_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis412391_pub_rest.html">Gaststätte</a></li>
                   </ul>
                   				</td>
                				
@@ -434,7 +434,7 @@
                <td class="technical">False</td>
                				
                				
-               <td>Pub/Restaurants ist ein join Feld Satz von Datensätzen aus 'pub_rest' wird ausgegeben
+               <td>Gaststätten ist ein join Feld Satz von Datensätzen aus 'pub_rest' wird ausgegeben
                   </td>
                			</tr>
             		</table>

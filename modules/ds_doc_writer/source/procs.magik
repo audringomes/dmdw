@@ -71,14 +71,15 @@ _global transform_to_fileset_html <<
 _proc @transform_to_fileset_html(p_module_name, p_input_file, _optional
 				 p_outdir, p_stylesheet, p_copy_html_resources?, p_copy_help?)
 	
-	>> dm_xml_transformer.transform_to_html(
-		   p_module_name,
-		   p_input_file,
-		   p_outdir,
-		   p_stylesheet,
-		   p_copy_html_resources?,
-		   p_copy_help?
-			      )
-
+	_local l_ofile << dm_xml_transformer.transform_to_html(
+				  p_module_name,
+				  p_input_file,
+				  p_outdir,
+				  p_stylesheet,
+				  p_copy_html_resources?,
+				  p_copy_help?
+					     )
+	system.do_command(write_string("swdocopen.exe ",l_ofile))
+	>>l_ofile
 _endproc
 $

@@ -1,0 +1,33 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Monday, 25 January 2021 11:09:59
+   Source : E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\
+     Dest : E:\boogert-lab\dmdw\modules\camdb_doc_writer\resources\base\html_output\help\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                  61	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\
+	  *EXTRA File 		       0	DMDW_COPY.log
+	                  18	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\css\
+	                  10	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\example_html\
+	                  65	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\example_html\gis412391_pages\
+	                  51	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\images\
+	                  32	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\js\
+	                  47	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\jstopics\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         7         0         7         0         0         0
+   Files :       284         0       284         0         0         1
+   Bytes :    6.39 m         0    6.39 m         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : Monday, 25 January 2021 11:09:59
+

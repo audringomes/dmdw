@@ -1,7 +1,7 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Electricity - Collection Drawing</title>
+      <title>Electricity - Collection Zeichnung</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -26,14 +26,14 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Electricity</a></header>
-      <div class="PageTitle float">Drawing</div>
+      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
+      <div class="PageTitle float">Zeichnung</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="drawing">
             <tr class="TableName">
                <td colspan="7">
-                  <h3 class="InTable">Drawing</h3>
+                  <h3 class="InTable">Zeichnung</h3>
                </td>
             </tr>
             <tr class="TableCategory">
@@ -52,10 +52,10 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="name" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Drawing Number</div>
+                  <div class="physical">Zeichnungsnummer</div>
                </td>
                				
                <td class="technical">name</td>
@@ -77,10 +77,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="title" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Title</div>
+                  <div class="physical">Titel</div>
                </td>
                				
                <td class="technical">title</td>
@@ -102,10 +102,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="scale" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Drawing Scale</div>
+                  <div class="physical">Zeichnungsmaßstab</div>
                </td>
                				
                <td class="technical">scale</td>
@@ -122,7 +122,7 @@
                				
                				
                				
-               <td>The values of Drawing Scale are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('drawing_scale');" title="Click to Show/Hide details">drawing_scale</a></span><table id="drawing_scale" class="InlineBox" style="display:none;">
+               <td>The values of Zeichnungsmaßstab are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('drawing_scale');" title="Click to Show/Hide details">drawing_scale</a></span><table id="drawing_scale" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">drawing_scale</th>
                      </tr>
@@ -168,10 +168,10 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="entered_by" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Entered By</div>
+                  <div class="physical">Eingegeben durch</div>
                </td>
                				
                <td class="technical">entered_by</td>
@@ -193,10 +193,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="date_entered" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Date Entered</div>
+                  <div class="physical">Eingabedatum</div>
                </td>
                				
                <td class="technical">date_entered</td>
@@ -218,10 +218,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="revision_date" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Last Revision Date</div>
+                  <div class="physical">Letzte Überarbeitung</div>
                </td>
                				
                <td class="technical">revision_date</td>
@@ -243,7 +243,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="format" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Format</div>
@@ -268,10 +268,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="orientation" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Orientation</div>
+                  <div class="physical">Ausrichtung</div>
                </td>
                				
                <td class="technical">orientation</td>
@@ -288,7 +288,7 @@
                				
                				
                				
-               <td>The values of Orientation are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('drawing_orientation');" title="Click to Show/Hide details">drawing_orientation</a></span><table id="drawing_orientation" class="InlineBox" style="display:none;">
+               <td>The values of Ausrichtung are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('drawing_orientation');" title="Click to Show/Hide details">drawing_orientation</a></span><table id="drawing_orientation" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">drawing_orientation</th>
                      </tr>
@@ -312,10 +312,10 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="width" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Width</div>
+                  <div class="physical">Breite</div>
                </td>
                				
                <td class="technical">width</td>
@@ -337,10 +337,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="height" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Height</div>
+                  <div class="physical">Höhe</div>
                </td>
                				
                <td class="technical">height</td>
@@ -362,10 +362,10 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="drawing_units_descr" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Drawing Units</div>
+                  <div class="physical">Zeichnungseinheiten</div>
                </td>
                				
                <td class="technical">drawing_units_descr</td>
@@ -382,7 +382,7 @@
                				
                				
                				
-               <td>The values of Drawing Units are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('dunits_descr');" title="Click to Show/Hide details">dunits_descr</a></span><table id="dunits_descr" class="InlineBox" style="display:none;">
+               <td>The values of Zeichnungseinheiten are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('dunits_descr');" title="Click to Show/Hide details">dunits_descr</a></span><table id="dunits_descr" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">dunits_descr</th>
                      </tr>
@@ -426,10 +426,10 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="world_units_descr" class="Field VisTrue">
                				
                <td class="name">
-                  <div class="physical">Resolution</div>
+                  <div class="physical">Auflösung</div>
                </td>
                				
                <td class="technical">world_units_descr</td>
@@ -446,7 +446,7 @@
                				
                				
                				
-               <td>The values of Resolution are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('wunits_descr');" title="Click to Show/Hide details">wunits_descr</a></span><table id="wunits_descr" class="InlineBox" style="display:none;">
+               <td>The values of Auflösung are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('wunits_descr');" title="Click to Show/Hide details">wunits_descr</a></span><table id="wunits_descr" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">wunits_descr</th>
                      </tr>
@@ -486,7 +486,7 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -506,11 +506,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -530,11 +529,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="dd!join326450" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">dd!join326450</div>
@@ -560,10 +558,10 @@
                   wird ausgegeben </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="boundary" class="Field VisFalse">
                				
                <td class="name">
-                  <div class="geometry">boundary</div>
+                  <div class="geometry">Grenze</div>
                </td>
                				
                <td class="technical">boundary</td>
@@ -582,7 +580,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>

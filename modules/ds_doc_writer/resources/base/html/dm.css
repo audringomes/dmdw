@@ -29,8 +29,8 @@ li {
 /* COMMON SUBCLASSES */
 
 h3.InTable {
-	/* Major elements, e.g. 'a collection' */
-	margin-left: 0px;
+    /* Major elements, e.g. 'a collection' */
+    margin-left: 0px;
 }
 a.CollectionLink {
 	
@@ -46,11 +46,11 @@ a.SoftJoin {
 table.dmTable
 {
     margin-bottom:10px;
-    min-width: 250px;
+    min-width: 350px;
 }
 table.dmTable.DefaultTopRules
 {
-	width: 350px;
+    width: 350px;
 }
 table.dmTable.Footer
 {
@@ -74,7 +74,9 @@ table.dmCollection
 table.dmEnumerator
 {
     /*! display: block; */
-    min-width: 450px;
+    min-width: 400px;
+    overflow: auto;
+    /* margin-left: 10px; */
 }
 table#audit_history_event_types{
   display:-moz-popup;
@@ -108,8 +110,7 @@ tr.HeadStyle
 	/*! border-top-width: 5px; */
 	/*! border-bottom-width: 5px; */
 }
-tr.overview {
-	/* Collection List row */
+tr.overview {	/* Collection List row */
 }
 tr.TableCategory {
 	/* just below table name */
@@ -281,13 +282,13 @@ li.Join {
 .CheckButton {
 	margin-right: 10px;
 }
-.filterbutton {
+.Filter {
 	border: none;
 	width: 90%;
 	background-color: #fff;
 	font-size: 0.91em;
 }
-.listlink {
+.ListLink {
 	font-size: 0.9em;
 }
 input.ClearFilter {
@@ -310,15 +311,18 @@ input.ClearFilter {
 .col2s {
 	font-size: 0.8em;
 }
+
 table.col2s {
     display: inline-table;
-    min-width: 400px;
-    width: 400px;
+    min-width: 500px;
+    /*! width: 400px; */
     background-color: #d5d5d5;
     margin-bottom: 0px;
 }
+
 .Fld2GeometryName {
-    min-width: 200px;
+    /*! min-width: 200px; */
+    width: 200px;
 }
 tr.TopologyHeadStyle th.TopologyHeadStyle {
     color: #084285;
@@ -332,15 +336,18 @@ tr.TopologyHeadStyle th.TopologyHeadStyle {
 	color: green;
 }
 td.rule1 {
-	min-width: 50px;
-	display: inline-block;
+	width: 120px;
+	/*! display: inline-block; */
+	/*! margin-right: 0px; */
+	text-align: right;
 }
 .rule2 {
 	color: green;
 }
 td.rule2 {
-	min-width: 50px;
-	display: inline-block;
+	/*! min-width: 50px; */
+	/*! display: inline-block; */
+	width: 120px;
 }
 
 /* .connect { */
@@ -377,6 +384,10 @@ td.rule2 {
 .fld2sStatic {
     font-size: smaller;
     padding-left: 9pt;
+    display: block;
+}
+.rulesStatic {
+    color: green;
 }
 .rule1Static {
     text-align: right;
@@ -389,4 +400,51 @@ td.rule2 {
 .error {
     color: red;
     font-weight: bold;
+}
+.HeadingFldsUsingEnum {
+    /*    font-weight: bold; */
+    
+}
+.FldsUsingEnum {
+    background-color: cadetblue;
+}
+.InternalMfName {
+}
+
+td.field1 {
+    vertical-align: top;
+    overflow-x: auto;
+}
+
+.field2 {
+    width: 120px;
+    display: inline-block;
+    overflow-x: clip;
+}
+
+.betweenrules {
+}
+
+.betweenrules::before {
+    content: '<->';
+/*    background-color: #a5a6a8;
+    color: white;
+*/
+    padding: 1px;
+}
+/* Used in title of page */
+.DsName {
+    font-size: medium;
+}
+.dmTableDoc {
+    margin-bottom: 10px;
+    min-width: 400px;
+}
+.dmTableSoft {
+    margin-bottom: 10px;
+    min-width: 400px;
+}
+.dmTableInfo {
+    margin-bottom: 10px;
+    min-width: 400px;
 }

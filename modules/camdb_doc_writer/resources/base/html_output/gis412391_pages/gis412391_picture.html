@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html xmlns:dmdw="http://realworld-systems.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Gis - Collection Picture</title>
@@ -26,7 +26,7 @@
 	
       </script></head>
    <body onload="HighlightHash()">
-      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information Gis</a></header>
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
       <div class="PageTitle float">Picture</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
       <div style="overflow-x:auto">
@@ -52,7 +52,7 @@
                <th>Description</th>
             </tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="picture_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">Picture Id</div>
@@ -72,10 +72,10 @@
                				
                				
                				
-               <td>Picture Id ist ein Feld der Klasse integer, z. B. 0 </td>
+               <td>Picture Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="title" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Title</div>
@@ -95,10 +95,10 @@
                				
                				
                				
-               <td>Title ist eine Zeichenfolge-Feldgröße 32 </td>
+               <td>Title ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
                			</tr>
             			
-            <tr class="Field VisTrue">
+            <tr id="image_type" class="Field VisTrue">
                				
                <td class="name">
                   <div class="physical">Image Type</div>
@@ -144,7 +144,7 @@
                </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="rwo_id" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">rwo_id</div>
@@ -164,11 +164,10 @@
                				
                				
                				
-               <td>rwo_id ist ein Vektor-Feld mit Elementen der Klasse integer der Größe 3
-                  	Standardwert: sw:simple_vector:[1-3] </td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="ds!version" class="Field VisFalse">
                				
                <td class="name">
                   <div class="physical">ds!version</div>
@@ -188,11 +187,10 @@
                				
                				
                				
-               <td>ds!version ist ein Feld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="int!info_flags" class="Field VisFalse">
                				
                <td class="name">
                   <div class="join">int!info_flags</div>
@@ -218,7 +216,7 @@
                   </td>
                			</tr>
             			
-            <tr class="Field VisFalse">
+            <tr id="meatball" class="Field VisFalse">
                				
                <td class="name">
                   <div class="geometry">meatball</div>
@@ -240,7 +238,7 @@
                <td></td>
                			</tr>
             			
-            <tr class="Field VisTrue Mapped">
+            <tr id="raster" class="Field VisTrue Mapped">
                				
                <td class="name">
                   <div class="geometry">Raster</div>
@@ -260,10 +258,10 @@
                <td class="technical">False</td>
                				
                				
-               <td>Mapping method: image_type [missing description]</td>
+               <td>Mapping method: image_type (Geometry mapped by Image Type)</td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="raster_colour" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">Raster Colour</div>
@@ -286,7 +284,7 @@
                <td> Mapped from: <span class="geometry">Raster</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="raster_grey" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">Raster Grey</div>
@@ -309,7 +307,7 @@
                <td> Mapped from: <span class="geometry">Raster</span> </td>
                			</tr>
             			
-            <tr class="Field VisFalse MappedTo">
+            <tr id="raster_mono" class="Field VisFalse MappedTo">
                				
                <td class="name">
                   <div class="geometry">Raster Mono</div>

@@ -15,10 +15,10 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta name="generator" content="Help &amp; Manual" />
 	<meta name="keywords" content="" />
-	<meta name="description" content="Customizations can be done on several levels: &nbsp;Generating the XML Content 1. You can specify a product and module for the Datamodel Version. This should be supplied as argument" />
+	<meta name="description" content="Customizations can be done on several levels: Skip tables Tables can be omitted from the export by redefining and/or subclassing the method dd_collection_mixin.skip_dm_export?...." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="17/01/2021" />
+        <meta name="revised" content="24/01/2021" />
         <meta name="id" content="dmdw_Customization" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -262,13 +262,17 @@ function GetSearchPage() {
 	<div id="hmpagebody_scroller">
 <!--ZOOMRESTART-->
 	<p class="p_Normal">Customizations can be done on several levels:</p>
+<p class="p_Heading3"><span class="f_Heading3">Skip&nbsp;tables</span></p>
+<p class="p_Normal">Tables can be omitted from the export by redefining and/or subclassing the method <span style="font-weight: bold;">dd_collection_mixin.skip_dm_export?</span>. See <a href="dmdw_smallworld.html" class="topiclink">Magik</a>.</p>
+<p class="p_Heading3"><span class="f_Heading3">Providing&nbsp;additional&nbsp;content</span></p>
+<p class="p_Normal">The following data can be passed as xml to the dm_xml_writer:</p>
 <p class="p_Normal">&nbsp;</p>
-<p class="p_Normal">Generating the XML Content</p>
-<p class="p_Normal">1. You can specify a <span style="font-weight: bold;">product</span> and <span style="font-weight: bold;">module</span> for the <a href="dmdw_datamodel_version.html" class="topiclink">Datamodel Version</a>. This should be supplied as argument to the <span style="font-weight: bold;">dm_xml_writer.new()</span>. This datamodel property can be used to keep track of specific versions.</p>
-<p class="p_Normal">2. </p>
-<p class="p_Normal">&nbsp;</p>
-<p class="p_Normal">Presentation</p>
-<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The <span style="font-weight: bold;">dm_xml_writer</span> class can be instantiated with a 'helper class' to provide additional content. By default this is an object of class <span style="font-weight: bold;">dm_dataset_specials</span>. See <a href="dmdw_specials.html" class="topiclink">Magik - Specials</a> for more information.</p>
+<p class="p_Normal">When for a source both xml and magik is provided, the Magik is ignored.</p>
+<p class="p_Heading3"><span class="f_Heading3">Customizing&nbsp;the&nbsp;XML&nbsp;Content</span></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>You can specify a <span style="font-weight: bold;">product</span> and <span style="font-weight: bold;">module</span> for the <a href="dmdw_datamodel_version.html" class="topiclink">Datamodel Version</a>. This should be supplied as argument to the <span style="font-weight: bold;">dm_xml_writer.new()</span>. This datamodel property can be used to keep track of specific versions.</p><p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">2.</span>Provide descriptions for collections and fields (see <a href="dmdw_help_text.html" class="topiclink">Adding Descriptions</a>).</p><p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">3.</span>Provide descriptions for common fields (see <a href="dmdw_common_fields.html" class="topiclink">4.2 common_fields</a>).</p><p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">4.</span>Provide descriptions for geometry mappings (see <a href="dmdw_geometry_mappings.html" class="topiclink">4.3 geometry_mappings</a>).</p><p class="p_Heading3"><span class="f_Heading3">Customizing&nbsp;the&nbsp;HTML&nbsp;output</span></p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">1.</span>Modify the xsl template(s):</p><p class="p_Normal" style="text-indent: 0; padding-left: 1.6250rem; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">o</span>Simple additions - when you use the <span style="font-weight: bold;">FileSet2</span> XSL - can be done by filling in the named templates in <span style="font-weight: bold;">Custom.xsl</span>. These are added to the HTML output. See <a href="dmdw_custom_xsl.html" class="topiclink">Custom.xsl</a>.</p><p class="p_Normal" style="text-indent: 0; padding-left: 1.6250rem; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">o</span>Change the way the output is created by modifying the xls templates.</p><p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">2.</span>Change the styles of the HTML output.</p><p class="p_Normal" style="text-indent: 0; padding-left: 1.6250rem; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">o</span>Modify the <span style="font-weight: bold;">custom.css</span> styles. (See <a href="dmdw_css.html" class="topiclink">CSS</a>)</p><p class="p_Normal" style="text-indent: 0; padding-left: 1.6250rem; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">o</span>Modify the other styles (layout.css and dm.css)</p><p class="p_Normal">&nbsp;</p>
 
         <div class="topicfooter">
   <table style="width: 100%;margin-left: 0;margin-right: auto;">

@@ -15,10 +15,10 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta name="generator" content="Help &amp; Manual" />
 	<meta name="keywords" content="" />
-	<meta name="description" content="The XML has the following sections, all contained in &lt;datamodel&gt;." />
+	<meta name="description" content="All data is contained in the top element &lt;datamodel&gt;." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="09/01/2021" />
+        <meta name="revised" content="17/01/2021" />
         <meta name="id" content="dmdw_XML-Content" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -261,14 +261,17 @@ function GetSearchPage() {
 	<div id="unclicker"></div>
 	<div id="hmpagebody_scroller">
 <!--ZOOMRESTART-->
-	<p class="p_Normal">The XML has the following sections, all contained in &lt;datamodel&gt;.<br />
-Click for a description.</p>
+	<p class="p_Normal">All data is contained in the top element &lt;datamodel&gt;.<br />
+&nbsp;<br />
+<span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">datamodel</span><span class="f_CodeExample" style="color: #000000;"> </span><br />
+<span class="f_CodeExample" style="color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #ff0000;">xmlns:dmdw</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">https://boogert-lab.nl/dmdw</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><br />
+<span class="f_CodeExample" style="color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #ff0000;">xmlns:xsi</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">http://www.w3.org/2001/XMLSchema-instance</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><br />
+<span class="f_CodeExample" style="color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #800000;">xsi:noNamespaceSchemaLocation</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.3.xsd</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><br />
+<span class="f_CodeExample" style="color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #800000;">schema_version</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">1.3</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><br />
+<span class="f_CodeExample" style="color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #800000;">creation_date</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">2021-01-17T13:14:05Z</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&gt;</span><br />
+<span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">datamodel</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span></p>
 <p class="p_Normal">&nbsp;</p>
-<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">datamodel</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">INTERNALNAME</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><br />
-<span class="f_CodeExample" style="color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #800000;">external_name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">EXTERNALNAME</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><br />
-<span class="f_CodeExample" style="color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #800000;">date</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">DATE</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><br />
-<span class="f_CodeExample" style="color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #800000;">version</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">1.2</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><br />
-<span class="f_CodeExample" style="color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">[alternative_path_name=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">ALTPATH</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #0000ff;">]&gt;</span></p>
+<p class="p_Normal">It contains the following sections:</p>
 <p class="p_Normal">&nbsp;</p>
 <p class="p_Normal" style="margin: 0 0 0 1.6250rem;"><a href="dmdw_datamodel_info.html" class="topiclink">Datamodel Info</a><br />
 <a href="dmdw_datamodel_history.html" class="topiclink">Datamodel History</a><br />
@@ -279,8 +282,6 @@ Click for a description.</p>
 <a href="dmdw_enumerators.html" class="topiclink">Enumerators</a> <br />
 <a href="dmdw_topology.html" class="topiclink">Topology</a><br />
 <a href="dmdw_soft_joins.html" class="topiclink">[Soft joins]</a></p>
-<p class="p_Normal">&nbsp;</p>
-<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">datamodel&gt;</span></p>
 <p class="p_Normal">&nbsp;</p>
 <p class="p_Normal">&nbsp;</p>
 

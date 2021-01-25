@@ -15,13 +15,24 @@ _pragma(classify_level=basic, topic={wd_doc_writer})
 _global dump_camdb <<
 _proc @dump_camdb()
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+	_dynamic !current_languages! << {:de_de}
+=======
 	_dynamic !current_languages! << {:de_de,:en_gb}
+>>>>>>> 580a2b20eefec1d612191f66aca2f497c7d2ad11
+=======
+	_dynamic !current_languages! << {:de_de,:en_gb}
+>>>>>>> 580a2b20eefec1d612191f66aca2f497c7d2ad11
 	_if (a_product << smallworld_product.product(:cambridge_db_lp)) _isnt _unset 
 	_then smallworld_product.reload_product(a_product.directory)
 	_endif
 	
 	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
 	_local l_dir << l_mod.resource_list_for(:xml).an_element()
+
+	_local l_udir << l_mod.resource_list_for(:example_update).an_element()
+	_local l_upath << system.pathname_from_components("update_example.xml",l_udir)
 
 	_for i_dsname _over {:gis,:electricity}.fast_elements()
 	_loop
@@ -31,7 +42,8 @@ _proc @dump_camdb()
 
 					:ace_name,"electricity",
 					:dataset_specials,_unset,
-					:output_file,l_file
+					:output_file,l_file,
+					:update_file,l_upath
 					      )
 	
 		_local du << dm_xml_writer.new(ds,props)
@@ -54,10 +66,14 @@ _global transform_camdb_xml <<
 _proc @transform_camdb_xml()
 
 	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
+	_local l_files << rope.new()
 	_for i_file _over l_mod.resource_files("xml").fast_elements()
 	_loop
-		transform_to_html(:camdb_doc_writer,i_file,_unset,"FileSet2.xsl",_true,_true)
+		l_files.add(transform_to_fileset_html(:camdb_doc_writer,i_file,_unset,"FileSet2.xsl",_true,_true))
 	_endloop
-	
+
+	_if l_files.size > 0
+	_then dm_xml_transformer.create_index_page(l_mod,l_files)
+	_endif
 _endproc
 $
