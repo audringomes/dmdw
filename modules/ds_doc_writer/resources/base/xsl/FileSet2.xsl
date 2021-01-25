@@ -37,7 +37,7 @@
 
   <xsl:variable name="path_prefix" select="concat($subdir,$dsname,$ddversion,'_')"/>
   
-  <xsl:variable name="maintitle" select="concat('Datamodel information '$dm_external_name)"/>
+  <xsl:variable name="maintitle" select="'Datamodel information'"/>
   
   <xsl:variable name="filename1" select="concat($path_prefix,'technical_details.html')"/>
   <xsl:variable name="filename2" select="concat($path_prefix,'collections.html')"/>
@@ -77,7 +77,7 @@
       <html> 			
 	<xsl:call-template name="HtmlHeader">
 	  <xsl:with-param name="path" select="''"/>
-	  <xsl:with-param name="title" select="$maintitle"/>
+	  <xsl:with-param name="title" select="concat($dm_external_name,' - Table of Contents')"/>
 	</xsl:call-template>
 
 	<body onload="HighlightHash()">
@@ -772,9 +772,14 @@
       <xsl:attribute name="class">
 	<xsl:text>float </xsl:text>
 	<xsl:text>dmEnumerator</xsl:text>
-	<xsl:if test="//enumerated/@enumerator_name=@name">
-	  <xsl:text> Used</xsl:text>
-	</xsl:if>				
+	<xsl:choose>
+	  <xsl:when test="//enumerated/@enumerator_name=@name">
+	    <xsl:text> Used</xsl:text>
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:text> NotUsed</xsl:text>
+	  </xsl:otherwise>
+	</xsl:choose>
       </xsl:attribute>
       <tr class="HeadStyle">
 	<th class="name" colspan="3">

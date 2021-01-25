@@ -270,7 +270,10 @@ li.Join {
 	color: #040484;
 }
 .Used {
-	/* Is an enumerator used by a table? */
+	/* Enumerator used by a table */
+}
+.NotUsed {
+	/* Enumerator not used by a table */
 }
 .buttonbar {
 	margin-bottom: 2px;

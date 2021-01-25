@@ -15,15 +15,8 @@ _pragma(classify_level=basic, topic={wd_doc_writer})
 _global dump_camdb <<
 _proc @dump_camdb()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	_dynamic !current_languages! << {:de_de}
-=======
-	_dynamic !current_languages! << {:de_de,:en_gb}
->>>>>>> 580a2b20eefec1d612191f66aca2f497c7d2ad11
-=======
-	_dynamic !current_languages! << {:de_de,:en_gb}
->>>>>>> 580a2b20eefec1d612191f66aca2f497c7d2ad11
+
 	_if (a_product << smallworld_product.product(:cambridge_db_lp)) _isnt _unset 
 	_then smallworld_product.reload_product(a_product.directory)
 	_endif
