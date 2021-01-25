@@ -37,7 +37,7 @@
 
   <xsl:variable name="path_prefix" select="concat($subdir,$dsname,$ddversion,'_')"/>
   
-  <xsl:variable name="maintitle" select="'Datamodel information'"/>
+  <xsl:variable name="maintitle" select="concat('Datamodel information '$dm_external_name)"/>
   
   <xsl:variable name="filename1" select="concat($path_prefix,'technical_details.html')"/>
   <xsl:variable name="filename2" select="concat($path_prefix,'collections.html')"/>
