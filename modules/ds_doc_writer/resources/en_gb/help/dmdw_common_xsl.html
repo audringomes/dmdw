@@ -3,7 +3,7 @@
 <html>
 	<head>
 	<!-- Help+Manual Premium Pack Version 3.45 (c) 2015-2018 by Tim Green all rights reserved -->
-	<title>FileSet2.xsl</title>
+	<title>Common.xsl</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" id="pageviewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, minimal-ui" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,11 +15,11 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta name="generator" content="Help &amp; Manual" />
 	<meta name="keywords" content="" />
-	<meta name="description" content="The template FileSet2.xsl is designed to create multiple pages:" />
+	<meta name="description" content="The Common.xsl template contains the following templates:" />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="09/01/2021" />
-        <meta name="id" content="dmdw_FileSet2_xsl" />
+        <meta name="revised" content="25/01/2021" />
+        <meta name="id" content="dmdw_Common_xsl" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
 	<link type="text/css" href="./css/hmprojectstyles.css" rel="stylesheet" />
@@ -44,7 +44,7 @@ var pageName="mainPage";var hmDevice={mobileSleepReload:true,compilehash:(functi
         <script type="text/javascript" src="./js/HandleCSHID.js"></script>
         
         <script type="text/javascript">
-                if (RWSP_HandleCSHID && "dmdw_fileset2_xsl.html"==RWSP_Mainpage){
+                if (RWSP_HandleCSHID && "dmdw_common_xsl.html"==RWSP_Mainpage){
                 RWSP_DoHandleHash();
                 RWSP_DoHandleParam();
                 }
@@ -74,7 +74,7 @@ var pageName="mainPage";var hmDevice={mobileSleepReload:true,compilehash:(functi
 	</style>
 	</noscript>
         <link type="text/css" href="./css/sw-styles.css" rel="stylesheet" />
-	<link rel="canonical" href="http://www.helpandmanual.com/help/dmdw_fileset2_xsl.html" />
+	<link rel="canonical" href="http://www.helpandmanual.com/help/dmdw_common_xsl.html" />
   <script type="text/javascript">
 function SwitchTabToSearch(d) {
     hmWebHelp.switchNavTab("search");
@@ -213,7 +213,7 @@ function GetSearchPage() {
 	</li>
 	<li id="hm_printable_version">
 		<svg class="hmbicon" viewBox="0 0 30 32"><use xlink:href="#print"></use></svg>
-		<a id="hm_printable_link" href="_hm_print_window.htm?dmdw_fileset2_xsl.html" onclick="hmWebHelp.hamburgerMenu()" target="hm_print_window" title="Display a Printable Version of Current Topic"> 
+		<a id="hm_printable_link" href="_hm_print_window.htm?dmdw_common_xsl.html" onclick="hmWebHelp.hamburgerMenu()" target="hm_print_window" title="Display a Printable Version of Current Topic"> 
 		<span>Printable Version</span></a>
 	</li>
 	<li class="desktop server">
@@ -232,20 +232,20 @@ function GetSearchPage() {
 		<td id="topicheadercell">
 		  <div id="topicheaderwrapper">
 		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <a href="dmdw_xsl-transform.html">XSLT Stylesheets</a></p> 
-		  <p class="topictitle">FileSet2.xsl</p>
+		  <p class="topictitle">Common.xsl</p>
 		  </div>
 		</td>
 		<td id="topicnavcell"><span>
 		<a id="atoclink" class="topicnavlink" title="Contents of this topic">
 		<svg class="navicon" viewBox="0 0 32 32"><use xlink:href="#list-bullet"></use></svg>
 		<span>Scroll</span></a> 
-		 <a id="topicnavlinkprevious" class="topicnavlink nav" href="dmdw_xsl-transform.html" title="Go to previous topic">
+		 <a id="topicnavlinkprevious" class="topicnavlink nav" href="dmdw_fileset2_xsl.html" title="Go to previous topic">
 		 <svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-left"></use></svg>
 		 <span>Prev</span></a>
 		<a id="topicnavlinkhome" class="topicnavlink nav" href="index.html" title="Go to top topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-up"></use></svg>
 		<span>Top</span></a>
-		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_common_xsl.html" title="Go to next topic">
+		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_custom_xsl.html" title="Go to next topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-right"></use></svg>
 		<span>Next</span></a>
 		 <a id="hamburgerlink" class="topicnavlink" title="Additional Functions Menu">
@@ -261,10 +261,44 @@ function GetSearchPage() {
 	<div id="unclicker"></div>
 	<div id="hmpagebody_scroller">
 <!--ZOOMRESTART-->
-	<p class="p_Normal">The template <span style="font-weight: bold;">FileSet2.xsl</span> is designed to create multiple pages:</p>
+	<p class="p_Normal">The Common.xsl template contains the following templates:</p>
 <p class="p_Normal">&nbsp;</p>
-<p class="p_Normal" style="text-indent: 0; padding-left: 0.8125rem; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>The HTML outputfile that is specified as output by the <span style="font-weight: bold;">dm_doc_writer.</span> This is a file that contains meta information about the files and process and contains a link to the actual TOC page.</p><p class="p_Normal" style="text-indent: 0; padding-left: 0.8125rem; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>Primary page with a TOC';</p><p class="p_Normal" style="text-indent: 0; padding-left: 0.8125rem; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>Separate files for the major sections as described in <a href="dmdw_xml-content.html" class="topiclink">XML Content</a>;</p><p class="p_Normal" style="text-indent: 0; padding-left: 0.8125rem; margin-left: 0;"><span class="f_Normal" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">&#8226;</span>For every collection a page entity in the DM XML a seperate page is created.</p><p class="p_Normal">&nbsp;</p>
-<p class="p_Normal">The xsl is designed with the basic idea of using matching elements, although there are also named templates.</p>
+<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br />
+<span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:stylesheet</span><span class="f_CodeExample" style="color: #000000;"> </span><br />
+<span class="f_CodeExample" style="color: #000000;"> &nbsp;  </span><span class="f_CodeExample" style="color: #800000;">version</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">2.0</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><br />
+<span class="f_CodeExample" style="color: #000000;"> &nbsp;  </span><span class="f_CodeExample" style="color: #ff0000;">xmlns:xsl</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">http://www.w3.org/1999/XSL/Transform</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><br />
+<span class="f_CodeExample" style="color: #000000;"> &nbsp;  </span><span class="f_CodeExample" style="color: #ff0000;">xmlns:xs</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">http://www.w3.org/2001/XMLSchema</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><br />
+<span class="f_CodeExample" style="color: #000000;"> &nbsp;  </span><span class="f_CodeExample" style="color: #ff0000;">xmlns:dmdw</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #ff0000;">https://boogert-lab.nl/dmdw</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:output</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">method</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">html</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">indent</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">yes</span><span class="f_CodeExample" style="color: #0000ff;">&quot;</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">html</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
+<span class="f_CodeExample" style="color: #0000ff;">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;!--</span><span class="f_CodeExample" style="font-style: italic; font-weight: bold; color: #808080;"> this named template creates the filter buttons  </span><span class="f_CodeExample" style="color: #0000ff;">--&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:template</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">Button</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:template</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
+<span class="f_CodeExample" style="color: #0000ff;">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;!--</span><span class="f_CodeExample" style="font-style: italic; font-weight: bold; color: #808080;"> this named template creates the head section of every html page.</span><br />
+<span class="f_CodeExample" style="font-style: italic; font-weight: bold; color: #808080;"> &nbsp; &nbsp; &nbsp; the PATH parameter is for the html resources (css and scripts) and</span><br />
+<span class="f_CodeExample" style="font-style: italic; font-weight: bold; color: #808080;"> &nbsp; &nbsp; &nbsp; the TITLE parameter is the document &lt;title&gt;</span><br />
+<span class="f_CodeExample" style="font-style: italic; font-weight: bold; color: #808080;"> &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">--&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:template</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">HtmlHeader</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:param</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">path</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:param</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">title</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:template</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
+<span class="f_CodeExample" style="color: #0000ff;">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;!--</span><span class="f_CodeExample" style="font-style: italic; font-weight: bold; color: #808080;"> These are the templates for the top and bottom section of every page </span><span class="f_CodeExample" style="color: #0000ff;">--&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;!--</span><span class="f_CodeExample" style="font-style: italic; font-weight: bold; color: #808080;"> Title section </span><span class="f_CodeExample" style="color: #0000ff;">--&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:template</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">Top</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:param</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">path</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:template</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;!--</span><span class="f_CodeExample" style="font-style: italic; font-weight: bold; color: #808080;"> Footer section </span><span class="f_CodeExample" style="color: #0000ff;">--&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:template</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">footer</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:param</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">helppath</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:param</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">topic</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;">  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:template</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
+<span class="f_CodeExample" style="color: #0000ff;">&nbsp;</span><br />
+<span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">xsl:stylesheet</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span></p>
 <p class="p_Normal">&nbsp;</p>
 
         <div class="topicfooter">
@@ -343,7 +377,7 @@ if (!hmFlags.isEWriter) fouc.parentNode.removeChild(fouc);
 /*! Help & Manual WebHelp 3 Script functions
 Copyright (c) 2015-2018 by Tim Green. All rights reserved. Contact tg@it-authoring.com
 */
-(function(){var b=sessionVariable.getPV("fontSize"),a=document.getElementsByTagName("html")[0];if(b!==null){a.style.fontSize=b+"%"}else{a.style.fontSize=hmDevice.baseFontSize+"%"}})();var moveCheck=null,hmTocLoaded=false,hmTocWidth=0,xMessage=new xMsg("LANDING TOPIC");function initScripts(){hmPopupsObject={};hmFlags.isHmTopic=true;hmFlags.idxLoaded=false;hmFlags.schLoaded=false;hmFlags.searchSession=false;hmFlags.tocClicked=false;hmFlags.layoutTable=false;hmFlags.searchHighlight="";hmFlags.tocInitWidth=0;hmFlags.jumpHighlight=false;hmFlags.hmMainPage="index.html";hmFlags.hmTrackHost="http://www.helpandmanual.com/help/";hmFlags.hmProject="Data Model Document Writer";hmFlags.hmDefaultPage="index.html";hmFlags.hmCurrentPage="dmdw_fileset2_xsl.html";hmFlags.hmTOC="hmcontent.html";hmFlags.hmSearchPage="hmftsearch.html";hmFlags.hmIndexPage="hmkwindex.html";hmFlags.thisTopic="dmdw_fileset2_xsl.html";hmFlags.lastTopic="index.html";hmFlags.isEWriter=false;hmFlags.topicExt=".html";hmFlags.defaultExt=".html";hmFlags.projName="dm_doc_writer";hmFlags.tDescription=document.querySelector("meta[name='description']").getAttribute("content");hmFlags.tKeywords="";hmFlags.hdFormat=false;hmFlags.contextID=(function(){var f;if(/^https??:\/\//im.test(document.location)){f=/contextid=\d*/.exec(window.location.search.substring(1))}else{f=/contextid=\d*/.exec(window.location.hash.substring(1))}return f!=null?f[0]:false})();function e(f){$.getScript(a[f],function(g,i,h){if(d<a.length-1){d++;e(d)}else{hmpage.defaulttopic="index.html";hmpage.breadcrumbs=false;hmWebHelp.hmMainPageInit();hmpage.hmDescription=document.querySelector("meta[name='description']").getAttribute("content");hmpage.hmPicture=""===""?"":"./images/";hmpage.topicfooter=$("div.topicfooter")[0].outerHTML;}})}if(document.location.protocol.substr(0,4)!=="http"){window.History={options:{html4Mode:true}}}var d=0;var a=["./js/helpman_settings.js","./js/jquery.scrollTomin.js","./js/jquery.history.js","./js/hm_webhelp.js"];if(hmFlags.contextID){a.unshift("./js/hmcontextids.js")}if(hmDevice.phone){a.push("./js/mobileNav.js")}var c=document.getElementById("jqscript");c.src="./js/jquery.js";var b=setInterval(function(){if(window.jQuery){clearInterval(b);$.ajaxPrefilter("json script",function(g){g.crossDomain=true});if(hmDevice.embedded&&hmDevice.desktop){$("li#toggle_fullscreen").show()}e(0);var f="FileSet2.xsl";switch("topic"){case"project":f="Data Model Document Writer";break;case"project_topic":f="Data Model Document Writer > FileSet2.xsl";break}f=$("<textarea/>").html(f).text();$("title").text(f)}},100)}if(window.addEventListener){window.addEventListener("load",initScripts,false)}else{if(window.attachEvent){window.attachEvent("onload",initScripts)}else{window.onload=initScripts}};
+(function(){var b=sessionVariable.getPV("fontSize"),a=document.getElementsByTagName("html")[0];if(b!==null){a.style.fontSize=b+"%"}else{a.style.fontSize=hmDevice.baseFontSize+"%"}})();var moveCheck=null,hmTocLoaded=false,hmTocWidth=0,xMessage=new xMsg("LANDING TOPIC");function initScripts(){hmPopupsObject={};hmFlags.isHmTopic=true;hmFlags.idxLoaded=false;hmFlags.schLoaded=false;hmFlags.searchSession=false;hmFlags.tocClicked=false;hmFlags.layoutTable=false;hmFlags.searchHighlight="";hmFlags.tocInitWidth=0;hmFlags.jumpHighlight=false;hmFlags.hmMainPage="index.html";hmFlags.hmTrackHost="http://www.helpandmanual.com/help/";hmFlags.hmProject="Data Model Document Writer";hmFlags.hmDefaultPage="index.html";hmFlags.hmCurrentPage="dmdw_common_xsl.html";hmFlags.hmTOC="hmcontent.html";hmFlags.hmSearchPage="hmftsearch.html";hmFlags.hmIndexPage="hmkwindex.html";hmFlags.thisTopic="dmdw_common_xsl.html";hmFlags.lastTopic="index.html";hmFlags.isEWriter=false;hmFlags.topicExt=".html";hmFlags.defaultExt=".html";hmFlags.projName="dm_doc_writer";hmFlags.tDescription=document.querySelector("meta[name='description']").getAttribute("content");hmFlags.tKeywords="";hmFlags.hdFormat=false;hmFlags.contextID=(function(){var f;if(/^https??:\/\//im.test(document.location)){f=/contextid=\d*/.exec(window.location.search.substring(1))}else{f=/contextid=\d*/.exec(window.location.hash.substring(1))}return f!=null?f[0]:false})();function e(f){$.getScript(a[f],function(g,i,h){if(d<a.length-1){d++;e(d)}else{hmpage.defaulttopic="index.html";hmpage.breadcrumbs=false;hmWebHelp.hmMainPageInit();hmpage.hmDescription=document.querySelector("meta[name='description']").getAttribute("content");hmpage.hmPicture=""===""?"":"./images/";hmpage.topicfooter=$("div.topicfooter")[0].outerHTML;}})}if(document.location.protocol.substr(0,4)!=="http"){window.History={options:{html4Mode:true}}}var d=0;var a=["./js/helpman_settings.js","./js/jquery.scrollTomin.js","./js/jquery.history.js","./js/hm_webhelp.js"];if(hmFlags.contextID){a.unshift("./js/hmcontextids.js")}if(hmDevice.phone){a.push("./js/mobileNav.js")}var c=document.getElementById("jqscript");c.src="./js/jquery.js";var b=setInterval(function(){if(window.jQuery){clearInterval(b);$.ajaxPrefilter("json script",function(g){g.crossDomain=true});if(hmDevice.embedded&&hmDevice.desktop){$("li#toggle_fullscreen").show()}e(0);var f="Common.xsl";switch("topic"){case"project":f="Data Model Document Writer";break;case"project_topic":f="Data Model Document Writer > Common.xsl";break}f=$("<textarea/>").html(f).text();$("title").text(f)}},100)}if(window.addEventListener){window.addEventListener("load",initScripts,false)}else{if(window.attachEvent){window.attachEvent("onload",initScripts)}else{window.onload=initScripts}};
 helpman_mailrecipient = 'Support Staff <support@ec-software.com>';
 hmGetUrlParams = function() {/*! 
 * Enter code to save URL parameters to session variables inside the if clause below.

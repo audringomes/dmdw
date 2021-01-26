@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Custom.xsl",
 hmDescription:"The next xsl:templates are used to provide text for every major chapter.  They should not be removed, but left empty if wanted. As they are templates, xsl instructions can be...",
-hmPrevLink:"dmdw_fileset2_xsl.html",
+hmPrevLink:"dmdw_common_xsl.html",
 hmNextLink:"dmdw_html-output.html",
 hmParentLink:"dmdw_xsl-transform.html",
 hmBreadCrumbs:"<a href=\"dmdw_xsl-transform.html\">XSLT Stylesheets<\/a>",
