@@ -605,9 +605,13 @@ _method dm_xml_handler.topology_interaction_xml( fld, fld_interactions )
 		      l_cur_col << i_col
 		_endif
 
-		l_rules << _self.rules_xml(fld_interactions[i_fld])
-		
-		l_elem.elements.add(_self.field2_name_xml(i_fld,l_rules))
+		_local l_inter << fld_interactions[i_fld]
+		_local l_rules << l_inter[1]
+		_local l_rule_type << l_inter[2]
+		_local l_rules_xml << _self.rules_xml(l_rules)
+		_local l_fld2 << _self.field2_name_xml(i_fld,l_rule_type,l_rules_xml)
+
+		l_elem.elements.add(l_fld2)
 
 	_endloop
 
@@ -656,12 +660,13 @@ _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.field2_name_xml(p_fld, _optional p_elements)
+_method dm_xml_handler.field2_name_xml(p_fld, p_rule_type, _optional p_elements)
 	## 
 	##
 
 	l_atts << property_list.new_with(:name, p_fld.name.write_string,
-					 :external_name, p_fld.external_name.write_string)
+					 :external_name, p_fld.external_name.write_string,
+					 :rule_type,p_rule_type)
 	>> sw:simple_xml_thing.new(:field2,p_elements.default(rope.new()),l_atts)
 
 _endmethod

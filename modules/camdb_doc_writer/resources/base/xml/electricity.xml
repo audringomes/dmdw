@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.4.xsd" schema_version="1.4" creation_date="2021-01-25T12:23:24Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.4.xsd" schema_version="1.4" creation_date="2021-01-27T20:11:58Z">
 	<datamodel_info>
 		<dm_dataset>electricity</dm_dataset>
 		<dm_external_name>Electricity</dm_external_name>
@@ -8561,13 +8561,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="busbar" external_name="Busbar">
 				<field1 name="location_dv" external_name="Location Dv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_dv" external_name="Centreline Dv">
+						<field2 name="centreline_dv" external_name="Centreline Dv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>endsplit_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="transformer" external_name="Transformer">
-						<field2 name="dv_connection" external_name="Dv Connection">
+						<field2 name="dv_connection" external_name="Dv Connection" rule_type="explicit">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -8575,13 +8575,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="location_hv" external_name="Location Hv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_hv" external_name="Centreline Hv">
+						<field2 name="centreline_hv" external_name="Centreline Hv" rule_type="explicit">
 							<rule1>endsplit_link</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="transformer" external_name="Transformer">
-						<field2 name="hv_connection" external_name="Hv Connection">
+						<field2 name="hv_connection" external_name="Hv Connection" rule_type="explicit">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -8589,13 +8589,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="location_lv" external_name="Location Lv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_lv" external_name="Centreline Lv">
+						<field2 name="centreline_lv" external_name="Centreline Lv" rule_type="explicit">
 							<rule1>endsplit_link</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="transformer" external_name="Transformer">
-						<field2 name="lv_connection" external_name="Lv Connection">
+						<field2 name="lv_connection" external_name="Lv Connection" rule_type="explicit">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -8605,13 +8605,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="cable" external_name="Cable">
 				<field1 name="centreline_dv" external_name="Centreline Dv">
 					<collection2 name="joint" external_name="Joint">
-						<field2 name="location_dv" external_name="Location DV">
+						<field2 name="location_dv" external_name="Location DV" rule_type="explicit">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="substation_internals_link" external_name="Substation Internals Link">
-						<field2 name="external_pin_dv" external_name="External Pin Dv">
+						<field2 name="external_pin_dv" external_name="External Pin Dv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -8619,13 +8619,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="centreline_hv" external_name="Centreline Hv">
 					<collection2 name="joint" external_name="Joint">
-						<field2 name="location_hv" external_name="Location HV">
+						<field2 name="location_hv" external_name="Location HV" rule_type="explicit">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="substation_internals_link" external_name="Substation Internals Link">
-						<field2 name="external_pin_hv" external_name="External Pin Hv">
+						<field2 name="external_pin_hv" external_name="External Pin Hv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -8633,19 +8633,19 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="centreline_lv" external_name="Centreline Lv">
 					<collection2 name="joint" external_name="Joint">
-						<field2 name="location_lv" external_name="Location LV">
+						<field2 name="location_lv" external_name="Location LV" rule_type="explicit">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="substation_internals_link" external_name="Substation Internals Link">
-						<field2 name="external_pin_lv" external_name="External Pin Lv">
+						<field2 name="external_pin_lv" external_name="External Pin Lv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="supply_point" external_name="Supply Point">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="explicit">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -8655,29 +8655,29 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="internal_cable" external_name="Internal Cable">
 				<field1 name="centreline_dv" external_name="Centreline Dv">
 					<collection2 name="busbar" external_name="Busbar">
-						<field2 name="location_dv" external_name="Location Dv">
+						<field2 name="location_dv" external_name="Location Dv" rule_type="explicit">
 							<rule1>endsplit_link</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="substation_internals_link" external_name="Substation Internals Link">
-						<field2 name="internal_pin_dv" external_name="Internal Pin Dv">
+						<field2 name="internal_pin_dv" external_name="Internal Pin Dv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="switch" external_name="Switch">
-						<field2 name="primary_connection_dv" external_name="Primary Connection Dv">
+						<field2 name="primary_connection_dv" external_name="Primary Connection Dv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
-						<field2 name="secondary_connection_dv" external_name="Secondary Connection Dv">
+						<field2 name="secondary_connection_dv" external_name="Secondary Connection Dv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="transformer" external_name="Transformer">
-						<field2 name="dv_connection" external_name="Dv Connection">
+						<field2 name="dv_connection" external_name="Dv Connection" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -8685,29 +8685,29 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="centreline_hv" external_name="Centreline Hv">
 					<collection2 name="busbar" external_name="Busbar">
-						<field2 name="location_hv" external_name="Location Hv">
+						<field2 name="location_hv" external_name="Location Hv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>endsplit_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="substation_internals_link" external_name="Substation Internals Link">
-						<field2 name="internal_pin_hv" external_name="Internal Pin Hv">
+						<field2 name="internal_pin_hv" external_name="Internal Pin Hv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="switch" external_name="Switch">
-						<field2 name="primary_connection_hv" external_name="Primary Connection Hv">
+						<field2 name="primary_connection_hv" external_name="Primary Connection Hv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
-						<field2 name="secondary_connection_hv" external_name="Secondary Connection Hv">
+						<field2 name="secondary_connection_hv" external_name="Secondary Connection Hv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="transformer" external_name="Transformer">
-						<field2 name="hv_connection" external_name="Hv Connection">
+						<field2 name="hv_connection" external_name="Hv Connection" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -8715,29 +8715,29 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="centreline_lv" external_name="Centreline Lv">
 					<collection2 name="busbar" external_name="Busbar">
-						<field2 name="location_lv" external_name="Location Lv">
+						<field2 name="location_lv" external_name="Location Lv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>endsplit_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="substation_internals_link" external_name="Substation Internals Link">
-						<field2 name="internal_pin_lv" external_name="Internal Pin Lv">
+						<field2 name="internal_pin_lv" external_name="Internal Pin Lv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="switch" external_name="Switch">
-						<field2 name="primary_connection_lv" external_name="Primary Connection Lv">
+						<field2 name="primary_connection_lv" external_name="Primary Connection Lv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
-						<field2 name="secondary_connection_lv" external_name="Secondary Connection Lv">
+						<field2 name="secondary_connection_lv" external_name="Secondary Connection Lv" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="transformer" external_name="Transformer">
-						<field2 name="lv_connection" external_name="Lv Connection">
+						<field2 name="lv_connection" external_name="Lv Connection" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -8747,7 +8747,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="joint" external_name="Joint">
 				<field1 name="location_dv" external_name="Location DV">
 					<collection2 name="cable" external_name="Cable">
-						<field2 name="centreline_dv" external_name="Centreline Dv">
+						<field2 name="centreline_dv" external_name="Centreline Dv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -8755,7 +8755,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="location_hv" external_name="Location HV">
 					<collection2 name="cable" external_name="Cable">
-						<field2 name="centreline_hv" external_name="Centreline Hv">
+						<field2 name="centreline_hv" external_name="Centreline Hv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -8763,7 +8763,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="location_lv" external_name="Location LV">
 					<collection2 name="cable" external_name="Cable">
-						<field2 name="centreline_lv" external_name="Centreline Lv">
+						<field2 name="centreline_lv" external_name="Centreline Lv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -8773,7 +8773,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="substation_internals_link" external_name="Substation Internals Link">
 				<field1 name="external_pin_dv" external_name="External Pin Dv">
 					<collection2 name="cable" external_name="Cable">
-						<field2 name="centreline_dv" external_name="Centreline Dv">
+						<field2 name="centreline_dv" external_name="Centreline Dv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8781,7 +8781,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="external_pin_hv" external_name="External Pin Hv">
 					<collection2 name="cable" external_name="Cable">
-						<field2 name="centreline_hv" external_name="Centreline Hv">
+						<field2 name="centreline_hv" external_name="Centreline Hv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8789,7 +8789,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="external_pin_lv" external_name="External Pin Lv">
 					<collection2 name="cable" external_name="Cable">
-						<field2 name="centreline_lv" external_name="Centreline Lv">
+						<field2 name="centreline_lv" external_name="Centreline Lv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8797,7 +8797,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="internal_pin_dv" external_name="Internal Pin Dv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_dv" external_name="Centreline Dv">
+						<field2 name="centreline_dv" external_name="Centreline Dv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8805,7 +8805,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="internal_pin_hv" external_name="Internal Pin Hv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_hv" external_name="Centreline Hv">
+						<field2 name="centreline_hv" external_name="Centreline Hv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8813,7 +8813,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="internal_pin_lv" external_name="Internal Pin Lv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_lv" external_name="Centreline Lv">
+						<field2 name="centreline_lv" external_name="Centreline Lv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8823,7 +8823,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="supply_point" external_name="Supply Point">
 				<field1 name="location" external_name="Location">
 					<collection2 name="cable" external_name="Cable">
-						<field2 name="centreline_lv" external_name="Centreline Lv">
+						<field2 name="centreline_lv" external_name="Centreline Lv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -8833,7 +8833,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="switch" external_name="Switch">
 				<field1 name="primary_connection_dv" external_name="Primary Connection Dv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_dv" external_name="Centreline Dv">
+						<field2 name="centreline_dv" external_name="Centreline Dv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8841,7 +8841,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="primary_connection_hv" external_name="Primary Connection Hv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_hv" external_name="Centreline Hv">
+						<field2 name="centreline_hv" external_name="Centreline Hv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8849,7 +8849,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="primary_connection_lv" external_name="Primary Connection Lv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_lv" external_name="Centreline Lv">
+						<field2 name="centreline_lv" external_name="Centreline Lv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8857,7 +8857,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="secondary_connection_dv" external_name="Secondary Connection Dv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_dv" external_name="Centreline Dv">
+						<field2 name="centreline_dv" external_name="Centreline Dv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8865,7 +8865,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="secondary_connection_hv" external_name="Secondary Connection Hv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_hv" external_name="Centreline Hv">
+						<field2 name="centreline_hv" external_name="Centreline Hv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8873,7 +8873,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="secondary_connection_lv" external_name="Secondary Connection Lv">
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_lv" external_name="Centreline Lv">
+						<field2 name="centreline_lv" external_name="Centreline Lv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8883,13 +8883,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="transformer" external_name="Transformer">
 				<field1 name="dv_connection" external_name="Dv Connection">
 					<collection2 name="busbar" external_name="Busbar">
-						<field2 name="location_dv" external_name="Location Dv">
+						<field2 name="location_dv" external_name="Location Dv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_dv" external_name="Centreline Dv">
+						<field2 name="centreline_dv" external_name="Centreline Dv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8897,13 +8897,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="hv_connection" external_name="Hv Connection">
 					<collection2 name="busbar" external_name="Busbar">
-						<field2 name="location_hv" external_name="Location Hv">
+						<field2 name="location_hv" external_name="Location Hv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_hv" external_name="Centreline Hv">
+						<field2 name="centreline_hv" external_name="Centreline Hv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -8911,13 +8911,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="lv_connection" external_name="Lv Connection">
 					<collection2 name="busbar" external_name="Busbar">
-						<field2 name="location_lv" external_name="Location Lv">
+						<field2 name="location_lv" external_name="Location Lv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="internal_cable" external_name="Internal Cable">
-						<field2 name="centreline_lv" external_name="Centreline Lv">
+						<field2 name="centreline_lv" external_name="Centreline Lv" rule_type="explicit">
 							<rule1>connect</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>

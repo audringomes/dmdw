@@ -720,8 +720,7 @@ _method dm_xml_writer.full_topology_table()
 	_for i_name,i_manifold _over .manifolds.fast_keys_and_elements()
 	_loop
 
-		l_list_by_man[i_name] << hash_table.new()
-		l_list << l_list_by_man[i_name]
+		l_list << l_list_by_man[i_name] << hash_table.new()
 		
 		_local gfields << .fields_by_manifold[i_name]
 
@@ -755,11 +754,15 @@ _method dm_xml_writer.manifold_rules_for(a_fld, manifold_name)
 #		write(_self,".manifold_rules_for(",a_fld,%,,i_gfield)
 		
 		_try _with cond
-			(a,b) << mf.get_rules_for_geom_pair(a_fld,i_gfield)
-			_if a _is :do_nothing _and b _is :do_nothing
+#			(a,b) << mf.get_rules_for_geom_pair(a_fld,i_gfield)
+			# Using a deprecated method instead to get the type for now. A more
+			# permanent solution is needed.
+			(l_rules,l_type) << mf.topo_engine.get_rules_for_geom_pair(a_fld,i_gfield)
+#DEBUG write(a_fld,i_gfield,l_rules[1],l_rules[2],l_type)			
+			_if l_rules[1] _is :do_nothing _and l_rules[2] _is :do_nothing
 			_then _continue 
 			_endif
-			list[i_gfield]<<{a,b}
+			list[i_gfield] << {l_rules,l_type}
 		_when error
 			#write(i_gfield," - manifold_rules_for Error ",cond.report_contents_string)
 		_endtry

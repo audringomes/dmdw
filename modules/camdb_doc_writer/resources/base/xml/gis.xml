@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.4.xsd" schema_version="1.4" creation_date="2021-01-25T12:23:22Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.4.xsd" schema_version="1.4" creation_date="2021-01-27T20:11:57Z">
 	<datamodel_info>
 		<dm_dataset>gis</dm_dataset>
 		<dm_external_name>Gis</dm_external_name>
@@ -11845,85 +11845,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="car_park" external_name="Parkplatz">
 				<field1 name="location" external_name="Standort">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -11933,85 +11933,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="footpath" external_name="Fußweg">
 				<field1 name="centre_line" external_name="Mittelachse">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12021,85 +12021,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="hotel" external_name="Hotel">
 				<field1 name="location" external_name="Location">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12109,85 +12109,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="level_crossing" external_name="Level Crossing">
 				<field1 name="location" external_name="Location">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12197,85 +12197,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="min_road" external_name="Straße">
 				<field1 name="centre_line" external_name="Mittelachse">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12285,85 +12285,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="motorway" external_name="Motorway">
 				<field1 name="centre_line" external_name="Centreline">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="explicit">
 							<rule1>endsplit_link</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -12373,85 +12373,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="office" external_name="Büro">
 				<field1 name="location" external_name="Standort">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12461,85 +12461,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="pl_of_interest" external_name="Sehenswürdigkeit">
 				<field1 name="location" external_name="Standort">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12549,85 +12549,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="road_works" external_name="Road Works">
 				<field1 name="location" external_name="Location">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12637,85 +12637,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="roundabout" external_name="Kreisverkehr">
 				<field1 name="location" external_name="Standort">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12725,85 +12725,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="shop" external_name="Geschäft">
 				<field1 name="location" external_name="Standort">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12813,85 +12813,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="slip_road" external_name="Slip Road">
 				<field1 name="centre_line" external_name="Centreline">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>endsplit_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12901,85 +12901,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="town" external_name="Town">
 				<field1 name="rail_carpark" external_name="Rail Station Car Park">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
@@ -12989,85 +12989,85 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="trunk_road" external_name="Trunk Road">
 				<field1 name="centre_line" external_name="Centreline">
 					<collection2 name="car_park" external_name="Parkplatz">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="footpath" external_name="Fußweg">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="hotel" external_name="Hotel">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="level_crossing" external_name="Level Crossing">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="min_road" external_name="Straße">
-						<field2 name="centre_line" external_name="Mittelachse">
+						<field2 name="centre_line" external_name="Mittelachse" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="motorway" external_name="Motorway">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="office" external_name="Büro">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="road_works" external_name="Road Works">
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="roundabout" external_name="Kreisverkehr">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="shop" external_name="Geschäft">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="slip_road" external_name="Slip Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_carpark" external_name="Rail Station Car Park">
+						<field2 name="rail_carpark" external_name="Rail Station Car Park" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="trunk_road" external_name="Trunk Road">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="explicit">
 							<rule1>connect_ends</rule1>
 							<rule2>connect_ends</rule2>
 						</field2>
@@ -13079,13 +13079,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="rail_line" external_name="Railway Line">
 				<field1 name="centre_line" external_name="Centreline">
 					<collection2 name="rail_line" external_name="Railway Line">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_station" external_name="Rail Station">
+						<field2 name="rail_station" external_name="Rail Station" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -13095,13 +13095,13 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="town" external_name="Town">
 				<field1 name="rail_station" external_name="Rail Station">
 					<collection2 name="rail_line" external_name="Railway Line">
-						<field2 name="centre_line" external_name="Centreline">
+						<field2 name="centre_line" external_name="Centreline" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="rail_station" external_name="Rail Station">
+						<field2 name="rail_station" external_name="Rail Station" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -13113,45 +13113,45 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="brewery" external_name="Brauerei">
 				<field1 name="coverage" external_name="Deckung">
 					<collection2 name="brewery" external_name="Brauerei">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="cadastral_boundary" external_name="Cadastral Boundary">
-						<field2 name="boundary_line" external_name="Boundary Line">
+						<field2 name="boundary_line" external_name="Boundary Line" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="park" external_name="Park">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pub_rest" external_name="Gaststätte">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="coverage" external_name="Coverage">
+						<field2 name="coverage" external_name="Coverage" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -13159,45 +13159,45 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="location" external_name="Standort">
 					<collection2 name="brewery" external_name="Brauerei">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="cadastral_boundary" external_name="Cadastral Boundary">
-						<field2 name="boundary_line" external_name="Boundary Line">
+						<field2 name="boundary_line" external_name="Boundary Line" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="park" external_name="Park">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pub_rest" external_name="Gaststätte">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="coverage" external_name="Coverage">
+						<field2 name="coverage" external_name="Coverage" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -13207,45 +13207,45 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="cadastral_boundary" external_name="Cadastral Boundary">
 				<field1 name="boundary_line" external_name="Boundary Line">
 					<collection2 name="brewery" external_name="Brauerei">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="cadastral_boundary" external_name="Cadastral Boundary">
-						<field2 name="boundary_line" external_name="Boundary Line">
+						<field2 name="boundary_line" external_name="Boundary Line" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="park" external_name="Park">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pub_rest" external_name="Gaststätte">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="coverage" external_name="Coverage">
+						<field2 name="coverage" external_name="Coverage" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -13255,45 +13255,45 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="park" external_name="Park">
 				<field1 name="coverage" external_name="Deckung">
 					<collection2 name="brewery" external_name="Brauerei">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="cadastral_boundary" external_name="Cadastral Boundary">
-						<field2 name="boundary_line" external_name="Boundary Line">
+						<field2 name="boundary_line" external_name="Boundary Line" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="park" external_name="Park">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pub_rest" external_name="Gaststätte">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="coverage" external_name="Coverage">
+						<field2 name="coverage" external_name="Coverage" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -13303,45 +13303,45 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="pl_of_interest" external_name="Sehenswürdigkeit">
 				<field1 name="coverage" external_name="Deckung">
 					<collection2 name="brewery" external_name="Brauerei">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="cadastral_boundary" external_name="Cadastral Boundary">
-						<field2 name="boundary_line" external_name="Boundary Line">
+						<field2 name="boundary_line" external_name="Boundary Line" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="park" external_name="Park">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pub_rest" external_name="Gaststätte">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="coverage" external_name="Coverage">
+						<field2 name="coverage" external_name="Coverage" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -13351,45 +13351,45 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="pub_rest" external_name="Gaststätte">
 				<field1 name="location" external_name="Standort">
 					<collection2 name="brewery" external_name="Brauerei">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="cadastral_boundary" external_name="Cadastral Boundary">
-						<field2 name="boundary_line" external_name="Boundary Line">
+						<field2 name="boundary_line" external_name="Boundary Line" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="park" external_name="Park">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pub_rest" external_name="Gaststätte">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="coverage" external_name="Coverage">
+						<field2 name="coverage" external_name="Coverage" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -13399,45 +13399,45 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<collection1 name="town" external_name="Town">
 				<field1 name="coverage" external_name="Coverage">
 					<collection2 name="brewery" external_name="Brauerei">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="cadastral_boundary" external_name="Cadastral Boundary">
-						<field2 name="boundary_line" external_name="Boundary Line">
+						<field2 name="boundary_line" external_name="Boundary Line" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="park" external_name="Park">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pub_rest" external_name="Gaststätte">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="coverage" external_name="Coverage">
+						<field2 name="coverage" external_name="Coverage" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>split_link</rule1>
 							<rule2>connect</rule2>
 						</field2>
@@ -13445,45 +13445,45 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				</field1>
 				<field1 name="location" external_name="Location">
 					<collection2 name="brewery" external_name="Brauerei">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="cadastral_boundary" external_name="Cadastral Boundary">
-						<field2 name="boundary_line" external_name="Boundary Line">
+						<field2 name="boundary_line" external_name="Boundary Line" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="park" external_name="Park">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pl_of_interest" external_name="Sehenswürdigkeit">
-						<field2 name="coverage" external_name="Deckung">
+						<field2 name="coverage" external_name="Deckung" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="pub_rest" external_name="Gaststätte">
-						<field2 name="location" external_name="Standort">
+						<field2 name="location" external_name="Standort" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
 					</collection2>
 					<collection2 name="town" external_name="Town">
-						<field2 name="coverage" external_name="Coverage">
+						<field2 name="coverage" external_name="Coverage" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>split_link</rule2>
 						</field2>
-						<field2 name="location" external_name="Location">
+						<field2 name="location" external_name="Location" rule_type="default">
 							<rule1>connect</rule1>
 							<rule2>connect</rule2>
 						</field2>
