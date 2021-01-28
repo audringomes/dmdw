@@ -266,8 +266,16 @@ _method dm_xml_handler.field_xml( a_fld, _optional properties)
 	
 	l_rope.add(sw:simple_xml_thing.new(:external_name,{a_fld.external_name.write_string}))
 	l_rope.add(sw:simple_xml_thing.new(:name,{a_fld.name.write_string}))
+
+	l_size << _if (f_type << a_fld.type) _isnt _unset 
+		  _then >> f_type.size.write_string
+		  _else >> ""
+		  _endif
+	l_rope.add(sw:simple_xml_thing.new(:size,l_size))
+	
 	l_rope.add(l_main_xml)
 	l_rope.add(l_sub_xml)
+	
 	l_rope.add(sw:simple_xml_thing.new(:key,{a_fld.is_key?.write_string}))
 	l_rope.add(sw:simple_xml_thing.new(:mandatory,{a_fld.mandatory?.write_string}))
 	
@@ -301,7 +309,7 @@ _method dm_xml_handler.field_type_xml( a_field )
 	## 
 	## returns two xml objects.
 	## The first one is :main_type (:join,:geometry,:physical,:logical)
-	## The second one is :sub_type with properties taht depend on
+	## The second one is :sub_type with properties that depend on
 	## the main type
 	##
 
@@ -323,7 +331,7 @@ _method dm_xml_handler.field_type_xml( a_field )
 	l_rope << rope.new()
 	l_sub_atts << property_list.new()
 	_if (l_field_type << a_field.type) _isnt _unset
-	_then 	
+	_then
 		_if (l_enu << l_field_type.enumerator) _isnt _unset
 		_then
 			l_atts << property_list.new_with(:enumerator_name,l_enu.name)

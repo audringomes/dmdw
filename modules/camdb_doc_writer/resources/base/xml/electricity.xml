@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.4.xsd" schema_version="1.4" creation_date="2021-01-27T20:11:58Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.4.xsd" schema_version="1.4" creation_date="2021-01-28T14:43:53Z">
 	<datamodel_info>
 		<dm_dataset>electricity</dm_dataset>
 		<dm_external_name>Electricity</dm_external_name>
@@ -333,6 +333,7 @@
 			<field visible="True" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -346,6 +347,7 @@
 			<field visible="True" type="physical">
 				<external_name>Voltage</external_name>
 				<name>voltage</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="voltage" class="char16_vector"/>
@@ -361,6 +363,7 @@
 			<field visible="True" type="physical">
 				<external_name>Known As</external_name>
 				<name>known_as</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -374,6 +377,7 @@
 			<field visible="True" type="physical">
 				<external_name>Status</external_name>
 				<name>status</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="status" class="char16_vector"/>
@@ -388,6 +392,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -402,6 +407,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -416,6 +422,7 @@
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -430,6 +437,7 @@
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>Centreline</external_name>
 				<name>centreline</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_chain"/>
@@ -443,6 +451,7 @@
 			<field visible="False" type="geometry" mapped_to="centreline">
 				<external_name>Centreline Dv</external_name>
 				<name>centreline_dv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="centreline">
 					<geom_type type="chain"/>
@@ -457,6 +466,7 @@
 			<field visible="False" type="geometry" mapped_to="centreline">
 				<external_name>Centreline Hv</external_name>
 				<name>centreline_hv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="centreline">
 					<geom_type type="chain"/>
@@ -471,6 +481,7 @@
 			<field visible="False" type="geometry" mapped_to="centreline">
 				<external_name>Centreline Inactive</external_name>
 				<name>centreline_inactive</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="centreline">
 					<geom_type type="chain"/>
@@ -485,6 +496,7 @@
 			<field visible="False" type="geometry" mapped_to="centreline">
 				<external_name>Centreline Lv</external_name>
 				<name>centreline_lv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="centreline">
 					<geom_type type="chain"/>
@@ -499,6 +511,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -511,6 +524,7 @@
 			<field visible="True" type="logical">
 				<external_name>Length</external_name>
 				<name>length</name>
+				<size>1</size>
 				<field_type type="logical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -526,6 +540,7 @@
 			<field visible="True" type="physical">
 				<external_name>Customer Id</external_name>
 				<name>customer_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -539,6 +554,7 @@
 			<field visible="True" type="physical">
 				<external_name>Name</external_name>
 				<name>name</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -552,6 +568,7 @@
 			<field visible="True" type="physical">
 				<external_name>Address1</external_name>
 				<name>address1</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -565,6 +582,7 @@
 			<field visible="True" type="physical">
 				<external_name>Address2</external_name>
 				<name>address2</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -578,6 +596,7 @@
 			<field visible="True" type="physical">
 				<external_name>Usage</external_name>
 				<name>usage</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_int"/>
@@ -591,6 +610,7 @@
 			<field visible="True" type="physical">
 				<external_name>Unit sales</external_name>
 				<name>sales</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -604,6 +624,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -618,6 +639,7 @@
 			<field visible="False" type="join">
 				<external_name>dd!join268600936</external_name>
 				<name>dd!join268600936</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -632,6 +654,7 @@
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -646,6 +669,7 @@
 			<field visible="True" type="join">
 				<external_name>Supply Point</external_name>
 				<name>supply_point</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -662,6 +686,7 @@
 			<field visible="True" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -675,6 +700,7 @@
 			<field visible="True" type="physical">
 				<external_name>Voltage</external_name>
 				<name>voltage</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="voltage" class="char16_vector"/>
@@ -688,6 +714,7 @@
 			<field visible="True" type="physical">
 				<external_name>Known As</external_name>
 				<name>known_as</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -701,6 +728,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -715,6 +743,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -729,6 +758,7 @@
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -743,6 +773,7 @@
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>Location</external_name>
 				<name>location</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_point"/>
@@ -756,6 +787,7 @@
 			<field visible="False" type="geometry" mapped_to="location">
 				<external_name>Location DV</external_name>
 				<name>location_dv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="location">
 					<geom_type type="point"/>
@@ -770,6 +802,7 @@
 			<field visible="False" type="geometry" mapped_to="location">
 				<external_name>Location HV</external_name>
 				<name>location_hv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="location">
 					<geom_type type="point"/>
@@ -784,6 +817,7 @@
 			<field visible="False" type="geometry" mapped_to="location">
 				<external_name>Location LV</external_name>
 				<name>location_lv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="location">
 					<geom_type type="point"/>
@@ -798,6 +832,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -812,6 +847,7 @@
 			<field visible="False" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -825,6 +861,7 @@
 			<field visible="True" type="physical">
 				<external_name>Known As</external_name>
 				<name>known_as</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -838,6 +875,7 @@
 			<field visible="False" type="physical">
 				<external_name>text_id</external_name>
 				<name>text_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -851,6 +889,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -865,6 +904,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -879,6 +919,7 @@
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -893,6 +934,7 @@
 			<field visible="False" type="join">
 				<external_name>Substation Internals</external_name>
 				<name>substation_internals</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -907,6 +949,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Annotation</external_name>
 				<name>annotation</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -919,6 +962,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Location</external_name>
 				<name>location</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="area"/>
@@ -932,6 +976,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -946,6 +991,7 @@
 			<field visible="True" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -959,6 +1005,7 @@
 			<field visible="True" type="physical">
 				<external_name>Internal Label</external_name>
 				<name>internal_label</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -972,6 +1019,7 @@
 			<field visible="True" type="physical">
 				<external_name>Voltage</external_name>
 				<name>voltage</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="voltage" class="char16_vector"/>
@@ -986,6 +1034,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -1000,6 +1049,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -1014,6 +1064,7 @@
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -1028,6 +1079,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Annotation</external_name>
 				<name>annotation</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -1040,6 +1092,7 @@
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>External Pin</external_name>
 				<name>external_pin</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_point"/>
@@ -1053,6 +1106,7 @@
 			<field visible="False" type="geometry" mapped_to="external_pin">
 				<external_name>External Pin Dv</external_name>
 				<name>external_pin_dv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="external_pin">
 					<geom_type type="point"/>
@@ -1067,6 +1121,7 @@
 			<field visible="False" type="geometry" mapped_to="external_pin">
 				<external_name>External Pin Hv</external_name>
 				<name>external_pin_hv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="external_pin">
 					<geom_type type="point"/>
@@ -1081,6 +1136,7 @@
 			<field visible="False" type="geometry" mapped_to="external_pin">
 				<external_name>External Pin Lv</external_name>
 				<name>external_pin_lv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="external_pin">
 					<geom_type type="point"/>
@@ -1095,6 +1151,7 @@
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>Internal Pin</external_name>
 				<name>internal_pin</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_point"/>
@@ -1108,6 +1165,7 @@
 			<field visible="False" type="geometry" mapped_to="internal_pin">
 				<external_name>Internal Pin Dv</external_name>
 				<name>internal_pin_dv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="internal_pin">
 					<geom_type type="point"/>
@@ -1122,6 +1180,7 @@
 			<field visible="False" type="geometry" mapped_to="internal_pin">
 				<external_name>Internal Pin Hv</external_name>
 				<name>internal_pin_hv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="internal_pin">
 					<geom_type type="point"/>
@@ -1136,6 +1195,7 @@
 			<field visible="False" type="geometry" mapped_to="internal_pin">
 				<external_name>Internal Pin Lv</external_name>
 				<name>internal_pin_lv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="internal_pin">
 					<geom_type type="point"/>
@@ -1150,6 +1210,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1164,6 +1225,7 @@
 			<field visible="True" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_charci"/>
@@ -1177,6 +1239,7 @@
 			<field visible="True" type="physical">
 				<external_name>Customer Class</external_name>
 				<name>customer_class</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_charci"/>
@@ -1191,6 +1254,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -1205,6 +1269,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -1219,6 +1284,7 @@
 			<field visible="True" type="join">
 				<external_name>Customer</external_name>
 				<name>customer</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -1233,6 +1299,7 @@
 			<field visible="False" type="join">
 				<external_name>dd!join268600933</external_name>
 				<name>dd!join268600933</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -1247,6 +1314,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Label</external_name>
 				<name>label</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -1259,6 +1327,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Location</external_name>
 				<name>location</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="point"/>
@@ -1272,6 +1341,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1288,6 +1358,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -1301,6 +1372,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -1315,6 +1387,7 @@
 			<field visible="True" type="geometry">
 				<external_name>arc</external_name>
 				<name>arc</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1327,6 +1400,7 @@
 			<field visible="True" type="geometry">
 				<external_name>circle</external_name>
 				<name>circle</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1339,6 +1413,7 @@
 			<field visible="True" type="geometry">
 				<external_name>line</external_name>
 				<name>line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1351,6 +1426,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1363,6 +1439,7 @@
 			<field visible="True" type="geometry">
 				<external_name>point</external_name>
 				<name>point</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1375,6 +1452,7 @@
 			<field visible="True" type="geometry">
 				<external_name>trail</external_name>
 				<name>trail</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1389,6 +1467,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -1402,6 +1481,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -1416,6 +1496,7 @@
 			<field visible="True" type="geometry">
 				<external_name>dimension</external_name>
 				<name>dimension</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="dimension"/>
@@ -1428,6 +1509,7 @@
 			<field visible="True" type="geometry">
 				<external_name>dimension_line</external_name>
 				<name>dimension_line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1440,6 +1522,7 @@
 			<field visible="True" type="geometry">
 				<external_name>leader_line</external_name>
 				<name>leader_line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1452,6 +1535,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1464,6 +1548,7 @@
 			<field visible="True" type="geometry">
 				<external_name>text</external_name>
 				<name>text</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -1478,6 +1563,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -1491,6 +1577,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -1505,6 +1592,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 1</external_name>
 				<name>area_1</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1517,6 +1605,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 10</external_name>
 				<name>area_10</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1529,6 +1618,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 11</external_name>
 				<name>area_11</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1541,6 +1631,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 12</external_name>
 				<name>area_12</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1553,6 +1644,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 13</external_name>
 				<name>area_13</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1565,6 +1657,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 14</external_name>
 				<name>area_14</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1577,6 +1670,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 15</external_name>
 				<name>area_15</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1589,6 +1683,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 2</external_name>
 				<name>area_2</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1601,6 +1696,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 3</external_name>
 				<name>area_3</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1613,6 +1709,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 4</external_name>
 				<name>area_4</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1625,6 +1722,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 5</external_name>
 				<name>area_5</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1637,6 +1735,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 6</external_name>
 				<name>area_6</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1649,6 +1748,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 7</external_name>
 				<name>area_7</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1661,6 +1761,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 8</external_name>
 				<name>area_8</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1673,6 +1774,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Area 9</external_name>
 				<name>area_9</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -1685,6 +1787,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1699,6 +1802,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -1712,6 +1816,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -1726,6 +1831,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 1</external_name>
 				<name>line_1</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1738,6 +1844,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 10</external_name>
 				<name>line_10</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1750,6 +1857,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 11</external_name>
 				<name>line_11</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1762,6 +1870,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 12</external_name>
 				<name>line_12</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1774,6 +1883,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 13</external_name>
 				<name>line_13</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1786,6 +1896,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 14</external_name>
 				<name>line_14</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1798,6 +1909,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 15</external_name>
 				<name>line_15</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1810,6 +1922,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 2</external_name>
 				<name>line_2</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1822,6 +1935,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 3</external_name>
 				<name>line_3</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1834,6 +1948,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 4</external_name>
 				<name>line_4</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1846,6 +1961,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 5</external_name>
 				<name>line_5</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1858,6 +1974,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 6</external_name>
 				<name>line_6</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1870,6 +1987,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 7</external_name>
 				<name>line_7</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1882,6 +2000,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 8</external_name>
 				<name>line_8</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1894,6 +2013,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Line 9</external_name>
 				<name>line_9</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -1906,6 +2026,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1920,6 +2041,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -1933,6 +2055,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -1947,6 +2070,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1959,6 +2083,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 1</external_name>
 				<name>point_1</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1971,6 +2096,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 10</external_name>
 				<name>point_10</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1983,6 +2109,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 11</external_name>
 				<name>point_11</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -1995,6 +2122,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 12</external_name>
 				<name>point_12</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2007,6 +2135,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 13</external_name>
 				<name>point_13</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2019,6 +2148,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 14</external_name>
 				<name>point_14</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2031,6 +2161,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 15</external_name>
 				<name>point_15</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2043,6 +2174,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 2</external_name>
 				<name>point_2</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2055,6 +2187,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 3</external_name>
 				<name>point_3</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2067,6 +2200,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 4</external_name>
 				<name>point_4</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2079,6 +2213,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 5</external_name>
 				<name>point_5</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2091,6 +2226,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 6</external_name>
 				<name>point_6</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2103,6 +2239,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 7</external_name>
 				<name>point_7</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2115,6 +2252,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 8</external_name>
 				<name>point_8</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2127,6 +2265,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Point 9</external_name>
 				<name>point_9</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2141,6 +2280,7 @@
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -2154,6 +2294,7 @@
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -2168,6 +2309,7 @@
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2180,6 +2322,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 1</external_name>
 				<name>text_1</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2192,6 +2335,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 10</external_name>
 				<name>text_10</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2204,6 +2348,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 11</external_name>
 				<name>text_11</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2216,6 +2361,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 12</external_name>
 				<name>text_12</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2228,6 +2374,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 13</external_name>
 				<name>text_13</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2240,6 +2387,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 14</external_name>
 				<name>text_14</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2252,6 +2400,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 15</external_name>
 				<name>text_15</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2264,6 +2413,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 2</external_name>
 				<name>text_2</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2276,6 +2426,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 3</external_name>
 				<name>text_3</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2288,6 +2439,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 4</external_name>
 				<name>text_4</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2300,6 +2452,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 5</external_name>
 				<name>text_5</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2312,6 +2465,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 6</external_name>
 				<name>text_6</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2324,6 +2478,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 7</external_name>
 				<name>text_7</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2336,6 +2491,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 8</external_name>
 				<name>text_8</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2348,6 +2504,7 @@
 			<field visible="True" type="geometry">
 				<external_name>Text 9</external_name>
 				<name>text_9</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2364,6 +2521,7 @@
 			<field visible="True" type="physical">
 				<external_name>func_id</external_name>
 				<name>func_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -2379,6 +2537,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>universe_id</external_name>
 				<name>universe_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_int"/>
@@ -2394,6 +2553,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>world_id</external_name>
 				<name>world_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_int"/>
@@ -2409,6 +2569,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>evaluation</external_name>
 				<name>evaluation</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="drawing_function_evaluation" class="char16_vector"/>
@@ -2424,6 +2585,7 @@ one of: On Insert, Post-Redraw, Pre-Redraw
 			<field visible="True" type="physical">
 				<external_name>function_name</external_name>
 				<name>function_name</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -2439,6 +2601,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>param_1</external_name>
 				<name>param_1</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -2454,6 +2617,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>param_2</external_name>
 				<name>param_2</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -2469,6 +2633,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>param_3</external_name>
 				<name>param_3</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -2484,6 +2649,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>param_4</external_name>
 				<name>param_4</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -2499,6 +2665,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>owner_id</external_name>
 				<name>owner_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -2512,6 +2679,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>draw_order</external_name>
 				<name>draw_order</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_int"/>
@@ -2525,6 +2693,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>flags</external_name>
 				<name>flags</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -2538,6 +2707,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>children</external_name>
 				<name>children</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="False" result="records">
@@ -2552,6 +2722,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>extra_params</external_name>
 				<name>extra_params</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="False" result="records">
@@ -2566,6 +2737,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>function_geometries</external_name>
 				<name>function_geometries</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="False" result="records">
@@ -2580,6 +2752,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -2594,6 +2767,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>owner</external_name>
 				<name>owner</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -2610,6 +2784,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -2625,6 +2800,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>func_id</external_name>
 				<name>func_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -2640,6 +2816,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>param_name</external_name>
 				<name>param_name</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -2655,6 +2832,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>rwo_style_code</external_name>
 				<name>rwo_style_code</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -2670,6 +2848,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>app_style_code</external_name>
 				<name>app_style_code</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -2685,6 +2864,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>geom_code</external_name>
 				<name>geom_code</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -2700,6 +2880,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -2714,6 +2895,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -2728,6 +2910,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>function</external_name>
 				<name>function</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -2742,6 +2925,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -2756,6 +2940,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area</external_name>
 				<name>area</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -2768,6 +2953,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>dimension</external_name>
 				<name>dimension</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="dimension"/>
@@ -2780,6 +2966,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>linear</external_name>
 				<name>linear</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2792,6 +2979,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2804,6 +2992,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point</external_name>
 				<name>point</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -2816,6 +3005,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>raster_24bit</external_name>
 				<name>raster_24bit</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="raster"/>
@@ -2828,6 +3018,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>raster_8bit</external_name>
 				<name>raster_8bit</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="raster"/>
@@ -2840,6 +3031,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text</external_name>
 				<name>text</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -2854,6 +3046,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -2867,6 +3060,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -2881,6 +3075,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_1</external_name>
 				<name>line_1</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2893,6 +3088,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_10</external_name>
 				<name>line_10</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2905,6 +3101,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_11</external_name>
 				<name>line_11</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2917,6 +3114,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_12</external_name>
 				<name>line_12</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2929,6 +3127,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_13</external_name>
 				<name>line_13</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2941,6 +3140,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_14</external_name>
 				<name>line_14</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2953,6 +3153,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_15</external_name>
 				<name>line_15</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2965,6 +3166,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_2</external_name>
 				<name>line_2</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2977,6 +3179,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_3</external_name>
 				<name>line_3</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -2989,6 +3192,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_4</external_name>
 				<name>line_4</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -3001,6 +3205,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_5</external_name>
 				<name>line_5</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -3013,6 +3218,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_6</external_name>
 				<name>line_6</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -3025,6 +3231,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_7</external_name>
 				<name>line_7</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -3037,6 +3244,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_8</external_name>
 				<name>line_8</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -3049,6 +3257,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line_9</external_name>
 				<name>line_9</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -3061,6 +3270,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -3075,6 +3285,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3088,6 +3299,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3101,6 +3313,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3114,6 +3327,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3127,6 +3341,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3140,6 +3355,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3153,6 +3369,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3166,6 +3383,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3180,6 +3398,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3194,6 +3413,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3208,6 +3428,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -3222,6 +3443,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -3236,6 +3458,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -3248,6 +3471,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point</external_name>
 				<name>point</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -3262,6 +3486,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -3275,6 +3500,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Known As</external_name>
 				<name>known_as</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -3288,6 +3514,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Voltage</external_name>
 				<name>voltage</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="voltage" class="char16_vector"/>
@@ -3302,6 +3529,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Substation Internals Id</external_name>
 				<name>substation_internals_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -3315,6 +3543,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -3329,6 +3558,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -3343,6 +3573,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -3357,6 +3588,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Substation Internals</external_name>
 				<name>substation_internals</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -3371,6 +3603,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>Annotation</external_name>
 				<name>annotation</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3383,6 +3616,7 @@ no constraints
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>Location</external_name>
 				<name>location</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_chain"/>
@@ -3396,6 +3630,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="location">
 				<external_name>Location Dv</external_name>
 				<name>location_dv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="location">
 					<geom_type type="chain"/>
@@ -3410,6 +3645,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="location">
 				<external_name>Location Hv</external_name>
 				<name>location_hv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="location">
 					<geom_type type="chain"/>
@@ -3424,6 +3660,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="location">
 				<external_name>Location Lv</external_name>
 				<name>location_lv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="location">
 					<geom_type type="chain"/>
@@ -3438,6 +3675,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -3452,6 +3690,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3465,6 +3704,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3478,6 +3718,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3491,6 +3732,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3504,6 +3746,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3517,6 +3760,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3530,6 +3774,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3543,6 +3788,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3557,6 +3803,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3571,6 +3818,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3585,6 +3833,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -3599,6 +3848,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -3613,6 +3863,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line</external_name>
 				<name>line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -3625,6 +3876,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -3639,6 +3891,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3652,6 +3905,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3665,6 +3919,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3678,6 +3933,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3691,6 +3947,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3704,6 +3961,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3717,6 +3975,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -3730,6 +3989,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3744,6 +4004,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3758,6 +4019,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -3772,6 +4034,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -3786,6 +4049,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -3800,6 +4064,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -3812,6 +4077,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text</external_name>
 				<name>text</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3826,6 +4092,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -3839,6 +4106,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -3853,6 +4121,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -3865,6 +4134,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_1</external_name>
 				<name>text_1</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3877,6 +4147,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_10</external_name>
 				<name>text_10</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3889,6 +4160,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_11</external_name>
 				<name>text_11</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3901,6 +4173,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_12</external_name>
 				<name>text_12</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3913,6 +4186,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_13</external_name>
 				<name>text_13</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3925,6 +4199,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_14</external_name>
 				<name>text_14</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3937,6 +4212,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_15</external_name>
 				<name>text_15</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3949,6 +4225,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_2</external_name>
 				<name>text_2</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3961,6 +4238,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_3</external_name>
 				<name>text_3</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3973,6 +4251,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_4</external_name>
 				<name>text_4</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3985,6 +4264,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_5</external_name>
 				<name>text_5</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -3997,6 +4277,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_6</external_name>
 				<name>text_6</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -4009,6 +4290,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_7</external_name>
 				<name>text_7</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -4021,6 +4303,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_8</external_name>
 				<name>text_8</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -4033,6 +4316,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text_9</external_name>
 				<name>text_9</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -4047,6 +4331,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -4060,6 +4345,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Substation Id</external_name>
 				<name>substation_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -4073,6 +4359,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -4086,6 +4373,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -4100,6 +4388,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Busbars</external_name>
 				<name>busbars</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="False" result="records">
@@ -4114,6 +4403,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -4128,6 +4418,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Internal Cables</external_name>
 				<name>internal_cables</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="False" result="records">
@@ -4142,6 +4433,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Substation</external_name>
 				<name>substation</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -4156,6 +4448,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Switchs</external_name>
 				<name>switchs</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="False" result="records">
@@ -4170,6 +4463,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Transformers</external_name>
 				<name>transformers</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="False" result="records">
@@ -4184,6 +4478,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>Boundary</external_name>
 				<name>boundary</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -4196,6 +4491,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4210,6 +4506,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -4223,6 +4520,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -4236,6 +4534,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -4249,6 +4548,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -4262,6 +4562,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -4275,6 +4576,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -4288,6 +4590,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -4301,6 +4604,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -4315,6 +4619,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -4329,6 +4634,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -4343,6 +4649,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -4357,6 +4664,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -4371,6 +4679,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>dimension</external_name>
 				<name>dimension</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="dimension"/>
@@ -4383,6 +4692,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>dimension_line</external_name>
 				<name>dimension_line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -4395,6 +4705,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>leader_line</external_name>
 				<name>leader_line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -4407,6 +4718,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4419,6 +4731,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>text</external_name>
 				<name>text</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -4433,6 +4746,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -4446,6 +4760,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -4460,6 +4775,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4472,6 +4788,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_1</external_name>
 				<name>point_1</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4484,6 +4801,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_10</external_name>
 				<name>point_10</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4496,6 +4814,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_11</external_name>
 				<name>point_11</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4508,6 +4827,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_12</external_name>
 				<name>point_12</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4520,6 +4840,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_13</external_name>
 				<name>point_13</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4532,6 +4853,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_14</external_name>
 				<name>point_14</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4544,6 +4866,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_15</external_name>
 				<name>point_15</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4556,6 +4879,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_2</external_name>
 				<name>point_2</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4568,6 +4892,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_3</external_name>
 				<name>point_3</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4580,6 +4905,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_4</external_name>
 				<name>point_4</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4592,6 +4918,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_5</external_name>
 				<name>point_5</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4604,6 +4931,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_6</external_name>
 				<name>point_6</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4616,6 +4944,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_7</external_name>
 				<name>point_7</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4628,6 +4957,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_8</external_name>
 				<name>point_8</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4640,6 +4970,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point_9</external_name>
 				<name>point_9</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4654,6 +4985,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>file_id</external_name>
 				<name>file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -4667,6 +4999,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Source File</external_name>
 				<name>dxf_file</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -4680,6 +5013,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>ACAD Version</external_name>
 				<name>acad_version</name>
+				<size>6</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -4693,6 +5027,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Date Created</external_name>
 				<name>date_created</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_date"/>
@@ -4707,6 +5042,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Loaded by</external_name>
 				<name>loaded_by</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -4720,6 +5056,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Date &amp; Time Loaded</external_name>
 				<name>date_loaded</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_time"/>
@@ -4734,6 +5071,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>app_id</external_name>
 				<name>app_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_int"/>
@@ -4748,6 +5086,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -4762,6 +5101,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -4776,6 +5116,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>boundary</external_name>
 				<name>boundary</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -4788,6 +5129,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4802,6 +5144,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -4815,6 +5158,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Known As</external_name>
 				<name>known_as</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -4828,6 +5172,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Voltage</external_name>
 				<name>voltage</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="voltage" class="char16_vector"/>
@@ -4841,6 +5186,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Switch State</external_name>
 				<name>switch_state</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="switch_state" class="char16_vector"/>
@@ -4856,6 +5202,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Substation Internals Id</external_name>
 				<name>substation_internals_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -4869,6 +5216,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -4883,6 +5231,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -4897,6 +5246,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -4911,6 +5261,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Substation Internals</external_name>
 				<name>substation_internals</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -4925,6 +5276,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>Annotation</external_name>
 				<name>annotation</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -4937,6 +5289,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -4949,6 +5302,7 @@ no constraints
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>Primary Connection</external_name>
 				<name>primary_connection</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_point"/>
@@ -4962,6 +5316,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="primary_connection">
 				<external_name>Primary Connection Dv</external_name>
 				<name>primary_connection_dv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="primary_connection">
 					<geom_type type="point"/>
@@ -4976,6 +5331,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="primary_connection">
 				<external_name>Primary Connection Hv</external_name>
 				<name>primary_connection_hv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="primary_connection">
 					<geom_type type="point"/>
@@ -4990,6 +5346,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="primary_connection">
 				<external_name>Primary Connection Lv</external_name>
 				<name>primary_connection_lv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="primary_connection">
 					<geom_type type="point"/>
@@ -5004,6 +5361,7 @@ no constraints
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>Secondary Connection</external_name>
 				<name>secondary_connection</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_point"/>
@@ -5017,6 +5375,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="secondary_connection">
 				<external_name>Secondary Connection Dv</external_name>
 				<name>secondary_connection_dv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="secondary_connection">
 					<geom_type type="point"/>
@@ -5031,6 +5390,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="secondary_connection">
 				<external_name>Secondary Connection Hv</external_name>
 				<name>secondary_connection_hv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="secondary_connection">
 					<geom_type type="point"/>
@@ -5045,6 +5405,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="secondary_connection">
 				<external_name>Secondary Connection Lv</external_name>
 				<name>secondary_connection_lv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="secondary_connection">
 					<geom_type type="point"/>
@@ -5059,6 +5420,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>Switch Line</external_name>
 				<name>switch_line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -5073,6 +5435,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5086,6 +5449,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5099,6 +5463,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Attribute Name</external_name>
 				<name>name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5112,6 +5477,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Attribute Value</external_name>
 				<name>value</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5125,6 +5491,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>insert_id</external_name>
 				<name>insert_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5139,6 +5506,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>visible?</external_name>
 				<name>visible?</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_bool"/>
@@ -5153,6 +5521,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5166,6 +5535,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5179,6 +5549,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5193,6 +5564,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5207,6 +5579,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -5221,6 +5594,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -5235,6 +5609,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -5247,6 +5622,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text</external_name>
 				<name>text</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -5261,6 +5637,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5274,6 +5651,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5287,6 +5665,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5300,6 +5679,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5313,6 +5693,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5326,6 +5707,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5339,6 +5721,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5352,6 +5735,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5366,6 +5750,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5380,6 +5765,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5394,6 +5780,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -5408,6 +5795,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -5422,6 +5810,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area</external_name>
 				<name>area</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -5434,6 +5823,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -5448,6 +5838,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5461,6 +5852,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5474,6 +5866,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5487,6 +5880,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5500,6 +5894,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5513,6 +5908,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5526,6 +5922,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5539,6 +5936,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5553,6 +5951,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5567,6 +5966,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5581,6 +5981,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -5595,6 +5996,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -5609,6 +6011,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>dimension</external_name>
 				<name>dimension</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="dimension"/>
@@ -5621,6 +6024,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>dimension_line</external_name>
 				<name>dimension_line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -5633,6 +6037,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>leader_line</external_name>
 				<name>leader_line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -5645,6 +6050,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -5657,6 +6063,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>text</external_name>
 				<name>text</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -5671,6 +6078,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Name</external_name>
 				<name>name</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -5684,6 +6092,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Format</external_name>
 				<name>format</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -5698,6 +6107,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Orientation</external_name>
 				<name>orientation</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="drawing_orientation" class="char16_vector"/>
@@ -5713,6 +6123,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Width</external_name>
 				<name>width</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -5727,6 +6138,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Height</external_name>
 				<name>height</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -5741,6 +6153,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>drawing units</external_name>
 				<name>drawing_units_descr</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="dunits_descr" class="char16_vector"/>
@@ -5756,6 +6169,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -5770,6 +6184,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -5784,6 +6199,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>boundary</external_name>
 				<name>boundary</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -5796,6 +6212,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -5810,6 +6227,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5823,6 +6241,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5836,6 +6255,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5849,6 +6269,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Block Name</external_name>
 				<name>block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5862,6 +6283,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>X Scale</external_name>
 				<name>xscale</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -5876,6 +6298,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Y Scale</external_name>
 				<name>yscale</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -5890,6 +6313,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Orientation</external_name>
 				<name>orientation</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -5904,6 +6328,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5917,6 +6342,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -5930,6 +6356,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5944,6 +6371,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5958,6 +6386,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -5972,6 +6401,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -5986,6 +6416,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -6000,6 +6431,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -6012,6 +6444,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point</external_name>
 				<name>point</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -6026,6 +6459,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>func_id</external_name>
 				<name>func_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -6041,6 +6475,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>universe_id</external_name>
 				<name>universe_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6056,6 +6491,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>world_id</external_name>
 				<name>world_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6071,6 +6507,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>sys!transform</external_name>
 				<name>sys!transform</name>
+				<size>12</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_double"/>
@@ -6086,6 +6523,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>ace_name</external_name>
 				<name>ace_name</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -6101,6 +6539,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>display_scale</external_name>
 				<name>display_scale</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -6116,6 +6555,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -6130,6 +6570,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -6146,6 +6587,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -6159,6 +6601,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -6173,6 +6616,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_1</external_name>
 				<name>area_1</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6185,6 +6629,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_10</external_name>
 				<name>area_10</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6197,6 +6642,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_11</external_name>
 				<name>area_11</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6209,6 +6655,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_12</external_name>
 				<name>area_12</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6221,6 +6668,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_13</external_name>
 				<name>area_13</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6233,6 +6681,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_14</external_name>
 				<name>area_14</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6245,6 +6694,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_15</external_name>
 				<name>area_15</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6257,6 +6707,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_2</external_name>
 				<name>area_2</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6269,6 +6720,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_3</external_name>
 				<name>area_3</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6281,6 +6733,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_4</external_name>
 				<name>area_4</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6293,6 +6746,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_5</external_name>
 				<name>area_5</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6305,6 +6759,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_6</external_name>
 				<name>area_6</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6317,6 +6772,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_7</external_name>
 				<name>area_7</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6329,6 +6785,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_8</external_name>
 				<name>area_8</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6341,6 +6798,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area_9</external_name>
 				<name>area_9</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6353,6 +6811,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -6367,6 +6826,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6380,6 +6840,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6393,6 +6854,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6406,6 +6868,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6419,6 +6882,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6432,6 +6896,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6445,6 +6910,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6458,6 +6924,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6472,6 +6939,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6486,6 +6954,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6500,6 +6969,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -6514,6 +6984,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -6528,6 +6999,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>area</external_name>
 				<name>area</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -6540,6 +7012,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -6554,6 +7027,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6567,6 +7041,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6580,6 +7055,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6593,6 +7069,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6606,6 +7083,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6619,6 +7097,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6632,6 +7111,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -6645,6 +7125,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6659,6 +7140,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6673,6 +7155,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6687,6 +7170,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -6701,6 +7185,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -6715,6 +7200,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -6727,6 +7213,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point</external_name>
 				<name>point</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -6741,6 +7228,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -6754,6 +7242,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Voltage</external_name>
 				<name>voltage</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="voltage" class="char16_vector"/>
@@ -6768,6 +7257,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Status</external_name>
 				<name>status</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="status" class="char16_vector"/>
@@ -6782,6 +7272,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Substation Internals Id</external_name>
 				<name>substation_internals_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -6795,6 +7286,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -6809,6 +7301,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -6823,6 +7316,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -6837,6 +7331,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Substation Internals</external_name>
 				<name>substation_internals</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -6851,6 +7346,7 @@ no constraints
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>Centreline</external_name>
 				<name>centreline</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_chain"/>
@@ -6864,6 +7360,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="centreline">
 				<external_name>Centreline Dv</external_name>
 				<name>centreline_dv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="centreline">
 					<geom_type type="chain"/>
@@ -6878,6 +7375,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="centreline">
 				<external_name>Centreline Hv</external_name>
 				<name>centreline_hv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="centreline">
 					<geom_type type="chain"/>
@@ -6892,6 +7390,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="centreline">
 				<external_name>Centreline Inactive</external_name>
 				<name>centreline_inactive</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="centreline">
 					<geom_type type="simple_chain"/>
@@ -6905,6 +7404,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="centreline">
 				<external_name>Centreline Lv</external_name>
 				<name>centreline_lv</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="centreline">
 					<geom_type type="chain"/>
@@ -6919,6 +7419,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -6931,6 +7432,7 @@ no constraints
 			<field visible="True" type="logical">
 				<external_name>Length</external_name>
 				<name>length</name>
+				<size>1</size>
 				<field_type type="logical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -6946,6 +7448,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -6959,6 +7462,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Known As</external_name>
 				<name>known_as</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -6972,6 +7476,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>text_id</external_name>
 				<name>text_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -6986,6 +7491,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Substation Internals Id</external_name>
 				<name>substation_internals_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -6999,6 +7505,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Primary Voltage</external_name>
 				<name>primary_voltage</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="voltage" class="char16_vector"/>
@@ -7016,6 +7523,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Secondary Voltage</external_name>
 				<name>secondary_voltage</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="voltage" class="char16_vector"/>
@@ -7029,6 +7537,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -7043,6 +7552,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -7057,6 +7567,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!info_flags</external_name>
 				<name>int!info_flags</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="False" simple_result="False" result="records">
@@ -7071,6 +7582,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Substation Internals</external_name>
 				<name>substation_internals</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -7085,6 +7597,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>Annotation</external_name>
 				<name>annotation</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -7097,6 +7610,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="secondary_connection">
 				<external_name>Dv Connection</external_name>
 				<name>dv_connection</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="secondary_connection">
 					<geom_type type="point"/>
@@ -7111,6 +7625,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="secondary_connection">
 				<external_name>Hv Connection</external_name>
 				<name>hv_connection</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="secondary_connection">
 					<geom_type type="point"/>
@@ -7125,6 +7640,7 @@ no constraints
 			<field visible="False" type="geometry" mapped_to="secondary_connection">
 				<external_name>Lv Connection</external_name>
 				<name>lv_connection</name>
+				<size/>
 				<field_type type="geometry" mapped_to="True"/>
 				<field_sub_type mapped_to="secondary_connection">
 					<geom_type type="point"/>
@@ -7139,6 +7655,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -7151,6 +7668,7 @@ no constraints
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>Primary Connection</external_name>
 				<name>primary_connection</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_point"/>
@@ -7164,6 +7682,7 @@ no constraints
 			<field visible="True" type="geometry" mapped="True">
 				<external_name>Secondary Connection</external_name>
 				<name>secondary_connection</name>
+				<size/>
 				<field_type type="geometry" mapped="True"/>
 				<field_sub_type mapped="True">
 					<geom_type type="simple_point"/>
@@ -7179,6 +7698,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7192,6 +7712,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7205,6 +7726,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7218,6 +7740,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7231,6 +7754,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7244,6 +7768,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7257,6 +7782,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7270,6 +7796,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7284,6 +7811,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7298,6 +7826,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7312,6 +7841,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -7326,6 +7856,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -7340,6 +7871,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>line</external_name>
 				<name>line</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_chain"/>
@@ -7352,6 +7884,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -7366,6 +7899,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7379,6 +7913,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7392,6 +7927,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7405,6 +7941,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Block Name</external_name>
 				<name>block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7418,6 +7955,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>X Scale</external_name>
 				<name>xscale</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -7432,6 +7970,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Y Scale</external_name>
 				<name>yscale</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -7446,6 +7985,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Orientation</external_name>
 				<name>orientation</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -7460,6 +8000,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7473,6 +8014,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7486,6 +8028,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7500,6 +8043,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7514,6 +8058,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7528,6 +8073,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -7542,6 +8088,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -7556,6 +8103,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -7568,6 +8116,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>point</external_name>
 				<name>point</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -7582,6 +8131,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_id</external_name>
 				<name>dxf_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7595,6 +8145,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Parent Block</external_name>
 				<name>owner_block_name</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7608,6 +8159,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Layer</external_name>
 				<name>layer</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7621,6 +8173,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Line Type</external_name>
 				<name>line_style</name>
+				<size>256</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7634,6 +8187,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Colour</external_name>
 				<name>colour</name>
+				<size>5</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7647,6 +8201,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity Type</external_name>
 				<name>entity_type</name>
+				<size>31</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7660,6 +8215,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>entity_handle</external_name>
 				<name>entity_handle</name>
+				<size>16</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16"/>
@@ -7673,6 +8229,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Entity No</external_name>
 				<name>entity_num</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7687,6 +8244,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>geom_id</external_name>
 				<name>geom_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7701,6 +8259,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>dxf_file_id</external_name>
 				<name>dxf_file_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -7715,6 +8274,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -7729,6 +8289,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -7743,6 +8304,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -7755,6 +8317,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>text</external_name>
 				<name>text</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="text"/>
@@ -7769,6 +8332,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Id</external_name>
 				<name>id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -7782,6 +8346,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Routine Name</external_name>
 				<name>routine_name</name>
+				<size>64</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -7795,6 +8360,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Error Code</external_name>
 				<name>error_code</name>
+				<size>64</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -7808,6 +8374,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Origin</external_name>
 				<name>origin</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="swif!origin" class="char16_vector"/>
@@ -7823,6 +8390,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Severity</external_name>
 				<name>severity</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="swif!severity" class="char16_vector"/>
@@ -7838,6 +8406,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Status</external_name>
 				<name>status</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="swif!status" class="char16_vector"/>
@@ -7853,6 +8422,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Date Created</external_name>
 				<name>date_created</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_time"/>
@@ -7866,6 +8436,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Date Updated</external_name>
 				<name>date_updated</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_time"/>
@@ -7880,6 +8451,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Created By</external_name>
 				<name>created_by</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -7893,6 +8465,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Updated By</external_name>
 				<name>updated_by</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -7906,6 +8479,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Alternative</external_name>
 				<name>alternative</name>
+				<size>128</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -7919,6 +8493,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Design Info</external_name>
 				<name>design_info</name>
+				<size>64</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -7932,6 +8507,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Transient?</external_name>
 				<name>transient?</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_bool"/>
@@ -7946,6 +8522,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Description Id</external_name>
 				<name>description_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -7960,6 +8537,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Remarks Id</external_name>
 				<name>remarks_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -7974,6 +8552,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Related Object Id</external_name>
 				<name>related_object_id</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint64"/>
@@ -7988,6 +8567,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>Related Object Tid</external_name>
 				<name>related_object_tid</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_uint"/>
@@ -8002,6 +8582,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -8016,6 +8597,7 @@ no constraints
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -8030,6 +8612,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Description</external_name>
 				<name>description</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>text</field_sub_type>
 				<key>False</key>
@@ -8040,6 +8623,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!objects</external_name>
 				<name>int!objects</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="db_set_join" heterogeneous="True" simple_result="False">
@@ -8066,6 +8650,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!related_object</external_name>
 				<name>int!related_object</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="True" simple_result="True">
@@ -8092,6 +8677,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!related_urn</external_name>
 				<name>int!related_urn</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
@@ -8106,6 +8692,7 @@ no constraints
 			<field visible="False" type="join">
 				<external_name>int!urns</external_name>
 				<name>int!urns</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="False" result="records">
@@ -8120,6 +8707,7 @@ no constraints
 			<field visible="True" type="join">
 				<external_name>Remarks</external_name>
 				<name>remarks</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>text</field_sub_type>
 				<key>False</key>
@@ -8130,6 +8718,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>Location</external_name>
 				<name>location</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -8142,6 +8731,7 @@ no constraints
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
@@ -8154,6 +8744,7 @@ no constraints
 			<field visible="True" type="geometry">
 				<external_name>Region</external_name>
 				<name>region</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -8166,6 +8757,7 @@ no constraints
 			<field visible="False" type="logical">
 				<external_name>Origin Type</external_name>
 				<name>origin_type</name>
+				<size>32</size>
 				<field_type type="logical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -8179,6 +8771,7 @@ no constraints
 			<field visible="True" type="logical">
 				<external_name>Routine String</external_name>
 				<name>routine_string</name>
+				<size>64</size>
 				<field_type type="logical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -8192,6 +8785,7 @@ no constraints
 			<field visible="False" type="logical">
 				<external_name>Severity Type</external_name>
 				<name>severity_type</name>
+				<size>32</size>
 				<field_type type="logical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -8205,6 +8799,7 @@ no constraints
 			<field visible="False" type="logical">
 				<external_name>Status Type</external_name>
 				<name>status_type</name>
+				<size>32</size>
 				<field_type type="logical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -8220,6 +8815,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Zeichnungsnummer</external_name>
 				<name>name</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -8235,6 +8831,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Titel</external_name>
 				<name>title</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -8250,6 +8847,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Zeichnungsmaßstab</external_name>
 				<name>scale</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="drawing_scale" class="char16_vector"/>
@@ -8265,6 +8863,7 @@ one of: 1:1, 1:10, 1:100, 1:1000, 1:16, 1:25, 1:250, 1:32, 1:4, 1:50, 1:500, 1:6
 			<field visible="True" type="physical">
 				<external_name>Eingegeben durch</external_name>
 				<name>entered_by</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -8280,6 +8879,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Eingabedatum</external_name>
 				<name>date_entered</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_date"/>
@@ -8295,6 +8895,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Letzte Überarbeitung</external_name>
 				<name>revision_date</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_date"/>
@@ -8310,6 +8911,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Format</external_name>
 				<name>format</name>
+				<size>32</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_char16canon"/>
@@ -8325,6 +8927,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Ausrichtung</external_name>
 				<name>orientation</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="drawing_orientation" class="char16_vector"/>
@@ -8340,6 +8943,7 @@ one of: Landscape, Portrait
 			<field visible="True" type="physical">
 				<external_name>Breite</external_name>
 				<name>width</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -8355,6 +8959,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Höhe</external_name>
 				<name>height</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_float"/>
@@ -8370,6 +8975,7 @@ no constraints
 			<field visible="True" type="physical">
 				<external_name>Zeichnungseinheiten</external_name>
 				<name>drawing_units_descr</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="dunits_descr" class="char16_vector"/>
@@ -8385,6 +8991,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Feet, Hectometre, Ki
 			<field visible="True" type="physical">
 				<external_name>Auflösung</external_name>
 				<name>world_units_descr</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<enumerated enumerator_name="wunits_descr" class="char16_vector"/>
@@ -8400,6 +9007,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<field visible="False" type="physical">
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
+				<size>3</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_gis_element"/>
@@ -8414,6 +9022,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<field visible="False" type="physical">
 				<external_name>ds!version</external_name>
 				<name>ds!version</name>
+				<size>1</size>
 				<field_type type="physical"/>
 				<field_sub_type>
 					<phys_type type="ds_vstamp"/>
@@ -8428,6 +9037,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<field visible="False" type="join">
 				<external_name>dd!join326450</external_name>
 				<name>dd!join326450</name>
+				<size/>
 				<field_type type="join"/>
 				<field_sub_type>
 					<join_type join_type="follow" heterogeneous="False" simple_result="False" result="records">
@@ -8442,6 +9052,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<field visible="False" type="geometry">
 				<external_name>Grenze</external_name>
 				<name>boundary</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_area"/>
@@ -8454,6 +9065,7 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 			<field visible="False" type="geometry">
 				<external_name>meatball</external_name>
 				<name>meatball</name>
+				<size/>
 				<field_type type="geometry"/>
 				<field_sub_type>
 					<geom_type type="simple_point"/>
