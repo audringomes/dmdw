@@ -99,6 +99,8 @@ _method dm_xml_writer.new(ds, properties)
 	##     :dataset_specials (a class as dm_dataset_specials)
 	##     :products_for_version - collection of product names for which
 	##                             a version should be written.
+	##     :expand_tables? - If true (default), intermediate join
+	##                       tables are exported too if not in the set
 	##
 	## On instantiation it will gather data.
 	##
@@ -145,6 +147,16 @@ _method dm_xml_writer.init(ds, properties)
 	
 	>> _self
 
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.expand_tables?
+	## 
+	## Ask the properties
+	##
+	>> (l_p<<.properties) _isnt _unset _andif
+		l_p[:expand_tables?].default(_true) _is _true 
 _endmethod
 $
 
@@ -445,6 +457,7 @@ _method dm_xml_writer.process_categories_and_collections()
 	.ace_list << _self.categories_from_ace(l_ace_name)
 
 	_local l_cats << rope.new()
+	_local l_exported_cols << rope.new()
 	
 	_for i_key,i_cols _over .ace_list.fast_keys_and_elements()
 	_loop
@@ -461,6 +474,7 @@ _method dm_xml_writer.process_categories_and_collections()
 			_endif
 			l_xml << _self.process_collection( i_col, i_key )
 			l_cols.add(l_xml)		
+			l_exported_cols.add( i_col.descriptor )
 		_endloop
 
 		l_cats.add(dm_xml_handler.category_xml(l_cols, i_key))
@@ -474,12 +488,13 @@ _method dm_xml_writer.process_categories_and_collections()
 		_if i_col.skip_dm_export? _is _false _andif
 		    _not _self.ace_contains_col?( i_col )
 		_then
-			#DEBUG write(i_col,"  missed")
+			#DEBUG write(i_col,"  not in ace")
+			l_exported_cols.add( i_col.descriptor )
 			l_xml << _self.process_collection( i_col, :not_in_ace)
 			l_misses.add(l_xml)
 		_endif
 	_endloop
-
+	
 	_if l_misses.size > 0
 	_then
 		l_catname << write_string("Not in ACE '",l_ace_name,%')
@@ -488,10 +503,62 @@ _method dm_xml_writer.process_categories_and_collections()
 		l_cats.add(l_cat)
 	_endif
 
+	_if _self.expand_tables?
+	_then
+		# Check for intermediate join collections
+		_local l_table_list << _self.expand_tables(l_exported_cols)
+		_if l_table_list.size > 0
+		_then
+			l_xmls << rope.new()
+			_for i_table _over l_table_list.fast_elements()
+			_loop
+				#DEBUG write("Expand collections with ",i_table)
+				l_xmls.add(_self.process_collection( i_table, :expanded))
+			_endloop
+			
+			l_cat_prop << property_list.new_with(:name,"Expanded join tables",
+							     :type,"technical")
+			l_cat << sw:simple_xml_thing.new(:category,l_xmls,l_cat_prop)
+			l_cats.add(l_cat)
+		_endif
+	_endif
+
 	.categories << l_cats
 	
 	>> l_cats
 
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_writer.expand_tables(p_exported)
+	## 
+	## P_EXPORTED is a collection of dd_tables that are exported. This
+	## method search for intermediate tables to be exported when
+	## they are not yet in P_EXPORTED and returns those tables in a
+	## keyed_set
+	##
+
+	_local l_set << keyed_set.new()
+	
+	_for i_table _over p_exported.fast_elements()
+	_loop 
+		_for i_jf _over i_table.all_joins()
+		_loop
+			
+			_local l_tables << i_jf.target_tables
+			_for i_ttable _over l_tables.fast_elements()
+			_loop
+				_if _not p_exported.includes?(i_ttable)
+				_then l_set.add(i_ttable)
+				_endif
+
+			_endloop
+		_endloop
+	_endloop
+
+	>> l_set
+	
 _endmethod
 $
 

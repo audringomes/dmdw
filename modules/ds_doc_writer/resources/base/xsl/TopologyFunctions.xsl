@@ -102,7 +102,11 @@
   </xsl:template>
 
   <xsl:template match="field2" mode="static">
-    <div class="fld2sStatic geometry">
+    <div>
+      <xsl:attribute name="class">
+	<xsl:text>fld2sStatic geometry RuleType</xsl:text>
+	<xsl:value-of select="@rule_type"/>
+      </xsl:attribute>
       <span class="field2">
 	<xsl:value-of select="@external_name"/>
       </span>

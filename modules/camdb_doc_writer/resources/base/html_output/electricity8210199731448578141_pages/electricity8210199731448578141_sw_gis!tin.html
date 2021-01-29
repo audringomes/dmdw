@@ -1,0 +1,538 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Electricity - Collection sw_gis!tin</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
+      <div class="PageTitle float">sw_gis!tin</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="sw_gis!tin">
+            <tr class="TableName">
+               <td colspan="8">
+                  <h3 class="InTable">sw_gis!tin</h3>
+                  <div class="technical">sw_gis!tin</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="8">Category: Not in ACE 'electricity'</td>
+            </tr>
+            <tr>
+               <td colspan="8" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Type</th>
+               <th class="technical">Sub type</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr id="tin_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">tin_id</div>
+               </td>
+               				
+               <td class="technical">tin_id</td>
+               				
+               <td class="technical">3</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_gis_element
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>tin_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer
+                  der Größe 3 </td>
+               			</tr>
+            			
+            <tr id="aid" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">aid</div>
+               </td>
+               				
+               <td class="technical">aid</td>
+               				
+               <td class="technical">2</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>aid ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer
+                  der Größe 2
+                  	Standardwert: sw:integer_vector:[1-2] </td>
+               			</tr>
+            			
+            <tr id="rwo_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">rwo_id</div>
+               </td>
+               				
+               <td class="technical">rwo_id</td>
+               				
+               <td class="technical">3</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_gis_element
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
+               			</tr>
+            			
+            <tr id="rwo_code" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">rwo_code</div>
+               </td>
+               				
+               <td class="technical">rwo_code</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_ushort
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>rwo_code ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="app_code" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">app_code</div>
+               </td>
+               				
+               <td class="technical">app_code</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_ushort
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>app_code ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="meta_data_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">meta_data_id</div>
+               </td>
+               				
+               <td class="technical">meta_data_id</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>meta_data_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="bounds" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">bounds</div>
+               </td>
+               				
+               <td class="technical">bounds</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_double_as_int
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>bounds ist ein dd description!basic_fieldFeld der Klasse ds_bounding_box, z. B. a
+                  bounding_box
+                  	Standardwert: a bounding_box </td>
+               			</tr>
+            			
+            <tr id="ds!version" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_vstamp
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
+               			</tr>
+            			
+            <tr id="sites_hwm" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">sites_hwm</div>
+               </td>
+               				
+               <td class="technical">sites_hwm</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>sites_hwm ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="edges_hwm" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">edges_hwm</div>
+               </td>
+               				
+               <td class="technical">edges_hwm</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>edges_hwm ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="dsites_hwm" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">dsites_hwm</div>
+               </td>
+               				
+               <td class="technical">dsites_hwm</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>dsites_hwm ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="xmin" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">xmin</div>
+               </td>
+               				
+               <td class="technical">xmin</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>xmin ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="ymin" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ymin</div>
+               </td>
+               				
+               <td class="technical">ymin</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>ymin ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="xmax" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">xmax</div>
+               </td>
+               				
+               <td class="technical">xmax</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>xmax ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="ymax" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ymax</div>
+               </td>
+               				
+               <td class="technical">ymax</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_int
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>ymax ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="max_z_val" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">max_z_val</div>
+               </td>
+               				
+               <td class="technical">max_z_val</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_float
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>max_z_val ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
+                  	Standardwert: 0.000 </td>
+               			</tr>
+            			
+            <tr id="min_z_val" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">min_z_val</div>
+               </td>
+               				
+               <td class="technical">min_z_val</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_float
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>min_z_val ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
+                  	Standardwert: 0.000 </td>
+               			</tr>
+            			
+            <tr id="triangulated??" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">triangulated??</div>
+               </td>
+               				
+               <td class="technical">triangulated??</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_kleene
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>triangulated?? ist ein dd description!basic_fieldFeld der Klasse maybe, z. B. Maybe
+                  	Standardwert: Maybe </td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 8210199731448578141</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

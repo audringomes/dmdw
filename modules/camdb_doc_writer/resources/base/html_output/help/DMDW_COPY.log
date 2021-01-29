@@ -3,7 +3,7 @@
    ROBOCOPY     ::     Robust File Copy for Windows                              
 -------------------------------------------------------------------------------
 
-  Started : Monday, 25 January 2021 14:22:35
+  Started : Friday, 29 January 2021 16:22:32
    Source : E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\
      Dest : E:\boogert-lab\dmdw\modules\camdb_doc_writer\resources\base\html_output\help\
 
@@ -13,21 +13,22 @@
 
 ------------------------------------------------------------------------------
 
-	                  61	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\
+	                  62	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\
 	  *EXTRA File 		       0	DMDW_COPY.log
 	                  18	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\css\
 	                  10	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\example_html\
 	                  65	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\example_html\gis412391_pages\
 	                  61	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\images\
+	  *EXTRA File 		  234946	dmdw_clip0013.png
 	                  32	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\js\
-	                  47	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\jstopics\
+	                  48	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\jstopics\
 
 ------------------------------------------------------------------------------
 
                Total    Copied   Skipped  Mismatch    FAILED    Extras
     Dirs :         7         0         7         0         0         0
-   Files :       294         0       294         0         0         1
-   Bytes :    8.97 m         0    8.97 m         0         0         0
+   Files :       296         0       296         0         0         2
+   Bytes :    8.84 m         0    8.84 m         0         0   229.4 k
    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
-   Ended : Monday, 25 January 2021 14:22:35
+   Ended : Friday, 29 January 2021 16:22:32
 

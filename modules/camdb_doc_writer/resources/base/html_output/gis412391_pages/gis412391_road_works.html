@@ -23,6 +23,10 @@
 	
 	function ToggleTopology()
 	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
 	
       </script></head>
    <body onload="HighlightHash()">
@@ -32,19 +36,21 @@
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="road_works">
             <tr class="TableName">
-               <td colspan="7">
+               <td colspan="8">
                   <h3 class="InTable">Road Works</h3>
+                  <div class="technical">road_works</div>
                </td>
             </tr>
             <tr class="TableCategory">
-               <td colspan="7">Category: Road Network</td>
+               <td colspan="8">Category: Road Network</td>
             </tr>
             <tr>
-               <td colspan="7" class="description"></td>
+               <td colspan="8" class="description"></td>
             </tr>
             <tr class="HeadStyle">
                <th>Name</th>
                <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
                <th class="technical">Type</th>
                <th class="technical">Sub type</th>
                <th class="technical">Key?</th>
@@ -59,6 +65,8 @@
                </td>
                				
                <td class="technical">road_works_id</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -83,6 +91,8 @@
                				
                <td class="technical">code_name</td>
                				
+               <td class="technical">6</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -106,6 +116,8 @@
                				
                <td class="technical">date_begun</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -128,6 +140,8 @@
                </td>
                				
                <td class="technical">duration</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -153,6 +167,8 @@
                				
                <td class="technical">delay</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -175,6 +191,8 @@
                </td>
                				
                <td class="technical">status</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -222,6 +240,8 @@
                				
                <td class="technical">cost_func</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -244,6 +264,8 @@
                </td>
                				
                <td class="technical">description</td>
+               				
+               <td class="technical">255</td>
                				
                <td class="technical">physical</td>
                				
@@ -268,6 +290,8 @@
                				
                <td class="technical">rwo_id</td>
                				
+               <td class="technical">3</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -291,6 +315,8 @@
                				
                <td class="technical">ds!version</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -313,6 +339,8 @@
                </td>
                				
                <td class="technical">dd!join352166</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">join</td>
                				
@@ -340,6 +368,8 @@
                				
                <td class="technical">dd!join352169</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">
@@ -365,6 +395,8 @@
                </td>
                				
                <td class="technical">int!info_flags</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">join</td>
                				
@@ -392,6 +424,8 @@
                				
                <td class="technical">road_works</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">
@@ -416,6 +450,8 @@
                </td>
                				
                <td class="technical">road_workss</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">join</td>
                				
@@ -443,6 +479,8 @@
                				
                <td class="technical">annotation</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">geometry</td>
                				
                <td class="technical">
@@ -464,6 +502,8 @@
                </td>
                				
                <td class="technical">location</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">geometry</td>
                				
@@ -488,6 +528,8 @@
                				
                <td class="technical">meatball</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">geometry</td>
                				
                <td class="technical">
@@ -509,6 +551,8 @@
                </td>
                				
                <td class="technical">date_finished</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">logical</td>
                				

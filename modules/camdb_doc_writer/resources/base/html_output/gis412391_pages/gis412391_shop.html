@@ -23,6 +23,10 @@
 	
 	function ToggleTopology()
 	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
 	
       </script></head>
    <body onload="HighlightHash()">
@@ -32,19 +36,21 @@
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="shop">
             <tr class="TableName">
-               <td colspan="7">
+               <td colspan="8">
                   <h3 class="InTable">Geschäft</h3>
+                  <div class="technical">shop</div>
                </td>
             </tr>
             <tr class="TableCategory">
-               <td colspan="7">Category: Road Network</td>
+               <td colspan="8">Category: Road Network</td>
             </tr>
             <tr>
-               <td colspan="7" class="description"></td>
+               <td colspan="8" class="description"></td>
             </tr>
             <tr class="HeadStyle">
                <th>Name</th>
                <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
                <th class="technical">Type</th>
                <th class="technical">Sub type</th>
                <th class="technical">Key?</th>
@@ -59,6 +65,8 @@
                </td>
                				
                <td class="technical">name</td>
+               				
+               <td class="technical">32</td>
                				
                <td class="technical">physical</td>
                				
@@ -83,6 +91,8 @@
                				
                <td class="technical">street</td>
                				
+               <td class="technical">32</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -105,6 +115,8 @@
                </td>
                				
                <td class="technical">comments_id</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -129,6 +141,8 @@
                </td>
                				
                <td class="technical">status</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -182,6 +196,8 @@
                				
                <td class="technical">shop_size</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -228,6 +244,8 @@
                				
                <td class="technical">postcode</td>
                				
+               <td class="technical">32</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -250,6 +268,8 @@
                </td>
                				
                <td class="technical">rwo_id</td>
+               				
+               <td class="technical">3</td>
                				
                <td class="technical">physical</td>
                				
@@ -274,6 +294,8 @@
                				
                <td class="technical">ds!version</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -296,6 +318,8 @@
                </td>
                				
                <td class="technical">amenities</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">join</td>
                				
@@ -323,6 +347,8 @@
                				
                <td class="technical">amenities!int</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">
@@ -348,6 +374,8 @@
                				
                <td class="technical">comments</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">text</td>
@@ -367,6 +395,8 @@
                </td>
                				
                <td class="technical">objects_sponsored</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">join</td>
                				
@@ -395,6 +425,8 @@
                				
                <td class="technical">objects_sponsored!int</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">
@@ -420,6 +452,8 @@
                </td>
                				
                <td class="technical">sector</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">join</td>
                				
@@ -447,6 +481,8 @@
                				
                <td class="technical">serviced_play_area</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">
@@ -473,6 +509,8 @@
                				
                <td class="technical">location</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">geometry</td>
                				
                <td class="technical">
@@ -496,6 +534,8 @@
                				
                <td class="technical">meatball</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">geometry</td>
                				
                <td class="technical">
@@ -517,6 +557,8 @@
                </td>
                				
                <td class="technical">cartesian_x</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">logical</td>
                				
@@ -540,6 +582,8 @@
                </td>
                				
                <td class="technical">cartesian_y</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">logical</td>
                				

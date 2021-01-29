@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Electricity - Explicit Topology Rules</title>
+      <title>Electricity - Topology Rules</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -23,11 +23,15 @@
 	
 	function ToggleTopology()
 	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
 	
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
-      <div class="PageTitle float">Explicit Topology Rules (interactive)</div>
+      <div class="PageTitle float">Topology Rules (interactive)</div>
       <div class="ChapterInfo float">
          <p>When you select a Table on the left side, the geometries are shown. Then select one
             of the geometries of that table and the explicit topology rules are shown on the right</p>

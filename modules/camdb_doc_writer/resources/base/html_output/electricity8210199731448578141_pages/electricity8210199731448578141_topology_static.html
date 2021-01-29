@@ -1,7 +1,7 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Electricity - Explicit Topology Rules</title>
+      <title>Electricity - Topology Rules</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
@@ -23,14 +23,19 @@
 	
 	function ToggleTopology()
 	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
 	
       </script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
-      <div class="PageTitle float">Explicit Topology Rules (static)</div>
+      <div class="PageTitle float">Topology Rules (static)</div>
       <div class="ChapterInfo float">
          <p></p>
       </div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleExplicitTopologyRules();" onclick="ToggleExplicitTopologyRules();" checked="True"><label for="ToggleExplicitTopologyRules();"><span>Explicit Rules only</span></label></span></div>
       <div class="container">
          		
          <table class="dmTable dmTopology float">
@@ -51,7 +56,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">endsplit_link</span>
                            						</span></div>
@@ -62,7 +67,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Dv Connection</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Dv Connection</span><span class="rulesStatic">
                            							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -79,7 +84,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">endsplit_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -90,7 +95,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Hv Connection</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Hv Connection</span><span class="rulesStatic">
                            							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -107,7 +112,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">endsplit_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -118,7 +123,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Lv Connection</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Lv Connection</span><span class="rulesStatic">
                            							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -140,7 +145,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Joint</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location DV</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location DV</span><span class="rulesStatic">
                            							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -151,7 +156,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">External Pin Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">External Pin Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -168,7 +173,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Joint</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location HV</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location HV</span><span class="rulesStatic">
                            							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -179,7 +184,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">External Pin Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">External Pin Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -196,7 +201,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Joint</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location LV</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location LV</span><span class="rulesStatic">
                            							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -207,7 +212,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">External Pin Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">External Pin Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -218,7 +223,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Supply Point</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location</span><span class="rulesStatic">
                            							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -240,7 +245,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">endsplit_link</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -251,7 +256,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Internal Pin Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Internal Pin Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -262,12 +267,12 @@
                         <div class="TopologyHeadStyle name" colspan="4">Switch</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Primary Connection Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Primary Connection Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Secondary Connection Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Secondary Connection Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -278,7 +283,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Dv Connection</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Dv Connection</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -295,7 +300,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">endsplit_link</span>
                            						</span></div>
@@ -306,7 +311,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Internal Pin Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Internal Pin Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -317,12 +322,12 @@
                         <div class="TopologyHeadStyle name" colspan="4">Switch</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Primary Connection Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Primary Connection Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Secondary Connection Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Secondary Connection Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -333,7 +338,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Hv Connection</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Hv Connection</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -350,7 +355,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">endsplit_link</span>
                            						</span></div>
@@ -361,7 +366,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Internal Pin Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Internal Pin Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -372,12 +377,12 @@
                         <div class="TopologyHeadStyle name" colspan="4">Switch</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Primary Connection Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Primary Connection Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Secondary Connection Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Secondary Connection Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -388,7 +393,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Lv Connection</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Lv Connection</span><span class="rulesStatic">
                            							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect</span>
                            						</span></div>
@@ -410,7 +415,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">split_link</span>
                            						</span></div>
@@ -427,7 +432,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">split_link</span>
                            						</span></div>
@@ -444,7 +449,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">split_link</span>
                            						</span></div>
@@ -466,7 +471,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -483,7 +488,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -500,7 +505,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -517,7 +522,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -534,7 +539,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -551,7 +556,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -573,7 +578,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">split_link</span>
                            						</span></div>
@@ -595,7 +600,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -612,7 +617,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -629,7 +634,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -646,7 +651,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -663,7 +668,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -680,7 +685,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -702,7 +707,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">split_link</span>
                            						</span></div>
@@ -713,7 +718,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -730,7 +735,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">split_link</span>
                            						</span></div>
@@ -741,7 +746,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>
@@ -758,7 +763,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Location Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">split_link</span>
                            						</span></div>
@@ -769,7 +774,7 @@
                         <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
                      </div>
                      						
-                     <div class="fld2sStatic geometry"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
                            							<span class="rule1Static">connect</span><span class="betweenrules"></span>
                            							<span class="rule2Static">connect_ends</span>
                            						</span></div>

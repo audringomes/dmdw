@@ -23,6 +23,10 @@
 	
 	function ToggleTopology()
 	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
 	
       </script></head>
    <body onload="HighlightHash()">
@@ -36,7 +40,7 @@
       <div class="overview">
          <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Details</span></label></span></div>
          <div style="overflow-x:auto">
-            <table class="dmTable float">
+            <table class="dmTable float ">
                <tr class="HeadStyle">
                   <th class="name" colspan="3">Road Network</th>
                </tr>
@@ -113,7 +117,7 @@
             </table>
          </div>
          <div style="overflow-x:auto">
-            <table class="dmTable float">
+            <table class="dmTable float ">
                <tr class="HeadStyle">
                   <th class="name" colspan="3">Rail Network</th>
                </tr>
@@ -135,7 +139,7 @@
             </table>
          </div>
          <div style="overflow-x:auto">
-            <table class="dmTable float">
+            <table class="dmTable float ">
                <tr class="HeadStyle">
                   <th class="name" colspan="3">Cadastral Coverages</th>
                </tr>
@@ -177,7 +181,7 @@
             </table>
          </div>
          <div style="overflow-x:auto">
-            <table class="dmTable float">
+            <table class="dmTable float ">
                <tr class="HeadStyle">
                   <th class="name" colspan="3">Catalogues</th>
                </tr>
@@ -194,7 +198,7 @@
             </table>
          </div>
          <div style="overflow-x:auto">
-            <table class="dmTable float">
+            <table class="dmTable float ">
                <tr class="HeadStyle">
                   <th class="name" colspan="3">Non Topological Objects</th>
                </tr>
@@ -226,7 +230,7 @@
             </table>
          </div>
          <div style="overflow-x:auto">
-            <table class="dmTable float">
+            <table class="dmTable float ">
                <tr class="HeadStyle">
                   <th class="name" colspan="3">Drafting</th>
                </tr>
@@ -263,7 +267,7 @@
             </table>
          </div>
          <div style="overflow-x:auto">
-            <table class="dmTable float">
+            <table class="dmTable float ">
                <tr class="HeadStyle">
                   <th class="name" colspan="3">Drawing/Plotting</th>
                </tr>
@@ -275,7 +279,7 @@
             </table>
          </div>
          <div style="overflow-x:auto">
-            <table class="dmTable float">
+            <table class="dmTable float ">
                <tr class="HeadStyle">
                   <th class="name" colspan="3">Not in ACE 'electricity'</th>
                </tr>
@@ -427,6 +431,88 @@
                <tr class="overview">
                   <td class="overview_name"><a href="gis412391_dxf_lines.html" class="CollectionLink">DXF Lines</a></td>
                   <td class="InternalName technical">dxf_lines</td>
+                  <td class="overview_description"></td>
+               </tr>
+            </table>
+         </div>
+         <div style="overflow-x:auto">
+            <table class="dmTable float technical">
+               <tr class="HeadStyle">
+                  <th class="name" colspan="3">Expanded join tables</th>
+               </tr>
+               <tr class="HeadStyle">
+                  <th>Name</th>
+                  <th class="technical">Internal name</th>
+                  <th>Description</th>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!pub_rest_beer.html" class="CollectionLink">int!pub_rest_beer</a></td>
+                  <td class="InternalName technical">int!pub_rest_beer</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_sw_gis!drawing_function_param.html" class="CollectionLink">sw_gis!drawing_function_param</a></td>
+                  <td class="InternalName technical">sw_gis!drawing_function_param</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!min_road_road_annotati.html" class="CollectionLink">int!min_road_road_annotati</a></td>
+                  <td class="InternalName technical">int!min_road_road_annotati</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!min_road_pub_rest.html" class="CollectionLink">int!min_road_pub_rest</a></td>
+                  <td class="InternalName technical">int!min_road_pub_rest</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_swif!info_flag_to_object3.html" class="CollectionLink">swif!info_flag_to_object3</a></td>
+                  <td class="InternalName technical">swif!info_flag_to_object3</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!office_drawing.html" class="CollectionLink">int!office_drawing</a></td>
+                  <td class="InternalName technical">int!office_drawing</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!brewery_beer.html" class="CollectionLink">int!brewery_beer</a></td>
+                  <td class="InternalName technical">int!brewery_beer</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!hetero244932.html" class="CollectionLink">int!hetero244932</a></td>
+                  <td class="InternalName technical">int!hetero244932</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_swif!info_flag_to_object1.html" class="CollectionLink">swif!info_flag_to_object1</a></td>
+                  <td class="InternalName technical">swif!info_flag_to_object1</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!hetero244855.html" class="CollectionLink">int!hetero244855</a></td>
+                  <td class="InternalName technical">int!hetero244855</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!hetero244956.html" class="CollectionLink">int!hetero244956</a></td>
+                  <td class="InternalName technical">int!hetero244956</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!road_works_road_works.html" class="CollectionLink">int!road_works_road_works</a></td>
+                  <td class="InternalName technical">int!road_works_road_works</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_swif!info_flag_to_object2.html" class="CollectionLink">swif!info_flag_to_object2</a></td>
+                  <td class="InternalName technical">swif!info_flag_to_object2</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="gis412391_int!drawing_pl_of_interes.html" class="CollectionLink">int!drawing_pl_of_interes</a></td>
+                  <td class="InternalName technical">int!drawing_pl_of_interes</td>
                   <td class="overview_description"></td>
                </tr>
             </table>

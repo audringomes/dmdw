@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.4.xsd" schema_version="1.4" creation_date="2021-01-28T14:43:53Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-1.4.xsd" schema_version="1.4" creation_date="2021-01-29T15:22:17Z">
 	<datamodel_info>
 		<dm_dataset>electricity</dm_dataset>
 		<dm_external_name>Electricity</dm_external_name>
@@ -9074,6 +9074,318 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				<mandatory>False</mandatory>
 				<default_value>unset</default_value>
 				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+			</field>
+		</collection>
+	</category>
+	<category name="Expanded join tables" type="technical">
+		<collection name="int!drawing_pl_of_interes" external_name="int!drawing_pl_of_interes" category="expanded">
+			<field visible="True" type="physical">
+				<external_name>pl_of_interest_id</external_name>
+				<name>pl_of_interest_id</name>
+				<size>1</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_uint64"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>pl_of_interest_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field visible="True" type="physical">
+				<external_name>name1</external_name>
+				<name>name1</name>
+				<size>32</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_char16canon"/>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value></default_value>
+				<unset_value>unset</unset_value>
+				<help_text>name1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field visible="False" type="join">
+				<external_name>dd!join326450!rev</external_name>
+				<name>dd!join326450!rev</name>
+				<size/>
+				<field_type type="join"/>
+				<field_sub_type>
+					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
+						<target_table name="drawing" external_name="Zeichnung"/>
+					</join_type>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<help_text>dd!join326450!rev ist ein join Feld Datensatz aus &apos;drawing&apos; wird ausgegeben </help_text>
+			</field>
+		</collection>
+		<collection name="swif!info_flag_to_object2" external_name="swif!info_flag_to_object2" category="expanded">
+			<field visible="True" type="physical">
+				<external_name>id</external_name>
+				<name>id</name>
+				<size>1</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_uint64"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field visible="True" type="physical">
+				<external_name>urn</external_name>
+				<name>urn</name>
+				<size>256</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_char"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>urn ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </help_text>
+			</field>
+			<field visible="False" type="join">
+				<external_name>int!flag</external_name>
+				<name>int!flag</name>
+				<size/>
+				<field_type type="join"/>
+				<field_sub_type>
+					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
+						<target_table name="swif!info_flag" external_name="Information Flag"/>
+					</join_type>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<help_text>int!flag ist ein join Feld Datensatz aus &apos;swif!info_flag&apos; wird ausgegeben </help_text>
+			</field>
+		</collection>
+		<collection name="int!supply_point_customer" external_name="int!supply_point_customer" category="expanded">
+			<field visible="True" type="physical">
+				<external_name>customer_id</external_name>
+				<name>customer_id</name>
+				<size>1</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_uint64"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>customer_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field visible="True" type="physical">
+				<external_name>id1</external_name>
+				<name>id1</name>
+				<size>32</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_charci"/>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value></default_value>
+				<unset_value>unset</unset_value>
+				<help_text>id1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field visible="False" type="join">
+				<external_name>dd!join268600933!rev</external_name>
+				<name>dd!join268600933!rev</name>
+				<size/>
+				<field_type type="join"/>
+				<field_sub_type>
+					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
+						<target_table name="supply_point" external_name="Supply Point"/>
+					</join_type>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<help_text>dd!join268600933!rev ist ein join Feld Datensatz aus &apos;supply_point&apos; wird ausgegeben </help_text>
+			</field>
+			<field visible="False" type="join">
+				<external_name>dd!join268600936!rev</external_name>
+				<name>dd!join268600936!rev</name>
+				<size/>
+				<field_type type="join"/>
+				<field_sub_type>
+					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
+						<target_table name="customer" external_name="Customer"/>
+					</join_type>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<help_text>dd!join268600936!rev ist ein join Feld Datensatz aus &apos;customer&apos; wird ausgegeben </help_text>
+			</field>
+		</collection>
+		<collection name="swif!info_flag_to_object1" external_name="swif!info_flag_to_object1" category="expanded">
+			<field visible="True" type="physical">
+				<external_name>id</external_name>
+				<name>id</name>
+				<size>1</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_uint64"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field visible="True" type="physical">
+				<external_name>object_id</external_name>
+				<name>object_id</name>
+				<size>1</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_uint64"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>object_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field visible="True" type="physical">
+				<external_name>table_id</external_name>
+				<name>table_id</name>
+				<size>1</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_uint"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>table_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+		</collection>
+		<collection name="sw_gis!drawing_function_param" external_name="sw_gis!drawing_function_param" category="expanded">
+			<field visible="False" type="physical">
+				<external_name>func_id</external_name>
+				<name>func_id</name>
+				<size>1</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_uint64"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>func_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field visible="True" type="physical">
+				<external_name>name</external_name>
+				<name>name</name>
+				<size>32</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_char16canon"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field visible="False" type="physical">
+				<external_name>value_text_id</external_name>
+				<name>value_text_id</name>
+				<size>1</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_uint64"/>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>0</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>value_text_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+	Standardwert: 0 </help_text>
+			</field>
+			<field visible="False" type="join">
+				<external_name>drawing_function</external_name>
+				<name>drawing_function</name>
+				<size/>
+				<field_type type="join"/>
+				<field_sub_type>
+					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
+						<target_table name="drawing_function" external_name="Drawing Function"/>
+					</join_type>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<help_text>drawing_function ist ein join Feld Datensatz aus &apos;drawing_function&apos; wird ausgegeben </help_text>
+			</field>
+			<field visible="True" type="join">
+				<external_name>value</external_name>
+				<name>value</name>
+				<size/>
+				<field_type type="join"/>
+				<field_sub_type>text</field_sub_type>
+				<key>False</key>
+				<mandatory>False</mandatory>
+				<default_value>unset</default_value>
+				<help_text>value ist ein join Feld Text wird ausgegeben </help_text>
+			</field>
+		</collection>
+		<collection name="swif!info_flag_to_object3" external_name="swif!info_flag_to_object3" category="expanded">
+			<field visible="True" type="physical">
+				<external_name>id</external_name>
+				<name>id</name>
+				<size>1</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_uint64"/>
+				</field_sub_type>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field visible="True" type="physical">
+				<external_name>urn</external_name>
+				<name>urn</name>
+				<size>256</size>
+				<field_type type="physical"/>
+				<field_sub_type>
+					<phys_type type="ds_char"/>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value></default_value>
+				<unset_value>unset</unset_value>
+				<help_text>urn ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </help_text>
+			</field>
+			<field visible="False" type="join">
+				<external_name>int!flag</external_name>
+				<name>int!flag</name>
+				<size/>
+				<field_type type="join"/>
+				<field_sub_type>
+					<join_type join_type="follow" heterogeneous="False" simple_result="True" result="record">
+						<target_table name="swif!info_flag" external_name="Information Flag"/>
+					</join_type>
+				</field_sub_type>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<help_text>int!flag ist ein join Feld Datensatz aus &apos;swif!info_flag&apos; wird ausgegeben </help_text>
 			</field>
 		</collection>
 	</category>

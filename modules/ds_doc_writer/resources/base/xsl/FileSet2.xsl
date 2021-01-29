@@ -293,7 +293,7 @@
 	
 	<xsl:call-template name="HtmlHeader">
 	  <xsl:with-param name="path" select="'../'"/>
-	  <xsl:with-param name="title" select="concat($dm_external_name,' - Explicit Topology Rules')"/>
+	  <xsl:with-param name="title" select="concat($dm_external_name,' - Topology Rules')"/>
 	</xsl:call-template>
 
 	<body onload="HighlightHash()">
@@ -301,7 +301,7 @@
 	  <xsl:call-template name="Top">
 	    <xsl:with-param name="path" select="'../'"/>
 	  </xsl:call-template>
-	  <div class="PageTitle float">Explicit Topology Rules (interactive)</div>
+	  <div class="PageTitle float">Topology Rules (interactive)</div>
 	  <div class="ChapterInfo float">
 	    <xsl:call-template name="topology_info_interactive"/>
 	  </div>
@@ -325,7 +325,7 @@
 	
 	<xsl:call-template name="HtmlHeader">
 	  <xsl:with-param name="path" select="'../'"/>
-	  <xsl:with-param name="title" select="concat($dm_external_name,' - Explicit Topology Rules')"/>
+	  <xsl:with-param name="title" select="concat($dm_external_name,' - Topology Rules')"/>
 	</xsl:call-template>
 
 	<body onload="HighlightHash()">
@@ -333,11 +333,19 @@
 	  <xsl:call-template name="Top">
 	    <xsl:with-param name="path" select="'../'"/>
 	  </xsl:call-template>
-	  <div class="PageTitle float">Explicit Topology Rules (static)</div>
+	  <div class="PageTitle float">Topology Rules (static)</div>
 	  <div class="ChapterInfo float">
 	    <xsl:call-template name="topology_info_static"/>
 	  </div>
 	  
+	  <div class="buttonbar float">
+	    <xsl:call-template name="Button">
+	      <xsl:with-param name="function" select="'ToggleExplicitTopologyRules();'"/>
+	      <xsl:with-param name="label" select="'Explicit Rules only'"/>
+	      <xsl:with-param name="state" select="'True'"/>
+	    </xsl:call-template>
+	  </div>
+
 	  <xsl:call-template name="CreateTopologyContentStatic"/>
 	  
 	  <xsl:call-template name="footer">
@@ -584,6 +592,12 @@
     <td class="technical"><xsl:value-of select="."/></td>
   </xsl:template>
   
+  <xsl:template match="size">
+    <td class="technical">
+      <xsl:value-of select="."/>
+    </td>
+  </xsl:template>
+
   <xsl:template match="key">
     <td class="technical"><xsl:value-of select="."/></td>
   </xsl:template>
@@ -1036,7 +1050,11 @@
       
       <xsl:for-each select="datamodel/category">
 	<div style="overflow-x:auto">
-	  <table class="dmTable float">
+	  <table>
+	    <xsl:attribute name="class">
+	      <xsl:text>dmTable float </xsl:text>
+	      <xsl:value-of select="@type"/>
+	    </xsl:attribute>
 	    <tr class="HeadStyle">
 	      <th class="name" colspan="3"><xsl:value-of select="@name"/></th>
 	    </tr>
@@ -1080,6 +1098,7 @@
       </xsl:for-each>
     </div>
   </xsl:template>
+
   
   <xsl:template name="CollectionPages">
     <xsl:param name="subdir"/>
@@ -1131,19 +1150,23 @@
 	    <div style="overflow-x:auto">
 	      <table class="dmCollection float" id="{@name}">
 		<tr class="TableName">
-		  <td colspan="7"><h3 class="InTable"><xsl:value-of select="@external_name"/></h3></td>
+		  <td colspan="8">
+		    <h3 class="InTable"><xsl:value-of select="@external_name"/></h3>
+		    <div class="technical"><xsl:value-of select="@name"/></div>
+		  </td>
 		</tr>
 		<tr class="TableCategory">
-		  <td colspan="7">Category: <xsl:value-of select="ancestor::category/@name"/></td>
+		  <td colspan="8">Category: <xsl:value-of select="ancestor::category/@name"/></td>
 		</tr>
 		<tr>
-		  <td colspan="7" class="description">
+		  <td colspan="8" class="description">
 		    <xsl:value-of select="@description"/>
 		  </td>
 		</tr>
 		<tr class="HeadStyle">
 		  <th>Name</th>
 		  <th class="technical">Internal name</th>
+		  <th class="technical">Size</th>
 		  <th class="technical">Type</th>
 		  <th class="technical">Sub type</th>
 		  <th class="technical">Key?</th>

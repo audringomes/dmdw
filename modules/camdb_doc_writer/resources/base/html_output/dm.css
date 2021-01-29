@@ -100,6 +100,8 @@ table.InLineBox {
 	border-bottom-width: 0px;
 }
 .dmTable.IntTopol {
+    min-width: 300px;
+    float: right;
 }
 
 /* ROW STYLES */
@@ -311,15 +313,17 @@ input.ClearFilter {
 	display: none;
 }
 .col2s {
-	font-size: 0.8em;
+    font-size: 0.8em;
 }
-
 table.col2s {
     display: inline-table;
     min-width: 500px;
     /*! width: 400px; */
     background-color: #d5d5d5;
     margin-bottom: 0px;
+}
+.RuleTypedefault {
+    display: none;
 }
 
 .Fld2GeometryName {
@@ -386,7 +390,7 @@ td.rule2 {
 .fld2sStatic {
     font-size: smaller;
     padding-left: 9pt;
-    display: block;
+/*   display: block; Avoid to enable toggle explit rules */
 }
 .rulesStatic {
     color: green;

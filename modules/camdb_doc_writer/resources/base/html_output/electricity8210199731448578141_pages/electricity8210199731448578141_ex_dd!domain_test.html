@@ -1,0 +1,193 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Electricity - Collection ex_dd!domain_test</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../electricity8210199731448578141.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
+      <div class="PageTitle float">ex_dd!domain_test</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="ex_dd!domain_test">
+            <tr class="TableName">
+               <td colspan="8">
+                  <h3 class="InTable">ex_dd!domain_test</h3>
+                  <div class="technical">ex_dd!domain_test</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="8">Category: Not in ACE 'electricity'</td>
+            </tr>
+            <tr>
+               <td colspan="8" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Type</th>
+               <th class="technical">Sub type</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr id="type_name" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">type_name</div>
+               </td>
+               				
+               <td class="technical">type_name</td>
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>type_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="domain_name" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">domain_name</div>
+               </td>
+               				
+               <td class="technical">domain_name</td>
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>domain_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="type" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">type</div>
+               </td>
+               				
+               <td class="technical">type</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					symbol
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>The values of type are controlled by the enumerator  <span class="name technical"><a class="expandlink" onclick="ToggleId('dd!validation_type');" title="Click to Show/Hide details">dd!validation_type</a></span></td>
+               			</tr>
+            			
+            <tr id="value_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">value_id</div>
+               </td>
+               				
+               <td class="technical">value_id</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint64
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>value_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="value_text" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">value_text</div>
+               </td>
+               				
+               <td class="technical">value_text</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical">text</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td>value_text ist ein join Feld Text wird ausgegeben </td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 8210199731448578141</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

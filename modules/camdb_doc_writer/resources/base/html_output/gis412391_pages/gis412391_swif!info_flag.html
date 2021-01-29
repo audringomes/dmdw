@@ -23,6 +23,10 @@
 	
 	function ToggleTopology()
 	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
 	
       </script></head>
    <body onload="HighlightHash()">
@@ -32,19 +36,21 @@
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="swif!info_flag">
             <tr class="TableName">
-               <td colspan="7">
+               <td colspan="8">
                   <h3 class="InTable">Information Flag</h3>
+                  <div class="technical">swif!info_flag</div>
                </td>
             </tr>
             <tr class="TableCategory">
-               <td colspan="7">Category: Not in ACE 'electricity'</td>
+               <td colspan="8">Category: Not in ACE 'electricity'</td>
             </tr>
             <tr>
-               <td colspan="7" class="description"></td>
+               <td colspan="8" class="description"></td>
             </tr>
             <tr class="HeadStyle">
                <th>Name</th>
                <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
                <th class="technical">Type</th>
                <th class="technical">Sub type</th>
                <th class="technical">Key?</th>
@@ -59,6 +65,8 @@
                </td>
                				
                <td class="technical">id</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -83,6 +91,8 @@
                				
                <td class="technical">routine_name</td>
                				
+               <td class="technical">64</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -106,6 +116,8 @@
                				
                <td class="technical">error_code</td>
                				
+               <td class="technical">64</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -128,6 +140,8 @@
                </td>
                				
                <td class="technical">origin</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -179,6 +193,8 @@
                				
                <td class="technical">severity</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -226,6 +242,8 @@
                </td>
                				
                <td class="technical">status</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -281,6 +299,8 @@
                				
                <td class="technical">date_created</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -304,6 +324,8 @@
                </td>
                				
                <td class="technical">date_updated</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -330,6 +352,8 @@
                				
                <td class="technical">created_by</td>
                				
+               <td class="technical">32</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -352,6 +376,8 @@
                </td>
                				
                <td class="technical">updated_by</td>
+               				
+               <td class="technical">32</td>
                				
                <td class="technical">physical</td>
                				
@@ -376,6 +402,8 @@
                				
                <td class="technical">alternative</td>
                				
+               <td class="technical">128</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -399,6 +427,8 @@
                				
                <td class="technical">design_info</td>
                				
+               <td class="technical">64</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -421,6 +451,8 @@
                </td>
                				
                <td class="technical">transient?</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -446,6 +478,8 @@
                				
                <td class="technical">description_id</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -470,6 +504,8 @@
                				
                <td class="technical">remarks_id</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -493,6 +529,8 @@
                </td>
                				
                <td class="technical">related_object_id</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -519,6 +557,8 @@
                				
                <td class="technical">related_object_tid</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -544,6 +584,8 @@
                				
                <td class="technical">rwo_id</td>
                				
+               <td class="technical">3</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -566,6 +608,8 @@
                </td>
                				
                <td class="technical">ds!version</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -590,6 +634,8 @@
                				
                <td class="technical">description</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">text</td>
@@ -609,6 +655,8 @@
                </td>
                				
                <td class="technical">int!objects</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">join</td>
                				
@@ -673,6 +721,8 @@
                				
                <td class="technical">int!related_object</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">
@@ -736,6 +786,8 @@
                				
                <td class="technical">int!related_urn</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">
@@ -761,6 +813,8 @@
                </td>
                				
                <td class="technical">int!urns</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">join</td>
                				
@@ -788,6 +842,8 @@
                				
                <td class="technical">remarks</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">text</td>
@@ -807,6 +863,8 @@
                </td>
                				
                <td class="technical">location</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">geometry</td>
                				
@@ -830,6 +888,8 @@
                				
                <td class="technical">meatball</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">geometry</td>
                				
                <td class="technical">
@@ -852,6 +912,8 @@
                				
                <td class="technical">region</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">geometry</td>
                				
                <td class="technical">
@@ -873,6 +935,8 @@
                </td>
                				
                <td class="technical">origin_type</td>
+               				
+               <td class="technical">32</td>
                				
                <td class="technical">logical</td>
                				
@@ -897,6 +961,8 @@
                				
                <td class="technical">routine_string</td>
                				
+               <td class="technical">64</td>
+               				
                <td class="technical">logical</td>
                				
                <td class="technical">
@@ -920,6 +986,8 @@
                				
                <td class="technical">severity_type</td>
                				
+               <td class="technical">32</td>
+               				
                <td class="technical">logical</td>
                				
                <td class="technical">
@@ -942,6 +1010,8 @@
                </td>
                				
                <td class="technical">status_type</td>
+               				
+               <td class="technical">32</td>
                				
                <td class="technical">logical</td>
                				

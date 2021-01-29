@@ -23,6 +23,10 @@
 	
 	function ToggleTopology()
 	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
 	
       </script></head>
    <body onload="HighlightHash()">
@@ -32,19 +36,21 @@
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="office_view">
             <tr class="TableName">
-               <td colspan="7">
+               <td colspan="8">
                   <h3 class="InTable">Büroansicht</h3>
+                  <div class="technical">office_view</div>
                </td>
             </tr>
             <tr class="TableCategory">
-               <td colspan="7">Category: Non Topological Objects</td>
+               <td colspan="8">Category: Non Topological Objects</td>
             </tr>
             <tr>
-               <td colspan="7" class="description"></td>
+               <td colspan="8" class="description"></td>
             </tr>
             <tr class="HeadStyle">
                <th>Name</th>
                <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
                <th class="technical">Type</th>
                <th class="technical">Sub type</th>
                <th class="technical">Key?</th>
@@ -59,6 +65,8 @@
                </td>
                				
                <td class="technical">office_id</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -84,6 +92,8 @@
                				
                <td class="technical">name</td>
                				
+               <td class="technical">20</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -107,6 +117,8 @@
                </td>
                				
                <td class="technical">address1</td>
+               				
+               <td class="technical">20</td>
                				
                <td class="technical">physical</td>
                				
@@ -132,6 +144,8 @@
                				
                <td class="technical">address2</td>
                				
+               <td class="technical">20</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -155,6 +169,8 @@
                </td>
                				
                <td class="technical">company_company_name</td>
+               				
+               <td class="technical">32</td>
                				
                <td class="technical">physical</td>
                				
@@ -180,6 +196,8 @@
                				
                <td class="technical">company_chairman</td>
                				
+               <td class="technical">32</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -203,6 +221,8 @@
                </td>
                				
                <td class="technical">company_plc?</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -248,6 +268,8 @@
                				
                <td class="technical">company_type_of_business</td>
                				
+               <td class="technical">32</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -271,6 +293,8 @@
                </td>
                				
                <td class="technical">status</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -318,6 +342,8 @@
                				
                <td class="technical">rwo_id</td>
                				
+               <td class="technical">3</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -340,6 +366,8 @@
                </td>
                				
                <td class="technical">int!info_flags</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">join</td>
                				
@@ -366,6 +394,8 @@
                </td>
                				
                <td class="technical">logo</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">logical</td>
                				

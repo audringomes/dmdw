@@ -1,0 +1,480 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Collection sw_gis!datamodel_history</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../gis412391.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">sw_gis!datamodel_history</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();" checked="True"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="sw_gis!datamodel_history">
+            <tr class="TableName">
+               <td colspan="8">
+                  <h3 class="InTable">sw_gis!datamodel_history</h3>
+                  <div class="technical">sw_gis!datamodel_history</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="8">Category: Not in ACE 'electricity'</td>
+            </tr>
+            <tr>
+               <td colspan="8" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Type</th>
+               <th class="technical">Sub type</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr id="product_name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">product_name</div>
+               </td>
+               				
+               <td class="technical">product_name</td>
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>product_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="mod_name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">mod_name</div>
+               </td>
+               				
+               <td class="technical">mod_name</td>
+               				
+               <td class="technical">64</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>mod_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 64 </td>
+               			</tr>
+            			
+            <tr id="datamodel_name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">datamodel_name</div>
+               </td>
+               				
+               <td class="technical">datamodel_name</td>
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>datamodel_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="version" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">version</div>
+               </td>
+               				
+               <td class="technical">version</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               			</tr>
+            			
+            <tr id="sub_datamodel_name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">sub_datamodel_name</div>
+               </td>
+               				
+               <td class="technical">sub_datamodel_name</td>
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>sub_datamodel_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="checkpoint_name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">checkpoint_name</div>
+               </td>
+               				
+               <td class="technical">checkpoint_name</td>
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>checkpoint_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="min_read_version" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">min_read_version</div>
+               </td>
+               				
+               <td class="technical">min_read_version</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>min_read_version ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
+                  0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="min_write_version" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">min_write_version</div>
+               </td>
+               				
+               <td class="technical">min_write_version</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>min_write_version ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
+                  0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="time_applied" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">time_applied</div>
+               </td>
+               				
+               <td class="technical">time_applied</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_time
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>time_applied ist ein dd description!basic_fieldFeld der Klasse ds_time, z. B. 01.01.1970
+                  01:00:00
+                  	Standardwert: 01.01.1970 01:00:00 </td>
+               			</tr>
+            			
+            <tr id="product_version" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">product_version</div>
+               </td>
+               				
+               <td class="technical">product_version</td>
+               				
+               <td class="technical">16</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>product_version ist eine dd description!basic_fieldZeichenfolge-Feldgröße 16 </td>
+               			</tr>
+            			
+            <tr id="dd_version" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">dd_version</div>
+               </td>
+               				
+               <td class="technical">dd_version</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint64
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>dd_version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="parameter_string_id" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">parameter_string_id</div>
+               </td>
+               				
+               <td class="technical">parameter_string_id</td>
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_uint64
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>parameter_string_id ist ein dd description!basic_fieldFeld der Klasse integer, z.
+                  B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="implementer_name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">implementer_name</div>
+               </td>
+               				
+               <td class="technical">implementer_name</td>
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>implementer_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="implementer_comment" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">implementer_comment</div>
+               </td>
+               				
+               <td class="technical">implementer_comment</td>
+               				
+               <td class="technical">255</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>implementer_comment ist eine dd description!basic_fieldZeichenfolge-Feldgröße 255
+                  </td>
+               			</tr>
+            			
+            <tr id="user_name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">user_name</div>
+               </td>
+               				
+               <td class="technical">user_name</td>
+               				
+               <td class="technical">64</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>user_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 64 </td>
+               			</tr>
+            			
+            <tr id="user_comment" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">user_comment</div>
+               </td>
+               				
+               <td class="technical">user_comment</td>
+               				
+               <td class="technical">255</td>
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical">
+                  					ds_char16canon
+                  				</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td>user_comment ist eine dd description!basic_fieldZeichenfolge-Feldgröße 255 </td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

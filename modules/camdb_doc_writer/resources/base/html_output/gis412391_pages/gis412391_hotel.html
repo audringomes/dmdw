@@ -23,6 +23,10 @@
 	
 	function ToggleTopology()
 	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
 	
       </script></head>
    <body onload="HighlightHash()">
@@ -32,19 +36,21 @@
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="hotel">
             <tr class="TableName">
-               <td colspan="7">
+               <td colspan="8">
                   <h3 class="InTable">Hotel</h3>
+                  <div class="technical">hotel</div>
                </td>
             </tr>
             <tr class="TableCategory">
-               <td colspan="7">Category: Road Network</td>
+               <td colspan="8">Category: Road Network</td>
             </tr>
             <tr>
-               <td colspan="7" class="description"></td>
+               <td colspan="8" class="description"></td>
             </tr>
             <tr class="HeadStyle">
                <th>Name</th>
                <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
                <th class="technical">Type</th>
                <th class="technical">Sub type</th>
                <th class="technical">Key?</th>
@@ -59,6 +65,8 @@
                </td>
                				
                <td class="technical">name</td>
+               				
+               <td class="technical">20</td>
                				
                <td class="technical">physical</td>
                				
@@ -83,6 +91,8 @@
                				
                <td class="technical">address1</td>
                				
+               <td class="technical">20</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -106,6 +116,8 @@
                				
                <td class="technical">address2</td>
                				
+               <td class="technical">20</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -128,6 +140,8 @@
                </td>
                				
                <td class="technical">type</td>
+               				
+               <td class="technical">1</td>
                				
                <td class="technical">physical</td>
                				
@@ -175,6 +189,8 @@
                				
                <td class="technical">text_id</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -197,6 +213,8 @@
                </td>
                				
                <td class="technical">rwo_id</td>
+               				
+               <td class="technical">3</td>
                				
                <td class="technical">physical</td>
                				
@@ -221,6 +239,8 @@
                				
                <td class="technical">ds!version</td>
                				
+               <td class="technical">1</td>
+               				
                <td class="technical">physical</td>
                				
                <td class="technical">
@@ -244,6 +264,8 @@
                				
                <td class="technical">comments</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">join</td>
                				
                <td class="technical">text</td>
@@ -263,6 +285,8 @@
                </td>
                				
                <td class="technical">annotation</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">geometry</td>
                				
@@ -286,6 +310,8 @@
                				
                <td class="technical">location</td>
                				
+               <td class="technical"></td>
+               				
                <td class="technical">geometry</td>
                				
                <td class="technical">
@@ -308,6 +334,8 @@
                </td>
                				
                <td class="technical">meatball</td>
+               				
+               <td class="technical"></td>
                				
                <td class="technical">geometry</td>
                				
