@@ -12,8 +12,9 @@ $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
 ##
-## does the conversion of datamodel info to xml. Methods return
-## an xml element suitable for inclusion
+## does the conversion of datamodel info to xml. The methods
+## with _xml as suffix return an xml element suitable for
+## inclusion into the datamodel.xml
 ##
 def_slotted_exemplar(:dm_xml_handler,{})
 $
@@ -44,6 +45,42 @@ _method dm_xml_handler.xml_header_info
 								 ".xsd"),
 		   :schema_version,dm_xml_writer.schema_version_main
 			 )
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_handler.urn_handlers
+	##
+	## A property list keyed on elements that should have an urn
+	## attached in the XML. The value is the handler that will be
+	## used for those elements.
+	## 
+	>> property_list.new_with(:ace,urn_manager.get_handler_by_type(:record),
+				  :datamodel_history_record,urn_manager.get_handler_by_type(:record),
+				  :category,urn_manager.get_handler_by_type(:record),
+				  :manifold,sw:urn_manager.get_handler_by_type(:manifold),
+				  :collection,sw:urn_manager.get_handler_by_type(:dataset_collection),
+				  :record,urn_manager.get_handler_by_type(:record),
+				  :enumerator,urn_manager.get_handler_by_type(:record),
+				  :field,urn_manager.get_handler_by_type(:basic_field))
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_xml_handler.urn_prop_for( p_element_type, p_object )
+	## 
+	## Returns a property_list :urn,<urn> or when no handler could
+	## be found an empty property_list
+	##
+
+	>> _if (l_handler << _self.urn_handlers[p_element_type]) _isnt _unset 
+	   _then
+		   >> property_list.new_with(:urn,l_handler.get_urn_from_object( p_object))
+	   _else
+		   condition.raise(:warning,:string,write_string("Warning - no urn handler for type ",p_element_type))
+		   >> property_list.new()
+	   _endif
+		      
 _endmethod
 $
 
@@ -180,15 +217,16 @@ _method dm_xml_handler.datamodel_history_xml( ds, _optional props )
 	_loop
 		##DEBUG write(i_rec)
 		_local l_flds << rope.new()
-		i_xml << sw:simple_xml_thing.new(:datamodel_history_record,l_flds)
+		_local l_rec_props << _self.urn_prop_for(:record,i_rec)
+		i_xml << sw:simple_xml_thing.new(:datamodel_history_record,l_flds,l_rec_props)
 
 		_for i_fld _over l_fields.fast_elements()
 		_loop
 			l_props << property_list.new()
 			
 			i_fldname << i_fld.name
-			l_props[:key] << i_fld.is_key?
 			i_fldvalue << i_rec.perform(i_fldname).write_string
+			l_props[:key] << i_fld.is_key?
 			i_fldxml << sw:simple_xml_thing.new(i_fldname,{i_fldvalue},l_props)
 			l_flds.add(i_fldxml)
 		_endloop
@@ -210,49 +248,81 @@ _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.category_xml(value, name)
+_method dm_xml_handler.global_properties_xml(p_elements)
+	## 
+	## 
+	>> sw:simple_xml_thing.new(:global_properties,p_elements)
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.category_xml( p_elements, a_category, p_include_urn?)
 	## 
 	##
+
+	_local l_cat_props << property_list.new()
 	
-	_local l_cat_prop << property_list.new_with(:name,name)
-	>> sw:simple_xml_thing.new(:category,value,l_cat_prop)
+	_if a_category.is_a_datastore_object?
+	_then
+		l_cat_props[:name] << a_category.name.write_string
+		_if p_include_urn?
+		_then l_urn << _self.urn_prop_for(:record,a_category)
+		      l_cat_props.add_all(l_urn)
+		_endif
+		
+	_else
+		l_cat_props[:name] << a_category
+	_endif
+	
+	>> sw:simple_xml_thing.new(:category,p_elements,l_cat_props)
 
 _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.collection_xml( a_col , _optional properties)
+_method dm_xml_handler.collection_xml( a_col, properties, p_include_urn?)
 	## 
 	## 
-
-	_local l_rope << rope.new()
+	
+	
 	_local l_atts << property_list.new_with(:name, a_col.name.write_string,
 						:external_name, a_col.external_name.write_string)
+	_if p_include_urn? _is _true
+	_then l_urn << _self.urn_prop_for(:collection, a_col)
+	      l_atts.add_all(l_urn)
+	_endif
 	
+	_if properties _isnt _unset 
+	_then l_atts.add_all(properties)
+	_endif
+
 	_if (l_recex << a_col.record_exemplar).responds_to?(:default_geom_field_name)
 	_then l_atts[:default_geom_field_name] << l_recex.default_geom_field_name
 	_endif
 	
-	_if properties _isnt _unset 
-	_then l_atts.add_all(properties)
-	_endif
 	
-	>> sw:simple_xml_thing.new(:collection,l_rope,l_atts)
+	>> sw:simple_xml_thing.new(:collection,rope.new(),l_atts)
 
 _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.field_xml( a_fld, _optional properties)
+_method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
 	## 
 	## 
 
 	_local l_rope << rope.new()
+	
 	_local l_atts << property_list.new()
-
 	_if properties _isnt _unset 
 	_then l_atts.add_all(properties)
 	_endif
+
+	_if p_include_urn? _is _true
+	_then l_urn << _self.urn_prop_for(:field, a_fld)
+	      l_atts.add_all(l_urn)
+	_endif
+	
 
 	(l_main_xml, l_sub_xml) << _self.field_type_xml( a_fld )
 	l_atts[:type] << l_main_xml.attribute(:type)
@@ -262,7 +332,6 @@ _method dm_xml_handler.field_xml( a_fld, _optional properties)
 	_elif (m? << l_sub_xml.attribute(:mapped_to)) _isnt unset
 	_then l_atts[:mapped_to] << m?
 	_endif
-	
 	
 	l_rope.add(sw:simple_xml_thing.new(:external_name,{a_fld.external_name.write_string}))
 	l_rope.add(sw:simple_xml_thing.new(:name,{a_fld.name.write_string}))
@@ -402,9 +471,25 @@ _method dm_xml_handler.field_type_xml( a_field )
 _endmethod
 $
 
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.enumerators_xml( p_enumerators, p_include_urn? )
+	## 
+	## 
+
+	_local l_rope << rope.new()
+	_local l_enums_xml << sw:simple_xml_thing.new(:enumerators,l_rope)
+
+	_for a_enu _over p_enumerators.fast_elements()
+	_loop l_rope.add(_self.enumerator_xml(a_enu, p_include_urn?))
+	_endloop
+
+	>> l_enums_xml
+	
+_endmethod
+$
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.enumerator_xml(a_enum, _optional properties)
+_private _method dm_xml_handler.enumerator_xml(a_enum, p_include_urn?)
 	## 
 	## 
 
@@ -414,13 +499,13 @@ _method dm_xml_handler.enumerator_xml(a_enum, _optional properties)
 						:domain_class, a_enum.domain_class.write_string,
 						:storage_class, a_enum.storage_class)
 
-	_if properties _isnt _unset 
-	_then l_atts.add_all(properties)
+	_if p_include_urn? _is _true
+	_then l_urn << _self.urn_prop_for(:enumerator, a_enum.definition_record)
+	      l_atts.add_all(l_urn)
 	_endif
-
+	
 	_for i_val,i_str _over a_enum.values_and_strings.fast_keys_and_elements()
 	_loop
-		
 		val << sw:simple_xml_thing.new(:value,{i_str.write_string},
 					       property_list.new_with(:intvalue,i_val))
 		l_rope.add(val)
@@ -428,7 +513,6 @@ _method dm_xml_handler.enumerator_xml(a_enum, _optional properties)
 	
 	>> sw:simple_xml_thing.new(:enumerator, l_rope, l_atts)
 
-	
 _endmethod
 $
 
@@ -497,7 +581,7 @@ _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.manifolds_xml(p_manifolds)
+_method dm_xml_handler.manifolds_xml(p_manifolds, p_include_urn?)
 	## 
 	## 
 
@@ -505,7 +589,7 @@ _method dm_xml_handler.manifolds_xml(p_manifolds)
 	_for i_mf_name,i_manifold _over p_manifolds.fast_keys_and_elements()
 	_loop
 
-		l_mf_xml << _self.manifold_xml(i_mf_name,i_manifold)
+		l_mf_xml << _self.manifold_xml(i_mf_name, i_manifold, p_include_urn?)
 		l_elements.add(l_mf_xml)
 
 	_endloop
@@ -516,15 +600,23 @@ _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.manifold_xml(p_mf_name,p_manifold _optional p_elements)
+_method dm_xml_handler.manifold_xml(p_mf_name, p_manifold, p_include_urn?)
 	## 
 	## Returns a <manifold> element.
 	##
+	
+	_local l_atts << property_list.new_with(:name,p_mf_name)
+	
+	_if p_include_urn?
+	_then l_urn << _self.urn_prop_for( :manifold, p_manifold )
+	      l_atts.add_all(l_urn)
+	_endif
 
 	_local l_elems << rope.new()
 	l_elems.add(sw:simple_xml_thing.new(:manifold_name,p_manifold.manifold_name.write_string))
 	l_elems.add(sw:simple_xml_thing.new(:manifold_code,p_manifold.manifold_code.write_string))
-	>> sw:simple_xml_thing.new(:manifold,l_elems,property_list.new_with(:name,p_mf_name))
+	
+	>> sw:simple_xml_thing.new(:manifold,l_elems,l_atts)
 				   
 _endmethod
 $

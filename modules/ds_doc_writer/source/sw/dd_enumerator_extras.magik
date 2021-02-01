@@ -15,3 +15,12 @@ _method dd_enumerator.values_and_strings
 	>> .id2value
 _endmethod
 $
+
+_pragma(classify_level=basic, topic={dm_doc_writer})
+_method dd_enumerator.definition_record
+	## 
+	## Returns the record in which this enumerator is defined
+	##
+	>> _self.definition_table(.dd).at(_self.name)
+_endmethod
+$
