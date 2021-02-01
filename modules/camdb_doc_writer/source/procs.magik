@@ -36,7 +36,8 @@ _proc @dump_camdb()
 					:ace_name,"electricity",
 					:dataset_specials,_unset,
 					:output_file,l_file,
-					:update_file,l_upath
+					:update_file,l_upath,
+					:include_urns?,_true
 					      )
 	
 		_local du << dm_xml_writer.new(ds,props)

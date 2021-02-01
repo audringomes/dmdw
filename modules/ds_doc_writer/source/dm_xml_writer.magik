@@ -101,7 +101,8 @@ _method dm_xml_writer.new(ds, properties)
 	##                             a version should be written.
 	##     :expand_tables? - If true (default), intermediate join
 	##                       tables are exported too if not in the set
-	##
+	##     :include_urns? - If true (default false), it will
+	##                      include urns for 
 	## On instantiation it will gather data.
 	##
 	>> _clone.init(ds, properties )
@@ -182,8 +183,15 @@ _endmethod
 $
 
 _pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
-#_private _method dm_xml_writer.init_dataset_specials()
-_method dm_xml_writer.init_dataset_specials()
+_method dm_xml_writer.include_urns?
+	## 
+	## 
+	>> .properties[:include_urns?] _is _true 
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_xml_writer.init_dataset_specials()
 	## 
 	## .properties[:dataset_specials]
 	##
@@ -325,20 +333,34 @@ $
 _pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
 _private _method dm_xml_writer.categories_from_ace( ace_name )
 	## 
+	## returns an equality_property_list keyed on Category with a
+	## rope containing internal names of collections in the
+	## category
+	##
+	## When _self.include_urns? is true, it also returns the
+	## dataset_rwo_record's for the categories
 	##
 	
 	_local ace << _self.ace( ace_name )
-	ds_name << .ds.name
-		
-	list << equality_property_list.new()
-	_for i_elem _over ace.dataset_rwo_entries_for(ds_name)
-	_loop _if i_elem.type _is 1
-	      _then cat << list[i_elem.name.write_string] << rope.new()
-	      _else cat.add(i_elem.name.as_symbol())
-	      _endif
+	_local ds_name << .ds.name
+	
+	_local l_catrecs << equality_property_list.new()
+	_local list << equality_property_list.new()
+	_for i_rec _over ace.dataset_rwo_entries_for(ds_name)
+	_loop
+		_if i_rec.type _is 1
+		_then
+			_local l_name << i_rec.name.write_string
+			cat << list[l_name] << rope.new()
+			_if _self.include_urns? _is _true
+			_then l_catrecs[l_name] << i_rec
+			_endif
+		_else
+			cat.add(i_rec.name.as_symbol())
+		_endif
 	_endloop
 	
-	>> list
+	>> list,l_catrecs
 _endmethod
 $
 
@@ -454,7 +476,7 @@ _method dm_xml_writer.process_categories_and_collections()
 	##
 
 	_local l_ace_name << .properties[:ace_name]
-	.ace_list << _self.categories_from_ace(l_ace_name)
+	(.ace_list,l_catrecs) << _self.categories_from_ace(l_ace_name)
 
 	_local l_cats << rope.new()
 	_local l_exported_cols << rope.new()
@@ -473,11 +495,16 @@ _method dm_xml_writer.process_categories_and_collections()
 				_continue 
 			_endif
 			l_xml << _self.process_collection( i_col, i_key )
-			l_cols.add(l_xml)		
+			l_cols.add( l_xml )
 			l_exported_cols.add( i_col.descriptor )
 		_endloop
 
-		l_cats.add(dm_xml_handler.category_xml(l_cols, i_key))
+		_local l_key << _if _self.include_urns?
+				_then >> l_catrecs[i_key]
+				_else >> i_key
+				_endif
+		
+		l_cats.add(dm_xml_handler.category_xml(l_cols, l_key, _self.include_urns?))
 		
 	_endloop
 
@@ -577,7 +604,7 @@ _method dm_xml_writer.process_collection( col, category )
 	_endif
 	
 	.visible_fields << col.visible_fields
-	.collection_xml << dm_xml_handler.collection_xml( col, l_properties )
+	.collection_xml << dm_xml_handler.collection_xml( col, l_properties, _self.include_urns?)
 	
 	l_flds << _self.process_fields( col )
 
@@ -613,7 +640,7 @@ _method dm_xml_writer.process_field( fld )
 	_then properties.add_all(updates)
 	_endif
 	
-	(l_xml,l_main_type) << dm_xml_handler.field_xml(fld, properties)
+	(l_xml,l_main_type) << dm_xml_handler.field_xml(fld, properties, _self.include_urns?)
 	.collection_xml.elements.add(l_xml)
 		
 _endmethod
@@ -624,16 +651,11 @@ _method dm_xml_writer.process_enumerators()
 	## 
 	##
 
-	_local l_tag << :enumerators
-	_local l_rope << rope.new()
-
-	_for a_enu _over .ds.dd_enumerators(_true).fast_elements()
-	_loop l_rope.add(dm_xml_handler.enumerator_xml(a_enu))
-	_endloop
-
-	.enumerators << sw:simple_xml_thing.new(l_tag,l_rope)
+	_local l_source << .ds.dd_enumerators(_true)
+	.enumerators << dm_xml_handler.enumerators_xml(l_source, _self.include_urns?)
 
 	>> .enumerators
+
 _endmethod
 $
 
@@ -886,7 +908,7 @@ _pragma(classify_level=basic, topic={datamodel,xml,xml})
 _method dm_xml_writer.manifolds_xml()
 	## 
 	## 
-	>> dm_xml_handler.manifolds_xml(.manifolds)
+	>> dm_xml_handler.manifolds_xml(.manifolds, _self.include_urns?)
 _endmethod
 $
 

@@ -1,0 +1,58 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={urns})
+##
+## Class is used to generate urns for dataset fields
+##
+## A field urn consists of two name-value pairs:
+## a) dataset b) collection.  For example:
+##
+##    dataset=gis:collection=min_road
+##
+def_slotted_exemplar(:urn_basic_field_handler,
+{},
+{:urn_handler})
+$
+
+_pragma(classify_level=advanced, topic={urns})
+urn_basic_field_handler.define_shared_constant(:urn_type,
+	## 
+	## The type which this handler operates on, which in this case
+	## is :basic_field. The type is stored in the URN
+	## string, and used on retrieval to identify which handler to
+	## use.
+	##
+	:basic_field, :public)
+$
+
+_pragma(classify_level=advanced, topic={urns})
+_method urn_basic_field_handler.get_urn_from_object( a_field )
+	## 
+	## Return the URN for A_FIELD
+	##
+
+	_local l_owner << a_field.owner
+		
+        str << internal_text_output_stream.new()
+	_self.write_preamble( str )
+	_self.append_property( str, :dataset, l_owner.dataset.original_dataset_name )
+	_self.append_property( str, :collection, l_owner.name )
+	_self.append_property( str, :field, a_field.name )
+
+	_return _self.encode( str.string )
+
+_endmethod
+$
+
+urn_manager.register_urn_handler(urn_basic_field_handler)
+$
+
+urn_basic_field_handler.add_class(sw:sw_basic_field_mixin)
+$
