@@ -1,0 +1,239 @@
+.p_Heading2
+{
+font-size: 1.8rem;
+padding-top: 2.5rem;
+margin-bottom: 1rem;
+margin-top: 0rem;
+line-height: 110%;
+color: #005eb8;
+}
+.rwsp_inline_icon
+{
+vertical-align: sub;
+}
+.p_Heading3
+{
+font-size: 1.2rem;
+padding-top: 2.5rem;		
+margin-bottom: 1.2rem;	
+line-height: 110%;
+margin-top: 0;		
+}
+
+/* The originals from GE swstyles.css */
+a
+{
+	text-decoration: none;
+	color: #005eb8; /* GE Primary Blue */
+}
+a:hover,
+a:focus
+{
+	color: #00bf6f; /* GE accent green */
+}
+
+/* Images only in <p> context */
+p a[href*='.htm']
+{
+	background-image: url('../images/ico_link_sm.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 16px;
+}
+
+p a[href*='http'] 
+{
+	background-image: url('../images/external_link_12x12.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 16px;
+}
+
+p a[href*='.pdf']
+{
+	background-image: url('../images/pdf_link_12x12.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 16px;
+}
+
+
+/* List styles */
+ol, ul {
+    padding-left: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+li.p_Normal {
+    margin-bottom: .4rem;
+    line-height: 130%;
+    padding-left: .5rem;
+}
+
+
+/* Notes */
+
+.p_Notes::before {
+    content: 'NOTE';
+    background-color: #a5a6a8;
+    color: white;
+    padding: 1px;
+}
+
+.p_Notes {
+    padding-bottom: 4px;
+    padding-top: 3px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background: inherit;
+}
+
+span.f_Notes {
+    margin-left: 0.3rem;
+}
+
+
+.p_ImportantNotes::before {
+    content: ' IMPORTANT';
+    background-color: #fe5000;
+    border-bottom: solid 1px #fe5000;
+    padding: 1px;
+}
+
+.p_ImportantNotes {
+    background: inherit;
+    margin: 0.8125rem 0 0 0;
+    border-bottom: solid 1px #fe5000;
+    padding-bottom: 1rem;
+}
+
+span.f_ImportantNotes {
+    margin-left: 0.3rem;
+}
+
+/* Page footer */
+
+div.topicfooter {
+    width: 100%;
+    margin: 1.25rem auto 0 auto;
+    padding: 0 0 0.75rem 0;
+    border-style: solid;
+    border-width: thin 0 0 0;
+    border-color: #c0c0c0;
+    position: relative;
+    bottom: 0px;
+    display: block;
+    background-color: white;
+    font-style: ;
+    color: #305f9d;
+}
+.copyright {
+    font-size: 90%;
+    color: #63666a;
+}
+.feedback {
+    /*! color: #ffffff; */
+    /*! background-color: #63666a; */
+    display: inline-block;
+    /*! padding: 2px 2px; */
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    /*! font-size: 90%; */
+    /*! padding-top: 1px; */
+    /*! padding-bottom: 1px; */
+    vertical-align: bottom;
+}
+
+.last_update {
+    text-align: right;
+    /*! margin-right: 20px; */
+    color: #63666a;
+    font-size: 90%;
+}
+
+/* Toggles */
+.dropdown-toggle-body {
+}                                  
+
+a.dropdown-toggle {
+    cursor: pointer;
+    color: #004080;
+    font-size: 1.2rem;
+    line-height: 110%;
+}
+
+a.dropdown-toggle hover focus {
+    color: #004080;
+}
+
+table.Table_Toggle {
+    border-spacing: 0;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-left: solid 1px #005eb8;
+    margin-left: 0px;
+}
+
+.p_CodeExample {
+	font-size: 0.82rem;
+	margin: 0 0 0 0.6250rem;
+	margin-top: 0.6rem;
+	margin-bottom: 0px;
+	padding-left: 1rem;
+	padding-top: .4rem;
+	padding-bottom: .6rem;
+	margin-bottom: 1rem;
+	background-color: #f4f5f8;
+	border: solid 1px #d7d8db;
+	max-height: 350px;
+	overflow: auto;
+	page-break-inside: avoid;
+} 
+
+/* Table styles */
+/* The table styles themselves (swDefault etc.) are defined in the hmprojectstyles.css */
+table.swDefault {
+    margin: 24px auto 24px 4px;
+}
+table.swDefaultHeader {
+    margin: 24px auto 24px 4px;
+} 
+table.swDefaultHeaderStriped {
+    margin: 24px auto 24px 4px;
+}
+table.swDefaultHeader tr:first-child {
+    color: #004080;
+    font-weight: bold;
+}
+table.swDefaultHeaderStriped tr:first-child {
+    color: #004080;
+    font-weight: bold;
+}
+td.swDefaultHeaderStriped {
+    border: solid thin white;
+}
+
+.p_Figure {
+    font-size: 1.27rem;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+span.f_Figure {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #005eb8;
+    font-variant: small-caps;
+    text-decoration-line: underline;
+}                     
+table.Figure {
+    width: 100%;
+    background-color: #F4F5F8;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-left: solid 1px #005eb8;
+}
