@@ -10,7 +10,7 @@ _package sw
 remex(:dm_xml_handler)
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 ##
 ## does the conversion of datamodel info to xml. The methods
 ## with _xml as suffix return an xml element suitable for
@@ -19,7 +19,7 @@ _pragma(classify_level=advanced, topic={dmdw,xml})
 def_slotted_exemplar(:dm_xml_handler,{})
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 dm_xml_handler.define_shared_constant(
 	:topology_field_sorter,
 	_proc @sort(a,b)
@@ -32,7 +32,7 @@ dm_xml_handler.define_shared_constant(
 	:public)
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 ##
 ## The XML namespace and schema properties of <dmdw:datamodel>
 ##
@@ -48,7 +48,7 @@ _method dm_xml_handler.xml_header_info
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_handler.urn_handlers
 	##
 	## A property list keyed on elements that should have an urn
@@ -66,7 +66,7 @@ _method dm_xml_handler.urn_handlers
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_handler.urn_prop_for( p_element_type, p_object )
 	## 
 	## Returns a property_list :urn,<urn> or when no handler could
@@ -84,7 +84,7 @@ _method dm_xml_handler.urn_prop_for( p_element_type, p_object )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.datamodel_xml( ds, properties)
 	##
 	## Creates the top level element
@@ -141,7 +141,7 @@ _method dm_xml_handler.datamodel_xml( ds, properties)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _private _method dm_xml_handler.datamodel_version_of(ds,properties)
 	## 
 	## Returns a datamodel_version element with "0" when it is
@@ -179,7 +179,7 @@ _private _method dm_xml_handler.datamodel_version_of(ds,properties)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.datamodel_history_xml( ds, _optional props )
 	##
 	## returns from ds collection :sw_gis!datamodel_history
@@ -244,7 +244,7 @@ _method dm_xml_handler.datamodel_history_xml( ds, _optional props )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.datamodel_detail_xml(key,value,_optional atts)
 	## 
 	## 
@@ -252,7 +252,7 @@ _method dm_xml_handler.datamodel_detail_xml(key,value,_optional atts)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.global_properties_xml(p_elements)
 	## 
 	## 
@@ -260,7 +260,7 @@ _method dm_xml_handler.global_properties_xml(p_elements)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.category_xml( p_elements, a_category, p_include_urn?)
 	## 
 	##
@@ -284,7 +284,7 @@ _method dm_xml_handler.category_xml( p_elements, a_category, p_include_urn?)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.collection_xml( a_col, properties, p_include_urn?)
 	## 
 	## 
@@ -311,7 +311,7 @@ _method dm_xml_handler.collection_xml( a_col, properties, p_include_urn?)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.joins_using_field_xml( a_fld )
 	## 
 	## 
@@ -334,7 +334,7 @@ _method dm_xml_handler.joins_using_field_xml( a_fld )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _private _method dm_xml_handler.field_type_for( a_fld )
 	## 
 	## 
@@ -357,7 +357,7 @@ _private _method dm_xml_handler.field_type_for( a_fld )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
 	## 
 	## 
@@ -445,7 +445,7 @@ _method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.dm_xml_stored_unit_xml( a_unit )
 	## 
 	## 
@@ -466,7 +466,7 @@ _method dm_xml_handler.dm_xml_stored_unit_xml( a_unit )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 #_private _method dm_xml_handler.physical_field_xml( a_field )	
 _method dm_xml_handler.physical_field_xml( a_field )
 	## 
@@ -477,7 +477,7 @@ _method dm_xml_handler.physical_field_xml( a_field )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _private _method dm_xml_handler.derived_field_xml( a_field )
 	## 
 	## 
@@ -487,7 +487,7 @@ _private _method dm_xml_handler.derived_field_xml( a_field )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.sw_field_type_xml( p_field_type )
 	## 
 	## 
@@ -517,7 +517,7 @@ _method dm_xml_handler.sw_field_type_xml( p_field_type )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 #_private _method dm_xml_handler.join_field_xml( a_join_field )
 _method dm_xml_handler.join_field_xml( a_join_field )
 	##
@@ -557,7 +557,7 @@ _method dm_xml_handler.join_field_xml( a_join_field )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.dd_join_xml( a_dd_join )
 	## 
 	## 
@@ -576,7 +576,7 @@ _method dm_xml_handler.dd_join_xml( a_dd_join )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.join_conditions_xml( a_dd_join )
 	## 
 	## 
@@ -608,7 +608,7 @@ _method dm_xml_handler.join_conditions_xml( a_dd_join )
 _endmethod
 $
 
-#_pragma(classify_level=advanced, topic={dmdw,xml})
+#_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 #_method dm_xml_handler.hetero_join_conditions_xml( a_dd_hetero_join )
 #	## 
 #	##
@@ -623,7 +623,7 @@ $
 #$
 
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.join_result_flavour( a_fld )
 	## 
 	## 
@@ -639,7 +639,7 @@ _method dm_xml_handler.join_result_flavour( a_fld )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.result_tables_xml( a_fld )
 	## 
 	##
@@ -662,7 +662,7 @@ _endmethod
 $
 
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.super_dd_join_xml( p_fld )
 	## 
 	## 
@@ -677,7 +677,7 @@ _method dm_xml_handler.super_dd_join_xml( p_fld )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.text_join_xml( p_fld )
 	## 
 	##
@@ -694,7 +694,7 @@ _method dm_xml_handler.text_join_xml( p_fld )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 #_private _method dm_xml_handler.geometry_field_xml( a_field )
 _method dm_xml_handler.geometry_field_xml( a_field )
 	## 
@@ -752,7 +752,7 @@ _endmethod
 $
 
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.enumerators_xml( p_enumerators, p_include_urn? )
 	## 
 	## 
@@ -769,7 +769,7 @@ _method dm_xml_handler.enumerators_xml( p_enumerators, p_include_urn? )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.enumerated_xml( a_enum )
 	## 
 	## 
@@ -779,7 +779,7 @@ _method dm_xml_handler.enumerated_xml( a_enum )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _private _method dm_xml_handler.enumerator_xml(a_enum, p_include_urn?, p_include_values?)
 	## 
 	## 
@@ -815,7 +815,7 @@ $
 #######################################
 
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.default_topology_rules_xml( p_list )
 	## 
 	## 
@@ -833,7 +833,7 @@ _method dm_xml_handler.default_topology_rules_xml( p_list )
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={dmdw,xml})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 _private _method dm_xml_handler.gen_rules_xml(manifold_name,rules)
 	##
 	## Creates and returns a <manifold> element with :name
@@ -862,7 +862,7 @@ _endmethod
 $
 
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.explicit_topology_rules_xml(_optional p_elements)
 	##
 	## Top element. If given, P_ELEMENTS should be a vector or rope with
@@ -874,7 +874,7 @@ _method dm_xml_handler.explicit_topology_rules_xml(_optional p_elements)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.manifolds_xml(p_manifolds, p_include_urn?)
 	## 
 	## 
@@ -893,7 +893,7 @@ _method dm_xml_handler.manifolds_xml(p_manifolds, p_include_urn?)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.manifold_xml(p_mf_name, p_manifold, p_include_urn?)
 	## 
 	## Returns a <manifold> element.
@@ -915,7 +915,7 @@ _method dm_xml_handler.manifold_xml(p_mf_name, p_manifold, p_include_urn?)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.explicit_rules_manifold_xml(p_mf_name,p_manifold,p_tables)
 	## 
 	## Returns top <manifold> element with explicit rules from P_TABLES
@@ -928,7 +928,7 @@ _method dm_xml_handler.explicit_rules_manifold_xml(p_mf_name,p_manifold,p_tables
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.topology_tables_and_interactions( p_flds )
 	##
 	## Creates and returns <collection1> elements.
@@ -972,7 +972,7 @@ _method dm_xml_handler.topology_tables_and_interactions( p_flds )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.topology_interaction_xml( fld, fld_interactions )
 	## 
 	## Returns a rope with collection2 xml elements:
@@ -1013,7 +1013,7 @@ _method dm_xml_handler.topology_interaction_xml( fld, fld_interactions )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.topology_collection1_xml( a_col )
 	## 
 	## return a <collection1> element for ds collection A_COL
@@ -1027,7 +1027,7 @@ _method dm_xml_handler.topology_collection1_xml( a_col )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.topology_collection2_xml( a_col )
 	## 
 	## return a <collection1> element for ds collection A_COL
@@ -1041,7 +1041,7 @@ _method dm_xml_handler.topology_collection2_xml( a_col )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.field1_name_xml(p_fld, _optional p_elements)
 	## 
 	##
@@ -1053,7 +1053,7 @@ _method dm_xml_handler.field1_name_xml(p_fld, _optional p_elements)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.field2_name_xml(p_fld, p_rule_type, _optional p_elements)
 	## 
 	##
@@ -1066,7 +1066,7 @@ _method dm_xml_handler.field2_name_xml(p_fld, p_rule_type, _optional p_elements)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.rules_xml( p_rules )
 	## 
 	## Returns a rope with <rule1> <rule2> elements:
@@ -1090,7 +1090,7 @@ _method dm_xml_handler.rules_xml( p_rules )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.list_from_xml(elements)
 	## 
 	## a helper that converts ELEMENTS into a property list
@@ -1112,7 +1112,7 @@ _method dm_xml_handler.list_from_xml(elements)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.xml_from_list(p_tag,p_list)
 	## 
 	##
@@ -1139,7 +1139,7 @@ _method dm_xml_handler.xml_from_list(p_tag,p_list)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.geometry_mappings_xml(list)
 	## 
 	##
@@ -1156,7 +1156,7 @@ _method dm_xml_handler.geometry_mappings_xml(list)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.common_field_descriptions_xml(p_list)
 	##  
 	## P_LIST is .updates[:commonfields]
@@ -1188,7 +1188,7 @@ _method dm_xml_handler.common_field_descriptions_xml(p_list)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.soft_joins_xml(list)
 	## 
 	## Creates from property list LIST a :soft_joins xml
@@ -1214,7 +1214,7 @@ _method dm_xml_handler.soft_joins_xml(list)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={dmdw,xml})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.create_index_xml( p_fname, p_files )
 	## 
 	## Create a XML file with P_FNAME that contains elements from

@@ -7,7 +7,7 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={wd_doc_writer})
+_pragma(classify_level=basic, topic={dmdw,camdb_doc_writer})
 ##
 ## Creates a datamodel xml document for datasets gis and electrictity
 ## in the cambdridge database. 
@@ -53,7 +53,7 @@ _proc @export_camdb()
 _endproc
 $
 
-_pragma(classify_level=basic, topic={wd_doc_writer})
+_pragma(classify_level=basic, topic={dmdw,camdb_doc_writer})
 ##
 ## Do a XLST transform of all xml files from the xml resources
 ## directory of the module :camdb_doc_writer.

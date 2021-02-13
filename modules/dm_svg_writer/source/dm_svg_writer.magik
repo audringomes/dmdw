@@ -10,7 +10,7 @@ _package sw
 remex(:dm_svg_writer)
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 ##
 ## Creates a SVG image from the datamodel geometry from a case
 ## database for all collections specified.
@@ -33,18 +33,18 @@ def_slotted_exemplar(:dm_svg_writer,
 )
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 ## The case_ds_view
 dm_svg_writer.define_slot_access(:ds,:read,:public)
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 ## The actually used properties. Note that the value of :transform will
 ## set during the process.
 dm_svg_writer.define_slot_access(:properties,:read,:public)
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.default_properties
 	## 
 	## 
@@ -75,7 +75,7 @@ _method dm_svg_writer.default_properties
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.new( ds_view, _optional p_props)
 	## 
 	## Create a new instance for case_ds_view DS_VIEW with
@@ -86,7 +86,7 @@ _method dm_svg_writer.new( ds_view, _optional p_props)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _private _method dm_svg_writer.init( ds_view, p_props )
 	## 
 	## Sets .ds after check and merge the properties in P_PROPS
@@ -103,7 +103,7 @@ _private _method dm_svg_writer.init( ds_view, p_props )
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.create_svg_for( p_collections, p_file )
 	## 
 	## Find the matching case objects for the collections in
@@ -167,7 +167,7 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _private _method dm_svg_writer.set_properties( p_props )
 	## 
 	## 
@@ -187,7 +187,7 @@ _private _method dm_svg_writer.set_properties( p_props )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.inner_box
 	## 
 	## 
@@ -198,7 +198,7 @@ _method dm_svg_writer.inner_box
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.outer_box
 	## 
 	## 
@@ -206,7 +206,7 @@ _method dm_svg_writer.outer_box
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.transform( l_bb_in, l_bb_out )
 	## 
 	##
@@ -220,7 +220,7 @@ _method dm_svg_writer.transform( l_bb_in, l_bb_out )
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.filter_excludes( p_list )
 	##
 	## Remove elements from P_LIST 
@@ -236,7 +236,7 @@ _method dm_svg_writer.filter_excludes( p_list )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _private _method dm_svg_writer.case_objects_for_collections( p_list )
 	## 
 	## Find the matching case objects for the collections in
@@ -267,7 +267,7 @@ _private _method dm_svg_writer.case_objects_for_collections( p_list )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _private _method dm_svg_writer.case_relations_for_case_objects( p_hash )
 	## 
 	## P_HASH Key: table_name Element: the matching case_object 
@@ -288,7 +288,7 @@ _private _method dm_svg_writer.case_relations_for_case_objects( p_hash )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _private _method dm_svg_writer.case_hetero_objects_for( p_hash )
 	## 
 	## P_HASH Key: table_name Element: the matching case_object
@@ -332,7 +332,7 @@ _private _method dm_svg_writer.case_hetero_objects_for( p_hash )
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.copy_css_for_output( p_file )
 	## 
 	## When an svg is created with a style element, we copy the
@@ -347,7 +347,7 @@ _method dm_svg_writer.copy_css_for_output( p_file )
 	_if _not system.file_exists?(l_out)
 	_then
 		_try _with p_cond
-			_local l_inp << smallworld_product.get_resource_file(l_cssname,:html,:ds_doc_writer)
+			_local l_inp << smallworld_product.get_resource_file(l_cssname,:html,:dm_doc_writer)
 			system.file_copy( l_inp, l_out )
 			l_copied? << _true 
 		_when error
@@ -358,7 +358,7 @@ _method dm_svg_writer.copy_css_for_output( p_file )
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.svg_element()
 	## 
 	## 
@@ -368,7 +368,7 @@ _method dm_svg_writer.svg_element()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.g_element()
 	## 
 	##
@@ -378,7 +378,7 @@ _method dm_svg_writer.g_element()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.background_element()
 	##
 	##
@@ -391,7 +391,7 @@ _method dm_svg_writer.background_element()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.title_element( a_string )
 	## 
 	## 
@@ -401,7 +401,7 @@ _method dm_svg_writer.title_element( a_string )
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.style_element()
 	## 
 	##
@@ -415,7 +415,7 @@ _method dm_svg_writer.style_element()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.defs_element()
 	## 
 	##
@@ -425,7 +425,7 @@ _method dm_svg_writer.defs_element()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.filter_element()
 	## 
 	## 
@@ -447,7 +447,7 @@ _method dm_svg_writer.filter_element()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.logo_element()
 	## 
 	##
@@ -476,7 +476,7 @@ _method dm_svg_writer.logo_element()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.case_physical_relations_element( p_rels )
 	## 
 	## 
@@ -494,7 +494,7 @@ _method dm_svg_writer.case_physical_relations_element( p_rels )
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.case_object_elements( p_objects )
 	## 
 	## 
@@ -511,7 +511,7 @@ _method dm_svg_writer.case_object_elements( p_objects )
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.case_hetero_relations_elements( p_rels )
 	## 
 	## 

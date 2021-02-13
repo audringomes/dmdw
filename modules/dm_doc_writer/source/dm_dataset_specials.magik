@@ -9,7 +9,7 @@ _package sw
 
 remex(:dm_dataset_specials)
 $
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 ##
 ## Use or subclass and pass the name of the class or an
 ## instantiated object by the property :dataset_specials to the
@@ -33,20 +33,20 @@ def_slotted_exemplar(:dm_dataset_specials,
 	})
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 dm_dataset_specials.define_slot_access(:ds,:read,:public)
 $
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 dm_dataset_specials.define_slot_access(:geometry_mappings,:read,:public)
 $
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 dm_dataset_specials.define_slot_access(:global_field_descriptions,:read,:public)
 $
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 dm_dataset_specials.define_slot_access(:soft_joins,:read,:public)
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_dataset_specials.new(ds)
 	## 
 	## See class comment
@@ -54,7 +54,7 @@ _method dm_dataset_specials.new(ds)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 _method dm_dataset_specials.init(ds)
 	## 
 	##
@@ -68,7 +68,7 @@ _method dm_dataset_specials.init(ds)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 _method dm_dataset_specials.verify(a_ds)
 	## 
 	##
@@ -81,7 +81,7 @@ _method dm_dataset_specials.verify(a_ds)
 _endmethod
 $
 
-_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer}, usage={redefinable, subclassable})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
 _method dm_dataset_specials.includes
 	## 
 	## This method should return one or more top xml collections to be
@@ -91,7 +91,7 @@ _method dm_dataset_specials.includes
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={dm_doc_writer}, usage={redefinable, subclassable})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
 _method dm_dataset_specials.get_geometry_mappings()
 	##
 	## A property_list with names of mdm's as keys and a
@@ -102,7 +102,7 @@ _method dm_dataset_specials.get_geometry_mappings()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={dm_doc_writer}, usage={redefinable, subclassable})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
 _method dm_dataset_specials.get_global_field_descriptions()
 	## 
 	## A property_list with commonly used field names and
@@ -117,7 +117,7 @@ _method dm_dataset_specials.get_global_field_descriptions()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={dm_doc_writer}, usage={redefinable, subclassable})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
 _method dm_dataset_specials.get_soft_joins()
 	##
 	## Returns a property_list, keyed on collection name with
@@ -129,7 +129,7 @@ _method dm_dataset_specials.get_soft_joins()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={dm_doc_writer}, usage={redefinable, subclassable})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
 _method dm_dataset_specials.products_for_version
 	## 
 	## Should return a list of the names of sw_products to include

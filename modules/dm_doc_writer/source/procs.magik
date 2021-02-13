@@ -7,7 +7,7 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={wd_doc_writer})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 ##
 ## Creates a default module structure and adds the following
 ## structure to it:
@@ -28,12 +28,12 @@ _proc @create_module(p_parent_dir,p_module_name, _gather p_args)
 						     :en_gb,{:messages,:help})
 	_local l_mod << sw_module_manager.build_module(p_parent_dir,p_module_name,_scatter l_args)
 	_local l_mdir << system.pathname_down(p_parent_dir,p_module_name)
-	write("Module ",l_mdir," created. Don't forget to set requirement ds_doc_writer")
+	write("Module ",l_mdir," created. Don't forget to set requirement dm_doc_writer")
 	>> _true 
 _endproc
 $
 
-_pragma(classify_level=basic, topic={wd_doc_writer})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 ##
 ## Export dataset DS to xml in module MODULE_NAME
 ##
@@ -59,7 +59,7 @@ _proc @export_xml(ds,module_name)
 _endproc
 $
 
-_pragma(classify_level=basic, topic={wd_doc_writer})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 ##
 ## Do a xslt translation of the dmdw xml file P_INPUT_FILE
 ## in the xml resource folder of P_MODULE_NAME

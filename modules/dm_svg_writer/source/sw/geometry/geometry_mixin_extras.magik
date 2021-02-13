@@ -7,7 +7,7 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method geometry_mixin.transformed_for_svg( p_properties )
 	## 
 	## Use p_properties[:transform]

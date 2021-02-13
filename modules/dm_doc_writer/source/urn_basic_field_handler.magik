@@ -7,7 +7,7 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={urns})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 ##
 ## Class is used to generate urns for dataset fields
 ##
@@ -21,7 +21,7 @@ def_slotted_exemplar(:urn_basic_field_handler,
 {:urn_handler})
 $
 
-_pragma(classify_level=advanced, topic={urns})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 urn_basic_field_handler.define_shared_constant(:urn_type,
 	## 
 	## The type which this handler operates on, which in this case
@@ -32,7 +32,7 @@ urn_basic_field_handler.define_shared_constant(:urn_type,
 	:basic_field, :public)
 $
 
-_pragma(classify_level=advanced, topic={urns})
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method urn_basic_field_handler.get_urn_from_object( a_field )
 	## 
 	## Return the URN for A_FIELD

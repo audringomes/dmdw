@@ -7,7 +7,7 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer})
 _method dd_record_and_collection_mixin.exclude_from_svg?
 	## 
 	## Hook to filter out objects from being included in the SVG

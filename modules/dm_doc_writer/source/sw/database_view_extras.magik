@@ -7,11 +7,10 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer})
-_method dd_collection_mixin.skip_dm_export?
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
+_method database_view.dm_xml_filename
 	## 
-	## Defaults _true to descriptor.internal_table?
-	##
-	>> _self.descriptor.internal_table?
+	## 
+	>> write_string(_self.name,%_,_self.current_dd_version,".xml")			
 _endmethod
 $

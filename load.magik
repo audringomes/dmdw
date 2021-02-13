@@ -10,6 +10,6 @@ _block
 	
 	_local (l_name,l_root) << system.pathname_components(!source_file!)
 	sw:smallworld_product.add_product(l_root)
-	sw_module_manager.load_module(:ds_doc_writer)
+	sw_module_manager.load_module(:dm_doc_writer)
 _endblock
 $

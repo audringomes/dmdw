@@ -7,7 +7,7 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={dm_doc_writer})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 _method dd_enumerator.values_and_strings
 	## 
 	## Returns both the value and the string
@@ -16,7 +16,7 @@ _method dd_enumerator.values_and_strings
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={dm_doc_writer})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 _method dd_enumerator.definition_record
 	## 
 	## Returns the record in which this enumerator is defined

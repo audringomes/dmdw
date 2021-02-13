@@ -7,7 +7,7 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method composite_line_geometry_mixin.as_svg_polyline( p_properties )
 	## 
 	## expect p_properties[:polyline] and :transform and returns a
@@ -27,7 +27,7 @@ _endmethod
 $
 
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method composite_line_geometry_mixin.as_svg_line( p_properties )
 	## 
 	## expect in p_properties a :line and :transform key/val
@@ -52,7 +52,7 @@ _method composite_line_geometry_mixin.as_svg_line( p_properties )
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _private _method composite_line_geometry_mixin.svg_points_from( a_transformed )
 	## 
 	## Helper that returns a property_list with :points suitable for a polyline

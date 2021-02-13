@@ -7,7 +7,7 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={ds_doc_writer,ds_svg_writer})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer})
 ##
 ## Create a svg image from case database graphics in
 ## CASE_VIEW. Fetch only the non internal objects from

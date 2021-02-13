@@ -7,7 +7,7 @@
 
 _package sw
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method rwo_record_mixin.default_svg_geometry_field()
 	## 
 	## 
@@ -25,7 +25,7 @@ _method rwo_record_mixin.default_svg_geometry_field()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method rwo_record_mixin.default_svg_geometry
 	## 
 	##
@@ -37,7 +37,7 @@ _method rwo_record_mixin.default_svg_geometry
 _endmethod
 $
 #
-#_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+#_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 #_method rwo_record_mixin.as_svg()
 #	## 
 #	## 

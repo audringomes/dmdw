@@ -10,7 +10,7 @@ _package sw
 remex(:dm_xml_writer)
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 ##
 ## Dumps the datamodel for a dataset in xml
 ## Must be instantiated by new()
@@ -37,7 +37,7 @@ def_slotted_exemplar(:dm_xml_writer,
 	}
 )
 $
-_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 ##
 ## When updates are processed, they are stored internally in
 ## this slot.
@@ -67,22 +67,22 @@ _pragma(classify_level=restricted, topic={dmdw},usage={internal})
 dm_xml_writer.define_slot_access(:updates,:read,:public)
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 ## Set to :initialized or :export_done
 dm_xml_writer.define_slot_access(:status,:read,:public)
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 ## The schema version that is supported
 dm_xml_writer.define_shared_constant(:schema_version_main,"2.0",:public)
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 ## The schema version that is supported for updates
 dm_xml_writer.define_shared_constant(:schema_version_updates,"1.4",:public)
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.new(ds, properties)
 	##
 	## DS - The databse view to be reported
@@ -112,7 +112,7 @@ _method dm_xml_writer.new(ds, properties)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.init(ds, properties)
 	## 
 	##
@@ -161,7 +161,7 @@ _method dm_xml_writer.init(ds, properties)
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.expand_tables?
 	## 
 	## Ask the properties
@@ -171,7 +171,7 @@ _method dm_xml_writer.expand_tables?
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.ofile_name
 	## 
 	## 
@@ -179,7 +179,7 @@ _method dm_xml_writer.ofile_name
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.default_output_file()
 	## 
 	## 
@@ -192,7 +192,7 @@ _method dm_xml_writer.default_output_file()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.include_urns?
 	## 
 	## 
@@ -200,7 +200,7 @@ _method dm_xml_writer.include_urns?
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _private _method dm_xml_writer.init_dataset_specials()
 	## 
 	## .properties[:dataset_specials]
@@ -238,7 +238,7 @@ _private _method dm_xml_writer.init_dataset_specials()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.init_manifolds()
 	## 
 	## Populates .manifolds, .fields_by_manifold and
@@ -263,7 +263,7 @@ _endmethod
 $
 
 
-_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.process()
 	## 
 	## Writes all xml elements to .out_file in the following order:
@@ -295,7 +295,7 @@ _method dm_xml_writer.process()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.software_version()
 	## 
 	## #1 Core
@@ -325,7 +325,7 @@ _method dm_xml_writer.software_version()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _private _method dm_xml_writer.ace( _optional ace_name )
 	## 
 	## returns the ase record with name ACE_NAME. When ACE_NAME
@@ -342,7 +342,7 @@ _private _method dm_xml_writer.ace( _optional ace_name )
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _private _method dm_xml_writer.categories_from_ace( ace_name )
 	## 
 	## returns an equality_property_list keyed on Category with a
@@ -376,7 +376,7 @@ _private _method dm_xml_writer.categories_from_ace( ace_name )
 _endmethod
 $
 
-#_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+#_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 #_method dm_xml_writer.read_updates()
 #	## 
 #	## reads updates and stores them in .updates
@@ -442,7 +442,7 @@ $
 #_endmethod
 #$
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.datamodel_xml()
 	## 
 	## Create the top element
@@ -453,7 +453,7 @@ _method dm_xml_writer.datamodel_xml()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.write_to( file )
 	## 
 	##
@@ -482,7 +482,7 @@ _method dm_xml_writer.write_to( file )
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.process_categories_and_collections()
 	## 
 	##
@@ -570,7 +570,7 @@ _method dm_xml_writer.process_categories_and_collections()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.expand_tables(p_exported)
 	## 
 	## P_EXPORTED is a collection of dd_tables that are exported. This
@@ -602,7 +602,7 @@ _method dm_xml_writer.expand_tables(p_exported)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.process_collection( col, category )
 	## 
 	##
@@ -627,7 +627,7 @@ _method dm_xml_writer.process_collection( col, category )
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.process_fields( col )
 	## 
 	## 
@@ -640,7 +640,7 @@ _method dm_xml_writer.process_fields( col )
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.process_field( fld )
 	## 
 	## 
@@ -659,7 +659,7 @@ _method dm_xml_writer.process_field( fld )
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.process_enumerators()
 	## 
 	##
@@ -672,7 +672,7 @@ _method dm_xml_writer.process_enumerators()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.process_manifolds()
 	## 
 	## 
@@ -680,7 +680,7 @@ _method dm_xml_writer.process_manifolds()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.process_topology()
 	## 
 	## populates .topology_interactions
@@ -706,7 +706,7 @@ _method dm_xml_writer.process_topology()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.ace_contains_col?( p_col )
 	## 
 	##
@@ -723,7 +723,7 @@ _method dm_xml_writer.ace_contains_col?( p_col )
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.updates_for( obj )
 	## 
 	## This method returns an update for OBJ, which may be a
@@ -790,7 +790,7 @@ _method dm_xml_writer.updates_for( obj )
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _private _method dm_xml_writer.updates_for_collection( col , updates )
 	## 
 	## 
@@ -810,7 +810,7 @@ _endmethod
 $
 
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.full_topology_table()
 	## 
 	## Returns a list keyed on geometry field containing a hash_table
@@ -840,7 +840,7 @@ _method dm_xml_writer.full_topology_table()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.manifold_rules_for(a_fld, manifold_name)
 	## 
 	## Returns a list keyed on geometry_field containig the rules
@@ -875,7 +875,7 @@ _method dm_xml_writer.manifold_rules_for(a_fld, manifold_name)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.default_manifold_rules(manifold_name)
 	## 
 	## Returns a vector with the :system rules for manifold
@@ -894,7 +894,7 @@ _method dm_xml_writer.default_manifold_rules(manifold_name)
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,xml,xml})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 _method dm_xml_writer.global_properties_xml()
 	## 
 	## converts _self.global_field_descriptions,
@@ -917,7 +917,7 @@ _method dm_xml_writer.global_properties_xml()
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={datamodel,xml,xml})
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 _method dm_xml_writer.manifolds_xml()
 	## 
 	## 
@@ -925,7 +925,7 @@ _method dm_xml_writer.manifolds_xml()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 _method dm_xml_writer.default_topology_rules_xml()
 	## 
 	## Returns the xml element for the default topology rules
@@ -934,7 +934,7 @@ _method dm_xml_writer.default_topology_rules_xml()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 _private _method dm_xml_writer.default_topology_rules
 	## 
 	## returns a proplist with the default rules for every manifold
@@ -951,7 +951,7 @@ _private _method dm_xml_writer.default_topology_rules
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 _method dm_xml_writer.global_field_descriptions_xml()
 	## 
 	## get data from .updates or .dataset_specials and return a :commonfields
@@ -971,7 +971,7 @@ _method dm_xml_writer.global_field_descriptions_xml()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 _method dm_xml_writer.geometry_mappings_xml()
 	## 
 	## Get from .updates or .dataset_specials and return :geometry_mappings xml
@@ -991,7 +991,7 @@ _method dm_xml_writer.geometry_mappings_xml()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={datamodel,xml,xml})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 _method dm_xml_writer.dataset_special_includes
 	## 
 	##
@@ -1013,7 +1013,7 @@ $
 ###
 
 
-_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.read_updates(_optional p_filename)
 	## 
 	## reads updates, store them in .updates and return it.
@@ -1070,7 +1070,7 @@ _method dm_xml_writer.read_updates(_optional p_filename)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _private _method dm_xml_writer.handle_update_xml(a_xml)
 	## 
 	## Handles the elements in datamodel (global_properties, category/collection)
@@ -1115,7 +1115,7 @@ _private _method dm_xml_writer.handle_update_xml(a_xml)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _private _method dm_xml_writer.handle_updates_for_col(p_name,a_xml)
 	##
 	## Process elements suitable for collections.
@@ -1160,7 +1160,7 @@ _private _method dm_xml_writer.handle_updates_for_col(p_name,a_xml)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _private _method dm_xml_writer.handle_updates_for_commonfields(a_xml)
 	## 
 	##
@@ -1197,7 +1197,7 @@ _private _method dm_xml_writer.handle_updates_for_commonfields(a_xml)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _private _method dm_xml_writer.handle_updates_for_geometry_mappings(a_xml)
 	## 
 	## a_xml can be of any type
@@ -1228,7 +1228,7 @@ _private _method dm_xml_writer.handle_updates_for_geometry_mappings(a_xml)
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.post_process()
 	## 
 	##
@@ -1238,7 +1238,7 @@ _method dm_xml_writer.post_process()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.create_svg()
 	## 
 	## 
@@ -1264,7 +1264,7 @@ _method dm_xml_writer.create_svg()
 _endmethod
 $
 
-_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.opened_case( soc_name )
 	## 
 	## 
