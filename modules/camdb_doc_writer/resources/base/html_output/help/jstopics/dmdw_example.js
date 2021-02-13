@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"gis_412391.xml",
 hmTitle:"Example 1 (Older version)",
 hmDescription:"This page has links to an example of html output.  The DMDW xml file is created from the gis database of the Cambridge demonstration database. gis_412391.xml  This output is b",
-hmPrevLink:"dmdw_css.html",
+hmPrevLink:"dmdw_svg-diagram.html",
 hmNextLink:"dmdw_example_2.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",

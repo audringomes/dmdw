@@ -20,8 +20,8 @@
 	<g>
 		<title>Case Relationships</title>
 		<polyline class="polyline" points="50.0000,421.476 351.345,397.513 "/>
-		<polyline class="polyline" points="168.333,421.223 351.345,397.513 "/>
 		<polyline class="polyline" points="351.428,441.546 351.345,397.513 "/>
+		<polyline class="polyline" points="168.333,421.223 351.345,397.513 "/>
 		<polyline class="polyline" points="650.000,421.223 351.345,397.513 "/>
 		<polyline class="polyline" points="351.345,387.813 351.345,369.980 "/>
 		<polyline class="polyline" points="462.230,150.116 226.038,150.022 211.007,143.356 211.014,56.6666 195.983,50.0033 81.4452,50.1267 "/>
@@ -30,26 +30,26 @@
 	</g>
 	<g>
 		<title>Case Objects</title>
-		<g transform="translate(350.556,576.724)" style="filter:url(#TextBox)" class="textbox">
-			<text>Cable</text>
-		</g>
-		<g transform="translate(636.126,430.222)" style="filter:url(#TextBox)" class="textbox">
-			<text>Transformer</text>
-		</g>
 		<g transform="translate(500.552,154.019)" style="filter:url(#TextBox)" class="textbox">
 			<text>Drawing</text>
-		</g>
-		<g transform="translate(346.573,368.980)" style="filter:url(#TextBox)" class="textbox">
-			<text>Substation</text>
-		</g>
-		<g transform="translate(351.330,619.050)" style="filter:url(#TextBox)" class="textbox">
-			<text>Supply Point</text>
 		</g>
 		<g transform="translate(351.563,654.000)" style="filter:url(#TextBox)" class="textbox">
 			<text>Customer</text>
 		</g>
+		<g transform="translate(636.126,430.222)" style="filter:url(#TextBox)" class="textbox">
+			<text>Transformer</text>
+		</g>
 		<g transform="translate(352.600,484.975)" style="filter:url(#TextBox)" class="textbox">
 			<text>Substation Internals Link</text>
+		</g>
+		<g transform="translate(351.435,450.396)" style="filter:url(#TextBox)" class="textbox">
+			<text>Internal Cable</text>
+		</g>
+		<g transform="translate(351.330,619.050)" style="filter:url(#TextBox)" class="textbox">
+			<text>Supply Point</text>
+		</g>
+		<g transform="translate(346.573,368.980)" style="filter:url(#TextBox)" class="textbox">
+			<text>Substation</text>
 		</g>
 		<g transform="translate(351.345,396.663)" style="filter:url(#TextBox)" class="textbox">
 			<text>Substation Internals</text>
@@ -57,14 +57,14 @@
 		<g transform="translate(50.0000,430.476)" style="filter:url(#TextBox)" class="textbox">
 			<text>Switch</text>
 		</g>
-		<g transform="translate(351.435,450.396)" style="filter:url(#TextBox)" class="textbox">
-			<text>Internal Cable</text>
+		<g transform="translate(170.610,430.222)" style="filter:url(#TextBox)" class="textbox">
+			<text>Busbar</text>
+		</g>
+		<g transform="translate(350.556,576.724)" style="filter:url(#TextBox)" class="textbox">
+			<text>Cable</text>
 		</g>
 		<g transform="translate(647.114,613.007)" style="filter:url(#TextBox)" class="textbox">
 			<text>Joint</text>
-		</g>
-		<g transform="translate(170.610,430.222)" style="filter:url(#TextBox)" class="textbox">
-			<text>Busbar</text>
 		</g>
 	</g>
 </svg>

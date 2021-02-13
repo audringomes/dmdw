@@ -262,7 +262,6 @@ _method dm_xml_writer.init_manifolds()
 _endmethod
 $
 
-
 _pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.process()
 	## 
@@ -1241,26 +1240,47 @@ $
 _pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.create_svg()
 	## 
+	## When the dm_svg_writer is loaded and the option :case is
+	## specified and an opened case is present, we will create a
+	## svg image for all exported collections.
 	## 
 
-	
-	_if (l_svg_writer_cls << !current_package![:dm_svg_writer]) _isnt _unset _andif
-	    (l_case_soc_name << .properties[:case]) _isnt _unset _andif 
-	    (l_cv << _self.opened_case( l_case_soc_name )) _isnt _unset 
-	_then 
-
-		_local ( l_name, l_dir ) << system.pathname_components( .out_file )
-		_local ( l_base, l_ext ) << system.split_filename( l_name )
-		_local l_file_name << system.pathname_from_components( write_string(l_base,".svg"), l_dir )
-		
-		_local l_svg_writer << l_svg_writer_cls.new( l_cv )
-		write("Creating SVG for ",.exported_collections," to ", l_file_name)
-		l_svg_writer.create_svg_for( .exported_collections, l_file_name )
-
+	_local l_case_soc_name << .properties[:case]
+	_local l_cv 
+	_if l_case_soc_name _is _unset
+	_then
+		write(" No case database specified for SVG output")
+		_return 
 	_else
-		condition.raise(:warning,:string,"Could not create SVG!")
+		l_cv << _self.opened_case( l_case_soc_name )
+		_if l_cv _is _unset 
+		_then write("Case SOC ",l_case_soc_name," specified, but could not open a dataset")
+		      _return 
+		_endif
 	_endif
+	
+	_local l_svg_writer_cls << !current_package![:dm_svg_writer]
+	_if l_svg_writer_cls _is _unset  
+	_then
+		write(" case database specified, but dm_svg_writer not available")
+		_return 
+	_endif
+	
+	_local ( l_name, l_dir ) << system.pathname_components( .out_file )
+	_local ( l_base, l_ext ) << system.split_filename( l_name )
+	_local l_file_name << system.pathname_from_components( write_string(l_base,".svg"), l_dir )
+	
+	write("Creating SVG for ",.exported_collections," to ", l_file_name)
+	
+	_try _with p_cond
+		l_svg_writer << l_svg_writer_cls.new( l_cv )
+		l_svg_writer.create_svg_for( .exported_collections, l_file_name )	
+	_when error
+		write("Error creating SVG :",p_cond.report_contents_string)
+	_endtry
 
+	>> _true
+	
 _endmethod
 $
 

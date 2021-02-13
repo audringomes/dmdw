@@ -3,7 +3,7 @@
 <html>
 	<head>
 	<!-- Help+Manual Premium Pack Version 3.45 (c) 2015-2018 by Tim Green all rights reserved -->
-	<title>soft_joins</title>
+	<title>SVG Diagram</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" id="pageviewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes, minimal-ui" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,11 +15,11 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta name="generator" content="Help &amp; Manual" />
 	<meta name="keywords" content="" />
-	<meta name="description" content="Soft joins are completely managed in Magik. Soft joins can hold equally important relationships as normal joins from the data dictionary. Therefore, the DMDW exports a full..." />
+	<meta name="description" content="An easy way to visualize the datamodel objects and relationships is to make use of the existing graphics in the CASE database." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="09/01/2021" />
-        <meta name="id" content="dmdw_Soft_joins" />
+        <meta name="revised" content="13/02/2021" />
+        <meta name="id" content="dmdw_SVG-Diagram" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
 	<link type="text/css" href="./css/hmprojectstyles.css" rel="stylesheet" />
@@ -44,7 +44,7 @@ var pageName="mainPage";var hmDevice={mobileSleepReload:true,compilehash:(functi
         <script type="text/javascript" src="./js/HandleCSHID.js"></script>
         
         <script type="text/javascript">
-                if (RWSP_HandleCSHID && "dmdw_soft_joins.html"==RWSP_Mainpage){
+                if (RWSP_HandleCSHID && "dmdw_svg-diagram.html"==RWSP_Mainpage){
                 RWSP_DoHandleHash();
                 RWSP_DoHandleParam();
                 }
@@ -74,7 +74,7 @@ var pageName="mainPage";var hmDevice={mobileSleepReload:true,compilehash:(functi
 	</style>
 	</noscript>
         <link type="text/css" href="./css/sw-styles.css" rel="stylesheet" />
-	<link rel="canonical" href="http://www.helpandmanual.com/help/dmdw_soft_joins.html" />
+	<link rel="canonical" href="http://www.helpandmanual.com/help/dmdw_svg-diagram.html" />
   <script type="text/javascript">
 function SwitchTabToSearch(d) {
     hmWebHelp.switchNavTab("search");
@@ -213,7 +213,7 @@ function GetSearchPage() {
 	</li>
 	<li id="hm_printable_version">
 		<svg class="hmbicon" viewBox="0 0 30 32"><use xlink:href="#print"></use></svg>
-		<a id="hm_printable_link" href="_hm_print_window.htm?dmdw_soft_joins.html" onclick="hmWebHelp.hamburgerMenu()" target="hm_print_window" title="Display a Printable Version of Current Topic"> 
+		<a id="hm_printable_link" href="_hm_print_window.htm?dmdw_svg-diagram.html" onclick="hmWebHelp.hamburgerMenu()" target="hm_print_window" title="Display a Printable Version of Current Topic"> 
 		<span>Printable Version</span></a>
 	</li>
 	<li class="desktop server">
@@ -231,21 +231,21 @@ function GetSearchPage() {
 	  <tr>
 		<td id="topicheadercell">
 		  <div id="topicheaderwrapper">
-		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <a href="dmdw_xml-content.html">XML Content</a></p> 
-		  <p class="topictitle">soft_joins</p>
+		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <span>&raquo;&nbsp;No topics above this level&nbsp;&laquo;</span></p> 
+		  <p class="topictitle">SVG Diagram</p>
 		  </div>
 		</td>
 		<td id="topicnavcell"><span>
 		<a id="atoclink" class="topicnavlink" title="Contents of this topic">
 		<svg class="navicon" viewBox="0 0 32 32"><use xlink:href="#list-bullet"></use></svg>
 		<span>Scroll</span></a> 
-		 <a id="topicnavlinkprevious" class="topicnavlink nav" href="dmdw_topology.html" title="Go to previous topic">
+		 <a id="topicnavlinkprevious" class="topicnavlink nav" href="dmdw_css.html" title="Go to previous topic">
 		 <svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-left"></use></svg>
 		 <span>Prev</span></a>
 		<a id="topicnavlinkhome" class="topicnavlink nav" href="index.html" title="Go to top topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-up"></use></svg>
 		<span>Top</span></a>
-		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_urns.html" title="Go to next topic">
+		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_example.html" title="Go to next topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-right"></use></svg>
 		<span>Next</span></a>
 		 <a id="hamburgerlink" class="topicnavlink" title="Additional Functions Menu">
@@ -261,29 +261,57 @@ function GetSearchPage() {
 	<div id="unclicker"></div>
 	<div id="hmpagebody_scroller">
 <!--ZOOMRESTART-->
-	<p class="p_Normal">Soft joins are completely managed in Magik. Soft joins can hold equally important relationships as normal joins from the data dictionary. Therefore, the DMDW exports a full list of these joins. Soft joins is a concept from GE Common Office.</p>
-<p class="p_Normal">The data is retrieved by examining every record exemplar of a collection for the result of the method: <span style="font-weight: bold;">cs_soft_joins</span>. </p>
-<p class="p_Normal">&nbsp;</p>
-<p class="p_CodeExample"><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">soft_joins</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">soft_join_collection</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">ws_sign</span><span class="f_CodeExample" style="color: #0000ff;">&quot;&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">soft_join</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">Metadata</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_method_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">associated_metadata_records</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_method_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_table</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">wo_meta_data</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_table</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_table_dataset</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">water_supply</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_table_dataset</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_attach_method_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">unset</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_attach_method_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_detach_method_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">unset</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_detach_method_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_table_field_info</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_table_field_info</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">object_id</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">id</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">object_id</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">object_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">source_table_name</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">object_name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_table_field_info</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_table_field_info</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_gui_type</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">simple</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">join_gui_type</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">soft_join</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">soft_join_collection</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">soft_joins</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span></p>
-<p class="p_Normal">&nbsp;</p>
+	<p class="p_Normal">An easy way to visualize the datamodel objects and relationships is to make use of the existing graphics in the CASE database.</p>
+<p class="p_Normal">The module <span style="font-weight: bold;">ds_svg_writer</span> offers a way of creating an intelligent SVG diagram from the CASE database. As SVG it has the big advantage of being pure XML, and styling can be done by css. The file <span style="font-weight: bold;">svg.css</span> contains style definitions. For convenience reason this file is in the html resources of the module <span style="font-weight: bold;">ds_doc_writer</span>.</p>
+<p class="p_Normal">The <span style="font-weight: bold;">ds_svg_writer</span> is designed for standalone use, but is of course used in the <span style="font-weight: bold;">post_proces()</span> of the <span style="font-weight: bold;">dm_xml_writer</span>. It uses the exported collections and an open case database (found by the property :case) to export it to the same folder as xml file. It is in the XSLT transform phase embedded in a HTML page.</p>
+<p class="p_Normal">The case database to be used is defined in the method <span style="font-weight: bold;">dm_xml_writer.opened_case( soc_name )</span>.</p>
+<p class="p_Heading2"><span class="f_Heading2">Principle</span></p>
+<p class="p_Normal">The principle is to pass a set of collections, for example all user tables of a dataset. This collection is expanded with the physical relations that they have, including the heterogeneous ones.</p>
+<p class="p_Normal">After calculation of the bounds, the geometry is then transformed into SVG pixel space and presented as typical SVG objects.</p>
+<p class="p_Normal">A case object is represented as a <span style="font-weight: bold;">text</span>, the physical relations as a <span style="font-weight: bold;">polyline</span>, an hetero table as a <span style="font-weight: bold;">circle</span> and the heterogeneous relations as <span style="font-weight: bold;">line</span>.</p>
+<p class="p_Normal">See the page in <a href="dmdw_example_2.html" class="topiclink">Example (2)</a>.</p>
+<p class="p_Heading2"><span class="f_Heading2">Example</span></p>
+<p class="p_Normal">The following proc creates a Diagram with input of all user tables in dataset <span style="font-weight: bold;">DS</span>, using case_ds_view <span style="font-weight: bold;">CASE_VIEW</span>, and writes the output to the xml resource folder of the module ds_svg_writer.</p>
+<p class="p_Normal">Because the property <span style="font-weight: bold;">:write_style_element? </span>is set, the svg.css is copied into the output if this file does not exist yet.</p>
+<div class="magik">
+    <pre>
+<span class="magik-font-lock-keyword-statements"><span class="region">_pragma</span></span><span class="magik-font-lock-pragma"><span class="region">(classify_level=basic, topic={ds_doc_writer,ds_svg_writer})</span></span><span class="region">
+</span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## Create a svg image from case database graphics in</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## CASE_VIEW. Fetch only the non internal objects from</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## dataset DS and write the svg file to OUTPUT_FILE</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## The location defaults to xml resource</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## folder of this module and the name of the DS.</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## We use the default properties as specified in</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## dm_svg_writer.default_properties, except form the option</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## </span></span><span class="magik-font-lock-boolean"><span class="region">:write_style_element?</span></span><span class="doc"><span class="region"> </span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## Note that when you see a black square, it most likely</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## is missing the CSS style sheet.</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
+</span></span><span class="magik-font-lock-keyword-variable"><span class="region">_global</span></span><span class="region"> dm_create_svg &lt;&lt;
+</span><span class="magik-font-lock-procedure"><span class="region">_proc</span></span><span class="region"> </span><span class="constant"><span class="region">@dm_create_svg</span></span><span class="region">( ds, case_view, </span><span class="magik-font-lock-keyword-arguments"><span class="region">_optional</span></span><span class="region"> output_file )
+
+        </span><span class="magik-font-lock-keyword-statements"><span class="region">_if</span></span><span class="region"> output_file </span><span class="magik-font-lock-keyword-operators"><span class="region">_is</span></span><span class="region"> </span><span class="constant"><span class="region">_unset</span></span><span class="region"> 
+        </span><span class="magik-font-lock-keyword-statements"><span class="region">_then</span></span><span class="region">
+                l_mod &lt;&lt; sw_module_manager.</span><span class="function-name"><span class="region">module</span></span><span class="region">(</span><span class="magik-font-lock-symbol"><span class="region">:ds_svg_writer</span></span><span class="region">)
+                l_dir &lt;&lt; l_mod.</span><span class="function-name"><span class="region">resource_list_for</span></span><span class="region">(</span><span class="magik-font-lock-symbol"><span class="region">:xml</span></span><span class="region">).</span><span class="magik-font-lock-procedure"><span class="region">an_element</span></span><span class="region">()
+                output_file &lt;&lt; system.</span><span class="function-name"><span class="region">pathname_from_components</span></span><span class="region">( </span><span class="magik-font-lock-procedure"><span class="region">write_string</span></span><span class="region">(ds.name,</span><span class="string"><span class="region">".svg"</span></span><span class="region">),l_dir)
+        </span><span class="magik-font-lock-keyword-statements"><span class="region">_endif</span></span><span class="region">
+
+        </span><span class="magik-font-lock-keyword-variable"><span class="region">_local</span></span><span class="region"> l_props &lt;&lt; property_list.</span><span class="function-name"><span class="region">new_with</span></span><span class="region">(</span><span class="magik-font-lock-boolean"><span class="region">:write_style_element?</span></span><span class="region">,</span><span class="constant"><span class="region">_true</span></span><span class="region">)
+        </span><span class="magik-font-lock-keyword-variable"><span class="region">_local</span></span><span class="region"> l_writer &lt;&lt; dm_svg_writer.</span><span class="function-name"><span class="region">new</span></span><span class="region">( case_view, l_props )
+        </span><span class="magik-font-lock-keyword-variable"><span class="region">_local</span></span><span class="region"> l_collections &lt;&lt; rope.</span><span class="function-name"><span class="region">new_fr</span></span><span class="region">om_iter(ds,</span><span class="magik-font-lock-symbol"><span class="region">:|user_tables()|</span></span><span class="region">)
+
+        l_writer.</span><span class="function-name"><span class="region">create_svg_for</span></span><span class="region">( l_collections, output_file )
+        
+        system.</span><span class="function-name"><span class="region">do_command</span></span><span class="region">( </span><span class="magik-font-lock-procedure"><span class="region">write_string</span></span><span class="region">(</span><span class="string"><span class="region">"swdocopen.exe "</span></span><span class="region">, output_file ))
+        
+</span><span class="magik-font-lock-procedure"><span class="region">_endproc</span></span><span class="region">
+$</span></pre>
+</div>
+</html><p class="p_Normal">&nbsp;</p>
 
         <div class="topicfooter">
   <table style="width: 100%;margin-left: 0;margin-right: auto;">
@@ -361,7 +389,7 @@ if (!hmFlags.isEWriter) fouc.parentNode.removeChild(fouc);
 /*! Help & Manual WebHelp 3 Script functions
 Copyright (c) 2015-2018 by Tim Green. All rights reserved. Contact tg@it-authoring.com
 */
-(function(){var b=sessionVariable.getPV("fontSize"),a=document.getElementsByTagName("html")[0];if(b!==null){a.style.fontSize=b+"%"}else{a.style.fontSize=hmDevice.baseFontSize+"%"}})();var moveCheck=null,hmTocLoaded=false,hmTocWidth=0,xMessage=new xMsg("LANDING TOPIC");function initScripts(){hmPopupsObject={};hmFlags.isHmTopic=true;hmFlags.idxLoaded=false;hmFlags.schLoaded=false;hmFlags.searchSession=false;hmFlags.tocClicked=false;hmFlags.layoutTable=false;hmFlags.searchHighlight="";hmFlags.tocInitWidth=0;hmFlags.jumpHighlight=false;hmFlags.hmMainPage="index.html";hmFlags.hmTrackHost="http://www.helpandmanual.com/help/";hmFlags.hmProject="Data Model Document Writer";hmFlags.hmDefaultPage="index.html";hmFlags.hmCurrentPage="dmdw_soft_joins.html";hmFlags.hmTOC="hmcontent.html";hmFlags.hmSearchPage="hmftsearch.html";hmFlags.hmIndexPage="hmkwindex.html";hmFlags.thisTopic="dmdw_soft_joins.html";hmFlags.lastTopic="index.html";hmFlags.isEWriter=false;hmFlags.topicExt=".html";hmFlags.defaultExt=".html";hmFlags.projName="dm_doc_writer";hmFlags.tDescription=document.querySelector("meta[name='description']").getAttribute("content");hmFlags.tKeywords="";hmFlags.hdFormat=false;hmFlags.contextID=(function(){var f;if(/^https??:\/\//im.test(document.location)){f=/contextid=\d*/.exec(window.location.search.substring(1))}else{f=/contextid=\d*/.exec(window.location.hash.substring(1))}return f!=null?f[0]:false})();function e(f){$.getScript(a[f],function(g,i,h){if(d<a.length-1){d++;e(d)}else{hmpage.defaulttopic="index.html";hmpage.breadcrumbs=false;hmWebHelp.hmMainPageInit();hmpage.hmDescription=document.querySelector("meta[name='description']").getAttribute("content");hmpage.hmPicture=""===""?"":"./images/";hmpage.topicfooter=$("div.topicfooter")[0].outerHTML;}})}if(document.location.protocol.substr(0,4)!=="http"){window.History={options:{html4Mode:true}}}var d=0;var a=["./js/helpman_settings.js","./js/jquery.scrollTomin.js","./js/jquery.history.js","./js/hm_webhelp.js"];if(hmFlags.contextID){a.unshift("./js/hmcontextids.js")}if(hmDevice.phone){a.push("./js/mobileNav.js")}var c=document.getElementById("jqscript");c.src="./js/jquery.js";var b=setInterval(function(){if(window.jQuery){clearInterval(b);$.ajaxPrefilter("json script",function(g){g.crossDomain=true});if(hmDevice.embedded&&hmDevice.desktop){$("li#toggle_fullscreen").show()}e(0);var f="soft_joins";switch("topic"){case"project":f="Data Model Document Writer";break;case"project_topic":f="Data Model Document Writer > soft_joins";break}f=$("<textarea/>").html(f).text();$("title").text(f)}},100)}if(window.addEventListener){window.addEventListener("load",initScripts,false)}else{if(window.attachEvent){window.attachEvent("onload",initScripts)}else{window.onload=initScripts}};
+(function(){var b=sessionVariable.getPV("fontSize"),a=document.getElementsByTagName("html")[0];if(b!==null){a.style.fontSize=b+"%"}else{a.style.fontSize=hmDevice.baseFontSize+"%"}})();var moveCheck=null,hmTocLoaded=false,hmTocWidth=0,xMessage=new xMsg("LANDING TOPIC");function initScripts(){hmPopupsObject={};hmFlags.isHmTopic=true;hmFlags.idxLoaded=false;hmFlags.schLoaded=false;hmFlags.searchSession=false;hmFlags.tocClicked=false;hmFlags.layoutTable=false;hmFlags.searchHighlight="";hmFlags.tocInitWidth=0;hmFlags.jumpHighlight=false;hmFlags.hmMainPage="index.html";hmFlags.hmTrackHost="http://www.helpandmanual.com/help/";hmFlags.hmProject="Data Model Document Writer";hmFlags.hmDefaultPage="index.html";hmFlags.hmCurrentPage="dmdw_svg-diagram.html";hmFlags.hmTOC="hmcontent.html";hmFlags.hmSearchPage="hmftsearch.html";hmFlags.hmIndexPage="hmkwindex.html";hmFlags.thisTopic="dmdw_svg-diagram.html";hmFlags.lastTopic="index.html";hmFlags.isEWriter=false;hmFlags.topicExt=".html";hmFlags.defaultExt=".html";hmFlags.projName="dm_doc_writer";hmFlags.tDescription=document.querySelector("meta[name='description']").getAttribute("content");hmFlags.tKeywords="";hmFlags.hdFormat=false;hmFlags.contextID=(function(){var f;if(/^https??:\/\//im.test(document.location)){f=/contextid=\d*/.exec(window.location.search.substring(1))}else{f=/contextid=\d*/.exec(window.location.hash.substring(1))}return f!=null?f[0]:false})();function e(f){$.getScript(a[f],function(g,i,h){if(d<a.length-1){d++;e(d)}else{hmpage.defaulttopic="index.html";hmpage.breadcrumbs=false;hmWebHelp.hmMainPageInit();hmpage.hmDescription=document.querySelector("meta[name='description']").getAttribute("content");hmpage.hmPicture=""===""?"":"./images/";hmpage.topicfooter=$("div.topicfooter")[0].outerHTML;}})}if(document.location.protocol.substr(0,4)!=="http"){window.History={options:{html4Mode:true}}}var d=0;var a=["./js/helpman_settings.js","./js/jquery.scrollTomin.js","./js/jquery.history.js","./js/hm_webhelp.js"];if(hmFlags.contextID){a.unshift("./js/hmcontextids.js")}if(hmDevice.phone){a.push("./js/mobileNav.js")}var c=document.getElementById("jqscript");c.src="./js/jquery.js";var b=setInterval(function(){if(window.jQuery){clearInterval(b);$.ajaxPrefilter("json script",function(g){g.crossDomain=true});if(hmDevice.embedded&&hmDevice.desktop){$("li#toggle_fullscreen").show()}e(0);var f="SVG Diagram";switch("topic"){case"project":f="Data Model Document Writer";break;case"project_topic":f="Data Model Document Writer > SVG Diagram";break}f=$("<textarea/>").html(f).text();$("title").text(f)}},100)}if(window.addEventListener){window.addEventListener("load",initScripts,false)}else{if(window.attachEvent){window.attachEvent("onload",initScripts)}else{window.onload=initScripts}};
 helpman_mailrecipient = 'Support Staff <support@ec-software.com>';
 hmGetUrlParams = function() {/*! 
 * Enter code to save URL parameters to session variables inside the if clause below.

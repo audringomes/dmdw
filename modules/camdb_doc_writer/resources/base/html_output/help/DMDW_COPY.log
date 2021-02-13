@@ -3,8 +3,8 @@
    ROBOCOPY     ::     Robust File Copy for Windows                              
 -------------------------------------------------------------------------------
 
-  Started : Friday, 12 February 2021 20:07:44
-   Source : E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\
+  Started : Saturday, 13 February 2021 17:30:15
+   Source : E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\
      Dest : E:\boogert-lab\dmdw\modules\camdb_doc_writer\resources\base\html_output\help\
 
     Files : *.*
@@ -13,28 +13,28 @@
 
 ------------------------------------------------------------------------------
 
-	                  66	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\
+	                  68	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\
 	  *EXTRA File 		       0	DMDW_COPY.log
-	                  18	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\css\
-	                  19	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\example_html\
+	                  18	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\css\
+	                  19	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\example_html\
 	*EXTRA Dir        -1	E:\boogert-lab\dmdw\modules\camdb_doc_writer\resources\base\html_output\help\example_html\gis412391_pages\
 	  *EXTRA File 		    2070	gis412391.html
 	  *EXTRA File 		  482826	gis_412391.xml
 	  *EXTRA File 		    1117	output.html
-	                  55	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\example_html\electricity_pages\
-	                  82	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\example_html\gis_pages\
-	                  10	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\example_html_v1\
-	                  65	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\example_html_v1\gis412391_pages\
-	                  64	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\images\
-	                  32	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\js\
-	                  52	E:\boogert-lab\dmdw\modules\ds_doc_writer\resources\en_gb\help\jstopics\
+	                  55	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\example_html\electricity_pages\
+	                  82	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\example_html\gis_pages\
+	                  10	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\example_html_v1\
+	                  65	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\example_html_v1\gis412391_pages\
+	                  64	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\images\
+	                  32	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\js\
+	                  54	E:\boogert-lab\dmdw\modules\dm_doc_writer\resources\en_gb\help\jstopics\
 
 ------------------------------------------------------------------------------
 
                Total    Copied   Skipped  Mismatch    FAILED    Extras
     Dirs :        10         0        10         0         0         1
-   Files :       463         0       463         0         0         4
-   Bytes :   18.23 m         0   18.23 m         0         0   474.6 k
+   Files :       467         0       467         0         0         4
+   Bytes :   18.43 m         0   18.43 m         0         0   474.6 k
    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
-   Ended : Friday, 12 February 2021 20:07:44
+   Ended : Saturday, 13 February 2021 17:30:15
 
