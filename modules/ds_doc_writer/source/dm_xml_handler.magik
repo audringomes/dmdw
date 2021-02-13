@@ -95,6 +95,8 @@ _method dm_xml_handler.datamodel_xml( ds, properties)
 	## :ace_name 
 	## :dm_product_name
 	## :dm_module_name
+	## :expand_tables?
+	## :include_urns?
 	##
 
 	_local l_props << _self.xml_header_info.copy()
@@ -114,6 +116,8 @@ _method dm_xml_handler.datamodel_xml( ds, properties)
 	subs.add(_self.datamodel_detail_xml(:external_name,ds.external_name))
 	subs.add(_self.datamodel_detail_xml(:current_dd_version,ds.current_dd_version))
 	subs.add(_self.datamodel_version_of(ds, properties))
+	subs.add(_self.datamodel_detail_xml(:expand_tables,write_string(properties[:expand_tables?])))
+	subs.add(_self.datamodel_detail_xml(:include_urns,write_string(properties[:include_urns?])))
 	subs.add(_self.datamodel_detail_xml(:ace_name,properties[:ace_name]))
 
 	l_alt <<
@@ -128,8 +132,9 @@ _method dm_xml_handler.datamodel_xml( ds, properties)
 	_for i,j _over !current_languages!.fast_keys_and_elements()
 	_loop subs.add(_self.datamodel_detail_xml(:active_language,j,property_list.new_with(:order,i.write_string)))
 	_endloop
+
 	
-	l_elements.add(l_dd)	
+	l_elements.add(l_dd)
 
 	>> l_xml
 	
@@ -248,6 +253,14 @@ _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.global_properties_xml(p_elements)
+	## 
+	## 
+	>> sw:simple_xml_thing.new(:global_properties,p_elements)
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
 _method dm_xml_handler.category_xml( p_elements, a_category, p_include_urn?)
 	## 
 	##
@@ -299,13 +312,69 @@ _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
+_method dm_xml_handler.joins_using_field_xml( a_fld )
 	## 
 	## 
 
 	_local l_rope << rope.new()
+	_local l_xml << simple_xml_thing.new(:used_in_join,l_rope)
+
+	_local (l_flds,l_joins) << a_fld.used_in_joins()
+
+	_for i_fld _over l_flds.fast_elements()
+	_loop l_rope.add(simple_xml_thing.new(:join_field,i_fld.name.write_string))
+	_endloop
+
+	_for i_join _over l_joins.fast_elements()
+	_loop l_rope.add(simple_xml_thing.new(:joins,i_join.name.write_string))
+	_endloop
+
+	>> l_xml
+		
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_private _method dm_xml_handler.field_type_for( a_fld )
+	## 
+	## 
 	
-	_local l_atts << property_list.new()
+	>> _if a_fld.is_join?
+	   _then
+		   >> :join
+		   
+	   _elif a_fld.is_geometry?		       
+	   _then
+		   >> :geometry
+		   
+	   _elif _not a_fld.is_physical?
+	   _then
+		   >> :derived
+	   _else
+		   >> :physical
+	   _endif
+	
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
+	## 
+	## 
+
+	_local l_type << _self.field_type_for( a_fld )
+
+	_local l_atts << property_list.new_with(:type,l_type)
+
+	_if l_type _is :geometry
+	_then
+		_if (mapped? << a_fld.mapped?) _is _true
+		_then l_atts[:mapped] << _true 
+		_elif (f << a_fld.mapped_to_geom_field()) _isnt _unset
+		_then l_atts[:mapped_to] << _true 
+		_endif
+	_endif
+		
 	_if properties _isnt _unset 
 	_then l_atts.add_all(properties)
 	_endif
@@ -314,154 +383,374 @@ _method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
 	_then l_urn << _self.urn_prop_for(:field, a_fld)
 	      l_atts.add_all(l_urn)
 	_endif
-	
 
-	(l_main_xml, l_sub_xml) << _self.field_type_xml( a_fld )
-	l_atts[:type] << l_main_xml.attribute(:type)
-	
-	_if (m? << l_sub_xml.attribute(:mapped)) _isnt _unset
-	_then l_atts[:mapped] << m?
-	_elif (m? << l_sub_xml.attribute(:mapped_to)) _isnt unset
-	_then l_atts[:mapped_to] << m?
-	_endif
-	
-	l_rope.add(sw:simple_xml_thing.new(:external_name,{a_fld.external_name.write_string}))
-	l_rope.add(sw:simple_xml_thing.new(:name,{a_fld.name.write_string}))
+	_local l_field_elements << rope.new()	
+	_local l_field_xml << sw:simple_xml_thing.new(:field,l_field_elements,l_atts)
 
+	# Names
+	l_field_elements.add( sw:simple_xml_thing.new(:external_name,{a_fld.external_name.write_string}) )
+	l_field_elements.add( sw:simple_xml_thing.new(:name,{a_fld.name.write_string}) )
+
+	# Part of key info:
+	l_field_elements.add(_self.joins_using_field_xml( a_fld ))
+
+	# Size:
 	l_size << _if (f_type << a_fld.type) _isnt _unset 
 		  _then >> f_type.size.write_string
 		  _else >> ""
 		  _endif
-	l_rope.add(sw:simple_xml_thing.new(:size,l_size))
+	l_field_elements.add( sw:simple_xml_thing.new(:size,l_size) )
+	l_field_elements.add( sw:simple_xml_thing.new(:key,{a_fld.is_key?.write_string}))
+	l_field_elements.add( sw:simple_xml_thing.new(:mandatory,{a_fld.mandatory?.write_string}))
 	
-	l_rope.add(l_main_xml)
-	l_rope.add(l_sub_xml)
-	
-	l_rope.add(sw:simple_xml_thing.new(:key,{a_fld.is_key?.write_string}))
-	l_rope.add(sw:simple_xml_thing.new(:mandatory,{a_fld.mandatory?.write_string}))
-	
-	l_rope.add(sw:simple_xml_thing.new(:default_value,{a_fld.default_value.write_string}))
+	l_field_elements.add( sw:simple_xml_thing.new(:default_value,{a_fld.default_value.write_string}))
 
 	_if a_fld.responds_to?(:unset_value)
-	_then l_rope.add(sw:simple_xml_thing.new(:unset_value,{a_fld.unset_value.write_string}))
+	_then l_field_elements.add( sw:simple_xml_thing.new(:unset_value,{a_fld.unset_value.write_string} ))
+	_endif
+
+	# Type
+	l_field_elements.add( sw:simple_xml_thing.new(:type,l_type) )
+	
+	# Stored unit
+	_if a_fld.has_stored_unit?
+	_then l_field_elements.add( _self.dm_xml_stored_unit_xml( a_fld.stored_unit ))
+	_else l_field_elements.add( _self.dm_xml_stored_unit_xml( _unset) )
 	_endif
 	
+	# Add field specific elements:
+	_local l_field_specific_xml << 
+		_if l_type _is :join
+		_then >> _self.join_field_xml( a_fld )
+		_elif l_type _is :geometry
+		_then >> _self.geometry_field_xml( a_fld )
+		_elif l_type _is :physical
+		_then >> _self.physical_field_xml( a_fld )
+		_elif l_type _is :derived
+		_then >> _self.derived_field_xml( a_fld )
+		_endif
+
+	_local l_sub_type << sw:simple_xml_thing.new(:sub_type,{l_field_specific_xml})
+	l_field_elements.add( l_sub_type )
 	
+	# Description:	
 	_if (l_text << properties[:description]) _is _unset _andif 
 	    (l_text << a_fld.defined_help_text) _is _unset
-	_then
-		l_text << a_fld.help_text
+	_then l_text << a_fld.help_text
 	_endif
+	l_field_elements.add(sw:simple_xml_thing.new(:help_text,{l_text}))
 
-	_if a_fld.has_stored_unit?
-	_then l_text << write_string(l_text,", stored in ",a_fld.stored_unit.long_description)
-	_endif
-	
-	l_rope.add(sw:simple_xml_thing.new(:help_text,{l_text}))
-
-
-	>> sw:simple_xml_thing.new(:field,l_rope,l_atts)
+	>> l_field_xml
 
 _endmethod
 $
 
-_pragma(classify_level=debug)
-_method dm_xml_handler.field_type_xml( a_field ) 
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.dm_xml_stored_unit_xml( a_unit )
 	## 
-	## returns two xml objects.
-	## The first one is :main_type (:join,:geometry,:physical,:logical)
-	## The second one is :sub_type with properties that depend on
-	## the main type
+	## 
+
+	_if a_unit _is _unset 
+	_then _return sw:simple_xml_thing.new(:stored_unit)
+	_endif
+	
+	_local l_props << property_list.new()
+	_local l_rope << rope.new()
+
+	l_rope.add( sw:simple_xml_thing.new( :dimensionality, a_unit.unit_dimensionality.name ))
+	l_rope.add( sw:simple_xml_thing.new( :short_description, a_unit.short_description ))
+	l_rope.add( sw:simple_xml_thing.new( :long_description, a_unit.long_description ))
+
+	>> sw:simple_xml_thing.new(:stored_unit,l_rope,l_props)
+	
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+#_private _method dm_xml_handler.physical_field_xml( a_field )	
+_method dm_xml_handler.physical_field_xml( a_field )
+	## 
+	## 
+
+	>> _self.sw_field_type_xml( a_field.type )
+
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_private _method dm_xml_handler.derived_field_xml( a_field )
+	## 
+	## 
+
+	>> _self.sw_field_type_xml( a_field.type )
+
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.sw_field_type_xml( p_field_type )
+	## 
+	## 
+
+	_local l_rope << rope.new()
+	_local l_xml << sw:simple_xml_thing.new(:sw_field_type,l_rope,property_list.new_with(:name,p_field_type.name))
+
+	_if (l_enu << p_field_type.enumerator) _isnt _unset
+	_then l_rope.add( _self.enumerated_xml( l_enu ))
+	_endif
+	
+	# only datastore field types know about phys_type, but all
+	# field_types will repond to .class and .element_class
+	_local phys_type <<
+		_if p_field_type.responds_to?(:phys_type)
+		_then >> p_field_type.phys_type
+		_elif p_field_type.is_vector?
+		_then >> p_field_type.element_class.class_name
+		_else >> p_field_type.class.class_name
+		_endif
+	
+	l_element << sw:simple_xml_thing.new(:phys_type,{}, property_list.new_with(:type,write_string(phys_type)))
+	l_rope.add(l_element)
+
+	>> l_xml
+	
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+#_private _method dm_xml_handler.join_field_xml( a_join_field )
+_method dm_xml_handler.join_field_xml( a_join_field )
+	##
 	##
 
-	_local l_main_atts << property_list.new()
+	_local l_type << a_join_field.join_type
 
-	main_type <<
-		_if a_field.is_join?
-		_then >> :join
-		_elif a_field.is_geometry?		       
-		_then >> :geometry
-		_elif _not a_field.is_physical?
-		_then >> :logical
-		_else >> :physical
-		_endif
+	_local l_elems << rope.new()
+	_local l_top_props << property_list.new_with(:type,l_type)
+	_local l_top_xml << sw:simple_xml_thing.new(:join_details,l_elems,l_top_props)
 	
-	l_main_atts[:type] << main_type
+	_if l_type _is :text
+	_then l_elems.add( _self.text_join_xml( a_join_field ))
+	      _return l_top_xml
+	_endif
 
-	# Sub type
-	l_rope << rope.new()
-	l_sub_atts << property_list.new()
-	_if (l_field_type << a_field.type) _isnt _unset
-	_then
-		_if (l_enu << l_field_type.enumerator) _isnt _unset
-		_then
-			l_atts << property_list.new_with(:enumerator_name,l_enu.name)
-			l_atts[:class] << l_field_type.element_class.class_name
-			l_xml << sw:simple_xml_thing.new(:enumerated,{},l_atts)
-			l_rope.add(l_xml)
-		_else
+	l_elems.add( _self.result_tables_xml( a_join_field ))
 
-			# only datastore field types know about phys_type, but all
-			# field_types will repond to .class and .element_class
-			type << ( _if l_field_type.responds_to?(:phys_type)
-				  _then
-					  >> l_field_type.phys_type
-				  _elif l_field_type.is_vector?
-				  _then
-					  >> l_field_type.element_class.class_name
-				  _else 
-					  >> l_field_type.class.class_name
-				  _endif ).write_string
-			l_xml << sw:simple_xml_thing.new(:phys_type,{}, property_list.new_with(:type,type))
-			l_rope.add(l_xml)
-		_endif
-				
-	_elif main_type _is :geometry
-	_then
+	_local l_rope << rope.new()
+	_local l_props << property_list.new()
+	_local l_xml << sw:simple_xml_thing.new(l_type,l_rope,l_props)
 		
-		l_geom_type << a_field.geom_type
-		
-		l_xml << sw:simple_xml_thing.new(:geom_type,{}, property_list.new_with(:type,l_geom_type))
-		l_rope.add(l_xml)
+	l_props[:heterogeneous] << a_join_field.heterogeneous?
+	l_props[:simple_result] << a_join_field.simple_result?
 
-		_if (l_manifold << a_field.manifold_name) _isnt _unset
-		_then
-			l_xml << sw:simple_xml_thing.new(:inmanifold,{}, property_list.new_with(:name,l_manifold))
-			l_rope.add(l_xml)
-		_endif
+	l_rope.add( _self.join_result_flavour( a_join_field ) )
 
-		_if (mapped? << a_field.mapped?) _is _true
-		_then
-			l_sub_atts[:mapped] << _true
-			l_ma << property_list.new_with(:map_discriminator_method,a_field.map_discriminator_method)
-			l_xml << sw:simple_xml_thing.new(:mapped,{},l_ma)
-			l_rope.add(l_xml)
-			l_main_atts[:mapped] << _true
+	_local l_dd_join << a_join_field.joins(_true)
+	_if l_dd_join _isnt _unset 
+	_then l_rope.add( _self.dd_join_xml( l_dd_join ) )
+	_endif
+
+	l_elems.add(l_xml)
+	
+	>> l_top_xml
+
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.dd_join_xml( a_dd_join )
+	## 
+	## 
+
+	_local l_class_name << a_dd_join.class_name
+	
+	_local l_rope << rope.new()
+	_local l_props << property_list.new_with(:name,a_dd_join.name)
+
+	l_rope.add(_self.join_conditions_xml( a_dd_join ))
+	
+	_local l_xml << sw:simple_xml_thing.new( l_class_name, l_rope, l_props )
+	
+	>> l_xml
+	
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.join_conditions_xml( a_dd_join )
+	## 
+	## 
+
+#	_if a_dd_join.heterogeneous? _is _true 
+#	_then _return _self.hetero_join_conditions_xml( a_dd_join )
+#	_endif
+	
+	_local l_rope << rope.new()
+	_local l_xml << sw:simple_xml_thing.new(:conditions,l_rope)
+
+	_for i_table_name _over a_dd_join.target_table_names.fast_elements()
+	_loop
+
+		_for i_cond _over a_dd_join.conditions( i_table_name,_true ).fast_elements()
+		_loop
+			_local l_prop << property_list.new_with(:target_table,i_table_name,
+								:field1,i_cond[1].write_string,
+								:operator,i_cond[2].write_string,
+								:field2,i_cond[3].write_string)
 			
-		_elif (f << a_field.mapped_to_geom_field()) _isnt _unset
-		_then
-			l_sub_atts[:mapped_to] << write_string(f.name)
-			l_atts << property_list.new_with(:name, write_string(f.name),
-							 :external_name, write_string(f.external_name))
-			l_xml << sw:simple_xml_thing.new(:mapped_to,{}, l_atts)
-			l_rope.add(l_xml)
-			l_main_atts[:mapped_to] << _true
-		_endif
-
-	_elif main_type _is :join
-	_then
+			l_rope.add( sw:simple_xml_thing.new(:condition,{},l_prop) )
+		_endloop
 		
-		l_xml << _self.join_info_xml( a_field )
-		l_rope.add(l_xml)
+	_endloop
+	
+	>> l_xml
+	
+_endmethod
+$
+
+#_pragma(classify_level=advanced, topic={dmdw,xml})
+#_method dm_xml_handler.hetero_join_conditions_xml( a_dd_hetero_join )
+#	## 
+#	##
+#	
+#	_local l_rope << rope.new()
+#	_local l_props << property_list.new()
+#	
+#	_local l_xml << sw:simple_xml_thing.new(:conditions,l_rope,l_props)
+#
+#	>> l_xml
+#_endmethod
+#$
+
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.join_result_flavour( a_fld )
+	## 
+	## 
+
+	_local (l_type,l_ordered?) << a_fld.result_flavour
+	_local l_rope << rope.new()
+
+	l_rope.add( sw:simple_xml_thing.new(:result_type,l_type) )
+	l_rope.add( sw:simple_xml_thing.new(:ordered,l_ordered?.default("").write_string) )
+	
+	>> sw:simple_xml_thing.new(:result_flavour,l_rope)
+	
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.result_tables_xml( a_fld )
+	## 
+	##
+	
+	_local l_rope << rope.new()
+	_local l_xml << sw:simple_xml_thing.new(:result_tables,l_rope)
+
+	_for i_table _over a_fld.result_tables.fast_elements()
+	_loop
+		_local l_atts << property_list.new()
+		l_atts[:name] << i_table.name.write_string
+		l_atts[:external_name] << i_table.external_name.write_string
+		l_atts[:dataset] << i_table.dd.name.write_string
+		l_rope.add( sw:simple_xml_thing.new(:table,{},l_atts) )
+	_endloop
+
+	>> l_xml
+	
+_endmethod
+$
+
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.super_dd_join_xml( p_fld )
+	## 
+	## 
+
+	_local l_rope << rope.new()
+	_local l_xml << sw:simple_xml_thing.new(:super_dd_join,l_rope)
+	
+	l_rope.add( _self.result_tables_xml( p_fld ))
+	
+	>> l_xml
+	
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.text_join_xml( p_fld )
+	## 
+	##
+
+	_local l_rope << rope.new()
+	_local l_xml << sw:simple_xml_thing.new(:text_join,l_rope)
+	_local l_params << p_fld.parameters
+	
+	l_rope.add( sw:simple_xml_thing.new(:field_name,l_params[1].write_string) )
+	l_rope.add( sw:simple_xml_thing.new(:text_table_name,l_params[2].write_string) )
+	
+	>> l_xml
+
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+#_private _method dm_xml_handler.geometry_field_xml( a_field )
+_method dm_xml_handler.geometry_field_xml( a_field )
+	## 
+	##
+
+	_local l_geom_type << a_field.geom_type
+	_local l_elements << rope.new()
+	_local l_props << property_list.new_with(:type,l_geom_type,
+						 :has_topology,a_field.has_topology?)
+	
+	_local l_top << sw:simple_xml_thing.new( :geometry_details, l_elements, l_props)
+
+	l_elements.add( sw:simple_xml_thing.new( :priority, a_field.priority.write_string ))
+
+	
+	_if (l_manifold << a_field.manifold_name) _isnt _unset
+	_then
+
+		_local l_xml << sw:simple_xml_thing.new(:inmanifold,{}, property_list.new_with(:name,l_manifold))
+		l_elements.add(l_xml)
 		
 	_endif
 
-	main_type_xml << sw:simple_xml_thing.new(:field_type, {}, l_main_atts)
-	sub_type_xml << sw:simple_xml_thing.new(:field_sub_type, l_rope, l_sub_atts)
+	_if (mapped? << a_field.mapped?) _is _true
+	_then
+		
+		_local l_atts << property_list.new_with(:map_discriminator_method,a_field.map_discriminator_method)
+		_local l_flds << rope.new()
+		
+		_for i_key,i_fld _over a_field.mapped_geometry_fields.fast_keys_and_elements()
+		_loop l_flds.add( sw:simple_xml_thing.new(:map,{},property_list.new_with(:key,i_key.write_string,
+											 :fld_name,i_fld.name,
+											 :fld_external_name,i_fld.external_name.write_string)))
+		_endloop
+		
+		_local l_xml << sw:simple_xml_thing.new(:mapped,l_flds,l_atts)
+
+		l_elements.add(l_xml)
+		
+		
+	_elif (f << a_field.mapped_to_geom_field()) _isnt _unset
+	_then
+		
+		_local l_atts << property_list.new_with(:name, write_string(f.name),
+							:external_name, write_string(f.external_name))
+		_local l_xml << sw:simple_xml_thing.new(:mapped_to, {}, l_atts)
+		
+		l_elements.add(l_xml)
+		
+	_endif
+
+	>> l_top
 	
-	>> main_type_xml, sub_type_xml
 _endmethod
 $
+
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
 _method dm_xml_handler.enumerators_xml( p_enumerators, p_include_urn? )
@@ -472,7 +761,7 @@ _method dm_xml_handler.enumerators_xml( p_enumerators, p_include_urn? )
 	_local l_enums_xml << sw:simple_xml_thing.new(:enumerators,l_rope)
 
 	_for a_enu _over p_enumerators.fast_elements()
-	_loop l_rope.add(_self.enumerator_xml(a_enu, p_include_urn?))
+	_loop l_rope.add(_self.enumerator_xml(a_enu, p_include_urn?, _true))
 	_endloop
 
 	>> l_enums_xml
@@ -481,7 +770,17 @@ _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_private _method dm_xml_handler.enumerator_xml(a_enum, p_include_urn?)
+_method dm_xml_handler.enumerated_xml( a_enum )
+	## 
+	## 
+
+	>> sw:simple_xml_thing.new(:enumerated,{},property_list.new_with(:name,a_enum.name.write_string))
+
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_private _method dm_xml_handler.enumerator_xml(a_enum, p_include_urn?, p_include_values?)
 	## 
 	## 
 
@@ -495,13 +794,16 @@ _private _method dm_xml_handler.enumerator_xml(a_enum, p_include_urn?)
 	_then l_urn << _self.urn_prop_for(:enumerator, a_enum.definition_record)
 	      l_atts.add_all(l_urn)
 	_endif
-	
-	_for i_val,i_str _over a_enum.values_and_strings.fast_keys_and_elements()
-	_loop
-		val << sw:simple_xml_thing.new(:value,{i_str.write_string},
-					       property_list.new_with(:intvalue,i_val))
-		l_rope.add(val)
-	_endloop
+
+	_if p_include_values?.default(_true) _is _true 
+	_then
+		_for i_val,i_str _over a_enum.values_and_strings.fast_keys_and_elements()
+		_loop
+			val << sw:simple_xml_thing.new(:value,{i_str.write_string},
+						       property_list.new_with(:intvalue,i_val))
+			l_rope.add(val)
+		_endloop
+	_endif
 	
 	>> sw:simple_xml_thing.new(:enumerator, l_rope, l_atts)
 
@@ -789,65 +1091,6 @@ _endmethod
 $
 
 _pragma(classify_level=advanced, topic={dmdw,xml})
-_method dm_xml_handler.join_info_xml( a_join_field )
-	## 
-	## :result_info()
-	## Returns some info describing the kind of result to
-        ## expect. This will be
-        ## 
-        ## :record,	table descriptor
-        ## :records,	table.descriptor, ordered??
-        ## 
-        ## where ordered?? is maybe
-	##
-	##
-	## :simple_result? IN  sw:sw_join_field    A
-        ## 
-        ## Returns true if the resulting value is a simple value
-        ## rather than a set of values. This is true for text fields
-        ## and some follow join fields
-	##
-	## :heterogeneous?
-	## :is_super_dd_join?
-	## :joins() > a,b
-	## a.defines_single?
-	## :result_tables()
-	
-	_local props << property_list.new()
-	_local l_rope << rope.new()
-	
-	props[:join_type] << a_join_field.join_type
-	
-	_if props[:join_type] _is :text
-	_then _return :text
-	_endif
-	
-	hetero? << a_join_field.heterogeneous?
-	props[:heterogeneous] << hetero?
-
-	simple_result? << a_join_field.simple_result?
-	props[:simple_result] << simple_result?
-
-	_if hetero? _isnt _true 
-	_then
-		(result, table, ordered?) << a_join_field.result_info()
-		props[:result] << result
-	_endif
-
-	result_tables << a_join_field.result_tables(a_join_field.dd)
-	_for i _over result_tables.fast_elements()
-	_loop
-		l_atts << property_list.new_with(:name,i.name.write_string,
-						 :external_name,i.external_name.write_string)
-		l_rope.add(sw:simple_xml_thing.new(:target_table,{},l_atts))
-	_endloop
-	
-	>> sw:simple_xml_thing.new(:join_type,l_rope,props)
-
-_endmethod
-$
-
-_pragma(classify_level=advanced, topic={dmdw,xml})
 _method dm_xml_handler.list_from_xml(elements)
 	## 
 	## a helper that converts ELEMENTS into a property list
@@ -968,5 +1211,51 @@ _method dm_xml_handler.soft_joins_xml(list)
 	l_xml << sw:simple_xml_thing.new(:soft_joins,l_rope)
 	>> l_xml
 	
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={dmdw,xml})
+_method dm_xml_handler.create_index_xml( p_fname, p_files )
+	## 
+	## Create a XML file with P_FNAME that contains elements from
+	## P_FILES. 
+	## All path information is stripped!
+	## 
+	## P_FILES should be a collection of vectors with two
+	## elements:
+	##  First the name of the xml file,
+	##  Second the name of the html file.
+	##
+	## Output is an xml with the following elements:
+	## 
+	## <files>
+	## 	<source>gis.xml</source>
+	## 	<html>gis.html</html>
+	##	<pretty>Gis</pretty>
+	## </files>
+	## ..
+	##
+
+	_local l_props << _self.xml_header_info.copy()
+	l_props[:creation_date] << date_time.now()
+	
+	_local l_elements << rope.new()
+	_local l_xml << sw:simple_xml_thing.new(:index, l_elements, l_props)
+	
+	_for i_elem _over p_files.fast_elements()
+	_loop
+		_local l_rope << rope.new()
+		_local l_files << sw:simple_xml_thing.new(:files,l_rope)
+		_local l_src_name << system.pathname_components(i_elem[1])
+		_local l_html_name << system.pathname_components(i_elem[2])
+		_local (l_name,ext) << system.split_filename(l_src_name)
+		_local l_pretty << l_name.make_non_escape_string_pretty()
+		l_rope.add( sw:simple_xml_thing.new(:source,l_src_name) )
+		l_rope.add( sw:simple_xml_thing.new(:html,l_html_name) )
+		l_rope.add( sw:simple_xml_thing.new(:pretty,l_pretty,property_list.new_with(:file,l_html_name)) )
+		l_elements.add( l_files )
+	_endloop
+
+	>> l_xml
 _endmethod
 $

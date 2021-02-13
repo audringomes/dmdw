@@ -1,0 +1,47 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer})
+_method sw_basic_field.used_in_joins()
+	## 
+	## If self isnt a geometery and join, search for join fields on
+	## my owner for fields using myself as a key in a join.
+	## Returns two results: keyed_set with my fields and a keyed
+	## set with the dd_joins
+	##
+
+	_local l_fldset << keyed_set.new()
+	_local l_joinset << keyed_set.new()
+
+	_if _self.is_geometry? _orif _self.is_join?
+	_then _return l_fldset,l_joinset
+	_endif
+
+	_local my_name << _self.name
+	_for i_fld _over .owner.join_fields.fast_elements()
+	_loop
+		_local l_join << i_fld.joins(_true)
+		_if l_join _is _unset # text
+		_then
+			_if i_fld.parameters[1] = my_name
+			_then l_fldset.add(i_fld)
+			_endif
+			_continue 
+		_endif
+		_if l_join.condition_source_fields.includes?(my_name)
+		_then
+			l_fldset.add(i_fld)
+			l_joinset.add(l_join)
+		_endif
+	_endloop
+	
+	>> l_fldset,l_joinset
+	
+_endmethod
+$

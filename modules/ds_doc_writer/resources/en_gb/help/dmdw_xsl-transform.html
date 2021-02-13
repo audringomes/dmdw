@@ -18,7 +18,7 @@
 	<meta name="description" content="DMDW contains the following xsl version 2.0 stylesheets to to transform the dmdw xml into html." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="09/01/2021" />
+        <meta name="revised" content="12/02/2021" />
         <meta name="id" content="dmdw_XSL-Transform" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -291,6 +291,39 @@ function GetSearchPage() {
 </td>
 </tr>
 <tr class="swDefaultHeader">
+<td class="swDefaultHeader" style="width:10.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Fileset3.xsl</span></p>
+</td>
+<td class="swDefaultHeader" style="width:19.0625rem;"><p class="p_Normal">Main template that creates multiple html pages, but without dd_version prefix and 'error page'.</p>
+<p class="p_Normal">When </p>
+</td>
+<td class="swDefaultHeader" style="width:13.4375rem;"><br />
+</td>
+</tr>
+<tr class="swDefaultHeader">
+<td class="swDefaultHeader" style="width:10.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">ChapterTemplates.xsl</span></p>
+</td>
+<td class="swDefaultHeader" style="width:19.0625rem;"><p class="p_Normal">The named templates for every kind of page, for example &quot;CollectionPages&quot;</p>
+</td>
+<td class="swDefaultHeader" style="width:13.4375rem;"><br />
+</td>
+</tr>
+<tr class="swDefaultHeader">
+<td class="swDefaultHeader" style="width:10.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">ProcessingTemplates.xsl</span></p>
+</td>
+<td class="swDefaultHeader" style="width:19.0625rem;"><p class="p_Normal">All templates for processing the DMDW xml and svg data.</p>
+</td>
+<td class="swDefaultHeader" style="width:13.4375rem;"><br />
+</td>
+</tr>
+<tr class="swDefaultHeader">
+<td class="swDefaultHeader" style="width:10.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">index.xsl</span></p>
+</td>
+<td class="swDefaultHeader" style="width:19.0625rem;"><p class="p_Normal">Creates the 'index page' when multiple DMDW xml files are processed.</p>
+</td>
+<td class="swDefaultHeader" style="width:13.4375rem;"><br />
+</td>
+</tr>
+<tr class="swDefaultHeader">
 <td class="swDefaultHeader" style="width:10.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Common.xsl</span></p>
 </td>
 <td class="swDefaultHeader" style="width:19.0625rem;"><p class="p_Normal">Common named templates for:</p>
@@ -326,14 +359,6 @@ function GetSearchPage() {
 <td class="swDefaultHeader" style="width:13.4375rem;"><p class="p_Normal">Obsolete</p>
 </td>
 </tr>
-<tr class="swDefaultHeader">
-<td class="swDefaultHeader" style="width:10.9375rem;"><p class="p_Normal"><span style="font-weight: bold;">Topology.xsl</span></p>
-</td>
-<td class="swDefaultHeader" style="width:19.0625rem;"><p class="p_Normal">Creates topology page only</p>
-</td>
-<td class="swDefaultHeader" style="width:13.4375rem;"><p class="p_Normal">Debug</p>
-</td>
-</tr>
 </table>
 </div>
 <p class="p_Normal">&nbsp;</p>
@@ -352,7 +377,7 @@ function GetSearchPage() {
 	  </p>
 	</td>
 	<td>
-          <p class="last_update" id="last_update"> January 2021 </p>
+          <p class="last_update" id="last_update"> February 2021 </p>
 	</td>							
       </tr>		
     </tbody>

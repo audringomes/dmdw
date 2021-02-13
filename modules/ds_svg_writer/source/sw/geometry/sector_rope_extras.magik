@@ -1,0 +1,30 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method sector_rope.without_splines()
+	## 
+	##
+	
+	_local l_rp << sector_rope.new()
+	_for i_sec _over _self.sectors.fast_elements()
+	_loop
+		_if i_sec.is_kind_of?(rational_b_spline)
+		_then 
+			_local l_sec << sector.new()
+			l_sec.add(i_sec.first)
+			l_sec.add(i_sec.last)
+			l_rp.add(l_sec)
+		_else
+			l_rp.add(i_sec)
+		_endif
+	_endloop
+	>> l_rp
+_endmethod
+$

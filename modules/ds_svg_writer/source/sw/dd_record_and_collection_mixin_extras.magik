@@ -1,0 +1,20 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer})
+_method dd_record_and_collection_mixin.exclude_from_svg?
+	## 
+	## Hook to filter out objects from being included in the SVG
+	## output.
+	##
+	##
+	>> _false
+#	>> _self.name _is :picture
+_endmethod
+$

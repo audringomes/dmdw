@@ -11,7 +11,10 @@ body {
 	font-size: 16px;
 }
 p {
-	margin-left:10px;
+    margin-left:10px;
+    margin-bottom: 8pt;
+    font-size: 0.8em;
+    margin-top: 0pt;
 }
 a
 {
@@ -65,15 +68,13 @@ h3/*.Heading3*/
 }
 h4/*Heading4*/
 {
-	page-break-after: avoid;
-	page-break-inside: avoid;
-	margin-top: 2pt;
-	margin-bottom: 0pt;
-	font-style: italic;
-	color: #2E74B5;
-	font-weight: normal;
-	font-size: 14px;
-	/* font-family: Tahoma; */
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    margin-top: 2pt;
+    margin-bottom: 1rem;
+    color: #2E74B5;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 table {
 	border-collapse: collapse;
@@ -126,12 +127,6 @@ td/*.td_1*/
 	padding-right: 5pt;
 	/* Added: */
 	vertical-align: middle;
-}
-p
-{
-	margin-bottom: 8pt;
-	font-size: 0.8em;
-	margin-top: 0pt;
 }
 ol
 {

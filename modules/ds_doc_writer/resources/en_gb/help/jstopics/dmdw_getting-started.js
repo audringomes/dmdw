@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Getting started",
 hmDescription:"Take the following steps:  Common Get the software from the repository;  Exporting data model to XML: Start an open smallworld session containing the basic datamodel code for",
-hmPrevLink:"index.html",
+hmPrevLink:"dmdw_release-notes.html",
 hmNextLink:"dmdw_customization.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",

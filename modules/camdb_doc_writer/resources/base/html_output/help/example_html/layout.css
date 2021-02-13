@@ -16,7 +16,7 @@ nav ul li {
 footer {
 	text-align: center;
 	margin-top: 10px;
-    font-size: 0.65em;
+	font-size: 0.65em;
 }
 footer ul li {
 	list-style-type: none;
@@ -24,9 +24,9 @@ footer ul li {
 	margin-bottom: 0px;
 }
 .PageTitle {
-	margin-top: 3pt;
-	color: #1F4D78;
+	margin-top: 20pt;
 	font-size: 2em;
+	background-color: #d6d6d6;
 }
 .float {
 	/* Aligns all content */
@@ -42,18 +42,18 @@ div.container {
 	overflow-y: auto;
 }
 div.navbox {
-	width: 30%;
-	float: left;
-	background-color: #d5d5d5;
-	margin: 5px;
-	padding: 5px;
+    overflow: auto;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    min-width: 250px;
+    width: 30%;
 }
 div.elementbox {
-	width: 65%;
-	float: right;
-	background-color: #d5d5d5;
-	padding: 5px;
-	margin: 5px;
+    overflow: auto;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
 }
 div.navlink {
    cursor: default;

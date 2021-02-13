@@ -26,7 +26,7 @@ def_slotted_exemplar(:dm_xml_writer,
 		{:collection_xml,_unset},
 		{:ace_list,_unset},
 		{:categories,_unset},
-		{:xml_collections,_unset},
+		{:exported_collections,_unset},
 		{:manifolds,_unset},
 		{:fields_by_manifold,_unset},
 		{:fields_with_manifold_interaction,_unset},
@@ -74,11 +74,11 @@ $
 
 _pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
 ## The schema version that is supported
-dm_xml_writer.define_shared_constant(:schema_version_main,"1.4",:public)
+dm_xml_writer.define_shared_constant(:schema_version_main,"2.0",:public)
 $
 
 _pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
-## The schema version that is supported
+## The schema version that is supported for updates
 dm_xml_writer.define_shared_constant(:schema_version_updates,"1.4",:public)
 $
 
@@ -102,7 +102,10 @@ _method dm_xml_writer.new(ds, properties)
 	##     :expand_tables? - If true (default), intermediate join
 	##                       tables are exported too if not in the set
 	##     :include_urns? - If true (default false), it will
-	##                      include urns for 
+	##                      include urns for
+	##     :case - Its value should be unset or the name of the soc
+	##        to open a case database for svg output
+	##
 	## On instantiation it will gather data.
 	##
 	>> _clone.init(ds, properties )
@@ -115,7 +118,14 @@ _method dm_xml_writer.init(ds, properties)
 	##
 
 	.ds << ds
+
 	.properties << properties
+	_if .properties[:expand_tables?] _is _unset 
+	_then .properties[:expand_tables?] << _true 
+	_endif
+	_if .properties[:include_urns?] _is _unset 
+	_then .properties[:include_urns?] << _false
+	_endif
 	
 	.out_file << _if (file << properties[:output_file]) _is _unset 
 		     _then condition.raise(:error,:string,":output_file should be specified")
@@ -135,7 +145,7 @@ _method dm_xml_writer.init(ds, properties)
 	
 	.categories << rope.new()
 	.enumerators << equality_property_list.new()
-	.xml_collections << property_list.new()
+	.exported_collections << equality_set.new()
 	.collection_xml << _unset
 	
 	_self.init_manifolds()
@@ -266,7 +276,7 @@ _method dm_xml_writer.process()
 
 	write("Exporting...")
 	
-	.xml_collections.empty()
+	.exported_collections.empty()
 
 	_self.process_categories_and_collections()
 
@@ -280,6 +290,8 @@ _method dm_xml_writer.process()
 
 	.status << :export_done
 
+	_self.post_process()
+	
 _endmethod
 $
 
@@ -509,7 +521,11 @@ _method dm_xml_writer.process_categories_and_collections()
 	_endloop
 
 	# Now check if we are complete
-	_local l_misses << rope.new()
+	_local l_misses << sorted_collection.new(_unset,
+						 _proc @col(a,b)
+							 >> a.attributes[:name] _cf
+								 b.attributes[:name]
+						 _endproc)
 	_for i_col _over .ds.collections.fast_elements()
 	_loop
 		_if i_col.skip_dm_export? _is _false _andif
@@ -518,15 +534,14 @@ _method dm_xml_writer.process_categories_and_collections()
 			#DEBUG write(i_col,"  not in ace")
 			l_exported_cols.add( i_col.descriptor )
 			l_xml << _self.process_collection( i_col, :not_in_ace)
-			l_misses.add(l_xml)
+			l_misses.add( l_xml )
 		_endif
 	_endloop
 	
 	_if l_misses.size > 0
 	_then
 		l_catname << write_string("Not in ACE '",l_ace_name,%')
-		l_cat_prop << property_list.new_with(:name,l_catname)
-		l_cat << sw:simple_xml_thing.new(:category,l_misses,l_cat_prop)
+		l_cat << dm_xml_handler.category_xml( l_misses, l_catname, _false)		
 		l_cats.add(l_cat)
 	_endif
 
@@ -543,9 +558,7 @@ _method dm_xml_writer.process_categories_and_collections()
 				l_xmls.add(_self.process_collection( i_table, :expanded))
 			_endloop
 			
-			l_cat_prop << property_list.new_with(:name,"Expanded join tables",
-							     :type,"technical")
-			l_cat << sw:simple_xml_thing.new(:category,l_xmls,l_cat_prop)
+			l_cat << dm_xml_handler.category_xml(l_xmls,"Expanded join tables",_false)
 			l_cats.add(l_cat)
 		_endif
 	_endif
@@ -608,7 +621,7 @@ _method dm_xml_writer.process_collection( col, category )
 	
 	l_flds << _self.process_fields( col )
 
-#	.xml_collections[col.name] << .collection_xml
+	.exported_collections.add( col )
 
 	>> .collection_xml
 _endmethod
@@ -642,7 +655,7 @@ _method dm_xml_writer.process_field( fld )
 	
 	(l_xml,l_main_type) << dm_xml_handler.field_xml(fld, properties, _self.include_urns?)
 	.collection_xml.elements.add(l_xml)
-		
+
 _endmethod
 $
 
@@ -896,9 +909,9 @@ _method dm_xml_writer.global_properties_xml()
 
 	a_rope.add(_self.global_field_descriptions_xml())
 
-	a_rope.add(_self.geometry_mappings())
+	a_rope.add(_self.geometry_mappings_xml())
 	
-	a_result << sw:simple_xml_thing.new(:global_properties,a_rope)
+	a_result << dm_xml_handler.global_properties_xml(a_rope)
 
 	>> a_result
 _endmethod
@@ -959,7 +972,7 @@ _endmethod
 $
 
 _pragma(classify_level=restricted, topic={datamodel,xml,xml})
-_method dm_xml_writer.geometry_mappings()
+_method dm_xml_writer.geometry_mappings_xml()
 	## 
 	## Get from .updates or .dataset_specials and return :geometry_mappings xml
 	## or when not defined an empty rope
@@ -1215,29 +1228,66 @@ _private _method dm_xml_writer.handle_updates_for_geometry_mappings(a_xml)
 _endmethod
 $
 
-#_pragma(classify_level=restricted, topic={datamodel,dm_doc_writer},usage={internal})
-#_private _method dm_xml_writer.updates_for_collection_field( fld, updates)
-#	## 
-#	## 
-#
-#	results << rope.new()
-#	fld_name << fld.name
-#
-#	_for i_elem _over updates.fast_elements()
-#	_loop
-#		_if i_elem.type _isnt :field
-#		_then _continue
-#		_endif
-#		
-#		u_fldname << i_elem.attribute("name").as_symbol()
-#		_if u_fldname _is fld_name
-#		_then
-#			result << i_elem.elements.first
-#			results.add(result)
-#			write("Update found for ",fld, " ",result)
-#		_endif
-#	_endloop
-#
-#	>> results 
-#_endmethod
-#$
+_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_method dm_xml_writer.post_process()
+	## 
+	##
+
+	_self.create_svg()
+
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_method dm_xml_writer.create_svg()
+	## 
+	## 
+
+	
+	_if (l_svg_writer_cls << !current_package![:dm_svg_writer]) _isnt _unset _andif
+	    (l_case_soc_name << .properties[:case]) _isnt _unset _andif 
+	    (l_cv << _self.opened_case( l_case_soc_name )) _isnt _unset 
+	_then 
+
+		_local ( l_name, l_dir ) << system.pathname_components( .out_file )
+		_local ( l_base, l_ext ) << system.split_filename( l_name )
+		_local l_file_name << system.pathname_from_components( write_string(l_base,".svg"), l_dir )
+		
+		_local l_svg_writer << l_svg_writer_cls.new( l_cv )
+		write("Creating SVG for ",.exported_collections," to ", l_file_name)
+		l_svg_writer.create_svg_for( .exported_collections, l_file_name )
+
+	_else
+		condition.raise(:warning,:string,"Could not create SVG!")
+	_endif
+
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={dmdw},usage={internal})
+_method dm_xml_writer.opened_case( soc_name )
+	## 
+	## 
+
+	_local l_ds
+	
+	_if (l_soc << gis_program_manager.spatial_object_controller(soc_name)) _isnt _unset
+	_then
+		_if l_soc.has_multiple_datasets?
+		_then
+			condition.raise(:warning,:string,"Select a Case to proceed")
+			
+		_elif l_soc.has_open_datasets?
+		_then
+			l_ds << _for i_ds _over l_soc.datasets()
+			_loop _leave _with i_ds
+			_endloop
+			condition.raise(:information,:string,write_string("Open Case database used ",
+									  l_ds))
+		_endif
+	_endif
+
+	>> l_ds
+
+_endmethod
+$

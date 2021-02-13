@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1252" standalone="yes"?>
+<index xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-12T11:57:17Z">
+	<files>
+		<source>gis.xml</source>
+		<html>gis.html</html>
+		<pretty file="gis.html">Gis</pretty>
+	</files>
+	<files>
+		<source>electricity.xml</source>
+		<html>electricity.html</html>
+		<pretty file="electricity.html">Electricity</pretty>
+	</files>
+</index>

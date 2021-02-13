@@ -1,0 +1,535 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+remex(:dm_svg_writer)
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+##
+## Creates a SVG image from the datamodel geometry from a case
+## database for all collections specified.
+##
+## Usage: new( case_ds_view, properties )
+##        create_svg_for( p_collections, p_file )
+##
+## The creation of svg objects is done by passing
+## properties. These are defined in DEFAULT_PROPERTIES.
+## The most important one is the transform.
+##
+## The selection process is first the list of collections and
+## than expanded by their (physical) relations.
+## 
+def_slotted_exemplar(:dm_svg_writer,
+	{
+		{:ds,_unset}, # The case database
+		{:properties,property_list.new()}
+	}
+)
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+## The case_ds_view
+dm_svg_writer.define_slot_access(:ds,:read,:public)
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+## The actually used properties. Note that the value of :transform will
+## set during the process.
+dm_svg_writer.define_slot_access(:properties,:read,:public)
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.default_properties
+	## 
+	## 
+	>> property_list.new_with(
+		   :width,700,
+		   :height,700,
+		   :margin,50,
+		   :transform,transform.new(),
+		   :svg,property_list.new_with(:xmlns,"http://www.w3.org/2000/svg",
+					       :width,700,
+					       :height,700,
+					       :viewBox,"0 0 700 700",
+					       :class,"svg"),
+		   :write_style_element?,_false,
+		   :polyline,property_list.new_with(:class,"polyline"),
+		   :background,property_list.new_with(:id,:background,
+						      :class,"background",
+						      :x,-1,
+						      :y,-1),
+		   :text,property_list.new_with(:|xml:space|,"preserve",
+						:class,"case_object"),
+		   :text_box,property_list.new_with(:class,"textbox"),
+		   :text_xy_correction,property_list.new_with(:x,0,:y,4),
+		   :circle,property_list.new_with(:class,"circle"),
+		   :line,property_list.new_with(:class,"line")
+			 )
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.new( ds_view, _optional p_props)
+	## 
+	## Create a new instance for case_ds_view DS_VIEW with
+	## properties P_PROPS. The properties as property_list are
+	## merged with _self.default_properties
+	##
+	>> _clone.init( ds_view, p_props )
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_svg_writer.init( ds_view, p_props )
+	## 
+	## Sets .ds after check and merge the properties in P_PROPS
+	## with the default ones.
+	##
+
+	ds_view.check_type( case_ds_view )
+	
+	.ds << ds_view
+	
+	_self.set_properties( p_props )
+	
+	>> _self
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.create_svg_for( p_collections, p_file )
+	## 
+	## Find the matching case objects for the collections in
+	## P_COLLECTIONS and output svg elements to file P_FILE
+	##
+
+	_if _not system.file_creatable?( p_file )
+	_then
+		write("File cannot be created ",p_file)
+		_return _unset 
+	_endif
+	
+	_self.filter_excludes( p_collections )
+	
+	_local ( l_tabs, l_rels, l_heteros ) << _self.case_objects_for_collections( p_collections )
+
+	_local l_set << geometry_set.new()
+	_for i_grp _over {l_tabs,l_rels,l_heteros}.fast_elements()
+	_loop 
+		_for i_elem _over i_grp.fast_elements()
+		_loop l_set.add( i_elem.default_svg_geometry )
+		_endloop
+	_endloop
+
+	_local l_src_bounds << l_set.bounds
+#	#DEBUG print(l_src_bounds)
+	_local l_svg_bounds << _self.inner_box
+#	#DEBUG print(l_svg_bounds)
+
+	.properties[:transform] << _self.transform( l_src_bounds, _self.inner_box )
+	
+	_local l_doc << _self.svg_element()
+
+	_local l_sub << l_doc.elements
+
+	_if .properties[:write_style_element?] _is _true 
+	_then 
+		l_sub.add( _self.style_element() )
+		_self.copy_css_for_output( p_file )
+	_endif
+	
+	l_sub.add( _self.defs_element() )
+
+	l_sub.add( _self.background_element() )
+
+	l_sub.add( _self.logo_element() )
+
+	l_sub.add( _self.case_hetero_relations_elements( l_heteros ))
+
+	l_sub.add( _self.case_physical_relations_element( l_rels ))
+
+	l_sub.add( _self.case_object_elements( l_tabs ))
+
+	# Write document
+	simple_xml.write_element_file( p_file, l_doc )
+
+	write("SVG Image created ",p_file)
+	
+	>> l_doc
+	
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_svg_writer.set_properties( p_props )
+	## 
+	## 
+
+	_local l_list << .properties << _self.default_properties
+
+	_if p_props _isnt _unset 
+	_then l_list.add_all( p_props )
+	_endif
+
+	l_list[:inner_box] << _self.inner_box
+	l_list[:background][:width] << l_list[:width]
+	l_list[:background][:height] << l_list[:height]	
+
+	>> l_list
+	
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.inner_box
+	## 
+	## 
+	>> bounding_box.new_with_size(.properties[:margin],
+				      .properties[:margin],
+				      .properties[:width]-2*.properties[:margin],
+				      .properties[:height]-2*.properties[:margin])				 
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.outer_box
+	## 
+	## 
+	>> bounding_box.new_with_size(0,0,.properties[:width],.properties[:height])
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.transform( l_bb_in, l_bb_out )
+	## 
+	##
+	
+	_local l_y << (l_bb_out.height / 2.0) + .properties[:margin]
+	_local l_coord1 << coordinate.new( l_bb_out.xmin, l_y )
+	_local l_coord2 << coordinate.new( l_bb_out.xmax, l_y )
+	
+	>> transform.new_matching_bounds( l_bb_in, l_bb_out ).mirror_about( l_coord1, l_coord2 )
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.filter_excludes( p_list )
+	##
+	## Remove elements from P_LIST 
+	## P_LIST is a list with collections 
+	## 
+
+	_for i_elem _over p_list.elements()
+	_loop _if i_elem.exclude_from_svg? _is _true 
+	      _then p_list.remove( i_elem )
+	      _endif
+	_endloop
+
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_svg_writer.case_objects_for_collections( p_list )
+	## 
+	## Find the matching case objects for the collections in
+	## P_LIST. Select the relations for those objects too
+	## and return three results:
+	##  case_objects,
+	##  case_relations,
+	##  case_hetero_relations
+	##
+
+	_local l_cc << .ds.collection(:sw_gis!case_object)
+	#DEBUG write(l_cc)
+	_local l_hash << hash_table.new( p_list.size )
+	_for i_col _over p_list.fast_elements()
+	_loop
+		_local l_name << i_col.name
+		_local l_co << l_cc.select(predicate.eq(:name,l_name)).result
+		#DEBUG write("Found ",l_co)
+		_if l_co.size = 1
+		_then l_hash[l_name] << l_co.an_element()
+		_endif
+	_endloop
+
+	_local l_set1 << _self.case_relations_for_case_objects( l_hash )
+	_local l_set2 << _self.case_hetero_objects_for( l_hash )
+	
+	>> l_hash, l_set1, l_set2
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_svg_writer.case_relations_for_case_objects( p_hash )
+	## 
+	## P_HASH Key: table_name Element: the matching case_object 
+	##
+	
+	_local l_set << equality_set.new( p_hash.size )
+	_for i_name,i_co _over p_hash.fast_keys_and_elements()
+	_loop
+		_if (l_rels << i_co.physical_relationships).size > 0
+		_then
+			_for i_rel _over l_rels.fast_elements()
+			_loop l_set.add(i_rel)
+			_endloop
+		_endif
+	_endloop
+
+	>> l_set
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method dm_svg_writer.case_hetero_objects_for( p_hash )
+	## 
+	## P_HASH Key: table_name Element: the matching case_object
+	##
+
+	# For some reason compared case objects do not respond to
+	# normal equality tests!
+
+	_local l_heteros << hash_table.new()
+	_local l_result << equality_set.new()
+	
+	_for i_he _over .ds.collections[:sw_gis!case_hetero_relationship].fast_elements()
+	_loop
+		l_heteros[i_he] << { i_he.get_parent_objects(),
+				     i_he.get_child_objects() }
+	_endloop
+	
+	_for l_key,l_obj _over p_hash.fast_keys_and_elements()
+	_loop
+		_local l_id << l_obj.id
+		_for i_rel,i_obvec _over l_heteros.fast_keys_and_elements()
+		_loop
+#			#DEBUG write(l_obj," in? ",i_rel)
+			_for i_ob _over i_obvec[1].fast_elements()
+			_loop _if i_ob.id _is l_id
+			      _then 
+				    l_result.add(i_rel)
+				    _leave 
+			      _endif
+			_endloop
+			_for i_ob _over i_obvec[2].fast_elements()
+			_loop _if i_ob.id _is l_id
+			      _then 
+				    l_result.add(i_rel)
+				    _leave 
+			      _endif
+			_endloop
+		_endloop
+	_endloop
+	>> l_result
+_endmethod
+$
+
+_pragma(classify_level=advanced, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.copy_css_for_output( p_file )
+	## 
+	## When an svg is created with a style element, we copy the
+	## svg.css file to the folder of output file P_FILE
+	## Returns the outut file and copied?
+	##
+
+	_local l_cssname << "svg.css"
+	_local (fn,odir) << system.pathname_components(p_file)
+	_local l_out << system.pathname_from_components(l_cssname,odir)
+	_local l_copied? << _false 
+	_if _not system.file_exists?(l_out)
+	_then
+		_try _with p_cond
+			_local l_inp << smallworld_product.get_resource_file(l_cssname,:html,:ds_doc_writer)
+			system.file_copy( l_inp, l_out )
+			l_copied? << _true 
+		_when error
+		_endtry
+	_endif
+
+	>> l_out, l_copied?
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.svg_element()
+	## 
+	## 
+
+	>> sw:simple_xml_thing.new(:svg, rope.new() ,_self.properties[:svg] )
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.g_element()
+	## 
+	##
+
+	>> sw:simple_xml_thing.new(:g,rope.new())
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.background_element()
+	##
+	##
+
+	_local l_g << _self.g_element()
+	l_g.elements.add( sw:simple_xml_thing.new(:rect,{},_self.properties[:background]) )
+
+	>> l_g
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.title_element( a_string )
+	## 
+	## 
+
+	>> sw:simple_xml_thing.new(:title,a_string)
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.style_element()
+	## 
+	##
+	
+	>> sw:simple_xml_thing.new(:link,{},property_list.new_with(
+						    :xmlns,"http://www.w3.org/1999/xhtml",
+						    :rel,"stylesheet",
+						    :href,"svg.css",
+						    :type,"text/css"))
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.defs_element()
+	## 
+	##
+	
+	>> sw:simple_xml_thing.new(:defs, rope.new_with( _self.filter_element() ))
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.filter_element()
+	## 
+	## 
+
+	_local l_contents << rope.new()
+
+	l_contents.add( sw:simple_xml_thing.new(:|feFlood|,{},property_list.new_with(:class,"feFlood",
+										     :result,"bgnd")))
+	l_contents.add( sw:simple_xml_thing.new(:|feComposite|,{},property_list.new_with(:in,"SourceGraphic",
+											 :in2,"bgnd",
+											 :operator,"atop")))
+	>> sw:simple_xml_thing.new(:filter,l_contents,
+				   property_list.new_with(:id,"TextBox",
+							  :|filterUnits|,"objectBoundingBox",
+							  :x,"-0.1",
+							  :y,"-0.1",
+							  :height,"1.2",
+							  :width,"1.2"))
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.logo_element()
+	## 
+	##
+
+	_local l_props << .properties
+	
+	_local l_x << l_props[:width] -5
+	_local l_y << l_props[:height] - 5
+	_local l_elem_props << property_list.new_with(:x,l_x,
+						      :y,l_y,
+						      :|text-anchor|,"end",
+						      :fill,"#ee7700",
+						      :stroke,"#000",
+						      :|stroke-width|,"0",
+						      :|font-size|,"12",
+						      :|font-family|,"sans-serif",
+						      :|xml:space|,"preserve",
+						      :|font-weight|,"bold",
+						      :|font-style|,"normal")
+	_local l_g << _self.g_element()
+	_local l_t << simple_xml_thing.new(:text,"DMDW", l_elem_props)
+	_local l_a << simple_xml_thing.new(:a,rope.new_with(l_t),property_list.new_with(:href,"https://github.com/boogert-lab/dmdw"))
+	l_g.elements.add( l_a )
+
+	>> l_g
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.case_physical_relations_element( p_rels )
+	## 
+	## 
+
+	_local l_g << _self.g_element()
+	_local l_g_elements << l_g.elements
+
+	l_g_elements.add(_self.title_element("Case Relationships"))
+	
+	_for i_elem _over p_rels.fast_elements()
+	_loop l_g_elements.add( i_elem.as_svg_polyline( _self.properties ) )
+	_endloop
+
+	>> l_g
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.case_object_elements( p_objects )
+	## 
+	## 
+
+	_local l_g << _self.g_element()
+	_local l_g_elements << l_g.elements
+	
+	l_g_elements.add( _self.title_element("Case Objects") )
+	_for i_elem _over p_objects.fast_elements()
+	_loop l_g_elements.add( i_elem.as_svg_textbox( _self.properties ) )
+	_endloop
+
+	>> l_g
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method dm_svg_writer.case_hetero_relations_elements( p_rels )
+	## 
+	## 
+
+	_local l_g << _self.g_element()
+	_local l_g_elements << l_g.elements
+	
+	l_g_elements.add( _self.title_element("Case Heterogeneous Relationships") )
+	_for i_elem _over p_rels.fast_elements()
+	_loop
+		l_g_elements.add( i_elem.as_svg_circle( _self.properties ) )
+		
+		_for i_line _over i_elem.representation_geometry.fast_elements()
+		_loop l_g_elements.add( i_line.as_svg_line( _self.properties ) )
+		_endloop
+		
+	_endloop
+
+	>> l_g
+_endmethod
+$

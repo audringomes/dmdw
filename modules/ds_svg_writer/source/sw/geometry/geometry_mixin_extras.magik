@@ -1,0 +1,17 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method geometry_mixin.transformed_for_svg( p_properties )
+	## 
+	## Use p_properties[:transform]
+	##
+	>> _self.transformed( p_properties[:transform] )
+_endmethod
+$

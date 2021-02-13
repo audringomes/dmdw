@@ -3,6 +3,10 @@
 function ToggleId(Id)
 {
     var aNode = document.getElementById(Id);
+
+    if (aNode == null)
+	return;
+    
     if (aNode.style.display == 'none') 
     {aNode.style.display = 'block';}
     else 
@@ -12,6 +16,9 @@ function ToggleId(Id)
 function ToggleSub(Id)
 {
     var aNode = document.getElementById(Id).parentNode;
+    if (aNode == null)
+	return;
+
     if (aNode.style.display == 'none') 
     {aNode.style.display = 'block';}
     else 
@@ -89,6 +96,9 @@ function ClearFilter()
  */
 {
     input = document.getElementById("FilterItem") ;
+    if (input == null)
+	return;
+
     input.value = '';
     DisplayElements('ListLink','')					
 }
@@ -116,6 +126,8 @@ function HighLightInPage(Id)
 		$(HId).addClass("highlight");
     */
     var Elem = document.getElementById(Id);
+    if (Elem == null)
+	return;
     Elem.classList.add('highlight');
     
 }
@@ -199,4 +211,19 @@ function ToggleDisplayElements(Elements, DisplayType)
 	 show = false;}
     }
     return show;
+}
+
+function ToggleAndHighlightField(Fname)
+{
+    var aNode = document.getElementById(Fname);
+    if (aNode.style.display == 'none') 
+    {
+	aNode.style.display = 'table-row';
+	aNode.style.backgroundColor = 'yellow';
+    }
+    else 
+    {
+	aNode.style.display = 'none';
+	aNode.style.backgroundColor = 'inherit';
+    }
 }

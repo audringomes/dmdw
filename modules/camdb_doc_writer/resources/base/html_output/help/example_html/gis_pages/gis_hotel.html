@@ -1,0 +1,425 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Collection Hotel</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../gis.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Hotel</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="hotel">
+            <tr class="TableName">
+               <td colspan="9">
+                  <h3 class="InTable">Hotel</h3>
+                  <div class="technical InternalColName">hotel</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="9">Category: Road Network</td>
+            </tr>
+            <tr>
+               <td colspan="9" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th class="technical">Type</th>
+               <th class="technical">Unit</th>
+               <th class="technical">Sub type</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr id="name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Name</div>
+               </td>
+               				
+               <td class="technical">name</td>
+               				
+               				
+               <td class="technical">20</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16canon
+                  					
+                  				</td>
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr id="address1" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Address 1</div>
+               </td>
+               				
+               <td class="technical">address1</td>
+               				
+               				
+               <td class="technical">20</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16canon
+                  					
+                  				</td>
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr id="address2" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Address 2</div>
+               </td>
+               				
+               <td class="technical">address2</td>
+               				
+               				
+               <td class="technical">20</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16canon
+                  					
+                  				</td>
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr id="type" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Type</div>
+               </td>
+               				
+               <td class="technical">type</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						
+                  						ds_int
+                  					
+                  				</td>
+               				
+               <td>The values of <span class="name">Type</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.hotel_type');" title="Click to Show/Hide details">hotel_type</a></span><table id="enu.hotel_type" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">hotel_type</th>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">Hotel</li>
+                              			
+                              <li class="EnumeratorValue">Guest House</li>
+                              			
+                              <li class="EnumeratorValue">B and B</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr id="text_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">text_id</div>
+               </td>
+               				
+               <td class="technical">text_id</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr id="rwo_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">rwo_id</div>
+               </td>
+               				
+               <td class="technical">rwo_id</td>
+               				
+               				
+               <td class="technical">3</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
+               			</tr>
+            			
+            <tr id="ds!version" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_vstamp
+                  					
+                  				</td>
+               				
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
+               			</tr>
+            			
+            <tr id="comments" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Comments</div>
+               </td>
+               				
+               <td class="technical">comments</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					text
+                  				</td>
+               				
+               <td>
+                  <div>Help text here ....</div>
+                  						<span class="technical">Text joined by field <a href="#text_id" onclick="ToggleAndHighlightField('text_id')">text_id</a> to table <a href="gis_sw_gis!text_id.html">sw_gis!text_id</a></span>
+                  					</td>
+               			</tr>
+            			
+            <tr id="annotation" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Annotation</div>
+               </td>
+               				
+               <td class="technical">annotation</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					text
+                  						<span class="priority">1</span>
+                  					
+                  				</td>
+               				
+               <td>
+                  						
+                  					</td>
+               			</tr>
+            			
+            <tr id="location" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="geometry">Location</div>
+               </td>
+               				
+               <td class="technical">location</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					point
+                  						<span class="priority">1</span>
+                  						
+                  					
+                  				</td>
+               				
+               <td>
+                  						
+                  						Manifold: <span class="name">road</span> <span class="technical"><a href="../gis_pages/gis_topology_static.html#hotel.location">Topology»</a></span>
+                  					</td>
+               			</tr>
+            			
+            <tr id="meatball" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">meatball</div>
+               </td>
+               				
+               <td class="technical">meatball</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					simple_point
+                  						<span class="priority">0</span>
+                  					
+                  				</td>
+               				
+               <td>
+                  						
+                  					</td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

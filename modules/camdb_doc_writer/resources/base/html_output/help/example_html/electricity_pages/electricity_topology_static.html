@@ -1,0 +1,796 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Electricity - Topology Rules</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../electricity.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
+      <div class="PageTitle float">Topology Rules (static)</div>
+      <div class="ChapterInfo float">
+         <p></p>
+      </div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleExplicitTopologyRules();" onclick="ToggleExplicitTopologyRules();" checked="True"><label for="ToggleExplicitTopologyRules();"><span>Explicit Rules only</span></label></span></div>
+      <div class="container">
+         		
+         <table class="dmTable dmTopology float">
+            <tr class="HeadStyle">
+               <th colspan="3">Manifold <span class="name">[Electricity] Elektrizitätsnetz</span></th>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="3">Busbar</td>
+            </tr>
+            				
+            <tr id="busbar.location_dv">
+               <td class="geometry field1">Location Dv</td>
+               <td>
+                  					
+                  <div class="col2s name busbar location_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">endsplit_link</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name busbar location_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Dv Connection</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="busbar.location_hv">
+               <td class="geometry field1">Location Hv</td>
+               <td>
+                  					
+                  <div class="col2s name busbar location_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">endsplit_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name busbar location_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Hv Connection</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="busbar.location_lv">
+               <td class="geometry field1">Location Lv</td>
+               <td>
+                  					
+                  <div class="col2s name busbar location_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">endsplit_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name busbar location_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Lv Connection</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            			
+            <tr class="name">
+               <td colspan="3">Cable</td>
+            </tr>
+            				
+            <tr id="cable.centreline_dv">
+               <td class="geometry field1">Centreline Dv</td>
+               <td>
+                  					
+                  <div class="col2s name cable centreline_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Joint</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location DV</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name cable centreline_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">External Pin Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="cable.centreline_hv">
+               <td class="geometry field1">Centreline Hv</td>
+               <td>
+                  					
+                  <div class="col2s name cable centreline_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Joint</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location HV</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name cable centreline_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">External Pin Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="cable.centreline_lv">
+               <td class="geometry field1">Centreline Lv</td>
+               <td>
+                  					
+                  <div class="col2s name cable centreline_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Joint</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location LV</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name cable centreline_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">External Pin Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name cable centreline_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Supply Point</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            			
+            <tr class="name">
+               <td colspan="3">Internal Cable</td>
+            </tr>
+            				
+            <tr id="internal_cable.centreline_dv">
+               <td class="geometry field1">Centreline Dv</td>
+               <td>
+                  					
+                  <div class="col2s name internal_cable centreline_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">endsplit_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name internal_cable centreline_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Internal Pin Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name internal_cable centreline_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Switch</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Primary Connection Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Secondary Connection Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name internal_cable centreline_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Dv Connection</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="internal_cable.centreline_hv">
+               <td class="geometry field1">Centreline Hv</td>
+               <td>
+                  					
+                  <div class="col2s name internal_cable centreline_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">endsplit_link</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name internal_cable centreline_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Internal Pin Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name internal_cable centreline_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Switch</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Primary Connection Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Secondary Connection Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name internal_cable centreline_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Hv Connection</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="internal_cable.centreline_lv">
+               <td class="geometry field1">Centreline Lv</td>
+               <td>
+                  					
+                  <div class="col2s name internal_cable centreline_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">endsplit_link</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name internal_cable centreline_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Substation Internals Link</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Internal Pin Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name internal_cable centreline_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Switch</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Primary Connection Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Secondary Connection Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name internal_cable centreline_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Transformer</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Lv Connection</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect_ends</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            			
+            <tr class="name">
+               <td colspan="3">Joint</td>
+            </tr>
+            				
+            <tr id="joint.location_dv">
+               <td class="geometry field1">Location DV</td>
+               <td>
+                  					
+                  <div class="col2s name joint location_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="joint.location_hv">
+               <td class="geometry field1">Location HV</td>
+               <td>
+                  					
+                  <div class="col2s name joint location_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="joint.location_lv">
+               <td class="geometry field1">Location LV</td>
+               <td>
+                  					
+                  <div class="col2s name joint location_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            			
+            <tr class="name">
+               <td colspan="3">Substation Internals Link</td>
+            </tr>
+            				
+            <tr id="substation_internals_link.external_pin_dv">
+               <td class="geometry field1">External Pin Dv</td>
+               <td>
+                  					
+                  <div class="col2s name substation_internals_link external_pin_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="substation_internals_link.external_pin_hv">
+               <td class="geometry field1">External Pin Hv</td>
+               <td>
+                  					
+                  <div class="col2s name substation_internals_link external_pin_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="substation_internals_link.external_pin_lv">
+               <td class="geometry field1">External Pin Lv</td>
+               <td>
+                  					
+                  <div class="col2s name substation_internals_link external_pin_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="substation_internals_link.internal_pin_dv">
+               <td class="geometry field1">Internal Pin Dv</td>
+               <td>
+                  					
+                  <div class="col2s name substation_internals_link internal_pin_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="substation_internals_link.internal_pin_hv">
+               <td class="geometry field1">Internal Pin Hv</td>
+               <td>
+                  					
+                  <div class="col2s name substation_internals_link internal_pin_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="substation_internals_link.internal_pin_lv">
+               <td class="geometry field1">Internal Pin Lv</td>
+               <td>
+                  					
+                  <div class="col2s name substation_internals_link internal_pin_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            			
+            <tr class="name">
+               <td colspan="3">Supply Point</td>
+            </tr>
+            				
+            <tr id="supply_point.location">
+               <td class="geometry field1">Location</td>
+               <td>
+                  					
+                  <div class="col2s name supply_point location">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            			
+            <tr class="name">
+               <td colspan="3">Switch</td>
+            </tr>
+            				
+            <tr id="switch.primary_connection_dv">
+               <td class="geometry field1">Primary Connection Dv</td>
+               <td>
+                  					
+                  <div class="col2s name switch primary_connection_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="switch.primary_connection_hv">
+               <td class="geometry field1">Primary Connection Hv</td>
+               <td>
+                  					
+                  <div class="col2s name switch primary_connection_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="switch.primary_connection_lv">
+               <td class="geometry field1">Primary Connection Lv</td>
+               <td>
+                  					
+                  <div class="col2s name switch primary_connection_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="switch.secondary_connection_dv">
+               <td class="geometry field1">Secondary Connection Dv</td>
+               <td>
+                  					
+                  <div class="col2s name switch secondary_connection_dv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="switch.secondary_connection_hv">
+               <td class="geometry field1">Secondary Connection Hv</td>
+               <td>
+                  					
+                  <div class="col2s name switch secondary_connection_hv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="switch.secondary_connection_lv">
+               <td class="geometry field1">Secondary Connection Lv</td>
+               <td>
+                  					
+                  <div class="col2s name switch secondary_connection_lv">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            			
+            <tr class="name">
+               <td colspan="3">Transformer</td>
+            </tr>
+            				
+            <tr id="transformer.dv_connection">
+               <td class="geometry field1">Dv Connection</td>
+               <td>
+                  					
+                  <div class="col2s name transformer dv_connection">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name transformer dv_connection">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Dv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="transformer.hv_connection">
+               <td class="geometry field1">Hv Connection</td>
+               <td>
+                  					
+                  <div class="col2s name transformer hv_connection">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name transformer hv_connection">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Hv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            				
+            <tr id="transformer.lv_connection">
+               <td class="geometry field1">Lv Connection</td>
+               <td>
+                  					
+                  <div class="col2s name transformer lv_connection">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Busbar</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Location Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  					
+                  <div class="col2s name transformer lv_connection">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Internal Cable</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Centreline Lv</span><span class="rulesStatic">
+                           							<span class="rule1Static">connect</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">connect_ends</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            		</table>
+         	</div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 8210199731448578141</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../help/index.html?dmdw_Static_Topology_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

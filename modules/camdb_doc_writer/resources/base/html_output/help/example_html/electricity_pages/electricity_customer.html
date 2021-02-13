@@ -1,0 +1,440 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Electricity - Collection Customer</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../electricity.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
+      <div class="PageTitle float">Customer</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="customer">
+            <tr class="TableName">
+               <td colspan="9">
+                  <h3 class="InTable">Customer</h3>
+                  <div class="technical InternalColName">customer</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="9">Category: Electricity Network</td>
+            </tr>
+            <tr>
+               <td colspan="9" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th class="technical">Type</th>
+               <th class="technical">Unit</th>
+               <th class="technical">Sub type</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr id="customer_id" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Customer Id</div>
+               </td>
+               				
+               <td class="technical">customer_id</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_uint64
+                  					
+                  				</td>
+               				
+               <td>Customer Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               			</tr>
+            			
+            <tr id="name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Name</div>
+               </td>
+               				
+               <td class="technical">name</td>
+               				
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16
+                  					
+                  				</td>
+               				
+               <td>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="address1" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Address1</div>
+               </td>
+               				
+               <td class="technical">address1</td>
+               				
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16canon
+                  					
+                  				</td>
+               				
+               <td>Address1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="address2" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Address2</div>
+               </td>
+               				
+               <td class="technical">address2</td>
+               				
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16canon
+                  					
+                  				</td>
+               				
+               <td>Address2 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               			</tr>
+            			
+            <tr id="usage" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Usage</div>
+               </td>
+               				
+               <td class="technical">usage</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_int
+                  					
+                  				</td>
+               				
+               <td>Usage ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               			</tr>
+            			
+            <tr id="sales" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Unit sales</div>
+               </td>
+               				
+               <td class="technical">sales</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_float
+                  					
+                  				</td>
+               				
+               <td>Unit sales ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000 </td>
+               			</tr>
+            			
+            <tr id="ds!version" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_vstamp
+                  					
+                  				</td>
+               				
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
+               			</tr>
+            			
+            <tr id="dd!join268600936" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">dd!join268600936</div>
+               </td>
+               				
+               <td class="technical">dd!join268600936</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					follow
+                  				</td>
+               				
+               <td>
+                  <div>dd!join268600936 ist ein join Feld Datensatz aus 'int!supply_point_customer' wird
+                     ausgegeben </div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join268600936.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="electricity_int!supply_point_customer.html">int!supply_point_customer</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="dd!join268600936.details">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">True</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">record</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">Maybe</span></li>
+                        							
+                        <li class="joinDetailsListItem">Actual join: <span class="dd_join results dd_join_as_field">dd!join268600936</span></li>
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="electricity_int!supply_point_customer.html">int!supply_point_customer</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">customer_id</span>=<span class="name">customer_id</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+               			</tr>
+            			
+            <tr id="int!info_flags" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!info_flags</div>
+               </td>
+               				
+               <td class="technical">int!info_flags</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					db_set_join
+                  				</td>
+               				
+               <td>
+                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
+                     </div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="electricity_swif!info_flag.html">Information Flag</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="int!info_flags.details">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">records</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Actual join: <span class="dd_join results">swif!object_to_x1</span></li>
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="electricity_swif!info_flag_to_object1.html">swif!info_flag_to_object1</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">customer_id</span>=<span class="name">object_id</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+               			</tr>
+            			
+            <tr id="supply_point" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Supply Point</div>
+               </td>
+               				
+               <td class="technical">supply_point</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					follow
+                  				</td>
+               				
+               <td>
+                  <div>Supply Point ist ein join Feld Datensatz aus 'supply_point' wird ausgegeben </div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('supply_point.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="electricity_supply_point.html">Supply Point</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="supply_point.details">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">True</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">record</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">Maybe</span></li>
+                        							
+                        <li class="joinDetailsListItem">Actual join: <span class="dd_join results dd_join_as_field">dd!join268600936</span></li>
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="electricity_int!supply_point_customer.html">int!supply_point_customer</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">customer_id</span>=<span class="name">customer_id</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 8210199731448578141</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

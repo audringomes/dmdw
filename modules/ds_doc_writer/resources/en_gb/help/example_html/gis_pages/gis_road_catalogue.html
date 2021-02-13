@@ -1,0 +1,328 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Collection Straßenkatalog</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../gis.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Straßenkatalog</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="road_catalogue">
+            <tr class="TableName">
+               <td colspan="9">
+                  <h3 class="InTable">Straßenkatalog</h3>
+                  <div class="technical InternalColName">road_catalogue</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="9">Category: Catalogues</td>
+            </tr>
+            <tr>
+               <td colspan="9" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th class="technical">Type</th>
+               <th class="technical">Unit</th>
+               <th class="technical">Sub type</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr id="identifier" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">Bezeichner</div>
+               </td>
+               				
+               <td class="technical">identifier</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td>Bezeichner ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               			</tr>
+            			
+            <tr id="road_type" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Straßentyp</div>
+               </td>
+               				
+               <td class="technical">road_type</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td>The values of <span class="name">Straßentyp</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.road_type');" title="Click to Show/Hide details">road_type</a></span><table id="enu.road_type" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">road_type</th>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">Motorway</li>
+                              			
+                              <li class="EnumeratorValue">A-Road</li>
+                              			
+                              <li class="EnumeratorValue">B-Road</li>
+                              			
+                              <li class="EnumeratorValue">Unclassified</li>
+                              			
+                              <li class="EnumeratorValue">Unknown</li>
+                              			
+                              <li class="EnumeratorValue">Cycle Way</li>
+                              			
+                              <li class="EnumeratorValue">Bus-Taxi only</li>
+                              			
+                              <li class="EnumeratorValue">Pedestrian</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr id="carriage_type" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Fahrbahntyp</div>
+               </td>
+               				
+               <td class="technical">carriage_type</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td>The values of <span class="name">Fahrbahntyp</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.carriage_type');" title="Click to Show/Hide details">carriage_type</a></span><table id="enu.carriage_type" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">carriage_type</th>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">Motorway</li>
+                              			
+                              <li class="EnumeratorValue">Slip Road</li>
+                              			
+                              <li class="EnumeratorValue">Dual Carriage</li>
+                              			
+                              <li class="EnumeratorValue">Single Carriage</li>
+                              			
+                              <li class="EnumeratorValue">Single Track</li>
+                              			
+                              <li class="EnumeratorValue">Unknown</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr id="cost_factor" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Kostenfaktor</div>
+               </td>
+               				
+               <td class="technical">cost_factor</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_float
+                  					
+                  				</td>
+               				
+               <td>Kostenfaktor ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
+                  </td>
+               			</tr>
+            			
+            <tr id="ds!version" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_vstamp
+                  					
+                  				</td>
+               				
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
+               			</tr>
+            			
+            <tr id="int!info_flags" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!info_flags</div>
+               </td>
+               				
+               <td class="technical">int!info_flags</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					db_set_join
+                  				</td>
+               				
+               <td>
+                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
+                     </div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="gis_swif!info_flag.html">Information Flag</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="int!info_flags.details">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">records</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Actual join: <span class="dd_join results">swif!object_to_x1</span></li>
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="gis_swif!info_flag_to_object1.html">swif!info_flag_to_object1</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">identifier</span>=<span class="name">object_id</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

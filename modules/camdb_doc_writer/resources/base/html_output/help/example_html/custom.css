@@ -3,5 +3,11 @@
 /* CUSTOM STYLING */
 
 body {
-	background-image:url("ws-background.jpg");
+	background-image:url("dmdw-background.png");
 }
+.logo {
+	width: 200px;
+	display: inline-block;
+	height: 50px;
+	font-size: smaller;
+   }

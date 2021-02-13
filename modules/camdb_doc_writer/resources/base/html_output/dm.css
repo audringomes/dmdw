@@ -89,15 +89,10 @@ table.softjoins {
 	min-width: 500px;
 	margin-bottom: 0px;
 }
-table.InLineBox {
-	/* table displayed in a field description */
-	position: relative;
-	display: none;
-	padding-top: 1%;
-	left: 2%;
-	padding-bottom: 1%;
-	margin-bottom: 0px;
-	border-bottom-width: 0px;
+table.InlineBox {
+    /* table displayed in a field description */
+    margin: 4px;
+    background-color: inherit;
 }
 .dmTable.IntTopol {
     min-width: 300px;
@@ -453,4 +448,57 @@ td.field1 {
 .dmTableInfo {
     margin-bottom: 10px;
     min-width: 400px;
+}
+.InternalColName {
+    color: black;
+    font-size: small;
+}
+.mapkey {
+    display: inline list-item;
+    padding-right: 5px;
+}
+.mapfld {
+}
+.mapfld::before {
+    content: '> ';
+}
+ul.Join {
+    margin: 2px;
+}
+.results {
+    font-style: italic;
+}
+.InfoIcon {
+    display: inline;
+}
+.InfoIcon img {
+    width: 0.75rem;
+    vertical-align: baseline;
+}
+.priority {
+  color: darkgoldenrod;
+}
+.priority:before {
+  content: '(';
+}
+.priority:after {
+  content: ')';
+}
+.dd_join.dd_join_as_field {
+    /* If a dd!join is exposed as field in the table */
+    font-weight: bolder;
+}
+.joinDetailsList {
+    padding-left: 2px;
+    margin-top: 5px;
+    background-color: darkgray;
+}
+.joinDetailsListItem {
+    margin: 0px;
+}
+.Header {
+    /* From table */
+    background-color: #aaa;
+}
+.HeadStyle.Category {
 }

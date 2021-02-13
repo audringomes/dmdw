@@ -1,3 +1,4 @@
 dd_collection_mixin_extras
 database_view_extras
 dd_enumerator_extras
+sw_basic_field_extras

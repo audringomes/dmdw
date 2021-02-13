@@ -1,0 +1,54 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method case_object.as_svg_text( p_properties)
+	## 
+	## expect p_properties[:text] and :transform
+	##
+
+	_local l_elem_props << _self.position.as_svg_xy( p_properties )
+
+	_local l_props << p_properties[:text].copy()
+	l_props.add_all(l_elem_props)
+	
+	_local l_text << sw:simple_xml_thing.new(:text,_self.e_name.write_string,l_props)
+	
+	>> l_text
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method case_object.as_svg_textbox( p_properties )
+	## 
+	## returns a g with transform and style with svg text as
+	## element
+	## expect in P_PROPERTIES a :text_xy_correction, a :transform
+	## and a :text_box key/val
+	##
+
+	_dynamic !print_float_precision! << 6
+		
+	_local l_xy << _self.position.as_svg_xy( p_properties )
+	
+	_local l_correction << p_properties[:text_xy_correction]
+	_local l_props << property_list.new_with(:transform,write_string("translate(",
+									 l_xy[:x].as_number()+l_correction[:x],%,,
+									 l_xy[:y].as_number()+l_correction[:y],%)),
+						 :style,"filter:url(#TextBox)")
+	l_props.add_all( p_properties[:text_box] )
+	
+	_local l_elems << rope.new()
+	_local l_g_element << sw:simple_xml_thing.new(:g, l_elems, l_props)
+
+	l_elems.add( sw:simple_xml_thing.new(:text, _self.e_name.write_string ))
+	
+	>> l_g_element
+_endmethod
+$

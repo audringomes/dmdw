@@ -61,16 +61,6 @@ span.f_Heading1 /* Heading1 */
 {
  font-size: 2.73rem;
 }
-span.f_Heading2 /* Heading2 */
-{
- font-size: 1.09rem;
- color: #004080;
-}
-span.f_Heading3 /* Heading3 */
-{
- font-size: 1.09rem;
- color: #004080;
-}
 span.f_ImageCaption /* Image Caption */
 {
 }
@@ -223,26 +213,6 @@ p, p.p_Normal, div.p_Normal, li.p_Normal /* Normal */
  padding: 0 0 0 0;
  margin: 0 0 1.8750rem 0;
 }
-.p_Heading2 /* Heading2 */
-{
- font-size: 100%;
- font-weight: normal;
- text-align: left;
- text-indent: 0;
- line-height: 1.0;
- padding: 0 0 0 0;
- margin: 0 0 1.8750rem 0;
-}
-.p_Heading3 /* Heading3 */
-{
- font-size: 100%;
- font-weight: normal;
- text-align: left;
- text-indent: 0;
- line-height: 1.0;
- padding: 0 0 0 0;
- margin: 0 0 1.8750rem 0;
-}
 .p_ImageCaption /* Image Caption */
 {
  font-size: 1.00rem;
@@ -318,19 +288,6 @@ p, p.p_Normal, div.p_Normal, li.p_Normal /* Normal */
  margin: 0.5000rem 0 0 0;
 }
 /* Table styles */
-table.Table_Toggle {
-width: 100%;
-border: none;
-border-spacing: 0;
-}
-table.Table_Toggle tr.Table_Toggle {
-text-align: left;
-}
-table.Table_Toggle th.Table_Toggle, table.Table_Toggle td.Table_Toggle {
-vertical-align: top;
-padding: 0;
-border: none;
-}
 table.swDefault {
 border: none;
 border-spacing: 0;
@@ -375,6 +332,19 @@ border: solid thin #FFFFFF;
 }
 table.swDefaultHeaderStriped th.swDefaultHeaderStriped {
 background-color:#ececf0;
+}
+table.Table_Toggle {
+width: 100%;
+border: none;
+border-spacing: 0;
+}
+table.Table_Toggle tr.Table_Toggle {
+text-align: left;
+}
+table.Table_Toggle th.Table_Toggle, table.Table_Toggle td.Table_Toggle {
+vertical-align: top;
+padding: 0;
+border: none;
 }
 table.Figure {
 width: 100%;

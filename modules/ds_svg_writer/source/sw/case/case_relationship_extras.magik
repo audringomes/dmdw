@@ -1,0 +1,16 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method case_relationship.as_svg_polyline( p_properties)
+	## 
+	##
+	>>  _self.centreline.as_svg_polyline( p_properties )
+_endmethod
+$

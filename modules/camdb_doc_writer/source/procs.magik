@@ -12,8 +12,8 @@ _pragma(classify_level=basic, topic={wd_doc_writer})
 ## Creates a datamodel xml document for datasets gis and electrictity
 ## in the cambdridge database. 
 ##
-_global dump_camdb <<
-_proc @dump_camdb()
+_global export_camdb <<
+_proc @export_camdb()
 
 	_dynamic !current_languages! << {:de_de}
 
@@ -29,6 +29,7 @@ _proc @dump_camdb()
 
 	_for i_dsname _over {:gis,:electricity}.fast_elements()
 	_loop
+		
 		_local l_file << system.pathname_from_components(write_string(i_dsname,".xml"),l_dir)
 		_local ds << gis_program_manager.cached_dataset(i_dsname)
 		_local props << property_list.new_with(
@@ -37,12 +38,15 @@ _proc @dump_camdb()
 					:dataset_specials,_unset,
 					:output_file,l_file,
 					:update_file,l_upath,
-					:include_urns?,_true
+					:include_urns?,_true,
+					:case,"case"
 					      )
 	
-		_local du << dm_xml_writer.new(ds,props)
+		_local du << dm_xml_writer.new( ds, props )
 
 		du.process()
+
+		du.post_process()
 		
 	_endloop
 	
@@ -60,14 +64,46 @@ _global transform_camdb_xml <<
 _proc @transform_camdb_xml()
 
 	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
-	_local l_files << rope.new()
+	_local l_xml_files << equality_set.new()
+	_local l_svg_files << equality_set.new()
+	
 	_for i_file _over l_mod.resource_files("xml").fast_elements()
 	_loop
-		l_files.add(transform_to_fileset_html(:camdb_doc_writer,i_file,_unset,"FileSet2.xsl",_true,_true))
+		( name, ext ) << system.split_filename( i_file )
+		_if ext _is _unset 
+		_then _continue
+		_endif
+		_if (l_str << ext.lowercase) = "xml"
+		_then l_xml_files.add(name)
+		_elif l_str = "svg"
+		_then l_svg_files.add(name)
+		_endif		
 	_endloop
 
-	_if l_files.size > 0
-	_then dm_xml_transformer.create_index_page(l_mod,l_files)
-	_endif
+	_local l_files << rope.new()
+	_for i_xml _over l_xml_files.fast_elements()
+	_loop
+		# Find the matching svg file
+		_local l_svgname << _if l_svg_files.includes?(i_xml)
+				    _then >> write_string(i_xml,".svg")
+				    _endif
+		_local l_xml << write_string(i_xml,".xml")
+		_local l_ofile << dm_xml_transformer.transform_to_html(
+					  l_mod.name,
+					  l_xml,
+					  _unset,
+					  "FileSet3.xsl",
+					  _true,
+					  _true,
+					  l_svg_name)
+
+		l_files.add( {l_xml,l_ofile} )
+		
+	_endloop
+
+	_local l_file << dm_xml_transformer.create_index_page(l_mod,l_files)
+
+	system.do_command(write_string("swdocopen.exe ",l_file))
+
 _endproc
 $

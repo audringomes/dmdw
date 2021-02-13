@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"",
 hmTitle:"Adding Descriptions",
 hmDescription:"An important part of the Datamodel Documentation is about describing the meaning of objects and properties.",
-hmPrevLink:"dmdw_soft_joins.html",
+hmPrevLink:"dmdw_urns.html",
 hmNextLink:"dmdw_smallworld.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",

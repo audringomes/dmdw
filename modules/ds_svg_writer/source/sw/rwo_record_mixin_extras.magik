@@ -1,0 +1,54 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method rwo_record_mixin.default_svg_geometry_field()
+	## 
+	## 
+
+	_if (l_name << _self.default_geom_field_name) _isnt _unset 
+	_then _return _self.field(l_name)
+	_endif
+
+	_local l_flds << _self.visible_geometry_fields
+	_if (l_num << l_flds.size) = 0
+	_then _return _unset
+	_else _return l_flds.an_element()
+	_endif
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method rwo_record_mixin.default_svg_geometry
+	## 
+	##
+
+	_if (l_fld << _self.default_svg_geometry_field()) _isnt _unset 
+	_then _return _self.geometry(l_fld.name)
+	_endif
+	
+_endmethod
+$
+#
+#_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+#_method rwo_record_mixin.as_svg()
+#	## 
+#	## 
+#
+#	_local l_fld << _self.default_svg_geometry_field()
+#	_if l_fld _isnt _unset _andif
+#	    (l_geom << _self.geometry( l_fld.name )) _isnt _unset 
+#	_then l_gsvg << l_geom.as_svg()
+#	_endif
+#
+#	>> l_gsvg
+#	
+#_endmethod
+#$

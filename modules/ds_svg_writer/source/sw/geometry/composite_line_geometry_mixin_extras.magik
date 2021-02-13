@@ -1,0 +1,74 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method composite_line_geometry_mixin.as_svg_polyline( p_properties )
+	## 
+	## expect p_properties[:polyline] and :transform and returns a
+	## :polyline element
+	##
+
+	_local l_t_geom << _self.transformed_for_svg( p_properties )
+
+	_local l_points << _self.svg_points_from( l_t_geom )
+
+	_local l_elem_props << p_properties[:polyline].copy()
+	l_elem_props.add_all( l_points )
+
+	>> sw:simple_xml_thing.new(:polyline,{},l_elem_props)
+	
+_endmethod
+$
+
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_method composite_line_geometry_mixin.as_svg_line( p_properties )
+	## 
+	## expect in p_properties a :line and :transform key/val
+	## returns a :line element
+	##
+
+	_local l_t_geom << _self.transformed_for_svg( p_properties )
+	_local l_res << l_t_geom.sectors.as_sector_rope().without_splines()
+
+	_local l_coord1 << l_res.first_coord
+	_local l_coord2 << l_res.last_coord
+	
+	_dynamic !print_float_precision! << 6
+	_local l_props << property_list.new_with( :x1,write_string(l_coord1.x),
+						  :y1,write_string(l_coord1.y),
+						  :x2,write_string(l_coord2.x),
+						  :y2,write_string(l_coord2.y) )
+	l_props.add_all( p_properties[:line] )
+	
+	>> sw:simple_xml_thing.new(:line,{},l_props)
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={datamodel,dm_doc_writer},usage={internal})
+_private _method composite_line_geometry_mixin.svg_points_from( a_transformed )
+	## 
+	## Helper that returns a property_list with :points suitable for a polyline
+	## from a geometry A_TRANSFORMED
+	##
+
+	_local l_res << a_transformed.as_sector_rope().without_splines() # temp
+
+	_dynamic !print_float_precision! << 6
+	
+	_local l_stream << internal_text_output_stream.new()
+	_for i_coord _over l_res.as_coords_vec().fast_elements()
+	_loop l_stream.write(i_coord.x,%,,i_coord.y,space_char)
+	_endloop
+
+	>> property_list.new_with(:points,l_stream.string)
+
+_endmethod
+$

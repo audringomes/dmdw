@@ -1,0 +1,373 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Gis - Collection Firma</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../gis.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
+      <div class="PageTitle float">Firma</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="company">
+            <tr class="TableName">
+               <td colspan="9">
+                  <h3 class="InTable">Firma</h3>
+                  <div class="technical InternalColName">company</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="9">Category: Non Topological Objects</td>
+            </tr>
+            <tr>
+               <td colspan="9" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th class="technical">Type</th>
+               <th class="technical">Unit</th>
+               <th class="technical">Sub type</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr id="id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ID</div>
+               </td>
+               				
+               <td class="technical">id</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr id="company_name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Firmenname</div>
+               </td>
+               				
+               <td class="technical">company_name</td>
+               				
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16canon
+                  					
+                  				</td>
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr id="chairman" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">CEO</div>
+               </td>
+               				
+               <td class="technical">chairman</td>
+               				
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16canon
+                  					
+                  				</td>
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr id="plc?" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">GmbH?</div>
+               </td>
+               				
+               <td class="technical">plc?</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						
+                  						ds_int
+                  					
+                  				</td>
+               				
+               <td>The values of <span class="name">GmbH?</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.office_plc?');" title="Click to Show/Hide details">office_plc?</a></span><table id="enu.office_plc?" class="InlineBox" style="display:none;">
+                     <tr class="HeadStyle">
+                        <th class="name" colspan="3">office_plc?</th>
+                     </tr>
+                     <tr>
+                        <td colspan="3">
+                           <ul class="EnumeratorValues">
+                              			
+                              <li class="EnumeratorValue">yes</li>
+                              			
+                              <li class="EnumeratorValue">no</li>
+                              		</ul>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               			</tr>
+            			
+            <tr id="type_of_business" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Geschäftsbereich</div>
+               </td>
+               				
+               <td class="technical">type_of_business</td>
+               				
+               				
+               <td class="technical">32</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16canon
+                  					
+                  				</td>
+               				
+               <td>Help text here ....</td>
+               			</tr>
+            			
+            <tr id="ds!version" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_vstamp
+                  					
+                  				</td>
+               				
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
+               			</tr>
+            			
+            <tr id="int!info_flags" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="join">int!info_flags</div>
+               </td>
+               				
+               <td class="technical">int!info_flags</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					db_set_join
+                  				</td>
+               				
+               <td>
+                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
+                     </div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="gis_swif!info_flag.html">Information Flag</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="int!info_flags.details">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">records</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Actual join: <span class="dd_join results">swif!object_to_x1</span></li>
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="gis_swif!info_flag_to_object1.html">swif!info_flag_to_object1</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">id</span>=<span class="name">object_id</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+               			</tr>
+            			
+            <tr id="offices" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="join">Büros</div>
+               </td>
+               				
+               <td class="technical">offices</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">join</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					follow
+                  				</td>
+               				
+               <td>
+                  <div>Help text here ....</div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('offices.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="gis_office.html">Büro</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="offices.details">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">records</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">Maybe</span></li>
+                        							
+                        <li class="joinDetailsListItem">Actual join: <span class="dd_join results">company_to_office</span></li>
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="gis_office.html">office</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">id</span>=<span class="name">company_id</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 412391</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

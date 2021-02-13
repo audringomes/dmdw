@@ -36,7 +36,9 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 					     p_output_dir,
 					     p_stylesheet,
 					     p_copy_html_resources?,
-					     p_copy_help?)
+					     p_copy_help?,
+					     p_svg_filename)
+	
 	## 
 	## Do a XSLT transform on xml file P_INPUT_FILE in module
 	## P_MODULE_NAME using the XLST file P_STYLESHEET.
@@ -69,22 +71,25 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 	
 	_local l_input_path << l_module.get_resource_file(p_input_file,:xml)
 	_local (l_input_filename,l_input_dir) << system.pathname_components(l_input_path)
+
+	# Get svg
+	_local l_svg_path,l_svg_name
+	_if p_svg_filename _isnt _unset
+	_then 
+		_try _with p_cond
+			l_svg_path << l_module.get_resource_file(p_svg_filename,:xml)
+			( l_svg_name, dir ) << system.pathname_components( l_svg_path )
+			l_svg_path << system.canonicalise( l_svg_path ).replace_all_instances_of("\","/")
+			write("SVG to include: ",l_svg_path)
+		_when error 
+			condition.raise(:information,:string,write_string("SVG file ",p_svg_filename," not found!"))
+		_endtry
+	_endif
 	
 	write("Transforming ",l_input_path,"...")
 
-	_local l_main_module << sw_module_manager.module(:ds_doc_writer)
-	_local l_xslname << p_stylesheet.default("FileSet2.xsl")
-	_local l_dir << l_main_module.resource_list_for(:xsl).an_element()
-	_if l_dir _is _unset 
-	_then condition.raise(:error,:string,write_string("No xsl resources in module ",l_main_module))
-	_endif
-	
-	_local l_xsl_path << system.pathname_from_components(l_xslname,l_dir)
-	_if _not system.file_exists?(l_xsl_path)
-	_then condition.raise(:error,:string,write_string("Stylesheet ",l_xsl_path," does not exist!"))
-	_endif
+	_local l_xsl_path << _self.xsl_file( l_module,p_stylesheet.default("FileSet2.xsl"))
 	write("Using xsl stylesheet ",l_xsl_path)
-
 
 	_local l_output_path << _unset
 	_if p_output_dir _is _unset 
@@ -108,17 +113,21 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 	
 	write("To file ",l_output_path)
 
-	_if (l_exe_path << _self.path_to_saxon_exe) _is _unset 
-	_then l_exe_path << _self.java_command_string
-	_endif
+	# Pass name and full path of svg to enable copy-of in xslt
+	_self.do_transform( l_input_path, l_xsl_path, l_output_path, l_svg_name, l_svg_path)
 
-	l_command << write_string(l_exe_path," -s:",l_input_path," -xsl:",l_xsl_path," -o:",l_output_path)
-	write("Command ",l_command)
+	_if l_svg_path _isnt _unset 
+	_then
+		# Copy the svg file to the target
+		( the_file, the_dir ) << system.pathname_components( l_output_path )
+		l_target << system.pathname_from_components( l_svg_name, the_dir )
+		write("Copying SVG ",l_svg_path," to ",l_target)
+		system.file_copy( l_svg_path, l_target )
 
-	(status,error_code) << system.do_command(l_command,l_dir)
-	_if error_code _isnt 0
-	_then condition.raise(:error,:string,write_string("Process failed and returned error ",error_code))
-	_else write("Saxon process finished")
+		# Copy the CSS for the SVG
+#		_local l_svg_module << sw_module_manager.module(dm_svg_writer.module_name)
+#		_self.copy_resources( l_svg_module, system.pathname_up( l_target ) ,:html)
+		
 	_endif
 	
 	_if p_copy_html_resources?.default(_true) _is _true 
@@ -139,6 +148,36 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 	write("Created ",l_output_path)
 	>> l_output_path
 	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={ds_doc_writer})
+_private _method dm_xml_transformer.do_transform( p_input_path, p_xsl_path, p_output_path, _optional p_svg_name, p_svg_path )
+	## 
+	## 
+
+	_if (l_exe_path << _self.path_to_saxon_exe) _is _unset 
+	_then l_exe_path << _self.java_command_string
+	_endif
+	_local (l_fname,l_dir) << system.pathname_components(p_output_path)
+	_local l_command << write_string(l_exe_path,
+					 " -s:",p_input_path,
+					 " -xsl:",p_xsl_path,
+					 " -o:",p_output_path,
+					 " OFileName=",l_fname,
+					 " SVGName=",p_svg_name.default(""),
+					 " SVGPath=",p_svg_path.default(""))
+					 
+	
+	write("Executing command ",l_command)
+
+	(status,error_code) << system.do_command( l_command )
+	
+	_if error_code _isnt 0
+	_then condition.raise(:error,:string,write_string("Process failed and returned error ",error_code))
+	_else write("Saxon process finished")
+	_endif
+
 _endmethod
 $
 
@@ -210,14 +249,12 @@ $
 _pragma(classify_level=restricted, topic={ds_doc_writer})
 _private _method dm_xml_transformer.copy_resources( p_module, p_output_dir, p_type )
 	##
-	## Copies webresources or help files to P_OUTPUT_DIR
+	## Copies webresources to P_OUTPUT_DIR
 	## It will 1st copy from the module DS_DOC_WRITER and then from
 	## the module resources of P_MODULE
 	##
-	## P_TYPE is intended to be :html or :help
-	##
 
-	write("Copying resources ",p_module, p_output_dir, p_type )
+	write("Copying ",p_type," resources from ",p_module," to ",p_output_dir)
 	_for i_module _over {sw_module_manager.module(:ds_doc_writer),p_module}.fast_elements()
 	_loop 
 
@@ -266,9 +303,53 @@ _endmethod
 $
 
 _pragma(classify_level=restricted, topic={ds_doc_writer})
-_method dm_xml_transformer.create_index_page(p_module,p_files)
+_private _method dm_xml_transformer.xsl_file( p_module, p_name)
 	## 
 	## 
+
+	_local l_xsl_path
+
+	_for i_module _over { p_module, sw_module_manager.module(_self.module_name) }.fast_elements()
+	_loop
+		_try _with p_cond
+			l_xsl_path << i_module.get_resource_file( p_name, :xsl )
+		_when error
+			write(p_cond.report_contents_string)
+		_endtry
+	_endloop
+
+	_if l_xsl_path _is _unset 
+	_then condition.raise(:error,:string,write_string("XSL file '",p_name,"' not found"))
+	_endif
 	
+	>> l_xsl_path
+	
+_endmethod
+$
+
+_pragma(classify_level=restricted, topic={ds_doc_writer})
+_method dm_xml_transformer.create_index_page( p_module, p_files)
+	## 
+	## Create an index file for DMDW ds HTML pages
+	## P_FILES is a collection with {xml_file,html_file} pairs
+	## 
+
+	#DEBUG print(p_files)
+
+	_local l_dir << p_module.resource_list_for(:html_output).an_element()
+	_local l_xml_name << system.pathname_from_components("index.xml",l_dir)
+	_local l_xsl_name << _self.xsl_file( p_module, "index.xsl" )
+	_local l_html_name << system.pathname_from_components("index.html",l_dir)
+
+	write("Creating index page... ")
+
+	_local l_xml << dm_xml_handler.create_index_xml( l_xml_name, p_files )
+	simple_xml.write_element_file( l_xml_name, l_xml )
+
+	_self.do_transform( l_xml_name, l_xsl_name , l_html_name )	
+	
+	_local l_html << l_html_name
+	
+	>> l_html
 _endmethod
 $

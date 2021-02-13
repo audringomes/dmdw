@@ -1,0 +1,591 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Electricity - Collection DXF Dimensions</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../electricity.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
+      <div class="PageTitle float">DXF Dimensions</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="dxf_dimensions">
+            <tr class="TableName">
+               <td colspan="9">
+                  <h3 class="InTable">DXF Dimensions</h3>
+                  <div class="technical InternalColName">dxf_dimensions</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="9">Category: Not in ACE 'electricity'</td>
+            </tr>
+            <tr>
+               <td colspan="9" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th class="technical">Type</th>
+               <th class="technical">Unit</th>
+               <th class="technical">Sub type</th>
+               <th>Description</th>
+            </tr>
+            			
+            <tr id="dxf_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">dxf_id</div>
+               </td>
+               				
+               <td class="technical">dxf_id</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">True</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td>dxf_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               			</tr>
+            			
+            <tr id="owner_block_name" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Parent Block</div>
+               </td>
+               				
+               <td class="technical">owner_block_name</td>
+               				
+               				
+               <td class="technical">256</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16
+                  					
+                  				</td>
+               				
+               <td>Parent Block ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </td>
+               			</tr>
+            			
+            <tr id="layer" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Layer</div>
+               </td>
+               				
+               <td class="technical">layer</td>
+               				
+               				
+               <td class="technical">256</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16
+                  					
+                  				</td>
+               				
+               <td>Layer ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </td>
+               			</tr>
+            			
+            <tr id="line_style" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Line Type</div>
+               </td>
+               				
+               <td class="technical">line_style</td>
+               				
+               				
+               <td class="technical">256</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16
+                  					
+                  				</td>
+               				
+               <td>Line Type ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </td>
+               			</tr>
+            			
+            <tr id="colour" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Colour</div>
+               </td>
+               				
+               <td class="technical">colour</td>
+               				
+               				
+               <td class="technical">5</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16
+                  					
+                  				</td>
+               				
+               <td>Colour ist eine dd description!basic_fieldZeichenfolge-Feldgröße 5 </td>
+               			</tr>
+            			
+            <tr id="entity_type" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Entity Type</div>
+               </td>
+               				
+               <td class="technical">entity_type</td>
+               				
+               				
+               <td class="technical">31</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16
+                  					
+                  				</td>
+               				
+               <td>Entity Type ist eine dd description!basic_fieldZeichenfolge-Feldgröße 31 </td>
+               			</tr>
+            			
+            <tr id="entity_handle" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">entity_handle</div>
+               </td>
+               				
+               <td class="technical">entity_handle</td>
+               				
+               				
+               <td class="technical">16</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_char16
+                  					
+                  				</td>
+               				
+               <td>entity_handle ist eine dd description!basic_fieldZeichenfolge-Feldgröße 16 </td>
+               			</tr>
+            			
+            <tr id="entity_num" class="Field VisTrue">
+               				
+               <td class="name">
+                  <div class="physical">Entity No</div>
+               </td>
+               				
+               <td class="technical">entity_num</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td>Entity No ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="geom_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">geom_id</div>
+               </td>
+               				
+               <td class="technical">geom_id</td>
+               				
+               				
+               <td class="technical">3</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td>geom_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer
+                  der Größe 3
+                  	Standardwert: integer_vector:[1-3] </td>
+               			</tr>
+            			
+            <tr id="dxf_file_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">dxf_file_id</div>
+               </td>
+               				
+               <td class="technical">dxf_file_id</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_uint
+                  					
+                  				</td>
+               				
+               <td>dxf_file_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+                  	Standardwert: 0 </td>
+               			</tr>
+            			
+            <tr id="rwo_id" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">rwo_id</div>
+               </td>
+               				
+               <td class="technical">rwo_id</td>
+               				
+               				
+               <td class="technical">3</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_gis_element
+                  					
+                  				</td>
+               				
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
+               			</tr>
+            			
+            <tr id="ds!version" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               				
+               <td class="technical">ds!version</td>
+               				
+               				
+               <td class="technical">1</td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">True</td>
+               				
+               				
+               				
+               <td class="technical">physical</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					
+                  						ds_vstamp
+                  					
+                  				</td>
+               				
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
+               			</tr>
+            			
+            <tr id="dimension" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">dimension</div>
+               </td>
+               				
+               <td class="technical">dimension</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					dimension
+                  						<span class="priority">0</span>
+                  					
+                  				</td>
+               				
+               <td>
+                  						
+                  					</td>
+               			</tr>
+            			
+            <tr id="dimension_line" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">dimension_line</div>
+               </td>
+               				
+               <td class="technical">dimension_line</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					simple_chain
+                  						<span class="priority">0</span>
+                  					
+                  				</td>
+               				
+               <td>
+                  						
+                  					</td>
+               			</tr>
+            			
+            <tr id="leader_line" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">leader_line</div>
+               </td>
+               				
+               <td class="technical">leader_line</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					simple_chain
+                  						<span class="priority">0</span>
+                  					
+                  				</td>
+               				
+               <td>
+                  						
+                  					</td>
+               			</tr>
+            			
+            <tr id="meatball" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">meatball</div>
+               </td>
+               				
+               <td class="technical">meatball</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					simple_point
+                  						<span class="priority">0</span>
+                  					
+                  				</td>
+               				
+               <td>
+                  						
+                  					</td>
+               			</tr>
+            			
+            <tr id="text" class="Field VisFalse">
+               				
+               <td class="name">
+                  <div class="geometry">text</div>
+               </td>
+               				
+               <td class="technical">text</td>
+               				
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">False</td>
+               				
+               <td class="technical">False</td>
+               				
+               				
+               <td class="technical">geometry</td>
+               				
+               <td class="technical"></td>
+               				
+               <td class="technical">
+                  					text
+                  						<span class="priority">0</span>
+                  					
+                  				</td>
+               				
+               <td>
+                  						
+                  					</td>
+               			</tr>
+            		</table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 8210199731448578141</li>
+            <li>DMDW © Realworld Software Products 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

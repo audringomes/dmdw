@@ -29,8 +29,8 @@ li {
 /* COMMON SUBCLASSES */
 
 h3.InTable {
-	/* Major elements, e.g. 'a collection' */
-	margin-left: 0px;
+    /* Major elements, e.g. 'a collection' */
+    margin-left: 0px;
 }
 a.CollectionLink {
 	
@@ -45,11 +45,12 @@ a.SoftJoin {
 
 table.dmTable
 {
-	margin-bottom:10px;
+    margin-bottom:10px;
+    min-width: 350px;
 }
 table.dmTable.DefaultTopRules
 {
-	width: 350px;
+    width: 350px;
 }
 table.dmTable.Footer
 {
@@ -72,7 +73,10 @@ table.dmCollection
 }
 table.dmEnumerator
 {
-	/*! display: block; */
+    /*! display: block; */
+    min-width: 400px;
+    overflow: auto;
+    /* margin-left: 10px; */
 }
 table#audit_history_event_types{
   display:-moz-popup;
@@ -85,15 +89,14 @@ table.softjoins {
 	min-width: 500px;
 	margin-bottom: 0px;
 }
-table.InLineBox {
-	/* table displayed in a field description */
-	position: relative;
-	display: none;
-	padding-top: 1%;
-	left: 2%;
-	padding-bottom: 1%;
-	margin-bottom: 0px;
-	border-bottom-width: 0px;
+table.InlineBox {
+    /* table displayed in a field description */
+    margin: 4px;
+    background-color: inherit;
+}
+.dmTable.IntTopol {
+    min-width: 300px;
+    float: right;
 }
 
 /* ROW STYLES */
@@ -103,8 +106,7 @@ tr.HeadStyle
 	/*! border-top-width: 5px; */
 	/*! border-bottom-width: 5px; */
 }
-tr.overview {
-	/* Collection List row */
+tr.overview {	/* Collection List row */
 }
 tr.TableCategory {
 	/* just below table name */
@@ -265,7 +267,10 @@ li.Join {
 	color: #040484;
 }
 .Used {
-	/* An entity used in the datamodel */
+	/* Enumerator used by a table */
+}
+.NotUsed {
+	/* Enumerator not used by a table */
 }
 .buttonbar {
 	margin-bottom: 2px;
@@ -276,16 +281,16 @@ li.Join {
 .CheckButton {
 	margin-right: 10px;
 }
-.filterbutton {
+.Filter {
 	border: none;
 	width: 90%;
 	background-color: #fff;
 	font-size: 0.91em;
 }
-.listlink {
+.ListLink {
 	font-size: 0.9em;
 }
-input.clearfilter {
+input.ClearFilter {
 	vertical-align: top;
 }
 .highlight {
@@ -294,4 +299,206 @@ input.clearfilter {
 .expandlink 
 {
 	cursor: pointer;
+}
+/* TOPOLOGY */
+.col1s {
+	display: none;
+}
+.fld1s {
+	display: none;
+}
+.col2s {
+    font-size: 0.8em;
+}
+table.col2s {
+    display: inline-table;
+    min-width: 500px;
+    /*! width: 400px; */
+    background-color: #d5d5d5;
+    margin-bottom: 0px;
+}
+.RuleTypedefault {
+    display: none;
+}
+
+.Fld2GeometryName {
+    /*! min-width: 200px; */
+    width: 200px;
+}
+tr.TopologyHeadStyle th.TopologyHeadStyle {
+    color: #084285;
+    background-color: #d5d5d5;
+}
+
+.fld2s {
+    background-color: #d5d5d5;
+}
+.rule1 {
+	color: green;
+}
+td.rule1 {
+	width: 120px;
+	/*! display: inline-block; */
+	/*! margin-right: 0px; */
+	text-align: right;
+}
+.rule2 {
+	color: green;
+}
+td.rule2 {
+	/*! min-width: 50px; */
+	/*! display: inline-block; */
+	width: 120px;
+}
+
+/* .connect { */
+/*     color: #00800000; */
+/*     background-image: url("connect.png"); */
+/*     background-repeat: no-repeat; */
+/* } */
+/* .connect_ends { */
+/*     color: #00800000; */
+/*     background-image: url("connect_ends.png"); */
+/*     background-repeat: no-repeat; */
+/* } */
+/* .split_link { */
+/*     color: #00800000; */
+/*     background-image: url("split_link.png"); */
+/*     background-repeat: no-repeat; */
+/* } */
+/* .split_chain { */
+/*     color: #00800000; */
+/*     background-image: url("split_chain.png"); */
+/*     background-repeat: no-repeat; */
+/* } */
+
+.ruleslegend {
+    font-size: 15px;
+    margin-block: inherit;
+    font-style: italic;
+    color: slategrey;
+}
+.ruleslegend img {
+    vertical-align: text-bottom;
+    padding-right: 7px;
+}
+.fld2sStatic {
+    font-size: smaller;
+    padding-left: 9pt;
+/*   display: block; Avoid to enable toggle explit rules */
+}
+.rulesStatic {
+    color: green;
+}
+.rule1Static {
+    text-align: right;
+}
+.rule2Static {
+}
+.warning {
+    color: #b05426
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
+.HeadingFldsUsingEnum {
+    /*    font-weight: bold; */
+    
+}
+.FldsUsingEnum {
+    background-color: cadetblue;
+}
+.InternalMfName {
+}
+
+td.field1 {
+    vertical-align: top;
+    overflow-x: auto;
+}
+
+.field2 {
+    width: 120px;
+    display: inline-block;
+    overflow-x: clip;
+}
+
+.betweenrules {
+}
+
+.betweenrules::before {
+    content: '<->';
+/*    background-color: #a5a6a8;
+    color: white;
+*/
+    padding: 1px;
+}
+/* Used in title of page */
+.DsName {
+    font-size: medium;
+}
+.dmTableDoc {
+    margin-bottom: 10px;
+    min-width: 400px;
+}
+.dmTableSoft {
+    margin-bottom: 10px;
+    min-width: 400px;
+}
+.dmTableInfo {
+    margin-bottom: 10px;
+    min-width: 400px;
+}
+.InternalColName {
+    color: black;
+    font-size: small;
+}
+.mapkey {
+    display: inline list-item;
+    padding-right: 5px;
+}
+.mapfld {
+}
+.mapfld::before {
+    content: '> ';
+}
+ul.Join {
+    margin: 2px;
+}
+.results {
+    font-style: italic;
+}
+.InfoIcon {
+    display: inline;
+}
+.InfoIcon img {
+    width: 0.75rem;
+    vertical-align: baseline;
+}
+.priority {
+  color: darkgoldenrod;
+}
+.priority:before {
+  content: '(';
+}
+.priority:after {
+  content: ')';
+}
+.dd_join.dd_join_as_field {
+    /* If a dd!join is exposed as field in the table */
+    font-weight: bolder;
+}
+.joinDetailsList {
+    padding-left: 2px;
+    margin-top: 5px;
+    background-color: darkgray;
+}
+.joinDetailsListItem {
+    margin: 0px;
+}
+.Header {
+    /* From table */
+    background-color: #aaa;
+}
+.HeadStyle.Category {
 }
