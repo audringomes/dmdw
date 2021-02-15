@@ -4,11 +4,21 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+  <!-- NOTE: This stylesheet is loaded after Common.xsl -->
+
   <!-- The following variables contain the Page titles. -->
   <xsl:variable name="diagram_title" select="'Object-relations Diagram'"/>
-
-  <!-- NOTE: This stylesheet is loaded after Common.xsl
-
+  <xsl:variable name="toc_title" select="'Table of Contents'"/>
+  <xsl:variable name="tech_title" select="'Technical Details'"/>
+  <xsl:variable name="global_props_title" select="'Global Properties'"/>
+  <xsl:variable name="collections_title" select="'Collections by Category'"/>
+  <xsl:variable name="enum_static_title" select="'Enumerators (static)'"/>
+  <xsl:variable name="enum_interactive_title" select="'Enumerators (interactive)'"/>
+  <xsl:variable name="topology_static_title" select="'Topology (static)'"/>
+  <xsl:variable name="topology_interactive_title" select="'Topology (interactive)'"/>
+  <xsl:variable name="soft_joins_title" select="'Magik joins'"/>
+  
+  <!--
        The next templates are used to provide text for every major chapter 
        They should not be removed, but left empty if wanted.
 

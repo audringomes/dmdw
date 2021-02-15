@@ -25,6 +25,22 @@ function ToggleSub(Id)
     {aNode.style.display = 'none';}
 }
 
+function ToggleCo()
+/* Toggles visibility of <g id="case_objects"> in SVG */
+{
+    ToggleId('case_objects');
+}
+function ToggleCrel()
+/* Toggles visibility of <g id="case_relationships"> in SVG */
+{
+    ToggleId('case_relationships');
+}
+function ToggleCHrel()
+/* Toggles visibility of <g id="case_hetero_relations"> in SVG */
+{
+    ToggleId('case_hetero_relations');
+}
+
 function ShowElement(Id,Classname)
 /* Click a listlink and set Display none for all elements with 
    class "Classname" and display "" for the one with id "Id"*/
@@ -227,3 +243,4 @@ function ToggleAndHighlightField(Fname)
 	aNode.style.backgroundColor = 'inherit';
     }
 }
+

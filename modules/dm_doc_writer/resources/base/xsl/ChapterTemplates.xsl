@@ -20,6 +20,26 @@
 	  <xsl:with-param name="path" select="'../'"/>
 	</xsl:call-template>
 
+	<div class="PageTitle float"><xsl:value-of select="$diagram_title"/></div>
+
+	<div class="buttonbar float">
+	  <xsl:call-template name="Button">
+	    <xsl:with-param name="function" select="'ToggleCo()'"/>
+	    <xsl:with-param name="label" select="'Objects'"/>
+	    <xsl:with-param name="state" select="'True'"/>
+	  </xsl:call-template>	  
+	  <xsl:call-template name="Button">
+	    <xsl:with-param name="function" select="'ToggleCrel()'"/>
+	    <xsl:with-param name="label" select="'Relations'"/>
+	    <xsl:with-param name="state" select="'True'"/>
+	  </xsl:call-template>
+	  <xsl:call-template name="Button">
+	    <xsl:with-param name="function" select="'ToggleCHrel();'"/>
+	    <xsl:with-param name="label" select="'Heterogeneous relations'"/>
+	    <xsl:with-param name="state" select="'True'"/>
+	  </xsl:call-template>
+	</div>
+	
 	<div class="svgwrapper float">
 	  <xsl:copy-of select="document($SVGPath)"/>
 	</div>
@@ -37,7 +57,7 @@
     <html> 			
       <xsl:call-template name="HtmlHeader">
 	<xsl:with-param name="path" select="''"/>
-	<xsl:with-param name="title" select="concat($dm_external_name,' - Table of Contents')"/>
+	<xsl:with-param name="title" select="concat($dm_external_name,' - ',$toc_title)"/>
       </xsl:call-template>
 
       <body onload="HighlightHash()">
@@ -46,21 +66,21 @@
 	  <xsl:with-param name="path" select="''"/>
 	</xsl:call-template>
 
-	<div class="PageTitle float">Table of Contents</div>
+	<div class="PageTitle float"><xsl:value-of select="$toc_title"/></div>
 	<nav class="float">
 	  <ul>
-	    <li><a href="{$filename1}">Technical Details</a></li>
-	    <li><a href="{$filename3}">Global Properties</a></li>
+	    <li><a href="{$filename1}"><xsl:value-of select="$tech_title"/></a></li>
+	    <li><a href="{$filename3}"><xsl:value-of select="$global_props_title"/></a></li>
 	    <xsl:if test="$SVGName">
 	      <li><a href="{$filename7}"><xsl:value-of select="$diagram_title"/></a></li>
 	    </xsl:if>
-	    <li><a href="{$filename2}">Collections</a></li>
-	    <li><a href="{$filename4s}">Enumerators (static)</a></li>
-	    <li><a href="{$filename4}">Enumerators (interactive)</a></li>
-	    <li><a href="{$filename5s}">Topology (static)</a></li>
-	    <li><a href="{$filename5}">Topology (interactive)</a></li>
+	    <li><a href="{$filename2}"><xsl:value-of select="$collections_title"/></a></li>
+	    <li><a href="{$filename4s}"><xsl:value-of select="$enum_static_title"/></a></li>
+	    <li><a href="{$filename4}"><xsl:value-of select="$enum_interactive_title"/></a></li>
+	    <li><a href="{$filename5s}"><xsl:value-of select="$topology_static_title"/></a></li>
+	    <li><a href="{$filename5}"><xsl:value-of select="$topology_interactive_title"/></a></li>
 	    <xsl:if test="/datamodel/soft_joins">
-	      <li><a href="{$filename6}">Magik joins</a></li>
+	      <li><a href="{$filename6}"><xsl:value-of select="$soft_joins_title"/></a></li>
 	    </xsl:if>
 	  </ul>
 	</nav>
@@ -88,7 +108,7 @@
 	<xsl:call-template name="Top">
 	  <xsl:with-param name="path" select="'../'"/>
 	</xsl:call-template>
-	<div class="PageTitle float">Technical Details</div>
+	<div class="PageTitle float"><xsl:value-of select="$tech_title"/></div>
 	<div class="ChapterInfo float">
 	  <xsl:call-template name="technical_details_info"/>
 	</div>
@@ -122,7 +142,7 @@
 	<xsl:call-template name="Top">
 	  <xsl:with-param name="path" select="'../'"/>
 	</xsl:call-template>
-	<div class="PageTitle float">Collections by Category</div>
+	<div class="PageTitle float"><xsl:value-of select="$collections_title"/></div>
 	<div class="ChapterInfo float">
 	  <xsl:call-template name="collections_info"/>
 	</div>
@@ -150,7 +170,7 @@
 	<xsl:call-template name="Top">
 	  <xsl:with-param name="path" select="'../'"/>
 	</xsl:call-template>
-	<div class="PageTitle float">Global Properties</div>
+	<div class="PageTitle float"><xsl:value-of select="$global_props_title"/></div>
 	<div class="ChapterInfo float">
 	  <xsl:call-template name="global_properties_info"/>
 	</div>
@@ -279,7 +299,7 @@
 	<xsl:call-template name="Top">
 	  <xsl:with-param name="path" select="'../'"/>
 	</xsl:call-template>
-	<div class="PageTitle float">Enumerators (interactive)</div>
+	<div class="PageTitle float"><xsl:value-of select="$enum_interactive_title"/></div>
 	<div class="ChapterInfo float">
 	  <xsl:call-template name="enumerators_info"/>
 	</div>
@@ -315,7 +335,7 @@
 	<xsl:call-template name="Top">
 	  <xsl:with-param name="path" select="'../'"/>
 	</xsl:call-template>
-	<div class="PageTitle float">Enumerators (static)</div>
+	<div class="PageTitle float"><xsl:value-of select="$enum_static_title"/></div>
 	<div class="ChapterInfo float">
 	  <xsl:call-template name="enumerators_info_static"/>
 	</div>
@@ -349,7 +369,7 @@
 	<xsl:call-template name="Top">
 	  <xsl:with-param name="path" select="'../'"/>
 	</xsl:call-template>
-	<div class="PageTitle float">Topology Rules (interactive)</div>
+	<div class="PageTitle float"><xsl:value-of select="$topology_interactive_title"/></div>
 	<div class="ChapterInfo float">
 	  <xsl:call-template name="topology_info_interactive"/>
 	</div>
@@ -378,7 +398,7 @@
 	<xsl:call-template name="Top">
 	  <xsl:with-param name="path" select="'../'"/>
 	</xsl:call-template>
-	<div class="PageTitle float">Topology Rules (static)</div>
+	<div class="PageTitle float"><xsl:value-of select="$topology_static_title"/></div>
 	<div class="ChapterInfo float">
 	  <xsl:call-template name="topology_info_static"/>
 	</div>
@@ -415,7 +435,7 @@
 	<xsl:call-template name="Top">
 	  <xsl:with-param name="path" select="'../'"/>
 	</xsl:call-template>
-	<div class="PageTitle float">Soft joins</div>
+	<div class="PageTitle float"><xsl:value-of select="$soft_joins_title"/></div>
 	<div class="ChapterInfo float">
 	  <xsl:call-template name="soft_joins_info"/>
 	</div>
