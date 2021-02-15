@@ -1,3 +1,4 @@
+case_entity_mixin_extras
 case_object_extras
 case_relationship_extras
 case_hetero_relationship_extras

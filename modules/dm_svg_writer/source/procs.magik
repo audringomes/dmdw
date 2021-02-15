@@ -17,7 +17,7 @@ _pragma(classify_level=basic, topic={dmdw,dm_svg_writer})
 ##
 ## We use the default properties as specified in
 ## dm_svg_writer.default_properties, except form the option
-## :write_style_element? 
+## :standalone? 
 ##
 ## Note that when you see a black square, it most likely
 ## is missing the CSS style sheet.
@@ -32,7 +32,8 @@ _proc @dm_create_svg( ds, case_view, _optional output_file )
 		output_file << system.pathname_from_components( write_string(ds.name,".svg"),l_dir)
 	_endif
 
-	_local l_props << property_list.new_with(:write_style_element?,_true)
+	_local l_props << property_list.new_with(:standalone?,_true)
+	
 	_local l_writer << dm_svg_writer.new( case_view, l_props )
 	_local l_collections << rope.new_from_iter(ds,:|user_tables()|)
 

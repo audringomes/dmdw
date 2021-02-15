@@ -50,7 +50,7 @@ _proc @export_xml(ds,module_name)
 				  :output_file,l_file
 					)
 	
-	_local du << dm_xml_writer.new(ds,l_props)
+	_local du << dm_xml_writer.new( ds, l_props )
 	
 	du.process()
 

@@ -1,0 +1,16 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
+_method case_entity_mixin.a_element( _optional p_properties )
+	## 
+	## 
+
+_endmethod
+$

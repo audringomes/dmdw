@@ -60,7 +60,7 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 	## P_COPY_HELP? If true (default is _true) it copies the help
 	## resources of the module into P_OUTPUT_DIR
 	##
-	## P_SVG_FILENAME The name of a SVG file to include.
+	## P_SVG_FILENAME is the name of a SVG file to include.
 	##
 	## THE method returns the full outputpath of the html.
 	##
@@ -109,15 +109,6 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 	# Pass name and full path of svg to enable copy-of in xslt
 	_self.do_transform( l_input_path, l_xsl_path, l_output_path, p_svg_filename)
 
-#	_if p_svg_filename _isnt _unset 
-#	_then
-#		# Copy the svg file to the target
-#		( the_file, the_dir ) << system.pathname_components( l_output_dir )
-#		l_target << system.pathname_from_components( l_svg_name, the_dir )
-#		write("Copying SVG ",l_svg_path," to ",l_target)
-#		system.file_copy( l_svg_path, l_target )
-#	_endif
-	
 	_if p_copy_html_resources?.default(_true) _is _true 
 	_then
 		_try _with cond
@@ -134,6 +125,7 @@ _method dm_xml_transformer.transform_to_html(p_module_name, p_input_file, _optio
 	_endif
 
 	write("Created ",l_output_path)
+	
 	>> l_output_path
 	
 _endmethod
@@ -177,14 +169,12 @@ $
 _pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 _method dm_xml_transformer.copy_help(p_module,p_output_file)
 	##
-	## Copies the help from dm_doc_writer or in module P_MODULE to
-	## the html output, so help can be retrieved from the pages.
+	## Copies the help from P_MODULE or from module dm_doc_writer to
+	## the html output, so help can be retrieved from the html pages.
 	## 
 	## P_MODULE is the module that might contain help resources.
 	## P_OUTPUT_FILE is the path of the html file that is generated.
-	## The language setting !current_languages! and any
-	## customisation product is taken into account
-	##
+	## 
 
 	_local l_return << _false
 	
@@ -221,14 +211,13 @@ _method dm_xml_transformer.copy_help(p_module,p_output_file)
 		system.mkdir(l_helpdir)
 	_endif
 
-	_local l_log_file << system.pathname_from_components("DMDW_COPY.log",l_helpdir)
-	_local l_cmd << write_string("ROBOCOPY ",
-				     system.canonicalise(l_dir)," ",
-				     system.canonicalise(l_helpdir)," ",
-				     "/E /LOG:",l_log_file
-			)
+#	_local l_log_file << system.pathname_from_components("DMDW_COPY.log",l_helpdir)
+	_local l_cmd << write_string("XCOPY /Y /E /EXCLUDE:exclude_from_copy.txt ",
+				     system.canonicalise(l_dir),"\*.* ",
+				     system.canonicalise(l_helpdir),"\ ")
 	
 	_try _with cond
+		write("Copy command ",l_cmd)
 		system.do_command(l_cmd,l_dir)
 		l_return << _true 
 	_when error

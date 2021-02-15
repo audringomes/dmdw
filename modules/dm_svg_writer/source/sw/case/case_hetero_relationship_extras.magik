@@ -16,3 +16,22 @@ _method case_hetero_relationship.as_svg_circle( p_properties )
 	
 _endmethod
 $
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
+_method case_hetero_relationship.as_diagram_element( p_properties )
+	## 
+	##
+
+	_local l_xml << sw:simple_xml_thing.new(:g,rope.new(),
+						property_list.new_with(:id,_self.name.write_string,
+								       :description,_self.type.as_charvec()))
+
+	l_xml.elements.add(_self.as_svg_circle( p_properties ) )
+
+	_if (l_hlink << _self.a_element( p_properties )) _isnt _unset 
+	_then l_hlink.elements.add( l_xml )
+	      _return l_hlink
+	_endif
+	
+	>> l_xml
+_endmethod
+$

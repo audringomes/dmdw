@@ -49,16 +49,16 @@ _method dm_svg_writer.default_properties
 	## 
 	## 
 	>> property_list.new_with(
+		   :transform,transform.new(),
+		   :standalone?,_false,
 		   :width,700,
 		   :height,700,
 		   :margin,50,
-		   :transform,transform.new(),
 		   :svg,property_list.new_with(:xmlns,"http://www.w3.org/2000/svg",
 					       :width,700,
 					       :height,700,
 					       :viewBox,"0 0 700 700",
 					       :class,"svg"),
-		   :write_style_element?,_false,
 		   :polyline,property_list.new_with(:class,"polyline"),
 		   :background,property_list.new_with(:id,:background,
 						      :class,"background",
@@ -69,7 +69,8 @@ _method dm_svg_writer.default_properties
 		   :text_box,property_list.new_with(:class,"textbox"),
 		   :text_xy_correction,property_list.new_with(:x,0,:y,4),
 		   :circle,property_list.new_with(:class,"circle"),
-		   :line,property_list.new_with(:class,"line")
+		   :line,property_list.new_with(:class,"line"),
+		   :a,property_list.new()#_with(:href,"javascript:OpenCollectionPage()")
 			 )
 	
 _endmethod
@@ -104,6 +105,14 @@ _endmethod
 $
 
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
+_method dm_svg_writer.standalone?
+	## 
+	## 
+	>> .properties[:standalone?] _is _true 
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.create_svg_for( p_collections, p_file )
 	## 
 	## Find the matching case objects for the collections in
@@ -117,6 +126,14 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 	_endif
 	
 	_self.filter_excludes( p_collections )
+
+	# We assume collections are from one dataset
+	_local l_list << _self.origin_datasets( p_collections )
+	_local l_ds_name << _if l_list.size = 1
+			    _then >> l_list.an_element()
+			    _else >> :multiple
+			    _endif
+	.properties[:gis_ds_name] << l_ds_name
 	
 	_local ( l_tabs, l_rels, l_heteros ) << _self.case_objects_for_collections( p_collections )
 
@@ -134,12 +151,12 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 #	#DEBUG print(l_svg_bounds)
 
 	.properties[:transform] << _self.transform( l_src_bounds, _self.inner_box )
-	
-	_local l_doc << _self.svg_element()
+
+	_local l_doc << _self.svg_element( property_list.new_with(:id,l_ds_name.write_string) )
 
 	_local l_sub << l_doc.elements
 
-	_if .properties[:write_style_element?] _is _true 
+	_if _self.standalone? _is _true 
 	_then 
 		l_sub.add( _self.style_element() )
 		_self.copy_css_for_output( p_file )
@@ -149,13 +166,13 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 
 	l_sub.add( _self.background_element() )
 
-	l_sub.add( _self.logo_element() )
-
 	l_sub.add( _self.case_hetero_relations_elements( l_heteros ))
 
 	l_sub.add( _self.case_physical_relations_element( l_rels ))
 
 	l_sub.add( _self.case_object_elements( l_tabs ))
+
+	l_sub.add( _self.logo_element() )
 
 	# Write document
 	simple_xml.write_element_file( p_file, l_doc )
@@ -166,13 +183,43 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 	
 _endmethod
 $
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
+_method dm_svg_writer.origin_datasets( p_collections ) 
+	## 
+	## Determine the dataset(s).
+	##
+
+	_local l_list << equality_set.new()
+
+	_for i_col _over p_collections.fast_elements()
+	_loop
+		l_src_vw << _if i_col.is_kind_of?(ds_collection)
+			    _then >> i_col.source_view.name 
+			    _elif i_col.is_kind_of?(dd_table)
+			    _then >> i_col.dd.name
+			    _endif
+		_if l_src_vw _is _unset 
+		_then write(i_col," Collection not supported in DIAGRAM")
+		      _continue 
+		_endif
+		l_list.add( l_src_vw )
+	_endloop
+
+	_if l_list.size > 1
+	_then write("The collections for SVG are from multiple datasets!")
+	      print(l_list)
+	_endif
+	
+	>> l_list
+_endmethod
+$
 
 _pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
 _private _method dm_svg_writer.set_properties( p_props )
 	## 
 	## 
 
-	_local l_list << .properties << _self.default_properties
+	_local l_list << .properties << _self.default_properties.copy()
 
 	_if p_props _isnt _unset 
 	_then l_list.add_all( p_props )
@@ -359,21 +406,27 @@ _endmethod
 $
 
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
-_method dm_svg_writer.svg_element()
+_method dm_svg_writer.svg_element( _optional p_props)
 	## 
 	## 
 
-	>> sw:simple_xml_thing.new(:svg, rope.new() ,_self.properties[:svg] )
+
+	_local l_props << _self.properties[:svg].copy()
+	_if p_props _isnt _unset
+	_then l_props.add_all( p_props )
+	_endif
+	
+	>> sw:simple_xml_thing.new(:svg, rope.new(), l_props)
 	
 _endmethod
 $
 
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
-_method dm_svg_writer.g_element()
+_method dm_svg_writer.g_element( _optional p_props)
 	## 
 	##
 
-	>> sw:simple_xml_thing.new(:g,rope.new())
+	>> sw:simple_xml_thing.new(:g, rope.new(), p_props.default("") )
 	
 _endmethod
 $
@@ -476,18 +529,18 @@ _method dm_svg_writer.logo_element()
 _endmethod
 $
 
+
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
-_method dm_svg_writer.case_physical_relations_element( p_rels )
+_method dm_svg_writer.case_object_elements( p_objects )
 	## 
 	## 
 
-	_local l_g << _self.g_element()
+	_local l_g << _self.g_element( property_list.new_with(:id,"case_objects") )
 	_local l_g_elements << l_g.elements
-
-	l_g_elements.add(_self.title_element("Case Relationships"))
 	
-	_for i_elem _over p_rels.fast_elements()
-	_loop l_g_elements.add( i_elem.as_svg_polyline( _self.properties ) )
+	l_g_elements.add( _self.title_element("Case Objects") )
+	_for i_elem _over p_objects.fast_elements()
+	_loop l_g_elements.add( i_elem.as_diagram_element( _self.properties ) )
 	_endloop
 
 	>> l_g
@@ -495,16 +548,17 @@ _endmethod
 $
 
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
-_method dm_svg_writer.case_object_elements( p_objects )
+_method dm_svg_writer.case_physical_relations_element( p_rels )
 	## 
 	## 
 
-	_local l_g << _self.g_element()
+	_local l_g << _self.g_element( property_list.new_with(:id,"case_relationships") )
 	_local l_g_elements << l_g.elements
+
+	l_g_elements.add(_self.title_element("Case Relationships"))
 	
-	l_g_elements.add( _self.title_element("Case Objects") )
-	_for i_elem _over p_objects.fast_elements()
-	_loop l_g_elements.add( i_elem.as_svg_textbox( _self.properties ) )
+	_for i_elem _over p_rels.fast_elements()
+	_loop l_g_elements.add( i_elem.as_diagram_element( _self.properties ) )
 	_endloop
 
 	>> l_g
@@ -516,13 +570,13 @@ _method dm_svg_writer.case_hetero_relations_elements( p_rels )
 	## 
 	## 
 
-	_local l_g << _self.g_element()
+	_local l_g << _self.g_element( property_list.new_with(:id,"case_hetero_relations"))
 	_local l_g_elements << l_g.elements
 	
 	l_g_elements.add( _self.title_element("Case Heterogeneous Relationships") )
 	_for i_elem _over p_rels.fast_elements()
 	_loop
-		l_g_elements.add( i_elem.as_svg_circle( _self.properties ) )
+		l_g_elements.add( i_elem.as_diagram_element( _self.properties ) )
 		
 		_for i_line _over i_elem.representation_geometry.fast_elements()
 		_loop l_g_elements.add( i_line.as_svg_line( _self.properties ) )

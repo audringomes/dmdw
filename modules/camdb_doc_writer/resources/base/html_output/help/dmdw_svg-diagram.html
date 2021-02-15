@@ -18,7 +18,7 @@
 	<meta name="description" content="An easy way to visualize the datamodel objects and relationships is to make use of the existing graphics in the CASE database." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="13/02/2021" />
+        <meta name="revised" content="15/02/2021" />
         <meta name="id" content="dmdw_SVG-Diagram" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -174,7 +174,7 @@ function GetSearchPage() {
 	<div id="headerbox">
 <div id="headerwrapper">
      <a id="headerlogo" href="http://boogert-lab.nl/" title="Datamodel Document Writer" target="_blank"></a>
-     <h1 class="page_header" id="hm_pageheader">Data Model Document Writer<span class="helpversion">Version 5.4.0</span></h1>
+     <h1 class="page_header" id="hm_pageheader">Data Model Document Writer<span class="helpversion">Version 5.2.4.2</span></h1>
      <div class="top_searchbox">
        <form method="GET" action="hmftsearch.html" target="hmsearch" onsubmit="SwitchTabToSearch(this);">
          <input id="searchform" class="searchinput" name="zoom_query" length="30" value="" autocorrect="off" autocapitalize="none" type="text" placeholder="Search">
@@ -231,7 +231,7 @@ function GetSearchPage() {
 	  <tr>
 		<td id="topicheadercell">
 		  <div id="topicheaderwrapper">
-		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <span>&raquo;&nbsp;No topics above this level&nbsp;&laquo;</span></p> 
+		  <p id="ptopic_breadcrumbs" class="topic_breadcrumbs">Navigation: <a href="dmdw_smallworld.html">Magik</a></p> 
 		  <p class="topictitle">SVG Diagram</p>
 		  </div>
 		</td>
@@ -239,13 +239,13 @@ function GetSearchPage() {
 		<a id="atoclink" class="topicnavlink" title="Contents of this topic">
 		<svg class="navicon" viewBox="0 0 32 32"><use xlink:href="#list-bullet"></use></svg>
 		<span>Scroll</span></a> 
-		 <a id="topicnavlinkprevious" class="topicnavlink nav" href="dmdw_css.html" title="Go to previous topic">
+		 <a id="topicnavlinkprevious" class="topicnavlink nav" href="dmdw_specials.html" title="Go to previous topic">
 		 <svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-left"></use></svg>
 		 <span>Prev</span></a>
 		<a id="topicnavlinkhome" class="topicnavlink nav" href="index.html" title="Go to top topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-up"></use></svg>
 		<span>Top</span></a>
-		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_example.html" title="Go to next topic">
+		<a id="topicnavlinknext" class="topicnavlink nav" href="dmdw_processor.html" title="Go to next topic">
 		<svg class="navicon" viewBox="0 0 27 32"><use xlink:href="#angle-circled-right"></use></svg>
 		<span>Next</span></a>
 		 <a id="hamburgerlink" class="topicnavlink" title="Additional Functions Menu">
@@ -262,8 +262,8 @@ function GetSearchPage() {
 	<div id="hmpagebody_scroller">
 <!--ZOOMRESTART-->
 	<p class="p_Normal">An easy way to visualize the datamodel objects and relationships is to make use of the existing graphics in the CASE database.</p>
-<p class="p_Normal">The module <span style="font-weight: bold;">ds_svg_writer</span> offers a way of creating an intelligent SVG diagram from the CASE database. As SVG it has the big advantage of being pure XML, and styling can be done by css. The file <span style="font-weight: bold;">svg.css</span> contains style definitions. For convenience reason this file is in the html resources of the module <span style="font-weight: bold;">ds_doc_writer</span>.</p>
-<p class="p_Normal">The <span style="font-weight: bold;">ds_svg_writer</span> is designed for standalone use, but is of course used in the <span style="font-weight: bold;">post_proces()</span> of the <span style="font-weight: bold;">dm_xml_writer</span>. It uses the exported collections and an open case database (found by the property :case) to export it to the same folder as xml file. It is in the XSLT transform phase embedded in a HTML page.</p>
+<p class="p_Normal">The module <span style="font-weight: bold;">dm_svg_writer</span> offers a way of creating an intelligent SVG diagram from the CASE database. As SVG it has the big advantage of being pure XML, and styling can be done by css. The file <span style="font-weight: bold;">svg.css</span> contains style definitions. For convenience reason this file is in the html resources of the module <span style="font-weight: bold;">dm_doc_writer</span>.</p>
+<p class="p_Normal">The <span style="font-weight: bold;">dm_svg_writer</span> is designed for standalone use, but is of course used in the <span style="font-weight: bold;">post_proces()</span> of the <span style="font-weight: bold;">dm_xml_writer</span>. It uses the exported collections and an open case database (found by the property :case) to export it to the same folder as xml file. It is in the XSLT transform phase embedded in a HTML page.</p>
 <p class="p_Normal">The case database to be used is defined in the method <span style="font-weight: bold;">dm_xml_writer.opened_case( soc_name )</span>.</p>
 <p class="p_Heading2"><span class="f_Heading2">Principle</span></p>
 <p class="p_Normal">The principle is to pass a set of collections, for example all user tables of a dataset. This collection is expanded with the physical relations that they have, including the heterogeneous ones.</p>
@@ -271,8 +271,8 @@ function GetSearchPage() {
 <p class="p_Normal">A case object is represented as a <span style="font-weight: bold;">text</span>, the physical relations as a <span style="font-weight: bold;">polyline</span>, an hetero table as a <span style="font-weight: bold;">circle</span> and the heterogeneous relations as <span style="font-weight: bold;">line</span>.</p>
 <p class="p_Normal">See the page in <a href="dmdw_example_2.html" class="topiclink">Example (2)</a>.</p>
 <p class="p_Heading2"><span class="f_Heading2">Example</span></p>
-<p class="p_Normal">The following proc creates a Diagram with input of all user tables in dataset <span style="font-weight: bold;">DS</span>, using case_ds_view <span style="font-weight: bold;">CASE_VIEW</span>, and writes the output to the xml resource folder of the module ds_svg_writer.</p>
-<p class="p_Normal">Because the property <span style="font-weight: bold;">:write_style_element? </span>is set, the svg.css is copied into the output if this file does not exist yet.</p>
+<p class="p_Normal">The following proc creates a Diagram with input of all user tables in dataset <span style="font-weight: bold;">DS</span>, using case_ds_view <span style="font-weight: bold;">CASE_VIEW</span>, and writes the output to the xml resource folder of the module <span style="font-weight: bold;">dm_svg_writer</span>.</p>
+<p class="p_Normal">Because the property <span style="font-weight: bold;">:standalone? </span>is set, the <span style="font-weight: bold;">svg.css</span> file is copied from the <span style="font-weight: bold;">ds_doc_writer</span> module resources into the output if this file does not exist yet.</p>
 <div class="magik">
     <pre>
 <span class="magik-font-lock-keyword-statements"><span class="region">_pragma</span></span><span class="magik-font-lock-pragma"><span class="region">(classify_level=basic, topic={ds_doc_writer,ds_svg_writer})</span></span><span class="region">
@@ -318,7 +318,7 @@ $</span></pre>
     <tbody>
       <tr>
 	<td class="copyright">
-	  <p class="copyright">&copy;2021 Realworld Holding BV</p>
+	  <p class="copyright">&copy;2021 BOOGERT-LAB / Realworld Software Products BV</p>
 	</td>
 	<td class="feedback">
 	  <p class="feedback">

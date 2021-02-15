@@ -2,7 +2,7 @@ hmLoadTopic({
 hmKeywords:"mozilla-public-license-version-2.0",
 hmTitle:"XSLT Processing",
 hmDescription:"For the XSLT it is recommended to use the Saxon processor for the translation. It is fast, reliable, and informative regarding any kind of error in the stylesheet. See...",
-hmPrevLink:"dmdw_specials.html",
+hmPrevLink:"dmdw_svg-diagram.html",
 hmNextLink:"dmdw_xsl-transform.html",
 hmParentLink:"index.html",
 hmBreadCrumbs:"",

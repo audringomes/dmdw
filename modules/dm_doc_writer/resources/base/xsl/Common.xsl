@@ -79,7 +79,7 @@
       <ul>
 	<li><xsl:text>DD Version </xsl:text><xsl:value-of select="$ddversion"/></li>
 	<li>
-	  <xsl:text>DMDW &#169; Realworld Software Products </xsl:text><xsl:value-of select="year-from-date($currentDate)"/>
+	  <xsl:text>DMDW - Boogert-lab / Realworld Software Products BV </xsl:text><xsl:value-of select="year-from-date($currentDate)"/>
 	</li>
 	<li>
 	  

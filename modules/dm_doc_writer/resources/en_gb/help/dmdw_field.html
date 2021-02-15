@@ -18,7 +18,7 @@
 	<meta name="description" content="The field element contains the basic information of a field." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="13/02/2021" />
+        <meta name="revised" content="15/02/2021" />
         <meta name="id" content="dmdw_Field" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -174,7 +174,7 @@ function GetSearchPage() {
 	<div id="headerbox">
 <div id="headerwrapper">
      <a id="headerlogo" href="http://boogert-lab.nl/" title="Datamodel Document Writer" target="_blank"></a>
-     <h1 class="page_header" id="hm_pageheader">Data Model Document Writer<span class="helpversion">Version 5.4.0</span></h1>
+     <h1 class="page_header" id="hm_pageheader">Data Model Document Writer<span class="helpversion">Version 5.2.4.2</span></h1>
      <div class="top_searchbox">
        <form method="GET" action="hmftsearch.html" target="hmsearch" onsubmit="SwitchTabToSearch(this);">
          <input id="searchform" class="searchinput" name="zoom_query" length="30" value="" autocorrect="off" autocapitalize="none" type="text" placeholder="Search">
@@ -271,7 +271,7 @@ function GetSearchPage() {
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">id</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">name</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field_type</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">type</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">physical</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field_sub_type</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">phys_type</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">type</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">ds_uint</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">phys_type</span><span class="f_CodeExample" style="color: #000000;"> </span><span class="f_CodeExample" style="color: #800000;">type</span><span class="f_CodeExample" style="color: #0000ff;">=&quot;</span><span class="f_CodeExample" style="font-weight: bold; color: #000080;">dm_uint</span><span class="f_CodeExample" style="color: #0000ff;">&quot;/&gt;</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">field_sub_type</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">key</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">True</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">key</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">mandatory</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">True</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">mandatory</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
@@ -316,7 +316,7 @@ function GetSearchPage() {
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; True</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">simple_result</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">result_flavour</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
-<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">class</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">ds_char16</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">class</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
+<span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">class</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">dm_char16</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">class</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">ordered</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><span class="f_CodeExample" style="font-weight: bold; color: #000000;">False</span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">ordered</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; &nbsp;  </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">result_flavour</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
 <span class="f_CodeExample" style="font-weight: bold; color: #000000;"> &nbsp; </span><span class="f_CodeExample" style="color: #0000ff;">&lt;/</span><span class="f_CodeExample" style="font-weight: bold; color: #800000;">dd_join_field</span><span class="f_CodeExample" style="color: #0000ff;">&gt;</span><br />
@@ -408,11 +408,11 @@ function GetSearchPage() {
     <tbody>
       <tr>
 	<td class="copyright">
-	  <p class="copyright">&copy;2021 Realworld Holding BV</p>
+	  <p class="copyright">&copy;2021 BOOGERT-LAB / Realworld Software Products BV</p>
 	</td>
 	<td class="feedback">
 	  <p class="feedback">
-	    <a href="#" onclick="javascript: window.location.href ='mailto:info@realworld-systems.com Feedback on article: '+document.title;" class="feedback" title="Send feedback on this article">Send feedback</a>
+	    <a href="#" onclick="javascript: window.location.href ='mailto:andre@boogert-lab.nl Feedback on article: '+document.title;" class="feedback" title="Send feedback on this article">Send feedback</a>
 	  </p>
 	</td>
 	<td>

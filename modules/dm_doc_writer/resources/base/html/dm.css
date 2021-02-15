@@ -488,6 +488,9 @@ ul.Join {
     /* If a dd!join is exposed as field in the table */
     font-weight: bolder;
 }
+.JoinDetails {
+    display: none;
+}
 .joinDetailsList {
     padding-left: 2px;
     margin-top: 5px;

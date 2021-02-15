@@ -45,6 +45,7 @@
 
   
   <xsl:variable name="maintitle" select="'Datamodel information'"/>
+  <!-- To continue defining titles -->
   
   <xsl:variable name="filename1" select="concat($path_prefix,'technical_details.html')"/>
   <xsl:variable name="filename2" select="concat($path_prefix,'collections.html')"/>
@@ -61,13 +62,6 @@
   <!-- This is the main template -->
   <xsl:template match="/">
 
-    <!-- Page with a Datamodel Image -->
-    <xsl:if test="$SVGName">
-      <xsl:result-document href="{$filename7}" format="html">
-	<xsl:call-template name="SVGPage"/>
-      </xsl:result-document>
-    </xsl:if>
-
     <!-- TOC page -->
     <xsl:call-template name="TocPage"/>
 
@@ -76,6 +70,13 @@
       <xsl:call-template name="TechDetailsPage"/>
     </xsl:result-document>
     
+    <!-- Page with a Datamodel Image -->
+    <xsl:if test="$SVGName">
+      <xsl:result-document href="{$filename7}" format="html">
+	<xsl:call-template name="SVGPage"/>
+      </xsl:result-document>
+    </xsl:if>
+
     <!-- Collection list -->
     <xsl:result-document href="{$filename2}" format="html">
       <xsl:call-template name="CollectionListPage"/>	

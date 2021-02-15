@@ -3,7 +3,10 @@
     version="2.0" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  
+
+  <!-- The following variables contain the Page titles. -->
+  <xsl:variable name="diagram_title" select="'Object-relations Diagram'"/>
+
   <!-- NOTE: This stylesheet is loaded after Common.xsl
 
        The next templates are used to provide text for every major chapter 

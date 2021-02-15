@@ -5,7 +5,8 @@
     display: block;
     height: 700px;
     width: 700px;
-    background: url('bck.png');
+    background-color: gainsboro;
+/*  background: url('bck.png');*/
 }
 .svg {
     margin: auto auto;
@@ -20,22 +21,14 @@
 .case_object {
     text-anchor: middle;
     font-family: 'Calibri';
-    font-size: 20pt;
+    font-size: 0.9rem;
     stroke-width: 1.0;
-    stroke: #862c2c;
-    fill: black;
 }
 .feFlood {
     flood-opacity: 1;
     flood-color: #e6e6e6;
 }
 .textbox {
-    stroke: none;
-    fill: #220808;
-    font-family: sans-serif, 'Verdana', 'Trebuchet MS', Arial, Helvetica;
-    font-size: 0.8rem;
-    text-anchor: middle;
-    font-weight: bolder;
     filter: url(#TextBox);
 }
 .circle {

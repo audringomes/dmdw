@@ -11,7 +11,7 @@
       
       <xsl:call-template name="HtmlHeader">
 	<xsl:with-param name="path" select="'../'"/>
-	<xsl:with-param name="title" select="concat($dm_external_name,' - Map')"/>
+	<xsl:with-param name="title" select="concat($dm_external_name,' ',$diagram_title)"/>
       </xsl:call-template>
 
       <body onload="HighlightHash()">
@@ -49,11 +49,11 @@
 	<div class="PageTitle float">Table of Contents</div>
 	<nav class="float">
 	  <ul>
-	    <xsl:if test="$SVGName">
-	      <li><a href="{$filename7}">Graphic Representation</a></li>
-	    </xsl:if>
 	    <li><a href="{$filename1}">Technical Details</a></li>
 	    <li><a href="{$filename3}">Global Properties</a></li>
+	    <xsl:if test="$SVGName">
+	      <li><a href="{$filename7}"><xsl:value-of select="$diagram_title"/></a></li>
+	    </xsl:if>
 	    <li><a href="{$filename2}">Collections</a></li>
 	    <li><a href="{$filename4s}">Enumerators (static)</a></li>
 	    <li><a href="{$filename4}">Enumerators (interactive)</a></li>
