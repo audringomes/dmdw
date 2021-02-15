@@ -1,7 +1,7 @@
 #% text_encoding = iso8859_1
 # ************************************************************
 #
-# (c) 2021 Realworld Software Products. All Rights Reserved.
+# BOOGERT-LAB / Realworld Software Products BV 2021
 #
 # ************************************************************
 
@@ -12,7 +12,7 @@ _method case_hetero_relationship.as_svg_circle( p_properties )
 	## 
 	##
 	
-	>> _self.location.as_svg_circle( p_properties )	
+	>> _self.representation_geometry.as_svg_circle( p_properties )	
 	
 _endmethod
 $

@@ -1,7 +1,7 @@
 #% text_encoding = iso8859_1
 # ************************************************************
 #
-# (c) 2021 Realworld Software Products. All Rights Reserved.
+# BOOGERT-LAB / Realworld Software Products BV 2021
 #
 # ************************************************************
 
@@ -45,6 +45,8 @@ _proc @export_camdb()
 		_local du << dm_xml_writer.new( ds, props )
 
 		du.process()
+
+		du.post_process()
 		
 	_endloop
 	
@@ -62,32 +64,40 @@ _global transform_camdb_xml <<
 _proc @transform_camdb_xml()
 
 	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
-	_local l_mod_name << l_mod.name
+	_local l_xml_files << rope.new()
+	_local l_svg_files << rope.new()
+	
+	_for i_file _over l_mod.resource_files("xml").fast_elements()
+	_loop
+		( name, ext ) << system.split_filename( i_file )
+		_if ext _is _unset 
+		_then _continue
+		_endif
+		_if (l_str << ext.lowercase) = "xml"
+		_then l_xml_files.add(name)
+		_elif l_str = "svg"
+		_then l_svg_files.add(name)
+		_endif		
+	_endloop
 	
 	_local l_files << rope.new()
-	_for i_xml _over l_mod.resource_files(:xml,_true).fast_elements()
+	_for i_key,i_xml _over l_xml_files.fast_keys_and_elements()
 	_loop
-		(bs,xt) << system.split_filename(i_xml)
-		_if xt ~= "xml"
-		_then _continue 
-		_endif
-
 		# Find the matching svg file
-		_local (l_xml_name,l_dir) << system.pathname_components(i_xml)
-		_local (l_svg_name,l_svg_path) << dm_xml_transformer.svg_for_xml(i_xml)
-				
-		# Start XSLT translation
+		_local l_svg_name << _if l_svg_files.includes_by_equality?(i_xml)
+				    _then >> write_string(i_xml,".svg")
+				    _endif
+		_local l_xml << write_string(i_xml,".xml")
 		_local l_ofile << dm_xml_transformer.transform_to_html(
-					  l_mod_name,
-					  l_xml_name,
+					  l_mod.name,
+					  l_xml,
 					  _unset,
 					  "FileSet3.xsl",
-					  _true,
-					  _true,
-					  l_svg_path)
-		
-		# Gather output for the index page
-		l_files.add( {i_xml,l_ofile} )
+					  (i_key _is 1),
+					  (i_key _is 1),
+					  l_svg_name)
+		# Gather for index page
+		l_files.add( {l_xml,l_ofile} )
 		
 	_endloop
 

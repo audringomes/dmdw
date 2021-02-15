@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-15T16:18:27Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-15T20:54:02Z">
 	<datamodel_info>
 		<dm_dataset>electricity</dm_dataset>
 		<dm_external_name>Electricity</dm_external_name>
@@ -624,8 +624,8 @@
 				<external_name>Customer Id</external_name>
 				<name>customer_id</name>
 				<used_in_join>
-					<join_field>dd!join268600936</join_field>
 					<join_field>supply_point</join_field>
+					<join_field>dd!join268600936</join_field>
 					<join_field>int!info_flags</join_field>
 					<joins>dd!join268600936</joins>
 					<joins>swif!object_to_x1</joins>
@@ -3955,14 +3955,14 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				<external_name>func_id</external_name>
 				<name>func_id</name>
 				<used_in_join>
-					<join_field>int!info_flags</join_field>
 					<join_field>children</join_field>
-					<join_field>extra_params</join_field>
 					<join_field>function_geometries</join_field>
-					<joins>swif!object_to_x1</joins>
-					<joins>children</joins>
-					<joins>extra_params</joins>
+					<join_field>extra_params</join_field>
+					<join_field>int!info_flags</join_field>
 					<joins>function_geometries</joins>
+					<joins>children</joins>
+					<joins>swif!object_to_x1</joins>
+					<joins>extra_params</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -10209,15 +10209,15 @@ no constraints
 				<external_name>Id</external_name>
 				<name>id</name>
 				<used_in_join>
-					<join_field>busbars</join_field>
 					<join_field>internal_cables</join_field>
 					<join_field>transformers</join_field>
-					<join_field>int!info_flags</join_field>
+					<join_field>busbars</join_field>
 					<join_field>switchs</join_field>
-					<joins>dd!join268600956</joins>
+					<join_field>int!info_flags</join_field>
 					<joins>swif!object_to_x1</joins>
 					<joins>dd!join268601000</joins>
 					<joins>dd!join268600968</joins>
+					<joins>dd!join268600956</joins>
 					<joins>dd!join268600963</joins>
 				</used_in_join>
 				<size>1</size>
@@ -10513,11 +10513,11 @@ no constraints
 				<name>id</name>
 				<used_in_join>
 					<join_field>int!related_urn</join_field>
-					<join_field>int!urns</join_field>
 					<join_field>int!objects</join_field>
-					<joins>swif!info_flag_to_x3</joins>
+					<join_field>int!urns</join_field>
 					<joins>swif!info_flag_to_x2</joins>
 					<joins>swif!info_flag_to_x1</joins>
+					<joins>swif!info_flag_to_x3</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -12198,13 +12198,13 @@ no constraints
 				<help_text>table_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
 			</field>
 		</collection>
-		<collection name="swif!info_flag_to_object2" external_name="swif!info_flag_to_object2" urn="swrefVdataset_collectionVdatasetZelectricityVcollectionZswif-0021info_flag_to_object2" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZswif-0021info_flag_to_object2VfieldZid">
-				<external_name>id</external_name>
-				<name>id</name>
+		<collection name="int!supply_point_customer" external_name="int!supply_point_customer" urn="swrefVdataset_collectionVdatasetZelectricityVcollectionZint-0021supply_point_customer" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZint-0021supply_point_customerVfieldZcustomer_id">
+				<external_name>customer_id</external_name>
+				<name>customer_id</name>
 				<used_in_join>
-					<join_field>int!flag</join_field>
-					<joins>rev!swif!info_flag_to_x2</joins>
+					<join_field>dd!join268600936!rev</join_field>
+					<joins>dd!join268600936!rev</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -12214,33 +12214,36 @@ no constraints
 				<type>physical</type>
 				<stored_unit/>
 				<sub_type>
-					<sw_field_type name="ds_uint64">
+					<sw_field_type name="sys_id64">
 						<phys_type type="ds_uint64"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>customer_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
 			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZswif-0021info_flag_to_object2VfieldZurn">
-				<external_name>urn</external_name>
-				<name>urn</name>
-				<used_in_join/>
-				<size>256</size>
-				<key>True</key>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZint-0021supply_point_customerVfieldZid1">
+				<external_name>id1</external_name>
+				<name>id1</name>
+				<used_in_join>
+					<join_field>dd!join268600933!rev</join_field>
+					<joins>dd!join268600933!rev</joins>
+				</used_in_join>
+				<size>32</size>
+				<key>False</key>
 				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
+				<default_value></default_value>
 				<unset_value>unset</unset_value>
 				<type>physical</type>
 				<stored_unit/>
 				<sub_type>
 					<sw_field_type>
-						<phys_type type="ds_char"/>
+						<phys_type type="ds_charci"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>urn ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </help_text>
+				<help_text>id1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
 			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZswif-0021info_flag_to_object2VfieldZint-0021flag">
-				<external_name>int!flag</external_name>
-				<name>int!flag</name>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZint-0021supply_point_customerVfieldZdd-0021join268600933-0021rev">
+				<external_name>dd!join268600933!rev</external_name>
+				<name>dd!join268600933!rev</name>
 				<used_in_join/>
 				<size/>
 				<key>False</key>
@@ -12251,22 +12254,52 @@ no constraints
 				<sub_type>
 					<join_details type="follow">
 						<result_tables>
-							<table name="swif!info_flag" external_name="Information Flag" dataset="electricity"/>
+							<table name="supply_point" external_name="Supply Point" dataset="electricity"/>
 						</result_tables>
 						<follow heterogeneous="False" simple_result="True">
 							<result_flavour>
 								<result_type>record</result_type>
 								<ordered>Maybe</ordered>
 							</result_flavour>
-							<dd_join name="rev!swif!info_flag_to_x2">
+							<dd_join name="dd!join268600933!rev">
 								<conditions>
-									<condition target_table="swif!info_flag" field1="id" operator="=" field2="id"/>
+									<condition target_table="supply_point" field1="id1" operator="=" field2="id"/>
 								</conditions>
 							</dd_join>
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>int!flag ist ein join Feld Datensatz aus &apos;swif!info_flag&apos; wird ausgegeben </help_text>
+				<help_text>dd!join268600933!rev ist ein join Feld Datensatz aus &apos;supply_point&apos; wird ausgegeben </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZint-0021supply_point_customerVfieldZdd-0021join268600936-0021rev">
+				<external_name>dd!join268600936!rev</external_name>
+				<name>dd!join268600936!rev</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="customer" external_name="Customer" dataset="electricity"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="dd!join268600936!rev">
+								<conditions>
+									<condition target_table="customer" field1="customer_id" operator="=" field2="customer_id"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>dd!join268600936!rev ist ein join Feld Datensatz aus &apos;customer&apos; wird ausgegeben </help_text>
 			</field>
 		</collection>
 		<collection name="sw_gis!drawing_function_param" external_name="sw_gis!drawing_function_param" urn="swrefVdataset_collectionVdatasetZelectricityVcollectionZsw_gis-0021drawing_function_param" category="expanded">
@@ -12452,110 +12485,6 @@ no constraints
 				<help_text>dd!join326450!rev ist ein join Feld Datensatz aus &apos;drawing&apos; wird ausgegeben </help_text>
 			</field>
 		</collection>
-		<collection name="int!supply_point_customer" external_name="int!supply_point_customer" urn="swrefVdataset_collectionVdatasetZelectricityVcollectionZint-0021supply_point_customer" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZint-0021supply_point_customerVfieldZcustomer_id">
-				<external_name>customer_id</external_name>
-				<name>customer_id</name>
-				<used_in_join>
-					<join_field>dd!join268600936!rev</join_field>
-					<joins>dd!join268600936!rev</joins>
-				</used_in_join>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id64">
-						<phys_type type="ds_uint64"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>customer_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZint-0021supply_point_customerVfieldZid1">
-				<external_name>id1</external_name>
-				<name>id1</name>
-				<used_in_join>
-					<join_field>dd!join268600933!rev</join_field>
-					<joins>dd!join268600933!rev</joins>
-				</used_in_join>
-				<size>32</size>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value></default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_charci"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>id1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZint-0021supply_point_customerVfieldZdd-0021join268600933-0021rev">
-				<external_name>dd!join268600933!rev</external_name>
-				<name>dd!join268600933!rev</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="supply_point" external_name="Supply Point" dataset="electricity"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="dd!join268600933!rev">
-								<conditions>
-									<condition target_table="supply_point" field1="id1" operator="=" field2="id"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>dd!join268600933!rev ist ein join Feld Datensatz aus &apos;supply_point&apos; wird ausgegeben </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZint-0021supply_point_customerVfieldZdd-0021join268600936-0021rev">
-				<external_name>dd!join268600936!rev</external_name>
-				<name>dd!join268600936!rev</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="customer" external_name="Customer" dataset="electricity"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="dd!join268600936!rev">
-								<conditions>
-									<condition target_table="customer" field1="customer_id" operator="=" field2="customer_id"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>dd!join268600936!rev ist ein join Feld Datensatz aus &apos;customer&apos; wird ausgegeben </help_text>
-			</field>
-		</collection>
 		<collection name="swif!info_flag_to_object3" external_name="swif!info_flag_to_object3" urn="swrefVdataset_collectionVdatasetZelectricityVcollectionZswif-0021info_flag_to_object3" category="expanded">
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZswif-0021info_flag_to_object3VfieldZid">
 				<external_name>id</external_name>
@@ -12617,6 +12546,77 @@ no constraints
 								<ordered>Maybe</ordered>
 							</result_flavour>
 							<dd_join name="rev!swif!info_flag_to_x3">
+								<conditions>
+									<condition target_table="swif!info_flag" field1="id" operator="=" field2="id"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>int!flag ist ein join Feld Datensatz aus &apos;swif!info_flag&apos; wird ausgegeben </help_text>
+			</field>
+		</collection>
+		<collection name="swif!info_flag_to_object2" external_name="swif!info_flag_to_object2" urn="swrefVdataset_collectionVdatasetZelectricityVcollectionZswif-0021info_flag_to_object2" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZswif-0021info_flag_to_object2VfieldZid">
+				<external_name>id</external_name>
+				<name>id</name>
+				<used_in_join>
+					<join_field>int!flag</join_field>
+					<joins>rev!swif!info_flag_to_x2</joins>
+				</used_in_join>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="ds_uint64">
+						<phys_type type="ds_uint64"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZswif-0021info_flag_to_object2VfieldZurn">
+				<external_name>urn</external_name>
+				<name>urn</name>
+				<used_in_join/>
+				<size>256</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>urn ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZelectricityVcollectionZswif-0021info_flag_to_object2VfieldZint-0021flag">
+				<external_name>int!flag</external_name>
+				<name>int!flag</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="swif!info_flag" external_name="Information Flag" dataset="electricity"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="rev!swif!info_flag_to_x2">
 								<conditions>
 									<condition target_table="swif!info_flag" field1="id" operator="=" field2="id"/>
 								</conditions>

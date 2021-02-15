@@ -6,6 +6,9 @@
 
   <!-- NOTE: This stylesheet is loaded after Common.xsl -->
 
+  <!-- This variable is the title in the top of every page -->
+  <xsl:variable name="maintitle" select="'Datamodel information'"/>
+
   <!-- The following variables contain the Page titles. -->
   <xsl:variable name="diagram_title" select="'Object-relations Diagram'"/>
   <xsl:variable name="toc_title" select="'Table of Contents'"/>

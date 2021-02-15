@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-15T16:18:25Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-15T20:54:01Z">
 	<datamodel_info>
 		<dm_dataset>gis</dm_dataset>
 		<dm_external_name>Gis</dm_external_name>
@@ -595,10 +595,10 @@
 				<external_name>ID</external_name>
 				<name>id</name>
 				<used_in_join>
-					<join_field>walks!int</join_field>
-					<join_field>int!info_flags</join_field>
-					<join_field>walks</join_field>
 					<join_field>seats</join_field>
+					<join_field>walks!int</join_field>
+					<join_field>walks</join_field>
+					<join_field>int!info_flags</join_field>
 					<joins>dd!join407989!rev</joins>
 					<joins>swif!object_to_x1</joins>
 					<joins>dd!join408074!rev</joins>
@@ -1227,10 +1227,10 @@
 				<external_name>Büro ID</external_name>
 				<name>office_id</name>
 				<used_in_join>
+					<join_field>seats</join_field>
+					<join_field>drawings</join_field>
 					<join_field>dd!join356709</join_field>
 					<join_field>int!info_flags</join_field>
-					<join_field>drawings</join_field>
-					<join_field>seats</join_field>
 					<joins>dd!join356709</joins>
 					<joins>swif!object_to_x1</joins>
 					<joins>dd!join408074!rev</joins>
@@ -1609,16 +1609,16 @@
 				<name>min_road_id</name>
 				<used_in_join>
 					<join_field>dd!join408011</join_field>
-					<join_field>walks!int</join_field>
-					<join_field>pub_rests</join_field>
-					<join_field>int!info_flags</join_field>
-					<join_field>min_road_to_int!min_road_r</join_field>
 					<join_field>road_annotations</join_field>
+					<join_field>pub_rests</join_field>
+					<join_field>min_road_to_int!min_road_r</join_field>
 					<join_field>walks</join_field>
+					<join_field>walks!int</join_field>
+					<join_field>int!info_flags</join_field>
 					<joins>dd!join408011</joins>
 					<joins>dd!join407989!rev</joins>
-					<joins>min_road_to_int!min_road_r</joins>
 					<joins>swif!object_to_x1</joins>
+					<joins>min_road_to_int!min_road_r</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -2141,11 +2141,11 @@
 				<external_name>Kreisverkehr ID</external_name>
 				<name>roundabout_id</name>
 				<used_in_join>
-					<join_field>int!info_flags</join_field>
 					<join_field>sponsored_by!int</join_field>
 					<join_field>sponsored_by</join_field>
-					<joins>dd!join408033!rev</joins>
+					<join_field>int!info_flags</join_field>
 					<joins>swif!object_to_x1</joins>
+					<joins>dd!join408033!rev</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -2383,14 +2383,14 @@
 				<external_name>road_works_id</external_name>
 				<name>road_works_id</name>
 				<used_in_join>
-					<join_field>int!info_flags</join_field>
-					<join_field>road_works</join_field>
-					<join_field>road_workss</join_field>
-					<join_field>dd!join352166</join_field>
 					<join_field>dd!join352169</join_field>
-					<joins>dd!join352166</joins>
-					<joins>swif!object_to_x1</joins>
+					<join_field>road_workss</join_field>
+					<join_field>road_works</join_field>
+					<join_field>dd!join352166</join_field>
+					<join_field>int!info_flags</join_field>
 					<joins>dd!join352169</joins>
+					<joins>swif!object_to_x1</joins>
+					<joins>dd!join352166</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -2805,13 +2805,13 @@
 				<external_name>Name</external_name>
 				<name>name</name>
 				<used_in_join>
-					<join_field>amenities</join_field>
-					<join_field>amenities!int</join_field>
-					<join_field>objects_sponsored</join_field>
 					<join_field>objects_sponsored!int</join_field>
+					<join_field>amenities!int</join_field>
+					<join_field>amenities</join_field>
 					<join_field>serviced_play_area</join_field>
-					<joins>dd!join408045!rev</joins>
+					<join_field>objects_sponsored</join_field>
 					<joins>dd!join408062!rev</joins>
+					<joins>dd!join408045!rev</joins>
 					<joins>dd!join408029!rev</joins>
 				</used_in_join>
 				<size>32</size>
@@ -2832,13 +2832,13 @@
 				<external_name>Straße</external_name>
 				<name>street</name>
 				<used_in_join>
-					<join_field>amenities</join_field>
-					<join_field>amenities!int</join_field>
-					<join_field>objects_sponsored</join_field>
 					<join_field>objects_sponsored!int</join_field>
+					<join_field>amenities!int</join_field>
+					<join_field>amenities</join_field>
 					<join_field>serviced_play_area</join_field>
-					<joins>dd!join408045!rev</joins>
+					<join_field>objects_sponsored</join_field>
 					<joins>dd!join408062!rev</joins>
+					<joins>dd!join408045!rev</joins>
 					<joins>dd!join408029!rev</joins>
 				</used_in_join>
 				<size>32</size>
@@ -3618,8 +3618,8 @@ manifold</help_text>
 				<external_name>Rundgangs-ID</external_name>
 				<name>walk_id</name>
 				<used_in_join>
-					<join_field>route_of_walk!int</join_field>
 					<join_field>route_of_walk</join_field>
+					<join_field>route_of_walk!int</join_field>
 					<join_field>int!info_flags</join_field>
 					<joins>dd!join407986!rev</joins>
 					<joins>swif!object_to_x1</joins>
@@ -4285,13 +4285,13 @@ manifold</help_text>
 				<external_name>Park ID</external_name>
 				<name>park_id</name>
 				<used_in_join>
+					<join_field>seats</join_field>
 					<join_field>int!info_flags</join_field>
 					<join_field>parking</join_field>
 					<join_field>parking!int</join_field>
-					<join_field>seats</join_field>
 					<joins>swif!object_to_x1</joins>
-					<joins>dd!join408058!rev</joins>
 					<joins>dd!join408074!rev</joins>
+					<joins>dd!join408058!rev</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -4583,8 +4583,8 @@ manifold</help_text>
 				<name>pl_of_interest_id</name>
 				<used_in_join>
 					<join_field>dd!join326453</join_field>
-					<join_field>int!info_flags</join_field>
 					<join_field>drawing</join_field>
+					<join_field>int!info_flags</join_field>
 					<joins>dd!join326453</joins>
 					<joins>swif!object_to_x1</joins>
 				</used_in_join>
@@ -4895,26 +4895,26 @@ manifold</help_text>
 				<external_name>Name</external_name>
 				<name>name</name>
 				<used_in_join>
-					<join_field>dd!join407999</join_field>
-					<join_field>dd!join408014</join_field>
-					<join_field>objects_sponsored!int</join_field>
-					<join_field>amenities!int</join_field>
-					<join_field>amenities</join_field>
-					<join_field>pub_brewerys</join_field>
-					<join_field>objects_sponsored</join_field>
-					<join_field>brewerys</join_field>
-					<join_field>beers</join_field>
-					<join_field>car_parks</join_field>
-					<join_field>travel_detailss</join_field>
-					<join_field>min_roads</join_field>
 					<join_field>serviced_play_area</join_field>
+					<join_field>car_parks</join_field>
+					<join_field>amenities!int</join_field>
+					<join_field>dd!join408014</join_field>
+					<join_field>min_roads</join_field>
+					<join_field>amenities</join_field>
+					<join_field>beers</join_field>
+					<join_field>dd!join407999</join_field>
+					<join_field>pub_brewerys</join_field>
+					<join_field>brewerys</join_field>
+					<join_field>objects_sponsored!int</join_field>
+					<join_field>travel_detailss</join_field>
+					<join_field>objects_sponsored</join_field>
 					<joins>dd!join352144</joins>
-					<joins>dd!join408014</joins>
 					<joins>dd!join407999</joins>
-					<joins>dd!join408088</joins>
 					<joins>dd!join408062!rev</joins>
-					<joins>dd!join408029!rev</joins>
 					<joins>dd!join408045!rev</joins>
+					<joins>dd!join408088</joins>
+					<joins>dd!join408014</joins>
+					<joins>dd!join408029!rev</joins>
 				</used_in_join>
 				<size>32</size>
 				<key>True</key>
@@ -4934,26 +4934,26 @@ manifold</help_text>
 				<external_name>Straße</external_name>
 				<name>street</name>
 				<used_in_join>
-					<join_field>dd!join407999</join_field>
-					<join_field>dd!join408014</join_field>
-					<join_field>objects_sponsored!int</join_field>
-					<join_field>amenities!int</join_field>
-					<join_field>amenities</join_field>
-					<join_field>pub_brewerys</join_field>
-					<join_field>objects_sponsored</join_field>
-					<join_field>brewerys</join_field>
-					<join_field>beers</join_field>
-					<join_field>car_parks</join_field>
-					<join_field>travel_detailss</join_field>
-					<join_field>min_roads</join_field>
 					<join_field>serviced_play_area</join_field>
+					<join_field>car_parks</join_field>
+					<join_field>amenities!int</join_field>
+					<join_field>dd!join408014</join_field>
+					<join_field>min_roads</join_field>
+					<join_field>amenities</join_field>
+					<join_field>beers</join_field>
+					<join_field>dd!join407999</join_field>
+					<join_field>pub_brewerys</join_field>
+					<join_field>brewerys</join_field>
+					<join_field>objects_sponsored!int</join_field>
+					<join_field>travel_detailss</join_field>
+					<join_field>objects_sponsored</join_field>
 					<joins>dd!join352144</joins>
-					<joins>dd!join408014</joins>
 					<joins>dd!join407999</joins>
-					<joins>dd!join408088</joins>
 					<joins>dd!join408062!rev</joins>
-					<joins>dd!join408029!rev</joins>
 					<joins>dd!join408045!rev</joins>
+					<joins>dd!join408088</joins>
+					<joins>dd!join408014</joins>
+					<joins>dd!join408029!rev</joins>
 				</used_in_join>
 				<size>32</size>
 				<key>True</key>
@@ -5891,14 +5891,14 @@ manifold</help_text>
 				<external_name>Freizeitbereichs-ID</external_name>
 				<name>play_area_id</name>
 				<used_in_join>
-					<join_field>int!info_flags</join_field>
 					<join_field>sponsored_by!int</join_field>
-					<join_field>parking!int</join_field>
 					<join_field>sponsored_by</join_field>
 					<join_field>parking</join_field>
-					<joins>dd!join408058!rev</joins>
-					<joins>dd!join408033!rev</joins>
+					<join_field>int!info_flags</join_field>
+					<join_field>parking!int</join_field>
 					<joins>swif!object_to_x1</joins>
+					<joins>dd!join408033!rev</joins>
+					<joins>dd!join408058!rev</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -8624,14 +8624,14 @@ one of: yes, no
 				<external_name>ID</external_name>
 				<name>id</name>
 				<used_in_join>
-					<join_field>pub_rests</join_field>
-					<join_field>int!info_flags</join_field>
-					<join_field>dd!join408122</join_field>
-					<join_field>brewery</join_field>
 					<join_field>dd!join408002</join_field>
-					<joins>dd!join408122</joins>
-					<joins>swif!object_to_x1</joins>
+					<join_field>brewery</join_field>
+					<join_field>pub_rests</join_field>
+					<join_field>dd!join408122</join_field>
+					<join_field>int!info_flags</join_field>
 					<joins>dd!join408002</joins>
+					<joins>swif!object_to_x1</joins>
+					<joins>dd!join408122</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -8973,12 +8973,12 @@ one of: yes, no
 				<external_name>Name</external_name>
 				<name>name</name>
 				<used_in_join>
-					<join_field>beers</join_field>
 					<join_field>pub_brewerys</join_field>
-					<join_field>pub_rests</join_field>
 					<join_field>dd!join408119</join_field>
-					<joins>dd!join408119</joins>
+					<join_field>pub_rests</join_field>
+					<join_field>beers</join_field>
 					<joins>dd!join408103</joins>
+					<joins>dd!join408119</joins>
 				</used_in_join>
 				<size>32</size>
 				<key>True</key>
@@ -9270,12 +9270,12 @@ one of: yes, no
 				<external_name>Zeichnungsnummer</external_name>
 				<name>name</name>
 				<used_in_join>
-					<join_field>dd!join356712</join_field>
-					<join_field>dd!join326450</join_field>
-					<join_field>pl_of_interests</join_field>
 					<join_field>office</join_field>
-					<joins>dd!join356712</joins>
+					<join_field>pl_of_interests</join_field>
+					<join_field>dd!join326450</join_field>
+					<join_field>dd!join356712</join_field>
 					<joins>dd!join326450</joins>
+					<joins>dd!join356712</joins>
 				</used_in_join>
 				<size>32</size>
 				<key>True</key>
@@ -9715,14 +9715,14 @@ one of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometr
 				<external_name>func_id</external_name>
 				<name>func_id</name>
 				<used_in_join>
-					<join_field>int!info_flags</join_field>
 					<join_field>children</join_field>
-					<join_field>extra_params</join_field>
 					<join_field>function_geometries</join_field>
-					<joins>swif!object_to_x1</joins>
-					<joins>children</joins>
-					<joins>extra_params</joins>
+					<join_field>extra_params</join_field>
+					<join_field>int!info_flags</join_field>
 					<joins>function_geometries</joins>
+					<joins>children</joins>
+					<joins>swif!object_to_x1</joins>
+					<joins>extra_params</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -16485,11 +16485,11 @@ no constraints
 				<name>id</name>
 				<used_in_join>
 					<join_field>int!related_urn</join_field>
-					<join_field>int!urns</join_field>
 					<join_field>int!objects</join_field>
-					<joins>swif!info_flag_to_x3</joins>
+					<join_field>int!urns</join_field>
 					<joins>swif!info_flag_to_x2</joins>
 					<joins>swif!info_flag_to_x1</joins>
+					<joins>swif!info_flag_to_x3</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -17784,6 +17784,227 @@ no constraints
 				<help_text>dd!join352169!rev ist ein join Feld Datensatz aus &apos;road_works&apos; wird ausgegeben </help_text>
 			</field>
 		</collection>
+		<collection name="int!hetero244956" external_name="int!hetero244956" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021hetero244956" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZk-0021id_1">
+				<external_name>k!id_1</external_name>
+				<name>k!id_1</name>
+				<used_in_join/>
+				<size>32</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char16canon"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>k!id_1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZk-0021id_2">
+				<external_name>k!id_2</external_name>
+				<name>k!id_2</name>
+				<used_in_join/>
+				<size>32</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char16canon"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>k!id_2 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZint-0021child_tid">
+				<external_name>int!child_tid</external_name>
+				<name>int!child_tid</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>int!child_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZn-0021id_1">
+				<external_name>n!id_1</external_name>
+				<name>n!id_1</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>0</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>n!id_1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+	Standardwert: 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZint-0021parent_tid">
+				<external_name>int!parent_tid</external_name>
+				<name>int!parent_tid</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>0</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>int!parent_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+	Standardwert: 0 </help_text>
+			</field>
+		</collection>
+		<collection name="swif!info_flag_to_object2" external_name="swif!info_flag_to_object2" urn="swrefVdataset_collectionVdatasetZgisVcollectionZswif-0021info_flag_to_object2" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object2VfieldZid">
+				<external_name>id</external_name>
+				<name>id</name>
+				<used_in_join>
+					<join_field>int!flag</join_field>
+					<joins>rev!swif!info_flag_to_x2</joins>
+				</used_in_join>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="ds_uint">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object2VfieldZurn">
+				<external_name>urn</external_name>
+				<name>urn</name>
+				<used_in_join/>
+				<size>256</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>urn ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object2VfieldZint-0021flag">
+				<external_name>int!flag</external_name>
+				<name>int!flag</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="swif!info_flag" external_name="Information Flag" dataset="gis"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="rev!swif!info_flag_to_x2">
+								<conditions>
+									<condition target_table="swif!info_flag" field1="id" operator="=" field2="id"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>int!flag ist ein join Feld Datensatz aus &apos;swif!info_flag&apos; wird ausgegeben </help_text>
+			</field>
+		</collection>
+		<collection name="swif!info_flag_to_object1" external_name="swif!info_flag_to_object1" urn="swrefVdataset_collectionVdatasetZgisVcollectionZswif-0021info_flag_to_object1" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object1VfieldZid">
+				<external_name>id</external_name>
+				<name>id</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="ds_uint">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object1VfieldZobject_id">
+				<external_name>object_id</external_name>
+				<name>object_id</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="ds_uint">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>object_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object1VfieldZtable_id">
+				<external_name>table_id</external_name>
+				<name>table_id</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="ds_uint">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>table_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+		</collection>
 		<collection name="int!office_drawing" external_name="int!office_drawing" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021office_drawing" category="expanded">
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021office_drawingVfieldZname">
 				<external_name>name</external_name>
@@ -17887,6 +18108,77 @@ no constraints
 					</join_details>
 				</sub_type>
 				<help_text>dd!join356712!rev ist ein join Feld Datensatz aus &apos;drawing&apos; wird ausgegeben </help_text>
+			</field>
+		</collection>
+		<collection name="swif!info_flag_to_object3" external_name="swif!info_flag_to_object3" urn="swrefVdataset_collectionVdatasetZgisVcollectionZswif-0021info_flag_to_object3" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object3VfieldZid">
+				<external_name>id</external_name>
+				<name>id</name>
+				<used_in_join>
+					<join_field>int!flag</join_field>
+					<joins>rev!swif!info_flag_to_x3</joins>
+				</used_in_join>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="ds_uint">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object3VfieldZurn">
+				<external_name>urn</external_name>
+				<name>urn</name>
+				<used_in_join/>
+				<size>256</size>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value></default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>urn ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object3VfieldZint-0021flag">
+				<external_name>int!flag</external_name>
+				<name>int!flag</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="swif!info_flag" external_name="Information Flag" dataset="gis"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="rev!swif!info_flag_to_x3">
+								<conditions>
+									<condition target_table="swif!info_flag" field1="id" operator="=" field2="id"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>int!flag ist ein join Feld Datensatz aus &apos;swif!info_flag&apos; wird ausgegeben </help_text>
 			</field>
 		</collection>
 		<collection name="sw_gis!drawing_function_param" external_name="sw_gis!drawing_function_param" urn="swrefVdataset_collectionVdatasetZgisVcollectionZsw_gis-0021drawing_function_param" category="expanded">
@@ -17999,516 +18291,6 @@ no constraints
 					</join_details>
 				</sub_type>
 				<help_text>value ist ein join Feld Text wird ausgegeben </help_text>
-			</field>
-		</collection>
-		<collection name="int!hetero244932" external_name="int!hetero244932" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021hetero244932" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZk-0021id_1">
-				<external_name>k!id_1</external_name>
-				<name>k!id_1</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>k!id_1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZint-0021child_tid">
-				<external_name>int!child_tid</external_name>
-				<name>int!child_tid</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>int!child_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZn-0021id_1">
-				<external_name>n!id_1</external_name>
-				<name>n!id_1</name>
-				<used_in_join/>
-				<size>32</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char16canon"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>n!id_1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZn-0021id_2">
-				<external_name>n!id_2</external_name>
-				<name>n!id_2</name>
-				<used_in_join/>
-				<size>32</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char16canon"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>n!id_2 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZint-0021parent_tid">
-				<external_name>int!parent_tid</external_name>
-				<name>int!parent_tid</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>int!parent_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-		</collection>
-		<collection name="swif!info_flag_to_object3" external_name="swif!info_flag_to_object3" urn="swrefVdataset_collectionVdatasetZgisVcollectionZswif-0021info_flag_to_object3" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object3VfieldZid">
-				<external_name>id</external_name>
-				<name>id</name>
-				<used_in_join>
-					<join_field>int!flag</join_field>
-					<joins>rev!swif!info_flag_to_x3</joins>
-				</used_in_join>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="ds_uint">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object3VfieldZurn">
-				<external_name>urn</external_name>
-				<name>urn</name>
-				<used_in_join/>
-				<size>256</size>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value></default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>urn ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object3VfieldZint-0021flag">
-				<external_name>int!flag</external_name>
-				<name>int!flag</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="swif!info_flag" external_name="Information Flag" dataset="gis"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="rev!swif!info_flag_to_x3">
-								<conditions>
-									<condition target_table="swif!info_flag" field1="id" operator="=" field2="id"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>int!flag ist ein join Feld Datensatz aus &apos;swif!info_flag&apos; wird ausgegeben </help_text>
-			</field>
-		</collection>
-		<collection name="swif!info_flag_to_object2" external_name="swif!info_flag_to_object2" urn="swrefVdataset_collectionVdatasetZgisVcollectionZswif-0021info_flag_to_object2" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object2VfieldZid">
-				<external_name>id</external_name>
-				<name>id</name>
-				<used_in_join>
-					<join_field>int!flag</join_field>
-					<joins>rev!swif!info_flag_to_x2</joins>
-				</used_in_join>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="ds_uint">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object2VfieldZurn">
-				<external_name>urn</external_name>
-				<name>urn</name>
-				<used_in_join/>
-				<size>256</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>urn ist eine dd description!basic_fieldZeichenfolge-Feldgröße 256 </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object2VfieldZint-0021flag">
-				<external_name>int!flag</external_name>
-				<name>int!flag</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="swif!info_flag" external_name="Information Flag" dataset="gis"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="rev!swif!info_flag_to_x2">
-								<conditions>
-									<condition target_table="swif!info_flag" field1="id" operator="=" field2="id"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>int!flag ist ein join Feld Datensatz aus &apos;swif!info_flag&apos; wird ausgegeben </help_text>
-			</field>
-		</collection>
-		<collection name="int!min_road_pub_rest" external_name="int!min_road_pub_rest" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021min_road_pub_rest" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZname">
-				<external_name>name</external_name>
-				<name>name</name>
-				<used_in_join>
-					<join_field>dd!join408014!rev</join_field>
-					<joins>dd!join408014!rev</joins>
-				</used_in_join>
-				<size>32</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char16canon"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZstreet">
-				<external_name>street</external_name>
-				<name>street</name>
-				<used_in_join>
-					<join_field>dd!join408014!rev</join_field>
-					<joins>dd!join408014!rev</joins>
-				</used_in_join>
-				<size>32</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char16canon"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>street ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZmin_road_id1">
-				<external_name>min_road_id1</external_name>
-				<name>min_road_id1</name>
-				<used_in_join>
-					<join_field>dd!join408011!rev</join_field>
-					<joins>dd!join408011!rev</joins>
-				</used_in_join>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>min_road_id1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZdd-0021join408011-0021rev">
-				<external_name>dd!join408011!rev</external_name>
-				<name>dd!join408011!rev</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="min_road" external_name="Straße" dataset="gis"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="dd!join408011!rev">
-								<conditions>
-									<condition target_table="min_road" field1="min_road_id1" operator="=" field2="min_road_id"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>dd!join408011!rev ist ein join Feld Datensatz aus &apos;min_road&apos; wird ausgegeben </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZdd-0021join408014-0021rev">
-				<external_name>dd!join408014!rev</external_name>
-				<name>dd!join408014!rev</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="pub_rest" external_name="Gaststätte" dataset="gis"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="dd!join408014!rev">
-								<conditions>
-									<condition target_table="pub_rest" field1="name" operator="=" field2="name"/>
-									<condition target_table="pub_rest" field1="street" operator="=" field2="street"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>dd!join408014!rev ist ein join Feld Datensatz aus &apos;pub_rest&apos; wird ausgegeben </help_text>
-			</field>
-		</collection>
-		<collection name="swif!info_flag_to_object1" external_name="swif!info_flag_to_object1" urn="swrefVdataset_collectionVdatasetZgisVcollectionZswif-0021info_flag_to_object1" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object1VfieldZid">
-				<external_name>id</external_name>
-				<name>id</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="ds_uint">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object1VfieldZobject_id">
-				<external_name>object_id</external_name>
-				<name>object_id</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="ds_uint">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>object_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZswif-0021info_flag_to_object1VfieldZtable_id">
-				<external_name>table_id</external_name>
-				<name>table_id</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="ds_uint">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>table_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-		</collection>
-		<collection name="int!hetero244956" external_name="int!hetero244956" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021hetero244956" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZk-0021id_1">
-				<external_name>k!id_1</external_name>
-				<name>k!id_1</name>
-				<used_in_join/>
-				<size>32</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char16canon"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>k!id_1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZk-0021id_2">
-				<external_name>k!id_2</external_name>
-				<name>k!id_2</name>
-				<used_in_join/>
-				<size>32</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char16canon"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>k!id_2 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZint-0021child_tid">
-				<external_name>int!child_tid</external_name>
-				<name>int!child_tid</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>int!child_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZn-0021id_1">
-				<external_name>n!id_1</external_name>
-				<name>n!id_1</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>0</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>n!id_1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244956VfieldZint-0021parent_tid">
-				<external_name>int!parent_tid</external_name>
-				<name>int!parent_tid</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>0</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>int!parent_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
 			</field>
 		</collection>
 		<collection name="int!pub_rest_beer" external_name="int!pub_rest_beer" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021pub_rest_beer" category="expanded">
@@ -18656,187 +18438,6 @@ no constraints
 				<help_text>dd!join408002!rev ist ein join Feld Datensatz aus &apos;beer&apos; wird ausgegeben </help_text>
 			</field>
 		</collection>
-		<collection name="int!min_road_road_annotati" external_name="int!min_road_road_annotati" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021min_road_road_annotati" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_road_annotatiVfieldZrwo_id">
-				<external_name>rwo_id</external_name>
-				<name>rwo_id</name>
-				<used_in_join>
-					<join_field>int!min_road_r_to_road_annotati</join_field>
-					<joins>int!min_road_r_to_road_annotati</joins>
-				</used_in_join>
-				<size>3</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="gis_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_road_annotatiVfieldZmin_road_id1">
-				<external_name>min_road_id1</external_name>
-				<name>min_road_id1</name>
-				<used_in_join>
-					<join_field>int!min_road_r_to_min_road</join_field>
-					<joins>int!min_road_r_to_min_road</joins>
-				</used_in_join>
-				<size>1</size>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>0</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>min_road_id1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_road_annotatiVfieldZint-0021min_road_r_to_min_road">
-				<external_name>int!min_road_r_to_min_road</external_name>
-				<name>int!min_road_r_to_min_road</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="min_road" external_name="Straße" dataset="gis"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="int!min_road_r_to_min_road">
-								<conditions>
-									<condition target_table="min_road" field1="min_road_id1" operator="=" field2="min_road_id"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>int!min_road_r_to_min_road ist ein join Feld Datensatz aus &apos;min_road&apos; wird ausgegeben </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_road_annotatiVfieldZint-0021min_road_r_to_road_annotati">
-				<external_name>int!min_road_r_to_road_annotati</external_name>
-				<name>int!min_road_r_to_road_annotati</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="road_annotation" external_name="Straßenbeschriftung" dataset="gis"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="int!min_road_r_to_road_annotati">
-								<conditions>
-									<condition target_table="road_annotation" field1="rwo_id" operator="=" field2="rwo_id"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>int!min_road_r_to_road_annotati ist ein join Feld Datensatz aus &apos;road_annotation&apos; wird ausgegeben </help_text>
-			</field>
-		</collection>
-		<collection name="int!hetero244855" external_name="int!hetero244855" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021hetero244855" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244855VfieldZk-0021id_1">
-				<external_name>k!id_1</external_name>
-				<name>k!id_1</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>k!id_1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244855VfieldZsequence_number">
-				<external_name>sequence_number</external_name>
-				<name>sequence_number</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="ds_uint">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>sequence_number ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244855VfieldZn-0021id_1">
-				<external_name>n!id_1</external_name>
-				<name>n!id_1</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>0</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>n!id_1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244855VfieldZint-0021child_tid">
-				<external_name>int!child_tid</external_name>
-				<name>int!child_tid</name>
-				<used_in_join/>
-				<size>1</size>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>0</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="sys_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>int!child_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
-			</field>
-		</collection>
 		<collection name="int!brewery_beer" external_name="int!brewery_beer" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021brewery_beer" category="expanded">
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021brewery_beerVfieldZid">
 				<external_name>id</external_name>
@@ -18941,6 +18542,300 @@ no constraints
 				<help_text>dd!join408122!rev ist ein join Feld Datensatz aus &apos;beer&apos; wird ausgegeben </help_text>
 			</field>
 		</collection>
+		<collection name="int!hetero244932" external_name="int!hetero244932" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021hetero244932" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZk-0021id_1">
+				<external_name>k!id_1</external_name>
+				<name>k!id_1</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>k!id_1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZint-0021child_tid">
+				<external_name>int!child_tid</external_name>
+				<name>int!child_tid</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>int!child_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZn-0021id_1">
+				<external_name>n!id_1</external_name>
+				<name>n!id_1</name>
+				<used_in_join/>
+				<size>32</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char16canon"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>n!id_1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZn-0021id_2">
+				<external_name>n!id_2</external_name>
+				<name>n!id_2</name>
+				<used_in_join/>
+				<size>32</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char16canon"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>n!id_2 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244932VfieldZint-0021parent_tid">
+				<external_name>int!parent_tid</external_name>
+				<name>int!parent_tid</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>int!parent_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+		</collection>
+		<collection name="int!hetero244855" external_name="int!hetero244855" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021hetero244855" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244855VfieldZk-0021id_1">
+				<external_name>k!id_1</external_name>
+				<name>k!id_1</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>k!id_1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244855VfieldZsequence_number">
+				<external_name>sequence_number</external_name>
+				<name>sequence_number</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="ds_uint">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>sequence_number ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244855VfieldZn-0021id_1">
+				<external_name>n!id_1</external_name>
+				<name>n!id_1</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>0</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>n!id_1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+	Standardwert: 0 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021hetero244855VfieldZint-0021child_tid">
+				<external_name>int!child_tid</external_name>
+				<name>int!child_tid</name>
+				<used_in_join/>
+				<size>1</size>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>0</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>int!child_tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+	Standardwert: 0 </help_text>
+			</field>
+		</collection>
+		<collection name="int!min_road_pub_rest" external_name="int!min_road_pub_rest" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021min_road_pub_rest" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZname">
+				<external_name>name</external_name>
+				<name>name</name>
+				<used_in_join>
+					<join_field>dd!join408014!rev</join_field>
+					<joins>dd!join408014!rev</joins>
+				</used_in_join>
+				<size>32</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char16canon"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZstreet">
+				<external_name>street</external_name>
+				<name>street</name>
+				<used_in_join>
+					<join_field>dd!join408014!rev</join_field>
+					<joins>dd!join408014!rev</joins>
+				</used_in_join>
+				<size>32</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char16canon"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>street ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZmin_road_id1">
+				<external_name>min_road_id1</external_name>
+				<name>min_road_id1</name>
+				<used_in_join>
+					<join_field>dd!join408011!rev</join_field>
+					<joins>dd!join408011!rev</joins>
+				</used_in_join>
+				<size>1</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>min_road_id1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZdd-0021join408011-0021rev">
+				<external_name>dd!join408011!rev</external_name>
+				<name>dd!join408011!rev</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="min_road" external_name="Straße" dataset="gis"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="dd!join408011!rev">
+								<conditions>
+									<condition target_table="min_road" field1="min_road_id1" operator="=" field2="min_road_id"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>dd!join408011!rev ist ein join Feld Datensatz aus &apos;min_road&apos; wird ausgegeben </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_pub_restVfieldZdd-0021join408014-0021rev">
+				<external_name>dd!join408014!rev</external_name>
+				<name>dd!join408014!rev</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="pub_rest" external_name="Gaststätte" dataset="gis"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="dd!join408014!rev">
+								<conditions>
+									<condition target_table="pub_rest" field1="name" operator="=" field2="name"/>
+									<condition target_table="pub_rest" field1="street" operator="=" field2="street"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>dd!join408014!rev ist ein join Feld Datensatz aus &apos;pub_rest&apos; wird ausgegeben </help_text>
+			</field>
+		</collection>
 		<collection name="int!drawing_pl_of_interes" external_name="int!drawing_pl_of_interes" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021drawing_pl_of_interes" category="expanded">
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021drawing_pl_of_interesVfieldZpl_of_interest_id">
 				<external_name>pl_of_interest_id</external_name>
@@ -19043,6 +18938,111 @@ no constraints
 					</join_details>
 				</sub_type>
 				<help_text>dd!join326453!rev ist ein join Feld Datensatz aus &apos;pl_of_interest&apos; wird ausgegeben </help_text>
+			</field>
+		</collection>
+		<collection name="int!min_road_road_annotati" external_name="int!min_road_road_annotati" urn="swrefVdataset_collectionVdatasetZgisVcollectionZint-0021min_road_road_annotati" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_road_annotatiVfieldZrwo_id">
+				<external_name>rwo_id</external_name>
+				<name>rwo_id</name>
+				<used_in_join>
+					<join_field>int!min_road_r_to_road_annotati</join_field>
+					<joins>int!min_road_r_to_road_annotati</joins>
+				</used_in_join>
+				<size>3</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="gis_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_road_annotatiVfieldZmin_road_id1">
+				<external_name>min_road_id1</external_name>
+				<name>min_road_id1</name>
+				<used_in_join>
+					<join_field>int!min_road_r_to_min_road</join_field>
+					<joins>int!min_road_r_to_min_road</joins>
+				</used_in_join>
+				<size>1</size>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>0</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="sys_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>min_road_id1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
+	Standardwert: 0 </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_road_annotatiVfieldZint-0021min_road_r_to_min_road">
+				<external_name>int!min_road_r_to_min_road</external_name>
+				<name>int!min_road_r_to_min_road</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="min_road" external_name="Straße" dataset="gis"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="int!min_road_r_to_min_road">
+								<conditions>
+									<condition target_table="min_road" field1="min_road_id1" operator="=" field2="min_road_id"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>int!min_road_r_to_min_road ist ein join Feld Datensatz aus &apos;min_road&apos; wird ausgegeben </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZgisVcollectionZint-0021min_road_road_annotatiVfieldZint-0021min_road_r_to_road_annotati">
+				<external_name>int!min_road_r_to_road_annotati</external_name>
+				<name>int!min_road_r_to_road_annotati</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="road_annotation" external_name="Straßenbeschriftung" dataset="gis"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="int!min_road_r_to_road_annotati">
+								<conditions>
+									<condition target_table="road_annotation" field1="rwo_id" operator="=" field2="rwo_id"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>int!min_road_r_to_road_annotati ist ein join Feld Datensatz aus &apos;road_annotation&apos; wird ausgegeben </help_text>
 			</field>
 		</collection>
 	</category>

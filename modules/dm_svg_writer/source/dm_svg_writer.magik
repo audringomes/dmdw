@@ -1,7 +1,7 @@
 #% text_encoding = iso8859_1
 # ************************************************************
 #
-# (c) 2021 Realworld Software Products. All Rights Reserved.
+# BOOGERT-LAB / Realworld Software Products BV 2021
 #
 # ************************************************************
 
@@ -39,38 +39,46 @@ dm_svg_writer.define_slot_access(:ds,:read,:public)
 $
 
 _pragma(classify_level=advanced, topic={dmdw,dm_svg_writer},usage={internal})
-## The actually used properties. Note that the value of :transform will
+##
+## The actually used properties. Note that the value of [:transform] will
 ## set during the process.
+##
 dm_svg_writer.define_slot_access(:properties,:read,:public)
 $
 
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.default_properties
 	## 
-	## 
+	## These are all the properties used. They are passed as
+	## argument. Maybe a dynamic !global! may be better, but it is
+	## what it is.
+	##
 	>> property_list.new_with(
-		   :transform,transform.new(),
-		   :standalone?,_false,
 		   :width,700,
 		   :height,700,
 		   :margin,50,
+		   :transform,transform.new(),
+		   :standalone?,_false,
+		   :background,property_list.new_with(:id,:background,
+						      :class,"background",
+						      :x,-1,
+						      :y,-1),
+		   # svg element properties:
 		   :svg,property_list.new_with(:xmlns,"http://www.w3.org/2000/svg",
 					       :width,700,
 					       :height,700,
 					       :viewBox,"0 0 700 700",
 					       :class,"svg"),
 		   :polyline,property_list.new_with(:class,"polyline"),
-		   :background,property_list.new_with(:id,:background,
-						      :class,"background",
-						      :x,-1,
-						      :y,-1),
 		   :text,property_list.new_with(:|xml:space|,"preserve",
 						:class,"case_object"),
-		   :text_box,property_list.new_with(:class,"textbox"),
-		   :text_xy_correction,property_list.new_with(:x,0,:y,4),
 		   :circle,property_list.new_with(:class,"circle"),
 		   :line,property_list.new_with(:class,"line"),
-		   :a,property_list.new()#_with(:href,"javascript:OpenCollectionPage()")
+		   :a,property_list.new(),
+
+		   # properties of the text_box created
+		   :text_box,property_list.new_with(:class,"textbox"),
+		   :text_xy_correction,property_list.new_with(:x,0,:y,4)
 			 )
 	
 _endmethod
@@ -161,6 +169,8 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 		l_sub.add( _self.style_element() )
 		_self.copy_css_for_output( p_file )
 	_endif
+
+	# Note the order of rendering!
 	
 	l_sub.add( _self.defs_element() )
 

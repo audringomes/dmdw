@@ -1,7 +1,7 @@
 #% text_encoding = iso8859_1
 # ************************************************************
 #
-# (c) 2021 Realworld Software Products. All Rights Reserved.
+# BOOGERT-LAB / Realworld Software Products BV 2021
 #
 # ************************************************************
 
@@ -12,13 +12,27 @@ _method case_relationship.as_svg_polyline( p_properties)
 	## 
 	##
 	
-	>> _self.centreline.as_svg_polyline( p_properties )
+	>> _self.representation_geometry.as_svg_polyline( p_properties )
 _endmethod
 $
 
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method case_relationship.as_diagram_element( p_properties )
 	## 
+	## return <g id=id>
+	##         <title>description</title>
+	##         <polyline></polyline>
+	##        </g>
+	##
+	## or, if _self.a_element() isnt _unset, return the above as
+	## part of an <a> element:
+	##
+	## return <a href="">
+	##         <g id=id>
+	##           <title>description</title>
+	##           <polyline></polyline>
+	##         </g>
+	##        </a>
 	##
 
 	_local l_parent << _self.parent_object_or_table

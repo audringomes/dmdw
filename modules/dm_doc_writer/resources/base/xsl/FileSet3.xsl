@@ -5,21 +5,25 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:dmdw="https://boogert-lab.nl/dmdw">
 
-  <!-- The output html filename passed as extras parameter to saxon -->
+  <!-- The output html filename passed as extras parameter to saxon and us -->
   <xsl:param name="OFileName"/>
+  
   <!-- The name of the svg file with the graphics datamodel passed as parameter to saxon -->
   <xsl:param name="SVGName"/>
   <xsl:param name="SVGPath"/>
   
+  <!-- The name of the Saxon jar used -->  
+  <xsl:param name="JarName"/>
+
+   
   <xsl:output method="html" indent="yes" name="html"/>
 
+  <xsl:variable name="XSLTProcessor" select="concat($JarName,' from Saxonica')"/>
   <xsl:variable name="MasterTemplateVersion" select="'2.1'"/>
 
   <!-- The supported dmdw schema version -->
-  <xsl:variable name="supported_schema_version" select="'2.0'"/>
-  
-  <xsl:variable name="XSLTProcessor" select="'saxon-he-10.2 from Saxonica'"/>
-  
+  <xsl:variable name="supported_schema_version" select="'2.0'"/>  
+ 
   <xsl:include href="Common.xsl"/>
   <xsl:include href="Custom.xsl"/>
   <xsl:include href="ProcessingTemplates.xsl"/>
@@ -42,10 +46,8 @@
   <xsl:variable name="pathtohelp" select="'../help/index.html'"/>
   <!-- Path to help in master (TOC) html file -->  
   <xsl:variable name="pathtohelpMaster" select="'help/index.html'"/>
-
+  <xsl:variable name="aps">&apos;</xsl:variable>
   
-  <xsl:variable name="maintitle" select="'Datamodel information'"/>
-  <!-- To continue defining titles -->
   
   <xsl:variable name="filename1" select="concat($path_prefix,'technical_details.html')"/>
   <xsl:variable name="filename2" select="concat($path_prefix,'collections.html')"/>
@@ -57,7 +59,8 @@
   <xsl:variable name="filename6" select="concat($path_prefix,'soft_joins.html')"/>
   <xsl:variable name="filename7" select="concat($path_prefix,'dm_svg.html')"/>
 
-  <xsl:variable name="aps">&apos;</xsl:variable>
+  <!-- This will remove any space not intended to be in the output -->
+  <xsl:template match="text()"/>
 
   <!-- This is the main template -->
   <xsl:template match="/">

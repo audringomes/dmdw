@@ -1245,16 +1245,14 @@ _method dm_xml_writer.create_svg()
 	## svg image for all exported collections.
 	## 
 
-	_local l_case_soc_name << .properties[:case]
-	_local l_cv 
-	_if l_case_soc_name _is _unset
+	_local l_param << .properties[:case]
+	_local l_cv
+
+	_if l_param _isnt _unset 
 	_then
-		write(" No case database specified for SVG output")
-		_return 
-	_else
-		l_cv << _self.opened_case( l_case_soc_name )
+		l_cv << _self.opened_case( l_param )
 		_if l_cv _is _unset 
-		_then write("Case SOC ",l_case_soc_name," specified, but could not open a dataset")
+		_then write("Case SOC '",l_param,"' specified, but could not open a dataset")
 		      _return 
 		_endif
 	_endif
@@ -1262,10 +1260,10 @@ _method dm_xml_writer.create_svg()
 	_local l_svg_writer_cls << !current_package![:dm_svg_writer]
 	_if l_svg_writer_cls _is _unset  
 	_then
-		write(" case database specified, but dm_svg_writer not available")
+		write("dm_svg_writer is not available for SVG export")
 		_return 
 	_endif
-	
+
 	_local ( l_name, l_dir ) << system.pathname_components( .out_file )
 	_local ( l_base, l_ext ) << system.split_filename( l_name )
 	_local l_file_name << system.pathname_from_components( write_string(l_base,".svg"), l_dir )
@@ -1287,7 +1285,8 @@ $
 _pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.opened_case( soc_name )
 	## 
-	## 
+	## Return the case_ds_view dataset from soc SOC_NAME
+	##
 
 	_local l_ds
 	

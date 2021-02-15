@@ -1,7 +1,7 @@
 #% text_encoding = iso8859_1
 # ************************************************************
 #
-# (c) 2021 Realworld Software Products. All Rights Reserved.
+# BOOGERT-LAB / Realworld Software Products BV 2021
 #
 # ************************************************************
 
@@ -10,7 +10,8 @@ _package sw
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method geometry_mixin.transformed_for_svg( p_properties )
 	## 
-	## Use p_properties[:transform]
+	## Return _self transformed by p_properties[:transform], which
+	## is in world coordinate space
 	##
 	>> _self.transformed( p_properties[:transform] )
 _endmethod
