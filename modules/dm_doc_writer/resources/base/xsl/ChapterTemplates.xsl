@@ -237,7 +237,7 @@
 	      <xsl:if test="$SVGName">
 		<span class="Checkbutton">
 		  <a class="svglink">
-		    <xsl:attribute name="href" select="concat($svg_file_name,'#',@name)"/>
+		    <xsl:attribute name="href" select="concat($SvgPageName,'#',@name)"/>
 		    <img src="../svglink.png"/>
 		    <xsl:text>Show in Diagram</xsl:text>
 		  </a>

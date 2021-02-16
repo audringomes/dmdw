@@ -1,0 +1,218 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Demographics - Collection Proposed Site</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../demographics.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Demographics</span></a></header>
+      <div class="PageTitle float">Proposed Site</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="demographics_dm_svg.html#proposed_site"><img src="../svglink.png">Show in Diagram</a></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="proposed_site">
+            <tr class="TableName">
+               <td colspan="9">
+                  <h3 class="InTable">Proposed Site</h3>
+                  <div class="technical InternalColName">proposed_site</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="9">Category: Not in ACE 'electricity'</td>
+            </tr>
+            <tr>
+               <td colspan="9" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th class="technical">Type</th>
+               <th class="technical">Unit</th>
+               <th class="technical">Sub type</th>
+               <th>Description</th>
+            </tr>
+            <tr id="id" class="Field VisFalse">
+               <td class="name">
+                  <div class="physical">Id</div>
+               </td>
+               <td class="technical">id</td>
+               <td class="technical">1</td>
+               <td class="technical">True</td>
+               <td class="technical">True</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_uint</td>
+               <td>Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+            </tr>
+            <tr id="name" class="Field VisTrue">
+               <td class="name">
+                  <div class="physical">Name</div>
+               </td>
+               <td class="technical">name</td>
+               <td class="technical">32</td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_char16canon</td>
+               <td>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+            </tr>
+            <tr id="rwo_id" class="Field VisFalse">
+               <td class="name">
+                  <div class="physical">rwo_id</div>
+               </td>
+               <td class="technical">rwo_id</td>
+               <td class="technical">3</td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_uint</td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
+            </tr>
+            <tr id="ds!version" class="Field VisFalse">
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               <td class="technical">ds!version</td>
+               <td class="technical">1</td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_vstamp</td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
+            </tr>
+            <tr id="location" class="Field VisTrue">
+               <td class="name">
+                  <div class="geometry">Location</div>
+               </td>
+               <td class="technical">location</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">geometry</td>
+               <td class="technical"></td>
+               <td class="technical">simple_point<span class="priority">1</span></td>
+               <td>
+                  						
+                  					</td>
+            </tr>
+            <tr id="meatball" class="Field VisFalse">
+               <td class="name">
+                  <div class="geometry">meatball</div>
+               </td>
+               <td class="technical">meatball</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">geometry</td>
+               <td class="technical"></td>
+               <td class="technical">simple_point<span class="priority">0</span></td>
+               <td>
+                  						
+                  					</td>
+            </tr>
+            <tr id="zone1" class="Field VisTrue">
+               <td class="name">
+                  <div class="geometry">Travel Time Zone 1</div>
+               </td>
+               <td class="technical">zone1</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">geometry</td>
+               <td class="technical"></td>
+               <td class="technical">area<span class="priority">1</span></td>
+               <td>
+                  						
+                  						Manifold: <span class="name">demographics</span> <span class="technical"><a href="../demographics_pages/demographics_topology_static.html#proposed_site.zone1">Topology»</a></span>
+                  					</td>
+            </tr>
+            <tr id="zone2" class="Field VisTrue">
+               <td class="name">
+                  <div class="geometry">Travel Time Zone 2</div>
+               </td>
+               <td class="technical">zone2</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">geometry</td>
+               <td class="technical"></td>
+               <td class="technical">area<span class="priority">1</span></td>
+               <td>
+                  						
+                  						Manifold: <span class="name">demographics</span> <span class="technical"><a href="../demographics_pages/demographics_topology_static.html#proposed_site.zone2">Topology»</a></span>
+                  					</td>
+            </tr>
+            <tr id="zone3" class="Field VisTrue">
+               <td class="name">
+                  <div class="geometry">Travel Time Zone 3</div>
+               </td>
+               <td class="technical">zone3</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">geometry</td>
+               <td class="technical"></td>
+               <td class="technical">area<span class="priority">1</span></td>
+               <td>
+                  						
+                  						Manifold: <span class="name">demographics</span> <span class="technical"><a href="../demographics_pages/demographics_topology_static.html#proposed_site.zone3">Topology»</a></span>
+                  					</td>
+            </tr>
+            <tr id="zone4" class="Field VisTrue">
+               <td class="name">
+                  <div class="geometry">Travel Time Zone 4</div>
+               </td>
+               <td class="technical">zone4</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">geometry</td>
+               <td class="technical"></td>
+               <td class="technical">area<span class="priority">1</span></td>
+               <td>
+                  						
+                  						Manifold: <span class="name">demographics</span> <span class="technical"><a href="../demographics_pages/demographics_topology_static.html#proposed_site.zone4">Topology»</a></span>
+                  					</td>
+            </tr>
+         </table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 273966380</li>
+            <li>DMDW - Boogert-lab / Realworld Software Products BV 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

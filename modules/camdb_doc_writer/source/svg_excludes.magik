@@ -1,0 +1,14 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# BOOGERT-LAB / Realworld Software Products BV 2021
+#
+# ************************************************************
+
+_package user
+
+_pragma(classify_level=basic, topic={dmdw,camdb_doc_writer})
+_method drawing.exclude_from_svg?
+	>> _true 
+_endmethod
+$

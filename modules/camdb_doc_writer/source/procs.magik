@@ -27,7 +27,7 @@ _proc @export_camdb()
 	_local l_udir << l_mod.resource_list_for(:example_update).an_element()
 	_local l_upath << system.pathname_from_components("update_example.xml",l_udir)
 
-	_for i_dsname _over {:gis,:electricity}.fast_elements()
+	_for i_dsname _over {:gis,:electricity,:demographics}.fast_elements()
 	_loop
 		
 		_local l_file << system.pathname_from_components(write_string(i_dsname,".xml"),l_dir)
@@ -101,7 +101,7 @@ _proc @transform_camdb_xml()
 		
 	_endloop
 
-	_local l_file << dm_xml_transformer.create_index_page(l_mod,l_files)
+	_local l_file << dm_xml_transformer.create_index_page( l_mod, l_files )
 
 	system.do_command(write_string("swdocopen.exe ",l_file))
 

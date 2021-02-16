@@ -141,6 +141,7 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 			    _then >> l_list.an_element()
 			    _else >> :multiple
 			    _endif
+	
 	.properties[:gis_ds_name] << l_ds_name
 	
 	_local ( l_tabs, l_rels, l_heteros ) << _self.case_objects_for_collections( p_collections )
@@ -170,7 +171,7 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 		_self.copy_css_for_output( p_file )
 	_endif
 
-	# Note the order of rendering!
+	# Note the order of rendering
 	
 	l_sub.add( _self.defs_element() )
 
@@ -285,9 +286,12 @@ _method dm_svg_writer.filter_excludes( p_list )
 	## 
 
 	_for i_elem _over p_list.elements()
-	_loop _if i_elem.exclude_from_svg? _is _true 
-	      _then p_list.remove( i_elem )
-	      _endif
+	_loop
+		_if i_elem.exclude_from_svg? _is _true _orif
+		    ((l_rec << i_elem.descriptor.record_exemplar) _isnt _unset _andif
+		     l_rec.exclude_from_svg? _is _true)
+		_then p_list.remove( i_elem )
+		_endif
 	_endloop
 
 _endmethod
@@ -484,8 +488,10 @@ _method dm_svg_writer.defs_element()
 	##
 	
 	_local l_rope << rope.new()
+	
 	l_rope.add(_self.filter_element())
 	l_rope.add(_self.filter_element_highlight())
+	
 	>> sw:simple_xml_thing.new(:defs, l_rope)
 	
 _endmethod

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Demographics Object-relations Diagram</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../demographics.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Demographics</span></a></header>
+      <div class="PageTitle float">Object-relations Diagram</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleCo()" onclick="ToggleCo()" checked="True"><label for="ToggleCo()"><span>Objects</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleCrel()" onclick="ToggleCrel()" checked="True"><label for="ToggleCrel()"><span>Relations</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleCHrel();" onclick="ToggleCHrel();" checked="True"><label for="ToggleCHrel();"><span>Heterogeneous relations</span></label></span></div>
+      <div class="svgwrapper float"><svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewbox="0 0 700 700" class="svg" id="demographics">
+            	
+            <defs>
+               		
+               <filter id="TextBox" filterUnits="objectBoundingBox" x="-0.1" y="-0.1" height="1.2" width="1.2">
+                  			
+                  <feFlood class="feFlood" result="bgnd"></feFlood>
+                  			
+                  <feComposite in="SourceGraphic" in2="bgnd" operator="atop"></feComposite>
+                  		</filter>
+               		
+               <filter id="TextBoxH" filterUnits="objectBoundingBox" x="-0.1" y="-0.1" height="1.2" width="1.2">
+                  			
+                  <feFlood class="feFloodH" result="bgnd"></feFlood>
+                  			
+                  <feComposite in="SourceGraphic" in2="bgnd" operator="atop"></feComposite>
+                  		</filter>
+               	</defs>
+            	
+            <g>
+               		
+               <rect id="background" class="background" x="-1" y="-1" width="700" height="700"></rect>
+               	</g>
+            	
+            <g id="case_hetero_relations">
+               		
+               <title>Case Heterogeneous Relationships</title>
+               	</g>
+            	
+            <g id="case_relationships">
+               		
+               <title>Case Relationships</title>
+               		
+               <g id="area.district">
+                  			
+                  <title>Area &gt; District (1:n)</title>
+                  			
+                  <polyline class="polyline" points="50.0000,306.350 50.0000,93.6500 "></polyline>
+                  		</g>
+               		
+               <g id="sector.piechart">
+                  			
+                  <title>Sector &gt; Pie Chart (0:n)</title>
+                  			
+                  <polyline class="polyline" points="539.995,642.740 132.133,642.740 "></polyline>
+                  		</g>
+               		
+               <g id="district.sector">
+                  			
+                  <title>District &gt; Sector (1:n)</title>
+                  			
+                  <polyline class="polyline" points="50.0000,605.000 50.0000,393.650 "></polyline>
+                  		</g>
+               	</g>
+            	
+            <g id="case_objects">
+               		
+               <title>Case Objects</title>
+               		<a href="demographics_piechart.html">
+                  			
+                  <g transform="translate(650.000,644.910)" class="textbox" id="piechart">
+                     				
+                     <title>Pie Chart
+Dataless rwo attached to demographics sector. Has
+its own draw method that extracts data from parent and 
+draws a piechart.</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Pie Chart</text>
+                     			</g>
+                  		</a>
+               		<a href="demographics_area.html">
+                  			
+                  <g transform="translate(50.0000,54.0000)" class="textbox" id="area">
+                     				
+                     <title>Area
+Demographics Area</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Area</text>
+                     			</g>
+                  		</a>
+               		<a href="demographics_district.html">
+                  			
+                  <g transform="translate(50.0000,354.000)" class="textbox" id="district">
+                     				
+                     <title>District
+Demographics district</title>
+                     				
+                     <text xml:space="preserve" class="case_object">District</text>
+                     			</g>
+                  		</a>
+               		<a href="demographics_proposed_site.html">
+                  			
+                  <g transform="translate(648.235,354.000)" class="textbox" id="proposed_site">
+                     				
+                     <title>Proposed Site
+Proposed site for a shop. Has four travel zone areas.</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Proposed Site</text>
+                     			</g>
+                  		</a>
+               		<a href="demographics_sector.html">
+                  			
+                  <g transform="translate(50.0445,654.000)" class="textbox" id="sector">
+                     				
+                     <title>Sector
+Demographics sector</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Sector</text>
+                     			</g>
+                  		</a>
+               	</g>
+            	
+            <g>
+               		<a href="https://github.com/boogert-lab/dmdw">
+                  			
+                  <text x="695" y="695" text-anchor="end" fill="#ee7700" stroke="#000" stroke-width="0" font-size="12" font-family="sans-serif" xml:space="preserve" font-weight="bold" font-style="normal">DMDW</text>
+                  		</a>
+               	</g>
+            </svg></div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 273966380</li>
+            <li>DMDW - Boogert-lab / Realworld Software Products BV 2021</li>
+            <li><a href="../help/index.html?dmdw_SVGMap.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

@@ -18,7 +18,7 @@
 	<meta name="description" content="DMDW Writer The API for the sw:dm_xml_writer is as shown below: &nbsp; DMDW Transformer The class sw:dm_xml_transformer offers a way to perform the translation from XML to HTML usi" />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="13/02/2021" />
+        <meta name="revised" content="16/02/2021" />
         <meta name="id" content="dmdw_Writer-API" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -340,46 +340,6 @@ function GetSearchPage() {
 
 </span></pre>
 </div><p class="p_Normal">&nbsp;</p>
-<h1 class="p_Heading1"><span class="f_Heading1">DMDW&nbsp;SVG&nbsp;writer</span></h1>
-<p class="p_Normal">The class <span style="font-weight: bold;">sw:dm_svg_writer </span>is for creation of a diagram using the graphics in the appropriate case database (alternative). The <span style="font-weight: bold;">sw:dm_svg_writer</span> must be instantiated. The actual diagram can be created with the method <span style="font-weight: bold;">create_svg_for()</span>. See the proc <span style="font-weight: bold;">dm_create_svg() </span>for an example.</p>
-<p class="p_Normal"><div class="magik">
-<pre>
-<span class="magik-font-lock-keyword-statements"><span class="region">_pragma</span></span><span class="magik-font-lock-pragma"><span class="region">(classify_level=basic, topic={dmdw,dm_svg_writer})</span></span><span class="region">
-</span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## Create a svg image from case database graphics in</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## CASE_VIEW. Fetch only the non internal objects from</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## dataset DS and write the svg file to OUTPUT_FILE</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## The location defaults to xml resource</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## f</span></span><span class="comment"><span class="region">older of this module and the name of the DS.
-</span></span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## We use the default properties as specified in</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## dm_svg_writer.default_properties, except form the option</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## </span></span><span class="magik-font-lock-boolean"><span class="region">:write_style_element?</span></span><span class="doc"><span class="region"> </span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## Note that when you see a black square, it most likely</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">## is missing the CSS style sheet.</span></span><span class="comment"><span class="region">
-</span></span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
-</span></span><span class="magik-font-lock-keyword-variable"><span class="region">_global</span></span><span class="region"> dm_create_svg &lt;&lt;
-</span><span class="magik-font-lock-procedure"><span class="region">_proc</span></span><span class="region"> </span><span class="constant"><span class="region">@dm_create_svg</span></span><span class="region">( ds, case_view, </span><span class="magik-font-lock-keyword-arguments"><span class="region">_optional</span></span><span class="region"> output_file )
-
-        </span><span class="magik-font-lock-keyword-statements"><span class="region">_if</span></span><span class="region"> output_file </span><span class="magik-font-lock-keyword-operators"><span class="region">_is</span></span><span class="region"> </span><span class="constant"><span class="region">_unset</span></span><span class="region"> 
-        </span><span class="magik-font-lock-keyword-statements"><span class="region">_then</span></span><span class="region">
-                l_mod &lt;&lt; sw_module_manager.</span><span class="function-name"><span class="region">module</span></span><span class="region">(</span><span class="magik-font-lock-symbol"><span class="region">:ds_svg_writer</span></span><span class="region">)
-                l_dir &lt;&lt; l_mod.</span><span class="function-name"><span class="region">resource_list_for</span></span><span class="region">(</span><span class="magik-font-lock-symbol"><span class="region">:xm</span></span><span class="region">l).</span><span class="magik-font-lock-procedure"><span class="region">an_element</span></span><span class="region">()
-                output_file &lt;&lt; system.</span><span class="function-name"><span class="region">pathname_from_components</span></span><span class="region">( </span><span class="magik-font-lock-procedure"><span class="region">write_string</span></span><span class="region">(ds.name,</span><span class="string"><span class="region">".svg"</span></span><span class="region">),l_dir)
-        </span><span class="magik-font-lock-keyword-statements"><span class="region">_endif</span></span><span class="region">
-
-        </span><span class="magik-font-lock-keyword-variable"><span class="region">_local</span></span><span class="region"> l_props &lt;&lt; property_list.</span><span class="function-name"><span class="region">new_with</span></span><span class="region">(</span><span class="magik-font-lock-boolean"><span class="region">:write_style_element?</span></span><span class="region">,</span><span class="constant"><span class="region">_true</span></span><span class="region">)
-        </span><span class="magik-font-lock-keyword-variable"><span class="region">_local</span></span><span class="region"> l_writer &lt;&lt; dm_svg_writer.</span><span class="function-name"><span class="region">new</span></span><span class="region">( case_view, l_props )
-        </span><span class="magik-font-lock-keyword-variable"><span class="region">_local</span></span><span class="region"> l_collections &lt;&lt; rope.</span><span class="function-name"><span class="region">new_from_iter</span></span><span class="region">(ds,</span><span class="magik-font-lock-symbol"><span class="region">:|user_tables()|</span></span><span class="region">)
-
-        l_writer.</span><span class="function-name"><span class="region">create_svg_for</span></span><span class="region">( l_collections, output_file )
-        
-        system.</span><span class="function-name"><span class="region">do_command</span></span><span class="region">( </span><span class="magik-font-lock-procedure"><span class="region">write_string</span></span><span class="region">(</span><span class="string"><span class="region">"swdocopen.exe "</span></span><span class="region">, output_file ))
-        
-</span><span class="magik-font-lock-procedure"><span class="region">_endproc</span></span><span class="region">
-$</span></pre>
-</magik></p>
 <p class="p_Normal">&nbsp;</p>
 <h1 class="p_Heading1"><span class="f_Heading1">Procs</span></h1>
 <p class="p_Normal">The following procs are available:</p>
@@ -437,7 +397,49 @@ $
 $
 </pre>
 </div><p class="p_Normal">&nbsp;</p>
+<h1 class="p_Heading1"><span class="f_Heading1">DMDW&nbsp;SVG&nbsp;writer</span></h1>
+<p class="p_Normal">The class <span style="font-weight: bold;">sw:dm_svg_writer </span>is for creation of a diagram using the graphics in the appropriate case database (alternative). The <span style="font-weight: bold;">sw:dm_svg_writer</span> must be instantiated. The actual diagram can be created with the method <span style="font-weight: bold;">create_svg_for()</span>. See the proc <span style="font-weight: bold;">dm_create_svg() </span>for an example.</p>
+<div class="magik">
+    <pre>
+<span class="magik-font-lock-keyword-statements"><span class="region">_pragma</span></span><span class="magik-font-lock-pragma"><span class="region">(classify_level=basic, topic={dmdw,dm_svg_writer})</span></span><span class="region">
+</span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## Create a svg image from case database graphics in</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## CASE_VIEW. Fetch only the non internal objects from</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## dataset DS and write the svg file to OUTPUT_FILE</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## The location defaults to xml resource</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## folder of </span></span><span class="comment"><span class="region">this module and the name of the DS.
+</span></span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## We use the default properties as specified in</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## dm_svg_writer.default_properties, except form the option</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## </span></span><span class="magik-font-lock-boolean"><span class="region">:standalone?</span></span><span class="doc"><span class="region"> </span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## Note that when you see a black square, it most likely</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">## is missing the CSS style sheet.</span></span><span class="comment"><span class="region">
+</span></span><span class="doc"><span class="region">##</span></span><span class="comment"><span class="region">
+</span></span><span class="magik-font-lock-keyword-variable"><span class="region">_global</span></span><span class="region"> dm_create_svg &lt;&lt;
+</span><span class="magik-font-lock-procedure"><span class="region">_proc</span></span><span class="region"> </span><span class="constant"><span class="region">@dm_create_svg</span></span><span class="region">( ds, case_view, </span><span class="magik-font-lock-keyword-arguments"><span class="region">_optional</span></span><span class="region"> output_file )
 
+        </span><span class="magik-font-lock-keyword-statements"><span class="region">_if</span></span><span class="region"> output_file </span><span class="magik-font-lock-keyword-operators"><span class="region">_is</span></span><span class="region"> </span><span class="constant"><span class="region">_unset</span></span><span class="region"> 
+        </span><span class="magik-font-lock-keyword-statements"><span class="region">_then</span></span><span class="region">
+                l_mod &lt;&lt; sw_module_manager.</span><span class="function-name"><span class="region">module</span></span><span class="region">(</span><span class="magik-font-lock-symbol"><span class="region">:ds_svg_writer</span></span><span class="region">)
+                l_dir &lt;&lt; l_mod.</span><span class="function-name"><span class="region">resource_list_for</span></span><span class="region">(</span><span class="magik-font-lock-symbol"><span class="region">:xml</span></span><span class="region">).</span><span class="magik-font-lock-procedure"><span class="region">an_element</span></span><span class="region">()
+                output_file &lt;&lt; system.</span><span class="function-name"><span class="region">pathname_from_components</span></span><span class="region">( </span><span class="magik-font-lock-procedure"><span class="region">write_string</span></span><span class="region">(ds.name,</span><span class="string"><span class="region">".svg"</span></span><span class="region">),l_dir)
+        </span><span class="magik-font-lock-keyword-statements"><span class="region">_endif</span></span><span class="region">
+
+        </span><span class="magik-font-lock-keyword-variable"><span class="region">_local</span></span><span class="region"> l_props &lt;&lt; property_list.</span><span class="function-name"><span class="region">new_with</span></span><span class="region">(</span><span class="magik-font-lock-boolean"><span class="region">:standalone?</span></span><span class="region">,</span><span class="constant"><span class="region">_true</span></span><span class="region">)
+        
+        </span><span class="magik-font-lock-keyword-variable"><span class="region">_local</span></span><span class="region"> l_writer &lt;&lt; dm_svg_writer.</span><span class="function-name"><span class="region">new</span></span><span class="region">( case_view, l_props )
+        </span><span class="magik-font-lock-keyword-variable"><span class="region">_local</span></span><span class="region"> l_collections &lt;&lt; rope.</span><span class="function-name"><span class="region">new_from_iter</span></span><span class="region">(ds,</span><span class="magik-font-lock-symbol"><span class="region">:|user_tables()|</span></span><span class="region">)
+
+        l_writer.</span><span class="function-name"><span class="region">create_svg_for</span></span><span class="region">( l_collections, output_file )
+        
+        system.</span><span class="function-name"><span class="region">do_command</span></span><span class="region">( </span><span class="magik-font-lock-procedure"><span class="region">write_string</span></span><span class="region">(</span><span class="string"><span class="region">"swdocopen.exe "</span></span><span class="region">, output_file ))
+        
+</span><span class="magik-font-lock-procedure"><span class="region">_endproc</span></span><span class="region">
+$
+</span>
+</pre>
+</div>
         <div class="topicfooter">
   <table style="width: 100%;margin-left: 0;margin-right: auto;">
     <tbody>

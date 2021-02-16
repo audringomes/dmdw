@@ -1,0 +1,122 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Demographics - Topology Rules</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../demographics.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Demographics</span></a></header>
+      <div class="PageTitle float">Topology (static)</div>
+      <div class="ChapterInfo float">
+         <p></p>
+      </div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleExplicitTopologyRules();" onclick="ToggleExplicitTopologyRules();" checked="True"><label for="ToggleExplicitTopologyRules();"><span>Explicit Rules only</span></label></span></div>
+      <div class="container">
+         		
+         <table class="dmTable dmTopology float">
+            <tr class="HeadStyle">
+               <th colspan="3">Manifold <span class="name">[Demographics] Demografie</span></th>
+            </tr>
+            			
+            <tr class="name">
+               <td colspan="3">Area</td>
+            </tr>
+            				
+            <tr id="area.coverage">
+               <td class="geometry field1">Coverage</td>
+               <td>
+                  					
+                  <div class="col2s name area coverage">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Area</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Coverage</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            			
+            <tr class="name">
+               <td colspan="3">District</td>
+            </tr>
+            				
+            <tr id="district.coverage">
+               <td class="geometry field1">Coverage</td>
+               <td>
+                  					
+                  <div class="col2s name district coverage">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">District</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Coverage</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            			
+            <tr class="name">
+               <td colspan="3">Sector</td>
+            </tr>
+            				
+            <tr id="sector.coverage">
+               <td class="geometry field1">Coverage</td>
+               <td>
+                  					
+                  <div class="col2s name sector coverage">
+                     <div class="TopologyHeadStyle">
+                        <div class="TopologyHeadStyle name" colspan="4">Sector</div>
+                     </div>
+                     						
+                     <div class="fld2sStatic geometry RuleTypeexplicit"><span class="field2">Coverage</span><span class="rulesStatic">
+                           							<span class="rule1Static">split_link</span><span class="betweenrules"></span>
+                           							<span class="rule2Static">split_link</span>
+                           						</span></div>
+                     					</div>
+                  				</td>
+            </tr>
+            			
+            		</table>
+         	</div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 273966380</li>
+            <li>DMDW - Boogert-lab / Realworld Software Products BV 2021</li>
+            <li><a href="../help/index.html?dmdw_Static_Topology_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

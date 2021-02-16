@@ -1,0 +1,368 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Demographics - Collection Sector</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../demographics.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Demographics</span></a></header>
+      <div class="PageTitle float">Sector</div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="demographics_dm_svg.html#sector"><img src="../svglink.png">Show in Diagram</a></span></div>
+      <div style="overflow-x:auto">
+         <table class="dmCollection float" id="sector">
+            <tr class="TableName">
+               <td colspan="9">
+                  <h3 class="InTable">Sector</h3>
+                  <div class="technical InternalColName">sector</div>
+               </td>
+            </tr>
+            <tr class="TableCategory">
+               <td colspan="9">Category: Not in ACE 'electricity'</td>
+            </tr>
+            <tr>
+               <td colspan="9" class="description"></td>
+            </tr>
+            <tr class="HeadStyle">
+               <th>Name</th>
+               <th class="technical">Internal name</th>
+               <th class="technical">Size</th>
+               <th class="technical">Key?</th>
+               <th class="technical">Mandatory?</th>
+               <th class="technical">Type</th>
+               <th class="technical">Unit</th>
+               <th class="technical">Sub type</th>
+               <th>Description</th>
+            </tr>
+            <tr id="code" class="Field VisTrue">
+               <td class="name">
+                  <div class="physical">Code</div>
+               </td>
+               <td class="technical">code</td>
+               <td class="technical">32</td>
+               <td class="technical">True</td>
+               <td class="technical">True</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_char16canon</td>
+               <td>Code ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+            </tr>
+            <tr id="district_code" class="Field VisFalse">
+               <td class="name">
+                  <div class="physical">District Code</div>
+               </td>
+               <td class="technical">district_code</td>
+               <td class="technical">32</td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_char16canon</td>
+               <td></td>
+            </tr>
+            <tr id="sales_0" class="Field VisTrue">
+               <td class="name">
+                  <div class="physical">Unit Sales (0-9)</div>
+               </td>
+               <td class="technical">sales_0</td>
+               <td class="technical">1</td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_uint</td>
+               <td>Unit Sales (0-9) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
+                  0 </td>
+            </tr>
+            <tr id="sales_10" class="Field VisTrue">
+               <td class="name">
+                  <div class="physical">Unit Sales (10-19)</div>
+               </td>
+               <td class="technical">sales_10</td>
+               <td class="technical">1</td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_uint</td>
+               <td>Unit Sales (10-19) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
+                  0 </td>
+            </tr>
+            <tr id="sales_20" class="Field VisTrue">
+               <td class="name">
+                  <div class="physical">Unit Sales (20-29)</div>
+               </td>
+               <td class="technical">sales_20</td>
+               <td class="technical">1</td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_uint</td>
+               <td>Unit Sales (20-29) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
+                  0 </td>
+            </tr>
+            <tr id="sales_30" class="Field VisTrue">
+               <td class="name">
+                  <div class="physical">Unit Sales (30-39)</div>
+               </td>
+               <td class="technical">sales_30</td>
+               <td class="technical">1</td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_uint</td>
+               <td>Unit Sales (30-39) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
+                  0 </td>
+            </tr>
+            <tr id="sales_40" class="Field VisTrue">
+               <td class="name">
+                  <div class="physical">Unit Sales (40-49)</div>
+               </td>
+               <td class="technical">sales_40</td>
+               <td class="technical">1</td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_uint</td>
+               <td>Unit Sales (40-49) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
+                  0 </td>
+            </tr>
+            <tr id="average_sales" class="Field VisTrue">
+               <td class="name">
+                  <div class="physical">Average Sales</div>
+               </td>
+               <td class="technical">average_sales</td>
+               <td class="technical">1</td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_uint</td>
+               <td>Average Sales ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+            </tr>
+            <tr id="rwo_id" class="Field VisFalse">
+               <td class="name">
+                  <div class="physical">rwo_id</div>
+               </td>
+               <td class="technical">rwo_id</td>
+               <td class="technical">3</td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_uint</td>
+               <td><span class="GlobalDescription">A unique foreign key for joins to geometries</span></td>
+            </tr>
+            <tr id="ds!version" class="Field VisFalse">
+               <td class="name">
+                  <div class="physical">ds!version</div>
+               </td>
+               <td class="technical">ds!version</td>
+               <td class="technical">1</td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">physical</td>
+               <td class="technical"></td>
+               <td class="technical">ds_vstamp</td>
+               <td><span class="GlobalDescription">ds!version is an internal value used in conflict resolution.</span></td>
+            </tr>
+            <tr id="dd!join273966227" class="Field VisFalse">
+               <td class="name">
+                  <div class="join">dd!join273966227</div>
+               </td>
+               <td class="technical">dd!join273966227</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">join</td>
+               <td class="technical"></td>
+               <td class="technical">follow</td>
+               <td>
+                  <div>dd!join273966227 ist ein join Feld Objekttabelle mit Datensätzen aus 'int!sector_piechart'
+                     wird ausgegeben </div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join273966227.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="demographics_int!sector_piechart.html">int!sector_piechart</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="dd!join273966227.details">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">records</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">Maybe</span></li>
+                        							
+                        <li class="joinDetailsListItem">Actual join: <span class="dd_join results dd_join_as_field">dd!join273966227</span></li>
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="demographics_int!sector_piechart.html">int!sector_piechart</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">code</span>=<span class="name">code1</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+            </tr>
+            <tr id="district" class="Field VisTrue">
+               <td class="name">
+                  <div class="join">District</div>
+               </td>
+               <td class="technical">district</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">join</td>
+               <td class="technical"></td>
+               <td class="technical">follow</td>
+               <td>
+                  <div>District ist ein join Feld Datensatz aus 'district' wird ausgegeben </div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('district.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="demographics_district.html">District</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="district.details">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">True</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">record</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">Maybe</span></li>
+                        							
+                        <li class="joinDetailsListItem">Actual join: <span class="dd_join results">dd!join273966208!rev</span></li>
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="demographics_district.html">district</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">district_code</span>=<span class="name">code</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+            </tr>
+            <tr id="piecharts" class="Field VisTrue">
+               <td class="name">
+                  <div class="join">Piecharts</div>
+               </td>
+               <td class="technical">piecharts</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">join</td>
+               <td class="technical"></td>
+               <td class="technical">db_set_join</td>
+               <td>
+                  <div>Piecharts ist ein join Feld Satz von Datensätzen aus 'piechart' wird ausgegeben </div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('piecharts.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="demographics_piechart.html">Pie Chart</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="piecharts.details">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">records</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Actual join: <span class="dd_join results dd_join_as_field">dd!join273966227</span></li>
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="demographics_int!sector_piechart.html">int!sector_piechart</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">code</span>=<span class="name">code1</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+            </tr>
+            <tr id="annotation" class="Field VisTrue">
+               <td class="name">
+                  <div class="geometry">Annotation</div>
+               </td>
+               <td class="technical">annotation</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">geometry</td>
+               <td class="technical"></td>
+               <td class="technical">text<span class="priority">1</span></td>
+               <td>
+                  						
+                  					</td>
+            </tr>
+            <tr id="coverage" class="Field VisTrue">
+               <td class="name">
+                  <div class="geometry">Coverage</div>
+               </td>
+               <td class="technical">coverage</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">True</td>
+               <td class="technical">geometry</td>
+               <td class="technical"></td>
+               <td class="technical">area<span class="priority">1</span></td>
+               <td>
+                  						
+                  						Manifold: <span class="name">demographics</span> <span class="technical"><a href="../demographics_pages/demographics_topology_static.html#sector.coverage">Topology»</a></span>
+                  					</td>
+            </tr>
+            <tr id="meatball" class="Field VisFalse">
+               <td class="name">
+                  <div class="geometry">meatball</div>
+               </td>
+               <td class="technical">meatball</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">geometry</td>
+               <td class="technical"></td>
+               <td class="technical">simple_point<span class="priority">0</span></td>
+               <td>
+                  						
+                  					</td>
+            </tr>
+         </table>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 273966380</li>
+            <li>DMDW - Boogert-lab / Realworld Software Products BV 2021</li>
+            <li><a href="../help/index.html?dmdw_Collection_Page.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

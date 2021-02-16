@@ -1,0 +1,189 @@
+<!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Demographics - List of Collections</title>
+      <link rel="Stylesheet" href="../layout.css">
+      <link rel="Stylesheet" href="../html.css">
+      <link rel="stylesheet" href="../dm.css">
+      <link rel="stylesheet" href="../custom.css">
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
+	function ToggleTechtop()
+	{ToggleSub('techtop');}
+
+	function ToggleDMHistory()
+	{$(".dmHistory").toggle();}
+	
+	function ToggleDetail()
+	{$(".technical").toggle();}
+
+	function ToggleInVisField()
+	{$(".VisFalse").toggle();}
+	
+	function ToggleMapped()
+	{$(".MappedTo").toggle();}
+	
+	function ToggleTopology()
+	{$(".TopologyList").toggle();}
+
+	function ToggleExplicitTopologyRules()
+	{$(".RuleTypeexplicit").toggle();
+	$(".RuleTypedefault").toggle();}
+	
+      </script></head>
+   <body onload="HighlightHash()">
+      <header class="float"><a href="../demographics.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Demographics</span></a></header>
+      <div class="PageTitle float">Collections by Category</div>
+      <div class="ChapterInfo float">
+         <p>The descriptions of the collections are supplied seperately. Their origin is not the
+            datamodel. The collections are grouped as in the ACE used. All collections that are
+            not referenced in the ACE used are grouped in the 'not in ACE 'electricity'</p>
+      </div>
+      <div class="overview">
+         <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Details</span></label></span></div>
+         <div style="overflow-x:auto">
+            <table class="dmTable float">
+               <tr class="HeadStyle Category">
+                  <th class="Category name" colspan="3">Road Network</th>
+               </tr>
+               <tr class="HeadStyle">
+                  <th class="Header">Name</th>
+                  <th class="Header technical">Internal name</th>
+                  <th class="Header">Description</th>
+               </tr>
+               <tr class="HeadStyle Category">
+                  <th class="Category name" colspan="3">Rail Network</th>
+               </tr>
+               <tr class="HeadStyle">
+                  <th class="Header">Name</th>
+                  <th class="Header technical">Internal name</th>
+                  <th class="Header">Description</th>
+               </tr>
+               <tr class="HeadStyle Category">
+                  <th class="Category name" colspan="3">Cadastral Network</th>
+               </tr>
+               <tr class="HeadStyle">
+                  <th class="Header">Name</th>
+                  <th class="Header technical">Internal name</th>
+                  <th class="Header">Description</th>
+               </tr>
+               <tr class="HeadStyle Category">
+                  <th class="Category name" colspan="3">Non Topological Objects</th>
+               </tr>
+               <tr class="HeadStyle">
+                  <th class="Header">Name</th>
+                  <th class="Header technical">Internal name</th>
+                  <th class="Header">Description</th>
+               </tr>
+               <tr class="HeadStyle Category">
+                  <th class="Category name" colspan="3">Not in ACE 'electricity'</th>
+               </tr>
+               <tr class="HeadStyle">
+                  <th class="Header">Name</th>
+                  <th class="Header technical">Internal name</th>
+                  <th class="Header">Description</th>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_area.html" class="CollectionLink">Area</a></td>
+                  <td class="InternalName technical">area</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_construction.html" class="CollectionLink">Construction</a></td>
+                  <td class="InternalName technical">construction</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_dimensioning.html" class="CollectionLink">dimensioning</a></td>
+                  <td class="InternalName technical">dimensioning</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_district.html" class="CollectionLink">District</a></td>
+                  <td class="InternalName technical">district</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_drafting_areas.html" class="CollectionLink">Drafting Areas</a></td>
+                  <td class="InternalName technical">drafting_areas</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_drafting_lines.html" class="CollectionLink">Drafting Lines</a></td>
+                  <td class="InternalName technical">drafting_lines</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_drafting_points.html" class="CollectionLink">Drafting Points</a></td>
+                  <td class="InternalName technical">drafting_points</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_drafting_texts.html" class="CollectionLink">Drafting Texts</a></td>
+                  <td class="InternalName technical">drafting_texts</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_drawing.html" class="CollectionLink">Zeichnung</a></td>
+                  <td class="InternalName technical">drawing</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_drawing_function.html" class="CollectionLink">Drawing Function</a></td>
+                  <td class="InternalName technical">drawing_function</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_drawing_template.html" class="CollectionLink">Drawing Template</a></td>
+                  <td class="InternalName technical">drawing_template</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_function_geometry.html" class="CollectionLink">Function Geometry</a></td>
+                  <td class="InternalName technical">function_geometry</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_piechart.html" class="CollectionLink">Pie Chart</a></td>
+                  <td class="InternalName technical">piechart</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_proposed_site.html" class="CollectionLink">Proposed Site</a></td>
+                  <td class="InternalName technical">proposed_site</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_sector.html" class="CollectionLink">Sector</a></td>
+                  <td class="InternalName technical">sector</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="HeadStyle Category">
+                  <th class="Category name" colspan="3">Expanded join tables</th>
+               </tr>
+               <tr class="HeadStyle">
+                  <th class="Header">Name</th>
+                  <th class="Header technical">Internal name</th>
+                  <th class="Header">Description</th>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_sw_gis!drawing_function_param.html" class="CollectionLink">sw_gis!drawing_function_param</a></td>
+                  <td class="InternalName technical">sw_gis!drawing_function_param</td>
+                  <td class="overview_description"></td>
+               </tr>
+               <tr class="overview">
+                  <td class="overview_name"><a href="demographics_int!sector_piechart.html" class="CollectionLink">int!sector_piechart</a></td>
+                  <td class="InternalName technical">int!sector_piechart</td>
+                  <td class="overview_description"></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <footer class="float">
+         <ul>
+            <li>DD Version 273966380</li>
+            <li>DMDW - Boogert-lab / Realworld Software Products BV 2021</li>
+            <li><a href="../help/index.html?dmdw_CollectionList.html" target="blank">Help</a></li>
+         </ul>
+      </footer>
+   </body>
+</html>

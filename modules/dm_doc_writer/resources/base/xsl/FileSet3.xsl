@@ -57,7 +57,7 @@
   <xsl:variable name="filename5" select="concat($path_prefix,'topology.html')"/>
   <xsl:variable name="filename5s" select="concat($path_prefix,'topology_static.html')"/>
   <xsl:variable name="filename6" select="concat($path_prefix,'soft_joins.html')"/>
-  <xsl:variable name="svg_file_name" select="concat($dsname,'_dm_svg.html')"/>
+  <xsl:variable name="SvgPageName" select="concat($dsname,'_dm_svg.html')"/>
   <xsl:variable name="filename7" select="concat($path_prefix,'dm_svg.html')"/>
   
   <!-- This will remove any space not intended to be in the output -->
