@@ -12,7 +12,7 @@ _method case_hetero_relationship.as_svg_circle( p_properties )
 	## 
 	##
 	
-	>> _self.representation_geometry.as_svg_circle( p_properties )	
+	>> _self.location.as_svg_circle( p_properties )	
 	
 _endmethod
 $

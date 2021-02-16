@@ -28,8 +28,15 @@
     flood-opacity: 1;
     flood-color: #e6e6e6;
 }
+.feFloodH {
+    flood-opacity: 1;
+    flood-color: yellow;
+}
 .textbox {
     filter: url(#TextBox);
+}
+.textbox.highlight {
+    filter: url(#TextBoxH);
 }
 .circle {
     stroke: none;

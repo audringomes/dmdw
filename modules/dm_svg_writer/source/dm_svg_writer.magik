@@ -483,7 +483,10 @@ _method dm_svg_writer.defs_element()
 	## 
 	##
 	
-	>> sw:simple_xml_thing.new(:defs, rope.new_with( _self.filter_element() ))
+	_local l_rope << rope.new()
+	l_rope.add(_self.filter_element())
+	l_rope.add(_self.filter_element_highlight())
+	>> sw:simple_xml_thing.new(:defs, l_rope)
 	
 _endmethod
 $
@@ -502,6 +505,29 @@ _method dm_svg_writer.filter_element()
 											 :operator,"atop")))
 	>> sw:simple_xml_thing.new(:filter,l_contents,
 				   property_list.new_with(:id,"TextBox",
+							  :|filterUnits|,"objectBoundingBox",
+							  :x,"-0.1",
+							  :y,"-0.1",
+							  :height,"1.2",
+							  :width,"1.2"))
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
+_method dm_svg_writer.filter_element_highlight()
+	## 
+	## for highlight of text box
+	##
+
+	_local l_contents << rope.new()
+
+	l_contents.add( sw:simple_xml_thing.new(:|feFlood|,{},property_list.new_with(:class,"feFloodH",
+										     :result,"bgnd")))
+	l_contents.add( sw:simple_xml_thing.new(:|feComposite|,{},property_list.new_with(:in,"SourceGraphic",
+											 :in2,"bgnd",
+											 :operator,"atop")))
+	>> sw:simple_xml_thing.new(:filter,l_contents,
+				   property_list.new_with(:id,"TextBoxH",
 							  :|filterUnits|,"objectBoundingBox",
 							  :x,"-0.1",
 							  :y,"-0.1",

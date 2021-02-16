@@ -44,6 +44,13 @@
                   			
                   <feComposite in="SourceGraphic" in2="bgnd" operator="atop"></feComposite>
                   		</filter>
+               		
+               <filter id="TextBoxH" filterUnits="objectBoundingBox" x="-0.1" y="-0.1" height="1.2" width="1.2">
+                  			
+                  <feFlood class="feFloodH" result="bgnd"></feFlood>
+                  			
+                  <feComposite in="SourceGraphic" in2="bgnd" operator="atop"></feComposite>
+                  		</filter>
                	</defs>
             	
             <g>
@@ -120,57 +127,6 @@
             <g id="case_objects">
                		
                <title>Case Objects</title>
-               		<a href="electricity_substation_internals_link.html">
-                  			
-                  <g transform="translate(352.600,484.975)" class="textbox" id="substation_internals_link">
-                     				
-                     <title>Substation Internals Link
-Object that enables network follower tracing to go
-through the substation internals world.</title>
-                     				
-                     <text xml:space="preserve" class="case_object">Substation Internals Link</text>
-                     			</g>
-                  		</a>
-               		<a href="electricity_joint.html">
-                  			
-                  <g transform="translate(647.114,613.007)" class="textbox" id="joint">
-                     				
-                     <title>Joint
-Electricity cable - High and Low voltage</title>
-                     				
-                     <text xml:space="preserve" class="case_object">Joint</text>
-                     			</g>
-                  		</a>
-               		<a href="electricity_transformer.html">
-                  			
-                  <g transform="translate(636.126,430.222)" class="textbox" id="transformer">
-                     				
-                     <title>Transformer
-Electricity network substation. An internal world owning rwo.</title>
-                     				
-                     <text xml:space="preserve" class="case_object">Transformer</text>
-                     			</g>
-                  		</a>
-               		<a href="electricity_cable.html">
-                  			
-                  <g transform="translate(350.556,576.724)" class="textbox" id="cable">
-                     				
-                     <title>Cable
-Electricity cable - High and Low voltage</title>
-                     				
-                     <text xml:space="preserve" class="case_object">Cable</text>
-                     			</g>
-                  		</a>
-               		<a href="electricity_supply_point.html">
-                  			
-                  <g transform="translate(351.330,619.050)" class="textbox" id="supply_point">
-                     				
-                     <title>Supply Point
-Customer Supply Points. These can be single or multi supply</title>
-                     				
-                     <text xml:space="preserve" class="case_object">Supply Point</text>
-                     			</g>
-                  		</a>
                		<a href="electricity_customer.html">
                   			
                   <g transform="translate(351.563,654.000)" class="textbox" id="customer">
@@ -191,35 +147,14 @@ Customer information</title>
                      <text xml:space="preserve" class="case_object">Substation Internals</text>
                      			</g>
                   		</a>
-               		<a href="electricity_switch.html">
+               		<a href="electricity_joint.html">
                   			
-                  <g transform="translate(50.0000,430.476)" class="textbox" id="switch">
+                  <g transform="translate(647.114,613.007)" class="textbox" id="joint">
                      				
-                     <title>Switch
-Substation internals object. Can have open or closed
-state</title>
+                     <title>Joint
+Electricity cable - High and Low voltage</title>
                      				
-                     <text xml:space="preserve" class="case_object">Switch</text>
-                     			</g>
-                  		</a>
-               		<a href="electricity_internal_cable.html">
-                  			
-                  <g transform="translate(351.435,450.396)" class="textbox" id="internal_cable">
-                     				
-                     <title>Internal Cable
-</title>
-                     				
-                     <text xml:space="preserve" class="case_object">Internal Cable</text>
-                     			</g>
-                  		</a>
-               		<a href="electricity_substation.html">
-                  			
-                  <g transform="translate(346.573,368.980)" class="textbox" id="substation">
-                     				
-                     <title>Substation
-Electricity network substation. An internal world owning rwo.</title>
-                     				
-                     <text xml:space="preserve" class="case_object">Substation</text>
+                     <text xml:space="preserve" class="case_object">Joint</text>
                      			</g>
                   		</a>
                		<a href="electricity_drawing.html">
@@ -234,6 +169,26 @@ Drawing object
                      <text xml:space="preserve" class="case_object">Drawing</text>
                      			</g>
                   		</a>
+               		<a href="electricity_cable.html">
+                  			
+                  <g transform="translate(350.556,576.724)" class="textbox" id="cable">
+                     				
+                     <title>Cable
+Electricity cable - High and Low voltage</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Cable</text>
+                     			</g>
+                  		</a>
+               		<a href="electricity_transformer.html">
+                  			
+                  <g transform="translate(636.126,430.222)" class="textbox" id="transformer">
+                     				
+                     <title>Transformer
+Electricity network substation. An internal world owning rwo.</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Transformer</text>
+                     			</g>
+                  		</a>
                		<a href="electricity_busbar.html">
                   			
                   <g transform="translate(170.610,430.222)" class="textbox" id="busbar">
@@ -242,6 +197,58 @@ Drawing object
 Busbar (Electricity Substation Internals)</title>
                      				
                      <text xml:space="preserve" class="case_object">Busbar</text>
+                     			</g>
+                  		</a>
+               		<a href="electricity_supply_point.html">
+                  			
+                  <g transform="translate(351.330,619.050)" class="textbox" id="supply_point">
+                     				
+                     <title>Supply Point
+Customer Supply Points. These can be single or multi supply</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Supply Point</text>
+                     			</g>
+                  		</a>
+               		<a href="electricity_internal_cable.html">
+                  			
+                  <g transform="translate(351.435,450.396)" class="textbox" id="internal_cable">
+                     				
+                     <title>Internal Cable
+</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Internal Cable</text>
+                     			</g>
+                  		</a>
+               		<a href="electricity_switch.html">
+                  			
+                  <g transform="translate(50.0000,430.476)" class="textbox" id="switch">
+                     				
+                     <title>Switch
+Substation internals object. Can have open or closed
+state</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Switch</text>
+                     			</g>
+                  		</a>
+               		<a href="electricity_substation_internals_link.html">
+                  			
+                  <g transform="translate(352.600,484.975)" class="textbox" id="substation_internals_link">
+                     				
+                     <title>Substation Internals Link
+Object that enables network follower tracing to go
+through the substation internals world.</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Substation Internals Link</text>
+                     			</g>
+                  		</a>
+               		<a href="electricity_substation.html">
+                  			
+                  <g transform="translate(346.573,368.980)" class="textbox" id="substation">
+                     				
+                     <title>Substation
+Electricity network substation. An internal world owning rwo.</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Substation</text>
                      			</g>
                   		</a>
                	</g>

@@ -233,6 +233,16 @@
 		<xsl:with-param name="label" select="'Invisible fields'"/>
 		<xsl:with-param name="state" select="'False'"/>
 	      </xsl:call-template>
+	      <!-- Link to diagram -->
+	      <xsl:if test="$SVGName">
+		<span class="Checkbutton">
+		  <a class="svglink">
+		    <xsl:attribute name="href" select="concat($svg_file_name,'#',@name)"/>
+		    <img src="../svglink.png"/>
+		    <xsl:text>Show in Diagram</xsl:text>
+		  </a>
+		</span>
+	      </xsl:if>
 	    </div>
 
 	    <xsl:variable name="numcols" select="9"/>
