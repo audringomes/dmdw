@@ -26,30 +26,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
       </script>
       <script src="{concat($path,'filter.js')}"/>
-      <script>
-	function ToggleTechtop()
-	{ToggleSub('techtop');}
-
-	function ToggleDMHistory()
-	{$(".dmHistory").toggle();}
-	
-	function ToggleDetail()
-	{$(".technical").toggle();}
-
-	function ToggleInVisField()
-	{$(".VisFalse").toggle();}
-	
-	function ToggleMapped()
-	{$(".MappedTo").toggle();}
-	
-	function ToggleTopology()
-	{$(".TopologyList").toggle();}
-
-	function ToggleExplicitTopologyRules()
-	{$(".RuleTypeexplicit").toggle();
-	$(".RuleTypedefault").toggle();}
-	
-      </script>
+      <script src="{concat($path,'toggles.js')}"/>
     </head>
   </xsl:template>
 

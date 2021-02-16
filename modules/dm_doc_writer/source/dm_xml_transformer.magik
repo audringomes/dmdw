@@ -39,11 +39,14 @@ _method dm_xml_transformer.transform_to_html(p_module_name,
 					     p_stylesheet,
 					     p_copy_html_resources?,
 					     p_copy_help?,
-					     p_svg_filename)
+					     p_svg_filename,
+					     p_other_props)
 	
 	## 
 	## Do a XSLT transform on xml file P_INPUT_FILE in module
 	## P_MODULE_NAME using the XLST file P_STYLESHEET.
+	##
+	## The method returns the full output path of the html.
 	##
 	## P_INPUT_FILE should be in base/xml resource of P_MODULE_NAME.
 	## P_OUTPUT_DIR defaults to the base/html_output resource
@@ -64,7 +67,8 @@ _method dm_xml_transformer.transform_to_html(p_module_name,
 	##
 	## P_SVG_FILENAME is the name of a SVG file to include.
 	##
-	## THE method returns the full outputpath of the html.
+	## P_OTHER_PROPS can contain special keys and values for the
+	## xslt transformation
 	##
 
 	_if (l_module << sw_module_manager.module(p_module_name)) _is _unset 
@@ -87,7 +91,6 @@ _method dm_xml_transformer.transform_to_html(p_module_name,
 			l_svg_path << l_module.get_resource_file(p_svg_filename,:xml)
 			# important to have \ only
 			l_svg_path << l_svg_path.replace_all_instances_of("\","/")
-#			(l_svg_name,l_dir) << system.pathname_components(l_svg_path)
 			write("Include svg document ",l_svg_path)
 		_when error
 			write("SVG File ",p_svg_filename," not found")
@@ -118,7 +121,7 @@ _method dm_xml_transformer.transform_to_html(p_module_name,
 	write("To file ",l_output_path)
 
 	# Pass name and full path of svg to enable copy-of in xslt
-	_self.do_transform( l_input_path, l_xsl_path, l_output_path, l_svg_path)
+	_self.do_transform( l_input_path, l_xsl_path, l_output_path, l_svg_path, p_other_props )
 
 	_if p_copy_html_resources?.default(_true) _is _true 
 	_then
@@ -143,9 +146,11 @@ _endmethod
 $
 
 _pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
-_private _method dm_xml_transformer.do_transform( p_input_path, p_xsl_path, p_output_path, _optional p_svg_path )
+_private _method dm_xml_transformer.do_transform( p_input_path, p_xsl_path, p_output_path, _optional p_svg_path, p_other_props )
 	## 
-	## 
+	## Create the transformation command and execute the saxon
+	## transform (default the java version)
+	##
 
 	_if p_svg_path _isnt _unset 
 	_then (l_svg_name,l_svg_path) << system.pathname_components(p_svg_path)

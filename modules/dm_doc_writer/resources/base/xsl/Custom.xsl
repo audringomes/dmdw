@@ -37,6 +37,11 @@
   </xsl:template>
 
   
+  <xsl:template name="diagram_info">
+    <!-- Content below the title in the dm_svg page -->
+    <p></p>
+  </xsl:template>
+
   <xsl:template name="technical_details_info">
     <!-- Content below the title 'Technical Details'in the technical details page -->
     <p></p>

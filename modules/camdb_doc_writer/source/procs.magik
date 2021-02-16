@@ -93,8 +93,8 @@ _proc @transform_camdb_xml()
 					  l_xml,
 					  _unset,
 					  "FileSet3.xsl",
-					  (i_key _is 1),
-					  (i_key _is 1),
+					  (i_key _is 1), # Do copy only for the first ds
+					  (i_key _is 1), # Do copy only for the first ds
 					  l_svg_name)
 		# Gather for index page
 		l_files.add( {l_xml,l_ofile} )

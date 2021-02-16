@@ -21,6 +21,9 @@
 	</xsl:call-template>
 
 	<div class="PageTitle float"><xsl:value-of select="$diagram_title"/></div>
+	<div class="ChapterInfo float">
+	  <xsl:call-template name="diagram_info"/>
+	</div>
 
 	<div class="buttonbar float">
 	  <xsl:call-template name="Button">
