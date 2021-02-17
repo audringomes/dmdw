@@ -1,0 +1,114 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dmdw="https://github.com/boogert-lab/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-Update-1.5.xsd">
+  <xs:element name="datamodel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="global_properties">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="commonfields">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="group" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="field" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="name"/>
+                                <xs:element type="xs:string" name="external_name" minOccurs="0"/>
+                                <xs:element type="xs:string" name="description"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="geometry_mappings">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="mapping" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="method"/>
+                          <xs:element type="xs:string" name="description"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dataset">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="global_properties">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="commonfields">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="group" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType mixed="true">
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="field" maxOccurs="unbounded" minOccurs="0"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="name" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="geometry_mappings">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="mapping" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType mixed="true">
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="method" minOccurs="0"/>
+                                <xs:element type="xs:string" name="description" minOccurs="0"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="category">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="collection">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="description"/>
+                          <xs:element name="field" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="name"/>
+                                <xs:element type="xs:string" name="description"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:float" name="schema_version"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -6,30 +6,7 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
-	function ToggleTechtop()
-	{ToggleSub('techtop');}
-
-	function ToggleDMHistory()
-	{$(".dmHistory").toggle();}
-	
-	function ToggleDetail()
-	{$(".technical").toggle();}
-
-	function ToggleInVisField()
-	{$(".VisFalse").toggle();}
-	
-	function ToggleMapped()
-	{$(".MappedTo").toggle();}
-	
-	function ToggleTopology()
-	{$(".TopologyList").toggle();}
-
-	function ToggleExplicitTopologyRules()
-	{$(".RuleTypeexplicit").toggle();
-	$(".RuleTypedefault").toggle();}
-	
-      </script></head>
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script src="../toggles.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../demographics.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Demographics</span></a></header>
       <div class="PageTitle float">Object-relations Diagram</div>
@@ -95,18 +72,6 @@
             <g id="case_objects">
                		
                <title>Case Objects</title>
-               		<a href="demographics_piechart.html">
-                  			
-                  <g transform="translate(650.000,644.910)" class="textbox" id="piechart">
-                     				
-                     <title>Pie Chart
-Dataless rwo attached to demographics sector. Has
-its own draw method that extracts data from parent and 
-draws a piechart.</title>
-                     				
-                     <text xml:space="preserve" class="case_object">Pie Chart</text>
-                     			</g>
-                  		</a>
                		<a href="demographics_area.html">
                   			
                   <g transform="translate(50.0000,54.0000)" class="textbox" id="area">
@@ -115,6 +80,16 @@ draws a piechart.</title>
 Demographics Area</title>
                      				
                      <text xml:space="preserve" class="case_object">Area</text>
+                     			</g>
+                  		</a>
+               		<a href="demographics_sector.html">
+                  			
+                  <g transform="translate(50.0445,654.000)" class="textbox" id="sector">
+                     				
+                     <title>Sector
+Demographics sector</title>
+                     				
+                     <text xml:space="preserve" class="case_object">Sector</text>
                      			</g>
                   		</a>
                		<a href="demographics_district.html">
@@ -137,14 +112,16 @@ Proposed site for a shop. Has four travel zone areas.</title>
                      <text xml:space="preserve" class="case_object">Proposed Site</text>
                      			</g>
                   		</a>
-               		<a href="demographics_sector.html">
+               		<a href="demographics_piechart.html">
                   			
-                  <g transform="translate(50.0445,654.000)" class="textbox" id="sector">
+                  <g transform="translate(650.000,644.910)" class="textbox" id="piechart">
                      				
-                     <title>Sector
-Demographics sector</title>
+                     <title>Pie Chart
+Dataless rwo attached to demographics sector. Has
+its own draw method that extracts data from parent and 
+draws a piechart.</title>
                      				
-                     <text xml:space="preserve" class="case_object">Sector</text>
+                     <text xml:space="preserve" class="case_object">Pie Chart</text>
                      			</g>
                   		</a>
                	</g>

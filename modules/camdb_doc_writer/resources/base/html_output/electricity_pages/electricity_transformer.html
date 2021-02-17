@@ -6,30 +6,7 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
-	function ToggleTechtop()
-	{ToggleSub('techtop');}
-
-	function ToggleDMHistory()
-	{$(".dmHistory").toggle();}
-	
-	function ToggleDetail()
-	{$(".technical").toggle();}
-
-	function ToggleInVisField()
-	{$(".VisFalse").toggle();}
-	
-	function ToggleMapped()
-	{$(".MappedTo").toggle();}
-	
-	function ToggleTopology()
-	{$(".TopologyList").toggle();}
-
-	function ToggleExplicitTopologyRules()
-	{$(".RuleTypeexplicit").toggle();
-	$(".RuleTypedefault").toggle();}
-	
-      </script></head>
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script src="../toggles.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../electricity.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Electricity</span></a></header>
       <div class="PageTitle float">Transformer</div>
@@ -300,7 +277,7 @@
                <td>
                   						
                   						Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity_pages/electricity_topology_static.html#transformer.dv_connection">Topology»</a></span>
-                  						 Mapped from: <span class="geometry">Primary Connection</span> 
+                  						 Mapped from: <span class="geometry">Secondary Connection</span> 
                   					</td>
             </tr>
             <tr id="hv_connection" class="Field VisFalse MappedTo">
@@ -317,7 +294,7 @@
                <td>
                   						
                   						Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity_pages/electricity_topology_static.html#transformer.hv_connection">Topology»</a></span>
-                  						 Mapped from: <span class="geometry">Primary Connection</span> 
+                  						 Mapped from: <span class="geometry">Secondary Connection</span> 
                   					</td>
             </tr>
             <tr id="lv_connection" class="Field VisFalse MappedTo">
@@ -334,7 +311,7 @@
                <td>
                   						
                   						Manifold: <span class="name">electricity</span> <span class="technical"><a href="../electricity_pages/electricity_topology_static.html#transformer.lv_connection">Topology»</a></span>
-                  						 Mapped from: <span class="geometry">Primary Connection</span> 
+                  						 Mapped from: <span class="geometry">Secondary Connection</span> 
                   					</td>
             </tr>
             <tr id="meatball" class="Field VisFalse">

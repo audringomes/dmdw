@@ -33,20 +33,18 @@
 	</g>
 	<g id="case_objects">
 		<title>Case Objects</title>
-		<a href="demographics_piechart.html">
-			<g transform="translate(650.000,644.910)" class="textbox" id="piechart">
-				<title>Pie Chart
-Dataless rwo attached to demographics sector. Has
-its own draw method that extracts data from parent and 
-draws a piechart.</title>
-				<text xml:space="preserve" class="case_object">Pie Chart</text>
-			</g>
-		</a>
 		<a href="demographics_area.html">
 			<g transform="translate(50.0000,54.0000)" class="textbox" id="area">
 				<title>Area
 Demographics Area</title>
 				<text xml:space="preserve" class="case_object">Area</text>
+			</g>
+		</a>
+		<a href="demographics_sector.html">
+			<g transform="translate(50.0445,654.000)" class="textbox" id="sector">
+				<title>Sector
+Demographics sector</title>
+				<text xml:space="preserve" class="case_object">Sector</text>
 			</g>
 		</a>
 		<a href="demographics_district.html">
@@ -63,11 +61,13 @@ Proposed site for a shop. Has four travel zone areas.</title>
 				<text xml:space="preserve" class="case_object">Proposed Site</text>
 			</g>
 		</a>
-		<a href="demographics_sector.html">
-			<g transform="translate(50.0445,654.000)" class="textbox" id="sector">
-				<title>Sector
-Demographics sector</title>
-				<text xml:space="preserve" class="case_object">Sector</text>
+		<a href="demographics_piechart.html">
+			<g transform="translate(650.000,644.910)" class="textbox" id="piechart">
+				<title>Pie Chart
+Dataless rwo attached to demographics sector. Has
+its own draw method that extracts data from parent and 
+draws a piechart.</title>
+				<text xml:space="preserve" class="case_object">Pie Chart</text>
 			</g>
 		</a>
 	</g>

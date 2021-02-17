@@ -198,9 +198,7 @@
     </table>
 
   </xsl:template>
-
   
-
   
   <xsl:template match="field1">
     <!-- Interactive -->
@@ -233,7 +231,11 @@
   
   <xsl:template match="field2">
     <!-- interactive -->    
-    <tr class="fld2s geometry">
+    <tr>
+      <xsl:attribute name="class">
+	<xsl:text>fld2s interactive geometry RuleType</xsl:text>
+	<xsl:value-of select="@rule_type"/>
+      </xsl:attribute>
       <td class="spacer"></td>
       <td class="Fld2GeometryName"><xsl:value-of select="@external_name"/></td>
       <xsl:apply-templates/>

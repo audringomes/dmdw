@@ -148,8 +148,8 @@ $
 _pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 _private _method dm_xml_transformer.do_transform( p_input_path, p_xsl_path, p_output_path, _optional p_svg_path, p_other_props )
 	## 
-	## Create the transformation command and execute the saxon
-	## transform (default the java version)
+	## Create the transformation command and execute the saxonica
+	## processor [default the java version]
 	##
 
 	_if p_svg_path _isnt _unset 
@@ -165,7 +165,6 @@ _private _method dm_xml_transformer.do_transform( p_input_path, p_xsl_path, p_ou
 					 " -s:",p_input_path,
 					 " -xsl:",p_xsl_path,
 					 " -o:",p_output_path,
-#					 " -dtd:recover ",
 					 " JarName=",l_jarname.default(""),
 					 " OFileName=",l_fname,
 					 " SVGName=",l_svg_name.default(""),

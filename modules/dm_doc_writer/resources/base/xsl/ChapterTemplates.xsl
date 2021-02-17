@@ -386,7 +386,15 @@
 	<div class="ChapterInfo float">
 	  <xsl:call-template name="topology_info_interactive"/>
 	</div>
-	
+
+	<div class="buttonbar float">
+	  <xsl:call-template name="Button">
+	    <xsl:with-param name="function" select="'ToggleExplicitTopologyRules();'"/>
+	    <xsl:with-param name="label" select="'Explicit Rules only'"/>
+	    <xsl:with-param name="state" select="'True'"/>
+	  </xsl:call-template>
+	</div>
+
 	<xsl:call-template name="CreateTopologyContentInteractive"/>
 	
 	<xsl:call-template name="footer">

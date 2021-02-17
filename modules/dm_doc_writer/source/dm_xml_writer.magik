@@ -79,7 +79,7 @@ $
 
 _pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 ## The schema version that is supported for updates
-dm_xml_writer.define_shared_constant(:schema_version_updates,"1.4",:public)
+dm_xml_writer.define_shared_constant(:schema_version_updates,"1.5",:public)
 $
 
 _pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
@@ -1019,8 +1019,8 @@ _method dm_xml_writer.read_updates(_optional p_filename)
 	## If P_FILENAME is unset, use .properties[:update_file]
 	##
 	
-	_local l_list << .updates << property_list.new_with(:commonfields,_unset,
-							    :geometry_mappings,_unset,
+	_local l_list << .updates << property_list.new_with(:commonfields,property_list.new(),
+							    :geometry_mappings,property_list.new(),
 							    :collections,rope.new())
 	
 	_if (l_file << p_filename) _isnt _unset _orif
@@ -1057,24 +1057,40 @@ _method dm_xml_writer.read_updates(_optional p_filename)
 
 	_for i_elem _over l_xml.xml_elements()
 	_loop
+#DEBUG		print(i_elem)
 		_if {:global_properties,:category}.includes?(i_elem.type)
-		_then _self.handle_update_xml(i_elem)
-		_else condition.raise(:warning,:string,
-				      write_string("Updates - XML Type ",i_elem," cannot be processed as update"))
+		_then
+			_self.handle_update_xml(i_elem)
+			
+		_elif i_elem.type _is :dataset
+		_then
+			_if i_elem.attribute(:name) = .ds.name.write_string
+			_then
+				write("Processing updates for dataset '",i_elem.attribute(:name),"' only")
+				_for j_elem _over i_elem.xml_elements()
+				_loop 
+					_self.handle_update_xml( j_elem )
+				_endloop
+			_endif
+		_else
+			condition.raise(:warning,:string,
+					write_string("Updates - XML Type ",i_elem," cannot be processed as update"))
 		_endif
 	_endloop
-	
+
 	>> .updates
 	
 _endmethod
 $
 
 _pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
-_private _method dm_xml_writer.handle_update_xml(a_xml)
+_private _method dm_xml_writer.handle_update_xml( a_xml )
 	## 
-	## Handles the elements in datamodel (global_properties, category/collection)
+	## Handles the update elements in a_xml, which can be
+	## global_properties, category/collection 
 	##
-	
+
+	#DEBUG write("dm_xml_writer.handle_update_xml( ",a_xml," )")
 	_if a_xml.type = :global_properties
 	_then
 		_for i_sub _over a_xml.xml_elements()
@@ -1082,11 +1098,11 @@ _private _method dm_xml_writer.handle_update_xml(a_xml)
 			#DEBUG write("Processing ",i_sub)
 			_if i_sub.type = :commonfields
 			_then
-				.updates[:commonfields] << _self.handle_updates_for_commonfields(i_sub)
+				.updates[:commonfields].add_all(_self.handle_updates_for_commonfields(i_sub))
 				
 			_elif i_sub.type = :geometry_mappings
 			_then
-				.updates[:geometry_mappings] << _self.handle_updates_for_geometry_mappings(i_sub)
+				.updates[:geometry_mappings].add_all(_self.handle_updates_for_geometry_mappings(i_sub))
 			_else
 				condition.raise(:warning,:string,write_string("Unknown global_property ",i_sub))
 			_endif

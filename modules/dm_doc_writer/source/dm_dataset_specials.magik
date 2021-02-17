@@ -15,33 +15,20 @@ _pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 ## instantiated object by the property :dataset_specials to the
 ## writer
 ##
-## :get_geometry_mappings() should return a property_list keyed on
-## map_discriminator names with a description
-##
-## :get_global_field_descriptions() should return a property_list keyed on
-## internal field names with a description
-##
 ## :get_soft_joins() should return a property_list keyed on
 ## collection_name
 ##
 def_slotted_exemplar(:dm_dataset_specials,
 	{
 		{:ds,_unset},
-		{:geometry_mappings,_unset},
-		{:soft_joins,_unset},
-		{:global_field_descriptions,_unset}
+		{:soft_joins,_unset}
 	})
 $
 
 _pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 dm_dataset_specials.define_slot_access(:ds,:read,:public)
 $
-_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
-dm_dataset_specials.define_slot_access(:geometry_mappings,:read,:public)
-$
-_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
-dm_dataset_specials.define_slot_access(:global_field_descriptions,:read,:public)
-$
+
 _pragma(classify_level=restricted, topic={dmdw,dm_doc_writer})
 dm_dataset_specials.define_slot_access(:soft_joins,:read,:public)
 $
@@ -60,8 +47,6 @@ _method dm_dataset_specials.init(ds)
 	##
 
 	.ds << ds
-	.geometry_mappings << _self.get_geometry_mappings()
-	.global_field_descriptions << _self.get_global_field_descriptions()
 	.soft_joins << _self.get_soft_joins()
 	
 	>> _self
@@ -81,6 +66,16 @@ _method dm_dataset_specials.verify(a_ds)
 _endmethod
 $
 
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
+_method dm_dataset_specials.products_for_version
+	## 
+	## Should return a list of the names of sw_products to include
+	## their version into the document. This implementation returns
+	## an empty vector.
+	>> {}
+_endmethod
+$
+
 _pragma(classify_level=advanced, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
 _method dm_dataset_specials.includes
 	## 
@@ -91,31 +86,6 @@ _method dm_dataset_specials.includes
 _endmethod
 $
 
-_pragma(classify_level=basic, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
-_method dm_dataset_specials.get_geometry_mappings()
-	##
-	## A property_list with names of mdm's as keys and a
-	## descriptive text as value.
-	## This implementation returns an empty property list.
-	##
-	>> property_list.new()
-_endmethod
-$
-
-_pragma(classify_level=basic, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
-_method dm_dataset_specials.get_global_field_descriptions()
-	## 
-	## A property_list with commonly used field names and
-	## descriptions
-	##
-	## The format is described in the slot description of
-	## dm_xml_writer.updates 
-	## 
-	## This implementation returns an empty property list.
-	## 
-	>> property_list.new()
-_endmethod
-$
 
 _pragma(classify_level=basic, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
 _method dm_dataset_specials.get_soft_joins()
@@ -126,15 +96,5 @@ _method dm_dataset_specials.get_soft_joins()
 	## This implementation returns an empty property list.
 	##
 	>> property_list.new()
-_endmethod
-$
-
-_pragma(classify_level=basic, topic={dmdw,dm_doc_writer}, usage={redefinable, subclassable})
-_method dm_dataset_specials.products_for_version
-	## 
-	## Should return a list of the names of sw_products to include
-	## their version into the document. This implementation returns
-	## an empty vector.
-	>> {}
 _endmethod
 $

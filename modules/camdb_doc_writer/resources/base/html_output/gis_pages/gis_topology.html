@@ -6,30 +6,7 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script>
-	function ToggleTechtop()
-	{ToggleSub('techtop');}
-
-	function ToggleDMHistory()
-	{$(".dmHistory").toggle();}
-	
-	function ToggleDetail()
-	{$(".technical").toggle();}
-
-	function ToggleInVisField()
-	{$(".VisFalse").toggle();}
-	
-	function ToggleMapped()
-	{$(".MappedTo").toggle();}
-	
-	function ToggleTopology()
-	{$(".TopologyList").toggle();}
-
-	function ToggleExplicitTopologyRules()
-	{$(".RuleTypeexplicit").toggle();
-	$(".RuleTypedefault").toggle();}
-	
-      </script></head>
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script src="../toggles.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float"><a href="../gis.html" class="logo"><img src="../dmdw-logo.png">Datamodel information<span class="DsName"> Gis</span></a></header>
       <div class="PageTitle float">Topology (interactive)</div>
@@ -37,6 +14,7 @@
          <p>When you select a Table on the left side, the geometries are shown. Then select one
             of the geometries of that table and the explicit topology rules are shown on the right</p>
       </div>
+      <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleExplicitTopologyRules();" onclick="ToggleExplicitTopologyRules();" checked="True"><label for="ToggleExplicitTopologyRules();"><span>Explicit Rules only</span></label></span></div>
       <div class="container">
          <div class="navbox">
             <table class="dmTable IntTopol">
@@ -239,7 +217,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -250,7 +228,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -261,7 +239,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -272,7 +250,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -283,7 +261,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -294,7 +272,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -305,7 +283,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -316,7 +294,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -327,7 +305,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -338,7 +316,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -349,7 +327,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -360,7 +338,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -371,7 +349,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 connect">connect</td>
@@ -382,7 +360,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -393,7 +371,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -404,7 +382,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -415,7 +393,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -426,7 +404,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -437,7 +415,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -448,7 +426,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -459,7 +437,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -470,7 +448,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -481,7 +459,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -492,7 +470,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -503,7 +481,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -514,7 +492,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -525,7 +503,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 split_link">split_link</td>
@@ -536,7 +514,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -547,7 +525,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -558,7 +536,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -569,7 +547,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -580,7 +558,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -591,7 +569,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -602,7 +580,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -613,7 +591,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -624,7 +602,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -635,7 +613,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -646,7 +624,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -657,7 +635,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -668,7 +646,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -679,7 +657,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 connect">connect</td>
@@ -690,7 +668,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -701,7 +679,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -712,7 +690,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -723,7 +701,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -734,7 +712,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -745,7 +723,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -756,7 +734,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -767,7 +745,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -778,7 +756,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -789,7 +767,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -800,7 +778,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -811,7 +789,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -822,7 +800,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -833,7 +811,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 connect">connect</td>
@@ -844,7 +822,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -855,7 +833,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -866,7 +844,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -877,7 +855,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -888,7 +866,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -899,7 +877,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -910,7 +888,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -921,7 +899,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -932,7 +910,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -943,7 +921,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -954,7 +932,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -965,7 +943,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -976,7 +954,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -987,7 +965,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 split_link">split_link</td>
@@ -998,7 +976,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1009,7 +987,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1020,7 +998,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1031,7 +1009,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1042,7 +1020,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1053,7 +1031,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1064,7 +1042,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypeexplicit">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect_ends">connect_ends</td>
@@ -1075,7 +1053,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1086,7 +1064,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1097,7 +1075,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1108,7 +1086,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1119,7 +1097,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1130,7 +1108,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypeexplicit">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 endsplit_link">endsplit_link</td>
@@ -1141,7 +1119,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1152,7 +1130,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypeexplicit">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect_ends">connect_ends</td>
@@ -1163,7 +1141,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1174,7 +1152,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1185,7 +1163,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1196,7 +1174,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1207,7 +1185,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1218,7 +1196,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1229,7 +1207,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1240,7 +1218,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1251,7 +1229,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1262,7 +1240,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1273,7 +1251,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1284,7 +1262,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1295,7 +1273,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 connect">connect</td>
@@ -1306,7 +1284,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1317,7 +1295,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1328,7 +1306,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1339,7 +1317,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1350,7 +1328,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1361,7 +1339,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1372,7 +1350,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1383,7 +1361,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1394,7 +1372,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1405,7 +1383,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1416,7 +1394,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1427,7 +1405,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1438,7 +1416,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1449,7 +1427,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 connect">connect</td>
@@ -1460,7 +1438,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1471,7 +1449,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1482,7 +1460,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1493,7 +1471,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1504,7 +1482,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1515,7 +1493,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1526,7 +1504,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1537,7 +1515,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1548,7 +1526,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1559,7 +1537,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1570,7 +1548,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1581,7 +1559,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1592,7 +1570,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1603,7 +1581,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 connect">connect</td>
@@ -1614,7 +1592,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1625,7 +1603,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1636,7 +1614,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1647,7 +1625,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1658,7 +1636,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1669,7 +1647,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1680,7 +1658,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1691,7 +1669,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1702,7 +1680,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1713,7 +1691,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1724,7 +1702,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1735,7 +1713,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1746,7 +1724,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1757,7 +1735,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 connect">connect</td>
@@ -1768,7 +1746,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1779,7 +1757,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1790,7 +1768,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1801,7 +1779,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1812,7 +1790,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1823,7 +1801,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -1834,7 +1812,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1845,7 +1823,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1856,7 +1834,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1867,7 +1845,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -1878,7 +1856,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1889,7 +1867,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -1900,7 +1878,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1911,7 +1889,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 connect">connect</td>
@@ -1922,7 +1900,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -1933,7 +1911,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1944,7 +1922,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1955,7 +1933,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1966,7 +1944,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1977,7 +1955,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -1988,7 +1966,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypeexplicit">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect_ends">connect_ends</td>
@@ -1999,7 +1977,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2010,7 +1988,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2021,7 +1999,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2032,7 +2010,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2043,7 +2021,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2054,7 +2032,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2065,7 +2043,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2076,7 +2054,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2087,7 +2065,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -2098,7 +2076,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -2109,7 +2087,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -2120,7 +2098,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -2131,7 +2109,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 connect">connect</td>
@@ -2142,7 +2120,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -2153,7 +2131,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -2164,7 +2142,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -2175,7 +2153,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -2186,7 +2164,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -2197,7 +2175,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -2208,7 +2186,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -2219,7 +2197,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 connect">connect</td>
@@ -2230,7 +2208,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -2241,7 +2219,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Parkplatz</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2252,7 +2230,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Fußweg</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2263,7 +2241,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Hotel</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2274,7 +2252,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Level Crossing</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2285,7 +2263,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Straße</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Mittelachse</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2296,7 +2274,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Motorway</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypeexplicit">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect_ends">connect_ends</td>
@@ -2307,7 +2285,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Büro</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2318,7 +2296,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2329,7 +2307,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Road Works</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2340,7 +2318,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Kreisverkehr</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2351,7 +2329,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Geschäft</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2362,7 +2340,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Slip Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2373,7 +2351,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station Car Park</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2384,7 +2362,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Trunk Road</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypeexplicit">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect_ends">connect_ends</td>
@@ -2395,7 +2373,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Railway Line</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2406,7 +2384,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2417,7 +2395,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Railway Line</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Centreline</td>
                   <td class="rule1 connect">connect</td>
@@ -2428,7 +2406,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Rail Station</td>
                   <td class="rule1 connect">connect</td>
@@ -2439,13 +2417,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Brauerei</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2456,7 +2434,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Cadastral Boundary</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Boundary Line</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2467,7 +2445,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Park</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2478,7 +2456,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2489,7 +2467,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Gaststätte</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2500,13 +2478,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Coverage</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2517,13 +2495,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Brauerei</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 connect">connect</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -2534,7 +2512,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Cadastral Boundary</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Boundary Line</td>
                   <td class="rule1 connect">connect</td>
@@ -2545,7 +2523,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Park</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 connect">connect</td>
@@ -2556,7 +2534,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 connect">connect</td>
@@ -2567,7 +2545,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Gaststätte</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -2578,13 +2556,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Coverage</td>
                   <td class="rule1 connect">connect</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -2595,13 +2573,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Brauerei</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2612,7 +2590,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Cadastral Boundary</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Boundary Line</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2623,7 +2601,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Park</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2634,7 +2612,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2645,7 +2623,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Gaststätte</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2656,13 +2634,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Coverage</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2673,13 +2651,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Brauerei</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2690,7 +2668,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Cadastral Boundary</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Boundary Line</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2701,7 +2679,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Park</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2712,7 +2690,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2723,7 +2701,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Gaststätte</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2734,13 +2712,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Coverage</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2751,13 +2729,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Brauerei</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2768,7 +2746,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Cadastral Boundary</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Boundary Line</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2779,7 +2757,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Park</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2790,7 +2768,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2801,7 +2779,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Gaststätte</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2812,13 +2790,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Coverage</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2829,13 +2807,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Brauerei</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 connect">connect</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -2846,7 +2824,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Cadastral Boundary</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Boundary Line</td>
                   <td class="rule1 connect">connect</td>
@@ -2857,7 +2835,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Park</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 connect">connect</td>
@@ -2868,7 +2846,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 connect">connect</td>
@@ -2879,7 +2857,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Gaststätte</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -2890,13 +2868,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Coverage</td>
                   <td class="rule1 connect">connect</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>
@@ -2907,13 +2885,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Brauerei</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2924,7 +2902,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Cadastral Boundary</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Boundary Line</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2935,7 +2913,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Park</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2946,7 +2924,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2957,7 +2935,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Gaststätte</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2968,13 +2946,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Coverage</td>
                   <td class="rule1 split_link">split_link</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 split_link">split_link</td>
@@ -2985,13 +2963,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Brauerei</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 connect">connect</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -3002,7 +2980,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Cadastral Boundary</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Boundary Line</td>
                   <td class="rule1 connect">connect</td>
@@ -3013,7 +2991,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Park</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 connect">connect</td>
@@ -3024,7 +3002,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Sehenswürdigkeit</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Deckung</td>
                   <td class="rule1 connect">connect</td>
@@ -3035,7 +3013,7 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Gaststätte</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Standort</td>
                   <td class="rule1 connect">connect</td>
@@ -3046,13 +3024,13 @@
                <tr class="TopologyHeadStyle">
                   <th class="TopologyHeadStyle name" colspan="4">Town</th>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Coverage</td>
                   <td class="rule1 connect">connect</td>
                   <td class="rule2 split_link">split_link</td>
                </tr>
-               <tr class="fld2s geometry">
+               <tr class="fld2s interactive geometry RuleTypedefault">
                   <td class="spacer"></td>
                   <td class="Fld2GeometryName">Location</td>
                   <td class="rule1 connect">connect</td>

@@ -1,43 +1,59 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-Update-1.4.xsd" schema_version="1.4">
-  <global_properties>
-    <commonfields>
-      <group name="Internal fields">
-	<field>
-	  <name>rwo_id</name>
-	  <external_name>RWO ID</external_name>
-	  <description>A unique foreign key for joins to geometries</description>
-	</field>
-	<field>
-	  <name>ds!version</name>
-	  <description>ds!version is an internal value used in conflict resolution.</description>
-	</field>
-      </group>
-      <group name="New Group"/>
-    </commonfields>
-    <geometry_mappings>
-      <mapping>
-	<method>image_type</method>
-	<description>Geometry mapped by Image Type</description>
-      </mapping>
-      <mapping>
-	<method/>
-	<description/>
-      </mapping>
-    </geometry_mappings>
-  </global_properties>
-  <category>
-    <collection name="level_crossing">
-      <description>A level crossing is an object that marks a crossing in the Rail Network without split</description>
-      <field>
-	<name>cost_penalty</name>
-	<description>The additional costs in a trace route</description>
-      </field>
-      <field>
-	<name/>
-	<description>
-	</description>
-      </field>
-    </collection>
-  </category>
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-Update-1.5.xsd" schema_version="1.5">
+	<global_properties>
+		<commonfields>
+			<group name="Internal fields">
+				<field>
+					<name>rwo_id</name>
+					<external_name>RWO ID</external_name>
+					<description>A unique foreign key for joins to geometries</description>
+				</field>
+				<field>
+					<name>ds!version</name>
+					<description>ds!version is an internal value used in conflict resolution.</description>
+				</field>
+			</group>
+			<group name="New Group"/>
+		</commonfields>
+		<geometry_mappings>
+			<mapping>
+				<method>image_type</method>
+				<description>Geometry mapped by Image Type</description>
+			</mapping>
+			<mapping>
+				<method/>
+				<description/>
+			</mapping>
+		</geometry_mappings>
+	</global_properties>
+	<dataset name="gis">
+		<global_properties>
+			<commonfields>
+				<group>
+					<field/>
+				</group>
+			</commonfields>
+			<geometry_mappings>
+				<mapping>
+				</mapping>
+				<mapping>
+					<method/>
+					<description/>
+				</mapping>
+			</geometry_mappings>
+		</global_properties>
+		<category>
+			<collection name="level_crossing">
+				<description>A level crossing is an object that marks a crossing in the Rail Network without split</description>
+				<field>
+					<name>cost_penalty</name>
+					<description>The additional costs in a trace route</description>
+				</field>
+				<field>
+					<name/>
+					<description/>
+				</field>
+			</collection>
+		</category>
+	</dataset>
 </datamodel>
