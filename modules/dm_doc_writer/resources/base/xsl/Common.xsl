@@ -4,7 +4,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:dmdw="https://boogert-lab.nl/dmdw">
-  
+    
   <xsl:output method="html" indent="yes" name="html"/>
 
   <!-- this named template creates the head section of every html page.
@@ -31,12 +31,24 @@
   </xsl:template>
 
   <!-- These are the templates for the top and bottom section of every page -->
-  
-  <!-- Title section -->
+
+  <!-- Title section 
+       If the param 'index_file' is passed, we create a hyperlink at the top.
+    -->
   <xsl:template name="Top">
     <xsl:param name="path"/>
+    
     <header class="float">
-      <a href="{concat($path,$filename0)}" class="logo">
+      
+      <xsl:if test="$index_file != ''">
+	<div class="index">
+	  <a href="{concat($path,$index_file)}">
+	    <xsl:text>Index</xsl:text>
+	  </a>
+	</div>
+      </xsl:if>
+      
+      <a class="logo" href="{concat($path,$filename0)}">
 	<img src="{concat($path,'dmdw-logo.png')}"/>
 	<xsl:value-of select="$maintitle"/>
 	<span class="DsName">
@@ -44,7 +56,9 @@
 	  <xsl:value-of select="$dm_external_name"/>
 	</span>
       </a>
+      
     </header>
+    
   </xsl:template>
   
   <!-- Footer section -->

@@ -14,6 +14,7 @@
   
   <!-- The name of the Saxon jar used -->  
   <xsl:param name="JarName"/>
+  <xsl:param name="index_file"/>
 
    
   <xsl:output method="html" indent="yes" name="html"/>
@@ -23,7 +24,7 @@
 
   <!-- The supported dmdw schema version -->
   <xsl:variable name="supported_schema_version" select="'2.0'"/>  
- 
+  
   <xsl:include href="Common.xsl"/>
   <xsl:include href="Custom.xsl"/>
   <xsl:include href="ProcessingTemplates.xsl"/>

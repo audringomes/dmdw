@@ -159,7 +159,8 @@ _private _method dm_xml_transformer.do_transform( p_input_path, p_xsl_path, p_ou
 	_if (l_exe_path << _self.path_to_saxon_exe) _is _unset 
 	_then (l_exe_path,l_jarname) << _self.java_command_string
 	_endif
-	
+
+	_local l_str << _self.format_additional_properties( p_other_props )
 	_local (l_fname,l_dir) << system.pathname_components(p_output_path)
 	_local l_command << write_string(l_exe_path,
 					 " -s:",p_input_path,
@@ -168,7 +169,8 @@ _private _method dm_xml_transformer.do_transform( p_input_path, p_xsl_path, p_ou
 					 " JarName=",l_jarname.default(""),
 					 " OFileName=",l_fname,
 					 " SVGName=",l_svg_name.default(""),
-					 " SVGPath=",p_svg_path.default(""))
+					 " SVGPath=",p_svg_path.default(""),
+					 l_str)
 					 
 	
 	write("Executing command ",l_command)
@@ -182,6 +184,27 @@ _private _method dm_xml_transformer.do_transform( p_input_path, p_xsl_path, p_ou
 
 _endmethod
 $
+
+_pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
+_method dm_xml_transformer.format_additional_properties( p_other_props )
+	## 
+	##
+
+	_if p_other_props _is _unset 
+	_then _return ""
+	_endif
+
+	_local l_stream << internal_text_output_stream.new()
+	_for i_key,i_elem _over p_other_props.fast_keys_and_elements()
+	_loop
+		l_stream.write(" ",i_key,"=",i_elem)
+	_endloop
+
+	>> l_stream.string
+	
+_endmethod
+$
+
 
 _pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 _method dm_xml_transformer.copy_help(p_module,p_output_file)

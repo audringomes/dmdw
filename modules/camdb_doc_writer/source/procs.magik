@@ -66,7 +66,10 @@ _proc @transform_camdb_xml()
 	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
 	_local l_xml_files << rope.new()
 	_local l_svg_files << rope.new()
-	
+
+	#
+	# Get all xml files and optional svg files with the same name
+	#
 	_for i_file _over l_mod.resource_files("xml").fast_elements()
 	_loop
 		( name, ext ) << system.split_filename( i_file )
@@ -79,6 +82,12 @@ _proc @transform_camdb_xml()
 		_then l_svg_files.add(name)
 		_endif		
 	_endloop
+
+	#
+	# Loop over xml files and do the transformation. If a matching
+	# svg file is found, pass the name as paramater so it can be
+	# included in the output.
+	#
 	
 	_local l_files << rope.new()
 	_for i_key,i_xml _over l_xml_files.fast_keys_and_elements()
@@ -95,7 +104,8 @@ _proc @transform_camdb_xml()
 					  "FileSet3.xsl",
 					  (i_key _is 1), # Do copy resources only for the first ds
 					  (i_key _is 1), # Do copy help only for the first ds
-					  l_svg_name)
+					  l_svg_name,
+					  property_list.new_with(:index_file,"index.html"))
 		# Gather for index page
 		l_files.add( {l_xml,l_ofile} )
 		
