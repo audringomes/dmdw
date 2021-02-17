@@ -18,7 +18,7 @@
 	<meta name="description" content="Customizations can be done on several levels: Skip tables Tables can be omitted from the export by redefining and/or subclassing the method dd_collection_mixin.skip_dm_export?...." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="15/02/2021" />
+        <meta name="revised" content="17/02/2021" />
         <meta name="id" content="dmdw_Customization" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -275,7 +275,7 @@ function GetSearchPage() {
 <p class="p_Normal" style="text-indent: 0; padding-left: 1.2500rem; margin-left: 0;"><span class="f_Normal" style="display:inline-block;width:1.2500rem;margin-left:-1.2500rem">2.</span>Change the styles of the HTML output.</p><p class="p_Normal" style="text-indent: 0; padding-left: 1.6250rem; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">o</span>Modify the <span style="font-weight: bold;">custom.css</span> styles. (See <a href="dmdw_css.html" class="topiclink">CSS</a>)</p><p class="p_Normal" style="text-indent: 0; padding-left: 1.6250rem; margin-left: 0;"><span class="f_Normal" style="font-family: 'Courier New';display:inline-block;width:0.8125rem;margin-left:-0.8125rem">o</span>Modify the other styles (layout.css and dm.css)</p><p class="p_Heading3"><span class="f_Heading3">Customizing&nbsp;the&nbsp;SVG&nbsp;output</span></p>
 <p class="p_Normal">1. The method <span style="font-weight: bold;">dm_svg_writer.filter_excludes( p_list )</span> test exemplars for <span style="font-weight: bold;">exclude_from_svg? </span>This enables stripping out collections that should not appear in the SVG output.</p>
 <p class="p_Normal">2. The method <span style="font-weight: bold;">dm_svg_writer.default_properties</span> contains the properties that are added to the output elements. All elements have a CSS style class.</p>
-<p class="p_Normal">3. The css fils <span style="font-weight: bold;">svg.css </span>contains all definitions of the styles in the SVG, so you can easily change its appearance.</p>
+<p class="p_Normal">3. The css fils <span style="font-weight: bold;">svg.css </span>contains the css styles used in the SVG document, so you can easily change its appearance.</p>
 <p class="p_Normal">&nbsp;</p>
 
         <div class="topicfooter">

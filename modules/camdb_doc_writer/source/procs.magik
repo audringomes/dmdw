@@ -12,8 +12,8 @@ _pragma(classify_level=basic, topic={dmdw,camdb_doc_writer})
 ## Creates a datamodel xml document for datasets gis and electrictity
 ## in the cambdridge database. 
 ##
-_global export_camdb <<
-_proc @export_camdb()
+_global !dm_export_camdb! <<
+_proc @dm_export_camdb()
 
 	_dynamic !current_languages! << {:de_de}
 
@@ -60,8 +60,8 @@ _pragma(classify_level=basic, topic={dmdw,camdb_doc_writer})
 ## The output dir will be the base/html_output resource folder.
 ## Copy the html resources into the output dir.
 ##
-_global transform_camdb_xml <<
-_proc @transform_camdb_xml()
+_global !dm_transform_camdb! <<
+_proc @dm_transform_camdb_xml()
 
 	_local l_mod << sw_module_manager.module(:camdb_doc_writer)
 	_local l_xml_files << rope.new()

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-17T08:34:45Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-17T11:25:07Z">
 	<datamodel_info>
 		<dm_dataset>demographics</dm_dataset>
 		<dm_external_name>Demographics</dm_external_name>
@@ -9,6 +9,7 @@
 		<dm_include_urns>True</dm_include_urns>
 		<dm_ace_name>electricity</dm_ace_name>
 		<dm_alternative_path_name>***top***</dm_alternative_path_name>
+		<dm_updates fullpath="E:/boogert-lab/dmdw/modules/camdb_doc_writer/resources/base/example_update/update_example.xml">update_example.xml</dm_updates>
 		<dm_text_translation_disabled>False</dm_text_translation_disabled>
 		<dm_active_languages>1</dm_active_languages>
 		<dm_active_language order="1">de_de</dm_active_language>

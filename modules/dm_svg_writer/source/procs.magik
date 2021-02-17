@@ -22,7 +22,7 @@ _pragma(classify_level=basic, topic={dmdw,dm_svg_writer})
 ## Note that when you see a black square, it most likely
 ## is missing the CSS style sheet.
 ##
-_global dm_create_svg <<
+_global !dm_create_svg! <<
 _proc @dm_create_svg( ds, case_view, _optional output_file )
 
 	_if output_file _is _unset 

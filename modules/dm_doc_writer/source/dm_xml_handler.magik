@@ -126,6 +126,13 @@ _method dm_xml_handler.datamodel_xml( ds, properties)
 		_else >> ds.top_alternative_name
 		_endif
 	subs.add(_self.datamodel_detail_xml(:alternative_path_name,l_alt))
+	
+	_local l_file << properties[:update_file].default("").replace_all_instances_of("\","/")
+	_if l_file.empty?
+	_then subs.add(_self.datamodel_detail_xml(:updates,""))
+	_else (l_name,l_dir) << system.pathname_components( l_file )
+	      subs.add(_self.datamodel_detail_xml(:updates,l_name,property_list.new_with(:fullpath,l_file)))
+	_endif
 
 	subs.add(_self.datamodel_detail_xml(:text_translation_disabled,!disable_text_translation?!))
 	subs.add(_self.datamodel_detail_xml(:active_languages,write_string(!current_languages!.size)))

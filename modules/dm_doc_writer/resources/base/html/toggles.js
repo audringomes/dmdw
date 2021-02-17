@@ -21,3 +21,25 @@ function ToggleTopology()
 function ToggleExplicitTopologyRules()
 {$(".RuleTypeexplicit").toggle();
  $(".RuleTypedefault").toggle();}
+
+function ToggleId(Id)
+{
+    var aNode = document.getElementById(Id);
+    if (aNode == null)
+	return;
+    if (aNode.style.display == 'none') 
+    {aNode.style.display = 'block';}
+    else 
+    {aNode.style.display = 'none';}
+}
+
+function ToggleSub(Id)
+{
+    var aNode = document.getElementById(Id).parentNode;
+    if (aNode == null)
+	return;
+    if (aNode.style.display == 'none') 
+    {aNode.style.display = 'block';}
+    else 
+    {aNode.style.display = 'none';}
+}

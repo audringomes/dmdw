@@ -104,6 +104,14 @@
       <td><b><xsl:value-of select="."/></b></td>
     </tr>
   </xsl:template>
+
+  <xsl:template match="dm_updates">
+    <tr>
+      <td><xsl:text>Update file: </xsl:text></td>
+      <td><b><xsl:value-of select="."/></b></td>
+    </tr>
+  </xsl:template>
+
   <xsl:template match="dm_text_translation_disabled">
     <tr>
       <td><xsl:text>Text translations disabled?</xsl:text></td>
@@ -342,6 +350,9 @@
       <xsl:attribute name="id">
 	<xsl:value-of select="ancestor::field/name"/>
 	<xsl:text>.details</xsl:text>
+      </xsl:attribute>
+      <xsl:attribute name="style">
+	<xsl:text>display:none;</xsl:text>
       </xsl:attribute>
       <ul class="joinDetailsList">
 	<li class="joinDetailsListItem">
