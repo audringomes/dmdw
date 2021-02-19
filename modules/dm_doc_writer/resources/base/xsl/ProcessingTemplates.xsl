@@ -594,14 +594,9 @@
       <xsl:attribute name="class">
 	<xsl:text>float </xsl:text>
 	<xsl:text>dmEnumerator</xsl:text>
-	<xsl:choose>
-	  <xsl:when test="//enumerated/name=@name">
-	    <xsl:text> Used</xsl:text>
-	  </xsl:when>
-	  <xsl:otherwise>
-	    <xsl:text> NotUsed</xsl:text>
-	  </xsl:otherwise>
-	</xsl:choose>
+	<xsl:call-template name="UsedUnusedEnum">
+	  <xsl:with-param name="enum" select="@name"/>
+	</xsl:call-template>
       </xsl:attribute>
       <tr class="HeadStyle">
 	<th class="name" colspan="3">
@@ -978,6 +973,18 @@
     <xsl:apply-templates select="/datamodel/soft_joins/soft_join_collection[@name=$name]"/>
   </xsl:template>
 
+  <xsl:template name="UsedUnusedEnum">
+    <!-- Return ' Used' or ' NotUsed' for enumerator name enum -->
+    <xsl:param name="enum"/>
+    <xsl:choose>
+      <xsl:when test="//enumerated/@name=$enum">
+	<xsl:text> Used</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:text> NotUsed</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
   
   <xsl:template name="PageWithFilter">
     <!--
@@ -1005,18 +1012,12 @@
 	    <div>
 	      <a name="{@name}" href="#" onclick="{concat('ShowElement(',$aps,@name,$aps,',',$aps,$elemclass,$aps,')')}">
 		<xsl:attribute name="class">
-		  <xsl:text>ListLink</xsl:text>
 		  
+		  <xsl:text>ListLink</xsl:text>
 		  <xsl:if test="$elemclass = 'dmEnumerator'">
-		    <!-- Nasty method to get the style for enumerators including the Used/Not USed flag -->
-		    <xsl:choose>
-		      <xsl:when test="//enumerated/@name=@name">
-			<xsl:text> Used</xsl:text>
-		      </xsl:when>
-		      <xsl:otherwise>
-			<xsl:text> NotUsed</xsl:text>
-		      </xsl:otherwise>
-		    </xsl:choose>
+		    <xsl:call-template name="UsedUnusedEnum">
+		      <xsl:with-param name="enum" select="@name"/>
+		    </xsl:call-template>
 		  </xsl:if>
 		  
 		</xsl:attribute>

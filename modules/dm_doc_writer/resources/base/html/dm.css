@@ -78,8 +78,9 @@ table.dmEnumerator
     overflow: auto;
     /* margin-left: 10px; */
 }
-table#audit_history_event_types{
-  display:-moz-popup;
+table.dmEnumerator.NotUsed {
+    border-top-width: 3px;
+    border-top-color: #a00;
 }
 table.dmTopology
 {
