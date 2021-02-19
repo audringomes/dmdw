@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-19T11:28:27Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-18T12:22:08Z">
 	<datamodel_info>
 		<dm_dataset>demographics</dm_dataset>
 		<dm_external_name>Demographics</dm_external_name>
@@ -428,7 +428,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3
 	Standardwert: sw:simple_vector:[1-3] </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZareaVfieldZds-0021version">
@@ -478,7 +478,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>Districts ist ein join Feld Objekttabelle mit Datensätzen aus &apos;district&apos; wird ausgegeben </help_text>
+				<help_text>Districts ist ein join Feld Objekttabelle mit DatensÃ¤tzen aus &apos;district&apos; wird ausgegeben </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZareaVfieldZannotation">
 				<external_name>Annotation</external_name>
@@ -568,7 +568,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZconstructionVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -709,7 +709,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdimensioningVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -947,7 +947,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3
 	Standardwert: sw:simple_vector:[1-3] </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdistrictVfieldZds-0021version">
@@ -1027,7 +1027,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>Sectors ist ein join Feld Objekttabelle mit Datensätzen aus &apos;sector&apos; wird ausgegeben </help_text>
+				<help_text>Sectors ist ein join Feld Objekttabelle mit DatensÃ¤tzen aus &apos;sector&apos; wird ausgegeben </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdistrictVfieldZannotation">
 				<external_name>Annotation</external_name>
@@ -1117,7 +1117,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -1428,7 +1428,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -1739,7 +1739,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -2050,7 +2050,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -2361,7 +2361,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Zeichnungsnummer ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>Zeichnungsnummer ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZtitle">
 				<external_name>Titel</external_name>
@@ -2379,10 +2379,10 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Titel ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>Titel ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZscale">
-				<external_name>Zeichnungsmaßstab</external_name>
+				<external_name>ZeichnungsmaÃŸstab</external_name>
 				<name>scale</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2398,7 +2398,7 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Zeichnungsmaßstab ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
+				<help_text>ZeichnungsmaÃŸstab ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
 	eins von: 1:1, 1:10, 1:100, 1:1000, 1:16, 1:25, 1:250, 1:32, 1:4, 1:50, 1:500, 1:64, 1:8
 	Standardwert: 1:1 </help_text>
 			</field>
@@ -2418,7 +2418,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Eingegeben durch ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32
+				<help_text>Eingegeben durch ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32
 	Standardwert: proc get_cached_data </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZdate_entered">
@@ -2441,7 +2441,7 @@
 	Standardwert: proc get_cached_data </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZrevision_date">
-				<external_name>Letzte Überarbeitung</external_name>
+				<external_name>Letzte Ãœberarbeitung</external_name>
 				<name>revision_date</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2456,7 +2456,7 @@
 						<phys_type type="ds_date"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Letzte Überarbeitung ist ein dd description!basic_fieldFeld der Klasse ds_date, z. B. 01.01.1970
+				<help_text>Letzte Ãœberarbeitung ist ein dd description!basic_fieldFeld der Klasse ds_date, z. B. 01.01.1970
 	Standardwert: proc get_cached_data </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZformat">
@@ -2475,7 +2475,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Format ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32
+				<help_text>Format ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32
 	Standardwert: A0 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZorientation">
@@ -2519,7 +2519,7 @@
 	Standardwert: 1.188e+003 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZheight">
-				<external_name>Höhe</external_name>
+				<external_name>HÃ¶he</external_name>
 				<name>height</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2534,7 +2534,7 @@
 						<phys_type type="ds_float"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Höhe ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
+				<help_text>HÃ¶he ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
 	Standardwert: 840.0 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZdrawing_units_descr">
@@ -2559,7 +2559,7 @@
 	Standardwert: Millimetre </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZworld_units_descr">
-				<external_name>Auflösung</external_name>
+				<external_name>AuflÃ¶sung</external_name>
 				<name>world_units_descr</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2575,7 +2575,7 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Auflösung ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
+				<help_text>AuflÃ¶sung ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
 	eins von: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometre, Metre, Micrometre, Millimetre, Nanometre
 	Standardwert: Nanometre </help_text>
 			</field>
@@ -2595,7 +2595,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3
 	Standardwert: sw:simple_vector:[1-3] </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZds-0021version">
@@ -2763,7 +2763,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>function_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>function_name ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZparam_1">
 				<external_name>param_1</external_name>
@@ -2781,7 +2781,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>param_1 ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZparam_2">
 				<external_name>param_2</external_name>
@@ -2799,7 +2799,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_2 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>param_2 ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZparam_3">
 				<external_name>param_3</external_name>
@@ -2817,7 +2817,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_3 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>param_3 ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZparam_4">
 				<external_name>param_4</external_name>
@@ -2835,7 +2835,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_4 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>param_4 ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZowner_id">
 				<external_name>owner_id</external_name>
@@ -2924,7 +2924,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>children ist ein join Feld Objekttabelle mit Datensätzen aus &apos;drawing_function&apos; wird ausgegeben </help_text>
+				<help_text>children ist ein join Feld Objekttabelle mit DatensÃ¤tzen aus &apos;drawing_function&apos; wird ausgegeben </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZextra_params">
 				<external_name>extra_params</external_name>
@@ -2954,7 +2954,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>extra_params ist ein join Feld Objekttabelle mit Datensätzen aus &apos;sw_gis!drawing_function_param&apos; wird ausgegeben </help_text>
+				<help_text>extra_params ist ein join Feld Objekttabelle mit DatensÃ¤tzen aus &apos;sw_gis!drawing_function_param&apos; wird ausgegeben </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZfunction_geometries">
 				<external_name>function_geometries</external_name>
@@ -2984,7 +2984,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>function_geometries ist ein join Feld Objekttabelle mit Datensätzen aus &apos;function_geometry&apos; wird ausgegeben </help_text>
+				<help_text>function_geometries ist ein join Feld Objekttabelle mit DatensÃ¤tzen aus &apos;function_geometry&apos; wird ausgegeben </help_text>
 			</field>
 			<field type="join" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZowner">
 				<external_name>owner</external_name>
@@ -3036,7 +3036,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>Name ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZformat">
 				<external_name>Format</external_name>
@@ -3054,7 +3054,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Format ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32
+				<help_text>Format ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32
 	Standardwert: A0 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZorientation">
@@ -3153,7 +3153,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3
 	Standardwert: sw:simple_vector:[1-3] </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZds-0021version">
@@ -3267,7 +3267,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>param_name ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZrwo_style_code">
 				<external_name>rwo_style_code</external_name>
@@ -3342,7 +3342,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3
 	Standardwert: sw:simple_vector:[1-3] </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZds-0021version">
@@ -3552,7 +3552,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZpiechartVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -3703,7 +3703,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>Name ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZrwo_id">
 				<external_name>rwo_id</external_name>
@@ -3721,7 +3721,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3
 	Standardwert: sw:simple_vector:[1-3] </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZds-0021version">
@@ -3871,7 +3871,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Code ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>Code ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZdistrict_code">
 				<external_name>District Code</external_name>
@@ -4018,7 +4018,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3
 	Standardwert: sw:simple_vector:[1-3] </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZds-0021version">
@@ -4068,7 +4068,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>dd!join273966227 ist ein join Feld Objekttabelle mit Datensätzen aus &apos;int!sector_piechart&apos; wird ausgegeben </help_text>
+				<help_text>dd!join273966227 ist ein join Feld Objekttabelle mit DatensÃ¤tzen aus &apos;int!sector_piechart&apos; wird ausgegeben </help_text>
 			</field>
 			<field type="join" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZdistrict">
 				<external_name>District</external_name>
@@ -4128,7 +4128,7 @@
 						</db_set_join>
 					</join_details>
 				</sub_type>
-				<help_text>Piecharts ist ein join Feld Satz von Datensätzen aus &apos;piechart&apos; wird ausgegeben </help_text>
+				<help_text>Piecharts ist ein join Feld Satz von DatensÃ¤tzen aus &apos;piechart&apos; wird ausgegeben </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZannotation">
 				<external_name>Annotation</external_name>
@@ -4223,7 +4223,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>name ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsw_gis-0021drawing_function_paramVfieldZvalue_text_id">
 				<external_name>value_text_id</external_name>
@@ -4317,7 +4317,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der GrÃ¶ÃŸe 3 </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZcode1">
 				<external_name>code1</external_name>
@@ -4338,7 +4338,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>code1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>code1 ist eine dd description!basic_fieldZeichenfolge-FeldgrÃ¶ÃŸe 32 </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZdd-0021join273966227-0021rev">
 				<external_name>dd!join273966227!rev</external_name>

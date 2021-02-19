@@ -1,0 +1,18 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer})
+_method dd_collection_mixin.skip_svg_export?
+	## 
+	## Hook to filter out objects from being included in the SVG
+	## output.
+	##
+	>> _self.svg_exclude_list.includes?(_self.name)
+_endmethod
+$

@@ -1,12 +1,16 @@
 #% text_encoding = iso8859_1
 # ************************************************************
 #
-# BOOGERT-LAB / Realworld Software Products BV 2021
+# (c) 2021 Realworld Software Products. All Rights Reserved.
 #
 # ************************************************************
 
+_package sw
+
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer})
-dd_record_and_collection_mixin.define_shared_constant(:svg_exclude_list,
-	{:drawing},
-	:public)
+_method dd_table.skip_svg_export?
+	## 
+	## 
+	>> _self.svg_exclude_list.includes?(_self.name)
+_endmethod
 $

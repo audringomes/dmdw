@@ -132,8 +132,10 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 		write("File cannot be created ",p_file)
 		_return _unset 
 	_endif
-	
+
+#	write("Start ",p_collections.size)
 	_self.filter_excludes( p_collections )
+#	write("End ",p_collections.size)
 
 	# We assume collections are from one dataset
 	_local l_list << _self.origin_datasets( p_collections )
@@ -282,15 +284,15 @@ _pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
 _method dm_svg_writer.filter_excludes( p_list )
 	##
 	## Remove elements from P_LIST 
-	## P_LIST is a list with collections 
+	## P_LIST is a list of collections or tables
 	## 
 
 	_for i_elem _over p_list.elements()
 	_loop
-		_if i_elem.exclude_from_svg? _is _true _orif
-		    ((l_rec << i_elem.descriptor.record_exemplar) _isnt _unset _andif
-		     l_rec.exclude_from_svg? _is _true)
-		_then p_list.remove( i_elem )
+		_if i_elem.skip_svg_export? _is _true
+		_then
+			write(i_elem," skipped from SVG export")
+			p_list.remove( i_elem )
 		_endif
 	_endloop
 
@@ -309,15 +311,16 @@ _private _method dm_svg_writer.case_objects_for_collections( p_list )
 	##
 
 	_local l_cc << .ds.collection(:sw_gis!case_object)
-	#DEBUG write(l_cc)
+
 	_local l_hash << hash_table.new( p_list.size )
 	_for i_col _over p_list.fast_elements()
 	_loop
 		_local l_name << i_col.name
 		_local l_co << l_cc.select(predicate.eq(:name,l_name)).result
-		#DEBUG write("Found ",l_co)
+#		#DEBUG write("Found ",l_co)
 		_if l_co.size = 1
 		_then l_hash[l_name] << l_co.an_element()
+		      #DEBUG write("Found ",l_co.an_element()," for ",i_col)
 		_endif
 	_endloop
 

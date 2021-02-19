@@ -1,0 +1,23 @@
+#% text_encoding = iso8859_1
+# ************************************************************
+#
+# (c) 2021 Realworld Software Products. All Rights Reserved.
+#
+# ************************************************************
+
+_package sw
+
+def_slotted_exemplar(:dmdw_xml_thing,{},:simple_xml_thing_ns)
+$
+dmdw_xml_thing.define_shared_constant(:default_namespace,
+	property_list.new_with("https://github.com/boogert-lab/dmdw",:dmdw),
+	:public)
+$
+
+_pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
+_method dmdw_xml_thing.new(name,_optional elements,attributes)
+	## 
+	##
+	>> _super.new(name,elements,attributes,_self.default_namespace)
+_endmethod
+$

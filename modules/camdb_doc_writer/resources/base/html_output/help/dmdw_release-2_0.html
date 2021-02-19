@@ -18,7 +18,7 @@
 	<meta name="description" content="Release 2.0 Feb 2021 These are the major changes in DMDW. General Added the possibility to create and embed a diagram based on the graphics in the case database. The help now i" />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="15/02/2021" />
+        <meta name="revised" content="17/02/2021" />
         <meta name="id" content="dmdw_Release-2_0" />
 	<meta name="msapplication-tap-highlight" content="no" />
 <link rel="shortcut icon" href="favicon.ico" />
@@ -323,6 +323,8 @@ function GetSearchPage() {
 <p class="p_Normal">To facilitate the creation of an index page when multiple xml files are being transformed, a new method is made available:</p>
 <p class="p_Normal"><span style="font-weight: bold;">dm_xml_transformer.create_index_page( module , files )</span> For this, the new xsl sheet<span style="font-weight: bold;"> index.xsl </span>is created</p>
 <p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">When the parameter <span style="font-weight: bold;">index_file </span>is passed to the transformer, a hyperlink to that page is created at the top of every page.</p>
+<p class="p_Normal">&nbsp;</p>
 <p class="p_Normal"><span style="font-weight: bold;">New and changed XLS Stylesheets</span></p>
 <p class="p_Normal">A new stylesheet <span style="font-weight: bold;">Fileset3.xsl</span> outputs pages without the dd_version prefix. It facilitates also the include of svg documents created.</p>
 <p class="p_Normal">&nbsp;</p>
@@ -332,8 +334,14 @@ function GetSearchPage() {
 <p class="p_Normal">When the new, optional, module <span style="font-weight: bold;">dm_svg_writer </span>is loaded, it will create a SVG image from the collections and relationships exported.</p>
 <p class="p_Normal">It can operate independently by <span style="font-weight: bold;">dm_svg_writer.create_svg_for( collections, file ).</span></p>
 <p class="p_Normal">&nbsp;</p>
-<p class="p_Normal"><span style="font-weight: bold;">Renamed proc</span></p>
-<p class="p_Normal">The example proc <span style="font-weight: bold;">dump_camdb</span> is renamed to <span style="font-weight: bold;">export_camdb</span>.</p>
+<p class="p_Normal"><span style="font-weight: bold;">Renamed procs</span></p>
+<p class="p_Normal">In the camdb example product:</p>
+<p class="p_Normal">global proc <span style="font-weight: bold;">dump_camdb</span> is renamed to <span style="font-weight: bold;">!dm_export_camdb!</span></p>
+<p class="p_Normal">global proc <span style="font-weight: bold;">transform_camdb_xml</span> is now changed to <span style="font-weight: bold;">!dm_transform_camdb!</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In the module <span style="font-weight: bold;">dm_doc_writer</span> :</p>
+<p class="p_Normal">global proc <span style="font-weight: bold;">export_xml</span> is renamed to <span style="font-weight: bold;">!dm_export_xml!</span></p>
+<p class="p_Normal">global proc <span style="font-weight: bold;">transform_to_fileset_html</span> is renamed to <span style="font-weight: bold;">!dm_transform_to_fileset_html!</span></p>
 <p class="p_Heading2"><span class="f_Heading2">3.&nbsp;HTML&nbsp;Output&nbsp;changes</span></p>
 <p class="p_Normal"><span style="font-weight: bold;">Data Model</span></p>
 <p class="p_Normal">Several changes to present the new xml content. More information on joins is available. See the example below:</p>

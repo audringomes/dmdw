@@ -21,7 +21,7 @@ _pragma(classify_level=basic, topic={dmdw,dm_doc_writer})
 ##   en_gb/help
 ##
 _global create_dmdw_module <<
-_proc @create_module(p_parent_dir,p_module_name, _gather p_args)
+_proc @create_module( p_parent_dir, p_module_name, _gather p_args)
 	
 	_local l_args << property_list.new_from_gathered(p_args)
 	l_args[:resources] << property_list.new_with(:base,{:data,:xml,:html,:html_output,:xsl},

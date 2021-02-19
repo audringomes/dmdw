@@ -8,13 +8,8 @@
 _package sw
 
 _pragma(classify_level=basic, topic={dmdw,dm_svg_writer})
-_method dd_record_and_collection_mixin.exclude_from_svg?
-	## 
-	## Hook to filter out objects from being included in the SVG
-	## output.
-	##
-	##
-	>> _false
-#	>> _self.name _is :picture
-_endmethod
+## Vector of table names to skip
+dd_record_and_collection_mixin.define_shared_constant(:svg_exclude_list,
+	{},
+	:public)
 $

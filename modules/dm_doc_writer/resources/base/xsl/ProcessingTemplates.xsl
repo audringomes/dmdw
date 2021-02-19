@@ -595,7 +595,7 @@
 	<xsl:text>float </xsl:text>
 	<xsl:text>dmEnumerator</xsl:text>
 	<xsl:choose>
-	  <xsl:when test="//enumerated/@enumerator_name=@name">
+	  <xsl:when test="//enumerated/name=@name">
 	    <xsl:text> Used</xsl:text>
 	  </xsl:when>
 	  <xsl:otherwise>
@@ -977,6 +977,7 @@
     <xsl:param name="name"/>
     <xsl:apply-templates select="/datamodel/soft_joins/soft_join_collection[@name=$name]"/>
   </xsl:template>
+
   
   <xsl:template name="PageWithFilter">
     <!--
@@ -1002,7 +1003,23 @@
 	  <!-- list of elements -->
 	  <xsl:for-each select="$selectList">
 	    <div>
-	      <a name="{@name}" class="ListLink" href="#" onclick="{concat('ShowElement(',$aps,@name,$aps,',',$aps,$elemclass,$aps,')')}">
+	      <a name="{@name}" href="#" onclick="{concat('ShowElement(',$aps,@name,$aps,',',$aps,$elemclass,$aps,')')}">
+		<xsl:attribute name="class">
+		  <xsl:text>ListLink</xsl:text>
+		  
+		  <xsl:if test="$elemclass = 'dmEnumerator'">
+		    <!-- Nasty method to get the style for enumerators including the Used/Not USed flag -->
+		    <xsl:choose>
+		      <xsl:when test="//enumerated/@name=@name">
+			<xsl:text> Used</xsl:text>
+		      </xsl:when>
+		      <xsl:otherwise>
+			<xsl:text> NotUsed</xsl:text>
+		      </xsl:otherwise>
+		    </xsl:choose>
+		  </xsl:if>
+		  
+		</xsl:attribute>
 		<xsl:value-of select="@name"/>
 	      </a>
 	    </div>

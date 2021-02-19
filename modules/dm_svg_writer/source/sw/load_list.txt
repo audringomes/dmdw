@@ -1,4 +1,6 @@
 geometry/
 case/
 dd_record_and_collection_mixin_extras
+dd_collection_mixin_extras
+dd_table_extras
 rwo_record_mixin_extras

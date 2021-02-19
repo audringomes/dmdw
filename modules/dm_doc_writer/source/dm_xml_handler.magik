@@ -32,6 +32,13 @@ dm_xml_handler.define_shared_constant(
 	:public)
 $
 
+_pragma(classify_level=advanced, topic={dmdw,dm_doc_writer},usage={internal})
+dm_xml_handler.define_shared_constant(
+	:xml_class,simple_xml_thing,
+	:public)
+$
+
+
 _pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 ##
 ## The XML namespace and schema properties of <dmdw:datamodel>
@@ -110,7 +117,7 @@ _method dm_xml_handler.datamodel_xml( ds, properties)
 	# datamodel_info
 	
 	_local subs << rope.new()
-	_local l_dd << sw:simple_xml_thing.new(:datamodel_info, subs)
+	_local l_dd << _self.xml_class.new(:datamodel_info, subs,_unset)
 
 	subs.add(_self.datamodel_detail_xml(:dataset,ds.name.write_string))
 	subs.add(_self.datamodel_detail_xml(:external_name,ds.external_name))
@@ -211,7 +218,7 @@ _method dm_xml_handler.datamodel_history_xml( ds, _optional props )
 	write("Product history select returned ",l_records.size," records")
 	
 	_local l_rope << rope.new()
-	_local l_xml << sw:simple_xml_thing.new(:datamodel_history,l_rope)
+	_local l_xml << _self.xml_class.new(:datamodel_history,l_rope)
 
 	_local l_str << write_string("The product history shown is based on product ",
 				     l_props[:dm_product_name].default("ALL"),
@@ -222,7 +229,7 @@ _method dm_xml_handler.datamodel_history_xml( ds, _optional props )
 				     _else >> ", not using any predicate."
 				     _endif)
 	
-	l_rope.add(sw:simple_xml_thing.new(:datamodel_history_meta,{l_str}))
+	l_rope.add(_self.xml_class.new(:datamodel_history_meta,{l_str}))
 
 
 	_for i_rec _over l_records.fast_elements()
@@ -230,7 +237,7 @@ _method dm_xml_handler.datamodel_history_xml( ds, _optional props )
 		##DEBUG write(i_rec)
 		_local l_flds << rope.new()
 		_local l_rec_props << _self.urn_prop_for(:record,i_rec)
-		i_xml << sw:simple_xml_thing.new(:datamodel_history_record,l_flds,l_rec_props)
+		i_xml << _self.xml_class.new(:datamodel_history_record,l_flds,l_rec_props)
 
 		_for i_fld _over l_fields.fast_elements()
 		_loop
@@ -239,7 +246,7 @@ _method dm_xml_handler.datamodel_history_xml( ds, _optional props )
 			i_fldname << i_fld.name
 			i_fldvalue << i_rec.perform(i_fldname).write_string
 			l_props[:key] << i_fld.is_key?
-			i_fldxml << sw:simple_xml_thing.new(i_fldname,{i_fldvalue},l_props)
+			i_fldxml << _self.xml_class.new(i_fldname,{i_fldvalue},l_props)
 			l_flds.add(i_fldxml)
 		_endloop
 
@@ -255,7 +262,7 @@ _pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.datamodel_detail_xml(key,value,_optional atts)
 	## 
 	## 
-	>> sw:simple_xml_thing.new(:dm_+key,{value.write_string},atts)
+	>> _self.xml_class.new(:dm_+key,{value.write_string},atts)
 _endmethod
 $
 
@@ -263,7 +270,7 @@ _pragma(classify_level=advanced, topic={dmdw,dm_doc_writer})
 _method dm_xml_handler.global_properties_xml(p_elements)
 	## 
 	## 
-	>> sw:simple_xml_thing.new(:global_properties,p_elements)
+	>> _self.xml_class.new(:global_properties,p_elements)
 _endmethod
 $
 
@@ -286,7 +293,7 @@ _method dm_xml_handler.category_xml( p_elements, a_category, p_include_urn?)
 		l_cat_props[:name] << a_category
 	_endif
 	
-	>> sw:simple_xml_thing.new(:category,p_elements,l_cat_props)
+	>> _self.xml_class.new(:category,p_elements,l_cat_props)
 
 _endmethod
 $
@@ -313,7 +320,7 @@ _method dm_xml_handler.collection_xml( a_col, properties, p_include_urn?)
 	_endif
 	
 	
-	>> sw:simple_xml_thing.new(:collection,rope.new(),l_atts)
+	>> _self.xml_class.new(:collection,rope.new(),l_atts)
 
 _endmethod
 $
@@ -392,11 +399,11 @@ _method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
 	_endif
 
 	_local l_field_elements << rope.new()	
-	_local l_field_xml << sw:simple_xml_thing.new(:field,l_field_elements,l_atts)
+	_local l_field_xml << _self.xml_class.new(:field,l_field_elements,l_atts)
 
 	# Names
-	l_field_elements.add( sw:simple_xml_thing.new(:external_name,{a_fld.external_name.write_string}) )
-	l_field_elements.add( sw:simple_xml_thing.new(:name,{a_fld.name.write_string}) )
+	l_field_elements.add( _self.xml_class.new(:external_name,{a_fld.external_name.write_string}) )
+	l_field_elements.add( _self.xml_class.new(:name,{a_fld.name.write_string}) )
 
 	# Part of key info:
 	l_field_elements.add(_self.joins_using_field_xml( a_fld ))
@@ -406,18 +413,18 @@ _method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
 		  _then >> f_type.size.write_string
 		  _else >> ""
 		  _endif
-	l_field_elements.add( sw:simple_xml_thing.new(:size,l_size) )
-	l_field_elements.add( sw:simple_xml_thing.new(:key,{a_fld.is_key?.write_string}))
-	l_field_elements.add( sw:simple_xml_thing.new(:mandatory,{a_fld.mandatory?.write_string}))
+	l_field_elements.add( _self.xml_class.new(:size,l_size) )
+	l_field_elements.add( _self.xml_class.new(:key,{a_fld.is_key?.write_string}))
+	l_field_elements.add( _self.xml_class.new(:mandatory,{a_fld.mandatory?.write_string}))
 	
-	l_field_elements.add( sw:simple_xml_thing.new(:default_value,{a_fld.default_value.write_string}))
+	l_field_elements.add( _self.xml_class.new(:default_value,{a_fld.default_value.write_string}))
 
 	_if a_fld.responds_to?(:unset_value)
-	_then l_field_elements.add( sw:simple_xml_thing.new(:unset_value,{a_fld.unset_value.write_string} ))
+	_then l_field_elements.add( _self.xml_class.new(:unset_value,{a_fld.unset_value.write_string} ))
 	_endif
 
 	# Type
-	l_field_elements.add( sw:simple_xml_thing.new(:type,l_type) )
+	l_field_elements.add( _self.xml_class.new(:type,l_type) )
 	
 	# Stored unit
 	_if a_fld.has_stored_unit?
@@ -437,7 +444,7 @@ _method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
 		_then >> _self.derived_field_xml( a_fld )
 		_endif
 
-	_local l_sub_type << sw:simple_xml_thing.new(:sub_type,{l_field_specific_xml})
+	_local l_sub_type << _self.xml_class.new(:sub_type,{l_field_specific_xml})
 	l_field_elements.add( l_sub_type )
 	
 	# Description:	
@@ -445,7 +452,7 @@ _method dm_xml_handler.field_xml( a_fld, properties, p_include_urn?)
 	    (l_text << a_fld.defined_help_text) _is _unset
 	_then l_text << a_fld.help_text
 	_endif
-	l_field_elements.add(sw:simple_xml_thing.new(:help_text,{l_text}))
+	l_field_elements.add(_self.xml_class.new(:help_text,{l_text}))
 
 	>> l_field_xml
 
@@ -458,17 +465,17 @@ _method dm_xml_handler.dm_xml_stored_unit_xml( a_unit )
 	## 
 
 	_if a_unit _is _unset 
-	_then _return sw:simple_xml_thing.new(:stored_unit)
+	_then _return _self.xml_class.new(:stored_unit)
 	_endif
 	
 	_local l_props << property_list.new()
 	_local l_rope << rope.new()
 
-	l_rope.add( sw:simple_xml_thing.new( :dimensionality, a_unit.unit_dimensionality.name ))
-	l_rope.add( sw:simple_xml_thing.new( :short_description, a_unit.short_description ))
-	l_rope.add( sw:simple_xml_thing.new( :long_description, a_unit.long_description ))
+	l_rope.add( _self.xml_class.new( :dimensionality, a_unit.unit_dimensionality.name ))
+	l_rope.add( _self.xml_class.new( :short_description, a_unit.short_description ))
+	l_rope.add( _self.xml_class.new( :long_description, a_unit.long_description ))
 
-	>> sw:simple_xml_thing.new(:stored_unit,l_rope,l_props)
+	>> _self.xml_class.new(:stored_unit,l_rope,l_props)
 	
 _endmethod
 $
@@ -500,7 +507,7 @@ _method dm_xml_handler.sw_field_type_xml( p_field_type )
 	## 
 
 	_local l_rope << rope.new()
-	_local l_xml << sw:simple_xml_thing.new(:sw_field_type,l_rope,property_list.new_with(:name,p_field_type.name))
+	_local l_xml << _self.xml_class.new(:sw_field_type,l_rope,property_list.new_with(:name,p_field_type.name))
 
 	_if (l_enu << p_field_type.enumerator) _isnt _unset
 	_then l_rope.add( _self.enumerated_xml( l_enu ))
@@ -516,7 +523,7 @@ _method dm_xml_handler.sw_field_type_xml( p_field_type )
 		_else >> p_field_type.class.class_name
 		_endif
 	
-	l_element << sw:simple_xml_thing.new(:phys_type,{}, property_list.new_with(:type,write_string(phys_type)))
+	l_element << _self.xml_class.new(:phys_type,{}, property_list.new_with(:type,write_string(phys_type)))
 	l_rope.add(l_element)
 
 	>> l_xml
@@ -534,7 +541,7 @@ _method dm_xml_handler.join_field_xml( a_join_field )
 
 	_local l_elems << rope.new()
 	_local l_top_props << property_list.new_with(:type,l_type)
-	_local l_top_xml << sw:simple_xml_thing.new(:join_details,l_elems,l_top_props)
+	_local l_top_xml << _self.xml_class.new(:join_details,l_elems,l_top_props)
 	
 	_if l_type _is :text
 	_then l_elems.add( _self.text_join_xml( a_join_field ))
@@ -545,7 +552,7 @@ _method dm_xml_handler.join_field_xml( a_join_field )
 
 	_local l_rope << rope.new()
 	_local l_props << property_list.new()
-	_local l_xml << sw:simple_xml_thing.new(l_type,l_rope,l_props)
+	_local l_xml << _self.xml_class.new(l_type,l_rope,l_props)
 		
 	l_props[:heterogeneous] << a_join_field.heterogeneous?
 	l_props[:simple_result] << a_join_field.simple_result?
@@ -576,7 +583,7 @@ _method dm_xml_handler.dd_join_xml( a_dd_join )
 
 	l_rope.add(_self.join_conditions_xml( a_dd_join ))
 	
-	_local l_xml << sw:simple_xml_thing.new( l_class_name, l_rope, l_props )
+	_local l_xml << _self.xml_class.new( l_class_name, l_rope, l_props )
 	
 	>> l_xml
 	
@@ -593,7 +600,7 @@ _method dm_xml_handler.join_conditions_xml( a_dd_join )
 #	_endif
 	
 	_local l_rope << rope.new()
-	_local l_xml << sw:simple_xml_thing.new(:conditions,l_rope)
+	_local l_xml << _self.xml_class.new(:conditions,l_rope)
 
 	_for i_table_name _over a_dd_join.target_table_names.fast_elements()
 	_loop
@@ -605,7 +612,7 @@ _method dm_xml_handler.join_conditions_xml( a_dd_join )
 								:operator,i_cond[2].write_string,
 								:field2,i_cond[3].write_string)
 			
-			l_rope.add( sw:simple_xml_thing.new(:condition,{},l_prop) )
+			l_rope.add( _self.xml_class.new(:condition,{},l_prop) )
 		_endloop
 		
 	_endloop
@@ -623,7 +630,7 @@ $
 #	_local l_rope << rope.new()
 #	_local l_props << property_list.new()
 #	
-#	_local l_xml << sw:simple_xml_thing.new(:conditions,l_rope,l_props)
+#	_local l_xml << _self.xml_class.new(:conditions,l_rope,l_props)
 #
 #	>> l_xml
 #_endmethod
@@ -638,10 +645,10 @@ _method dm_xml_handler.join_result_flavour( a_fld )
 	_local (l_type,l_ordered?) << a_fld.result_flavour
 	_local l_rope << rope.new()
 
-	l_rope.add( sw:simple_xml_thing.new(:result_type,l_type) )
-	l_rope.add( sw:simple_xml_thing.new(:ordered,l_ordered?.default("").write_string) )
+	l_rope.add( _self.xml_class.new(:result_type,l_type) )
+	l_rope.add( _self.xml_class.new(:ordered,l_ordered?.default("").write_string) )
 	
-	>> sw:simple_xml_thing.new(:result_flavour,l_rope)
+	>> _self.xml_class.new(:result_flavour,l_rope)
 	
 _endmethod
 $
@@ -652,7 +659,7 @@ _method dm_xml_handler.result_tables_xml( a_fld )
 	##
 	
 	_local l_rope << rope.new()
-	_local l_xml << sw:simple_xml_thing.new(:result_tables,l_rope)
+	_local l_xml << _self.xml_class.new(:result_tables,l_rope)
 
 	_for i_table _over a_fld.result_tables.fast_elements()
 	_loop
@@ -660,7 +667,7 @@ _method dm_xml_handler.result_tables_xml( a_fld )
 		l_atts[:name] << i_table.name.write_string
 		l_atts[:external_name] << i_table.external_name.write_string
 		l_atts[:dataset] << i_table.dd.name.write_string
-		l_rope.add( sw:simple_xml_thing.new(:table,{},l_atts) )
+		l_rope.add( _self.xml_class.new(:table,{},l_atts) )
 	_endloop
 
 	>> l_xml
@@ -675,7 +682,7 @@ _method dm_xml_handler.super_dd_join_xml( p_fld )
 	## 
 
 	_local l_rope << rope.new()
-	_local l_xml << sw:simple_xml_thing.new(:super_dd_join,l_rope)
+	_local l_xml << _self.xml_class.new(:super_dd_join,l_rope)
 	
 	l_rope.add( _self.result_tables_xml( p_fld ))
 	
@@ -690,11 +697,11 @@ _method dm_xml_handler.text_join_xml( p_fld )
 	##
 
 	_local l_rope << rope.new()
-	_local l_xml << sw:simple_xml_thing.new(:text_join,l_rope)
+	_local l_xml << _self.xml_class.new(:text_join,l_rope)
 	_local l_params << p_fld.parameters
 	
-	l_rope.add( sw:simple_xml_thing.new(:field_name,l_params[1].write_string) )
-	l_rope.add( sw:simple_xml_thing.new(:text_table_name,l_params[2].write_string) )
+	l_rope.add( _self.xml_class.new(:field_name,l_params[1].write_string) )
+	l_rope.add( _self.xml_class.new(:text_table_name,l_params[2].write_string) )
 	
 	>> l_xml
 
@@ -712,15 +719,15 @@ _method dm_xml_handler.geometry_field_xml( a_field )
 	_local l_props << property_list.new_with(:type,l_geom_type,
 						 :has_topology,a_field.has_topology?)
 	
-	_local l_top << sw:simple_xml_thing.new( :geometry_details, l_elements, l_props)
+	_local l_top << _self.xml_class.new( :geometry_details, l_elements, l_props)
 
-	l_elements.add( sw:simple_xml_thing.new( :priority, a_field.priority.write_string ))
+	l_elements.add( _self.xml_class.new( :priority, a_field.priority.write_string ))
 
 	
 	_if (l_manifold << a_field.manifold_name) _isnt _unset
 	_then
 
-		_local l_xml << sw:simple_xml_thing.new(:inmanifold,{}, property_list.new_with(:name,l_manifold))
+		_local l_xml << _self.xml_class.new(:inmanifold,{}, property_list.new_with(:name,l_manifold))
 		l_elements.add(l_xml)
 		
 	_endif
@@ -732,12 +739,12 @@ _method dm_xml_handler.geometry_field_xml( a_field )
 		_local l_flds << rope.new()
 		
 		_for i_key,i_fld _over a_field.mapped_geometry_fields.fast_keys_and_elements()
-		_loop l_flds.add( sw:simple_xml_thing.new(:map,{},property_list.new_with(:key,i_key.write_string,
-											 :fld_name,i_fld.name,
-											 :fld_external_name,i_fld.external_name.write_string)))
+		_loop l_flds.add( _self.xml_class.new(:map,{},property_list.new_with(:key,i_key.write_string,
+										     :fld_name,i_fld.name,
+										     :fld_external_name,i_fld.external_name.write_string)))
 		_endloop
 		
-		_local l_xml << sw:simple_xml_thing.new(:mapped,l_flds,l_atts)
+		_local l_xml << _self.xml_class.new(:mapped,l_flds,l_atts)
 
 		l_elements.add(l_xml)
 		
@@ -747,7 +754,7 @@ _method dm_xml_handler.geometry_field_xml( a_field )
 		
 		_local l_atts << property_list.new_with(:name, write_string(f.name),
 							:external_name, write_string(f.external_name))
-		_local l_xml << sw:simple_xml_thing.new(:mapped_to, {}, l_atts)
+		_local l_xml << _self.xml_class.new(:mapped_to, {}, l_atts)
 		
 		l_elements.add(l_xml)
 		
@@ -765,7 +772,7 @@ _method dm_xml_handler.enumerators_xml( p_enumerators, p_include_urn? )
 	## 
 
 	_local l_rope << rope.new()
-	_local l_enums_xml << sw:simple_xml_thing.new(:enumerators,l_rope)
+	_local l_enums_xml << _self.xml_class.new(:enumerators,l_rope)
 
 	_for a_enu _over p_enumerators.fast_elements()
 	_loop l_rope.add(_self.enumerator_xml(a_enu, p_include_urn?, _true))
@@ -781,7 +788,7 @@ _method dm_xml_handler.enumerated_xml( a_enum )
 	## 
 	## 
 
-	>> sw:simple_xml_thing.new(:enumerated,{},property_list.new_with(:name,a_enum.name.write_string))
+	>> _self.xml_class.new(:enumerated,{},property_list.new_with(:name,a_enum.name.write_string))
 
 _endmethod
 $
@@ -806,13 +813,13 @@ _private _method dm_xml_handler.enumerator_xml(a_enum, p_include_urn?, p_include
 	_then
 		_for i_val,i_str _over a_enum.values_and_strings.fast_keys_and_elements()
 		_loop
-			val << sw:simple_xml_thing.new(:value,{i_str.write_string},
+			val << _self.xml_class.new(:value,{i_str.write_string},
 						       property_list.new_with(:intvalue,i_val))
 			l_rope.add(val)
 		_endloop
 	_endif
 	
-	>> sw:simple_xml_thing.new(:enumerator, l_rope, l_atts)
+	>> _self.xml_class.new(:enumerator, l_rope, l_atts)
 
 _endmethod
 $
@@ -828,7 +835,7 @@ _method dm_xml_handler.default_topology_rules_xml( p_list )
 	## 
 
 	_local l_rope << rope.new()
-	_local l_xml << sw:simple_xml_thing.new(:default_topology_rules,l_rope)
+	_local l_xml << _self.xml_class.new(:default_topology_rules,l_rope)
 
 	_for i_mf,i_rules _over p_list.fast_keys_and_elements()
 	_loop
@@ -853,7 +860,7 @@ _private _method dm_xml_handler.gen_rules_xml(manifold_name,rules)
 
 	_local l_rope << rope.new()
 	_local l_atts << property_list.new_with(:name,manifold_name)
-	_local l_xml << sw:simple_xml_thing.new(:manifold,l_rope,l_atts)
+	_local l_xml << _self.xml_class.new(:manifold,l_rope,l_atts)
 	_for i_rule _over rules.fast_elements()
 	_loop
 		l_str1 << i_rule[2].write_string.substitute_string("default ","")
@@ -861,7 +868,7 @@ _private _method dm_xml_handler.gen_rules_xml(manifold_name,rules)
 		l_atts << property_list.new_with(:geomtype1,l_str1,
 						 :geomtype2,l_str2)
 		l_rules_xml << _self.rules_xml({i_rule[5],i_rule[6]})
-		i_xml << sw:simple_xml_thing.new(:interaction,l_rules_xml,l_atts)
+		i_xml << _self.xml_class.new(:interaction,l_rules_xml,l_atts)
 		l_rope.add(i_xml)
 	_endloop
 	>> l_xml
@@ -876,7 +883,7 @@ _method dm_xml_handler.explicit_topology_rules_xml(_optional p_elements)
 	## <manifold> elements
 	##
 	
-	>> sw:simple_xml_thing.new(:explicit_topology_rules,p_elements.default(rope.new()))
+	>> _self.xml_class.new(:explicit_topology_rules,p_elements.default(rope.new()))
 	
 _endmethod
 $
@@ -895,7 +902,7 @@ _method dm_xml_handler.manifolds_xml(p_manifolds, p_include_urn?)
 
 	_endloop
 
-	>> sw:simple_xml_thing.new(:manifold_definitions,l_elements)
+	>> _self.xml_class.new(:manifold_definitions,l_elements)
 
 _endmethod
 $
@@ -914,10 +921,10 @@ _method dm_xml_handler.manifold_xml(p_mf_name, p_manifold, p_include_urn?)
 	_endif
 
 	_local l_elems << rope.new()
-	l_elems.add(sw:simple_xml_thing.new(:manifold_name,p_manifold.manifold_name.write_string))
-	l_elems.add(sw:simple_xml_thing.new(:manifold_code,p_manifold.manifold_code.write_string))
+	l_elems.add(_self.xml_class.new(:manifold_name,p_manifold.manifold_name.write_string))
+	l_elems.add(_self.xml_class.new(:manifold_code,p_manifold.manifold_code.write_string))
 	
-	>> sw:simple_xml_thing.new(:manifold,l_elems,l_atts)
+	>> _self.xml_class.new(:manifold,l_elems,l_atts)
 				   
 _endmethod
 $
@@ -930,7 +937,7 @@ _method dm_xml_handler.explicit_rules_manifold_xml(p_mf_name,p_manifold,p_tables
 	
 	_local l_atts << property_list.new_with(:name,p_mf_name,
 						:manifold_name,p_manifold.manifold_name.write_string)
-	>> sw:simple_xml_thing.new(:manifold,p_tables,l_atts)
+	>> _self.xml_class.new(:manifold,p_tables,l_atts)
 				  
 _endmethod
 $
@@ -1028,7 +1035,7 @@ _method dm_xml_handler.topology_collection1_xml( a_col )
 
 	_local l_atts << property_list.new_with(:name, a_col.name.write_string,
 						:external_name, a_col.external_name.write_string)
-	_local l_xml << sw:simple_xml_thing.new(:collection1,rope.new(),l_atts)
+	_local l_xml << _self.xml_class.new(:collection1,rope.new(),l_atts)
 
 	>> l_xml
 _endmethod
@@ -1042,7 +1049,7 @@ _method dm_xml_handler.topology_collection2_xml( a_col )
 
 	_local l_atts << property_list.new_with(:name, a_col.name.write_string,
 						:external_name, a_col.external_name.write_string)
-	_local l_xml << sw:simple_xml_thing.new(:collection2,rope.new(),l_atts)
+	_local l_xml << _self.xml_class.new(:collection2,rope.new(),l_atts)
 
 	>> l_xml	
 _endmethod
@@ -1055,7 +1062,7 @@ _method dm_xml_handler.field1_name_xml(p_fld, _optional p_elements)
 
 	l_atts << property_list.new_with(:name, p_fld.name.write_string,
 					 :external_name, p_fld.external_name.write_string)
-	>> sw:simple_xml_thing.new(:field1,p_elements.default(rope.new()),l_atts)
+	>> _self.xml_class.new(:field1,p_elements.default(rope.new()),l_atts)
 
 _endmethod
 $
@@ -1068,7 +1075,7 @@ _method dm_xml_handler.field2_name_xml(p_fld, p_rule_type, _optional p_elements)
 	l_atts << property_list.new_with(:name, p_fld.name.write_string,
 					 :external_name, p_fld.external_name.write_string,
 					 :rule_type,p_rule_type)
-	>> sw:simple_xml_thing.new(:field2,p_elements.default(rope.new()),l_atts)
+	>> _self.xml_class.new(:field2,p_elements.default(rope.new()),l_atts)
 
 _endmethod
 $
@@ -1088,7 +1095,7 @@ _method dm_xml_handler.rules_xml( p_rules )
 	_loop
 		l_key << write_string("rule",i_rule_nr).as_symbol()
 		l_value << write_string( p_rules[i_rule_nr] )
-		l_elem << sw:simple_xml_thing.new(l_key,{l_value})
+		l_elem << _self.xml_class.new(l_key,{l_value})
 		l_rope.add(l_elem)
 	_endloop
 
@@ -1135,11 +1142,11 @@ _method dm_xml_handler.xml_from_list(p_tag,p_list)
 			result << {i_value}
 		_endif
 		
-		a_rope.add(sw:simple_xml_thing.new(i_key,result))
+		a_rope.add(_self.xml_class.new(i_key,result))
 
 	_endloop
 
-	l_xml << sw:simple_xml_thing.new(p_tag,a_rope)
+	l_xml << _self.xml_class.new(p_tag,a_rope)
 
 	>> l_xml
 
@@ -1155,10 +1162,10 @@ _method dm_xml_handler.geometry_mappings_xml(list)
 	
 	_for i_key,i_value _over list.fast_keys_and_elements()
 	_loop 
-	      l_rope.add(sw:simple_xml_thing.new(:method,{i_value},property_list.new_with(:name,i_key)))
+	      l_rope.add(_self.xml_class.new(:method,{i_value},property_list.new_with(:name,i_key)))
 	_endloop
 
-	l_xml << sw:simple_xml_thing.new(:geometry_mappings,l_rope)
+	l_xml << _self.xml_class.new(:geometry_mappings,l_rope)
 	>> l_xml
 _endmethod
 $
@@ -1179,17 +1186,17 @@ _method dm_xml_handler.common_field_descriptions_xml(p_list)
 		_local l_flds_xml << rope.new()
 		_for i_name,i_props _over i_list.fast_keys_and_elements()
 		_loop 
-			a_xml << sw:simple_xml_thing.new(:field,{},i_props)
+			a_xml << _self.xml_class.new(:field,{},i_props)
 			l_flds_xml.add(a_xml)
 		_endloop
 
 		_local l_atts << property_list.new_with(:name,i_grp)
-		_local l_grp_xml << sw:simple_xml_thing.new(:group,l_flds_xml,l_atts)
+		_local l_grp_xml << _self.xml_class.new(:group,l_flds_xml,l_atts)
 		l_grps_xml.add(l_grp_xml)
 		
 	_endloop
 
-	_local l_xml << sw:simple_xml_thing.new(:commonfields,l_grps_xml)
+	_local l_xml << _self.xml_class.new(:commonfields,l_grps_xml)
 
 	>> l_xml
 _endmethod
@@ -1211,11 +1218,11 @@ _method dm_xml_handler.soft_joins_xml(list)
 			joins.add(_self.xml_from_list(:soft_join,i_elem))
 		_endloop
 		
-		l_rope.add(sw:simple_xml_thing.new(:soft_join_collection,joins,
+		l_rope.add(_self.xml_class.new(:soft_join_collection,joins,
 						   property_list.new_with(:name,i_key)))
 	_endloop
 
-	l_xml << sw:simple_xml_thing.new(:soft_joins,l_rope)
+	l_xml << _self.xml_class.new(:soft_joins,l_rope)
 	>> l_xml
 	
 _endmethod
@@ -1247,19 +1254,19 @@ _method dm_xml_handler.create_index_xml( p_fname, p_files )
 	l_props[:creation_date] << date_time.now()
 	
 	_local l_elements << rope.new()
-	_local l_xml << sw:simple_xml_thing.new(:index, l_elements, l_props)
+	_local l_xml << _self.xml_class.new(:index, l_elements, l_props)
 	
 	_for i_elem _over p_files.fast_elements()
 	_loop
 		_local l_rope << rope.new()
-		_local l_files << sw:simple_xml_thing.new(:files,l_rope)
+		_local l_files << _self.xml_class.new(:files,l_rope)
 		_local l_src_name << system.pathname_components(i_elem[1])
 		_local l_html_name << system.pathname_components(i_elem[2])
 		_local (l_name,ext) << system.split_filename(l_src_name)
 		_local l_pretty << l_name.make_non_escape_string_pretty()
-		l_rope.add( sw:simple_xml_thing.new(:source,l_src_name) )
-		l_rope.add( sw:simple_xml_thing.new(:html,l_html_name) )
-		l_rope.add( sw:simple_xml_thing.new(:pretty,l_pretty,property_list.new_with(:file,l_html_name)) )
+		l_rope.add( _self.xml_class.new(:source,l_src_name) )
+		l_rope.add( _self.xml_class.new(:html,l_html_name) )
+		l_rope.add( _self.xml_class.new(:pretty,l_pretty,property_list.new_with(:file,l_html_name)) )
 		l_elements.add( l_files )
 	_endloop
 

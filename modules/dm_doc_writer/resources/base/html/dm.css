@@ -290,6 +290,12 @@ li.Join {
 .ListLink {
 	font-size: 0.9em;
 }
+.ListLink.NotUsed {
+    color: #a00;
+}
+.ListLink.Used {
+    color: green;
+}
 input.ClearFilter {
 	vertical-align: top;
 }

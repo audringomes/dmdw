@@ -353,10 +353,12 @@ _private _method dm_xml_writer.categories_from_ace( ace_name )
 	_local ace << _self.ace( ace_name )
 	_local ds_name << .ds.name
 	
-	_local l_catrecs << equality_property_list.new()
 	_local list << equality_property_list.new()
+	_local l_catrecs << equality_property_list.new()
+
 	_for i_rec _over ace.dataset_rwo_entries_for(ds_name)
 	_loop
+		#DEBUG write(i_rec)
 		_if i_rec.type _is 1
 		_then
 			_local l_name << i_rec.name.write_string
@@ -365,6 +367,9 @@ _private _method dm_xml_writer.categories_from_ace( ace_name )
 			_then l_catrecs[l_name] << i_rec
 			_endif
 		_else
+			_if cat _is _unset 
+			_then cat << list["Uncategorized"] << rope.new()
+			_endif
 			cat.add(i_rec.name.as_symbol())
 		_endif
 	_endloop
@@ -407,7 +412,8 @@ _method dm_xml_writer.write_to( file )
 	l_objects.add_all_last( _self.dataset_special_includes)
 	
 	simple_xml.write_element_file( file, l_datamodel )
-
+	#simple_xml.new(:process_ns?,_true).write_element_file( file, l_datamodel )
+		
 	write("Dataset ",.ds," written to ", file)
 	
 _endmethod
@@ -432,6 +438,10 @@ _method dm_xml_writer.process_categories_and_collections()
 		_for i_colname _over i_cols.fast_elements()
 		_loop
 			i_col << .ds.collections[i_colname]
+			_if i_col _is _unset 
+			_then write("Ace entry for ",i_colname," - collection not found in ",.ds)
+			      _continue 
+			_endif
 			_if i_col.skip_dm_export? _is _true 
 			_then
 				write(i_col," skipped ")
@@ -881,15 +891,11 @@ _method dm_xml_writer.global_field_descriptions_xml()
 	## xml
 	##
 	
-	_local l_list << .updates[:commonfields]
-	_if l_list _isnt _unset 
-	_then _return dm_xml_handler.common_field_descriptions_xml(l_list)
-	_endif
-
-	l_list << .dataset_specials.global_field_descriptions
-	_if l_list _isnt _unset 
-	_then _return dm_xml_handler.common_field_descriptions_xml(l_list)
-	_endif
+	_if .updates _isnt _unset _andif
+	    (l_list << .updates[:commonfields]) _isnt _unset
+	_then
+		_return dm_xml_handler.common_field_descriptions_xml(l_list)
+	_endif	
 
 _endmethod
 $
@@ -901,15 +907,11 @@ _method dm_xml_writer.geometry_mappings_xml()
 	## or when not defined an empty rope
 	## 
 
-	_local l_list << .updates[:geometry_mappings]
-	_if l_list _isnt _unset 
-	_then _return dm_xml_handler.geometry_mappings_xml(l_list)
+	_if .updates _isnt _unset _andif
+	    (l_list << .updates[:geometry_mappings]) _isnt _unset
+	_then
+		_return dm_xml_handler.geometry_mappings_xml( l_list )
 	_endif
-	
-	>> _if (l_maps << .dataset_specials.geometry_mappings).is_kind_of?(property_list)
-	   _then >> dm_xml_handler.geometry_mappings_xml(l_maps)
-	   _else >> rope.new()
-	   _endif
 	
 _endmethod
 $
@@ -951,15 +953,17 @@ _method dm_xml_writer.create_svg()
 	## 
 
 	_local l_param << .properties[:case]
-	_local l_cv
+	
+	#DEBUG write("Case Param: ",l_param)
 
-	_if l_param _isnt _unset 
-	_then
-		l_cv << _self.opened_case( l_param )
-		_if l_cv _is _unset 
-		_then write("Case SOC '",l_param,"' specified, but could not open a dataset")
-		      _return 
-		_endif
+	_if l_param _is _unset 
+	_then _return 
+	_endif
+
+	_local l_cv << _self.opened_case( l_param )
+	_if l_cv _is _unset 
+	_then write("Case SOC '",l_param,"' specified, but could not open a dataset")
+	      _return 
 	_endif
 	
 	_local l_svg_writer_cls << !current_package![:dm_svg_writer]
@@ -1027,11 +1031,7 @@ _method dm_xml_writer.read_updates(_optional p_filename)
 	## reads updates, store them in .updates and return it.
 	## If P_FILENAME is unset, use .properties[:update_file]
 	##
-	
-	_local l_list << .updates << property_list.new_with(:commonfields,property_list.new(),
-							    :geometry_mappings,property_list.new(),
-							    :collections,rope.new())
-	
+		
 	_if (l_file << p_filename) _isnt _unset _orif
 	    (l_file << .properties[:update_file]) _isnt _unset 
 	_then
@@ -1045,7 +1045,11 @@ _method dm_xml_writer.read_updates(_optional p_filename)
 		write("No updates are configured ")
 		_return .updates
 	_endif
-	
+
+	_local l_list << .updates << property_list.new_with(:commonfields,property_list.new(),
+							    :geometry_mappings,property_list.new(),
+							    :collections,rope.new())
+
 	write("Processing updates from ",l_file)
 	_local l_xml << simple_xml.read_element_file(l_file)
 

@@ -1,29 +1,5 @@
 /* This file contains general functions for display  */
 
-function ToggleId(Id)
-{
-    var aNode = document.getElementById(Id);
-
-    if (aNode == null)
-	return;
-    
-    if (aNode.style.display == 'none') 
-    {aNode.style.display = 'block';}
-    else 
-    {aNode.style.display = 'none';}
-}
-
-function ToggleSub(Id)
-{
-    var aNode = document.getElementById(Id).parentNode;
-    if (aNode == null)
-	return;
-
-    if (aNode.style.display == 'none') 
-    {aNode.style.display = 'block';}
-    else 
-    {aNode.style.display = 'none';}
-}
 
 function ToggleCo()
 /* Toggles visibility of <g id="case_objects"> in SVG */
@@ -118,7 +94,6 @@ function ClearFilter()
     input.value = '';
     DisplayElements('ListLink','')					
 }
-
 
 function HighlightHash()
 /* Highlight target when jumped to it */
@@ -243,4 +218,3 @@ function ToggleAndHighlightField(Fname)
 	aNode.style.backgroundColor = 'inherit';
     }
 }
-
