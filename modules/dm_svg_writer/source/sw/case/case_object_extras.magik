@@ -93,3 +93,15 @@ _method case_object.a_element( p_properties )
 
 _endmethod
 $
+#
+#_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
+#_method case_object.text_joins()
+#	## 
+#	##
+#	_local l_rope << rope.new()
+#	_for i _over _self.text_join_fields()
+#	_loop l_rope.add(i)
+#	_endloop
+#	>> l_rope
+#_endmethod
+#$

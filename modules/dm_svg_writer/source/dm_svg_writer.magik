@@ -65,9 +65,6 @@ _method dm_svg_writer.default_properties
 						      :y,-1),
 		   # svg element properties:
 		   :svg,property_list.new_with(:xmlns,"http://www.w3.org/2000/svg",
-					       :width,700,
-					       :height,700,
-					       :viewBox,"0 0 700 700",
 					       :class,"svg"),
 		   :polyline,property_list.new_with(:class,"polyline"),
 		   :text,property_list.new_with(:|xml:space|,"preserve",
@@ -105,6 +102,8 @@ _private _method dm_svg_writer.init( ds_view, p_props )
 	ds_view.check_type( case_ds_view )
 	
 	.ds << ds_view
+
+	write("Using ",.ds," ",.ds.alternative_path_name())
 	
 	_self.set_properties( p_props )
 	
@@ -238,6 +237,11 @@ _private _method dm_svg_writer.set_properties( p_props )
 	_then l_list.add_all( p_props )
 	_endif
 
+	_local l_svg << l_list[:svg]
+	l_svg[:width] << l_list[:width]
+	l_svg[:height] << l_list[:height]
+	l_svg[:viewBox] << write_string("0 0 ",l_svg[:width]," ",l_svg[:height])
+	
 	l_list[:inner_box] << _self.inner_box
 	l_list[:background][:width] << l_list[:width]
 	l_list[:background][:height] << l_list[:height]	

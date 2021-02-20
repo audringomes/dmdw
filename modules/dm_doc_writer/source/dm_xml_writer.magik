@@ -86,12 +86,15 @@ _pragma(classify_level=basic, topic={dmdw,dm_doc_writer},usage={internal})
 _method dm_xml_writer.new(ds, properties)
 	##
 	## DS - The databse view to be reported
-	## PROPERTIES - A property_list with the following keys
+	## PROPERTIES - A property_list with the following keys and values:
+	##
 	##     :ace_name    - name of ACE to be used for categories and order of
 	##                    collections
 	##     :output_file - full path for the output xml file 
 	##
+	##
 	##     The following properties are optional:
+	##
 	##     :update_file - file pathname of xml with updates
 	##     :dm_product_name  - name of sw_product for datamodel version
 	##     :dm_module_name - name of sw_module for datamodel version
@@ -105,6 +108,7 @@ _method dm_xml_writer.new(ds, properties)
 	##                      include urns for
 	##     :case - Its value should be unset or the name of the soc
 	##        to open a case database for svg output
+	##     :svg_properties - See dm_svg_writer.new()
 	##
 	## On instantiation it will gather data.
 	##
@@ -489,7 +493,7 @@ _method dm_xml_writer.process_categories_and_collections()
 	_if _self.expand_tables?
 	_then
 		# Check for intermediate join collections
-		_local l_table_list << _self.expand_tables(l_exported_cols)
+		_local l_table_list << _self.expand_tables( l_exported_cols )
 		_if l_table_list.size > 0
 		_then
 			l_xmls << rope.new()
@@ -512,7 +516,7 @@ _endmethod
 $
 
 _pragma(classify_level=restricted, topic={dmdw,dm_doc_writer},usage={internal})
-_method dm_xml_writer.expand_tables(p_exported)
+_method dm_xml_writer.expand_tables( p_exported )
 	## 
 	## P_EXPORTED is a collection of dd_tables that are exported. This
 	## method search for intermediate tables to be exported when
@@ -950,7 +954,9 @@ _method dm_xml_writer.create_svg()
 	## When the dm_svg_writer is loaded and the option :case is
 	## specified and an opened case is present, we will create a
 	## svg image for all exported collections.
-	## 
+	##
+	## When defined .properties[:svg_properties] are passed to the
+	## writer 
 
 	_local l_param << .properties[:case]
 	
@@ -976,11 +982,13 @@ _method dm_xml_writer.create_svg()
 	_local ( l_name, l_dir ) << system.pathname_components( .out_file )
 	_local ( l_base, l_ext ) << system.split_filename( l_name )
 	_local l_file_name << system.pathname_from_components( write_string(l_base,".svg"), l_dir )
+
+	_local l_props << .properties[:svg_properties].default(property_list.new())
 	
 	write("Creating SVG for ",.exported_collections," to ", l_file_name)
 	
 	_try _with p_cond
-		l_svg_writer << l_svg_writer_cls.new( l_cv )
+		l_svg_writer << l_svg_writer_cls.new( l_cv, l_props )
 		l_svg_writer.create_svg_for( .exported_collections, l_file_name )	
 	_when error
 		write("Error creating SVG :",p_cond.report_contents_string)

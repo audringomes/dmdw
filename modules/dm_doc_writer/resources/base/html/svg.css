@@ -3,8 +3,9 @@
 .svgwrapper {
     margin-top: 10px;
     display: block;
-    height: 700px;
+/*  height: 700px;
     width: 700px;
+*/
     background-color: gainsboro;
 /*  background: url('bck.png');*/
 }
