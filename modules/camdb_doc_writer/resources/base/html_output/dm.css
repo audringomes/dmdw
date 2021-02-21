@@ -78,8 +78,9 @@ table.dmEnumerator
     overflow: auto;
     /* margin-left: 10px; */
 }
-table#audit_history_event_types{
-  display:-moz-popup;
+table.dmEnumerator.NotUsed {
+    border-top-width: 3px;
+    border-top-color: #a00;
 }
 table.dmTopology
 {
@@ -440,9 +441,6 @@ td.field1 {
     padding: 1px;
 }
 /* Used in title of page */
-.DsName {
-    font-size: medium;
-}
 .dmTableDoc {
     margin-bottom: 10px;
     min-width: 400px;
@@ -513,4 +511,10 @@ ul.Join {
 }
 .svglink {
     font-weight: normal;
+}
+.svgwrapper {
+    margin-top: 10px;
+    display: block;
+    background-color: gainsboro;
+    overflow-x: auto;
 }

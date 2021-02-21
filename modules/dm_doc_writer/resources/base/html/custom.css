@@ -1,13 +1,30 @@
-/* Datamodel Styles */
+/* DMDW Styles */
 
 /* CUSTOM STYLING */
 
 body {
-	background-image:url("dmdw-background.png");
+    background-image:url("dmdw-background.png");
+}
+.index {
+    font-style: normal;
+}
+.title {
+    width: 200px;
+    display: inline-block;
+    height: 50px;
+    font-size: smaller;
 }
 .logo {
-	width: 200px;
-	display: inline-block;
-	height: 50px;
-	font-size: smaller;
-   }
+    background-image: url('dmdw-logo.png');
+    height: 50px;
+    width: 200px;
+    display: inline-block;
+}
+.Maintitle {
+    font-style: normal;
+    color: beige;
+}
+.DsName {
+    font-size: medium;
+}
+

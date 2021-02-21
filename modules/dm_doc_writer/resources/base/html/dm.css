@@ -441,9 +441,6 @@ td.field1 {
     padding: 1px;
 }
 /* Used in title of page */
-.DsName {
-    font-size: medium;
-}
 .dmTableDoc {
     margin-bottom: 10px;
     min-width: 400px;
@@ -514,4 +511,10 @@ ul.Join {
 }
 .svglink {
     font-weight: normal;
+}
+.svgwrapper {
+    margin-top: 10px;
+    display: block;
+    background-color: gainsboro;
+    overflow-x: auto;
 }

@@ -48,9 +48,11 @@
 	</div>
       </xsl:if>
       
-      <a class="logo" href="{concat($path,$filename0)}">
-	<img src="{concat($path,'dmdw-logo.png')}"/>
-	<xsl:value-of select="$maintitle"/>
+      <a class="title" href="{concat($path,$filename0)}">
+	<div class="logo"/>
+	<span class="Maintitle">
+	  <xsl:value-of select="$maintitle"/>
+	</span>
 	<span class="DsName">
 	  <xsl:text> </xsl:text>
 	  <xsl:value-of select="$dm_external_name"/>

@@ -26,10 +26,10 @@
     <html>
       <body>
 	<header class="float">
-	  <a href="#" class="logo">
-	    <img src="dmdw-logo.png"/>
+	  <div class="logo"/>
+	  <div class="Maintitle">
 	    <xsl:value-of select="$maintitle"/>
-	  </a>
+	  </div>
 	</header>
 
 	<div class="PageTitle float">Index of Datamodel Documents</div>
@@ -43,6 +43,7 @@
 	    <xsl:apply-templates/>
 	  </table>
 	</nav>
+	
       </body>
     </html>
 

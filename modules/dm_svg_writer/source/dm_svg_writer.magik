@@ -59,6 +59,8 @@ _method dm_svg_writer.default_properties
 		   :margin,50,
 		   :transform,transform.new(),
 		   :standalone?,_false,
+		   :cssname,"svg.css",
+		   :embedd_css?,_true, # used when standalone? is true
 		   :background,property_list.new_with(:id,:background,
 						      :class,"background",
 						      :x,-1,
@@ -99,7 +101,7 @@ _private _method dm_svg_writer.init( ds_view, p_props )
 	## with the default ones.
 	##
 
-	ds_view.check_type( case_ds_view )
+	case_ds_view.check_type(  ds_view )
 	
 	.ds << ds_view
 
@@ -167,9 +169,15 @@ _method dm_svg_writer.create_svg_for( p_collections, p_file )
 	_local l_sub << l_doc.elements
 
 	_if _self.standalone? _is _true 
-	_then 
-		l_sub.add( _self.style_element() )
-		_self.copy_css_for_output( p_file )
+	_then
+		_if _self.properties[:embedd_css?].default(_false) _is _true 
+		_then
+			l_sub.add( _self.style_element() )
+		_else
+			l_sub.add( _self.style_link_element() )
+			_self.copy_css_for_output( p_file )
+		_endif
+		
 	_endif
 
 	# Note the order of rendering
@@ -408,7 +416,7 @@ _method dm_svg_writer.copy_css_for_output( p_file )
 	## Returns the outut file and copied?
 	##
 
-	_local l_cssname << "svg.css"
+	_local l_cssname << .properties[:cssname]
 	_local (fn,odir) << system.pathname_components(p_file)
 	_local l_out << system.pathname_from_components(l_cssname,odir)
 	_local l_copied? << _false 
@@ -480,10 +488,38 @@ _method dm_svg_writer.style_element()
 	## 
 	##
 	
+	_local l_cssname << _self.properties[:cssname].default("svg.css")
+	_local l_inp << smallworld_product.get_resource_file(l_cssname,:html,:dm_doc_writer)
+	_local l_stream
+	_local l_text << ""
+	
+	_protect
+		l_stream << external_text_input_stream.new(l_inp)
+		_loop 
+			_if _not l_stream.more_to_get?
+			_then _leave 
+			_endif
+			l_text << write_string(l_text,l_stream.get_some())
+		_endloop
+	_protection
+		l_stream.close()
+	_endprotect
+
+	>> sw:simple_xml_thing.new(:style,l_text)
+	
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={dmdw,dm_svg_writer},usage={internal})
+_method dm_svg_writer.style_link_element()
+	## 
+	##
+
+	_local l_fname << _self.properties[:cssname].default("svg.css")
 	>> sw:simple_xml_thing.new(:link,{},property_list.new_with(
 						    :xmlns,"http://www.w3.org/1999/xhtml",
 						    :rel,"stylesheet",
-						    :href,"svg.css",
+						    :href,l_fname,
 						    :type,"text/css"))
 	
 _endmethod

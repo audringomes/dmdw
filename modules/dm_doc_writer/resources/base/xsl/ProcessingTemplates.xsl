@@ -5,10 +5,9 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:dmdw="https://boogert-lab.nl/dmdw">
   
-  
   <!-- DATA PROCESSING TEMPLATES -->
   
-  <xsl:template match="software_version">
+  <xsl:template match="dmdw:software_version">
     <div style="overflow-x:auto">
       <table class="dmTableSoft float technical">
 	<tr>
