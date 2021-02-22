@@ -1,6 +1,8 @@
 /* DMDW Styles */
 
-/* CUSTOM STYLING */
+/* CUSTOM STYLES 
+   Note that the styles are defined only here in this file
+*/
 
 body {
     background-image:url("dmdw-background.png");
@@ -22,9 +24,8 @@ body {
 }
 .Maintitle {
     font-style: normal;
-    color: beige;
+    color: #084279;
 }
 .DsName {
     font-size: medium;
 }
-

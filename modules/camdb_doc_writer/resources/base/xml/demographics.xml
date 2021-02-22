@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-21T09:00:22Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-22T07:07:05Z">
 	<datamodel_info>
 		<dm_dataset>demographics</dm_dataset>
 		<dm_external_name>Demographics</dm_external_name>
@@ -4185,6 +4185,110 @@
 		</collection>
 	</category>
 	<category name="Expanded join tables">
+		<collection name="int!sector_piechart" external_name="int!sector_piechart" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZint-0021sector_piechart" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZrwo_id">
+				<external_name>rwo_id</external_name>
+				<name>rwo_id</name>
+				<used_in_join>
+					<join_field>dd!join273966230!rev</join_field>
+					<joins>dd!join273966230!rev</joins>
+				</used_in_join>
+				<size>3</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="gis_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZcode1">
+				<external_name>code1</external_name>
+				<name>code1</name>
+				<used_in_join>
+					<join_field>dd!join273966227!rev</join_field>
+					<joins>dd!join273966227!rev</joins>
+				</used_in_join>
+				<size>32</size>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value></default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char16canon"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>code1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZdd-0021join273966227-0021rev">
+				<external_name>dd!join273966227!rev</external_name>
+				<name>dd!join273966227!rev</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="sector" external_name="Sector" dataset="demographics"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="dd!join273966227!rev">
+								<conditions>
+									<condition target_table="sector" field1="code1" operator="=" field2="code"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>dd!join273966227!rev ist ein join Feld Datensatz aus &apos;sector&apos; wird ausgegeben </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZdd-0021join273966230-0021rev">
+				<external_name>dd!join273966230!rev</external_name>
+				<name>dd!join273966230!rev</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="piechart" external_name="Pie Chart" dataset="demographics"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="dd!join273966230!rev">
+								<conditions>
+									<condition target_table="piechart" field1="rwo_id" operator="=" field2="rwo_id"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>dd!join273966230!rev ist ein join Feld Datensatz aus &apos;piechart&apos; wird ausgegeben </help_text>
+			</field>
+		</collection>
 		<collection name="sw_gis!drawing_function_param" external_name="sw_gis!drawing_function_param" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZsw_gis-0021drawing_function_param" category="expanded">
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsw_gis-0021drawing_function_paramVfieldZfunc_id">
 				<external_name>func_id</external_name>
@@ -4295,110 +4399,6 @@
 					</join_details>
 				</sub_type>
 				<help_text>value ist ein join Feld Text wird ausgegeben </help_text>
-			</field>
-		</collection>
-		<collection name="int!sector_piechart" external_name="int!sector_piechart" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZint-0021sector_piechart" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZrwo_id">
-				<external_name>rwo_id</external_name>
-				<name>rwo_id</name>
-				<used_in_join>
-					<join_field>dd!join273966230!rev</join_field>
-					<joins>dd!join273966230!rev</joins>
-				</used_in_join>
-				<size>3</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="gis_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZcode1">
-				<external_name>code1</external_name>
-				<name>code1</name>
-				<used_in_join>
-					<join_field>dd!join273966227!rev</join_field>
-					<joins>dd!join273966227!rev</joins>
-				</used_in_join>
-				<size>32</size>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value></default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char16canon"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>code1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZdd-0021join273966227-0021rev">
-				<external_name>dd!join273966227!rev</external_name>
-				<name>dd!join273966227!rev</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="sector" external_name="Sector" dataset="demographics"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="dd!join273966227!rev">
-								<conditions>
-									<condition target_table="sector" field1="code1" operator="=" field2="code"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>dd!join273966227!rev ist ein join Feld Datensatz aus &apos;sector&apos; wird ausgegeben </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZdd-0021join273966230-0021rev">
-				<external_name>dd!join273966230!rev</external_name>
-				<name>dd!join273966230!rev</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="piechart" external_name="Pie Chart" dataset="demographics"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="dd!join273966230!rev">
-								<conditions>
-									<condition target_table="piechart" field1="rwo_id" operator="=" field2="rwo_id"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>dd!join273966230!rev ist ein join Feld Datensatz aus &apos;piechart&apos; wird ausgegeben </help_text>
 			</field>
 		</collection>
 	</category>

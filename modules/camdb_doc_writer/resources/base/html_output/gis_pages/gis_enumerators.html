@@ -6,7 +6,7 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../filter.js"></script><script src="../toggles.js"></script></head>
+      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
@@ -17,7 +17,10 @@
       </div>
       <div>
          <div class="container">
-            <div style="text-align: center;"><input type="checkbox" id="ToggleList" name="ToggleList" onclick="ToggleElements('dmEnumerator')" checked><label for="ToggleList">Show all</label></div>
+            <div style="text-align: center;"><span>Show</span><div style="display: inline-block;"><input type="radio" checked id="all" value="all" name="show" onclick="ToggleEnums(this)"><label for="all">All</label></div>
+               <div style="display: inline-block;"><input type="radio" id="Used" value="Used" name="show" onclick="ToggleEnums(this)"><label for="used">Used</label></div>
+               <div style="display: inline-block;"><input type="radio" id="Unused" name="show" value="NotUsed" onclick="ToggleEnums(this)"><label for="unused">Unused</label></div>
+            </div>
             <div class="navbox">
                <form method="GET"><input class="Filter" type="text" id="FilterItem" onkeyup="Filter()" title="Type string to filter" placeholder="Filter..."><input class="ClearFilter" type="image" onclick="ClearFilter()" title="Click to clear filter" src="../clear.png"></form>
                <div id="ListLinks">

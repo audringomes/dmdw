@@ -25,8 +25,7 @@
       
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
       </script>
-      <script src="{concat($path,'filter.js')}"/>
-      <script src="{concat($path,'toggles.js')}"/>
+      <script src="{concat($path,'dm.js')}"/>
     </head>
   </xsl:template>
 

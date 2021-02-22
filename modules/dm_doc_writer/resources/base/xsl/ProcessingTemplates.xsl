@@ -7,7 +7,7 @@
   
   <!-- DATA PROCESSING TEMPLATES -->
   
-  <xsl:template match="dmdw:software_version">
+  <xsl:template match="software_version">
     <div style="overflow-x:auto">
       <table class="dmTableSoft float technical">
 	<tr>
@@ -994,11 +994,11 @@
     <xsl:param name="select"/>     <!-- the xpath expression for the element transforms -->
     
     <div class="container">
-      <div style="text-align: center;">  
-	<input type="checkbox" id="ToggleList" name="ToggleList" onclick="{concat('ToggleElements(',$aps,$elemclass,$aps,')')}" checked="checked"/>
-	<label for="ToggleList">Show all</label>
-      </div>
 
+      <xsl:call-template name="TopFilterButton">
+	<xsl:with-param name="elemclass" select="$elemclass"/>
+      </xsl:call-template>
+      
       <div class="navbox">
 	<form method="GET">
 	  <input class="Filter" type="text" id="FilterItem" onkeyup="Filter()" title="Type string to filter" placeholder="Filter..."/>
@@ -1033,6 +1033,35 @@
       </div>
       
     </div>		 
+  </xsl:template>
+  
+  <xsl:template name="TopFilterButton">
+    <!-- Create the filterbutton at the top. Radio buttons for Enumerator Page -->
+    <xsl:param name="elemclass"/>
+    <div style="text-align: center;">  
+      <xsl:choose>
+	<xsl:when test="$elemclass = 'dmEnumerator'">
+	   <span>Show</span>
+	   <div style="display: inline-block;">
+	     <input type="radio" checked="checked" id="all" value="all" name="show" onclick="ToggleEnums(this)"/>
+	     <label for="all">All</label>
+	   </div>
+	   <div style="display: inline-block;">
+	     <input type="radio" id="Used" value="Used" name="show" onclick="ToggleEnums(this)"/>
+	     <label for="used">Used</label>    
+	   </div>
+	   <div style="display: inline-block;">
+	     <input type="radio" id="Unused" name="show" value="NotUsed" onclick="ToggleEnums(this)"/>
+	     <label for="unused">Unused</label>
+	   </div>
+	</xsl:when>
+	<xsl:otherwise>
+	  <input type="checkbox" id="ToggleList" name="ToggleList" onclick="{concat('ToggleElements(',$aps,$elemclass,$aps,')')}" checked="checked"/>
+	  <label for="ToggleList">Show all</label>
+	</xsl:otherwise>
+      </xsl:choose>
+    </div>
+
   </xsl:template>
   
 </xsl:stylesheet>

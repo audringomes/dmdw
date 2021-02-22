@@ -26,7 +26,7 @@
     <html>
       <body>
 	<header class="float">
-	  <div class="logo"/>
+	  <div class="logo"><xsl:text> </xsl:text></div>
 	  <div class="Maintitle">
 	    <xsl:value-of select="$maintitle"/>
 	  </div>
