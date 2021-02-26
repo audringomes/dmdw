@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../electricity.html">
@@ -49,7 +50,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint64</td>
-               <td>Customer Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: Customer Id dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="name" class="Field VisTrue">
                <td class="name">
@@ -62,7 +64,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16</td>
-               <td>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Name dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="address1" class="Field VisTrue">
                <td class="name">
@@ -75,7 +77,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Address1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Address1 dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="address2" class="Field VisTrue">
                <td class="name">
@@ -88,7 +90,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Address2 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Address2 dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="usage" class="Field VisTrue">
                <td class="name">
@@ -101,7 +103,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_int</td>
-               <td>Usage ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: Usage dd description!is_a_type: description!basic_field, integer, 0,
+                  </td>
             </tr>
             <tr id="sales" class="Field VisTrue">
                <td class="name">
@@ -114,7 +117,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_float</td>
-               <td>Unit sales ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000 </td>
+               <td>dd help!text: Unit sales dd description!is_a_type: description!basic_field, float,
+                  0.000, </td>
             </tr>
             <tr id="ds!version" class="Field VisFalse">
                <td class="name">
@@ -141,8 +145,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join268600936 ist ein join Feld Datensatz aus 'int!supply_point_customer' wird
-                     ausgegeben </div>
+                  <div>dd help!text: dd!join268600936 dd description!is_a: description!join_field dd description!record_from:
+                     int!supply_point_customer, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join268600936.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -180,8 +184,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -219,7 +223,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Supply Point ist ein join Feld Datensatz aus 'supply_point' wird ausgegeben </div>
+                  <div>dd help!text: Supply Point dd description!is_a: description!join_field dd description!record_from:
+                     supply_point, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('supply_point.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">

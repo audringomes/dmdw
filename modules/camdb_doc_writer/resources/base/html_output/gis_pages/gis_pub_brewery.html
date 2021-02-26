@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Gasthausbrauerei</title>
+      <title>Gis - Collection Pub Brewery</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Gasthausbrauerei</div>
+      <div class="PageTitle float">Pub Brewery</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#pub_brewery"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="pub_brewery">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Gasthausbrauerei</h3>
+                  <h3 class="InTable">Pub Brewery</h3>
                   <div class="technical InternalColName">pub_brewery</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="pub_rest_name" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Gaststätte Name</div>
+                  <div class="physical">Pub Rest Name</div>
                </td>
                <td class="technical">pub_rest_name</td>
                <td class="technical">32</td>
@@ -53,7 +54,7 @@
             </tr>
             <tr id="pub_rest_street" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Gaststätte Straße</div>
+                  <div class="physical">Pub Rest Street</div>
                </td>
                <td class="technical">pub_rest_street</td>
                <td class="technical">32</td>
@@ -66,7 +67,7 @@
             </tr>
             <tr id="brewery_name" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Brauereiname</div>
+                  <div class="physical">Brewery Name</div>
                </td>
                <td class="technical">brewery_name</td>
                <td class="technical">32</td>
@@ -75,7 +76,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Brauereiname ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Brewery Name dd description!is_a_string: description!basic_field, 32,
+                  </td>
             </tr>
             <tr id="ds!version" class="Field VisFalse">
                <td class="name">
@@ -92,7 +94,7 @@
             </tr>
             <tr id="brewery" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Brauerei</div>
+                  <div class="join">Brewery</div>
                </td>
                <td class="technical">brewery</td>
                <td class="technical"></td>
@@ -102,11 +104,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Brauerei ist ein join Feld Datensatz aus 'brewery' wird ausgegeben </div>
+                  <div>dd help!text: Brewery dd description!is_a: description!join_field dd description!record_from:
+                     brewery, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('brewery.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_brewery.html">Brauerei</a></li>
+                     <li class="Join"><a href="gis_brewery.html">Brewery</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="brewery.details" style="display:none;">
@@ -130,7 +133,7 @@
             </tr>
             <tr id="pub_rest" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Gaststätte</div>
+                  <div class="join">Pub Rest</div>
                </td>
                <td class="technical">pub_rest</td>
                <td class="technical"></td>
@@ -140,11 +143,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Gaststätte ist ein join Feld Datensatz aus 'pub_rest' wird ausgegeben </div>
+                  <div>dd help!text: Pub Rest dd description!is_a: description!join_field dd description!record_from:
+                     pub_rest, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('pub_rest.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="pub_rest.details" style="display:none;">

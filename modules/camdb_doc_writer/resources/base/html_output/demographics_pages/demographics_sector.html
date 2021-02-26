@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../demographics.html">
@@ -49,7 +50,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Code ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Code dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="district_code" class="Field VisFalse">
                <td class="name">
@@ -75,8 +76,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Unit Sales (0-9) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
-                  0 </td>
+               <td>dd help!text: Unit Sales (0-9) dd description!is_a_type: description!basic_field,
+                  integer, 0, </td>
             </tr>
             <tr id="sales_10" class="Field VisTrue">
                <td class="name">
@@ -89,8 +90,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Unit Sales (10-19) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
-                  0 </td>
+               <td>dd help!text: Unit Sales (10-19) dd description!is_a_type: description!basic_field,
+                  integer, 0, </td>
             </tr>
             <tr id="sales_20" class="Field VisTrue">
                <td class="name">
@@ -103,8 +104,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Unit Sales (20-29) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
-                  0 </td>
+               <td>dd help!text: Unit Sales (20-29) dd description!is_a_type: description!basic_field,
+                  integer, 0, </td>
             </tr>
             <tr id="sales_30" class="Field VisTrue">
                <td class="name">
@@ -117,8 +118,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Unit Sales (30-39) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
-                  0 </td>
+               <td>dd help!text: Unit Sales (30-39) dd description!is_a_type: description!basic_field,
+                  integer, 0, </td>
             </tr>
             <tr id="sales_40" class="Field VisTrue">
                <td class="name">
@@ -131,8 +132,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Unit Sales (40-49) ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
-                  0 </td>
+               <td>dd help!text: Unit Sales (40-49) dd description!is_a_type: description!basic_field,
+                  integer, 0, </td>
             </tr>
             <tr id="average_sales" class="Field VisTrue">
                <td class="name">
@@ -145,7 +146,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Average Sales ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: Average Sales dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="rwo_id" class="Field VisFalse">
                <td class="name">
@@ -185,8 +187,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join273966227 ist ein join Feld Objekttabelle mit Datensätzen aus 'int!sector_piechart'
-                     wird ausgegeben </div>
+                  <div>dd help!text: dd!join273966227 dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!sector_piechart, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join273966227.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -224,7 +226,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>District ist ein join Feld Datensatz aus 'district' wird ausgegeben </div>
+                  <div>dd help!text: District dd description!is_a: description!join_field dd description!record_from:
+                     district, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('district.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -262,7 +265,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Piecharts ist ein join Feld Satz von Datensätzen aus 'piechart' wird ausgegeben </div>
+                  <div>dd help!text: Piecharts dd description!is_a: description!join_field dd description!set_of_records_from:
+                     piechart, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('piecharts.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -282,6 +286,44 @@
                         									
                         <li class="joinDetailsListItem">Target: <span class="results"><a href="demographics_int!sector_piechart.html">int!sector_piechart</a></span></li>
                         <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">code</span>=<span class="name">code1</span></span></li>
+                        								
+                        							
+                        						</ul>
+                  </div>
+                  					</td>
+            </tr>
+            <tr id="shops" class="Field VisFalse">
+               <td class="name">
+                  <div class="join">shops</div>
+               </td>
+               <td class="technical">shops</td>
+               <td class="technical"></td>
+               <td class="technical">False</td>
+               <td class="technical">False</td>
+               <td class="technical">join</td>
+               <td class="technical"></td>
+               <td class="technical">follow</td>
+               <td>
+                  <div>dd help!text: shops dd description!is_a: description!super_dd_join_field dd description!collection_of_records_from:
+                     [gis]shop, </div>
+                  						
+                  <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('shops.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
+                  <ul class="Join">
+                     <li class="Join"><a href="demographics_shop.html">Shop</a></li>
+                  </ul>
+                  						
+                  <div class="JoinDetails technical" id="shops.details" style="display:none;">
+                     <ul class="joinDetailsList">
+                        <li class="joinDetailsListItem">Heterogeneous? <span class="results">False</span></li>
+                        <li class="joinDetailsListItem">Simple result? <span class="results">False</span></li>
+                        							
+                        <li class="joinDetailsListItem">Result Flavour: <span class="results">records</span></li>
+                        <li class="joinDetailsListItem">Ordered: <span class="results">Maybe</span></li>
+                        							
+                        								
+                        									
+                        <li class="joinDetailsListItem">Target: <span class="results"><a href="demographics_shop.html">shop</a></span></li>
+                        <li class="joinDetailsListItem">Condition: <span class="results"><span class="name">code</span>=<span class="name">postcode</span></span></li>
                         								
                         							
                         						</ul>

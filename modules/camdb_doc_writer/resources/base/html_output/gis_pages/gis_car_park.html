@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Parkplatz</title>
+      <title>Gis - Collection Car Park</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Parkplatz</div>
+      <div class="PageTitle float">Car Park</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#car_park"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="car_park">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Parkplatz</h3>
+                  <h3 class="InTable">Car Park</h3>
                   <div class="technical InternalColName">car_park</div>
                </td>
             </tr>
@@ -49,7 +50,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_charci</td>
-               <td>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Name dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="rwo_id" class="Field VisFalse">
                <td class="name">
@@ -79,7 +80,7 @@
             </tr>
             <tr id="pub_rests" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Gaststätten</div>
+                  <div class="join">Pub Restaurants</div>
                </td>
                <td class="technical">pub_rests</td>
                <td class="technical"></td>
@@ -89,12 +90,12 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Gaststätten ist ein join Feld Satz von Datensätzen aus 'pub_rest' wird ausgegeben
-                     </div>
+                  <div>dd help!text: Pub Restaurants dd description!is_a: description!join_field dd description!set_of_records_from:
+                     pub_rest, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('pub_rests.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="pub_rests.details" style="display:none;">
@@ -128,12 +129,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Travel Details ist ein join Feld Objekttabelle mit Datensätzen aus 'travel_details'
-                     wird ausgegeben </div>
+                  <div>dd help!text: Travel Details dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     travel_details, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('travel_detailss.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_travel_details.html">Reiseinformationen</a></li>
+                     <li class="Join"><a href="gis_travel_details.html">Travel Details</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="travel_detailss.details" style="display:none;">
@@ -157,7 +158,7 @@
             </tr>
             <tr id="location" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">Location</div>
                </td>
                <td class="technical">location</td>
                <td class="technical"></td>

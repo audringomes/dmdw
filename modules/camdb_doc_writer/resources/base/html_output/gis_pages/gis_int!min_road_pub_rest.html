@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
@@ -49,7 +50,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: name dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="street" class="Field VisTrue">
                <td class="name">
@@ -62,7 +63,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>street ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: street dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="min_road_id1" class="Field VisTrue">
                <td class="name">
@@ -75,7 +76,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>min_road_id1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: min_road_id1 dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="dd!join408011!rev" class="Field VisFalse">
                <td class="name">
@@ -89,11 +91,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join408011!rev ist ein join Feld Datensatz aus 'min_road' wird ausgegeben </div>
+                  <div>dd help!text: dd!join408011!rev dd description!is_a: description!join_field dd description!record_from:
+                     min_road, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join408011!rev.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_min_road.html">Straße</a></li>
+                     <li class="Join"><a href="gis_min_road.html">Road</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="dd!join408011!rev.details" style="display:none;">
@@ -127,11 +130,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join408014!rev ist ein join Feld Datensatz aus 'pub_rest' wird ausgegeben </div>
+                  <div>dd help!text: dd!join408014!rev dd description!is_a: description!join_field dd description!record_from:
+                     pub_rest, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join408014!rev.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="dd!join408014!rev.details" style="display:none;">

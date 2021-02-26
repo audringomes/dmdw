@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Freizeitbereich</title>
+      <title>Gis - Collection Play Area</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Freizeitbereich</div>
+      <div class="PageTitle float">Play Area</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#play_area"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="play_area">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Freizeitbereich</h3>
+                  <h3 class="InTable">Play Area</h3>
                   <div class="technical InternalColName">play_area</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="play_area_id" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Freizeitbereichs-ID</div>
+                  <div class="physical">Play Area Id</div>
                </td>
                <td class="technical">play_area_id</td>
                <td class="technical">1</td>
@@ -49,8 +50,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Freizeitbereichs-ID ist ein dd description!basic_fieldFeld der Klasse integer, z.
-                  B. 0 </td>
+               <td>dd help!text: Play Area Id dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="name" class="Field VisTrue">
                <td class="name">
@@ -63,11 +64,11 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Name dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="description_id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Beschreibungs-ID</div>
+                  <div class="physical">Description Id</div>
                </td>
                <td class="technical">description_id</td>
                <td class="technical">1</td>
@@ -76,13 +77,13 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Beschreibungs-ID ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
+               <td>dd help!text: Description Id dd description!is_a_type: description!basic_field, integer,
                   0
-                  	Standardwert: 0 </td>
+                  dd description!default: 0, </td>
             </tr>
             <tr id="fenced" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Umzäunt</div>
+                  <div class="physical">Fenced</div>
                </td>
                <td class="technical">fenced</td>
                <td class="technical">1</td>
@@ -91,11 +92,12 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_bool</td>
-               <td>Umzäunt ist ein dd description!basic_fieldFeld der Klasse false, z. B. True </td>
+               <td>dd help!text: Fenced dd description!is_a_type: description!basic_field, false, True,
+                  </td>
             </tr>
             <tr id="nearest_services!fk1" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Dienste in der Nähe!fk1</div>
+                  <div class="physical">Nearest Services!fk1</div>
                </td>
                <td class="technical">nearest_services!fk1</td>
                <td class="technical">32</td>
@@ -104,12 +106,12 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Dienste in der Nähe!fk1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße
-                  32 </td>
+               <td>dd help!text: Nearest Services!fk1 dd description!is_a_string: description!basic_field,
+                  32, </td>
             </tr>
             <tr id="nearest_services!fk2" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Dienste in der Nähe!fk2</div>
+                  <div class="physical">Nearest Services!fk2</div>
                </td>
                <td class="technical">nearest_services!fk2</td>
                <td class="technical">32</td>
@@ -118,12 +120,12 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Dienste in der Nähe!fk2 ist eine dd description!basic_fieldZeichenfolge-Feldgröße
-                  32 </td>
+               <td>dd help!text: Nearest Services!fk2 dd description!is_a_string: description!basic_field,
+                  32, </td>
             </tr>
             <tr id="nearest_services!tid" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Dienste in der Nähe!tid</div>
+                  <div class="physical">Nearest Services!tid</div>
                </td>
                <td class="technical">nearest_services!tid</td>
                <td class="technical">1</td>
@@ -132,8 +134,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Dienste in der Nähe!tid ist ein dd description!basic_fieldFeld der Klasse integer,
-                  z. B. 0 </td>
+               <td>dd help!text: Nearest Services!tid dd description!is_a_type: description!basic_field,
+                  integer, 0, </td>
             </tr>
             <tr id="rwo_id" class="Field VisFalse">
                <td class="name">
@@ -163,7 +165,7 @@
             </tr>
             <tr id="description" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Beschreibung</div>
+                  <div class="join">Description</div>
                </td>
                <td class="technical">description</td>
                <td class="technical"></td>
@@ -173,7 +175,8 @@
                <td class="technical"></td>
                <td class="technical">text</td>
                <td>
-                  <div>Beschreibung ist ein join Feld Text wird ausgegeben </div>
+                  <div>dd help!text: Description dd description!is_a: description!join_field dd description!text,
+                     </div>
                   						<span class="technical">Text joined by field <a href="#description_id" onclick="ToggleAndHighlightField('description_id')">description_id</a> to table <a href="gis_sw_gis!text_id.html">sw_gis!text_id</a></span>
                   					</td>
             </tr>
@@ -189,8 +192,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -218,7 +221,7 @@
             </tr>
             <tr id="nearest_services" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Dienste in der Nähe</div>
+                  <div class="join">Nearest Services</div>
                </td>
                <td class="technical">nearest_services</td>
                <td class="technical"></td>
@@ -228,13 +231,13 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Dienste in der Nähe ist ein join Feld Datensatz aus 'pub_rest,shop' wird ausgegeben
-                     </div>
+                  <div>dd help!text: Nearest Services dd description!is_a: description!join_field dd description!record_from:
+                     pub_rest,shop, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('nearest_services.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
-                     <li class="Join"><a href="gis_shop.html">Geschäft</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis_shop.html">Shop</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="nearest_services.details" style="display:none;">
@@ -266,7 +269,7 @@
             </tr>
             <tr id="parking" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Parkplatz</div>
+                  <div class="join">Parking</div>
                </td>
                <td class="technical">parking</td>
                <td class="technical"></td>
@@ -276,12 +279,13 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Parkplatz ist ein join Feld Datensatz aus 'pub_rest,shop' wird ausgegeben </div>
+                  <div>dd help!text: Parking dd description!is_a: description!join_field dd description!record_from:
+                     pub_rest,shop, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('parking.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
-                     <li class="Join"><a href="gis_shop.html">Geschäft</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis_shop.html">Shop</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="parking.details" style="display:none;">
@@ -315,8 +319,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>parking!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244956'
-                     wird ausgegeben </div>
+                  <div>dd help!text: parking!int dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!hetero244956, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('parking!int.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -344,7 +348,7 @@
             </tr>
             <tr id="sponsored_by" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Gesponsert von</div>
+                  <div class="join">Sponsored By</div>
                </td>
                <td class="technical">sponsored_by</td>
                <td class="technical"></td>
@@ -354,13 +358,13 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Gesponsert von ist ein join Feld Satz von Datensätzen aus 'pub_rest,shop' wird ausgegeben
-                     </div>
+                  <div>dd help!text: Sponsored By dd description!is_a: description!join_field dd description!set_of_records_from:
+                     pub_rest,shop, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('sponsored_by.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
-                     <li class="Join"><a href="gis_shop.html">Geschäft</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis_shop.html">Shop</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="sponsored_by.details" style="display:none;">
@@ -394,8 +398,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>sponsored_by!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244932'
-                     wird ausgegeben </div>
+                  <div>dd help!text: sponsored_by!int dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!hetero244932, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('sponsored_by!int.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -423,7 +427,7 @@
             </tr>
             <tr id="coverage" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Deckung</div>
+                  <div class="geometry">Coverage</div>
                </td>
                <td class="technical">coverage</td>
                <td class="technical"></td>

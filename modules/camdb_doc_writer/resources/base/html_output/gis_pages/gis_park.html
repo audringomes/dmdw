@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
@@ -40,7 +41,7 @@
             </tr>
             <tr id="park_id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Park ID</div>
+                  <div class="physical">park_id</div>
                </td>
                <td class="technical">park_id</td>
                <td class="technical">1</td>
@@ -66,7 +67,7 @@
             </tr>
             <tr id="class" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Klasse</div>
+                  <div class="physical">Class</div>
                </td>
                <td class="technical">class</td>
                <td class="technical">1</td>
@@ -75,7 +76,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_int</td>
-               <td>The values of <span class="name">Klasse</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.park_class');" title="Click to Show/Hide details">park_class</a></span><table id="enu.park_class" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Class</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.park_class');" title="Click to Show/Hide details">park_class</a></span><table id="enu.park_class" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">park_class</th>
                      </tr>
@@ -128,8 +129,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -157,7 +158,7 @@
             </tr>
             <tr id="parking" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Parkplatz</div>
+                  <div class="join">Parking</div>
                </td>
                <td class="technical">parking</td>
                <td class="technical"></td>
@@ -167,12 +168,13 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Parkplatz ist ein join Feld Datensatz aus 'pub_rest,shop' wird ausgegeben </div>
+                  <div>dd help!text: Parking dd description!is_a: description!join_field dd description!record_from:
+                     pub_rest,shop, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('parking.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
-                     <li class="Join"><a href="gis_shop.html">Geschäft</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis_shop.html">Shop</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="parking.details" style="display:none;">
@@ -206,8 +208,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>parking!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244956'
-                     wird ausgegeben </div>
+                  <div>dd help!text: parking!int dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!hetero244956, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('parking!int.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -235,7 +237,7 @@
             </tr>
             <tr id="seats" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Sitzgelegenheiten</div>
+                  <div class="join">Seats</div>
                </td>
                <td class="technical">seats</td>
                <td class="technical"></td>
@@ -245,12 +247,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Sitzgelegenheiten ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird
-                     ausgegeben </div>
+                  <div>dd help!text: Seats dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     seat, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('seats.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_seat.html">Sitzgelegenheit</a></li>
+                     <li class="Join"><a href="gis_seat.html">Seat</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="seats.details" style="display:none;">
@@ -274,7 +276,7 @@
             </tr>
             <tr id="annotation" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">Annotation</div>
                </td>
                <td class="technical">annotation</td>
                <td class="technical"></td>
@@ -289,7 +291,7 @@
             </tr>
             <tr id="coverage" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Deckung</div>
+                  <div class="geometry">Coverage</div>
                </td>
                <td class="technical">coverage</td>
                <td class="technical"></td>
@@ -320,7 +322,7 @@
             </tr>
             <tr id="area" class="Field VisTrue">
                <td class="name">
-                  <div class="derived">Fläche</div>
+                  <div class="derived">Area</div>
                </td>
                <td class="technical">area</td>
                <td class="technical">1</td>

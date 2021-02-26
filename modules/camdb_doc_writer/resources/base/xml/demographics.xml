@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252" standalone="yes"?>
-<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-22T07:07:05Z">
+<datamodel xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://github.com/boogert-lab/dmdw DMDW-Datamodel-2.0.xsd" schema_version="2.0" creation_date="2021-02-26T12:24:23Z">
 	<datamodel_info>
 		<dm_dataset>demographics</dm_dataset>
 		<dm_external_name>Demographics</dm_external_name>
@@ -25,7 +25,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -43,7 +43,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -61,7 +61,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -79,7 +79,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -97,7 +97,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -115,7 +115,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -133,7 +133,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -151,7 +151,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -169,7 +169,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -187,7 +187,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">1</min_read_version>
 			<min_write_version key="False">1</min_write_version>
-			<time_applied key="False">01.05.2001 14:24:43</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">3.2(0)</product_version>
 			<dd_version key="False">0</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -205,7 +205,7 @@
 			<checkpoint_name key="False"></checkpoint_name>
 			<min_read_version key="False">0</min_read_version>
 			<min_write_version key="False">0</min_write_version>
-			<time_applied key="False">22.04.2010 18:49:32</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">Core 4.2.0</product_version>
 			<dd_version key="False">273966380</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -223,7 +223,7 @@
 			<checkpoint_name key="False">checkpoint_110201092529</checkpoint_name>
 			<min_read_version key="False">0</min_read_version>
 			<min_write_version key="False">0</min_write_version>
-			<time_applied key="False">01.02.2011 10:32:24</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">Core 3.2.0</product_version>
 			<dd_version key="False">273966380</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -241,7 +241,7 @@
 			<checkpoint_name key="False">checkpoint_110201092529:001</checkpoint_name>
 			<min_read_version key="False">0</min_read_version>
 			<min_write_version key="False">0</min_write_version>
-			<time_applied key="False">01.02.2011 10:32:26</time_applied>
+			<time_applied key="False">date time</time_applied>
 			<product_version key="False">Core 4.2.0</product_version>
 			<dd_version key="False">273966380</dd_version>
 			<parameter_string_id key="False">0</parameter_string_id>
@@ -258,7 +258,7 @@
 	<global_properties>
 		<manifold_definitions>
 			<manifold name="demographics" urn="swrefVmanifoldVdatasetZdemographicsVcodeZ381">
-				<manifold_name>[Demographics] Demografie</manifold_name>
+				<manifold_name>[Demographics] demographics</manifold_name>
 				<manifold_code>381</manifold_code>
 			</manifold>
 		</manifold_definitions>
@@ -428,8 +428,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
-	Standardwert: sw:simple_vector:[1-3] </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3
+dd description!default: sw:simple_vector:[1-3], </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZareaVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -447,8 +447,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="join" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZareaVfieldZdistricts">
 				<external_name>Districts</external_name>
@@ -478,7 +478,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>Districts ist ein join Feld Objekttabelle mit Datensätzen aus &apos;district&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: Districts dd description!is_a: description!join_field dd description!collection_of_records_from: district, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZareaVfieldZannotation">
 				<external_name>Annotation</external_name>
@@ -495,7 +495,7 @@
 						<priority>1</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Annotation ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Annotation dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZareaVfieldZcentroid">
 				<external_name>Centroid</external_name>
@@ -548,7 +548,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 		</collection>
 		<collection name="construction" external_name="Construction" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZconstruction" category="not_in_ace">
@@ -568,7 +568,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZconstructionVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -586,8 +586,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZconstructionVfieldZarc">
 				<external_name>arc</external_name>
@@ -604,7 +604,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>arc ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: arc dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZconstructionVfieldZcircle">
 				<external_name>circle</external_name>
@@ -621,7 +621,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>circle ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: circle dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZconstructionVfieldZline">
 				<external_name>line</external_name>
@@ -638,7 +638,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>line ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: line dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZconstructionVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -655,7 +655,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZconstructionVfieldZpoint">
 				<external_name>point</external_name>
@@ -672,7 +672,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>point ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: point dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZconstructionVfieldZtrail">
 				<external_name>trail</external_name>
@@ -689,7 +689,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>trail ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: trail dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 		</collection>
 		<collection name="dimensioning" external_name="dimensioning" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdimensioning" category="not_in_ace">
@@ -709,7 +709,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdimensioningVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -727,8 +727,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdimensioningVfieldZdimension">
 				<external_name>dimension</external_name>
@@ -745,7 +745,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>dimension ist ein geometry Feld vom Typ dimension </help_text>
+				<help_text>dd help!text: dimension dd description!is_a: description!geom_field dd description!geometry_type: dimension, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdimensioningVfieldZdimension_line">
 				<external_name>dimension_line</external_name>
@@ -762,7 +762,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>dimension_line ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: dimension_line dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdimensioningVfieldZleader_line">
 				<external_name>leader_line</external_name>
@@ -779,7 +779,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>leader_line ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: leader_line dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdimensioningVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -796,7 +796,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdimensioningVfieldZtext">
 				<external_name>text</external_name>
@@ -813,7 +813,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>text ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: text dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 		</collection>
 		<collection name="district" external_name="District" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdistrict" category="not_in_ace">
@@ -947,8 +947,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
-	Standardwert: sw:simple_vector:[1-3] </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3
+dd description!default: sw:simple_vector:[1-3], </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdistrictVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -966,8 +966,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="join" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdistrictVfieldZarea">
 				<external_name>Area</external_name>
@@ -997,7 +997,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>Area ist ein join Feld Datensatz aus &apos;area&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: Area dd description!is_a: description!join_field dd description!record_from: area, </help_text>
 			</field>
 			<field type="join" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdistrictVfieldZsectors">
 				<external_name>Sectors</external_name>
@@ -1027,7 +1027,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>Sectors ist ein join Feld Objekttabelle mit Datensätzen aus &apos;sector&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: Sectors dd description!is_a: description!join_field dd description!collection_of_records_from: sector, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdistrictVfieldZannotation">
 				<external_name>Annotation</external_name>
@@ -1044,7 +1044,7 @@
 						<priority>1</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Annotation ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Annotation dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdistrictVfieldZcentroid">
 				<external_name>Centroid</external_name>
@@ -1097,7 +1097,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 		</collection>
 		<collection name="drafting_areas" external_name="Drafting Areas" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdrafting_areas" category="not_in_ace">
@@ -1117,7 +1117,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -1135,8 +1135,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_1">
 				<external_name>Area 1</external_name>
@@ -1153,7 +1153,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 1 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 1 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_10">
 				<external_name>Area 10</external_name>
@@ -1170,7 +1170,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 10 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 10 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_11">
 				<external_name>Area 11</external_name>
@@ -1187,7 +1187,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 11 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 11 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_12">
 				<external_name>Area 12</external_name>
@@ -1204,7 +1204,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 12 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 12 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_13">
 				<external_name>Area 13</external_name>
@@ -1221,7 +1221,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 13 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 13 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_14">
 				<external_name>Area 14</external_name>
@@ -1238,7 +1238,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 14 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 14 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_15">
 				<external_name>Area 15</external_name>
@@ -1255,7 +1255,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 15 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 15 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_2">
 				<external_name>Area 2</external_name>
@@ -1272,7 +1272,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 2 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 2 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_3">
 				<external_name>Area 3</external_name>
@@ -1289,7 +1289,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 3 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 3 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_4">
 				<external_name>Area 4</external_name>
@@ -1306,7 +1306,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 4 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 4 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_5">
 				<external_name>Area 5</external_name>
@@ -1323,7 +1323,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 5 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 5 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_6">
 				<external_name>Area 6</external_name>
@@ -1340,7 +1340,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 6 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 6 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_7">
 				<external_name>Area 7</external_name>
@@ -1357,7 +1357,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 7 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 7 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_8">
 				<external_name>Area 8</external_name>
@@ -1374,7 +1374,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 8 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 8 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZarea_9">
 				<external_name>Area 9</external_name>
@@ -1391,7 +1391,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Area 9 ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: Area 9 dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_areasVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -1408,7 +1408,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 		</collection>
 		<collection name="drafting_lines" external_name="Drafting Lines" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdrafting_lines" category="not_in_ace">
@@ -1428,7 +1428,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -1446,8 +1446,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_1">
 				<external_name>Line 1</external_name>
@@ -1464,7 +1464,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 1 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 1 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_10">
 				<external_name>Line 10</external_name>
@@ -1481,7 +1481,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 10 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 10 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_11">
 				<external_name>Line 11</external_name>
@@ -1498,7 +1498,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 11 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 11 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_12">
 				<external_name>Line 12</external_name>
@@ -1515,7 +1515,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 12 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 12 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_13">
 				<external_name>Line 13</external_name>
@@ -1532,7 +1532,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 13 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 13 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_14">
 				<external_name>Line 14</external_name>
@@ -1549,7 +1549,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 14 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 14 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_15">
 				<external_name>Line 15</external_name>
@@ -1566,7 +1566,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 15 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 15 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_2">
 				<external_name>Line 2</external_name>
@@ -1583,7 +1583,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 2 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 2 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_3">
 				<external_name>Line 3</external_name>
@@ -1600,7 +1600,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 3 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 3 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_4">
 				<external_name>Line 4</external_name>
@@ -1617,7 +1617,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 4 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 4 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_5">
 				<external_name>Line 5</external_name>
@@ -1634,7 +1634,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 5 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 5 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_6">
 				<external_name>Line 6</external_name>
@@ -1651,7 +1651,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 6 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 6 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_7">
 				<external_name>Line 7</external_name>
@@ -1668,7 +1668,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 7 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 7 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_8">
 				<external_name>Line 8</external_name>
@@ -1685,7 +1685,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 8 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 8 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZline_9">
 				<external_name>Line 9</external_name>
@@ -1702,7 +1702,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Line 9 ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: Line 9 dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_linesVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -1719,7 +1719,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 		</collection>
 		<collection name="drafting_points" external_name="Drafting Points" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdrafting_points" category="not_in_ace">
@@ -1739,7 +1739,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -1757,8 +1757,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -1775,7 +1775,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_1">
 				<external_name>Point 1</external_name>
@@ -1792,7 +1792,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 1 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 1 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_10">
 				<external_name>Point 10</external_name>
@@ -1809,7 +1809,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 10 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 10 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_11">
 				<external_name>Point 11</external_name>
@@ -1826,7 +1826,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 11 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 11 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_12">
 				<external_name>Point 12</external_name>
@@ -1843,7 +1843,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 12 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 12 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_13">
 				<external_name>Point 13</external_name>
@@ -1860,7 +1860,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 13 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 13 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_14">
 				<external_name>Point 14</external_name>
@@ -1877,7 +1877,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 14 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 14 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_15">
 				<external_name>Point 15</external_name>
@@ -1894,7 +1894,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 15 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 15 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_2">
 				<external_name>Point 2</external_name>
@@ -1911,7 +1911,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 2 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 2 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_3">
 				<external_name>Point 3</external_name>
@@ -1928,7 +1928,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 3 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 3 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_4">
 				<external_name>Point 4</external_name>
@@ -1945,7 +1945,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 4 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 4 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_5">
 				<external_name>Point 5</external_name>
@@ -1962,7 +1962,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 5 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 5 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_6">
 				<external_name>Point 6</external_name>
@@ -1979,7 +1979,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 6 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 6 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_7">
 				<external_name>Point 7</external_name>
@@ -1996,7 +1996,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 7 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 7 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_8">
 				<external_name>Point 8</external_name>
@@ -2013,7 +2013,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 8 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 8 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_pointsVfieldZpoint_9">
 				<external_name>Point 9</external_name>
@@ -2030,7 +2030,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Point 9 ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Point 9 dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 		</collection>
 		<collection name="drafting_texts" external_name="Drafting Texts" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdrafting_texts" category="not_in_ace">
@@ -2050,7 +2050,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -2068,8 +2068,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -2086,7 +2086,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_1">
 				<external_name>Text 1</external_name>
@@ -2103,7 +2103,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 1 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 1 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_10">
 				<external_name>Text 10</external_name>
@@ -2120,7 +2120,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 10 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 10 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_11">
 				<external_name>Text 11</external_name>
@@ -2137,7 +2137,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 11 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 11 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_12">
 				<external_name>Text 12</external_name>
@@ -2154,7 +2154,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 12 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 12 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_13">
 				<external_name>Text 13</external_name>
@@ -2171,7 +2171,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 13 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 13 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_14">
 				<external_name>Text 14</external_name>
@@ -2188,7 +2188,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 14 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 14 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_15">
 				<external_name>Text 15</external_name>
@@ -2205,7 +2205,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 15 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 15 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_2">
 				<external_name>Text 2</external_name>
@@ -2222,7 +2222,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 2 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 2 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_3">
 				<external_name>Text 3</external_name>
@@ -2239,7 +2239,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 3 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 3 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_4">
 				<external_name>Text 4</external_name>
@@ -2256,7 +2256,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 4 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 4 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_5">
 				<external_name>Text 5</external_name>
@@ -2273,7 +2273,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 5 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 5 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_6">
 				<external_name>Text 6</external_name>
@@ -2290,7 +2290,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 6 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 6 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_7">
 				<external_name>Text 7</external_name>
@@ -2307,7 +2307,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 7 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 7 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_8">
 				<external_name>Text 8</external_name>
@@ -2324,7 +2324,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 8 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 8 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrafting_textsVfieldZtext_9">
 				<external_name>Text 9</external_name>
@@ -2341,12 +2341,12 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Text 9 ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Text 9 dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 		</collection>
-		<collection name="drawing" external_name="Zeichnung" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdrawing" category="not_in_ace">
+		<collection name="drawing" external_name="Drawing" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdrawing" category="not_in_ace">
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZname">
-				<external_name>Zeichnungsnummer</external_name>
+				<external_name>Drawing Number</external_name>
 				<name>name</name>
 				<used_in_join/>
 				<size>32</size>
@@ -2361,10 +2361,10 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Zeichnungsnummer ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: Drawing Number dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZtitle">
-				<external_name>Titel</external_name>
+				<external_name>Title</external_name>
 				<name>title</name>
 				<used_in_join/>
 				<size>32</size>
@@ -2379,10 +2379,10 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Titel ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: Title dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZscale">
-				<external_name>Zeichnungsmaßstab</external_name>
+				<external_name>Drawing Scale</external_name>
 				<name>scale</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2398,18 +2398,18 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Zeichnungsmaßstab ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
-	eins von: 1:1, 1:10, 1:100, 1:1000, 1:16, 1:25, 1:250, 1:32, 1:4, 1:50, 1:500, 1:64, 1:8
-	Standardwert: 1:1 </help_text>
+				<help_text>dd help!text: Drawing Scale dd description!is_a_type: description!basic_field, char16_vector, 
+dd description!type_description: dd description!one_of: 1:1, 1:10, 1:100, 1:1000, 1:16, 1:25, 1:250, 1:32, 1:4, 1:50, 1:500, 1:64, 1:8
+dd description!default: 1:1, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZentered_by">
-				<external_name>Eingegeben durch</external_name>
+				<external_name>Entered By</external_name>
 				<name>entered_by</name>
 				<used_in_join/>
 				<size>32</size>
 				<key>False</key>
 				<mandatory>True</mandatory>
-				<default_value>proc get_cached_data</default_value>
+				<default_value>proc username</default_value>
 				<unset_value>unset</unset_value>
 				<type>physical</type>
 				<stored_unit/>
@@ -2418,17 +2418,17 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Eingegeben durch ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32
-	Standardwert: proc get_cached_data </help_text>
+				<help_text>dd help!text: Entered By dd description!is_a_string: description!basic_field, 32
+dd description!default: proc username, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZdate_entered">
-				<external_name>Eingabedatum</external_name>
+				<external_name>Date Entered</external_name>
 				<name>date_entered</name>
 				<used_in_join/>
 				<size>1</size>
 				<key>False</key>
 				<mandatory>True</mandatory>
-				<default_value>proc get_cached_data</default_value>
+				<default_value>proc date_now</default_value>
 				<unset_value>unset</unset_value>
 				<type>physical</type>
 				<stored_unit/>
@@ -2437,17 +2437,17 @@
 						<phys_type type="ds_date"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Eingabedatum ist ein dd description!basic_fieldFeld der Klasse ds_date, z. B. 01.01.1970
-	Standardwert: proc get_cached_data </help_text>
+				<help_text>dd help!text: Date Entered dd description!is_a_type: description!basic_field, ds_date, date
+dd description!default: proc date_now, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZrevision_date">
-				<external_name>Letzte Überarbeitung</external_name>
+				<external_name>Last Revision Date</external_name>
 				<name>revision_date</name>
 				<used_in_join/>
 				<size>1</size>
 				<key>False</key>
 				<mandatory>True</mandatory>
-				<default_value>proc get_cached_data</default_value>
+				<default_value>proc date_now</default_value>
 				<unset_value>unset</unset_value>
 				<type>physical</type>
 				<stored_unit/>
@@ -2456,8 +2456,8 @@
 						<phys_type type="ds_date"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Letzte Überarbeitung ist ein dd description!basic_fieldFeld der Klasse ds_date, z. B. 01.01.1970
-	Standardwert: proc get_cached_data </help_text>
+				<help_text>dd help!text: Last Revision Date dd description!is_a_type: description!basic_field, ds_date, date
+dd description!default: proc date_now, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZformat">
 				<external_name>Format</external_name>
@@ -2475,11 +2475,11 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Format ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32
-	Standardwert: A0 </help_text>
+				<help_text>dd help!text: Format dd description!is_a_string: description!basic_field, 32
+dd description!default: A0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZorientation">
-				<external_name>Ausrichtung</external_name>
+				<external_name>Orientation</external_name>
 				<name>orientation</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2495,12 +2495,12 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Ausrichtung ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
-	eins von: Landscape, Portrait
-	Standardwert: Landscape </help_text>
+				<help_text>dd help!text: Orientation dd description!is_a_type: description!basic_field, char16_vector, 
+dd description!type_description: dd description!one_of: Landscape, Portrait
+dd description!default: Landscape, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZwidth">
-				<external_name>Breite</external_name>
+				<external_name>Width</external_name>
 				<name>width</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2515,11 +2515,11 @@
 						<phys_type type="ds_float"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Breite ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
-	Standardwert: 1.188e+003 </help_text>
+				<help_text>dd help!text: Width dd description!is_a_type: description!basic_field, float, 0.000
+dd description!default: 1.188e+003, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZheight">
-				<external_name>Höhe</external_name>
+				<external_name>Height</external_name>
 				<name>height</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2534,11 +2534,11 @@
 						<phys_type type="ds_float"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Höhe ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
-	Standardwert: 840.0 </help_text>
+				<help_text>dd help!text: Height dd description!is_a_type: description!basic_field, float, 0.000
+dd description!default: 840.0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZdrawing_units_descr">
-				<external_name>Zeichnungseinheiten</external_name>
+				<external_name>Drawing Units</external_name>
 				<name>drawing_units_descr</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2554,12 +2554,12 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Zeichnungseinheiten ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
-	eins von: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Feet, Hectometre, Kilometre, Metre, Micrometre, Millimetre, Nanometre, inch
-	Standardwert: Millimetre </help_text>
+				<help_text>dd help!text: Drawing Units dd description!is_a_type: description!basic_field, char16_vector, 
+dd description!type_description: dd description!one_of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Feet, Hectometre, Kilometre, Metre, Micrometre, Millimetre, Nanometre, inch
+dd description!default: Millimetre, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZworld_units_descr">
-				<external_name>Auflösung</external_name>
+				<external_name>Resolution</external_name>
 				<name>world_units_descr</name>
 				<used_in_join/>
 				<size>1</size>
@@ -2575,9 +2575,9 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Auflösung ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
-	eins von: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometre, Metre, Micrometre, Millimetre, Nanometre
-	Standardwert: Nanometre </help_text>
+				<help_text>dd help!text: Resolution dd description!is_a_type: description!basic_field, char16_vector, 
+dd description!type_description: dd description!one_of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Hectometre, Kilometre, Metre, Micrometre, Millimetre, Nanometre
+dd description!default: Nanometre, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZrwo_id">
 				<external_name>rwo_id</external_name>
@@ -2595,8 +2595,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
-	Standardwert: sw:simple_vector:[1-3] </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3
+dd description!default: sw:simple_vector:[1-3], </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -2614,11 +2614,11 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZboundary">
-				<external_name>Grenze</external_name>
+				<external_name>boundary</external_name>
 				<name>boundary</name>
 				<used_in_join/>
 				<size/>
@@ -2632,7 +2632,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Grenze ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: boundary dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawingVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -2649,7 +2649,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 		</collection>
 		<collection name="drawing_function" external_name="Drawing Function" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdrawing_function" category="not_in_ace">
@@ -2657,12 +2657,12 @@
 				<external_name>func_id</external_name>
 				<name>func_id</name>
 				<used_in_join>
+					<join_field>children</join_field>
 					<join_field>extra_params</join_field>
 					<join_field>function_geometries</join_field>
-					<join_field>children</join_field>
+					<joins>children</joins>
 					<joins>extra_params</joins>
 					<joins>function_geometries</joins>
-					<joins>children</joins>
 				</used_in_join>
 				<size>1</size>
 				<key>True</key>
@@ -2676,7 +2676,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>func_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: func_id dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZuniverse_id">
 				<external_name>universe_id</external_name>
@@ -2699,8 +2699,8 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>universe_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: universe_id dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZworld_id">
 				<external_name>world_id</external_name>
@@ -2723,8 +2723,8 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>world_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: world_id dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZevaluation">
 				<external_name>evaluation</external_name>
@@ -2743,9 +2743,9 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>evaluation ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
-	eins von: On Insert, Post-Redraw, Pre-Redraw
-	Standardwert: On Insert </help_text>
+				<help_text>dd help!text: evaluation dd description!is_a_type: description!basic_field, char16_vector, 
+dd description!type_description: dd description!one_of: On Insert, Post-Redraw, Pre-Redraw
+dd description!default: On Insert, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZfunction_name">
 				<external_name>function_name</external_name>
@@ -2763,7 +2763,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>function_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: function_name dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZparam_1">
 				<external_name>param_1</external_name>
@@ -2781,7 +2781,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: param_1 dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZparam_2">
 				<external_name>param_2</external_name>
@@ -2799,7 +2799,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_2 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: param_2 dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZparam_3">
 				<external_name>param_3</external_name>
@@ -2817,7 +2817,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_3 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: param_3 dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZparam_4">
 				<external_name>param_4</external_name>
@@ -2835,7 +2835,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_4 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: param_4 dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZowner_id">
 				<external_name>owner_id</external_name>
@@ -2856,7 +2856,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>owner_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: owner_id dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZdraw_order">
 				<external_name>draw_order</external_name>
@@ -2874,7 +2874,7 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>draw_order ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: draw_order dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZflags">
 				<external_name>flags</external_name>
@@ -2892,7 +2892,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>flags ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: flags dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZchildren">
 				<external_name>children</external_name>
@@ -2924,7 +2924,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>children ist ein join Feld Objekttabelle mit Datensätzen aus &apos;drawing_function&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: children dd description!is_a: description!join_field dd description!collection_of_records_from: drawing_function, </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZextra_params">
 				<external_name>extra_params</external_name>
@@ -2954,7 +2954,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>extra_params ist ein join Feld Objekttabelle mit Datensätzen aus &apos;sw_gis!drawing_function_param&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: extra_params dd description!is_a: description!join_field dd description!collection_of_records_from: sw_gis!drawing_function_param, </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZfunction_geometries">
 				<external_name>function_geometries</external_name>
@@ -2984,7 +2984,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>function_geometries ist ein join Feld Objekttabelle mit Datensätzen aus &apos;function_geometry&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: function_geometries dd description!is_a: description!join_field dd description!collection_of_records_from: function_geometry, </help_text>
 			</field>
 			<field type="join" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_functionVfieldZowner">
 				<external_name>owner</external_name>
@@ -3016,7 +3016,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>owner ist ein join Feld Datensatz aus &apos;drawing_function&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: owner dd description!is_a: description!join_field dd description!record_from: drawing_function, </help_text>
 			</field>
 		</collection>
 		<collection name="drawing_template" external_name="Drawing Template" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZdrawing_template" category="not_in_ace">
@@ -3036,7 +3036,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: Name dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZformat">
 				<external_name>Format</external_name>
@@ -3054,8 +3054,8 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Format ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32
-	Standardwert: A0 </help_text>
+				<help_text>dd help!text: Format dd description!is_a_string: description!basic_field, 32
+dd description!default: A0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZorientation">
 				<external_name>Orientation</external_name>
@@ -3074,9 +3074,9 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Orientation ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
-	eins von: Landscape, Portrait
-	Standardwert: Landscape </help_text>
+				<help_text>dd help!text: Orientation dd description!is_a_type: description!basic_field, char16_vector, 
+dd description!type_description: dd description!one_of: Landscape, Portrait
+dd description!default: Landscape, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZwidth">
 				<external_name>Width</external_name>
@@ -3094,8 +3094,8 @@
 						<phys_type type="ds_float"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Width ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
-	Standardwert: 1.188e+003 </help_text>
+				<help_text>dd help!text: Width dd description!is_a_type: description!basic_field, float, 0.000
+dd description!default: 1.188e+003, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZheight">
 				<external_name>Height</external_name>
@@ -3113,8 +3113,8 @@
 						<phys_type type="ds_float"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Height ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
-	Standardwert: 840.0 </help_text>
+				<help_text>dd help!text: Height dd description!is_a_type: description!basic_field, float, 0.000
+dd description!default: 840.0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZdrawing_units_descr">
 				<external_name>Drawing Units</external_name>
@@ -3133,9 +3133,9 @@
 						<phys_type type="ds_int"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Drawing Units ist ein dd description!basic_fieldFeld der Klasse char16_vector, z. B. 
-	eins von: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Feet, Hectometre, Kilometre, Metre, Micrometre, Millimetre, Nanometre, inch
-	Standardwert: Millimetre </help_text>
+				<help_text>dd help!text: Drawing Units dd description!is_a_type: description!basic_field, char16_vector, 
+dd description!type_description: dd description!one_of: 10*Nanometre, 100*Nanometre, Centimetre, Decimetre, Feet, Hectometre, Kilometre, Metre, Micrometre, Millimetre, Nanometre, inch
+dd description!default: Millimetre, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZrwo_id">
 				<external_name>rwo_id</external_name>
@@ -3153,8 +3153,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
-	Standardwert: sw:simple_vector:[1-3] </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3
+dd description!default: sw:simple_vector:[1-3], </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -3172,8 +3172,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZboundary">
 				<external_name>boundary</external_name>
@@ -3190,7 +3190,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>boundary ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: boundary dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZdrawing_templateVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -3207,7 +3207,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 		</collection>
 		<collection name="function_geometry" external_name="Function Geometry" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZfunction_geometry" category="not_in_ace">
@@ -3227,7 +3227,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: id dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZfunc_id">
 				<external_name>func_id</external_name>
@@ -3248,8 +3248,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>func_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: func_id dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZparam_name">
 				<external_name>param_name</external_name>
@@ -3267,7 +3267,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>param_name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: param_name dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZrwo_style_code">
 				<external_name>rwo_style_code</external_name>
@@ -3285,8 +3285,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_style_code ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: rwo_style_code dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZapp_style_code">
 				<external_name>app_style_code</external_name>
@@ -3304,8 +3304,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>app_style_code ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: app_style_code dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZgeom_code">
 				<external_name>geom_code</external_name>
@@ -3323,8 +3323,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>geom_code ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: geom_code dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZrwo_id">
 				<external_name>rwo_id</external_name>
@@ -3342,8 +3342,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
-	Standardwert: sw:simple_vector:[1-3] </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3
+dd description!default: sw:simple_vector:[1-3], </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -3361,8 +3361,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZfunction">
 				<external_name>function</external_name>
@@ -3392,7 +3392,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>function ist ein join Feld Datensatz aus &apos;drawing_function&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: function dd description!is_a: description!join_field dd description!record_from: drawing_function, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZarea">
 				<external_name>area</external_name>
@@ -3409,7 +3409,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>area ist ein geometry Feld vom Typ simple_area </help_text>
+				<help_text>dd help!text: area dd description!is_a: description!geom_field dd description!geometry_type: simple_area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZdimension">
 				<external_name>dimension</external_name>
@@ -3426,7 +3426,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>dimension ist ein geometry Feld vom Typ dimension </help_text>
+				<help_text>dd help!text: dimension dd description!is_a: description!geom_field dd description!geometry_type: dimension, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZlinear">
 				<external_name>linear</external_name>
@@ -3443,7 +3443,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>linear ist ein geometry Feld vom Typ simple_chain </help_text>
+				<help_text>dd help!text: linear dd description!is_a: description!geom_field dd description!geometry_type: simple_chain, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -3460,7 +3460,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZpoint">
 				<external_name>point</external_name>
@@ -3477,7 +3477,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>point ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: point dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZraster_24bit">
 				<external_name>raster_24bit</external_name>
@@ -3494,7 +3494,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>raster_24bit ist ein geometry Feld vom Typ raster </help_text>
+				<help_text>dd help!text: raster_24bit dd description!is_a: description!geom_field dd description!geometry_type: raster, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZraster_8bit">
 				<external_name>raster_8bit</external_name>
@@ -3511,7 +3511,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>raster_8bit ist ein geometry Feld vom Typ raster </help_text>
+				<help_text>dd help!text: raster_8bit dd description!is_a: description!geom_field dd description!geometry_type: raster, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZfunction_geometryVfieldZtext">
 				<external_name>text</external_name>
@@ -3528,7 +3528,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>text ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: text dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 		</collection>
 		<collection name="piechart" external_name="Pie Chart" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZpiechart" category="not_in_ace">
@@ -3536,8 +3536,8 @@
 				<external_name>rwo_id</external_name>
 				<name>rwo_id</name>
 				<used_in_join>
-					<join_field>sector</join_field>
 					<join_field>dd!join273966230</join_field>
+					<join_field>sector</join_field>
 					<joins>dd!join273966230</joins>
 				</used_in_join>
 				<size>3</size>
@@ -3552,7 +3552,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZpiechartVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -3570,8 +3570,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZpiechartVfieldZdd-0021join273966230">
 				<external_name>dd!join273966230</external_name>
@@ -3601,7 +3601,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>dd!join273966230 ist ein join Feld Datensatz aus &apos;int!sector_piechart&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: dd!join273966230 dd description!is_a: description!join_field dd description!record_from: int!sector_piechart, </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZpiechartVfieldZsector">
 				<external_name>Sector</external_name>
@@ -3631,7 +3631,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>Sector ist ein join Feld Datensatz aus &apos;sector&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: Sector dd description!is_a: description!join_field dd description!record_from: sector, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZpiechartVfieldZlocation">
 				<external_name>Location</external_name>
@@ -3648,7 +3648,7 @@
 						<priority>1</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Location ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Location dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZpiechartVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -3665,7 +3665,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 		</collection>
 		<collection name="proposed_site" external_name="Proposed Site" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZproposed_site" category="not_in_ace">
@@ -3685,7 +3685,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: Id dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZname">
 				<external_name>Name</external_name>
@@ -3703,7 +3703,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: Name dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZrwo_id">
 				<external_name>rwo_id</external_name>
@@ -3721,8 +3721,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
-	Standardwert: sw:simple_vector:[1-3] </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3
+dd description!default: sw:simple_vector:[1-3], </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -3740,8 +3740,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZlocation">
 				<external_name>Location</external_name>
@@ -3758,7 +3758,7 @@
 						<priority>1</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Location ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: Location dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -3775,7 +3775,7 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZzone1">
 				<external_name>Travel Time Zone 1</external_name>
@@ -3793,7 +3793,7 @@
 						<inmanifold name="demographics"/>
 					</geometry_details>
 				</sub_type>
-				<help_text>Travel Time Zone 1 ist ein geometry Feld vom Typ area </help_text>
+				<help_text>dd help!text: Travel Time Zone 1 dd description!is_a: description!geom_field dd description!geometry_type: area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZzone2">
 				<external_name>Travel Time Zone 2</external_name>
@@ -3811,7 +3811,7 @@
 						<inmanifold name="demographics"/>
 					</geometry_details>
 				</sub_type>
-				<help_text>Travel Time Zone 2 ist ein geometry Feld vom Typ area </help_text>
+				<help_text>dd help!text: Travel Time Zone 2 dd description!is_a: description!geom_field dd description!geometry_type: area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZzone3">
 				<external_name>Travel Time Zone 3</external_name>
@@ -3829,7 +3829,7 @@
 						<inmanifold name="demographics"/>
 					</geometry_details>
 				</sub_type>
-				<help_text>Travel Time Zone 3 ist ein geometry Feld vom Typ area </help_text>
+				<help_text>dd help!text: Travel Time Zone 3 dd description!is_a: description!geom_field dd description!geometry_type: area, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZproposed_siteVfieldZzone4">
 				<external_name>Travel Time Zone 4</external_name>
@@ -3847,7 +3847,7 @@
 						<inmanifold name="demographics"/>
 					</geometry_details>
 				</sub_type>
-				<help_text>Travel Time Zone 4 ist ein geometry Feld vom Typ area </help_text>
+				<help_text>dd help!text: Travel Time Zone 4 dd description!is_a: description!geom_field dd description!geometry_type: area, </help_text>
 			</field>
 		</collection>
 		<collection name="sector" external_name="Sector" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZsector" category="not_in_ace">
@@ -3855,9 +3855,11 @@
 				<external_name>Code</external_name>
 				<name>code</name>
 				<used_in_join>
-					<join_field>dd!join273966227</join_field>
 					<join_field>piecharts</join_field>
+					<join_field>dd!join273966227</join_field>
+					<join_field>shops</join_field>
 					<joins>dd!join273966227</joins>
+					<joins>shops</joins>
 				</used_in_join>
 				<size>32</size>
 				<key>True</key>
@@ -3871,7 +3873,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Code ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: Code dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZdistrict_code">
 				<external_name>District Code</external_name>
@@ -3910,7 +3912,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Unit Sales (0-9) ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: Unit Sales (0-9) dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZsales_10">
 				<external_name>Unit Sales (10-19)</external_name>
@@ -3928,7 +3930,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Unit Sales (10-19) ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: Unit Sales (10-19) dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZsales_20">
 				<external_name>Unit Sales (20-29)</external_name>
@@ -3946,7 +3948,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Unit Sales (20-29) ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: Unit Sales (20-29) dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZsales_30">
 				<external_name>Unit Sales (30-39)</external_name>
@@ -3964,7 +3966,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Unit Sales (30-39) ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: Unit Sales (30-39) dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZsales_40">
 				<external_name>Unit Sales (40-49)</external_name>
@@ -3982,7 +3984,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Unit Sales (40-49) ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: Unit Sales (40-49) dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZaverage_sales">
 				<external_name>Average Sales</external_name>
@@ -4000,7 +4002,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>Average Sales ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: Average Sales dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZrwo_id">
 				<external_name>rwo_id</external_name>
@@ -4018,8 +4020,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3
-	Standardwert: sw:simple_vector:[1-3] </help_text>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3
+dd description!default: sw:simple_vector:[1-3], </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZds-0021version">
 				<external_name>ds!version</external_name>
@@ -4037,8 +4039,8 @@
 						<phys_type type="ds_vstamp"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>ds!version ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: ds!version dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZdd-0021join273966227">
 				<external_name>dd!join273966227</external_name>
@@ -4068,7 +4070,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>dd!join273966227 ist ein join Feld Objekttabelle mit Datensätzen aus &apos;int!sector_piechart&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: dd!join273966227 dd description!is_a: description!join_field dd description!collection_of_records_from: int!sector_piechart, </help_text>
 			</field>
 			<field type="join" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZdistrict">
 				<external_name>District</external_name>
@@ -4098,7 +4100,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>District ist ein join Feld Datensatz aus &apos;district&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: District dd description!is_a: description!join_field dd description!record_from: district, </help_text>
 			</field>
 			<field type="join" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZpiecharts">
 				<external_name>Piecharts</external_name>
@@ -4128,7 +4130,37 @@
 						</db_set_join>
 					</join_details>
 				</sub_type>
-				<help_text>Piecharts ist ein join Feld Satz von Datensätzen aus &apos;piechart&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: Piecharts dd description!is_a: description!join_field dd description!set_of_records_from: piechart, </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZshops">
+				<external_name>shops</external_name>
+				<name>shops</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>False</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="shop" external_name="Shop" dataset="gis"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="False">
+							<result_flavour>
+								<result_type>records</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<super_dd_join name="shops">
+								<conditions>
+									<condition target_table="shop" field1="code" operator="=" field2="postcode"/>
+								</conditions>
+							</super_dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>dd help!text: shops dd description!is_a: description!super_dd_join_field dd description!collection_of_records_from: [gis]shop, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZannotation">
 				<external_name>Annotation</external_name>
@@ -4145,7 +4177,7 @@
 						<priority>1</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>Annotation ist ein geometry Feld vom Typ text </help_text>
+				<help_text>dd help!text: Annotation dd description!is_a: description!geom_field dd description!geometry_type: text, </help_text>
 			</field>
 			<field type="geometry" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZcoverage">
 				<external_name>Coverage</external_name>
@@ -4163,7 +4195,7 @@
 						<inmanifold name="demographics"/>
 					</geometry_details>
 				</sub_type>
-				<help_text>Coverage ist ein geometry Feld vom Typ area </help_text>
+				<help_text>dd help!text: Coverage dd description!is_a: description!geom_field dd description!geometry_type: area, </help_text>
 			</field>
 			<field type="geometry" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsectorVfieldZmeatball">
 				<external_name>meatball</external_name>
@@ -4180,115 +4212,11 @@
 						<priority>0</priority>
 					</geometry_details>
 				</sub_type>
-				<help_text>meatball ist ein geometry Feld vom Typ simple_point </help_text>
+				<help_text>dd help!text: meatball dd description!is_a: description!geom_field dd description!geometry_type: simple_point, </help_text>
 			</field>
 		</collection>
 	</category>
 	<category name="Expanded join tables">
-		<collection name="int!sector_piechart" external_name="int!sector_piechart" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZint-0021sector_piechart" category="expanded">
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZrwo_id">
-				<external_name>rwo_id</external_name>
-				<name>rwo_id</name>
-				<used_in_join>
-					<join_field>dd!join273966230!rev</join_field>
-					<joins>dd!join273966230!rev</joins>
-				</used_in_join>
-				<size>3</size>
-				<key>True</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type name="gis_id">
-						<phys_type type="ds_uint"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>rwo_id ist ein dd description!basic_fieldVektor-Feld mit Elementen der Klasse integer der Größe 3 </help_text>
-			</field>
-			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZcode1">
-				<external_name>code1</external_name>
-				<name>code1</name>
-				<used_in_join>
-					<join_field>dd!join273966227!rev</join_field>
-					<joins>dd!join273966227!rev</joins>
-				</used_in_join>
-				<size>32</size>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value></default_value>
-				<unset_value>unset</unset_value>
-				<type>physical</type>
-				<stored_unit/>
-				<sub_type>
-					<sw_field_type>
-						<phys_type type="ds_char16canon"/>
-					</sw_field_type>
-				</sub_type>
-				<help_text>code1 ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZdd-0021join273966227-0021rev">
-				<external_name>dd!join273966227!rev</external_name>
-				<name>dd!join273966227!rev</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="sector" external_name="Sector" dataset="demographics"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="dd!join273966227!rev">
-								<conditions>
-									<condition target_table="sector" field1="code1" operator="=" field2="code"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>dd!join273966227!rev ist ein join Feld Datensatz aus &apos;sector&apos; wird ausgegeben </help_text>
-			</field>
-			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZdd-0021join273966230-0021rev">
-				<external_name>dd!join273966230!rev</external_name>
-				<name>dd!join273966230!rev</name>
-				<used_in_join/>
-				<size/>
-				<key>False</key>
-				<mandatory>True</mandatory>
-				<default_value>unset</default_value>
-				<type>join</type>
-				<stored_unit/>
-				<sub_type>
-					<join_details type="follow">
-						<result_tables>
-							<table name="piechart" external_name="Pie Chart" dataset="demographics"/>
-						</result_tables>
-						<follow heterogeneous="False" simple_result="True">
-							<result_flavour>
-								<result_type>record</result_type>
-								<ordered>Maybe</ordered>
-							</result_flavour>
-							<dd_join name="dd!join273966230!rev">
-								<conditions>
-									<condition target_table="piechart" field1="rwo_id" operator="=" field2="rwo_id"/>
-								</conditions>
-							</dd_join>
-						</follow>
-					</join_details>
-				</sub_type>
-				<help_text>dd!join273966230!rev ist ein join Feld Datensatz aus &apos;piechart&apos; wird ausgegeben </help_text>
-			</field>
-		</collection>
 		<collection name="sw_gis!drawing_function_param" external_name="sw_gis!drawing_function_param" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZsw_gis-0021drawing_function_param" category="expanded">
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsw_gis-0021drawing_function_paramVfieldZfunc_id">
 				<external_name>func_id</external_name>
@@ -4309,7 +4237,7 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>func_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </help_text>
+				<help_text>dd help!text: func_id dd description!is_a_type: description!basic_field, integer, 0, </help_text>
 			</field>
 			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsw_gis-0021drawing_function_paramVfieldZname">
 				<external_name>name</external_name>
@@ -4327,7 +4255,7 @@
 						<phys_type type="ds_char16canon"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </help_text>
+				<help_text>dd help!text: name dd description!is_a_string: description!basic_field, 32, </help_text>
 			</field>
 			<field type="physical" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsw_gis-0021drawing_function_paramVfieldZvalue_text_id">
 				<external_name>value_text_id</external_name>
@@ -4347,8 +4275,8 @@
 						<phys_type type="ds_uint"/>
 					</sw_field_type>
 				</sub_type>
-				<help_text>value_text_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-	Standardwert: 0 </help_text>
+				<help_text>dd help!text: value_text_id dd description!is_a_type: description!basic_field, integer, 0
+dd description!default: 0, </help_text>
 			</field>
 			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsw_gis-0021drawing_function_paramVfieldZdrawing_function">
 				<external_name>drawing_function</external_name>
@@ -4378,7 +4306,7 @@
 						</follow>
 					</join_details>
 				</sub_type>
-				<help_text>drawing_function ist ein join Feld Datensatz aus &apos;drawing_function&apos; wird ausgegeben </help_text>
+				<help_text>dd help!text: drawing_function dd description!is_a: description!join_field dd description!record_from: drawing_function, </help_text>
 			</field>
 			<field type="join" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZsw_gis-0021drawing_function_paramVfieldZvalue">
 				<external_name>value</external_name>
@@ -4398,7 +4326,111 @@
 						</text_join>
 					</join_details>
 				</sub_type>
-				<help_text>value ist ein join Feld Text wird ausgegeben </help_text>
+				<help_text>dd help!text: value dd description!is_a: description!join_field dd description!text, </help_text>
+			</field>
+		</collection>
+		<collection name="int!sector_piechart" external_name="int!sector_piechart" urn="swrefVdataset_collectionVdatasetZdemographicsVcollectionZint-0021sector_piechart" category="expanded">
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZrwo_id">
+				<external_name>rwo_id</external_name>
+				<name>rwo_id</name>
+				<used_in_join>
+					<join_field>dd!join273966230!rev</join_field>
+					<joins>dd!join273966230!rev</joins>
+				</used_in_join>
+				<size>3</size>
+				<key>True</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type name="gis_id">
+						<phys_type type="ds_uint"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>dd help!text: rwo_id dd description!is_a_vector: description!basic_field, integer, 3, </help_text>
+			</field>
+			<field type="physical" visible="True" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZcode1">
+				<external_name>code1</external_name>
+				<name>code1</name>
+				<used_in_join>
+					<join_field>dd!join273966227!rev</join_field>
+					<joins>dd!join273966227!rev</joins>
+				</used_in_join>
+				<size>32</size>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value></default_value>
+				<unset_value>unset</unset_value>
+				<type>physical</type>
+				<stored_unit/>
+				<sub_type>
+					<sw_field_type>
+						<phys_type type="ds_char16canon"/>
+					</sw_field_type>
+				</sub_type>
+				<help_text>dd help!text: code1 dd description!is_a_string: description!basic_field, 32, </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZdd-0021join273966227-0021rev">
+				<external_name>dd!join273966227!rev</external_name>
+				<name>dd!join273966227!rev</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="sector" external_name="Sector" dataset="demographics"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="dd!join273966227!rev">
+								<conditions>
+									<condition target_table="sector" field1="code1" operator="=" field2="code"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>dd help!text: dd!join273966227!rev dd description!is_a: description!join_field dd description!record_from: sector, </help_text>
+			</field>
+			<field type="join" visible="False" urn="swrefVbasic_fieldVdatasetZdemographicsVcollectionZint-0021sector_piechartVfieldZdd-0021join273966230-0021rev">
+				<external_name>dd!join273966230!rev</external_name>
+				<name>dd!join273966230!rev</name>
+				<used_in_join/>
+				<size/>
+				<key>False</key>
+				<mandatory>True</mandatory>
+				<default_value>unset</default_value>
+				<type>join</type>
+				<stored_unit/>
+				<sub_type>
+					<join_details type="follow">
+						<result_tables>
+							<table name="piechart" external_name="Pie Chart" dataset="demographics"/>
+						</result_tables>
+						<follow heterogeneous="False" simple_result="True">
+							<result_flavour>
+								<result_type>record</result_type>
+								<ordered>Maybe</ordered>
+							</result_flavour>
+							<dd_join name="dd!join273966230!rev">
+								<conditions>
+									<condition target_table="piechart" field1="rwo_id" operator="=" field2="rwo_id"/>
+								</conditions>
+							</dd_join>
+						</follow>
+					</join_details>
+				</sub_type>
+				<help_text>dd help!text: dd!join273966230!rev dd description!is_a: description!join_field dd description!record_from: piechart, </help_text>
 			</field>
 		</collection>
 	</category>
@@ -4455,7 +4487,7 @@
 		</enumerator>
 	</enumerators>
 	<explicit_topology_rules>
-		<manifold name="demographics" manifold_name="[Demographics] Demografie">
+		<manifold name="demographics" manifold_name="[Demographics] demographics">
 			<collection1 name="area" external_name="Area">
 				<field1 name="coverage" external_name="Coverage">
 					<collection2 name="area" external_name="Area">

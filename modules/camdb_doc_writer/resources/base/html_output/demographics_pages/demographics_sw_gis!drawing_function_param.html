@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../demographics.html">
@@ -49,7 +50,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>func_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: func_id dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="name" class="Field VisTrue">
                <td class="name">
@@ -62,7 +64,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: name dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="value_text_id" class="Field VisFalse">
                <td class="name">
@@ -75,8 +77,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>value_text_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>dd help!text: value_text_id dd description!is_a_type: description!basic_field, integer,
+                  0
+                  dd description!default: 0, </td>
             </tr>
             <tr id="drawing_function" class="Field VisFalse">
                <td class="name">
@@ -90,8 +93,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>drawing_function ist ein join Feld Datensatz aus 'drawing_function' wird ausgegeben
-                     </div>
+                  <div>dd help!text: drawing_function dd description!is_a: description!join_field dd description!record_from:
+                     drawing_function, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('drawing_function.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -129,7 +132,8 @@
                <td class="technical"></td>
                <td class="technical">text</td>
                <td>
-                  <div>value ist ein join Feld Text wird ausgegeben </div>
+                  <div>dd help!text: value dd description!is_a: description!join_field dd description!text,
+                     </div>
                   						<span class="technical">Text joined by field <a href="#value_text_id" onclick="ToggleAndHighlightField('value_text_id')">value_text_id</a> to table <a href="demographics_sw_gis!text_id.html">sw_gis!text_id</a></span>
                   					</td>
             </tr>

@@ -174,7 +174,7 @@ a#headerlogo {
 /*      width: 100%; */
         width: 3rem;
 	max-height: 3rem;
-	background-image: url('../images/RW_Circles.png');
+	background-image: url('../images/DMDW_50x50.png');
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 /*	background-position: left top; */
@@ -1065,9 +1065,9 @@ div#header_menu {
 	}
 a#headerlogo {
 	width: 5rem; height: 94%;
-	background-image: url('../images/RW_Circles.png');
+	background-image: url('../images/DMDW_50x50.png');
 /*
-	background-image: url('../images/RW_Circles.png');
+	background-image: url('../images/DMDW_50x50.png');
 */
 	}
 }

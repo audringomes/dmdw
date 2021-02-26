@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Sitzgelegenheit</title>
+      <title>Gis - Collection Seat</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Sitzgelegenheit</div>
+      <div class="PageTitle float">Seat</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#seat"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="seat">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Sitzgelegenheit</h3>
+                  <h3 class="InTable">Seat</h3>
                   <div class="technical InternalColName">seat</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="seat_id" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Sitzgelegenheits-ID</div>
+                  <div class="physical">Seat Id</div>
                </td>
                <td class="technical">seat_id</td>
                <td class="technical">1</td>
@@ -49,12 +50,12 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Sitzgelegenheits-ID ist ein dd description!basic_fieldFeld der Klasse integer, z.
-                  B. 0 </td>
+               <td>dd help!text: Seat Id dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="reporting_address" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Meldeadresse</div>
+                  <div class="physical">Reporting Address</div>
                </td>
                <td class="technical">reporting_address</td>
                <td class="technical">32</td>
@@ -63,11 +64,12 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Meldeadresse ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Reporting Address dd description!is_a_string: description!basic_field,
+                  32, </td>
             </tr>
             <tr id="seat_type" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Art der Sitzgelegenheit</div>
+                  <div class="physical">Seat Type</div>
                </td>
                <td class="technical">seat_type</td>
                <td class="technical">1</td>
@@ -76,7 +78,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>The values of <span class="name">Art der Sitzgelegenheit</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.material_type');" title="Click to Show/Hide details">material_type</a></span><table id="enu.material_type" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Seat Type</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.material_type');" title="Click to Show/Hide details">material_type</a></span><table id="enu.material_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">material_type</th>
                      </tr>
@@ -94,7 +96,7 @@
             </tr>
             <tr id="placement!fk1" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Platzierung!fk1</div>
+                  <div class="physical">Placement!fk1</div>
                </td>
                <td class="technical">placement!fk1</td>
                <td class="technical">1</td>
@@ -103,12 +105,12 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Platzierung!fk1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-                  </td>
+               <td>dd help!text: Placement!fk1 dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="placement!tid" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Platzierung!tid</div>
+                  <div class="physical">Placement!tid</div>
                </td>
                <td class="technical">placement!tid</td>
                <td class="technical">1</td>
@@ -117,8 +119,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Platzierung!tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-                  </td>
+               <td>dd help!text: Placement!tid dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="rwo_id" class="Field VisFalse">
                <td class="name">
@@ -158,8 +160,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -187,7 +189,7 @@
             </tr>
             <tr id="placement" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Platzierung</div>
+                  <div class="join">Placement</div>
                </td>
                <td class="technical">placement</td>
                <td class="technical"></td>
@@ -197,14 +199,14 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Platzierung ist ein join Feld Datensatz aus 'park,office,footpath' wird ausgegeben
-                     </div>
+                  <div>dd help!text: Placement dd description!is_a: description!join_field dd description!record_from:
+                     park,office,footpath, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('placement.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
                      <li class="Join"><a href="gis_park.html">Park</a></li>
-                     <li class="Join"><a href="gis_office.html">Büro</a></li>
-                     <li class="Join"><a href="gis_footpath.html">Fußweg</a></li>
+                     <li class="Join"><a href="gis_office.html">Office</a></li>
+                     <li class="Join"><a href="gis_footpath.html">Footpath</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="placement.details" style="display:none;">
@@ -233,7 +235,7 @@
             </tr>
             <tr id="location" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">Location</div>
                </td>
                <td class="technical">location</td>
                <td class="technical"></td>

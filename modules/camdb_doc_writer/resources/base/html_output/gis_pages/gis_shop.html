@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Geschäft</title>
+      <title>Gis - Collection Shop</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Geschäft</div>
+      <div class="PageTitle float">Shop</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#shop"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="shop">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Geschäft</h3>
+                  <h3 class="InTable">Shop</h3>
                   <div class="technical InternalColName">shop</div>
                </td>
             </tr>
@@ -53,7 +54,7 @@
             </tr>
             <tr id="street" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Straße</div>
+                  <div class="physical">Street</div>
                </td>
                <td class="technical">street</td>
                <td class="technical">32</td>
@@ -66,7 +67,7 @@
             </tr>
             <tr id="comments_id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Kommentar ID</div>
+                  <div class="physical">comments_id</div>
                </td>
                <td class="technical">comments_id</td>
                <td class="technical">1</td>
@@ -75,8 +76,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Kommentar ID ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>dd help!text: comments_id dd description!is_a_type: description!basic_field, integer,
+                  0
+                  dd description!default: 0, </td>
             </tr>
             <tr id="status" class="Field VisTrue">
                <td class="name">
@@ -110,7 +112,7 @@
             </tr>
             <tr id="shop_size" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Größe</div>
+                  <div class="physical">Size</div>
                </td>
                <td class="technical">shop_size</td>
                <td class="technical">1</td>
@@ -119,7 +121,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_int</td>
-               <td>The values of <span class="name">Größe</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.shop_size');" title="Click to Show/Hide details">shop_size</a></span><table id="enu.shop_size" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Size</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.shop_size');" title="Click to Show/Hide details">shop_size</a></span><table id="enu.shop_size" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">shop_size</th>
                      </tr>
@@ -137,7 +139,7 @@
             </tr>
             <tr id="postcode" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Postleitzahl</div>
+                  <div class="physical">Postcode</div>
                </td>
                <td class="technical">postcode</td>
                <td class="technical">32</td>
@@ -146,7 +148,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Postleitzahl ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Postcode dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="rwo_id" class="Field VisFalse">
                <td class="name">
@@ -176,7 +178,7 @@
             </tr>
             <tr id="amenities" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Ausstattung</div>
+                  <div class="join">Amenities</div>
                </td>
                <td class="technical">amenities</td>
                <td class="technical"></td>
@@ -186,12 +188,13 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Ausstattung ist ein join Feld Datensatz aus 'park,play_area' wird ausgegeben </div>
+                  <div>dd help!text: Amenities dd description!is_a: description!join_field dd description!record_from:
+                     park,play_area, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('amenities.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
                      <li class="Join"><a href="gis_park.html">Park</a></li>
-                     <li class="Join"><a href="gis_play_area.html">Freizeitbereich</a></li>
+                     <li class="Join"><a href="gis_play_area.html">Play Area</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="amenities.details" style="display:none;">
@@ -228,7 +231,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>amenities!int ist ein join Feld Datensatz aus 'int!hetero244956' wird ausgegeben </div>
+                  <div>dd help!text: amenities!int dd description!is_a: description!join_field dd description!record_from:
+                     int!hetero244956, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('amenities!int.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -259,7 +263,7 @@
             </tr>
             <tr id="comments" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Kommentar</div>
+                  <div class="join">Comments</div>
                </td>
                <td class="technical">comments</td>
                <td class="technical"></td>
@@ -269,13 +273,14 @@
                <td class="technical"></td>
                <td class="technical">text</td>
                <td>
-                  <div>Kommentar ist ein join Feld Text wird ausgegeben </div>
+                  <div>dd help!text: Comments dd description!is_a: description!join_field dd description!text,
+                     </div>
                   						<span class="technical">Text joined by field <a href="#comments_id" onclick="ToggleAndHighlightField('comments_id')">comments_id</a> to table <a href="gis_sw_gis!text_id.html">sw_gis!text_id</a></span>
                   					</td>
             </tr>
             <tr id="objects_sponsored" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Gesponserte Objekte</div>
+                  <div class="join">Objects Sponsored</div>
                </td>
                <td class="technical">objects_sponsored</td>
                <td class="technical"></td>
@@ -285,13 +290,13 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Gesponserte Objekte ist ein join Feld Satz von Datensätzen aus 'roundabout,play_area'
-                     wird ausgegeben </div>
+                  <div>dd help!text: Objects Sponsored dd description!is_a: description!join_field dd description!set_of_records_from:
+                     roundabout,play_area, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('objects_sponsored.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_roundabout.html">Kreisverkehr</a></li>
-                     <li class="Join"><a href="gis_play_area.html">Freizeitbereich</a></li>
+                     <li class="Join"><a href="gis_roundabout.html">Roundabout</a></li>
+                     <li class="Join"><a href="gis_play_area.html">Play Area</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="objects_sponsored.details" style="display:none;">
@@ -328,8 +333,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>objects_sponsored!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244932'
-                     wird ausgegeben </div>
+                  <div>dd help!text: objects_sponsored!int dd description!is_a: description!join_field dd
+                     description!collection_of_records_from: int!hetero244932, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('objects_sponsored!int.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -370,8 +375,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>sector ist ein super_dd join Feld Datensatz aus '[demographics]sector' wird ausgegeben
-                     </div>
+                  <div>dd help!text: sector dd description!is_a: description!super_dd_join_field dd description!record_from:
+                     [demographics]sector, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('sector.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -398,7 +403,7 @@
             </tr>
             <tr id="serviced_play_area" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Freizeitbereich mit Dienstangeboten</div>
+                  <div class="join">Serviced Play Area</div>
                </td>
                <td class="technical">serviced_play_area</td>
                <td class="technical"></td>
@@ -408,12 +413,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Freizeitbereich mit Dienstangeboten ist ein join Feld Datensatz aus 'play_area' wird
-                     ausgegeben </div>
+                  <div>dd help!text: Serviced Play Area dd description!is_a: description!join_field dd description!record_from:
+                     play_area, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('serviced_play_area.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_play_area.html">Freizeitbereich</a></li>
+                     <li class="Join"><a href="gis_play_area.html">Play Area</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="serviced_play_area.details" style="display:none;">
@@ -440,7 +445,7 @@
             </tr>
             <tr id="location" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">location</div>
                </td>
                <td class="technical">location</td>
                <td class="technical"></td>
@@ -471,7 +476,7 @@
             </tr>
             <tr id="cartesian_x" class="Field VisTrue">
                <td class="name">
-                  <div class="derived">Rechtswert</div>
+                  <div class="derived">Cartesian X</div>
                </td>
                <td class="technical">cartesian_x</td>
                <td class="technical">1</td>
@@ -480,11 +485,12 @@
                <td class="technical">derived</td>
                <td class="technical">m</td>
                <td class="technical">ds_float</td>
-               <td>Rechtswert ist ein derived Feld der Klasse float, z. B. 0.000 </td>
+               <td>dd help!text: Cartesian X dd description!is_a_type: description!dd_derived_field,
+                  float, 0.000, </td>
             </tr>
             <tr id="cartesian_y" class="Field VisTrue">
                <td class="name">
-                  <div class="derived">Hochwert</div>
+                  <div class="derived">Cartesian Y</div>
                </td>
                <td class="technical">cartesian_y</td>
                <td class="technical">1</td>
@@ -493,7 +499,8 @@
                <td class="technical">derived</td>
                <td class="technical">m</td>
                <td class="technical">ds_float</td>
-               <td>Hochwert ist ein derived Feld der Klasse float, z. B. 0.000 </td>
+               <td>dd help!text: Cartesian Y dd description!is_a_type: description!dd_derived_field,
+                  float, 0.000, </td>
             </tr>
          </table>
       </div>

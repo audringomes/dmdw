@@ -20,7 +20,8 @@
       <link rel="Stylesheet" href="layout.css"/>
       <link rel="Stylesheet" href="html.css"/>
       <link rel="stylesheet" href="dm.css"/> 
-      <link rel="stylesheet" href="custom.css"/> 
+      <link rel="stylesheet" href="custom.css"/>
+      <link rel="shortcut icon" href="'dmdw.ico'"/>
     </head>
 
     <html>

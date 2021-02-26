@@ -46,8 +46,10 @@
   </xsl:template>
   
   <xsl:template match="dm_datamodel_version">
-    <tr>
-      <td><xsl:text>Datamodel Version: </xsl:text></td>
+    <tr class="dmTableInfo">
+      <td style="vertical-align: top;">
+	<xsl:text>Datamodel Version: </xsl:text>
+      </td>
       <xsl:choose>
 	<xsl:when test=".='0'">
 	  <td><b><xsl:value-of select="."/></b></td>
@@ -55,11 +57,15 @@
 	<xsl:otherwise>
 	  <td>
 	    <b><xsl:value-of select="."/></b>
-	    <xsl:text> based on product: '</xsl:text>
-	    <b><xsl:value-of select="@dm_product_name"/></b>
-	    <xsl:text>', module: '</xsl:text>
-	    <b><xsl:value-of select="@dm_module_name"/></b>
-	    <xsl:text>'</xsl:text>
+	    <div>
+	      <xsl:text>Based on product: '</xsl:text>
+	      <b><xsl:value-of select="@dm_product_name"/></b>
+	    </div>
+	    <div>
+	      <xsl:text>Module: '</xsl:text>
+	      <b><xsl:value-of select="@dm_module_name"/></b>
+	      <xsl:text>'</xsl:text>
+	    </div>
 	  </td>
 	</xsl:otherwise>
       </xsl:choose>
@@ -734,10 +740,15 @@
 	<tr>
 	  <th colspan="2">
 	    <xsl:text>Soft joins of </xsl:text>
-	    <span class="name">
-	      <xsl:value-of select="//collection[@name=$intname]/@external_name"/>
-	    </span>
-	    (<xsl:value-of select="@name"/>)
+	    <a class="SJoinsOf">
+	      <xsl:attribute name="href">
+		<xsl:value-of select="concat($fn_prefix,@name,'.html')"/>
+	      </xsl:attribute>
+	      <span class="name">
+		<xsl:value-of select="//collection[@name=$intname]/@external_name"/>
+	      </span>
+	      (<xsl:value-of select="@name"/>)
+	    </a>
 	  </th>
 	</tr>
 	
@@ -752,7 +763,7 @@
     <table class="softjoins float">
       <xsl:attribute name="id">
 	<xsl:value-of select="parent::soft_join_collection/@name"/>
-	<xsl:text>_</xsl:text>
+	<xsl:text>.</xsl:text>
 	<xsl:value-of select="join_method_name"/>
       </xsl:attribute>
       <tr>
@@ -776,31 +787,57 @@
     <xsl:variable name="target_table" select="join_table"/>
     <xsl:variable name="target_url" select="concat($fn_prefix,$target_table,'.html')"/>
     <xsl:variable name="target_table_external_name" select="//collection[@name=$target_table]/@external_name"/>
+    
     <tr class="SoftJoin VisFalse">
+      <xsl:attribute name="id">
+	<xsl:value-of select="join_method_name"/>
+      </xsl:attribute>
+      <!--Name -->
       <td class="name"><xsl:value-of select="join_name"/></td>
+      <!-- Internal name -->
       <td class="technical"><xsl:value-of select="join_method_name"/></td>
+      <!--Size -->
+      <td class="technical"/> 
+      <!--Key? -->
+      <td class="technical"/> 
+      <!--Mandatory? -->
+      <td class="technical"/>
+      <!--Type -->
       <td class="technical">Soft Join</td>
-      <td class="technical">
-	<a class="SoftJoin" href="{$target_url}">
-	  <xsl:value-of select="$target_table_external_name"/>
-	</a>
-      </td>
-      <td class="technical">False</td>
-      <td class="technical">False</td>
+      <!--Unit-->
+      <td class="technical"/>
+      <!--Sub type-->
+      <td class="technical"/>
+      <!--description-->
       <td>
 	<xsl:text>Returns records from </xsl:text>
-	<xsl:value-of select="$target_table_external_name"/>
-	<xsl:text>. See the </xsl:text>
-	<a class="SoftJoin">
+	<a>
 	  <xsl:attribute name="href">
-	    <xsl:value-of select="concat($fn_prefix,'soft_joins','.html')"/>
-	    <xsl:text>#</xsl:text>
-	    <xsl:value-of select="parent::soft_join_collection/@name"/>
-	    <xsl:text>_</xsl:text>
-	    <xsl:value-of select="join_method_name"/>
+	    <xsl:value-of select="$target_url"/>
 	  </xsl:attribute>
-	  <xsl:text>definition</xsl:text>
+	  <xsl:attribute name="title">
+	    <xsl:text>Show the definition</xsl:text>
+	  </xsl:attribute>
+	  <xsl:value-of select="$target_table_external_name"/>
 	</a>
+	<xsl:text> </xsl:text>
+	
+	<div class="InfoIcon technical">
+	  
+	  <a class="SoftJoin">
+	    <!-- build the hyperlink to the soft joins page -->
+	    <xsl:attribute name="href">
+	      <xsl:value-of select="concat('../',$filename6)"/>
+	      <xsl:text>#</xsl:text>
+	      <xsl:value-of select="parent::soft_join_collection/@name"/>
+	      <xsl:text>.</xsl:text>
+	      <xsl:value-of select="join_method_name"/>
+	    </xsl:attribute>
+	    <img src="../information.png"/>
+	  </a>
+
+	</div>
+
       </td>
     </tr>
 

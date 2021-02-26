@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Fußweg</title>
+      <title>Gis - Collection Footpath</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Fußweg</div>
+      <div class="PageTitle float">Footpath</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#footpath"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="footpath">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Fußweg</h3>
+                  <h3 class="InTable">Footpath</h3>
                   <div class="technical InternalColName">footpath</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">ID</div>
+                  <div class="physical">id</div>
                </td>
                <td class="technical">id</td>
                <td class="technical">1</td>
@@ -66,7 +67,7 @@
             </tr>
             <tr id="class" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Klasse</div>
+                  <div class="physical">Class</div>
                </td>
                <td class="technical">class</td>
                <td class="technical">1</td>
@@ -75,7 +76,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>The values of <span class="name">Klasse</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.footpath_class');" title="Click to Show/Hide details">footpath_class</a></span><table id="enu.footpath_class" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Class</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.footpath_class');" title="Click to Show/Hide details">footpath_class</a></span><table id="enu.footpath_class" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">footpath_class</th>
                      </tr>
@@ -131,8 +132,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -160,7 +161,7 @@
             </tr>
             <tr id="seats" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Sitzgelegenheiten</div>
+                  <div class="join">Seats</div>
                </td>
                <td class="technical">seats</td>
                <td class="technical"></td>
@@ -170,12 +171,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Sitzgelegenheiten ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird
-                     ausgegeben </div>
+                  <div>dd help!text: Seats dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     seat, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('seats.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_seat.html">Sitzgelegenheit</a></li>
+                     <li class="Join"><a href="gis_seat.html">Seat</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="seats.details" style="display:none;">
@@ -199,7 +200,7 @@
             </tr>
             <tr id="walks" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Rundgänge</div>
+                  <div class="join">Walks</div>
                </td>
                <td class="technical">walks</td>
                <td class="technical"></td>
@@ -209,11 +210,12 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Rundgänge ist ein join Feld Satz von Datensätzen aus 'walk' wird ausgegeben </div>
+                  <div>dd help!text: Walks dd description!is_a: description!join_field dd description!set_of_records_from:
+                     walk, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('walks.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_walk.html">Rundgang</a></li>
+                     <li class="Join"><a href="gis_walk.html">Walk</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="walks.details" style="display:none;">
@@ -247,8 +249,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>walks!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244855' wird
-                     ausgegeben </div>
+                  <div>dd help!text: walks!int dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!hetero244855, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('walks!int.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -276,7 +278,7 @@
             </tr>
             <tr id="annotation" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">Annotation</div>
                </td>
                <td class="technical">annotation</td>
                <td class="technical"></td>
@@ -291,7 +293,7 @@
             </tr>
             <tr id="centre_line" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Mittelachse</div>
+                  <div class="geometry">Centreline</div>
                </td>
                <td class="technical">centre_line</td>
                <td class="technical"></td>
@@ -322,7 +324,7 @@
             </tr>
             <tr id="length" class="Field VisTrue">
                <td class="name">
-                  <div class="derived">Länge</div>
+                  <div class="derived">Length</div>
                </td>
                <td class="technical">length</td>
                <td class="technical">1</td>

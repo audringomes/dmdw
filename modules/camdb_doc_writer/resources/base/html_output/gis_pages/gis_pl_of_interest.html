@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Sehenswürdigkeit</title>
+      <title>Gis - Collection Place of Interest</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Sehenswürdigkeit</div>
+      <div class="PageTitle float">Place of Interest</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#pl_of_interest"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="pl_of_interest">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Sehenswürdigkeit</h3>
+                  <h3 class="InTable">Place of Interest</h3>
                   <div class="technical InternalColName">pl_of_interest</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="pl_of_interest_id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Sehenswürdigkeit ID</div>
+                  <div class="physical">pl_of_interest_id</div>
                </td>
                <td class="technical">pl_of_interest_id</td>
                <td class="technical">1</td>
@@ -66,7 +67,7 @@
             </tr>
             <tr id="address1" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Adresse 1</div>
+                  <div class="physical">Address 1</div>
                </td>
                <td class="technical">address1</td>
                <td class="technical">20</td>
@@ -79,7 +80,7 @@
             </tr>
             <tr id="address2" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Adresse 2</div>
+                  <div class="physical">Address 2</div>
                </td>
                <td class="technical">address2</td>
                <td class="technical">20</td>
@@ -92,7 +93,7 @@
             </tr>
             <tr id="type_of_place" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Ortstyp</div>
+                  <div class="physical">Type of Place</div>
                </td>
                <td class="technical">type_of_place</td>
                <td class="technical">20</td>
@@ -105,7 +106,7 @@
             </tr>
             <tr id="nearest_town" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Nächste Stadt</div>
+                  <div class="physical">Nearest Town</div>
                </td>
                <td class="technical">nearest_town</td>
                <td class="technical">20</td>
@@ -154,8 +155,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join326453 ist ein join Feld Datensatz aus 'int!drawing_pl_of_interes' wird ausgegeben
-                     </div>
+                  <div>dd help!text: dd!join326453 dd description!is_a: description!join_field dd description!record_from:
+                     int!drawing_pl_of_interes, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join326453.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -183,7 +184,7 @@
             </tr>
             <tr id="drawing" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Zeichnung</div>
+                  <div class="join">Drawing</div>
                </td>
                <td class="technical">drawing</td>
                <td class="technical"></td>
@@ -193,11 +194,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Zeichnung ist ein join Feld Datensatz aus 'drawing' wird ausgegeben </div>
+                  <div>dd help!text: Drawing dd description!is_a: description!join_field dd description!record_from:
+                     drawing, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('drawing.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_drawing.html">Zeichnung</a></li>
+                     <li class="Join"><a href="gis_drawing.html">Drawing</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="drawing.details" style="display:none;">
@@ -231,8 +233,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -260,7 +262,7 @@
             </tr>
             <tr id="annotation" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">Annotation</div>
                </td>
                <td class="technical">annotation</td>
                <td class="technical"></td>
@@ -275,7 +277,7 @@
             </tr>
             <tr id="coverage" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Deckung</div>
+                  <div class="geometry">Coverage</div>
                </td>
                <td class="technical">coverage</td>
                <td class="technical"></td>
@@ -291,7 +293,7 @@
             </tr>
             <tr id="location" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">Location</div>
                </td>
                <td class="technical">location</td>
                <td class="technical"></td>

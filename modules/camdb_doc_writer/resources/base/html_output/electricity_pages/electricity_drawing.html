@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Electricity - Collection Zeichnung</title>
+      <title>Electricity - Collection Drawing</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../electricity.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Electricity</span></a></header>
-      <div class="PageTitle float">Zeichnung</div>
+      <div class="PageTitle float">Drawing</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="electricity_dm_svg.html#drawing"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="drawing">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Zeichnung</h3>
+                  <h3 class="InTable">Drawing</h3>
                   <div class="technical InternalColName">drawing</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="name" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Zeichnungsnummer</div>
+                  <div class="physical">Drawing Number</div>
                </td>
                <td class="technical">name</td>
                <td class="technical">32</td>
@@ -55,7 +56,7 @@
             </tr>
             <tr id="title" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Titel</div>
+                  <div class="physical">Title</div>
                </td>
                <td class="technical">title</td>
                <td class="technical">32</td>
@@ -70,7 +71,7 @@
             </tr>
             <tr id="scale" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Zeichnungsmaßstab</div>
+                  <div class="physical">Drawing Scale</div>
                </td>
                <td class="technical">scale</td>
                <td class="technical">1</td>
@@ -79,7 +80,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_int</td>
-               <td>The values of <span class="name">Zeichnungsmaßstab</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.drawing_scale');" title="Click to Show/Hide details">drawing_scale</a></span><table id="enu.drawing_scale" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Drawing Scale</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.drawing_scale');" title="Click to Show/Hide details">drawing_scale</a></span><table id="enu.drawing_scale" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">drawing_scale</th>
                      </tr>
@@ -107,7 +108,7 @@
             </tr>
             <tr id="entered_by" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Eingegeben durch</div>
+                  <div class="physical">Entered By</div>
                </td>
                <td class="technical">entered_by</td>
                <td class="technical">32</td>
@@ -122,7 +123,7 @@
             </tr>
             <tr id="date_entered" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Eingabedatum</div>
+                  <div class="physical">Date Entered</div>
                </td>
                <td class="technical">date_entered</td>
                <td class="technical">1</td>
@@ -137,7 +138,7 @@
             </tr>
             <tr id="revision_date" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Letzte Überarbeitung</div>
+                  <div class="physical">Last Revision Date</div>
                </td>
                <td class="technical">revision_date</td>
                <td class="technical">1</td>
@@ -167,7 +168,7 @@
             </tr>
             <tr id="orientation" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Ausrichtung</div>
+                  <div class="physical">Orientation</div>
                </td>
                <td class="technical">orientation</td>
                <td class="technical">1</td>
@@ -176,7 +177,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_int</td>
-               <td>The values of <span class="name">Ausrichtung</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.drawing_orientation');" title="Click to Show/Hide details">drawing_orientation</a></span><table id="enu.drawing_orientation" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Orientation</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.drawing_orientation');" title="Click to Show/Hide details">drawing_orientation</a></span><table id="enu.drawing_orientation" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">drawing_orientation</th>
                      </tr>
@@ -193,7 +194,7 @@
             </tr>
             <tr id="width" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Breite</div>
+                  <div class="physical">Width</div>
                </td>
                <td class="technical">width</td>
                <td class="technical">1</td>
@@ -208,7 +209,7 @@
             </tr>
             <tr id="height" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Höhe</div>
+                  <div class="physical">Height</div>
                </td>
                <td class="technical">height</td>
                <td class="technical">1</td>
@@ -223,7 +224,7 @@
             </tr>
             <tr id="drawing_units_descr" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Zeichnungseinheiten</div>
+                  <div class="physical">Drawing Units</div>
                </td>
                <td class="technical">drawing_units_descr</td>
                <td class="technical">1</td>
@@ -232,7 +233,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_int</td>
-               <td>The values of <span class="name">Zeichnungseinheiten</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.dunits_descr');" title="Click to Show/Hide details">dunits_descr</a></span><table id="enu.dunits_descr" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Drawing Units</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.dunits_descr');" title="Click to Show/Hide details">dunits_descr</a></span><table id="enu.dunits_descr" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">dunits_descr</th>
                      </tr>
@@ -259,7 +260,7 @@
             </tr>
             <tr id="world_units_descr" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Auflösung</div>
+                  <div class="physical">Resolution</div>
                </td>
                <td class="technical">world_units_descr</td>
                <td class="technical">1</td>
@@ -268,7 +269,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_int</td>
-               <td>The values of <span class="name">Auflösung</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.wunits_descr');" title="Click to Show/Hide details">wunits_descr</a></span><table id="enu.wunits_descr" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Resolution</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.wunits_descr');" title="Click to Show/Hide details">wunits_descr</a></span><table id="enu.wunits_descr" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">wunits_descr</th>
                      </tr>
@@ -329,8 +330,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join326450 ist ein join Feld Objekttabelle mit Datensätzen aus 'int!drawing_pl_of_interes'
-                     wird ausgegeben </div>
+                  <div>dd help!text: dd!join326450 dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!drawing_pl_of_interes, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join326450.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -358,7 +359,7 @@
             </tr>
             <tr id="boundary" class="Field VisFalse">
                <td class="name">
-                  <div class="geometry">Grenze</div>
+                  <div class="geometry">boundary</div>
                </td>
                <td class="technical">boundary</td>
                <td class="technical"></td>

@@ -22,7 +22,7 @@
       <link rel="stylesheet" href="{concat($path,'dm.css')}"/> 
       <link rel="stylesheet" href="{concat($path,'custom.css')}"/> 
       <link rel="stylesheet" href="{concat($path,'svg.css')}"/> 
-      
+      <link rel="shortcut icon" href="{concat($path,'dmdw.ico')}"/>      
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
       </script>
       <script src="{concat($path,'dm.js')}"/>

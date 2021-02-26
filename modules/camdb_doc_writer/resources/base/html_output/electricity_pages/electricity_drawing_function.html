@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../electricity.html">
@@ -196,7 +197,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint64</td>
-               <td>owner_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: owner_id dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="draw_order" class="Field VisTrue">
                <td class="name">
@@ -209,7 +211,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_int</td>
-               <td>draw_order ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: draw_order dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="flags" class="Field VisFalse">
                <td class="name">
@@ -222,7 +225,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>flags ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: flags dd description!is_a_type: description!basic_field, integer, 0,
+                  </td>
             </tr>
             <tr id="children" class="Field VisFalse">
                <td class="name">
@@ -236,8 +240,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>children ist ein join Feld Objekttabelle mit Datensätzen aus 'drawing_function' wird
-                     ausgegeben </div>
+                  <div>dd help!text: children dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     drawing_function, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('children.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -281,8 +285,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>extra_params ist ein join Feld Objekttabelle mit Datensätzen aus 'sw_gis!drawing_function_param'
-                     wird ausgegeben </div>
+                  <div>dd help!text: extra_params dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     sw_gis!drawing_function_param, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('extra_params.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -320,8 +324,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>function_geometries ist ein join Feld Objekttabelle mit Datensätzen aus 'function_geometry'
-                     wird ausgegeben </div>
+                  <div>dd help!text: function_geometries dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     function_geometry, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('function_geometries.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -359,8 +363,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -398,7 +402,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>owner ist ein join Feld Datensatz aus 'drawing_function' wird ausgegeben </div>
+                  <div>dd help!text: owner dd description!is_a: description!join_field dd description!record_from:
+                     drawing_function, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('owner.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">

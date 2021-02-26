@@ -131,6 +131,7 @@ tr.Mapped {
 tr.MappedTo {
     /* A geometry that is mapped to another */
     color: #283535;
+    display: none;
 }	
 tr.TopologyInteractionByField {
     vertical-align: top;
@@ -420,6 +421,10 @@ td.field1 {
     margin-bottom: 10px;
     min-width: 400px;
 }
+tr.dmTableInfo {
+    vertical-align: top;
+}
+
 .InternalColName {
     color: black;
     font-size: small;
@@ -484,4 +489,7 @@ ul.Join {
     display: block;
     background-color: gainsboro;
     overflow-x: auto;
+}
+.SJoinsOf {
+    color: #5897f9;
 }

@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Straßenkatalog</title>
+      <title>Gis - Collection Road Catalogue</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Straßenkatalog</div>
+      <div class="PageTitle float">Road Catalogue</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#road_catalogue"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="road_catalogue">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Straßenkatalog</h3>
+                  <h3 class="InTable">Road Catalogue</h3>
                   <div class="technical InternalColName">road_catalogue</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="identifier" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Bezeichner</div>
+                  <div class="physical">Identifier</div>
                </td>
                <td class="technical">identifier</td>
                <td class="technical">1</td>
@@ -49,11 +50,12 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Bezeichner ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: Identifier dd description!is_a_type: description!basic_field, integer,
+                  0, </td>
             </tr>
             <tr id="road_type" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Straßentyp</div>
+                  <div class="physical">Road Type</div>
                </td>
                <td class="technical">road_type</td>
                <td class="technical">1</td>
@@ -62,7 +64,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>The values of <span class="name">Straßentyp</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.road_type');" title="Click to Show/Hide details">road_type</a></span><table id="enu.road_type" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Road Type</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.road_type');" title="Click to Show/Hide details">road_type</a></span><table id="enu.road_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">road_type</th>
                      </tr>
@@ -85,7 +87,7 @@
             </tr>
             <tr id="carriage_type" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Fahrbahntyp</div>
+                  <div class="physical">Carriage Type</div>
                </td>
                <td class="technical">carriage_type</td>
                <td class="technical">1</td>
@@ -94,7 +96,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>The values of <span class="name">Fahrbahntyp</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.carriage_type');" title="Click to Show/Hide details">carriage_type</a></span><table id="enu.carriage_type" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Carriage Type</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.carriage_type');" title="Click to Show/Hide details">carriage_type</a></span><table id="enu.carriage_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">carriage_type</th>
                      </tr>
@@ -115,7 +117,7 @@
             </tr>
             <tr id="cost_factor" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Kostenfaktor</div>
+                  <div class="physical">Cost Factor</div>
                </td>
                <td class="technical">cost_factor</td>
                <td class="technical">1</td>
@@ -124,8 +126,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_float</td>
-               <td>Kostenfaktor ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
-                  </td>
+               <td>dd help!text: Cost Factor dd description!is_a_type: description!basic_field, float,
+                  0.000, </td>
             </tr>
             <tr id="ds!version" class="Field VisFalse">
                <td class="name">
@@ -152,8 +154,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">

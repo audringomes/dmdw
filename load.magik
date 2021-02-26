@@ -12,5 +12,10 @@ _block
 	sw:smallworld_product.add_product(l_root)
 	sw_module_manager.load_module(:dm_doc_writer)
 	sw_module_manager.load_module(:dm_svg_writer)
+	
+	_if sw_module_manager.module_is_loaded?(:cam_db_engines)
+	_then sw_module_manager.load_module(:camdb_doc_writer)
+	_endif
+	
 _endblock
 $

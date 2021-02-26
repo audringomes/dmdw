@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Büro</title>
+      <title>Gis - Collection Office</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Büro</div>
+      <div class="PageTitle float">Office</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#office"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="office">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Büro</h3>
+                  <h3 class="InTable">Office</h3>
                   <div class="technical InternalColName">office</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="office_id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Büro ID</div>
+                  <div class="physical">office_id</div>
                </td>
                <td class="technical">office_id</td>
                <td class="technical">1</td>
@@ -66,7 +67,7 @@
             </tr>
             <tr id="address1" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Adresse 1</div>
+                  <div class="physical">Address 1</div>
                </td>
                <td class="technical">address1</td>
                <td class="technical">20</td>
@@ -79,7 +80,7 @@
             </tr>
             <tr id="address2" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Adresse 2</div>
+                  <div class="physical">Address 2</div>
                </td>
                <td class="technical">address2</td>
                <td class="technical">20</td>
@@ -92,7 +93,7 @@
             </tr>
             <tr id="company_id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Firma ID</div>
+                  <div class="physical">company_id</div>
                </td>
                <td class="technical">company_id</td>
                <td class="technical">1</td>
@@ -158,7 +159,7 @@
             </tr>
             <tr id="company" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Mutterkonzern</div>
+                  <div class="join">Parent Company</div>
                </td>
                <td class="technical">company</td>
                <td class="technical"></td>
@@ -172,7 +173,7 @@
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('company.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_company.html">Firma</a></li>
+                     <li class="Join"><a href="gis_company.html">Company</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="company.details" style="display:none;">
@@ -206,8 +207,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join356709 ist ein join Feld Objekttabelle mit Datensätzen aus 'int!office_drawing'
-                     wird ausgegeben </div>
+                  <div>dd help!text: dd!join356709 dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!office_drawing, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join356709.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -235,7 +236,7 @@
             </tr>
             <tr id="drawings" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Zeichnungen</div>
+                  <div class="join">Drawings</div>
                </td>
                <td class="technical">drawings</td>
                <td class="technical"></td>
@@ -245,11 +246,12 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Zeichnungen ist ein join Feld Satz von Datensätzen aus 'drawing' wird ausgegeben </div>
+                  <div>dd help!text: Drawings dd description!is_a: description!join_field dd description!set_of_records_from:
+                     drawing, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('drawings.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_drawing.html">Zeichnung</a></li>
+                     <li class="Join"><a href="gis_drawing.html">Drawing</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="drawings.details" style="display:none;">
@@ -283,8 +285,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -312,7 +314,7 @@
             </tr>
             <tr id="seats" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Sitzgelegenheiten</div>
+                  <div class="join">Seats</div>
                </td>
                <td class="technical">seats</td>
                <td class="technical"></td>
@@ -322,12 +324,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Sitzgelegenheiten ist ein join Feld Objekttabelle mit Datensätzen aus 'seat' wird
-                     ausgegeben </div>
+                  <div>dd help!text: Seats dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     seat, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('seats.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_seat.html">Sitzgelegenheit</a></li>
+                     <li class="Join"><a href="gis_seat.html">Seat</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="seats.details" style="display:none;">
@@ -351,7 +353,7 @@
             </tr>
             <tr id="annotation" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">Annotation</div>
                </td>
                <td class="technical">annotation</td>
                <td class="technical"></td>
@@ -366,7 +368,7 @@
             </tr>
             <tr id="location" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">Location</div>
                </td>
                <td class="technical">location</td>
                <td class="technical"></td>
@@ -406,7 +408,8 @@
                <td class="technical">derived</td>
                <td class="technical"></td>
                <td class="technical">ds_int</td>
-               <td>Logo ist ein derived Feld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: Logo dd description!is_a_type: description!dd_derived_field, integer,
+                  0, </td>
             </tr>
          </table>
       </div>

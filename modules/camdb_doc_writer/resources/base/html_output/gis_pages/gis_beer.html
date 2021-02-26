@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Bier</title>
+      <title>Gis - Collection Beer</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Bier</div>
+      <div class="PageTitle float">Beer</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#beer"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="beer">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Bier</h3>
+                  <h3 class="InTable">Beer</h3>
                   <div class="technical InternalColName">beer</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">ID</div>
+                  <div class="physical">Id</div>
                </td>
                <td class="technical">id</td>
                <td class="technical">1</td>
@@ -49,11 +50,11 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>ID ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: Id dd description!is_a_type: description!basic_field, integer, 0, </td>
             </tr>
             <tr id="beer" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Bier</div>
+                  <div class="physical">Beer</div>
                </td>
                <td class="technical">beer</td>
                <td class="technical">32</td>
@@ -62,11 +63,11 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Bier ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Beer dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="type" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Typ</div>
+                  <div class="physical">Type</div>
                </td>
                <td class="technical">type</td>
                <td class="technical">1</td>
@@ -75,7 +76,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>The values of <span class="name">Typ</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.beer_type');" title="Click to Show/Hide details">beer_type</a></span><table id="enu.beer_type" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Type</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.beer_type');" title="Click to Show/Hide details">beer_type</a></span><table id="enu.beer_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">beer_type</th>
                      </tr>
@@ -96,7 +97,7 @@
             </tr>
             <tr id="bottled" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">In Flaschen</div>
+                  <div class="physical">Bottled</div>
                </td>
                <td class="technical">bottled</td>
                <td class="technical">1</td>
@@ -105,7 +106,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_bool</td>
-               <td>In Flaschen ist ein dd description!basic_fieldFeld der Klasse false, z. B. True </td>
+               <td>dd help!text: Bottled dd description!is_a_type: description!basic_field, false, True,
+                  </td>
             </tr>
             <tr id="text_id" class="Field VisFalse">
                <td class="name">
@@ -118,8 +120,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>text_id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>dd help!text: text_id dd description!is_a_type: description!basic_field, integer,
+                  0
+                  dd description!default: 0, </td>
             </tr>
             <tr id="percent_by_vol" class="Field VisTrue">
                <td class="name">
@@ -132,12 +135,12 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_float</td>
-               <td>percent_by_vol ist ein dd description!basic_fieldFeld der Klasse float, z. B. 0.000
-                  </td>
+               <td>dd help!text: percent_by_vol dd description!is_a_type: description!basic_field, float,
+                  0.000, </td>
             </tr>
             <tr id="keg" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Fass</div>
+                  <div class="physical">Keg</div>
                </td>
                <td class="technical">keg</td>
                <td class="technical">1</td>
@@ -146,11 +149,12 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_bool</td>
-               <td>Fass ist ein dd description!basic_fieldFeld der Klasse false, z. B. True </td>
+               <td>dd help!text: Keg dd description!is_a_type: description!basic_field, false, True,
+                  </td>
             </tr>
             <tr id="owner_name" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Eigentümername</div>
+                  <div class="physical">Owner Name</div>
                </td>
                <td class="technical">owner_name</td>
                <td class="technical">32</td>
@@ -159,7 +163,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Eigentümername ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Owner Name dd description!is_a_string: description!basic_field, 32,
+                  </td>
             </tr>
             <tr id="ds!version" class="Field VisFalse">
                <td class="name">
@@ -176,7 +181,7 @@
             </tr>
             <tr id="brewery" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Brauerei</div>
+                  <div class="join">Brewery</div>
                </td>
                <td class="technical">brewery</td>
                <td class="technical"></td>
@@ -186,11 +191,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>Brauerei ist ein join Feld Datensatz aus 'brewery' wird ausgegeben </div>
+                  <div>dd help!text: Brewery dd description!is_a: description!join_field dd description!record_from:
+                     brewery, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('brewery.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_brewery.html">Brauerei</a></li>
+                     <li class="Join"><a href="gis_brewery.html">Brewery</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="brewery.details" style="display:none;">
@@ -224,8 +230,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join408002 ist ein join Feld Objekttabelle mit Datensätzen aus 'int!pub_rest_beer'
-                     wird ausgegeben </div>
+                  <div>dd help!text: dd!join408002 dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!pub_rest_beer, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join408002.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -263,7 +269,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join408122 ist ein join Feld Datensatz aus 'int!brewery_beer' wird ausgegeben </div>
+                  <div>dd help!text: dd!join408122 dd description!is_a: description!join_field dd description!record_from:
+                     int!brewery_beer, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join408122.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -291,7 +298,7 @@
             </tr>
             <tr id="description" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Beschreibung</div>
+                  <div class="join">Description</div>
                </td>
                <td class="technical">description</td>
                <td class="technical"></td>
@@ -301,7 +308,8 @@
                <td class="technical"></td>
                <td class="technical">text</td>
                <td>
-                  <div>Beschreibung ist ein join Feld Text wird ausgegeben </div>
+                  <div>dd help!text: Description dd description!is_a: description!join_field dd description!text,
+                     </div>
                   						<span class="technical">Text joined by field <a href="#text_id" onclick="ToggleAndHighlightField('text_id')">text_id</a> to table <a href="gis_sw_gis!text_id.html">sw_gis!text_id</a></span>
                   					</td>
             </tr>
@@ -317,8 +325,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -346,7 +354,7 @@
             </tr>
             <tr id="pub_rests" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Gaststätten</div>
+                  <div class="join">Pub/Restaurants</div>
                </td>
                <td class="technical">pub_rests</td>
                <td class="technical"></td>
@@ -356,12 +364,12 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Gaststätten ist ein join Feld Satz von Datensätzen aus 'pub_rest' wird ausgegeben
-                     </div>
+                  <div>dd help!text: Pub/Restaurants dd description!is_a: description!join_field dd description!set_of_records_from:
+                     pub_rest, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('pub_rests.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="pub_rests.details" style="display:none;">

@@ -18,10 +18,10 @@
 	<meta name="description" content="An easy way to visualize the datamodel objects and relationships is to make use of the existing graphics in the CASE database." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="André van den Boogert" />
-        <meta name="revised" content="21/02/2021" />
+        <meta name="revised" content="22/02/2021" />
         <meta name="id" content="dmdw_SVG-Diagram" />
 	<meta name="msapplication-tap-highlight" content="no" />
-<link rel="shortcut icon" href="favicon.ico" />
+<link rel="shortcut icon" href="dmdw.ico" />
 	<link type="text/css" href="./css/hmprojectstyles.css" rel="stylesheet" />
         <link type="text/css" href="./css/magik.css" rel="stylesheet" />
 	<script type="text/javascript">
@@ -269,7 +269,6 @@ function GetSearchPage() {
 <p class="p_Normal">The principle is to pass a set of collections, for example all user tables of a dataset. This collection is expanded with the physical relations that they have, including the heterogeneous ones.</p>
 <p class="p_Normal">After calculation of the bounds, the geometry is then transformed into SVG pixel space and presented as typical SVG objects.</p>
 <p class="p_Normal">A case object is represented as a <span style="font-weight: bold;">text</span>, the physical relations as a <span style="font-weight: bold;">polyline</span>, an hetero table as a <span style="font-weight: bold;">circle</span> and the heterogeneous relations as <span style="font-weight: bold;">line</span>.</p>
-<p class="p_Normal">See the page in <a href="dmdw_example_2.html" class="topiclink">Example (2)</a>.</p>
 <p class="p_Heading2"><span class="f_Heading2">Example</span></p>
 <p class="p_Normal">The following proc creates a Diagram with input of all user tables in dataset <span style="font-weight: bold;">DS</span>, using case_ds_view <span style="font-weight: bold;">CASE_VIEW</span>, and writes the output to the xml resource folder of the module <span style="font-weight: bold;">dm_svg_writer</span>.</p>
 <p class="p_Normal">Because the property <span style="font-weight: bold;">:standalone? </span>is set, the <span style="font-weight: bold;">svg.css</span> from the <span style="font-weight: bold;">ds_doc_writer</span> module is embedded in the file.</p>

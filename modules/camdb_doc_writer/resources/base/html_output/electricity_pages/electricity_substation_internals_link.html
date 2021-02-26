@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../electricity.html">
@@ -49,7 +50,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint64</td>
-               <td>Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: Id dd description!is_a_type: description!basic_field, integer, 0, </td>
             </tr>
             <tr id="internal_label" class="Field VisTrue">
                <td class="name">
@@ -62,7 +63,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16</td>
-               <td>Internal Label ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Internal Label dd description!is_a_string: description!basic_field,
+                  32, </td>
             </tr>
             <tr id="voltage" class="Field VisTrue">
                <td class="name">
@@ -82,9 +84,9 @@
                      <tr>
                         <td colspan="3">
                            <ul class="EnumeratorValues">
+                              <li class="EnumeratorValue">132kV</li>
                               <li class="EnumeratorValue">11kV</li>
                               <li class="EnumeratorValue">LV</li>
-                              <li class="EnumeratorValue">132kV</li>
                            </ul>
                         </td>
                      </tr>
@@ -129,8 +131,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">

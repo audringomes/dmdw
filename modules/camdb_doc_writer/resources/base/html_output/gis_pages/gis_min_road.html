@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Straße</title>
+      <title>Gis - Collection Road</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Straße</div>
+      <div class="PageTitle float">Road</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#min_road"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="min_road">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Straße</h3>
+                  <h3 class="InTable">Road</h3>
                   <div class="technical InternalColName">min_road</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="min_road_id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Nebenstraße ID</div>
+                  <div class="physical">min_road_id</div>
                </td>
                <td class="technical">min_road_id</td>
                <td class="technical">1</td>
@@ -66,7 +67,7 @@
             </tr>
             <tr id="carriage_type" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Fahrbahntyp</div>
+                  <div class="physical">Carriage Type</div>
                </td>
                <td class="technical">carriage_type</td>
                <td class="technical">1</td>
@@ -75,7 +76,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>The values of <span class="name">Fahrbahntyp</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.carriage_type');" title="Click to Show/Hide details">carriage_type</a></span><table id="enu.carriage_type" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Carriage Type</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.carriage_type');" title="Click to Show/Hide details">carriage_type</a></span><table id="enu.carriage_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">carriage_type</th>
                      </tr>
@@ -96,7 +97,7 @@
             </tr>
             <tr id="road_type" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Straßentyp</div>
+                  <div class="physical">Road Type</div>
                </td>
                <td class="technical">road_type</td>
                <td class="technical">1</td>
@@ -105,7 +106,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>The values of <span class="name">Straßentyp</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.road_type');" title="Click to Show/Hide details">road_type</a></span><table id="enu.road_type" class="InlineBox" style="display:none;">
+               <td>The values of <span class="name">Road Type</span> are controlled by the enumerator  <span class="name"><a class="expandlink" onclick="ToggleId('enu.road_type');" title="Click to Show/Hide details">road_type</a></span><table id="enu.road_type" class="InlineBox" style="display:none;">
                      <tr class="HeadStyle">
                         <th class="name" colspan="3">road_type</th>
                      </tr>
@@ -164,8 +165,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join408011 ist ein join Feld Objekttabelle mit Datensätzen aus 'int!min_road_pub_rest'
-                     wird ausgegeben </div>
+                  <div>dd help!text: dd!join408011 dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!min_road_pub_rest, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join408011.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -203,8 +204,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -242,8 +243,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>min_road_to_int!min_road_r ist ein join Feld Objekttabelle mit Datensätzen aus 'int!min_road_road_annotati'
-                     wird ausgegeben </div>
+                  <div>dd help!text: min_road_to_int!min_road_r dd description!is_a: description!join_field
+                     dd description!collection_of_records_from: int!min_road_road_annotati, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('min_road_to_int!min_road_r.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -271,7 +272,7 @@
             </tr>
             <tr id="pub_rests" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Gaststätten</div>
+                  <div class="join">Pub/Restaurants</div>
                </td>
                <td class="technical">pub_rests</td>
                <td class="technical"></td>
@@ -285,7 +286,7 @@
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('pub_rests.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="pub_rests.details" style="display:none;">
@@ -309,7 +310,7 @@
             </tr>
             <tr id="road_annotations" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Straßenbeschriftung</div>
+                  <div class="join">Road Annotations</div>
                </td>
                <td class="technical">road_annotations</td>
                <td class="technical"></td>
@@ -319,12 +320,12 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Straßenbeschriftung ist ein join Feld Satz von Datensätzen aus 'road_annotation' wird
-                     ausgegeben </div>
+                  <div>dd help!text: Road Annotations dd description!is_a: description!join_field dd description!set_of_records_from:
+                     road_annotation, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('road_annotations.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_road_annotation.html">Straßenbeschriftung</a></li>
+                     <li class="Join"><a href="gis_road_annotation.html">Road Annotation</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="road_annotations.details" style="display:none;">
@@ -348,7 +349,7 @@
             </tr>
             <tr id="walks" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Rundgänge</div>
+                  <div class="join">Walks</div>
                </td>
                <td class="technical">walks</td>
                <td class="technical"></td>
@@ -358,11 +359,12 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Rundgänge ist ein join Feld Satz von Datensätzen aus 'walk' wird ausgegeben </div>
+                  <div>dd help!text: Walks dd description!is_a: description!join_field dd description!set_of_records_from:
+                     walk, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('walks.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_walk.html">Rundgang</a></li>
+                     <li class="Join"><a href="gis_walk.html">Walk</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="walks.details" style="display:none;">
@@ -396,8 +398,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>walks!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244855' wird
-                     ausgegeben </div>
+                  <div>dd help!text: walks!int dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!hetero244855, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('walks!int.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -425,7 +427,7 @@
             </tr>
             <tr id="centre_line" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Mittelachse</div>
+                  <div class="geometry">Centreline</div>
                </td>
                <td class="technical">centre_line</td>
                <td class="technical"></td>
@@ -456,7 +458,7 @@
             </tr>
             <tr id="length" class="Field VisTrue">
                <td class="name">
-                  <div class="derived">Länge</div>
+                  <div class="derived">Length</div>
                </td>
                <td class="technical">length</td>
                <td class="technical">1</td>

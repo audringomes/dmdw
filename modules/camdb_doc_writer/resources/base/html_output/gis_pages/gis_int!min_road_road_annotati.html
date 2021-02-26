@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
@@ -62,8 +63,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>min_road_id1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>dd help!text: min_road_id1 dd description!is_a_type: description!basic_field, integer,
+                  0
+                  dd description!default: 0, </td>
             </tr>
             <tr id="int!min_road_r_to_min_road" class="Field VisFalse">
                <td class="name">
@@ -77,12 +79,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>int!min_road_r_to_min_road ist ein join Feld Datensatz aus 'min_road' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!min_road_r_to_min_road dd description!is_a: description!join_field
+                     dd description!record_from: min_road, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!min_road_r_to_min_road.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_min_road.html">Straße</a></li>
+                     <li class="Join"><a href="gis_min_road.html">Road</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="int!min_road_r_to_min_road.details" style="display:none;">
@@ -116,12 +118,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>int!min_road_r_to_road_annotati ist ein join Feld Datensatz aus 'road_annotation'
-                     wird ausgegeben </div>
+                  <div>dd help!text: int!min_road_r_to_road_annotati dd description!is_a: description!join_field
+                     dd description!record_from: road_annotation, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!min_road_r_to_road_annotati.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_road_annotation.html">Straßenbeschriftung</a></li>
+                     <li class="Join"><a href="gis_road_annotation.html">Road Annotation</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="int!min_road_r_to_road_annotati.details" style="display:none;">

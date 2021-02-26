@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
@@ -49,7 +50,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: name dd description!is_a_string: description!basic_field, 32, </td>
             </tr>
             <tr id="office_id1" class="Field VisTrue">
                <td class="name">
@@ -62,8 +63,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>office_id1 ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>dd help!text: office_id1 dd description!is_a_type: description!basic_field, integer,
+                  0
+                  dd description!default: 0, </td>
             </tr>
             <tr id="dd!join356709!rev" class="Field VisFalse">
                <td class="name">
@@ -77,11 +79,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join356709!rev ist ein join Feld Datensatz aus 'office' wird ausgegeben </div>
+                  <div>dd help!text: dd!join356709!rev dd description!is_a: description!join_field dd description!record_from:
+                     office, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join356709!rev.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_office.html">Büro</a></li>
+                     <li class="Join"><a href="gis_office.html">Office</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="dd!join356709!rev.details" style="display:none;">
@@ -115,11 +118,12 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>dd!join356712!rev ist ein join Feld Datensatz aus 'drawing' wird ausgegeben </div>
+                  <div>dd help!text: dd!join356712!rev dd description!is_a: description!join_field dd description!record_from:
+                     drawing, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('dd!join356712!rev.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_drawing.html">Zeichnung</a></li>
+                     <li class="Join"><a href="gis_drawing.html">Drawing</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="dd!join356712!rev.details" style="display:none;">

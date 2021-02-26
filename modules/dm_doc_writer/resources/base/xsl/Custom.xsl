@@ -19,7 +19,7 @@
   <xsl:variable name="enum_interactive_title" select="'Enumerators (interactive)'"/>
   <xsl:variable name="topology_static_title" select="'Topology (static)'"/>
   <xsl:variable name="topology_interactive_title" select="'Topology (interactive)'"/>
-  <xsl:variable name="soft_joins_title" select="'Magik joins'"/>
+  <xsl:variable name="soft_joins_title" select="'Soft joins'"/>
   
   <!--
        The next templates are used to provide text for every major chapter 

@@ -6,7 +6,8 @@
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../electricity.html">
@@ -49,7 +50,7 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint64</td>
-               <td>Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0 </td>
+               <td>dd help!text: Id dd description!is_a_type: description!basic_field, integer, 0, </td>
             </tr>
             <tr id="routine_name" class="Field VisFalse">
                <td class="name">
@@ -62,7 +63,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Routine Name ist eine dd description!basic_fieldZeichenfolge-Feldgröße 64 </td>
+               <td>dd help!text: Routine Name dd description!is_a_string: description!basic_field, 64,
+                  </td>
             </tr>
             <tr id="error_code" class="Field VisTrue">
                <td class="name">
@@ -75,7 +77,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Error Code ist eine dd description!basic_fieldZeichenfolge-Feldgröße 64 </td>
+               <td>dd help!text: Error Code dd description!is_a_string: description!basic_field, 64,
+                  </td>
             </tr>
             <tr id="origin" class="Field VisTrue">
                <td class="name">
@@ -176,8 +179,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_time</td>
-               <td>Date Created ist ein dd description!basic_fieldFeld der Klasse ds_time, z. B. 01.01.1970
-                  01:00:00 </td>
+               <td>dd help!text: Date Created dd description!is_a_type: description!basic_field, ds_time,
+                  date time, </td>
             </tr>
             <tr id="date_updated" class="Field VisTrue">
                <td class="name">
@@ -190,9 +193,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_time</td>
-               <td>Date Updated ist ein dd description!basic_fieldFeld der Klasse ds_time, z. B. 01.01.1970
-                  01:00:00
-                  	Standardwert: 01.01.1970 01:00:00 </td>
+               <td>dd help!text: Date Updated dd description!is_a_type: description!basic_field, ds_time,
+                  date time
+                  dd description!default: date time, </td>
             </tr>
             <tr id="created_by" class="Field VisTrue">
                <td class="name">
@@ -205,7 +208,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Created By ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Created By dd description!is_a_string: description!basic_field, 32,
+                  </td>
             </tr>
             <tr id="updated_by" class="Field VisTrue">
                <td class="name">
@@ -218,7 +222,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Updated By ist eine dd description!basic_fieldZeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Updated By dd description!is_a_string: description!basic_field, 32,
+                  </td>
             </tr>
             <tr id="alternative" class="Field VisFalse">
                <td class="name">
@@ -231,7 +236,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Alternative ist eine dd description!basic_fieldZeichenfolge-Feldgröße 128 </td>
+               <td>dd help!text: Alternative dd description!is_a_string: description!basic_field, 128,
+                  </td>
             </tr>
             <tr id="design_info" class="Field VisTrue">
                <td class="name">
@@ -244,7 +250,8 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Design Info ist eine dd description!basic_fieldZeichenfolge-Feldgröße 64 </td>
+               <td>dd help!text: Design Info dd description!is_a_string: description!basic_field, 64,
+                  </td>
             </tr>
             <tr id="transient?" class="Field VisFalse">
                <td class="name">
@@ -257,8 +264,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_bool</td>
-               <td>Transient? ist ein dd description!basic_fieldFeld der Klasse false, z. B. True
-                  	Standardwert: False </td>
+               <td>dd help!text: Transient? dd description!is_a_type: description!basic_field, false,
+                  True
+                  dd description!default: False, </td>
             </tr>
             <tr id="description_id" class="Field VisFalse">
                <td class="name">
@@ -271,8 +279,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint64</td>
-               <td>Description Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>dd help!text: Description Id dd description!is_a_type: description!basic_field, integer,
+                  0
+                  dd description!default: 0, </td>
             </tr>
             <tr id="remarks_id" class="Field VisFalse">
                <td class="name">
@@ -285,8 +294,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint64</td>
-               <td>Remarks Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B. 0
-                  	Standardwert: 0 </td>
+               <td>dd help!text: Remarks Id dd description!is_a_type: description!basic_field, integer,
+                  0
+                  dd description!default: 0, </td>
             </tr>
             <tr id="related_object_id" class="Field VisFalse">
                <td class="name">
@@ -299,9 +309,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint64</td>
-               <td>Related Object Id ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
-                  0
-                  	Standardwert: 0 </td>
+               <td>dd help!text: Related Object Id dd description!is_a_type: description!basic_field,
+                  integer, 0
+                  dd description!default: 0, </td>
             </tr>
             <tr id="related_object_tid" class="Field VisFalse">
                <td class="name">
@@ -314,9 +324,9 @@
                <td class="technical">physical</td>
                <td class="technical"></td>
                <td class="technical">ds_uint</td>
-               <td>Related Object Tid ist ein dd description!basic_fieldFeld der Klasse integer, z. B.
-                  0
-                  	Standardwert: 0 </td>
+               <td>dd help!text: Related Object Tid dd description!is_a_type: description!basic_field,
+                  integer, 0
+                  dd description!default: 0, </td>
             </tr>
             <tr id="rwo_id" class="Field VisFalse">
                <td class="name">
@@ -356,7 +366,8 @@
                <td class="technical"></td>
                <td class="technical">text</td>
                <td>
-                  <div>Description ist ein join Feld Text wird ausgegeben </div>
+                  <div>dd help!text: Description dd description!is_a: description!join_field dd description!text,
+                     </div>
                   						<span class="technical">Text joined by field <a href="#description_id" onclick="ToggleAndHighlightField('description_id')">description_id</a> to table <a href="electricity_sw_gis!text_id.html">sw_gis!text_id</a></span>
                   					</td>
             </tr>
@@ -372,8 +383,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!objects ist ein join Feld Satz von Datensätzen aus 'drawing_function,viewport_mapping,function_geometry,switch,busbar,...'
-                     wird ausgegeben </div>
+                  <div>dd help!text: int!objects dd description!is_a: description!join_field dd description!set_of_records_from:
+                     drawing_function,viewport_mapping,function_geometry,switch,busbar,..., </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!objects.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -423,8 +434,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>int!related_object ist ein join Feld Datensatz aus 'drawing_function,viewport_mapping,function_geometry,switch,busbar,...'
-                     wird ausgegeben </div>
+                  <div>dd help!text: int!related_object dd description!is_a: description!join_field dd description!record_from:
+                     drawing_function,viewport_mapping,function_geometry,switch,busbar,..., </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!related_object.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -509,8 +520,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>int!related_urn ist ein join Feld Datensatz aus 'swif!info_flag_to_object3' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!related_urn dd description!is_a: description!join_field dd description!record_from:
+                     swif!info_flag_to_object3, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!related_urn.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -548,8 +559,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>int!urns ist ein join Feld Objekttabelle mit Datensätzen aus 'swif!info_flag_to_object2'
-                     wird ausgegeben </div>
+                  <div>dd help!text: int!urns dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     swif!info_flag_to_object2, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!urns.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -587,7 +598,8 @@
                <td class="technical"></td>
                <td class="technical">text</td>
                <td>
-                  <div>Remarks ist ein join Feld Text wird ausgegeben </div>
+                  <div>dd help!text: Remarks dd description!is_a: description!join_field dd description!text,
+                     </div>
                   						<span class="technical">Text joined by field <a href="#remarks_id" onclick="ToggleAndHighlightField('remarks_id')">remarks_id</a> to table <a href="electricity_sw_gis!text_id.html">sw_gis!text_id</a></span>
                   					</td>
             </tr>
@@ -647,7 +659,8 @@
                <td class="technical">derived</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Origin Type ist eine derived Zeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Origin Type dd description!is_a_string: description!dd_derived_field,
+                  32, </td>
             </tr>
             <tr id="routine_string" class="Field VisTrue">
                <td class="name">
@@ -660,7 +673,8 @@
                <td class="technical">derived</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Routine String ist eine derived Zeichenfolge-Feldgröße 64 </td>
+               <td>dd help!text: Routine String dd description!is_a_string: description!dd_derived_field,
+                  64, </td>
             </tr>
             <tr id="severity_type" class="Field VisFalse">
                <td class="name">
@@ -673,7 +687,8 @@
                <td class="technical">derived</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Severity Type ist eine derived Zeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Severity Type dd description!is_a_string: description!dd_derived_field,
+                  32, </td>
             </tr>
             <tr id="status_type" class="Field VisFalse">
                <td class="name">
@@ -686,7 +701,8 @@
                <td class="technical">derived</td>
                <td class="technical"></td>
                <td class="technical">ds_char16canon</td>
-               <td>Status Type ist eine derived Zeichenfolge-Feldgröße 32 </td>
+               <td>dd help!text: Status Type dd description!is_a_string: description!dd_derived_field,
+                  32, </td>
             </tr>
          </table>
       </div>

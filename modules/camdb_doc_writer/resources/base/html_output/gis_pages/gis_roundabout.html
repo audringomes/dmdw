@@ -1,23 +1,24 @@
 <!DOCTYPE HTML><html xmlns:dmdw="https://boogert-lab.nl/dmdw" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Gis - Collection Kreisverkehr</title>
+      <title>Gis - Collection Roundabout</title>
       <link rel="Stylesheet" href="../layout.css">
       <link rel="Stylesheet" href="../html.css">
       <link rel="stylesheet" href="../dm.css">
       <link rel="stylesheet" href="../custom.css">
-      <link rel="stylesheet" href="../svg.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
+      <link rel="stylesheet" href="../svg.css">
+      <link rel="shortcut icon" href="../dmdw.ico"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="../dm.js"></script></head>
    <body onload="HighlightHash()">
       <header class="float">
          <div class="index"><a href="../index.html">Index</a></div><a class="title" href="../gis.html">
             <div class="logo"></div><span class="Maintitle">Datamodel information</span><span class="DsName"> Gis</span></a></header>
-      <div class="PageTitle float">Kreisverkehr</div>
+      <div class="PageTitle float">Roundabout</div>
       <div class="buttonbar float"><span class="CheckButton"><input type="checkbox" name="ToggleDetail();" onclick="ToggleDetail();" checked="True"><label for="ToggleDetail();"><span>Technical details</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleMapped();" onclick="ToggleMapped();"><label for="ToggleMapped();"><span>Mapped fields</span></label></span><span class="CheckButton"><input type="checkbox" name="ToggleInVisField();" onclick="ToggleInVisField();"><label for="ToggleInVisField();"><span>Invisible fields</span></label></span><span class="Checkbutton"><a class="svglink" href="gis_dm_svg.html#roundabout"><img src="../svglink.png">Show in Diagram</a></span></div>
       <div style="overflow-x:auto">
          <table class="dmCollection float" id="roundabout">
             <tr class="TableName">
                <td colspan="9">
-                  <h3 class="InTable">Kreisverkehr</h3>
+                  <h3 class="InTable">Roundabout</h3>
                   <div class="technical InternalColName">roundabout</div>
                </td>
             </tr>
@@ -40,7 +41,7 @@
             </tr>
             <tr id="roundabout_id" class="Field VisFalse">
                <td class="name">
-                  <div class="physical">Kreisverkehr ID</div>
+                  <div class="physical">roundabout_id</div>
                </td>
                <td class="technical">roundabout_id</td>
                <td class="technical">1</td>
@@ -66,7 +67,7 @@
             </tr>
             <tr id="cost_penalty" class="Field VisTrue">
                <td class="name">
-                  <div class="physical">Geldbuße</div>
+                  <div class="physical">Cost penalty</div>
                </td>
                <td class="technical">cost_penalty</td>
                <td class="technical">1</td>
@@ -115,8 +116,8 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>int!info_flags ist ein join Feld Satz von Datensätzen aus 'swif!info_flag' wird ausgegeben
-                     </div>
+                  <div>dd help!text: int!info_flags dd description!is_a: description!join_field dd description!set_of_records_from:
+                     swif!info_flag, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('int!info_flags.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -144,7 +145,7 @@
             </tr>
             <tr id="sponsored_by" class="Field VisTrue">
                <td class="name">
-                  <div class="join">Gesponsert von</div>
+                  <div class="join">Sponsored By</div>
                </td>
                <td class="technical">sponsored_by</td>
                <td class="technical"></td>
@@ -154,13 +155,13 @@
                <td class="technical"></td>
                <td class="technical">db_set_join</td>
                <td>
-                  <div>Gesponsert von ist ein join Feld Satz von Datensätzen aus 'pub_rest,shop' wird ausgegeben
-                     </div>
+                  <div>dd help!text: Sponsored By dd description!is_a: description!join_field dd description!set_of_records_from:
+                     pub_rest,shop, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('sponsored_by.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
-                     <li class="Join"><a href="gis_pub_rest.html">Gaststätte</a></li>
-                     <li class="Join"><a href="gis_shop.html">Geschäft</a></li>
+                     <li class="Join"><a href="gis_pub_rest.html">Pub/Restaurant</a></li>
+                     <li class="Join"><a href="gis_shop.html">Shop</a></li>
                   </ul>
                   						
                   <div class="JoinDetails technical" id="sponsored_by.details" style="display:none;">
@@ -194,8 +195,8 @@
                <td class="technical"></td>
                <td class="technical">follow</td>
                <td>
-                  <div>sponsored_by!int ist ein join Feld Objekttabelle mit Datensätzen aus 'int!hetero244932'
-                     wird ausgegeben </div>
+                  <div>dd help!text: sponsored_by!int dd description!is_a: description!join_field dd description!collection_of_records_from:
+                     int!hetero244932, </div>
                   						
                   <div class="InfoIcon technical">Result Tables: <a href="javascript:ToggleId('sponsored_by!int.details')" alt="Join details" title="Show Join details"><img src="../information.png"></a></div>
                   <ul class="Join">
@@ -223,7 +224,7 @@
             </tr>
             <tr id="annotation" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Beschriftung</div>
+                  <div class="geometry">annotation</div>
                </td>
                <td class="technical">annotation</td>
                <td class="technical"></td>
@@ -238,7 +239,7 @@
             </tr>
             <tr id="location" class="Field VisTrue">
                <td class="name">
-                  <div class="geometry">Standort</div>
+                  <div class="geometry">location</div>
                </td>
                <td class="technical">location</td>
                <td class="technical"></td>
